@@ -130,8 +130,8 @@ Babushka allows you to configure timeout settings and reconnect strategies. Thes
 |Configuration setting	|Description	|**Default value**	|
 |---	|---	|---	|
 |client_creation_timeout	|The specified duration, in milliseconds, represents the time the client should allow for its initialization, including tasks like connecting to the Redis node(s) and discovering the topology. If the client fails to complete its initialization within this defined time frame, an error will be generated. If no timeout value is explicitly set, a default value will be employed.	| 2500 milliseconds	|
-|request_timeout	|This specified time duration, measured in milliseconds, represents the period during which the client will await the completion of a request. This timeframe includes the process of sending the request, waiting for a response from the Redis node(s), and any necessary reconnection or retry attempts. If a pending request exceeds the specified timeout, it will trigger a timeout error. If no timeout value is explicitly set, a default value will be employed.	|250 milliseconds	|
-|reconnect_strategy	|The reconnection strategy defines how and when reconnection attempts are made in the event of connection failures	|Exponantial backoff	|
+|request_timeout	|This specified time duration, measured in milliseconds, represents the period during which the client will await the completion of a request. This time frame includes the process of sending the request, waiting for a response from the Redis node(s), and any necessary reconnection or retry attempts. If a pending request exceeds the specified timeout, it will trigger a timeout error. If no timeout value is explicitly set, a default value will be employed.	|250 milliseconds	|
+|reconnect_strategy	|The reconnection strategy defines how and when reconnection attempts are made in the event of connection failures	|Exponential backoff	|
 
 Babushka employs backoff reconnection strategy that can be summarized as follows:
 
@@ -143,8 +143,8 @@ Babushka employs backoff reconnection strategy that can be summarized as follows
 
 |Configuration setting	|Description	|**Default value**	|
 |---	|---	|---	|
-|num_of_retries	|The specified duration, in milliseconds, represents the time the client should allow for its initialization, including tasks like connecting to the Redis node(s) and discovering the topology. If the client fails to complete its initialization within this defined time frame, an error will be generated. If no timeout value is explicitly set, a default value will be employed.	|16	|
-|factor	|This specified time duration, measured in milliseconds, represents the period during which the client will await the completion of a request. This timeframe includes the process of sending the request, waiting for a response from the Redis node(s), and any necessary reconnection or retry attempts. If a pending request exceeds the specified timeout, it will trigger a timeout error. If no timeout value is explicitly set, a default value will be employed.	|10	|
+|num_of_retries	|Number of retry attempts that the client should perform when disconnected from the server, where the time between retries increases. Once the retries have reached the maximum value, the time between retries will remain constant until a reconnect attempt is successful.	|16	|
+|factor	|The multiplier that will be applied to the waiting time between each retry.	|10	|
 |exponent_base	|The exponent base configured for the strategy	|2	|
 
 
