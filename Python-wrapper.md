@@ -11,18 +11,17 @@ Babushka supports [Redis Cluster](https://redis.io/docs/reference/cluster-spec) 
 
 To initialize a `RedisClusterClient`, you need to provide a `ClusterClientConfiguration` that includes the addresses of initial seed nodes. Babushka automatically discovers the entire cluster topology, eliminating the necessity of explicitly listing all cluster nodes.
 
-#### **Connecting to the Cluster**
+#### **Connecting to a Cluster**
 
-The `ServerAddress` class represents the host and port of a Redis node. The host can be either an IP address, a hostname, or a fully qualified domain name (FQDN).
+The `NodeAddress` class represents the host and port of a Redis node. The host can be either an IP address, a hostname, or a fully qualified domain name (FQDN).
 
 #### Example - Connecting to a Redis cluster
 
 ```
-`addresses ``=`` ``[ServerAddress``(``host``=``"redis.example.com"``,`` port``=``6379``)]`
-`client_config ``=`` ``ClusterClientConfiguration``(``addresses``)`
+addresses=[NodeAddress(host="redis.example.com", port=6379)]
+client_config=ClusterClientConfiguration(addresses)
 
-`client ``=`` ``await`` ``RedisClusterClient``.``create``(``client_config``)
-`
+client=await RedisClusterClient.create(client_config)
 ```
 
 #### Request Routing
@@ -33,7 +32,7 @@ For more details on the routing of specific commands, please refer to the docume
 
 #### Response Aggregation
 
-When requests are dispatched to multiple shards in a cluster (as discussed in the "[Request routing](https://quip-amazon.com/SzJSAPlr8ohb/Babushka-wiki#temp:C:Pfe89d6ed1168a14152a75cfdf2b)" section), the Redis client needs to aggregate the responses for a given command. Babushka follows [Redis OSS guidelines](https://redis.io/docs/reference/command-tips/#response_policy) for determining how to aggregate the responses from multiple shards within a cluster. 
+When requests are dispatched to multiple shards in a cluster (as discussed in the Request routing section), the Redis client needs to aggregate the responses for a given command. Babushka follows [Redis OSS guidelines](https://redis.io/docs/reference/command-tips/#response_policy) for determining how to aggregate the responses from multiple shards within a cluster. 
 
 
 To learn more about response aggregation for specific commands, consult the documentation embedded in the code.
@@ -49,14 +48,14 @@ Babushka also supports Redis Standalone deployments, where the Redis database is
 #### **Example - Connecting to a standalone Redis** 
 
 ```
-`addresses ``=`` ``[`
-`    ``ServerAddress``(``host``=``"redis_primary.example.com"``,`` port``=``6379``),`` `
-`    ``ServerAddress``(``host``=``"redis_replica1.example.com"``,`` port``=``6379``),`` `
-`    ServerAddress``(``host``=``"redis_replica2.example.com"``,`` port``=``6379``)`
-`  ``]`
-`client_config ``=`` Redis``ClientConfiguration``(``addresses``)`
+addresses=[
+    NodeAddress(host="redis_primary.example.com", port=6379),
+    NodeAddress(host="redis_replica1.example.com", port=6379),
+    NodeAddress(host="redis_replica2.example.com", port=6379)
+  ]
+client_config = RedisClientConfiguration(addresses)
 
-`client ``=`` ``await`` ``RedisClient``.``create``(``client_config``)`
+client = await RedisClient.create(client_config)
 ```
 
 ## Advanced Options / Usage
@@ -77,11 +76,11 @@ To provide the necessary authentication credentials to the client, you can use t
 #### Example - Connecting with username and password
 
 ```
-`addresses ``=`` ``[ServerAddress``(``host``=``"redis.example.com"``,`` port``=``6379``)]`
-`credentials ``=`` ``RedisCredentials``(``"passwordA"``,`` ``"user1"``)`
-`client_config ``=`` ``ClusterClientConfiguration``(``addresses``,`` ``credentials``=``credentials``)`
+addresses = [NodeAddress(host="redis.example.com", port=6379)]
+credentials = RedisCredentials("passwordA", "user1")
+client_config = ClusterClientConfiguration(addresses, credentials=credentials)
 
-`client ``=`` ``await`` ``RedisClusterClient``.``create``(``client_config``)`` `
+client = await RedisClusterClient.create(client_config)
 ```
 
 ### TLS
@@ -93,10 +92,10 @@ It's important to note that TLS support in Babushka relies on [rusttls](https://
 #### Example - Connecting with TLS mode enabled
 
 ```
-`addresses ``=`` ``[ServerAddress``(``host``=``"redis.example.com"``,`` port``=``6379``)]`
-`client_config ``=`` ``ClusterClientConfiguration``(``addresses``,`` use_tls``=``True``)`
+addresses = [NodeAddress(host="redis.example.com", port=6379)]
+client_config = ClusterClientConfiguration(addresses, use_tls=True)
 
-`client ``=`` ``await`` ``RedisClusterClient``.``create``(``client_config``)`
+client = await RedisClusterClient.create(client_config)
 ```
 
 ### Read Strategy
