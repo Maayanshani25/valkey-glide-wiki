@@ -91,6 +91,7 @@ credentials = RedisCredentials("passwordA", "user1")
 client_config = RedisClientConfiguration(addresses, credentials=credentials)
 
 client = await RedisClient.create(client_config)
+```
 
 ### TLS
 
