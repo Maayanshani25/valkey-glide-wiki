@@ -2,7 +2,7 @@
 
 ## Client Initialization
 
-Babushka provides support for both  [Redis Standalone](https://quip-amazon.com/SzJSAPlr8ohb/Babushka-wiki#temp:C:Pfe2bb11c9da81d4686942cd0a10) and [Redis Cluster](https://quip-amazon.com/SzJSAPlr8ohb/Babushka-wiki#temp:C:Pfe8e2dffbcc9374156a6a2f36e3) configurations. Please refer to the relevant section based on your specific setup.
+Babushka provides support for both [Redis Cluster](https://github.com/aws/babushka/wiki/Python-wrapper#redis-cluster) and [Redis Standalone](https://github.com/aws/babushka/wiki/Python-wrapper#redis-standalone) and configurations. Please refer to the relevant section based on your specific setup.
 
 ### Redis Cluster
 
