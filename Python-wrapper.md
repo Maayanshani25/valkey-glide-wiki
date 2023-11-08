@@ -73,7 +73,7 @@ In authenticated mode, you have the following options:
 
 To provide the necessary authentication credentials to the client, you can use the `RedisCredentials` class.
 
-#### Example - Connecting with username and password to a Redis cluster
+#### Example - Connecting with Username and Password to a Redis cluster
 
 ```
 addresses = [NodeAddress(host="redis.example.com", port=6379)]
@@ -84,7 +84,7 @@ client = await RedisClusterClient.create(client_config)
 ```
 
 
-#### Example - Connecting with username and password to a Redis standalone
+#### Example - Connecting with Username and Password to a Redis Standalone
 
 ```
 addresses = [NodeAddress(host="redis.example.com", port=6379)]
@@ -100,7 +100,7 @@ Babushka supports secure TLS connections to a Redis data store.
 
 It's important to note that TLS support in Babushka relies on [rusttls](https://github.com/rustls/rustls). Currently, Babushka employs the default rustls settings with no option for customization.
 
-#### Example - Connecting with TLS mode enabled to a Redis cluster
+#### Example - Connecting with TLS Mode Enabled to a Redis Cluster
 
 ```
 addresses = [NodeAddress(host="redis.example.com", port=6379)]
@@ -108,7 +108,7 @@ client_config = ClusterClientConfiguration(addresses, use_tls=True)
 
 client = await RedisClusterClient.create(client_config)
 ```
-#### Example - Connecting with TLS mode enabled to a Redis standalone
+#### Example - Connecting with TLS Mode Enabled to a Redis Standalone
 
 ```
 addresses = [NodeAddress(host="redis.example.com", port=6379)]
@@ -129,7 +129,7 @@ Babushka provides support for various read strategies, allowing you to choose th
 |`PRIMARY`	|Always read from primary, in order to get the freshest data	|
 |`PREFER_REPLICA`	|Spread requests between all replicas in a round robin manner. If no replica is available, route the requests to the primary	|
 
-#### Example - Use PREFER_REPLICA read strategy
+#### Example - Use PREFER_REPLICA Read Strategy
 
 ```
 addresses = [NodeAddress(host="redis.example.com", port=6379)]
@@ -141,7 +141,7 @@ await client.set("key1", "val1")
 await client.get("key1")
 ```
 
-### Timeouts  and Reconnect Strategy
+### Timeouts and Reconnect Strategy
 
 Babushka allows you to configure timeout settings and reconnect strategies. These configurations can be applied through the `ClusterClientConfiguration` and `RedisClientConfiguration` parameters.
 
@@ -153,7 +153,7 @@ Babushka allows you to configure timeout settings and reconnect strategies. Thes
 |reconnect_strategy	|The reconnection strategy defines how and when reconnection attempts are made in the event of connection failures	|Exponential backoff	|
 
 
-#### Example - Connecting with the increased request timeout to accommodate for long running commands
+#### Example - Setting Increased Request Timeout for Long-Running Commands
 
 ```
 addresses = [NodeAddress(host="redis.example.com", port=6379)]
