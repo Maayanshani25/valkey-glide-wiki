@@ -149,6 +149,16 @@ Babushka allows you to configure timeout settings and reconnect strategies. Thes
 |request_timeout	|This specified time duration, measured in milliseconds, represents the period during which the client will await the completion of a request. This time frame includes the process of sending the request, waiting for a response from the Redis node(s), and any necessary reconnection or retry attempts. If a pending request exceeds the specified timeout, it will trigger a timeout error. If no timeout value is explicitly set, a default value will be employed.	|250 milliseconds	|
 |reconnect_strategy	|The reconnection strategy defines how and when reconnection attempts are made in the event of connection failures	|Exponential backoff	|
 
+
+#### Example - Connecting with the increased request timeout to accommodate for long running commands
+
+```
+addresses = [NodeAddress(host="redis.example.com", port=6379)]
+client_config = ClusterClientConfiguration(addresses, request_timeout=500)
+
+client = await RedisClusterClient.create(client_config)
+```
+
 Babushka employs backoff reconnection strategy that can be summarized as follows:
 
 * The time between reconnection attempts grows exponentially, following the formula `rand(0 .. factor * (exponentBase ^ N))`, where N represents the number of consecutive failed attempts.
