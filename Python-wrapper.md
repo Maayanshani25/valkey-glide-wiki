@@ -1,5 +1,3 @@
-# Babushka wiki for Python
-
 ## Client Initialization
 
 Babushka provides support for both [Redis Cluster](https://github.com/aws/babushka/wiki/Python-wrapper#redis-cluster) and [Redis Standalone](https://github.com/aws/babushka/wiki/Python-wrapper#redis-standalone) and configurations. Please refer to the relevant section based on your specific setup.
