@@ -138,7 +138,7 @@ Babushka employs backoff reconnection strategy that can be summarized as follows
 * The time between reconnection attempts grows exponentially, following the formula `rand(0 .. factor * (exponentBase ^ N))`, where N represents the number of consecutive failed attempts.
 * Once a maximum value is reached, that value remains the time interval between subsequent retry attempts.
 * The client will continue to make reconnection attempts until a successful reconnection occurs. 
-
+This strategy provides an effective approach for handling disconnections and facilitates the re-establishment of a stable connection.
 
 
 |Configuration setting	|Description	|**Default value**	|
@@ -147,17 +147,4 @@ Babushka employs backoff reconnection strategy that can be summarized as follows
 |factor	|The multiplier that will be applied to the waiting time between each retry.	|10	|
 |exponent_base	|The exponent base configured for the strategy	|2	|
 
-
-
-
-
-
-
-### 
-
-
-
-
-
-Cluster
 
