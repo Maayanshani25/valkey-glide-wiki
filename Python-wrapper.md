@@ -55,6 +55,9 @@ client_config = RedisClientConfiguration(addresses)
 client = await RedisClient.create(client_config)
 ```
 
+## Redis commands
+For comprehensive information on the supported commands and their corresponding parameters, we recommend referring to the documentation embedded within the codebase. This documentation will provide in-depth insights into the usage and options available for each command.
+
 ## Advanced Options / Usage
 
 ### Authentication
