@@ -34,7 +34,6 @@ For more details on the routing of specific commands, please refer to the docume
 
 When requests are dispatched to multiple shards in a cluster (as discussed in the Request routing section), the Redis client needs to aggregate the responses for a given command. Babushka follows [Redis OSS guidelines](https://redis.io/docs/reference/command-tips/#response_policy) for determining how to aggregate the responses from multiple shards within a cluster. 
 
-
 To learn more about response aggregation for specific commands, consult the documentation embedded in the code.
 
 #### Topology Updates
@@ -73,7 +72,7 @@ In authenticated mode, you have the following options:
 
 To provide the necessary authentication credentials to the client, you can use the `RedisCredentials` class.
 
-#### Example - Connecting with username and password
+#### Example - Connecting with username and password to a Redis cluster
 
 ```
 addresses = [NodeAddress(host="redis.example.com", port=6379)]
@@ -83,19 +82,37 @@ client_config = ClusterClientConfiguration(addresses, credentials=credentials)
 client = await RedisClusterClient.create(client_config)
 ```
 
+
+#### Example - Connecting with username and password to a Redis standalone
+
+```
+addresses = [NodeAddress(host="redis.example.com", port=6379)]
+credentials = RedisCredentials("passwordA", "user1")
+client_config = RedisClientConfiguration(addresses, credentials=credentials)
+
+client = await RedisClient.create(client_config)
+
 ### TLS
 
 Babushka supports secure TLS connections to a Redis data store.
 
 It's important to note that TLS support in Babushka relies on [rusttls](https://github.com/rustls/rustls). Currently, Babushka employs the default rustls settings with no option for customization.
 
-#### Example - Connecting with TLS mode enabled
+#### Example - Connecting with TLS mode enabled to a Redis cluster
 
 ```
 addresses = [NodeAddress(host="redis.example.com", port=6379)]
 client_config = ClusterClientConfiguration(addresses, use_tls=True)
 
 client = await RedisClusterClient.create(client_config)
+```
+#### Example - Connecting with TLS mode enabled to a Redis standalone
+
+```
+addresses = [NodeAddress(host="redis.example.com", port=6379)]
+client_config = RedisClientConfiguration(addresses, use_tls=True)
+
+client = await RedisClient.create(client_config)
 ```
 
 ### Read Strategy
