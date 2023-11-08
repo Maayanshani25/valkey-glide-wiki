@@ -143,7 +143,7 @@ This strategy provides an effective approach for handling disconnections and fac
 
 |Configuration setting	|Description	|**Default value**	|
 |---	|---	|---	|
-|num_of_retries	|Number of retry attempts that the client should perform when disconnected from the server, where the time between retries increases. Once the retries have reached the maximum value, the time between retries will remain constant until a reconnect attempt is successful.	|16	|
+|num_of_retries	|The number of retry attempts that the client should perform when disconnected from the server, where the time between retries increases. Once the retries have reached the maximum value, the time between retries will remain constant until a reconnect attempt is successful.	|16	|
 |factor	|The multiplier that will be applied to the waiting time between each retry.	|10	|
 |exponent_base	|The exponent base configured for the strategy	|2	|
 
