@@ -73,7 +73,7 @@ In authenticated mode, you have the following options:
 
 To provide the necessary authentication credentials to the client, you can use the `RedisCredentials` class.
 
-#### Example - Connecting with Username and Password to a Redis cluster
+#### Example - Connecting with Username and Password to a Redis Cluster
 
 ```
 addresses = [NodeAddress(host="redis.example.com", port=6379)]
