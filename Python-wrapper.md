@@ -110,16 +110,16 @@ Babushka provides support for various read strategies, allowing you to choose th
 |`PRIMARY`	|Always read from primary, in order to get the freshest data	|
 |`PREFER_REPLICA`	|Spread requests between all replicas in a round robin manner. If no replica is available, route the requests to the primary	|
 
-#### Example - Use `PREFER_REPLICA` read strategy
+#### Example - Use PREFER_REPLICA read strategy
 
 ```
-`addresses ``=`` ``[``ServerAddress``(``host``=``"redis.example.com"``,`` port``=``6379``)]`
-`client_config ``=`` ``ClusterClientConfiguration``(``addresses``)`
+addresses = [NodeAddress(host="redis.example.com", port=6379)]
+client_config = ClusterClientConfiguration(addresses)
 
-`client ``=`` ``await`` ``RedisClusterClient``.``create``(``client_config``,`` read_from``=``ReadFrom``.``PREFER_REPLICA``)
+client = await RedisClusterClient.create(client_config, read_from=ReadFrom.PREFER_REPLICA)
 await client.set("key1", "val1")
 # get will read from one of the replicas
-``await`` client``.``get``(``"key1"``)`
+await client.get("key1")
 ```
 
 ### Timeouts  and Reconnect Strategy
@@ -140,7 +140,7 @@ Babushka employs backoff reconnection strategy that can be summarized as follows
 * The client will continue to make reconnection attempts until a successful reconnection occurs. 
 This strategy provides an effective approach for handling disconnections and facilitates the re-establishment of a stable connection.
 
-The backoff strategy can be applied through the BackoffStrategy parameters.
+The backoff strategy can be applied through the `BackoffStrategy` parameters.
 |Configuration setting	|Description	|**Default value**	|
 |---	|---	|---	|
 |num_of_retries	|The number of retry attempts that the client should perform when disconnected from the server, where the time between retries increases. Once the retries have reached the maximum value, the time between retries will remain constant until a reconnect attempt is successful.	|16	|
