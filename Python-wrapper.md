@@ -1,15 +1,29 @@
-# Python wrapper
+# Babushka wiki for Python
+
 ## Client Initialization
-Babushka provides support for both  Redis Standalone and Redis Cluster configurations. Please refer to the relevant section based on your specific setup.
+
+Babushka provides support for both  [Redis Standalone](https://quip-amazon.com/SzJSAPlr8ohb/Babushka-wiki#temp:C:Pfe2bb11c9da81d4686942cd0a10) and [Redis Cluster](https://quip-amazon.com/SzJSAPlr8ohb/Babushka-wiki#temp:C:Pfe8e2dffbcc9374156a6a2f36e3) configurations. Please refer to the relevant section based on your specific setup.
 
 ### Redis Cluster
-Babushka supports Redis Cluster deployments, where the Redis database is partitioned across multiple primary Redis shards, with each shard being represented by a primary node and zero or more replica nodes.
 
-To initialize a RedisClusterClient, you need to provide a ClusterClientConfiguration that includes the addresses of initial seed nodes. Babushka automatically discovers the entire cluster topology, eliminating the necessity of explicitly listing all cluster nodes.
+Babushka supports [Redis Cluster](https://redis.io/docs/reference/cluster-spec) deployments, where the Redis database is partitioned across multiple primary Redis shards, with each shard being represented by a primary node and zero or more replica nodes.. 
 
-#### Connecting to the Cluster
 
-The ServerAddress class represents the host and port of a Redis node. The host can be either an IP address, a hostname, or a fully qualified domain name (FQDN).
+To initialize a `RedisClusterClient`, you need to provide a `ClusterClientConfiguration` that includes the addresses of initial seed nodes. Babushka automatically discovers the entire cluster topology, eliminating the necessity of explicitly listing all cluster nodes.
+
+#### **Connecting to the Cluster**
+
+The `ServerAddress` class represents the host and port of a Redis node. The host can be either an IP address, a hostname, or a fully qualified domain name (FQDN).
+
+#### Example - Connecting to a Redis cluster
+
+```
+`addresses ``=`` ``[ServerAddress``(``host``=``"redis.example.com"``,`` port``=``6379``)]`
+`client_config ``=`` ``ClusterClientConfiguration``(``addresses``)`
+
+`client ``=`` ``await`` ``RedisClusterClient``.``create``(``client_config``)
+`
+```
 
 #### Request Routing
 
@@ -19,7 +33,8 @@ For more details on the routing of specific commands, please refer to the docume
 
 #### Response Aggregation
 
-When requests are dispatched to multiple shards in a cluster (as discussed in the "Request routing" section), the Redis client needs to aggregate the responses for a given command. Babushka follows [Redis OSS guidelines](https://redis.io/docs/reference/command-tips/#response_policy) for determining how to aggregate the responses from multiple shards within a cluster. 
+When requests are dispatched to multiple shards in a cluster (as discussed in the "[Request routing](https://quip-amazon.com/SzJSAPlr8ohb/Babushka-wiki#temp:C:Pfe89d6ed1168a14152a75cfdf2b)" section), the Redis client needs to aggregate the responses for a given command. Babushka follows [Redis OSS guidelines](https://redis.io/docs/reference/command-tips/#response_policy) for determining how to aggregate the responses from multiple shards within a cluster. 
+
 
 To learn more about response aggregation for specific commands, consult the documentation embedded in the code.
 
@@ -29,7 +44,20 @@ The cluster's topology can change over time. New nodes can be added or removed, 
 
 ### Redis Standalone 
 
-Babushka also supports Redis Standalone deployments, where the Redis database is hosted on a single primary node, optionally with replica nodes. To initialize a RedisClient  for a standalone Redis setup, you should create a RedisClientConfiguration that includes the addresses of all endpoints, both primary and replica nodes.
+Babushka also supports Redis Standalone deployments, where the Redis database is hosted on a single primary node, optionally with replica nodes. To initialize a `RedisClient`  for a standalone Redis setup, you should create a `RedisClientConfiguration` that includes the addresses of all endpoints, both primary and replica nodes.
+
+#### **Example - Connecting to a standalone Redis** 
+
+```
+`addresses ``=`` ``[`
+`    ``ServerAddress``(``host``=``"redis_primary.example.com"``,`` port``=``6379``),`` `
+`    ``ServerAddress``(``host``=``"redis_replica1.example.com"``,`` port``=``6379``),`` `
+`    ServerAddress``(``host``=``"redis_replica2.example.com"``,`` port``=``6379``)`
+`  ``]`
+`client_config ``=`` Redis``ClientConfiguration``(``addresses``)`
+
+`client ``=`` ``await`` ``RedisClient``.``create``(``client_config``)`
+```
 
 ## Advanced Options / Usage
 
@@ -40,10 +68,21 @@ By default, when connecting to Redis, Babushka operates in an unauthenticated mo
 Babushka also offers support for an authenticated connection mode. 
 
 In authenticated mode, you have the following options:
+
 * Use both a username and password, which is recommended and configured through [ACLs](https://redis.io/docs/management/security/acl) on the Redis server.
 * Use a password only, which is applicable if Redis is configured with the [requirepass](https://redis.io/docs/management/security/#authentication) setting.
 
-To provide the necessary authentication credentials to the client, you can use the RedisCredentials class.
+To provide the necessary authentication credentials to the client, you can use the `RedisCredentials` class.
+
+#### Example - Connecting with username and password
+
+```
+`addresses ``=`` ``[ServerAddress``(``host``=``"redis.example.com"``,`` port``=``6379``)]`
+`credentials ``=`` ``RedisCredentials``(``"passwordA"``,`` ``"user1"``)`
+`client_config ``=`` ``ClusterClientConfiguration``(``addresses``,`` ``credentials``=``credentials``)`
+
+`client ``=`` ``await`` ``RedisClusterClient``.``create``(``client_config``)`` `
+```
 
 ### TLS
 
@@ -51,9 +90,75 @@ Babushka supports secure TLS connections to a Redis data store.
 
 It's important to note that TLS support in Babushka relies on [rusttls](https://github.com/rustls/rustls). Currently, Babushka employs the default rustls settings with no option for customization.
 
+#### Example - Connecting with TLS mode enabled
+
+```
+`addresses ``=`` ``[ServerAddress``(``host``=``"redis.example.com"``,`` port``=``6379``)]`
+`client_config ``=`` ``ClusterClientConfiguration``(``addresses``,`` use_tls``=``True``)`
+
+`client ``=`` ``await`` ``RedisClusterClient``.``create``(``client_config``)`
+```
+
 ### Read Strategy
 
 By default, Babushka directs read commands to the primary node responsible for a specific slot. This ensures read-after-write consistency when reading from primaries. For applications that do not necessitate read-after-write consistency and seek to enhance read throughput, it is possible to route reads to replica nodes.
 
 
 Babushka provides support for various read strategies, allowing you to choose the one that best fits your specific use case.
+
+|Strategy	|Description	|
+|---	|---	|
+|`PRIMARY`	|Always read from primary, in order to get the freshest data	|
+|`PREFER_REPLICA`	|Spread requests between all replicas in a round robin manner. If no replica is available, route the requests to the primary	|
+
+#### Example - Use `PREFER_REPLICA` read strategy
+
+```
+`addresses ``=`` ``[``ServerAddress``(``host``=``"redis.example.com"``,`` port``=``6379``)]`
+`client_config ``=`` ``ClusterClientConfiguration``(``addresses``)`
+
+`client ``=`` ``await`` ``RedisClusterClient``.``create``(``client_config``,`` read_from``=``ReadFrom``.``PREFER_REPLICA``)
+await client.set("key1", "val1")
+# get will read from one of the replicas
+``await`` client``.``get``(``"key1"``)`
+```
+
+### Timeouts  and Reconnect Strategy
+
+Babushka allows you to configure timeout settings and reconnect strategies. These configurations can be applied through the `ClusterClientConfiguration` and `RedisClientConfiguration` parameters.
+
+
+|Configuration setting	|Description	|**Default value**	|
+|---	|---	|---	|
+|client_creation_timeout	|The specified duration, in milliseconds, represents the time the client should allow for its initialization, including tasks like connecting to the Redis node(s) and discovering the topology. If the client fails to complete its initialization within this defined time frame, an error will be generated. If no timeout value is explicitly set, a default value will be employed.	| 2500 milliseconds	|
+|request_timeout	|This specified time duration, measured in milliseconds, represents the period during which the client will await the completion of a request. This timeframe includes the process of sending the request, waiting for a response from the Redis node(s), and any necessary reconnection or retry attempts. If a pending request exceeds the specified timeout, it will trigger a timeout error. If no timeout value is explicitly set, a default value will be employed.	|250 milliseconds	|
+|reconnect_strategy	|The reconnection strategy defines how and when reconnection attempts are made in the event of connection failures	|Exponantial backoff	|
+
+Babushka employs backoff reconnection strategy that can be summarized as follows:
+
+* The time between reconnection attempts grows exponentially, following the formula `rand(0 .. factor * (exponentBase ^ N))`, where N represents the number of consecutive failed attempts.
+* Once a maximum value is reached, that value remains the time interval between subsequent retry attempts.
+* The client will continue to make reconnection attempts until a successful reconnection occurs. 
+
+
+
+|Configuration setting	|Description	|**Default value**	|
+|---	|---	|---	|
+|num_of_retries	|The specified duration, in milliseconds, represents the time the client should allow for its initialization, including tasks like connecting to the Redis node(s) and discovering the topology. If the client fails to complete its initialization within this defined time frame, an error will be generated. If no timeout value is explicitly set, a default value will be employed.	|16	|
+|factor	|This specified time duration, measured in milliseconds, represents the period during which the client will await the completion of a request. This timeframe includes the process of sending the request, waiting for a response from the Redis node(s), and any necessary reconnection or retry attempts. If a pending request exceeds the specified timeout, it will trigger a timeout error. If no timeout value is explicitly set, a default value will be employed.	|10	|
+|exponent_base	|The exponent base configured for the strategy	|2	|
+
+
+
+
+
+
+
+### 
+
+
+
+
+
+Cluster
+
