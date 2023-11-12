@@ -40,7 +40,7 @@ The cluster's topology can change over time. New nodes can be added or removed, 
 
 ### Redis Standalone 
 
-Babushka also supports Redis Standalone deployments, where the Redis database is hosted on a single primary node, optionally with replica nodes. To initialize a `RedisClient`  for a standalone Redis setup, you should create a `RedisClientConfiguration` that includes the addresses of all endpoints, both primary and replica nodes.
+Babushka also supports Redis Standalone deployments, where the Redis database is hosted on a single primary node, optionally with replica nodes. To initialize a `RedisClient`  for a standalone Redis setup, you should create a `RedisClientConfiguration` that includes the addresses of primary and all replica nodes.
 
 #### **Example - Connecting to a standalone Redis** 
 
