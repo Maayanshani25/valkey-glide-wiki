@@ -147,9 +147,8 @@ Babushka allows you to configure timeout settings and reconnect strategies. Thes
 
 |Configuration setting	|Description	|**Default value**	|
 |---	|---	|---	|
-|client_creation_timeout	|The specified duration, in milliseconds, represents the time the client should allow for its initialization, including tasks like connecting to the Redis node(s) and discovering the topology. If the client fails to complete its initialization within this defined time frame, an error will be generated. If no timeout value is explicitly set, a default value will be employed.	| 2500 milliseconds	|
 |request_timeout	|This specified time duration, measured in milliseconds, represents the period during which the client will await the completion of a request. This time frame includes the process of sending the request, waiting for a response from the Redis node(s), and any necessary reconnection or retry attempts. If a pending request exceeds the specified timeout, it will trigger a timeout error. If no timeout value is explicitly set, a default value will be employed.	|250 milliseconds	|
-|reconnect_strategy	|The reconnection strategy defines how and when reconnection attempts are made in the event of connection failures	|Exponential backoff	|
+|reconnect_strategy	|The reconnection strategy defines how and when reconnection attempts are made in the event of connection failures	|Exponential backoff (The only supported option currently)	|
 
 
 #### Example - Setting Increased Request Timeout for Long-Running Commands
