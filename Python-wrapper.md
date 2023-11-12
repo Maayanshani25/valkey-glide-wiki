@@ -119,10 +119,9 @@ client = await RedisClient.create(client_config)
 
 ### Read Strategy
 
-By default, Babushka directs read commands to the primary node responsible for a specific slot. This ensures read-after-write consistency when reading from primaries. For applications that do not necessitate read-after-write consistency and seek to enhance read throughput, it is possible to route reads to replica nodes.
+By default, Babushka directs read commands to the primary node that owns a specific slot. For applications that prioritize read throughput and can tolerate possibly stale data, Babushka provides the flexibility to route reads to replica nodes.
 
-
-Babushka provides support for various read strategies, allowing you to choose the one that best fits your specific use case.
+Babushka provides support for next read strategies, allowing you to choose the one that best fits your specific use case.
 
 |Strategy	|Description	|
 |---	|---	|
