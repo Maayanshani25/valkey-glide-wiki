@@ -15,7 +15,7 @@ The `NodeAddress` class represents the host and port of a Redis node. The host c
 
 #### Example - Connecting to a Redis cluster
 
-```
+```python
 addresses=[NodeAddress(host="redis.example.com", port=6379)]
 client_config=ClusterClientConfiguration(addresses)
 
@@ -44,7 +44,7 @@ Babushka also supports Redis Standalone deployments, where the Redis database is
 
 #### **Example - Connecting to a standalone Redis** 
 
-```
+```python
 addresses=[
     NodeAddress(host="redis_primary.example.com", port=6379),
     NodeAddress(host="redis_replica1.example.com", port=6379),
@@ -75,7 +75,7 @@ To provide the necessary authentication credentials to the client, you can use t
 
 #### Example - Connecting with Username and Password to a Redis Cluster
 
-```
+```python
 addresses = [NodeAddress(host="redis.example.com", port=6379)]
 credentials = RedisCredentials("passwordA", "user1")
 client_config = ClusterClientConfiguration(addresses, credentials=credentials)
@@ -86,7 +86,7 @@ client = await RedisClusterClient.create(client_config)
 
 #### Example - Connecting with Username and Password to a Redis Standalone
 
-```
+```python
 addresses = [NodeAddress(host="redis.example.com", port=6379)]
 credentials = RedisCredentials("passwordA", "user1")
 client_config = RedisClientConfiguration(addresses, credentials=credentials)
@@ -102,7 +102,7 @@ It's important to note that TLS support in Babushka relies on [rusttls](https://
 
 #### Example - Connecting with TLS Mode Enabled to a Redis Cluster
 
-```
+```python
 addresses = [NodeAddress(host="redis.example.com", port=6379)]
 client_config = ClusterClientConfiguration(addresses, use_tls=True)
 
@@ -110,7 +110,7 @@ client = await RedisClusterClient.create(client_config)
 ```
 #### Example - Connecting with TLS Mode Enabled to a Redis Standalone
 
-```
+```python
 addresses = [NodeAddress(host="redis.example.com", port=6379)]
 client_config = RedisClientConfiguration(addresses, use_tls=True)
 
@@ -131,7 +131,7 @@ Babushka provides support for various read strategies, allowing you to choose th
 
 #### Example - Use PREFER_REPLICA Read Strategy
 
-```
+```python
 addresses = [NodeAddress(host="redis.example.com", port=6379)]
 client_config = ClusterClientConfiguration(addresses)
 
@@ -155,7 +155,7 @@ Babushka allows you to configure timeout settings and reconnect strategies. Thes
 
 #### Example - Setting Increased Request Timeout for Long-Running Commands
 
-```
+```python
 addresses = [NodeAddress(host="redis.example.com", port=6379)]
 client_config = ClusterClientConfiguration(addresses, request_timeout=500)
 
