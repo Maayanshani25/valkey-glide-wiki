@@ -36,7 +36,7 @@ To learn more about response aggregation for specific commands, consult the docu
 
 #### Topology Updates
 
-The cluster's topology can change over time. New nodes can be added or removed, and the primary node responsible for a specific slot may change. Babushka is designed to automatically rediscover the topology whenever Redis indicates a change in slot ownership. This ensures that the Babushka client stays in sync with the cluster's topology.
+The cluster's topology can change over time. New nodes can be added or removed, and the primary node owning a specific slot may change. Babushka is designed to automatically rediscover the topology whenever Redis indicates a change in slot ownership. This ensures that the Babushka client stays in sync with the cluster's topology.
 
 ### Redis Standalone 
 
