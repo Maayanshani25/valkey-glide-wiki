@@ -32,7 +32,7 @@ For more details on the routing of specific commands, please refer to the docume
 
 When requests are dispatched to multiple shards in a cluster (as discussed in the Request routing section), the Redis client needs to aggregate the responses for a given command. Babushka follows [Redis OSS guidelines](https://redis.io/docs/reference/command-tips/#response_policy) for determining how to aggregate the responses from multiple shards within a cluster. 
 
-To learn more about response aggregation for specific commands, consult the documentation embedded in the code.
+To learn more about response aggregation for specific commands, please refer to the documentation within the code.
 
 #### Topology Updates
 
