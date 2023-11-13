@@ -16,10 +16,10 @@ The `NodeAddress` class represents the host and port of a Redis node. The host c
 #### Example - Connecting to a Redis cluster
 
 ```python
-addresses=[NodeAddress(host="redis.example.com", port=6379)]
-client_config=ClusterClientConfiguration(addresses)
+addresses = [NodeAddress(host="redis.example.com", port=6379)]
+client_config = ClusterClientConfiguration(addresses)
 
-client=await RedisClusterClient.create(client_config)
+client = await RedisClusterClient.create(client_config)
 ```
 
 #### Request Routing
@@ -45,7 +45,7 @@ Babushka also supports Redis Standalone deployments, where the Redis database is
 #### **Example - Connecting to a standalone Redis** 
 
 ```python
-addresses=[
+addresses = [
     NodeAddress(host="redis_primary.example.com", port=6379),
     NodeAddress(host="redis_replica1.example.com", port=6379),
     NodeAddress(host="redis_replica2.example.com", port=6379)
