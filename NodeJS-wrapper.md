@@ -91,23 +91,45 @@ To provide the necessary authentication credentials to the client, you can use t
 
 #### Example - Connecting with Username and Password to a Redis Cluster
 
-```python
-addresses = [NodeAddress(host="redis.example.com", port=6379)]
-credentials = RedisCredentials("passwordA", "user1")
-client_config = ClusterClientConfiguration(addresses, credentials=credentials)
+```typescript
+const addresses = [
+    {
+        host: "redis.example.com",
+        port: 6379
+    }
+];
 
-client = await RedisClusterClient.create(client_config)
+const credentials = {
+    username: "user1",
+    password: "passwordA"
+};
+
+const client = await RedisClusterClient.createClient({
+    addresses: addresses,
+    credentials: credentials
+});
 ```
 
 
 #### Example - Connecting with Username and Password to a Redis Standalone
 
-```python
-addresses = [NodeAddress(host="redis.example.com", port=6379)]
-credentials = RedisCredentials("passwordA", "user1")
-client_config = RedisClientConfiguration(addresses, credentials=credentials)
+```typescript
+const addresses = [
+    {
+        host: "redis.example.com",
+        port: 6379
+    }
+];
 
-client = await RedisClient.create(client_config)
+const credentials = {
+    username: "user1",
+    password: "passwordA"
+};
+
+const client = await RedisClient.createClient({
+    addresses: addresses,
+    credentials: credentials
+});
 ```
 
 ### TLS
@@ -118,19 +140,33 @@ It's important to note that TLS support in Babushka relies on [rusttls](https://
 
 #### Example - Connecting with TLS Mode Enabled to a Redis Cluster
 
-```python
-addresses = [NodeAddress(host="redis.example.com", port=6379)]
-client_config = ClusterClientConfiguration(addresses, use_tls=True)
+```typescript
+const addresses = [
+    {
+        host: "redis.example.com",
+        port: 6379
+    }
+];
 
-client = await RedisClusterClient.create(client_config)
+const client = await RedisClusterClient.createClient({
+    addresses: addresses,
+    useTLS: true
+});
 ```
 #### Example - Connecting with TLS Mode Enabled to a Redis Standalone
 
-```python
-addresses = [NodeAddress(host="redis.example.com", port=6379)]
-client_config = RedisClientConfiguration(addresses, use_tls=True)
+```typescript
+const addresses = [
+    {
+        host: "redis.example.com",
+        port: 6379
+    }
+];
 
-client = await RedisClient.create(client_config)
+const client = await RedisClient.createClient({
+    addresses: addresses,
+    useTLS: true
+});
 ```
 
 ### Read Strategy
