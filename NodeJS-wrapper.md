@@ -182,14 +182,21 @@ Babushka provides support for next read strategies, allowing you to choose the o
 
 #### Example - Use PREFER_REPLICA Read Strategy
 
-```python
-addresses = [NodeAddress(host="redis.example.com", port=6379)]
-client_config = ClusterClientConfiguration(addresses)
+```typescript
+const addresses = [
+    {
+        host: "redis.example.com",
+        port: 6379
+    }
+];
 
-client = await RedisClusterClient.create(client_config, read_from=ReadFrom.PREFER_REPLICA)
-await client.set("key1", "val1")
-# get will read from one of the replicas
-await client.get("key1")
+const client = await RedisClusterClient.createClient({
+    addresses: addresses,
+    readFrom: "preferReplica"
+});
+await client.set("key1", "val1");
+/// get will read from one of the replicas
+await client.get("key1");
 ```
 
 ### Timeouts and Reconnect Strategy
@@ -208,9 +215,16 @@ Babushka allows you to configure timeout settings and reconnect strategies. Thes
 
 #### Example - Setting Increased Request Timeout for Long-Running Commands
 
-```python
-addresses = [NodeAddress(host="redis.example.com", port=6379)]
-client_config = ClusterClientConfiguration(addresses, request_timeout=500)
+```typescript
+const addresses = [
+    {
+        host: "redis.example.com",
+        port: 6379
+    }
+];
 
-client = await RedisClusterClient.create(client_config)
+const client = await RedisClusterClient.createClient({
+    addresses: addresses,
+    requestTimeout: 500
+});
 ```
