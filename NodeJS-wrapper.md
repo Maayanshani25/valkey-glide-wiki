@@ -177,10 +177,10 @@ Babushka provides support for next read strategies, allowing you to choose the o
 
 |Strategy	|Description	|
 |---	|---	|
-|`PRIMARY`	|Always read from primary, in order to get the freshest data	|
-|`PREFER_REPLICA`	|Spread requests between all replicas in a round robin manner. If no replica is available, route the requests to the primary	|
+|`primary`	|Always read from primary, in order to get the freshest data	|
+|`preferReplica`	|Spread requests between all replicas in a round robin manner. If no replica is available, route the requests to the primary	|
 
-#### Example - Use PREFER_REPLICA Read Strategy
+#### Example - Use preferReplica Read Strategy
 
 ```typescript
 const addresses = [
