@@ -1,6 +1,6 @@
 ## Client Initialization
 
-GLIDE for Redis provides support for both [Redis Cluster](https://github.com/aws/babushka/wiki/NodeJS-wrapper#redis-cluster) and [Redis Standalone](https://github.com/aws/babushka/wiki/NodeJS-wrapper#redis-standalone) and configurations. Please refer to the relevant section based on your specific setup.
+GLIDE for Redis provides support for both [Redis Cluster](https://github.com/aws/glide-for-redis/wiki/NodeJS-wrapper#redis-cluster) and [Redis Standalone](https://github.com/aws/glide-for-redis/wiki/NodeJS-wrapper#redis-standalone) and configurations. Please refer to the relevant section based on your specific setup.
 
 ### Redis Cluster
 
