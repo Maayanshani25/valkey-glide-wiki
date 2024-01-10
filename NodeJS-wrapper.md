@@ -1,13 +1,13 @@
 ## Client Initialization
 
-Babushka provides support for both [Redis Cluster](https://github.com/aws/babushka/wiki/NodeJS-wrapper#redis-cluster) and [Redis Standalone](https://github.com/aws/babushka/wiki/NodeJS-wrapper#redis-standalone) and configurations. Please refer to the relevant section based on your specific setup.
+GLIDE for Redis provides support for both [Redis Cluster](https://github.com/aws/babushka/wiki/NodeJS-wrapper#redis-cluster) and [Redis Standalone](https://github.com/aws/babushka/wiki/NodeJS-wrapper#redis-standalone) and configurations. Please refer to the relevant section based on your specific setup.
 
 ### Redis Cluster
 
-Babushka supports [Redis Cluster](https://redis.io/docs/reference/cluster-spec) deployments, where the Redis database is partitioned across multiple primary Redis shards, with each shard being represented by a primary node and zero or more replica nodes.. 
+GLIDE for Redis supports [Redis Cluster](https://redis.io/docs/reference/cluster-spec) deployments, where the Redis database is partitioned across multiple primary Redis shards, with each shard being represented by a primary node and zero or more replica nodes.. 
 
 
-To initialize a `RedisClusterClient`, you need to provide a `ClusterClientConfiguration` that includes the addresses of initial seed nodes. Babushka automatically discovers the entire cluster topology, eliminating the necessity of explicitly listing all cluster nodes.
+To initialize a `RedisClusterClient`, you need to provide a `ClusterClientConfiguration` that includes the addresses of initial seed nodes. GLIDE for Redis automatically discovers the entire cluster topology, eliminating the necessity of explicitly listing all cluster nodes.
 
 #### **Connecting to a Cluster**
 
@@ -30,23 +30,23 @@ const client = await RedisClusterClient.createClient({
 
 #### Request Routing
 
-In the Redis cluster, data is divided into slots, and each primary node within the cluster is responsible for specific slots. Babushka adheres to [Redis OSS guidelines](https://redis.io/docs/reference/command-tips/#request_policy) when determining the node(s) to which a command should be sent in clustering mode. 
+In the Redis cluster, data is divided into slots, and each primary node within the cluster is responsible for specific slots. GLIDE for Redis adheres to [Redis OSS guidelines](https://redis.io/docs/reference/command-tips/#request_policy) when determining the node(s) to which a command should be sent in clustering mode. 
 
 For more details on the routing of specific commands, please refer to the documentation within the code.
 
 #### Response Aggregation
 
-When requests are dispatched to multiple shards in a cluster (as discussed in the Request routing section), the Redis client needs to aggregate the responses for a given command. Babushka follows [Redis OSS guidelines](https://redis.io/docs/reference/command-tips/#response_policy) for determining how to aggregate the responses from multiple shards within a cluster. 
+When requests are dispatched to multiple shards in a cluster (as discussed in the Request routing section), the Redis client needs to aggregate the responses for a given command. GLIDE for Redis follows [Redis OSS guidelines](https://redis.io/docs/reference/command-tips/#response_policy) for determining how to aggregate the responses from multiple shards within a cluster. 
 
 To learn more about response aggregation for specific commands, please refer to the documentation within the code.
 
 #### Topology Updates
 
-The cluster's topology can change over time. New nodes can be added or removed, and the primary node owning a specific slot may change. Babushka is designed to automatically rediscover the topology whenever Redis indicates a change in slot ownership. This ensures that the Babushka client stays in sync with the cluster's topology.
+The cluster's topology can change over time. New nodes can be added or removed, and the primary node owning a specific slot may change. GLIDE for Redis is designed to automatically rediscover the topology whenever Redis indicates a change in slot ownership. This ensures that the GLIDE for Redis client stays in sync with the cluster's topology.
 
 ### Redis Standalone 
 
-Babushka also supports Redis Standalone deployments, where the Redis database is hosted on a single primary node, optionally with replica nodes. To initialize a `RedisClient`  for a standalone Redis setup, you should create a `RedisClientConfiguration` that includes the addresses of primary and all replica nodes.
+GLIDE for Redis also supports Redis Standalone deployments, where the Redis database is hosted on a single primary node, optionally with replica nodes. To initialize a `RedisClient`  for a standalone Redis setup, you should create a `RedisClientConfiguration` that includes the addresses of primary and all replica nodes.
 
 #### **Example - Connecting to a standalone Redis** 
 
@@ -78,9 +78,9 @@ For information on the supported commands and their corresponding parameters, we
 
 ### Authentication
 
-By default, when connecting to Redis, Babushka operates in an unauthenticated mode.
+By default, when connecting to Redis, GLIDE for Redis operates in an unauthenticated mode.
 
-Babushka also offers support for an authenticated connection mode. 
+GLIDE for Redis also offers support for an authenticated connection mode. 
 
 In authenticated mode, you have the following options:
 
@@ -134,9 +134,9 @@ const client = await RedisClient.createClient({
 
 ### TLS
 
-Babushka supports secure TLS connections to a Redis data store.
+GLIDE for Redis supports secure TLS connections to a Redis data store.
 
-It's important to note that TLS support in Babushka relies on [rusttls](https://github.com/rustls/rustls). Currently, Babushka employs the default rustls settings with no option for customization.
+It's important to note that TLS support in GLIDE for Redis relies on [rusttls](https://github.com/rustls/rustls). Currently, GLIDE for Redis employs the default rustls settings with no option for customization.
 
 #### Example - Connecting with TLS Mode Enabled to a Redis Cluster
 
@@ -171,9 +171,9 @@ const client = await RedisClient.createClient({
 
 ### Read Strategy
 
-By default, Babushka directs read commands to the primary node that owns a specific slot. For applications that prioritize read throughput and can tolerate possibly stale data, Babushka provides the flexibility to route reads to replica nodes.
+By default, GLIDE for Redis directs read commands to the primary node that owns a specific slot. For applications that prioritize read throughput and can tolerate possibly stale data, GLIDE for Redis provides the flexibility to route reads to replica nodes.
 
-Babushka provides support for next read strategies, allowing you to choose the one that best fits your specific use case.
+GLIDE for Redis provides support for next read strategies, allowing you to choose the one that best fits your specific use case.
 
 |Strategy	|Description	|
 |---	|---	|
@@ -201,7 +201,7 @@ await client.get("key1");
 
 ### Timeouts and Reconnect Strategy
 
-Babushka allows you to configure timeout settings and reconnect strategies. These configurations can be applied through the `ClusterClientConfiguration` and `RedisClientConfiguration` parameters.
+GLIDE for Redis allows you to configure timeout settings and reconnect strategies. These configurations can be applied through the `ClusterClientConfiguration` and `RedisClientConfiguration` parameters.
 
 
 |Configuration setting	|Description	|**Default value**	|
