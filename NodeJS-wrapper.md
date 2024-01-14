@@ -2,7 +2,7 @@
 
 GLIDE for Redis provides support for both [Redis Cluster](https://github.com/aws/glide-for-redis/wiki/NodeJS-wrapper#redis-cluster) and [Redis Standalone](https://github.com/aws/glide-for-redis/wiki/NodeJS-wrapper#redis-standalone) and configurations. Please refer to the relevant section based on your specific setup.
 
-### Redis Cluster
+### Redis Cluster1
 
 GLIDE for Redis supports [Redis Cluster](https://redis.io/docs/reference/cluster-spec) deployments, where the Redis database is partitioned across multiple primary Redis shards, with each shard being represented by a primary node and zero or more replica nodes.. 
 
