@@ -126,7 +126,7 @@ zscan_calls | Not started | Not started | Not started | Not started | Not starte
 xreadgroup_calls | Not started | Not started | Not started | Not started | Not started | Not started
 pfadd_calls | Not started | Not started | Not started | Not started | Not started | Not started
 renamenx_calls | Not started | Not started | Not started | Not started | Not started | Not started
-zpopmin_calls | Not started | Not started | Not started | Not started | Not started | Not started
+zpopmin_calls | In progress | Not started | Not started | Not started | Not started | Not started
 monitor_calls | Not started | Not started | Not started | Not started | Not started | Not started
 pfcount_calls | Not started | Not started | Not started | Not started | Not started | Not started
 wait_calls | Not started | Not started | Not started | Not started | Not started | Not started
