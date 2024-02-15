@@ -98,7 +98,7 @@ hlen_calls | Done | Not started | Not started | Not started | Not started | Not 
 hsetnx_calls | In progress | Not started | Not started | Not started | Not started | Not started
 zrevrangebyscore_calls | Not started | Not started | Not started | Not started | Not started | Not started
 watch_calls | Not started | Not started | Not started | Not started | Not started | Not started
-sismember_calls | Not started | Not started | Not started | Not started | Not started | Not started
+sismember_calls | In progress | Not started | Not started | Not started | Not started | Not started
 pttl_calls | Not started | Not started | Not started | Not started | Not started | Not started
 zscore_calls | Done | Done | Not started | Not started | Not started | Not started
 dbsize_calls | Not started | Not started | Not started | Not started | Not started | Not started
