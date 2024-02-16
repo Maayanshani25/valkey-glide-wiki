@@ -25,10 +25,10 @@ mset_calls | Done | Done | Not started | Not started | Not started | Not started
 mget_calls | Done | Done | Not started | Not started | Not started | Not started
 get_calls | Done | Done | Not started | Not started | Not started | Not started
 hset_calls | Done | Done | Not started | Not started | Not started | Not started
-sadd_calls | Done | Done | Not started | Not started | Not started | Not started
-srem_calls | Done | Done | Not started | Not started | Not started | Not started
-smembers_calls | Done | Done | Not started | Not started | Not started | Not started
-scard_calls | Done | Done | Not started | Not started | Not started | Not started
+sadd_calls | Done | Done | Done | Not started | Not started | Not started
+srem_calls | Done | Done | Done | Not started | Not started | Not started
+smembers_calls | Done | Done | Done | Not started | Not started | Not started
+scard_calls | Done | Done | Done | Not started | Not started | Not started
 hmset_calls | deprecated | deprecated | deprecated | deprecated | deprecated | deprecated
 exists_calls | Done | Done | Not started | Not started | Not started | Not started
 command_calls | N/A | N/A | N/A | N/A | N/A | N/A
