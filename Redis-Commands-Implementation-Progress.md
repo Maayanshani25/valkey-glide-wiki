@@ -2,14 +2,14 @@
 -------------
 cmd type | Python | Node | Java | .NET | Go | PHP
 -- | -- | -- | -- | -- | -- | --
-ping_calls | Done | Done | Not started | Not started | Not started | Not started |
-info_calls | Done | Done | Not started | Not started | Not started | Not started |
+ping_calls | Done | Done | Done | Not started | Not started | Not started |
+info_calls | Done | Done | Done | Not started | Not started | Not started |
 Config get | Done | Done | Not started | Not started | Not started | Not started |
 Config set | Done | Done | Not started | Not started | Not started | Not started |
 Config rewrite | Done | Done | Not started | Not started | Not started | Not started |
 Config resetstat | Done | Done | Not started | Not started | Not started | Not started |
-incrby_calls | Done | Done | Not started | Not started | Not started | Not started |
-incr_calls | Done | Done | Not started | Not started | Not started | Not started |
+incrby_calls | Done | Done | Done | Not started | Not started | Not started |
+incr_calls | Done | Done | Done | Not started | Not started | Not started |
 incrbyfloat_calls | Done | Done | Not started | Not started | Not started | Not started |
 decr_calls | Done | Done | Not started | Not started | Not started | Not started
 decrby_calls | Done | Done | Not started | Not started | Not started | Not started
