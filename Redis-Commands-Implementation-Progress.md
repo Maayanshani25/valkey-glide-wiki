@@ -23,7 +23,7 @@ auth_calls | Done, API not required | Done, API not required | Not started | Not
 set_calls | Done | Done | Done | Not started | Not started | Not started
 mset_calls | Done | Done | Done | Not started | Not started | Not started
 mget_calls | Done | Done | Done | Not started | Not started | Not started
-get_calls | Done | Done | Not started | Not started | Not started | Not started
+get_calls | Done | Done | Done| Not started | Not started | Not started
 hset_calls | Done | Done | Not started | Not started | Not started | Not started
 sadd_calls | Done | Done | Done | Not started | Not started | Not started
 srem_calls | Done | Done | Done | Not started | Not started | Not started
