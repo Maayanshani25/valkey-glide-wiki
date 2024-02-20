@@ -10,7 +10,7 @@ Config rewrite | Done | Done | Not started | Not started | Not started | Not sta
 Config resetstat | Done | Done | Not started | Not started | Not started | Not started |
 incrby_calls | Done | Done | Done | Not started | Not started | Not started |
 incr_calls | Done | Done | Done | Not started | Not started | Not started |
-incrbyfloat_calls | Done | Done | Not started | Not started | Not started | Not started |
+incrbyfloat_calls | Done | Done | Done | Not started | Not started | Not started |
 decr_calls | Done | Done | Not started | Not started | Not started | Not started
 decrby_calls | Done | Done | Not started | Not started | Not started | Not started
 del_calls | Done | Done | Not started | Not started | Not started | Not started
@@ -20,9 +20,9 @@ multi_calls | Done | Done | Not started | Not started | Not started | Not starte
 exec_calls | Done | Done | Not started | Not started | Not started | Not started
 CLIENT GETNAME | Done | Done | Not started | Not started | Not started | Not started
 auth_calls | Done, API not required | Done, API not required | Not started | Not started | Not started | Not started
-set_calls | Done | Done | Not started | Not started | Not started | Not started
-mset_calls | Done | Done | Not started | Not started | Not started | Not started
-mget_calls | Done | Done | Not started | Not started | Not started | Not started
+set_calls | Done | Done | Done | Not started | Not started | Not started
+mset_calls | Done | Done | Done | Not started | Not started | Not started
+mget_calls | Done | Done | Done | Not started | Not started | Not started
 get_calls | Done | Done | Not started | Not started | Not started | Not started
 hset_calls | Done | Done | Not started | Not started | Not started | Not started
 sadd_calls | Done | Done | Done | Not started | Not started | Not started
