@@ -173,7 +173,7 @@ msetnx_calls | Not started | Not started | Not started | Not started | Not start
 sdiff_calls | Not started | Not started | Not started | Not started | Not started | Not started
 setrange_calls | Not started | Not started | Not started | Not started | Not started | Not started
 sinterstore_calls | Not started | Not started | Not started | Not started | Not started | Not started
-zpopmax_calls | In progress | Not started | Not started | Not started | Not started | Not started
+zpopmax_calls | Done | Not started | Not started | Not started | Not started | Not started
 georadius_ro_calls | Not started | Not started | Not started | Not started | Not started | Not started
 georadius_calls | Not started | Not started | Not started | Not started | Not started | Not started
 pfmerge_calls | Not started | Not started | Not started | Not started | Not started | Not started
