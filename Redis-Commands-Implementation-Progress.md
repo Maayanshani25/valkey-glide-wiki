@@ -85,7 +85,7 @@ zrange_calls | In progress | In progress | Not started | Not started | Not start
 unsubscribe_calls | In progress | In progress | Not started | Not started | Not started | Not started
 psubscribe_calls | In progress | In progress | Not started | Not started | Not started | Not started
 zcard_calls | Done | Done | Not started | Not started | Not started | Not started
-type_calls | Done | Not started | Not started | Not started | Not started | Not started
+type_calls | Done | Done | Not started | Not started | Not started | Not started
 echo_calls | Done | Not started | Not started | Not started | Not started | Not started
 brpop_calls | Not started | Not started | Not started | Not started | Not started | Not started
 zremrangebyrank_calls | Not started | In progress | Not started | Not started | Not started | Not started
@@ -94,7 +94,7 @@ flushall_calls | Not started | Not started | Not started | Not started | Not sta
 sscan_calls | Not started | Not started | Not started | Not started | Not started | Not started
 flushdb_calls | Not started | Not started | Not started | Not started | Not started | Not started
 xadd_calls | Not started | Not started | Not started | Not started | Not started | Not started
-hlen_calls | Done | Not started | Not started | Not started | Not started | Not started
+hlen_calls | Done | Done | Not started | Not started | Not started | Not started
 hsetnx_calls | In progress | Not started | Not started | Not started | Not started | Not started
 zrevrangebyscore_calls | Not started | Not started | Not started | Not started | Not started | Not started
 watch_calls | Not started | Not started | Not started | Not started | Not started | Not started
