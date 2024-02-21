@@ -102,7 +102,7 @@ sismember_calls | In progress | Not started | Not started | Not started | Not st
 pttl_calls | Not started | Not started | Not started | Not started | Not started | Not started
 zscore_calls | Done | Done | Not started | Not started | Not started | Not started
 dbsize_calls | Not started | Not started | Not started | Not started | Not started | Not started
-zrevrange_calls | Not started | Not started | Not started | Not started | Not started | Not started
+zrevrange_calls | deprecated | deprecated | deprecated | deprecated | deprecated | deprecated
 hscan_calls | Not started | Not started | Not started | Not started | Not started | Not started
 unwatch_calls | Not started | Not started | Not started | Not started | Not started | Not started
 hkeys_calls | Not started | Not started | Not started | Not started | Not started | Not started
