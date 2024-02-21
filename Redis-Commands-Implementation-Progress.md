@@ -96,7 +96,7 @@ flushdb_calls | Not started | Not started | Not started | Not started | Not star
 xadd_calls | Not started | Not started | Not started | Not started | Not started | Not started
 hlen_calls | Done | Done | Not started | Not started | Not started | Not started
 hsetnx_calls | In progress | Not started | Not started | Not started | Not started | Not started
-zrevrangebyscore_calls | Not started | Not started | Not started | Not started | Not started | Not started
+zrevrangebyscore_calls | deprecated | deprecated | deprecated | deprecated | deprecated | deprecated
 watch_calls | Not started | Not started | Not started | Not started | Not started | Not started
 sismember_calls | In progress | Not started | Not started | Not started | Not started | Not started
 pttl_calls | Not started | Not started | Not started | Not started | Not started | Not started
