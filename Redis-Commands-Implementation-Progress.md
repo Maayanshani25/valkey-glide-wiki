@@ -13,7 +13,7 @@ incr_calls | Done | Done | Done | Not started | Not started | Not started |
 incrbyfloat_calls | Done | Done | Done | Not started | Not started | Not started |
 decr_calls | Done | Done | Done | Not started | Not started | Not started
 decrby_calls | Done | Done | Done | Not started | Not started | Not started
-del_calls | Done | Done | Not started | Not started | Not started | Not started
+del_calls | Done | Done | Done | Not started | Not started | Not started
 select_calls | Done | Done | Not started | Not started | Not started | Not started
 client ID | Done | Done | Not started | Not started | Not started | Not started
 multi_calls | Done | Done | Not started | Not started | Not started | Not started
