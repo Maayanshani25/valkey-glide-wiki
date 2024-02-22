@@ -24,7 +24,7 @@ set_calls | Done | Done | Done | Not started | Not started | Not started
 mset_calls | Done | Done | Done | Not started | Not started | Not started
 mget_calls | Done | Done | Done | Not started | Not started | Not started
 get_calls | Done | Done | Done| Not started | Not started | Not started
-hset_calls | Done | Done | Not started | Not started | Not started | Not started
+hset_calls | Done | Done | Done | Not started | Not started | Not started
 sadd_calls | Done | Done | Done | Not started | Not started | Not started
 srem_calls | Done | Done | Done | Not started | Not started | Not started
 smembers_calls | Done | Done | Done | Not started | Not started | Not started
@@ -33,7 +33,7 @@ hmset_calls | deprecated | deprecated | deprecated | deprecated | deprecated | d
 exists_calls | Done | Done | Not started | Not started | Not started | Not started
 command_calls | N/A | N/A | N/A | N/A | N/A | N/A
 readonly_calls | N/A | N/A | N/A | N/A | N/A | N/A
-hget_calls | Done | Done | Not started | Not started | Not started | Not started
+hget_calls | Done | Done | Done | Not started | Not started | Not started
 hgetall_calls | Done | Done | Not started | Not started | Not started | Not started
 hdel_calls | Done | Done | Done | Not started | Not started | Not started
 hmget_calls | Done | Done | Done | Not started | Not started | Not started
