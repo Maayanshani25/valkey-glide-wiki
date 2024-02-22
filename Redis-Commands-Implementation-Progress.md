@@ -17,7 +17,7 @@ del_calls | Done | Done | Done | Not started | Not started | Not started
 select_calls | Done | Done | Not started | Not started | Not started | Not started
 client ID | Done | Done | Not started | Not started | Not started | Not started
 multi_calls | Done | Done | Not started | Not started | Not started | Not started
-exec_calls | Done | Done | Not started | Not started | Not started | Not started
+exec_calls | Done | Done | Done | Not started | Not started | Not started
 CLIENT GETNAME | Done | Done | Not started | Not started | Not started | Not started
 auth_calls | Done, API not required | Done, API not required | Not started | Not started | Not started | Not started
 set_calls | Done | Done | Done | Not started | Not started | Not started
