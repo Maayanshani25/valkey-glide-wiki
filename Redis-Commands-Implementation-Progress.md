@@ -34,7 +34,7 @@ exists_calls | Done | Done | Not started | Not started | Not started | Not start
 command_calls | N/A | N/A | N/A | N/A | N/A | N/A
 readonly_calls | N/A | N/A | N/A | N/A | N/A | N/A
 hget_calls | Done | Done | Done | Not started | Not started | Not started
-hgetall_calls | Done | Done | Not started | Not started | Not started | Not started
+hgetall_calls | Done | Done | Done | Not started | Not started | Not started
 hdel_calls | Done | Done | Done | Not started | Not started | Not started
 hmget_calls | Done | Done | Done | Not started | Not started | Not started
 hexists_calls | Done | Done | Done | Not started | Not started | Not started
