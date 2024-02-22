@@ -53,7 +53,7 @@ llen_calls | Done | Done | Not started | Not started | Not started | Not started
 lrem_calls | Done | Done | Not started | Not started | Not started | Not started
 ltrim_calls | Done | Done | Not started | Not started | Not started | Not started
 lrange_calls | Done | Done | Not started | Not started | Not started | Not started
-unlink_calls | Done | Done | Not started | Not started | Not started | Not started
+unlink_calls | Done | Done | Done | Not started | Not started | Not started
 ttl_calls | Done | Done | Not started | Not started | Not started | Not started
 publish_calls | In progress | In progress | Not started | Not started | Not started | Not started
 CLIENT KILL | Not started | Not started | Not started | Not started | Not started | Not started
