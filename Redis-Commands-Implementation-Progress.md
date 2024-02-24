@@ -4,10 +4,10 @@ cmd type | Python | Node | Java | .NET | Go | PHP
 -- | -- | -- | -- | -- | -- | --
 ping_calls | Done | Done | Done | Not started | Not started | Not started |
 info_calls | Done | Done | Done | Not started | Not started | Not started |
-Config get | Done | Done | Not started | Not started | Not started | Not started |
-Config set | Done | Done | Not started | Not started | Not started | Not started |
-Config rewrite | Done | Done | Not started | Not started | Not started | Not started |
-Config resetstat | Done | Done | Not started | Not started | Not started | Not started |
+Config get | Done | Done | In progress | Not started | Not started | Not started |
+Config set | Done | Done | In progress | Not started | Not started | Not started |
+Config rewrite | Done | Done | In progress | Not started | Not started | Not started |
+Config resetstat | Done | Done | In progress | Not started | Not started | Not started |
 incrby_calls | Done | Done | Done | Not started | Not started | Not started |
 incr_calls | Done | Done | Done | Not started | Not started | Not started |
 incrbyfloat_calls | Done | Done | Done | Not started | Not started | Not started |
@@ -15,10 +15,10 @@ decr_calls | Done | Done | Done | Not started | Not started | Not started
 decrby_calls | Done | Done | Done | Not started | Not started | Not started
 del_calls | Done | Done | Done | Not started | Not started | Not started
 select_calls | Done | Done | Done | Not started | Not started | Not started
-client ID | Done | Done | Not started | Not started | Not started | Not started
+client ID | Done | Done | In progress | Not started | Not started | Not started
 multi_calls | Done | Done | Not started | Not started | Not started | Not started
 exec_calls | Done | Done | Done | Not started | Not started | Not started
-CLIENT GETNAME | Done | Done | Not started | Not started | Not started | Not started
+CLIENT GETNAME | Done | Done | In progress | Not started | Not started | Not started
 auth_calls | Done, API not required | Done, API not required | Not started | Not started | Not started | Not started
 set_calls | Done | Done | Done | Not started | Not started | Not started
 mset_calls | Done | Done | Done | Not started | Not started | Not started
@@ -40,21 +40,21 @@ hmget_calls | Done | Done | Done | Not started | Not started | Not started
 hexists_calls | Done | Done | Done | Not started | Not started | Not started
 hincrby_calls | Done | Done | Done | Not started | Not started | Not started
 hincrbyfloat_calls | Done | Done | Done | Not started | Not started | Not started
-expire_calls | Done | Done | Not started | Not started | Not started | Not started
-pexpireat_calls | Done | Done | Not started | Not started | Not started | Not started
-pexpire_calls | Done | Done | Not started | Not started | Not started | Not started
-expireat_calls | Done | Done | Not started | Not started | Not started | Not started
-lpush_calls | Done | Done | Not started | Not started | Not started | Not started
-lpop_calls | Done | Done | Not started | Not started | Not started | Not started
-rpush_calls | Done | Done | Not started | Not started | Not started | Not started
-rpop_calls | Done | Done | Not started | Not started | Not started | Not started
+expire_calls | Done | Done | In progress | Not started | Not started | Not started
+pexpireat_calls | Done | Done | In progress | Not started | Not started | Not started
+pexpire_calls | Done | Done | In progress | Not started | Not started | Not started
+expireat_calls | Done | Done | In progress | Not started | Not started | Not started
+lpush_calls | Done | Done | In progress | Not started | Not started | Not started
+lpop_calls | Done | Done | In progress | Not started | Not started | Not started
+rpush_calls | Done | Done | In progress | Not started | Not started | Not started
+rpop_calls | Done | Done | In progress | Not started | Not started | Not started
 rpoplpush_calls | deprecated | deprecated | deprecated | deprecated | deprecated | deprecated
-llen_calls | Done | Done | Not started | Not started | Not started | Not started
-lrem_calls | Done | Done | Not started | Not started | Not started | Not started
-ltrim_calls | Done | Done | Not started | Not started | Not started | Not started
-lrange_calls | Done | Done | Not started | Not started | Not started | Not started
+llen_calls | Done | Done | In progress | Not started | Not started | Not started
+lrem_calls | Done | Done | In progress | Not started | Not started | Not started
+ltrim_calls | Done | Done | In progress | Not started | Not started | Not started
+lrange_calls | Done | Done | In progress | Not started | Not started | Not started
 unlink_calls | Done | Done | Done | Not started | Not started | Not started
-ttl_calls | Done | Done | Not started | Not started | Not started | Not started
+ttl_calls | Done | Done | In progress | Not started | Not started | Not started
 publish_calls | In progress | In progress | Not started | Not started | Not started | Not started
 CLIENT KILL | Not started | Not started | Not started | Not started | Not started | Not started
 CLIENT LIST | Not started | Not started | Not started | Not started | Not started | Not started
@@ -79,8 +79,8 @@ zremrangebyscore_calls | Not started | In progress | Not started | Not started |
 setnx_calls | deprecated | deprecated | deprecated | deprecated | deprecated | deprecated
 bgsave_calls | Not started | Not started | Not started | Not started | Not started | Not started
 setex_calls | deprecated | deprecated | deprecated | deprecated | deprecated | deprecated
-zadd_calls | Done | Done | Not started | Not started | Not started | Not started
-zrem_calls | Done | Done | Not started | Not started | Not started | Not started
+zadd_calls | Done | Done | In progress | Not started | Not started | Not started
+zrem_calls | Done | Done | In progress | Not started | Not started | Not started
 zrange_calls | In progress | In progress | Not started | Not started | Not started | Not started
 unsubscribe_calls | In progress | In progress | Not started | Not started | Not started | Not started
 psubscribe_calls | In progress | In progress | Not started | Not started | Not started | Not started
