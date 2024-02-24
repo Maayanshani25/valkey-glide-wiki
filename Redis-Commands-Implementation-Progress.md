@@ -84,7 +84,7 @@ zrem_calls | Done | Done | In progress | Not started | Not started | Not started
 zrange_calls | In progress | In progress | Not started | Not started | Not started | Not started
 unsubscribe_calls | In progress | In progress | Not started | Not started | Not started | Not started
 psubscribe_calls | In progress | In progress | Not started | Not started | Not started | Not started
-zcard_calls | Done | Done | Not started | Not started | Not started | Not started
+zcard_calls | Done | Done | Done | Not started | Not started | Not started
 type_calls | Done | Done | Not started | Not started | Not started | Not started
 echo_calls | Done | Not started | Not started | Not started | Not started | Not started
 brpop_calls | Not started | Not started | Not started | Not started | Not started | Not started
