@@ -1,231 +1,229 @@
-
--------------
-cmd type | Python | Node | Java | .NET | Go | PHP
--- | -- | -- | -- | -- | -- | --
-ping_calls | Done | Done | Done | Not started | Not started | Not started |
-info_calls | Done | Done | Done | Not started | Not started | Not started |
-Config get | Done | Done | In progress | Not started | Not started | Not started |
-Config set | Done | Done | In progress | Not started | Not started | Not started |
-Config rewrite | Done | Done | In progress | Not started | Not started | Not started |
-Config resetstat | Done | Done | In progress | Not started | Not started | Not started |
-incrby_calls | Done | Done | Done | Not started | Not started | Not started |
-incr_calls | Done | Done | Done | Not started | Not started | Not started |
-incrbyfloat_calls | Done | Done | Done | Not started | Not started | Not started |
-decr_calls | Done | Done | Done | Not started | Not started | Not started
-decrby_calls | Done | Done | Done | Not started | Not started | Not started
-del_calls | Done | Done | Done | Not started | Not started | Not started
-select_calls | Done | Done | Done | Not started | Not started | Not started
-client ID | Done | Done | In progress | Not started | Not started | Not started
-multi_calls | Done | Done | Not started | Not started | Not started | Not started
-exec_calls | Done | Done | Done | Not started | Not started | Not started
-CLIENT GETNAME | Done | Done | In progress | Not started | Not started | Not started
-auth_calls | Done, API not required | Done, API not required | Not started | Not started | Not started | Not started
-set_calls | Done | Done | Done | Not started | Not started | Not started
-mset_calls | Done | Done | Done | Not started | Not started | Not started
-mget_calls | Done | Done | Done | Not started | Not started | Not started
-get_calls | Done | Done | Done| Not started | Not started | Not started
-hset_calls | Done | Done | Done | Not started | Not started | Not started
-sadd_calls | Done | Done | Done | Not started | Not started | Not started
-srem_calls | Done | Done | Done | Not started | Not started | Not started
-smembers_calls | Done | Done | Done | Not started | Not started | Not started
-scard_calls | Done | Done | Done | Not started | Not started | Not started
-hmset_calls | deprecated | deprecated | deprecated | deprecated | deprecated | deprecated
-exists_calls | Done | Done | Done | Not started | Not started | Not started
-command_calls | N/A | N/A | N/A | N/A | N/A | N/A
-readonly_calls | N/A | N/A | N/A | N/A | N/A | N/A
-hget_calls | Done | Done | Done | Not started | Not started | Not started
-hgetall_calls | Done | Done | Done | Not started | Not started | Not started
-hdel_calls | Done | Done | Done | Not started | Not started | Not started
-hmget_calls | Done | Done | Done | Not started | Not started | Not started
-hexists_calls | Done | Done | Done | Not started | Not started | Not started
-hincrby_calls | Done | Done | Done | Not started | Not started | Not started
-hincrbyfloat_calls | Done | Done | Done | Not started | Not started | Not started
-expire_calls | Done | Done | In progress | Not started | Not started | Not started
-pexpireat_calls | Done | Done | In progress | Not started | Not started | Not started
-pexpire_calls | Done | Done | In progress | Not started | Not started | Not started
-expireat_calls | Done | Done | In progress | Not started | Not started | Not started
-lpush_calls | Done | Done | In progress | Not started | Not started | Not started
-lpop_calls | Done | Done | In progress | Not started | Not started | Not started
-rpush_calls | Done | Done | In progress | Not started | Not started | Not started
-rpop_calls | Done | Done | In progress | Not started | Not started | Not started
-rpoplpush_calls | deprecated | deprecated | deprecated | deprecated | deprecated | deprecated
-llen_calls | Done | Done | In progress | Not started | Not started | Not started
-lrem_calls | Done | Done | In progress | Not started | Not started | Not started
-ltrim_calls | Done | Done | In progress | Not started | Not started | Not started
-lrange_calls | Done | Done | In progress | Not started | Not started | Not started
-unlink_calls | Done | Done | Done | Not started | Not started | Not started
-ttl_calls | Done | Done | In progress | Not started | Not started | Not started
-publish_calls | In progress | In progress | Not started | Not started | Not started | Not started
-CLIENT KILL | Not started | Not started | Not started | Not started | Not started | Not started
-CLIENT LIST | Not started | Not started | Not started | Not started | Not started | Not started
-CLIENT PAUSE | Not started | Not started | Not started | Not started | Not started | Not started
-client INFO | Not started | Not started | Not started | Not started | Not started | Not started
-CLIENT SETNAME | Not started | Not started | Not started | Not started | Not started | Not started
-replconf_calls | Not started | Not started | Not started | Not started | Not started | Not started
-CLIENT REPLY | Not started | Not started | Not started | Not started | Not started | Not started
-CLIENT UNBLOCK | Not started | Not started | Not started | Not started | Not started | Not started
-CLIENT UNPAUSE | Not started | Not started | Not started | Not started | Not started | Not started
-psync_calls | Not started | Not started | Not started | Not started | Not started | Not started
-cluster_calls | Not started | Not started | Not started | Not started | Not started | Not started
-subscribe_calls | In progress | Not started | Not started | Not started | Not started | Not started
-eval_calls | Done | Done | Not started | Not started | Not started | Not started
-evalsha_calls | Done | Done | Not started | Not started | Not started | Not started
-script_calls | Done | Done | Not started | Not started | Not started | Not started
-scan_calls | Not started | Not started | Not started | Not started | Not started | Not started
-keys_calls | Not started | Not started | Not started | Not started | Not started | Not started
-slowlog_calls | Not started | Not started | Not started | Not started | Not started | Not started
-zrangebyscore_calls | deprecated | deprecated | deprecated | deprecated | deprecated | deprecated
-zremrangebyscore_calls | Not started | In progress | Not started | Not started | Not started | Not started
-setnx_calls | deprecated | deprecated | deprecated | deprecated | deprecated | deprecated
-bgsave_calls | Not started | Not started | Not started | Not started | Not started | Not started
-setex_calls | deprecated | deprecated | deprecated | deprecated | deprecated | deprecated
-zadd_calls | Done | Done | In progress | Not started | Not started | Not started
-zrem_calls | Done | Done | In progress | Not started | Not started | Not started
-zrange_calls | In progress | In progress | Not started | Not started | Not started | Not started
-unsubscribe_calls | In progress | In progress | Not started | Not started | Not started | Not started
-psubscribe_calls | In progress | In progress | Not started | Not started | Not started | Not started
-zcard_calls | Done | Done | Done | Not started | Not started | Not started
-type_calls | Done | Done | Not started | Not started | Not started | Not started
-echo_calls | Done | Not started | Not started | Not started | Not started | Not started
-brpop_calls | Not started | Not started | Not started | Not started | Not started | Not started
-zremrangebyrank_calls | Not started | In progress | Not started | Not started | Not started | Not started
-psetex_calls | deprecated | deprecated | deprecated | deprecated | deprecated | deprecated
-flushall_calls | Not started | Not started | Not started | Not started | Not started | Not started
-sscan_calls | Not started | Not started | Not started | Not started | Not started | Not started
-flushdb_calls | Not started | Not started | Not started | Not started | Not started | Not started
-xadd_calls | Not started | Not started | Not started | Not started | Not started | Not started
-hlen_calls | Done | Done | Not started | Not started | Not started | Not started
-hsetnx_calls | In progress | Not started | Not started | Not started | Not started | Not started
-zrevrangebyscore_calls | deprecated | deprecated | deprecated | deprecated | deprecated | deprecated
-watch_calls | Not started | Not started | Not started | Not started | Not started | Not started
-sismember_calls | In progress | Not started | Not started | Not started | Not started | Not started
-pttl_calls | Not started | Not started | Not started | Not started | Not started | Not started
-zscore_calls | Done | Done | Not started | Not started | Not started | Not started
-dbsize_calls | Not started | Not started | Not started | Not started | Not started | Not started
-zrevrange_calls | deprecated | deprecated | deprecated | deprecated | deprecated | deprecated
-hscan_calls | Not started | Not started | Not started | Not started | Not started | Not started
-unwatch_calls | Not started | Not started | Not started | Not started | Not started | Not started
-hkeys_calls | Not started | Not started | Not started | Not started | Not started | Not started
-brpoplpush_calls | Not started | Not started | Not started | Not started | Not started | Not started
-quit_calls | Not started | Not started | Not started | Not started | Not started | Not started
-xread_calls | Not started | Not started | Not started | Not started | Not started | Not started
-readwrite_calls | Not started | Not started | Not started | Not started | Not started | Not started
-zcount_calls | Done | In progress | Not started | Not started | Not started | Not started
-time_calls | Not started | Not started | Not started | Not started | Not started | Not started
-append_calls | Not started | Not started | Not started | Not started | Not started | Not started
-rename_calls | Not started | Not started | Not started | Not started | Not started | Not started
-lindex_calls | Not started | Not started | Not started | Not started | Not started | Not started
-punsubscribe_calls | In progress | In progress | Not started | Not started | Not started | Not started
-persist_calls | Not started | Not started | Not started | Not started | Not started | Not started
-strlen_calls | Not started | Not started | Not started | Not started | Not started | Not started
-zincrby_calls | Not started | Not started | Not started | Not started | Not started | Not started
-xgroup_calls | Not started | Not started | Not started | Not started | Not started | Not started
-getset_calls | Not started | Not started | Not started | Not started | Not started | Not started
-blpop_calls | Not started | Not started | Not started | Not started | Not started | Not started
-zscan_calls | Not started | Not started | Not started | Not started | Not started | Not started
-xreadgroup_calls | Not started | Not started | Not started | Not started | Not started | Not started
-pfadd_calls | Not started | Not started | Not started | Not started | Not started | Not started
-renamenx_calls | Not started | Not started | Not started | Not started | Not started | Not started
-zpopmin_calls | Done | Done | Not started | Not started | Not started | Not started
-monitor_calls | Not started | Not started | Not started | Not started | Not started | Not started
-pfcount_calls | Not started | Not started | Not started | Not started | Not started | Not started
-wait_calls | Not started | Not started | Not started | Not started | Not started | Not started
-spop_calls | Not started | Not started | Not started | Not started | Not started | Not started
-restore_calls | Not started | Not started | Not started | Not started | Not started | Not started
-hvals_calls | Not started | Not started | Not started | Not started | Not started | Not started
-sinter_calls | Not started | Not started | Not started | Not started | Not started | Not started
-xtrim_calls | Not started | Not started | Not started | Not started | Not started | Not started
-zrank_calls | Not started | Not started | Not started | Not started | Not started | Not started
-zinterstore_calls | Not started | Not started | Not started | Not started | Not started | Not started
-xack_calls | Not started | Not started | Not started | Not started | Not started | Not started
-object_calls | Not started | Not started | Not started | Not started | Not started | Not started
-spublish_calls | In progress | Not started | Not started | Not started | Not started | Not started
-ssubscribe_calls | In progress | Not started | Not started | Not started | Not started | Not started
-zrevrank_calls | Not started | Not started | Not started | Not started | Not started | Not started
-pubsub_calls | In progress | Not started | Not started | Not started | Not started | Not started
-sunion_calls | Not started | Not started | Not started | Not started | Not started | Not started
-zunionstore_calls | Not started | Not started | Not started | Not started | Not started | Not started
-lset_calls | Not started | Not started | Not started | Not started | Not started | Not started
-xclaim_calls | Not started | Not started | Not started | Not started | Not started | Not started
-bitfield_calls | Not started | Not started | Not started | Not started | Not started | Not started
-getrange_calls | Not started | Not started | Not started | Not started | Not started | Not started
-randomkey_calls | Not started | Not started | Not started | Not started | Not started | Not started
-srandmember_calls | Not started | Not started | Not started | Not started | Not started | Not started
-dump_calls | Not started | Not started | Not started | Not started | Not started | Not started
-xinfo_calls | Not started | Not started | Not started | Not started | Not started | Not started
-setbit_calls | Not started | Not started | Not started | Not started | Not started | Not started
-smove_calls | Not started | Not started | Not started | Not started | Not started | Not started
-xrange_calls | Not started | Not started | Not started | Not started | Not started | Not started
-xdel_calls | Not started | Not started | Not started | Not started | Not started | Not started
-linsert_calls | Not started | Not started | Not started | Not started | Not started | Not started
-xlen_calls | Not started | Not started | Not started | Not started | Not started | Not started
-xpending_calls | Not started | Not started | Not started | Not started | Not started | Not started
-discard_calls | Not started | Not started | Not started | Not started | Not started | Not started
-sunionstore_calls | Not started | Not started | Not started | Not started | Not started | Not started
-xrevrange_calls | Not started | Not started | Not started | Not started | Not started | Not started
-bzpopmin_calls | Not started | Not started | Not started | Not started | Not started | Not started
-rpushx_calls | Not started | Not started | Not started | Not started | Not started | Not started
-sort_calls | Not started | Not started | Not started | Not started | Not started | Not started
-geoadd_calls | Not started | Not started | Not started | Not started | Not started | Not started
-zrangebylex_calls | deprecated | deprecated | deprecated | deprecated | deprecated | deprecated
-getbit_calls | Not started | Not started | Not started | Not started | Not started | Not started
-msetnx_calls | Not started | Not started | Not started | Not started | Not started | Not started
-sdiff_calls | Not started | Not started | Not started | Not started | Not started | Not started
-setrange_calls | Not started | Not started | Not started | Not started | Not started | Not started
-sinterstore_calls | Not started | Not started | Not started | Not started | Not started | Not started
-zpopmax_calls | Done | Done | Not started | Not started | Not started | Not started
-georadius_ro_calls | Not started | Not started | Not started | Not started | Not started | Not started
-georadius_calls | Not started | Not started | Not started | Not started | Not started | Not started
-pfmerge_calls | Not started | Not started | Not started | Not started | Not started | Not started
-bitcount_calls | Not started | Not started | Not started | Not started | Not started | Not started
-sdiffstore_calls | Not started | Not started | Not started | Not started | Not started | Not started
-touch_calls | Not started | Not started | Not started | Not started | Not started | Not started
-smismember_calls | Not started | Not started | Not started | Not started | Not started | Not started
-zremrangebylex_calls | Not started | Not started | Not started | Not started | Not started | Not started
-zrevrangebylex_calls | Not started | Not started | Not started | Not started | Not started | Not started
-lpushx_calls | Not started | Not started | Not started | Not started | Not started | Not started
-copy_calls | Not started | Not started | Not started | Not started | Not started | Not started
-hrandfield_calls | Not started | Not started | Not started | Not started | Not started | Not started
-lpos_calls | Not started | Not started | Not started | Not started | Not started | Not started
-geopos_calls | Not started | Not started | Not started | Not started | Not started | Not started
-xautoclaim_calls | Not started | Not started | Not started | Not started | Not started | Not started
-zmscore_calls | Not started | Not started | Not started | Not started | Not started | Not started
-bitop_calls | Not started | Not started | Not started | Not started | Not started | Not started
-lastsave_calls | Not started | Not started | Not started | Not started | Not started | Not started
-geosearch_calls | Not started | Not started | Not started | Not started | Not started | Not started
-function_calls | Not started | Not started | Not started | Not started | Not started | Not started
-zlexcount_calls | Not started | Not started | Not started | Not started | Not started | Not started
-zrandmember_calls | Not started | Not started | Not started | Not started | Not started | Not started
-replicaof_calls | Not started | Not started | Not started | Not started | Not started | Not started
-bitfield_ro_calls | Not started | Not started | Not started | Not started | Not started | Not started
-fcall_calls | Not started | Not started | Not started | Not started | Not started | Not started
-zdiffstore_calls | Not started | Not started | Not started | Not started | Not started | Not started
-move_calls | Not started | Not started | Not started | Not started | Not started | Not started
-geohash_calls | Not started | Not started | Not started | Not started | Not started | Not started
-bitpos_calls | Not started | Not started | Not started | Not started | Not started | Not started
-substr_calls | Not started | Not started | Not started | Not started | Not started | Not started |
-zdiff_calls | Not started | Not started | Not started | Not started | Not started | Not started
-zrangestore_calls | Not started | Not started | Not started | Not started | Not started | Not started
-geodist_calls | Not started | Not started | Not started | Not started | Not started | Not started |
-georadiusbymember_calls | Not started | Not started | Not started | Not started | Not started | Not started |
-bzpopmax_calls | Not started | Not started | Not started | Not started | Not started | Not started |
-zinter_calls | Not started | Not started | Not started | Not started | Not started | Not started |
-georadiusbymember_ro_calls | Not started | Not started | Not started | Not started | Not started | Not started |
-sunsubscribe_calls | Not started | Not started | Not started | Not started | Not started | Not started
-zunion_calls | Not started | Not started | Not started | Not started | Not started | Not started
-sort_ro_calls | Not started | Not started | Not started | Not started | Not started | Not started
-fcall_ro_calls | Not started | Not started | Not started | Not started | Not started | Not started
-lmpop_calls | Not started | Not started | Not started | Not started | Not started | Not started
-geosearchstore_calls | Not started | Not started | Not started | Not started | Not started | Not started |
-sync_calls | Not started | Not started | Not started | Not started | Not started | Not started |
-bgrewriteaof_calls | Not started | Not started | Not started | Not started | Not started | Not started |
-debug_calls | Not started | Not started | Not started | Not started | Not started | Not started |
-migrate_calls | Not started | Not started | Not started | Not started | Not started | Not started |
-save_calls | Not started | Not started | Not started | Not started | Not started | Not started |
-shutdown_calls | Not started | Not started | Not started | Not started | Not started | Not started |
-zintercard_calls | Not started | Not started | Not started | Not started | Not started | Not started |
-zmpop_calls | Not started | Not started | Not started | Not started | Not started | Not started |
-bzmpop_calls | Not started | Not started | Not started | Not started | Not started | Not started |
-lcs_calls | Not started | Not started | Not started | Not started | Not started | Not started |
-pfselftest_calls | Not started | Not started | Not started | Not started | Not started | Not started |
-xsetid_calls | Not started | Not started | Not started | Not started | Not started | Not started |
+cmd type                    | Python      | Node        | Java         | .NET        | Go          | PHP        
+--                          | --          | --          | --           | --          | --          | --         
+ping                        | Done        | Done        | Done         | Not started | Not started | Not started 
+info                        | Done        | Done        | Done         | Not started | Not started | Not started 
+Config get                  | Done        | Done        | In progress  | Not started | Not started | Not started 
+Config set                  | Done        | Done        | In progress  | Not started | Not started | Not started 
+Config rewrite              | Done        | Done        | In progress  | Not started | Not started | Not started 
+Config resetstat            | Done        | Done        | In progress  | Not started | Not started | Not started 
+incrby                      | Done        | Done        | Done         | Not started | Not started | Not started 
+incr                        | Done        | Done        | Done         | Not started | Not started | Not started 
+incrbyfloat                 | Done        | Done        | Done         | Not started | Not started | Not started 
+decr                        | Done        | Done        | Done         | Not started | Not started | Not started
+decrby                      | Done        | Done        | Done         | Not started | Not started | Not started
+del                         | Done        | Done        | Done         | Not started | Not started | Not started
+select                      | Done        | Done        | Done         | Not started | Not started | Not started
+client ID                   | Done        | Done        | In progress  | Not started | Not started | Not started
+multi                       | Done        | Done        | Not started  | Not started | Not started | Not started
+exec                        | Done        | Done        | Done         | Not started | Not started | Not started
+CLIENT GETNAME              | Done        | Done        | In progress  | Not started | Not started | Not started
+auth                        | Done, API not required | Done, API not required | Not started | Not started | Not started  | Not started
+set                         | Done        | Done        | Done         | Not started | Not started | Not started
+mset                        | Done        | Done        | Done         | Not started | Not started | Not started
+mget                        | Done        | Done        | Done         | Not started | Not started | Not started
+get                         | Done        | Done        | Done         | Not started | Not started | Not started
+hset                        | Done        | Done        | Done         | Not started | Not started | Not started
+sadd                        | Done        | Done        | Done         | Not started | Not started | Not started
+srem                        | Done        | Done        | Done         | Not started | Not started | Not started
+smembers                    | Done        | Done        | Done         | Not started | Not started | Not started
+scard                       | Done        | Done        | Done         | Not started | Not started | Not started
+hmset                       | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
+exists                      | Done        | Done        | Done         | Not started | Not started | Not started
+command                     | N/A         | N/A         | N/A          | N/A         | N/A         | N/A        
+readonly                    | N/A         | N/A         | N/A          | N/A         | N/A         | N/A        
+hget                        | Done        | Done        | Done         | Not started | Not started | Not started
+hgetall                     | Done        | Done        | Done         | Not started | Not started | Not started
+hdel                        | Done        | Done        | Done         | Not started | Not started | Not started
+hmget                       | Done        | Done        | Done         | Not started | Not started | Not started
+hexists                     | Done        | Done        | Done         | Not started | Not started | Not started
+hincrby                     | Done        | Done        | Done         | Not started | Not started | Not started
+hincrbyfloat                | Done        | Done        | Done         | Not started | Not started | Not started
+expire                      | Done        | Done        | In progress  | Not started | Not started | Not started
+pexpireat                   | Done        | Done        | In progress  | Not started | Not started | Not started
+pexpire                     | Done        | Done        | In progress  | Not started | Not started | Not started
+expireat                    | Done        | Done        | In progress  | Not started | Not started | Not started
+lpush                       | Done        | Done        | In progress  | Not started | Not started | Not started
+lpop                        | Done        | Done        | In progress  | Not started | Not started | Not started
+rpush                       | Done        | Done        | In progress  | Not started | Not started | Not started
+rpop                        | Done        | Done        | In progress  | Not started | Not started | Not started
+rpoplpush                   | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
+llen                        | Done        | Done        | In progress  | Not started | Not started | Not started
+lrem                        | Done        | Done        | In progress  | Not started | Not started | Not started
+ltrim                       | Done        | Done        | In progress  | Not started | Not started | Not started
+lrange                      | Done        | Done        | In progress  | Not started | Not started | Not started
+unlink                      | Done        | Done        | Done         | Not started | Not started | Not started
+ttl                         | Done        | Done        | In progress  | Not started | Not started | Not started
+publish                     | In progress | In progress | Not started  | Not started | Not started | Not started
+CLIENT KILL                 | Not started | Not started | Not started  | Not started | Not started | Not started
+CLIENT LIST                 | Not started | Not started | Not started  | Not started | Not started | Not started
+CLIENT PAUSE                | Not started | Not started | Not started  | Not started | Not started | Not started
+client INFO                 | Not started | Not started | Not started  | Not started | Not started | Not started
+CLIENT SETNAME              | Not started | Not started | Not started  | Not started | Not started | Not started
+replconf                    | Not started | Not started | Not started  | Not started | Not started | Not started
+CLIENT REPLY                | Not started | Not started | Not started  | Not started | Not started | Not started
+CLIENT UNBLOCK              | Not started | Not started | Not started  | Not started | Not started | Not started
+CLIENT UNPAUSE              | Not started | Not started | Not started  | Not started | Not started | Not started
+psync                       | Not started | Not started | Not started  | Not started | Not started | Not started
+cluster                     | Not started | Not started | Not started  | Not started | Not started | Not started
+subscribe                   | In progress | Not started | Not started  | Not started | Not started | Not started
+eval                        | Done        | Done        | Not started  | Not started | Not started | Not started
+evalsha                     | Done        | Done        | Not started  | Not started | Not started | Not started
+script                      | Done        | Done        | Not started  | Not started | Not started | Not started
+scan                        | Not started | Not started | Not started  | Not started | Not started | Not started
+keys                        | Not started | Not started | Not started  | Not started | Not started | Not started
+slowlog                     | Not started | Not started | Not started  | Not started | Not started | Not started
+zrangebyscore               | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
+zremrangebyscore            | Not started | In progress | Not started  | Not started | Not started | Not started
+setnx                       | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
+bgsave                      | Not started | Not started | Not started  | Not started | Not started | Not started
+setex                       | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
+zadd                        | Done        | Done        | In progress  | Not started | Not started | Not started
+zrem                        | Done        | Done        | In progress  | Not started | Not started | Not started
+zrange                      | In progress | In progress | Not started  | Not started | Not started | Not started
+unsubscribe                 | In progress | In progress | Not started  | Not started | Not started | Not started
+psubscribe                  | In progress | In progress | Not started  | Not started | Not started | Not started
+zcard                       | Done        | Done        | Done         | Not started | Not started | Not started
+type                        | Done        | Done        | Not started  | Not started | Not started | Not started
+echo                        | Done        | Not started | Not started  | Not started | Not started | Not started
+brpop                       | Not started | Not started | Not started  | Not started | Not started | Not started
+zremrangebyrank             | Not started | In progress | Not started  | Not started | Not started | Not started
+psetex                      | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
+flushall                    | Not started | Not started | Not started  | Not started | Not started | Not started
+sscan                       | Not started | Not started | Not started  | Not started | Not started | Not started
+flushdb                     | Not started | Not started | Not started  | Not started | Not started | Not started
+xadd                        | Not started | Not started | Not started  | Not started | Not started | Not started
+hlen                        | Done        | Done        | Not started  | Not started | Not started | Not started
+hsetnx                      | In progress | Not started | Not started  | Not started | Not started | Not started
+zrevrangebyscore            | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
+watch                       | Not started | Not started | Not started  | Not started | Not started | Not started
+sismember                   | In progress | Not started | Not started  | Not started | Not started | Not started
+pttl                        | Not started | Not started | Not started  | Not started | Not started | Not started
+zscore                      | Done        | Done        | Not started  | Not started | Not started | Not started
+dbsize                      | Not started | Not started | Not started  | Not started | Not started | Not started
+zrevrange                   | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
+hscan                       | Not started | Not started | Not started  | Not started | Not started | Not started
+unwatch                     | Not started | Not started | Not started  | Not started | Not started | Not started
+hkeys                       | Not started | Not started | Not started  | Not started | Not started | Not started
+brpoplpush                  | Not started | Not started | Not started  | Not started | Not started | Not started
+quit                        | Not started | Not started | Not started  | Not started | Not started | Not started
+xread                       | Not started | Not started | Not started  | Not started | Not started | Not started
+readwrite                   | Not started | Not started | Not started  | Not started | Not started | Not started
+zcount                      | Done        | In progress | Not started  | Not started | Not started | Not started
+time                        | Not started | Not started | Not started  | Not started | Not started | Not started
+append                      | Not started | Not started | Not started  | Not started | Not started | Not started
+rename                      | Not started | Not started | Not started  | Not started | Not started | Not started
+lindex                      | Not started | Not started | Not started  | Not started | Not started | Not started
+punsubscribe                | In progress | In progress | Not started  | Not started | Not started | Not started
+persist                     | Not started | Not started | Not started  | Not started | Not started | Not started
+strlen                      | Not started | Not started | Not started  | Not started | Not started | Not started
+zincrby                     | Not started | Not started | Not started  | Not started | Not started | Not started
+xgroup                      | Not started | Not started | Not started  | Not started | Not started | Not started
+getset                      | Not started | Not started | Not started  | Not started | Not started | Not started
+blpop                       | Not started | Not started | Not started  | Not started | Not started | Not started
+zscan                       | Not started | Not started | Not started  | Not started | Not started | Not started
+xreadgroup                  | Not started | Not started | Not started  | Not started | Not started | Not started
+pfadd                       | Not started | Not started | Not started  | Not started | Not started | Not started
+renamenx                    | Not started | Not started | Not started  | Not started | Not started | Not started
+zpopmin                     | Done        | Done        | Not started  | Not started | Not started | Not started
+monitor                     | Not started | Not started | Not started  | Not started | Not started | Not started
+pfcount                     | Not started | Not started | Not started  | Not started | Not started | Not started
+wait                        | Not started | Not started | Not started  | Not started | Not started | Not started
+spop                        | Not started | Not started | Not started  | Not started | Not started | Not started
+restore                     | Not started | Not started | Not started  | Not started | Not started | Not started
+hvals                       | Not started | Not started | Not started  | Not started | Not started | Not started
+sinter                      | Not started | Not started | Not started  | Not started | Not started | Not started
+xtrim                       | Not started | Not started | Not started  | Not started | Not started | Not started
+zrank                       | Not started | Not started | Not started  | Not started | Not started | Not started
+zinterstore                 | Not started | Not started | Not started  | Not started | Not started | Not started
+xack                        | Not started | Not started | Not started  | Not started | Not started | Not started
+object                      | Not started | Not started | Not started  | Not started | Not started | Not started
+spublish                    | In progress | Not started | Not started  | Not started | Not started | Not started
+ssubscribe                  | In progress | Not started | Not started  | Not started | Not started | Not started
+zrevrank                    | Not started | Not started | Not started  | Not started | Not started | Not started
+pubsub                      | In progress | Not started | Not started  | Not started | Not started | Not started
+sunion                      | Not started | Not started | Not started  | Not started | Not started | Not started
+zunionstore                 | Not started | Not started | Not started  | Not started | Not started | Not started
+lset                        | Not started | Not started | Not started  | Not started | Not started | Not started
+xclaim                      | Not started | Not started | Not started  | Not started | Not started | Not started
+bitfield                    | Not started | Not started | Not started  | Not started | Not started | Not started
+getrange                    | Not started | Not started | Not started  | Not started | Not started | Not started
+randomkey                   | Not started | Not started | Not started  | Not started | Not started | Not started
+srandmember                 | Not started | Not started | Not started  | Not started | Not started | Not started
+dump                        | Not started | Not started | Not started  | Not started | Not started | Not started
+xinfo                       | Not started | Not started | Not started  | Not started | Not started | Not started
+setbit                      | Not started | Not started | Not started  | Not started | Not started | Not started
+smove                       | Not started | Not started | Not started  | Not started | Not started | Not started
+xrange                      | Not started | Not started | Not started  | Not started | Not started | Not started
+xdel                        | Not started | Not started | Not started  | Not started | Not started | Not started
+linsert                     | Not started | Not started | Not started  | Not started | Not started | Not started
+xlen                        | Not started | Not started | Not started  | Not started | Not started | Not started
+xpending                    | Not started | Not started | Not started  | Not started | Not started | Not started
+discard                     | Not started | Not started | Not started  | Not started | Not started | Not started
+sunionstore                 | Not started | Not started | Not started  | Not started | Not started | Not started
+xrevrange                   | Not started | Not started | Not started  | Not started | Not started | Not started
+bzpopmin                    | Not started | Not started | Not started  | Not started | Not started | Not started
+rpushx                      | Not started | Not started | Not started  | Not started | Not started | Not started
+sort                        | Not started | Not started | Not started  | Not started | Not started | Not started
+geoadd                      | Not started | Not started | Not started  | Not started | Not started | Not started
+zrangebylex                 | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
+getbit                      | Not started | Not started | Not started  | Not started | Not started | Not started
+msetnx                      | Not started | Not started | Not started  | Not started | Not started | Not started
+sdiff                       | Not started | Not started | Not started  | Not started | Not started | Not started
+setrange                    | Not started | Not started | Not started  | Not started | Not started | Not started
+sinterstore                 | Not started | Not started | Not started  | Not started | Not started | Not started
+zpopmax                     | Done        | Done        | Not started  | Not started | Not started | Not started
+georadius_ro                | Not started | Not started | Not started  | Not started | Not started | Not started
+georadius                   | Not started | Not started | Not started  | Not started | Not started | Not started
+pfmerge                     | Not started | Not started | Not started  | Not started | Not started | Not started
+bitcount                    | Not started | Not started | Not started  | Not started | Not started | Not started
+sdiffstore                  | Not started | Not started | Not started  | Not started | Not started | Not started
+touch                       | Not started | Not started | Not started  | Not started | Not started | Not started
+smismember                  | Not started | Not started | Not started  | Not started | Not started | Not started
+zremrangebylex              | Not started | Not started | Not started  | Not started | Not started | Not started
+zrevrangebylex              | Not started | Not started | Not started  | Not started | Not started | Not started
+lpushx                      | Not started | Not started | Not started  | Not started | Not started | Not started
+copy                        | Not started | Not started | Not started  | Not started | Not started | Not started
+hrandfield                  | Not started | Not started | Not started  | Not started | Not started | Not started
+lpos                        | Not started | Not started | Not started  | Not started | Not started | Not started
+geopos                      | Not started | Not started | Not started  | Not started | Not started | Not started
+xautoclaim                  | Not started | Not started | Not started  | Not started | Not started | Not started
+zmscore                     | Not started | Not started | Not started  | Not started | Not started | Not started
+bitop                       | Not started | Not started | Not started  | Not started | Not started | Not started
+lastsave                    | Not started | Not started | Not started  | Not started | Not started | Not started
+geosearch                   | Not started | Not started | Not started  | Not started | Not started | Not started
+function                    | Not started | Not started | Not started  | Not started | Not started | Not started
+zlexcount                   | Not started | Not started | Not started  | Not started | Not started | Not started
+zrandmember                 | Not started | Not started | Not started  | Not started | Not started | Not started
+replicaof                   | Not started | Not started | Not started  | Not started | Not started | Not started
+bitfield_ro                 | Not started | Not started | Not started  | Not started | Not started | Not started
+fcall                       | Not started | Not started | Not started  | Not started | Not started | Not started
+zdiffstore                  | Not started | Not started | Not started  | Not started | Not started | Not started
+move                        | Not started | Not started | Not started  | Not started | Not started | Not started
+geohash                     | Not started | Not started | Not started  | Not started | Not started | Not started
+bitpos                      | Not started | Not started | Not started  | Not started | Not started | Not started
+substr                      | Not started | Not started | Not started  | Not started | Not started | Not started 
+zdiff                       | Not started | Not started | Not started  | Not started | Not started | Not started
+zrangestore                 | Not started | Not started | Not started  | Not started | Not started | Not started
+geodist                     | Not started | Not started | Not started  | Not started | Not started | Not started 
+georadiusbymember           | Not started | Not started | Not started  | Not started | Not started | Not started 
+bzpopmax                    | Not started | Not started | Not started  | Not started | Not started | Not started 
+zinter                      | Not started | Not started | Not started  | Not started | Not started | Not started 
+georadiusbymember_ro        | Not started | Not started | Not started  | Not started | Not started | Not started 
+sunsubscribe                | Not started | Not started | Not started  | Not started | Not started | Not started
+zunion                      | Not started | Not started | Not started  | Not started | Not started | Not started
+sort_ro                     | Not started | Not started | Not started  | Not started | Not started | Not started
+fcall_ro                    | Not started | Not started | Not started  | Not started | Not started | Not started
+lmpop                       | Not started | Not started | Not started  | Not started | Not started | Not started
+geosearchstore              | Not started | Not started | Not started  | Not started | Not started | Not started 
+sync                        | Not started | Not started | Not started  | Not started | Not started | Not started 
+bgrewriteaof                | Not started | Not started | Not started  | Not started | Not started | Not started 
+debug                       | Not started | Not started | Not started  | Not started | Not started | Not started 
+migrate                     | Not started | Not started | Not started  | Not started | Not started | Not started 
+save                        | Not started | Not started | Not started  | Not started | Not started | Not started 
+shutdown                    | Not started | Not started | Not started  | Not started | Not started | Not started 
+zintercard                  | Not started | Not started | Not started  | Not started | Not started | Not started 
+zmpop                       | Not started | Not started | Not started  | Not started | Not started | Not started 
+bzmpop                      | Not started | Not started | Not started  | Not started | Not started | Not started 
+lcs                         | Not started | Not started | Not started  | Not started | Not started | Not started 
+pfselftest                  | Not started | Not started | Not started  | Not started | Not started | Not started 
+xsetid                      | Not started | Not started | Not started  | Not started | Not started | Not started
