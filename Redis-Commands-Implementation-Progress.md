@@ -41,11 +41,11 @@ hincrbyfloat                | Done        | Done        | Done         | Not sta
 expire                      | Done        | Done        | In progress  | Not started | Not started | Not started
 pexpireat                   | Done        | Done        | In progress  | Not started | Not started | Not started
 pexpire                     | Done        | Done        | In progress  | Not started | Not started | Not started
-expireat                    | Done        | Done        | In progress  | Not started | Not started | Not started
-lpush                       | Done        | Done        | In progress  | Not started | Not started | Not started
-lpop                        | Done        | Done        | In progress  | Not started | Not started | Not started
-rpush                       | Done        | Done        | In progress  | Not started | Not started | Not started
-rpop                        | Done        | Done        | In progress  | Not started | Not started | Not started
+expireat                    | Done        | Done        | Done         | Not started | Not started | Not started
+lpush                       | Done        | Done        | Done         | Not started | Not started | Not started
+lpop                        | Done        | Done        | Done         | Not started | Not started | Not started
+rpush                       | Done        | Done        | Done         | Not started | Not started | Not started
+rpop                        | Done        | Done        | Done         | Not started | Not started | Not started
 rpoplpush                   | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 llen                        | Done        | Done        | In progress  | Not started | Not started | Not started
 lrem                        | Done        | Done        | In progress  | Not started | Not started | Not started
