@@ -16,13 +16,16 @@ The `NodeAddress` class represents the host and port of a Redis node. The host c
 #### Example - Connecting to a Redis cluster
 
 ```java
-RedisClusterClient clusterClient =
-        RedisClusterClient.CreateClient(
-                        RedisClusterClientConfiguration.builder()
-                                .address(NodeAddress.builder().host("redis.example.com").port(6379).build())
-                                .build())
-                .get();
-});
+NodeAddress address = NodeAddress.builder()
+    .host("redis.example.com")
+    .port(6379)
+    .build();
+
+RedisClusterClientConfiguration config = RedisClusterClientConfiguration.builder()
+    .address(address)
+    .build();
+
+RedisClusterClient clusterClient = RedisClusterClient.CreateClient(config).get();
 ```
 
 #### Request Routing
@@ -48,14 +51,22 @@ GLIDE for Redis also supports Redis Standalone deployments, where the Redis data
 #### **Example - Connecting to a standalone Redis** 
 
 ```java
-RedisClient standaloneClient =
-        RedisClient.CreateClient(
-                        RedisClientConfiguration.builder()
-                                .address(NodeAddress.builder().host("redis_primary.example.com").port(6379).build())
-                                .address(NodeAddress.builder().host("redis_replica1.example.com").port(6379).build())
-                                .address(NodeAddress.builder().host("redis_replica2.example.com").port(6379).build())
-                                .build())
-                .get();
+RedisClientConfiguration config = RedisClientConfiguration.builder()
+    .address(NodeAddress.builder()
+        .host("redis_primary.example.com")
+        .port(6379)
+        .build())
+    .address(NodeAddress.builder()
+        .host("redis_replica1.example.com")
+        .port(6379)
+        .build())
+    .address(NodeAddress.builder()
+        .host("redis_replica2.example.com")
+        .port(6379)
+        .build())
+    .build();
+
+RedisClient standaloneClient = RedisClient.CreateClient(config).get();
 ```
 
 ## Redis Commands
@@ -79,26 +90,35 @@ To provide the necessary authentication credentials to the client, you can use t
 #### Example - Connecting with Username and Password to a Redis Cluster
 
 ```java
-RedisClusterClient client =
-        RedisClusterClient.CreateClient(
-                        RedisClusterClientConfiguration.builder()
-                                .address(NodeAddress.builder().host("redis.example.com").port(6379).build())
-                                .credentials(RedisCredentials.builder().username("user1").password("passwordA").build())
-                                .build())
-                .get();
+RedisClusterClientConfiguration config = RedisClusterClientConfiguration.builder(). 
+    .address(NodeAddress.builder()
+        .host("redis.example.com")
+        .port(6379)
+        .build())
+    .credentials(RedisCredentials.builder()
+        .username("user1")
+        .password("passwordA")
+        .build())
+    .build();
+RedisClusterClient client = RedisClusterClient.CreateClient(config).get();
 ```
 
 
 #### Example - Connecting with Username and Password to a Redis Standalone
 
 ```java
-RedisClient client =
-    RedisClient.CreateClient(
-            RedisClientConfiguration.builder()
-                .address(NodeAddress.builder().host("redis.example.com").port(6379).build())
-                .credentials(RedisCredentials.builder().username("user1").password("passwordA").build())
-                .build())
-        .get();
+RedisClientConfiguration config = RedisClientConfiguration.builder()
+    .address(NodeAddress.builder()
+        .host("redis.example.com")
+        .port(6379)
+        .build())
+    .credentials(RedisCredentials.builder()
+        .username("user1")
+        .password("passwordA")
+        .build())
+    .build());
+
+RedisClient client = RedisClient.CreateClient(config).get();
 ```
 
 ### TLS
@@ -110,24 +130,29 @@ It's important to note that TLS support in GLIDE for Redis relies on [Rusttls](h
 #### Example - Connecting with TLS Mode Enabled to a Redis Cluster
 
 ```java
-RedisClusterClient client =
-        RedisClusterClient.CreateClient(
-                        RedisClusterClientConfiguration.builder()
-                                .address(NodeAddress.builder().host("redis.example.com").port(6379).build())
-                                .useTLS(true)
-                                .build())
-                .get();
+RedisClusterClientConfiguration config = RedisClusterClientConfiguration.builder()
+    .address(NodeAddress.builder()
+        .host("redis.example.com")
+        .port(6379)
+        .build())
+    .useTLS(true)
+    .build());
+
+RedisClusterClient client = RedisClusterClient.CreateClient(config).get();
 ```
+
 #### Example - Connecting with TLS Mode Enabled to a Redis Standalone
 
 ```java
-RedisClient client =
-    RedisClient.CreateClient(
-            RedisClientConfiguration.builder()
-                .address(NodeAddress.builder().host("redis.example.com").port(6379).build())
-                .useTLS(true)
-                .build())
-        .get();
+RedisClientConfiguration config = RedisClientConfiguration.builder()
+    .address(NodeAddress.builder()
+        .host("redis.example.com")
+        .port(6379)
+        .build())
+    .useTLS(true)
+    .build();
+
+RedisClient client = RedisClient.CreateClient(config).get();
 ```
 
 ### Read Strategy
@@ -144,14 +169,17 @@ GLIDE for Redis provides support for next read strategies, allowing you to choos
 #### Example - Use PREFER_REPLICA Read Strategy
 
 ```java
-RedisClusterClient client =
-    RedisClusterClient.CreateClient(
-            RedisClusterClientConfiguration.builder()
-                .address(NodeAddress.builder().host("redis.example.com").port(6379).build())
-                .readFrom(ReadFrom.PREFER_REPLICA)
-                .build())
-        .get();
+RedisClusterClientConfiguration config = RedisClusterClientConfiguration.builder()
+    .address(NodeAddress.builder()
+        .host("redis.example.com")
+        .port(6379)
+        .build())
+    .readFrom(ReadFrom.PREFER_REPLICA)
+    .build()
+RedisClusterClient client = RedisClusterClient.CreateClient(config).get();
+
 client.set("key1", "val1").get();
+
 /// get will read from one of the replicas
 client.get("key1").get();
 ```
@@ -173,11 +201,12 @@ GLIDE for Redis allows you to configure timeout settings and reconnect strategie
 #### Example - Setting Increased Request Timeout for Long-Running Commands
 
 ```java
-RedisClusterClient client =
-    RedisClusterClient.CreateClient(
-            RedisClusterClientConfiguration.builder()
-                .address(NodeAddress.builder().host("redis.example.com").port(6379).build())
-                .requestTimeout(500)
-                .build())
-        .get();
+RedisClusterClient config = RedisClusterClientConfiguration.builder()
+    .address(NodeAddress.builder()
+        .host("redis.example.com")
+        .port(6379).build())
+    .requestTimeout(500)
+    .build();
+
+RedisClusterClient client = RedisClusterClient.CreateClient(config).get();
 ```
