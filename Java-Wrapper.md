@@ -158,7 +158,7 @@ client.get("key1").get();
 
 ### Timeouts and Reconnect Strategy
 
-GLIDE for Redis allows you to configure timeout settings and reconnect strategies. These configurations can be applied through the `RedisClusterClientConfiguration` and `RedisClientConfiguration` parameters.
+GLIDE for Redis allows you to configure timeout settings and reconnect strategies. These configurations can be applied through the [`RedisClusterClientConfiguration`](https://github.com/aws/glide-for-redis/blob/main/java/client/src/main/java/glide/api/models/configuration/RedisClusterClientConfiguration.java) and [`RedisClientConfiguration`](https://github.com/aws/glide-for-redis/blob/main/java/client/src/main/java/glide/api/models/configuration/RedisClientConfiguration.java) parameters.
 
 
 |Configuration setting	|Description	|**Default value**	|
