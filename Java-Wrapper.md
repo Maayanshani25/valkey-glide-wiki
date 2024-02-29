@@ -59,7 +59,7 @@ RedisClient standaloneClient =
 ```
 
 ## Redis Commands
-For information on the supported commands and their corresponding parameters, we recommend referring to the documentation in the code. This documentation provides in-depth insights into the usage and options available for each command.
+For information on the supported commands and their corresponding parameters, we recommend referring to [the documentation in the code](https://github.com/aws/glide-for-redis/tree/main/java/client/src/main/java/glide/api/commands). This documentation provides in-depth insights into the usage and options available for each command.
 
 ## Advanced Configuration Settings
 
