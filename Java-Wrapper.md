@@ -105,7 +105,7 @@ RedisClient client =
 
 GLIDE for Redis supports secure TLS connections to a Redis data store.
 
-It's important to note that TLS support in GLIDE for Redis relies on [rusttls](https://github.com/rustls/rustls). Currently, GLIDE for Redis employs the default rustls settings with no option for customization.
+It's important to note that TLS support in GLIDE for Redis relies on [Rusttls](https://github.com/rustls/rustls). Currently, GLIDE for Redis employs the default rustls settings with no option for customization.
 
 #### Example - Connecting with TLS Mode Enabled to a Redis Cluster
 
