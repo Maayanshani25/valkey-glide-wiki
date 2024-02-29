@@ -4,7 +4,7 @@ GLIDE for Redis provides support for both [Redis Cluster](https://github.com/aws
 
 ### Redis Cluster
 
-GLIDE for Redis supports [Redis Cluster](https://redis.io/docs/reference/cluster-spec) deployments, where the Redis database is partitioned across multiple primary Redis shards, with each shard being represented by a primary node and zero or more replica nodes.. 
+GLIDE for Redis supports [Redis Cluster](https://redis.io/docs/reference/cluster-spec) deployments, where the Redis database is partitioned across multiple primary Redis shards, with each shard being represented by a primary node and zero or more replica nodes. 
 
 
 To initialize a `RedisClusterClient`, you need to provide a `RedisClusterClientConfiguration` that includes the addresses of initial seed nodes. GLIDE for Redis automatically discovers the entire cluster topology, eliminating the necessity of explicitly listing all cluster nodes.
