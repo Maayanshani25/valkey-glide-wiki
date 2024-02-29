@@ -58,7 +58,7 @@ RedisClient standaloneClient =
                 .get();
 ```
 
-## Redis commands
+## Redis Commands
 For information on the supported commands and their corresponding parameters, we recommend referring to the documentation in the code. This documentation provides in-depth insights into the usage and options available for each command.
 
 ## Advanced Configuration Settings
