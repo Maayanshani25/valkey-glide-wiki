@@ -100,6 +100,7 @@ RedisClusterClientConfiguration config = RedisClusterClientConfiguration.builder
         .password("passwordA")
         .build())
     .build();
+
 RedisClusterClient client = RedisClusterClient.CreateClient(config).get();
 ```
 
