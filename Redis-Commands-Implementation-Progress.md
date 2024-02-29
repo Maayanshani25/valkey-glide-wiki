@@ -38,9 +38,9 @@ hmget                       | Done        | Done        | Done         | Not sta
 hexists                     | Done        | Done        | Done         | Not started | Not started | Not started
 hincrby                     | Done        | Done        | Done         | Not started | Not started | Not started
 hincrbyfloat                | Done        | Done        | Done         | Not started | Not started | Not started
-expire                      | Done        | Done        | In progress  | Not started | Not started | Not started
-pexpireat                   | Done        | Done        | In progress  | Not started | Not started | Not started
-pexpire                     | Done        | Done        | In progress  | Not started | Not started | Not started
+expire                      | Done        | Done        | Done         | Not started | Not started | Not started
+pexpireat                   | Done        | Done        | Done         | Not started | Not started | Not started
+pexpire                     | Done        | Done        | Done         | Not started | Not started | Not started
 expireat                    | Done        | Done        | Done         | Not started | Not started | Not started
 lpush                       | Done        | Done        | Done         | Not started | Not started | Not started
 lpop                        | Done        | Done        | Done         | Not started | Not started | Not started
@@ -52,7 +52,7 @@ lrem                        | Done        | Done        | In progress  | Not sta
 ltrim                       | Done        | Done        | In progress  | Not started | Not started | Not started
 lrange                      | Done        | Done        | In progress  | Not started | Not started | Not started
 unlink                      | Done        | Done        | Done         | Not started | Not started | Not started
-ttl                         | Done        | Done        | In progress  | Not started | Not started | Not started
+ttl                         | Done        | Done        | Done         | Not started | Not started | Not started
 publish                     | In progress | In progress | Not started  | Not started | Not started | Not started
 CLIENT KILL                 | Not started | Not started | Not started  | Not started | Not started | Not started
 CLIENT LIST                 | Not started | Not started | Not started  | Not started | Not started | Not started
