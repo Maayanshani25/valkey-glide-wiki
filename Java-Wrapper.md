@@ -164,8 +164,8 @@ GLIDE for Redis provides support for next read strategies, allowing you to choos
 
 |Strategy	|Description	|
 |---	|---	|
-|`PRIMARY`	|Always read from primary, in order to get the freshest data	|
-|`PREFER_REPLICA`	|Spread requests between all replicas in a round robin manner. If no replica is available, route the requests to the primary	|
+|`PRIMARY`	|Always read from primary, in order to get the freshest data.	|
+|`PREFER_REPLICA`	|Spread requests between all replicas in a round robin manner. If no replica is available, route the requests to the primary.	|
 
 #### Example - Use PREFER_REPLICA Read Strategy
 
@@ -193,7 +193,7 @@ GLIDE for Redis allows you to configure timeout settings and reconnect strategie
 |Configuration setting	|Description	|**Default value**	|
 |---	|---	|---	|
 |requestTimeout	|This specified time duration, measured in milliseconds, represents the period during which the client will await the completion of a request. This time frame includes the process of sending the request, waiting for a response from the Redis node(s), and any necessary reconnection or retry attempts. If a pending request exceeds the specified timeout, it will trigger a timeout error. If no timeout value is explicitly set, a default value will be employed.	|250 milliseconds	|
-|reconnectStrategy	|The reconnection strategy defines how and when reconnection attempts are made in the event of connection failures	|Exponential backoff	|
+|reconnectStrategy	|The reconnection strategy defines how and when reconnection attempts are made in the event of connection failures.	|Exponential backoff	|
 
 **Notes:**
 1. In the case of Redis Standalone, the only reconnect strategy currently supported is exponential backoff.
