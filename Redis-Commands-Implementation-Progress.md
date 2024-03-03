@@ -79,7 +79,7 @@ bgsave                      | Not started | Not started | Not started  | Not sta
 setex                       | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 zadd                        | Done        | Done        | In progress  | Not started | Not started | Not started
 zrem                        | Done        | Done        | In progress  | Not started | Not started | Not started
-zrange                      | In progress | In progress | Not started  | Not started | Not started | Not started
+zrange                      | Done        | In progress | Not started  | Not started | Not started | Not started
 unsubscribe                 | In progress | In progress | Not started  | Not started | Not started | Not started
 psubscribe                  | In progress | In progress | Not started  | Not started | Not started | Not started
 zcard                       | Done        | Done        | Done         | Not started | Not started | Not started
@@ -93,10 +93,10 @@ sscan                       | Not started | Not started | Not started  | Not sta
 flushdb                     | Not started | Not started | Not started  | Not started | Not started | Not started
 xadd                        | Not started | Not started | Not started  | Not started | Not started | Not started
 hlen                        | Done        | Done        | Not started  | Not started | Not started | Not started
-hsetnx                      | In progress | Not started | Not started  | Not started | Not started | Not started
+hsetnx                      | Done        | Not started | Not started  | Not started | Not started | Not started
 zrevrangebyscore            | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 watch                       | Not started | Not started | Not started  | Not started | Not started | Not started
-sismember                   | In progress | Not started | Not started  | Not started | Not started | Not started
+sismember                   | Done        | Not started | Not started  | Not started | Not started | Not started
 pttl                        | Not started | Not started | Not started  | Not started | Not started | Not started
 zscore                      | Done        | Done        | Not started  | Not started | Not started | Not started
 dbsize                      | Not started | Not started | Not started  | Not started | Not started | Not started
