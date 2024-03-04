@@ -49,8 +49,8 @@ rpop                        | Done        | Done        | Done         | Not sta
 rpoplpush                   | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 llen                        | Done        | Done        | In progress  | Not started | Not started | Not started
 lrem                        | Done        | Done        | In progress  | Not started | Not started | Not started
-ltrim                       | Done        | Done        | In progress  | Not started | Not started | Not started
-lrange                      | Done        | Done        | In progress  | Not started | Not started | Not started
+ltrim                       | Done        | Done        | Done         | Not started | Not started | Not started
+lrange                      | Done        | Done        | Done         | Not started | Not started | Not started
 unlink                      | Done        | Done        | Done         | Not started | Not started | Not started
 ttl                         | Done        | Done        | Done         | Not started | Not started | Not started
 publish                     | In progress | In progress | Not started  | Not started | Not started | Not started
