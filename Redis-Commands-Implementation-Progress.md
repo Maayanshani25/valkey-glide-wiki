@@ -47,7 +47,7 @@ lpop                        | Done        | Done        | Done         | Not sta
 rpush                       | Done        | Done        | Done         | Not started | Not started | Not started
 rpop                        | Done        | Done        | Done         | Not started | Not started | Not started
 rpoplpush                   | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
-llen                        | Done        | Done        | In progress  | Not started | Not started | Not started
+llen                        | Done        | Done        | Done         | Not started | Not started | Not started
 lrem                        | Done        | Done        | In progress  | Not started | Not started | Not started
 ltrim                       | Done        | Done        | Done         | Not started | Not started | Not started
 lrange                      | Done        | Done        | Done         | Not started | Not started | Not started
