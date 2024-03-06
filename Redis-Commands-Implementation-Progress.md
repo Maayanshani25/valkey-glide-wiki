@@ -84,7 +84,7 @@ unsubscribe                 | In progress | In progress | Not started  | Not sta
 psubscribe                  | In progress | In progress | Not started  | Not started | Not started | Not started
 zcard                       | Done        | Done        | Done         | Not started | Not started | Not started
 type                        | Done        | Done        | Not started  | Not started | Not started | Not started
-echo                        | Done        | Not started | Not started  | Not started | Not started | Not started
+echo                        | Done        | Done | Not started  | Not started | Not started | Not started
 brpop                       | Not started | Not started | Not started  | Not started | Not started | Not started
 zremrangebyrank             | Not started | In progress | Not started  | Not started | Not started | Not started
 psetex                      | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
@@ -130,7 +130,7 @@ pfcount                     | Not started | Not started | Not started  | Not sta
 wait                        | Not started | Not started | Not started  | Not started | Not started | Not started
 spop                        | Not started | Not started | Not started  | Not started | Not started | Not started
 restore                     | Not started | Not started | Not started  | Not started | Not started | Not started
-hvals                       | Not started | Not started | Not started  | Not started | Not started | Not started
+hvals                       | Not started | Done | Not started  | Not started | Not started | Not started
 sinter                      | Not started | Not started | Not started  | Not started | Not started | Not started
 xtrim                       | Not started | In progress | Not started  | Not started | Not started | Not started
 zrank                       | Not started | Not started | Not started  | Not started | Not started | Not started
