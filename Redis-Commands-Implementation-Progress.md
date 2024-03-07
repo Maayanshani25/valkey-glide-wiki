@@ -96,7 +96,7 @@ hlen                        | Done        | Done        | Not started  | Not sta
 hsetnx                      | Done        | Not started | Not started  | Not started | Not started | Not started
 zrevrangebyscore            | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 watch                       | Not started | Not started | Not started  | Not started | Not started | Not started
-sismember                   | Done        | Not started | Not started  | Not started | Not started | Not started
+sismember                   | Done        | Done | Not started  | Not started | Not started | Not started
 pttl                        | Not started | Not started | Not started  | Not started | Not started | Not started
 zscore                      | Done        | Done        | Not started  | Not started | Not started | Not started
 dbsize                      | Not started | Not started | Not started  | Not started | Not started | Not started
@@ -114,7 +114,7 @@ append                      | Not started | Not started | Not started  | Not sta
 rename                      | Not started | Not started | Not started  | Not started | Not started | Not started
 lindex                      | Not started | Not started | Not started  | Not started | Not started | Not started
 punsubscribe                | In progress | In progress | Not started  | Not started | Not started | Not started
-persist                     | Not started | Not started | Not started  | Not started | Not started | Not started
+persist                     | Not started | Done | Not started  | Not started | Not started | Not started
 strlen                      | Not started | Not started | Not started  | Not started | Not started | Not started
 zincrby                     | Not started | Not started | Not started  | Not started | Not started | Not started
 xgroup                      | Not started | Not started | Not started  | Not started | Not started | Not started
