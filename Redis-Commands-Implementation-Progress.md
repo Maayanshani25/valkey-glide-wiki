@@ -91,7 +91,7 @@ psetex                      | deprecated  | deprecated  | deprecated   | depreca
 flushall                    | Not started | Not started | Not started  | Not started | Not started | Not started
 sscan                       | Not started | Not started | Not started  | Not started | Not started | Not started
 flushdb                     | Not started | Not started | Not started  | Not started | Not started | Not started
-xadd                        | Not started | In progress | Not started  | Not started | Not started | Not started
+xadd                        | Not started | Done        | Not started  | Not started | Not started | Not started
 hlen                        | Done        | Done        | Not started  | Not started | Not started | Not started
 hsetnx                      | Done        | Not started | Not started  | Not started | Not started | Not started
 zrevrangebyscore            | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
@@ -130,9 +130,9 @@ pfcount                     | Not started | Not started | Not started  | Not sta
 wait                        | Not started | Not started | Not started  | Not started | Not started | Not started
 spop                        | Not started | Not started | Not started  | Not started | Not started | Not started
 restore                     | Not started | Not started | Not started  | Not started | Not started | Not started
-hvals                       | Not started | Done | Not started  | Not started | Not started | Not started
+hvals                       | Not started | Done        | Not started  | Not started | Not started | Not started
 sinter                      | Not started | Not started | Not started  | Not started | Not started | Not started
-xtrim                       | Not started | In progress | Not started  | Not started | Not started | Not started
+xtrim                       | Not started | Done        | Not started  | Not started | Not started | Not started
 zrank                       | Not started | Not started | Not started  | Not started | Not started | Not started
 zinterstore                 | Not started | Not started | Not started  | Not started | Not started | Not started
 xack                        | Not started | Not started | Not started  | Not started | Not started | Not started
