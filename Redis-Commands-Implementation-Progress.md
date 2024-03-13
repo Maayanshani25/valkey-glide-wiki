@@ -85,15 +85,15 @@ psubscribe                  | In progress | In progress | Not started  | Not sta
 zcard                       | Done        | Done        | Done         | Not started | Not started | Not started
 type                        | Done        | Done        | Not started  | Not started | Not started | Not started
 echo                        | Done        | Done        | Not started  | Not started | Not started | Not started
-brpop                       | Not started | Not started | Not started  | Not started | Not started | Not started
-zremrangebyrank             | Not started | Done | Not started  | Not started | Not started | Not started
+brpop                       | Not started | In progress | Not started  | Not started | Not started | Not started
+zremrangebyrank             | Not started | Done        | Not started  | Not started | Not started | Not started
 psetex                      | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 flushall                    | Not started | Not started | Not started  | Not started | Not started | Not started
 sscan                       | Not started | Not started | Not started  | Not started | Not started | Not started
 flushdb                     | Not started | Not started | Not started  | Not started | Not started | Not started
 xadd                        | Not started | Done        | Not started  | Not started | Not started | Not started
 hlen                        | Done        | Done        | Not started  | Not started | Not started | Not started
-hsetnx                      | Done        | Done | Not started  | Not started | Not started | Not started
+hsetnx                      | Done        | Done        | Not started  | Not started | Not started | Not started
 zrevrangebyscore            | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 watch                       | Not started | Not started | Not started  | Not started | Not started | Not started
 sismember                   | Done        | Done | Not started  | Not started | Not started | Not started
@@ -109,13 +109,13 @@ quit                        | Not started | Not started | Not started  | Not sta
 xread                       | Not started | In progress | Not started  | Not started | Not started | Not started
 readwrite                   | Not started | Not started | Not started  | Not started | Not started | Not started
 zcount                      | Done        | Done        | Not started  | Not started | Not started | Not started
-time                        | Not started | Not started | Not started  | Not started | Not started | Not started
+time                        | Not started | In progress | Not started  | Not started | Not started | Not started
 append                      | Not started | Not started | Not started  | Not started | Not started | Not started
 rename                      | Not started | Not started | Not started  | Not started | Not started | Not started
-lindex                      | Not started | Not started | Not started  | Not started | Not started | Not started
+lindex                      | Not started | Done        | Not started  | Not started | Not started | Not started
 punsubscribe                | In progress | In progress | Not started  | Not started | Not started | Not started
 persist                     | Not started | Done        | Not started  | Not started | Not started | Not started
-strlen                      | Not started | Not started | Not started  | Not started | Not started | Not started
+strlen                      | Not started | Done        | Not started  | Not started | Not started | Not started
 zincrby                     | Not started | Not started | Not started  | Not started | Not started | Not started
 xgroup                      | Not started | Not started | Not started  | Not started | Not started | Not started
 getset                      | Not started | Not started | Not started  | Not started | Not started | Not started
