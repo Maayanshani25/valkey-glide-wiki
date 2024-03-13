@@ -73,7 +73,7 @@ scan                        | Not started | Not started | Not started  | Not sta
 keys                        | Not started | Not started | Not started  | Not started | Not started | Not started
 slowlog                     | Not started | Not started | Not started  | Not started | Not started | Not started
 zrangebyscore               | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
-zremrangebyscore            | Not started | In progress | Not started  | Not started | Not started | Not started
+zremrangebyscore            | Not started | Done | Not started  | Not started | Not started | Not started
 setnx                       | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 bgsave                      | Not started | Not started | Not started  | Not started | Not started | Not started
 setex                       | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
@@ -93,7 +93,7 @@ sscan                       | Not started | Not started | Not started  | Not sta
 flushdb                     | Not started | Not started | Not started  | Not started | Not started | Not started
 xadd                        | Not started | Done        | Not started  | Not started | Not started | Not started
 hlen                        | Done        | Done        | Not started  | Not started | Not started | Not started
-hsetnx                      | Done        | Not started | Not started  | Not started | Not started | Not started
+hsetnx                      | Done        | Done | Not started  | Not started | Not started | Not started
 zrevrangebyscore            | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 watch                       | Not started | Not started | Not started  | Not started | Not started | Not started
 sismember                   | Done        | Done | Not started  | Not started | Not started | Not started
