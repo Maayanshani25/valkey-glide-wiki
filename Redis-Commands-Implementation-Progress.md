@@ -111,7 +111,7 @@ readwrite                   | Not started | Not started | Not started  | Not sta
 zcount                      | Done        | Done        | Not started  | Not started | Not started | Not started
 time                        | Not started | Done        | Not started  | Not started | Not started | Not started
 append                      | Not started | Not started | Not started  | Not started | Not started | Not started
-rename                      | Not started | Not started | Not started  | Not started | Not started | Not started
+rename                      | Not started | In progress | Not started  | Not started | Not started | Not started
 lindex                      | Not started | Done        | Not started  | Not started | Not started | Not started
 punsubscribe                | In progress | In progress | Not started  | Not started | Not started | Not started
 persist                     | Not started | Done        | Not started  | Not started | Not started | Not started
