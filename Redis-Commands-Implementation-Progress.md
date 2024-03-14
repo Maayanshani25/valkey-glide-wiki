@@ -4,8 +4,8 @@ ping                        | Done        | Done        | Done         | Not sta
 info                        | Done        | Done        | Done         | Not started | Not started | Not started 
 Config get                  | Done        | Done        | In progress  | Not started | Not started | Not started 
 Config set                  | Done        | Done        | In progress  | Not started | Not started | Not started 
-Config rewrite              | Done        | Done        | In progress  | Not started | Not started | Not started 
-Config resetstat            | Done        | Done        | In progress  | Not started | Not started | Not started 
+Config rewrite              | Done        | Done        | Done         | Not started | Not started | Not started 
+Config resetstat            | Done        | Done        | Done         | Not started | Not started | Not started 
 incrby                      | Done        | Done        | Done         | Not started | Not started | Not started 
 incr                        | Done        | Done        | Done         | Not started | Not started | Not started 
 incrbyfloat                 | Done        | Done        | Done         | Not started | Not started | Not started 
@@ -77,12 +77,12 @@ zremrangebyscore            | Not started | Done | Not started  | Not started | 
 setnx                       | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 bgsave                      | Not started | Not started | Not started  | Not started | Not started | Not started
 setex                       | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
-zadd                        | Done        | Done        | In progress  | Not started | Not started | Not started
+zadd                        | Done        | Done        | Done         | Not started | Not started | Not started
 zrem                        | Done        | Done        | In progress  | Not started | Not started | Not started
 zrange                      | Done        | In progress | Not started  | Not started | Not started | Not started
 unsubscribe                 | In progress | In progress | Not started  | Not started | Not started | Not started
 psubscribe                  | In progress | In progress | Not started  | Not started | Not started | Not started
-zcard                       | Done        | Done        | Done         | Not started | Not started | Not started
+zcard                       | Done        | Done        | In Progress  | Not started | Not started | Not started
 type                        | Done        | Done        | Not started  | Not started | Not started | Not started
 echo                        | Done        | Done        | Not started  | Not started | Not started | Not started
 brpop                       | Not started | In progress | Not started  | Not started | Not started | Not started
