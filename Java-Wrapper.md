@@ -90,7 +90,7 @@ To provide the necessary authentication credentials to the client, you can use t
 #### Example - Connecting with Username and Password to a Redis Cluster
 
 ```java
-RedisClusterClientConfiguration config = RedisClusterClientConfiguration.builder(). 
+RedisClusterClientConfiguration config = RedisClusterClientConfiguration.builder() 
     .address(NodeAddress.builder()
         .host("redis.example.com")
         .port(6379)
@@ -117,7 +117,7 @@ RedisClientConfiguration config = RedisClientConfiguration.builder()
         .username("user1")
         .password("passwordA")
         .build())
-    .build());
+    .build();
 
 RedisClient client = RedisClient.CreateClient(config).get();
 ```
@@ -137,7 +137,7 @@ RedisClusterClientConfiguration config = RedisClusterClientConfiguration.builder
         .port(6379)
         .build())
     .useTLS(true)
-    .build());
+    .build();
 
 RedisClusterClient client = RedisClusterClient.CreateClient(config).get();
 ```
