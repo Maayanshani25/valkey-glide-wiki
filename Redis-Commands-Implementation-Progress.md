@@ -106,7 +106,7 @@ unwatch                     | Not started | Not started | Not started  | Not sta
 hkeys                       | Not started | Not started | Not started  | Not started | Not started | Not started
 brpoplpush                  | Not started | Not started | Not started  | Not started | Not started | Not started
 quit                        | Not started | Not started | Not started  | Not started | Not started | Not started
-xread                       | Not started | In progress | Not started  | Not started | Not started | Not started
+xread                       | Not started | Done        | Not started  | Not started | Not started | Not started
 readwrite                   | Not started | Not started | Not started  | Not started | Not started | Not started
 zcount                      | Done        | Done        | Not started  | Not started | Not started | Not started
 time                        | Not started | Done        | Not started  | Not started | Not started | Not started
