@@ -114,7 +114,7 @@ append                      | Not started | Not started | Not started  | Not sta
 rename                      | Not started | In progress | Not started  | Not started | Not started | Not started
 lindex                      | Done        | Done        | Not started  | Not started | Not started | Not started
 punsubscribe                | In progress | In progress | Not started  | Not started | Not started | Not started
-persist                     | Not started | Done        | Not started  | Not started | Not started | Not started
+persist                     | Done        | Done        | Not started  | Not started | Not started | Not started
 strlen                      | Not started | Done        | Not started  | Not started | Not started | Not started
 zincrby                     | Not started | Not started | Not started  | Not started | Not started | Not started
 xgroup                      | Not started | Not started | Not started  | Not started | Not started | Not started
