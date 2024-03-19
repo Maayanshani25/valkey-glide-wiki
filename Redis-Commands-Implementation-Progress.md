@@ -133,7 +133,7 @@ restore                     | Not started | Not started | Not started  | Not sta
 hvals                       | Done        | Done        | Not started  | Not started | Not started | Not started
 sinter                      | Not started | Not started | Not started  | Not started | Not started | Not started
 xtrim                       | Not started | Done        | Not started  | Not started | Not started | Not started
-zrank                       | Not started | Not started | Not started  | Not started | Not started | Not started
+zrank                       | Done        | Not started | Not started  | Not started | Not started | Not started
 zinterstore                 | Not started | Not started | Not started  | Not started | Not started | Not started
 xack                        | Not started | Not started | Not started  | Not started | Not started | Not started
 object                      | Not started | Not started | Not started  | Not started | Not started | Not started
