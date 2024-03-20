@@ -14,7 +14,7 @@ decrby                      | Done        | Done        | Done         | Not sta
 del                         | Done        | Done        | Done         | Not started | Not started | Not started
 select                      | Done        | Done        | Done         | Not started | Not started | Not started
 client ID                   | Done        | Done        | Done         | Not started | Not started | Not started
-multi                       | Done        | Done        | Not started  | Not started | Not started | Not started
+multi                       | Done        | Done        | Done | Not started | Not started | Not started
 exec                        | Done        | Done        | Done         | Not started | Not started | Not started
 CLIENT GETNAME              | Done        | Done        | Done         | Not started | Not started | Not started
 auth                        | Done, API not required | Done, API not required | Not started | Not started | Not started  | Not started
