@@ -66,9 +66,9 @@ CLIENT UNPAUSE              | Not started | Not started | Not started  | Not sta
 psync                       | Not started | Not started | Not started  | Not started | Not started | Not started
 cluster                     | Not started | Not started | Not started  | Not started | Not started | Not started
 subscribe                   | In progress | Not started | Not started  | Not started | Not started | Not started
-eval                        | Done        | Done        | Not started  | Not started | Not started | Not started
-evalsha                     | Done        | Done        | Not started  | Not started | Not started | Not started
-script                      | Done        | Done        | Not started  | Not started | Not started | Not started
+eval                        | Done        | Done        | In progress  | Not started | Not started | Not started
+evalsha                     | Done        | Done        | In progress  | Not started | Not started | Not started
+script                      | Done        | Done        | In progress  | Not started | Not started | Not started
 scan                        | Not started | Not started | Not started  | Not started | Not started | Not started
 keys                        | Not started | Not started | Not started  | Not started | Not started | Not started
 slowlog                     | Not started | Not started | Not started  | Not started | Not started | Not started
@@ -79,7 +79,7 @@ bgsave                      | Not started | Not started | Not started  | Not sta
 setex                       | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 zadd                        | Done        | Done        | Done         | Not started | Not started | Not started
 zrem                        | Done        | Done        | Done         | Not started | Not started | Not started
-zrange                      | Done        | In progress | Not started  | Not started | Not started | Not started
+zrange                      | Done        | In progress | In progress  | Not started | Not started | Not started
 unsubscribe                 | In progress | In progress | Not started  | Not started | Not started | Not started
 psubscribe                  | In progress | In progress | Not started  | Not started | Not started | Not started
 zcard                       | Done        | Done        | Done         | Not started | Not started | Not started
@@ -91,8 +91,8 @@ psetex                      | deprecated  | deprecated  | deprecated   | depreca
 flushall                    | Not started | Not started | Not started  | Not started | Not started | Not started
 sscan                       | Not started | Not started | Not started  | Not started | Not started | Not started
 flushdb                     | Not started | Not started | Not started  | Not started | Not started | Not started
-xadd                        | Not started | Done        | Not started  | Not started | Not started | Not started
-hlen                        | Done        | Done        | Not started  | Not started | Not started | Not started
+xadd                        | Not started | Done        | In Progress  | Not started | Not started | Not started
+hlen                        | Done        | Done        |In progress | Not started | Not started | Not started
 hsetnx                      | Done        | Done        | Not started  | Not started | Not started | Not started
 zrevrangebyscore            | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 watch                       | Not started | Not started | Not started  | Not started | Not started | Not started
@@ -111,7 +111,7 @@ readwrite                   | Not started | Not started | Not started  | Not sta
 zcount                      | Done        | Done        | In progress  | Not started | Not started | Not started
 time                        | Done        | Done        | In progress  | Not started | Not started | Not started
 append                      | Not started | Not started | Not started  | Not started | Not started | Not started
-rename                      | Not started | In progress | Not started  | Not started | Not started | Not started
+rename                      | Not started | In progress | In progress  | Not started | Not started | Not started
 lindex                      | Done        | Done        | Not started  | Not started | Not started | Not started
 punsubscribe                | In progress | In progress | Not started  | Not started | Not started | Not started
 persist                     | Done        | Done        | In progress   | Not started | Not started | Not started
@@ -124,7 +124,7 @@ zscan                       | Not started | Not started | Not started  | Not sta
 xreadgroup                  | Not started | Not started | Not started  | Not started | Not started | Not started
 pfadd                       | Not started | Not started | Not started  | Not started | Not started | Not started
 renamenx                    | Not started | Not started | Not started  | Not started | Not started | Not started
-zpopmin                     | Done        | Done        | Not started  | Not started | Not started | Not started
+zpopmin                     | Done        | Done        | In Progress  | Not started | Not started | Not started
 monitor                     | Not started | Not started | Not started  | Not started | Not started | Not started
 pfcount                     | Not started | Not started | Not started  | Not started | Not started | Not started
 wait                        | Not started | Not started | Not started  | Not started | Not started | Not started
@@ -133,7 +133,7 @@ restore                     | Not started | Not started | Not started  | Not sta
 hvals                       | Done        | Done        | Not started  | Not started | Not started | Not started
 sinter                      | Not started | Not started | Not started  | Not started | Not started | Not started
 xtrim                       | Not started | Done        | Not started  | Not started | Not started | Not started
-zrank                       | Done        | Not started | Not started  | Not started | Not started | Not started
+zrank                       | Done        | Not started | In Progress  | Not started | Not started | Not started
 zinterstore                 | Not started | Not started | Not started  | Not started | Not started | Not started
 xack                        | Not started | Not started | Not started  | Not started | Not started | Not started
 object                      | Not started | Not started | Not started  | Not started | Not started | Not started
@@ -171,7 +171,7 @@ msetnx                      | Not started | Not started | Not started  | Not sta
 sdiff                       | Not started | Not started | Not started  | Not started | Not started | Not started
 setrange                    | Not started | Not started | Not started  | Not started | Not started | Not started
 sinterstore                 | Not started | Not started | Not started  | Not started | Not started | Not started
-zpopmax                     | Done        | Done        | Not started  | Not started | Not started | Not started
+zpopmax                     | Done        | Done        | In progress  | Not started | Not started | Not started
 georadius_ro                | Not started | Not started | Not started  | Not started | Not started | Not started
 georadius                   | Not started | Not started | Not started  | Not started | Not started | Not started
 pfmerge                     | Not started | Not started | Not started  | Not started | Not started | Not started
