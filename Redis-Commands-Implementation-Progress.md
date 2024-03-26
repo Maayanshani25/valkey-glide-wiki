@@ -2,8 +2,8 @@ cmd type                    | Python      | Node        | Java         | .NET   
 --                          | --          | --          | --           | --          | --          | --         
 ping                        | Done        | Done        | Done         | Not started | Not started | Not started 
 info                        | Done        | Done        | Done         | Not started | Not started | Not started 
-Config get                  | Done        | Done        | In progress  | Not started | Not started | Not started 
-Config set                  | Done        | Done        | In progress  | Not started | Not started | Not started 
+Config get                  | Done        | Done        | Done  | Not started | Not started | Not started 
+Config set                  | Done        | Done        | Done  | Not started | Not started | Not started 
 Config rewrite              | Done        | Done        | Done         | Not started | Not started | Not started 
 Config resetstat            | Done        | Done        | Done         | Not started | Not started | Not started 
 incrby                      | Done        | Done        | Done         | Not started | Not started | Not started 
