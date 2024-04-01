@@ -171,7 +171,7 @@ msetnx                      | Not started | Not started | Not started  | Not sta
 sdiff                       | Not started | Not started | Not started  | Not started | Not started | Not started
 setrange                    | Not started | Not started | Not started  | Not started | Not started | Not started
 sinterstore                 | Not started | Not started | Not started  | Not started | Not started | Not started
-zpopmax                     | Done        | Done        | In progress  | Not started | Not started | Not started
+zpopmax                     | Done        | Done        | Done  | Not started | Not started | Not started
 georadius_ro                | Not started | Not started | Not started  | Not started | Not started | Not started
 georadius                   | Not started | Not started | Not started  | Not started | Not started | Not started
 pfmerge                     | Not started | Not started | In progress  | Not started | Not started | Not started
