@@ -66,9 +66,9 @@ CLIENT UNPAUSE              | Not started | Not started | Not started  | Not sta
 psync                       | Not started | Not started | Not started  | Not started | Not started | Not started
 cluster                     | Not started | Not started | Not started  | Not started | Not started | Not started
 subscribe                   | In progress | Not started | Not started  | Not started | Not started | Not started
-eval                        | Done        | Done        | In progress  | Not started | Not started | Not started
-evalsha                     | Done        | Done        | In progress  | Not started | Not started | Not started
-script                      | Done        | Done        | In progress  | Not started | Not started | Not started
+eval                        | Done        | Done        | Done         | Not started | Not started | Not started
+evalsha                     | Done        | Done        | Done         | Not started | Not started | Not started
+script                      | Done        | Done        | Done         | Not started | Not started | Not started
 scan                        | Not started | Not started | Not started  | Not started | Not started | Not started
 keys                        | Not started | Not started | Not started  | Not started | Not started | Not started
 slowlog                     | Not started | Not started | Not started  | Not started | Not started | Not started
