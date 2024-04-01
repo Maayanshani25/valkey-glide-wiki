@@ -97,7 +97,7 @@ hsetnx                      | Done        | Done        | In progress  | Not sta
 zrevrangebyscore            | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 watch                       | Not started | Not started | Not started  | Not started | Not started | Not started
 sismember                   | Done        | Done        | In progress  | Not started | Not started | Not started
-pttl                        | Done        | Done        | In progress  | Not started | Not started | Not started
+pttl                        | Done        | Done        | Done         | Not started | Not started | Not started
 zscore                      | Done        | Done        | In progress  | Not started | Not started | Not started
 dbsize                      | Done        | Not started | Not started  | Not started | Not started | Not started
 zrevrange                   | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
@@ -109,7 +109,7 @@ quit                        | Not started | Not started | Not started  | Not sta
 xread                       | Not started | Done        | Not started  | Not started | Not started | Not started
 readwrite                   | Not started | Not started | Not started  | Not started | Not started | Not started
 zcount                      | Done        | Done        | In progress  | Not started | Not started | Not started
-time                        | Done        | Done        | In progress  | Not started | Not started | Not started
+time                        | Done        | Done        | Done         | Not started | Not started | Not started
 append                      | Not started | In progress | Not started  | Not started | Not started | Not started
 rename                      | Not started | In progress | In progress  | Not started | Not started | Not started
 lindex                      | Done        | Done        | In progress  | Not started | Not started | Not started
