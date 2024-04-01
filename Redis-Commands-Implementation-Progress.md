@@ -83,8 +83,8 @@ zrange                      | Done        | In progress | In progress  | Not sta
 unsubscribe                 | In progress | In progress | Not started  | Not started | Not started | Not started
 psubscribe                  | In progress | In progress | Not started  | Not started | Not started | Not started
 zcard                       | Done        | Done        | Done         | Not started | Not started | Not started
-type                        | Done        | Done        | In progress  | Not started | Not started | Not started
-echo                        | Done        | Done        | In progress  | Not started | Not started | Not started
+type                        | Done        | Done        | Done         | Not started | Not started | Not started
+echo                        | Done        | Done        | Done         | Not started | Not started | Not started
 brpop                       | Not started | Done        | In progress  | Not started | Not started | Not started
 zremrangebyrank             | Not started | Done        | Not started  | Not started | Not started | Not started
 psetex                      | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
@@ -114,8 +114,8 @@ append                      | Not started | In progress | Not started  | Not sta
 rename                      | Not started | In progress | In progress  | Not started | Not started | Not started
 lindex                      | Done        | Done        | In progress  | Not started | Not started | Not started
 punsubscribe                | In progress | In progress | Not started  | Not started | Not started | Not started
-persist                     | Done        | Done        | In progress  | Not started | Not started | Not started
-strlen                      | Not started | Done        | In progress  | Not started | Not started | Not started
+persist                     | Done        | Done        | Done         | Not started | Not started | Not started
+strlen                      | Not started | Done        | Done         | Not started | Not started | Not started
 zincrby                     | Not started | Not started | Not started  | Not started | Not started | Not started
 xgroup                      | Not started | Not started | Not started  | Not started | Not started | Not started
 getset                      | Not started | Not started | Not started  | Not started | Not started | Not started
