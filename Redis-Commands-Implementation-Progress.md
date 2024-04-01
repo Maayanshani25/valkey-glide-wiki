@@ -98,7 +98,7 @@ zrevrangebyscore            | deprecated  | deprecated  | deprecated   | depreca
 watch                       | Not started | Not started | Not started  | Not started | Not started | Not started
 sismember                   | Done        | Done        | In progress  | Not started | Not started | Not started
 pttl                        | Done        | Done        | Done         | Not started | Not started | Not started
-zscore                      | Done        | Done        | In progress  | Not started | Not started | Not started
+zscore                      | Done        | Done        | Done  | Not started | Not started | Not started
 dbsize                      | Done        | Not started | Not started  | Not started | Not started | Not started
 zrevrange                   | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 hscan                       | Not started | Not started | Not started  | Not started | Not started | Not started
