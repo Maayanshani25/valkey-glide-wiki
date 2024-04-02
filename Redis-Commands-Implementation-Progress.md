@@ -183,7 +183,7 @@ zremrangebylex              | Not started | Not started | Not started  | Not sta
 zrevrangebylex              | Not started | Not started | Not started  | Not started | Not started | Not started
 lpushx                      | Not started | Not started | In Progress  | Not started | Not started | Not started
 copy                        | Not started | Not started | Not started  | Not started | Not started | Not started
-hrandfield                  | Not started | Not started | Not started  | Not started | Not started | Not started
+hrandfield                  | In progress | Not started | Not started  | Not started | Not started | Not started
 lpos                        | Not started | Not started | Not started  | Not started | Not started | Not started
 geopos                      | Not started | Not started | Not started  | Not started | Not started | Not started
 xautoclaim                  | Not started | Not started | Not started  | Not started | Not started | Not started
