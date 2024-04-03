@@ -1,4 +1,6 @@
-## Feature list
+Legend:
+* `+` means "Supported"
+* `-` means "Not yet supported"
 
 | Feature                         | Node           | Python         | Java | C#             |
 | -------------------------       | -------------- | -------------- | ---- | -------------- |
@@ -15,7 +17,3 @@
 | Connection heartbeat check      | +              | +              | -    | -              |
 | Thread pool configuration       | Not applicable | Not applicable | +    | Not applicable |
 | Logger configuration            | +              | +              | -    | +              |
-
-Legend:
-* `+` means "Supported"
-* `-` means "Not yet supported"
