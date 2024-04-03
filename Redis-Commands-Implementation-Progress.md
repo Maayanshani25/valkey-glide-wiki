@@ -131,7 +131,7 @@ wait                        | Not started | Not started | Not started  | Not sta
 spop                        | Not started | Not started | Not started  | Not started | Not started | Not started
 restore                     | Not started | Not started | Not started  | Not started | Not started | Not started
 hvals                       | Done        | Done        | In Progress  | Not started | Not started | Not started
-sinter                      | Not started | Not started | Not started  | Not started | Not started | Not started
+sinter                      | Not started | Not started | In Progress  | Not started | Not started | Not started
 xtrim                       | Not started | Done        | Not started  | Not started | Not started | Not started
 zrank                       | Done        | Not started | In Progress  | Not started | Not started | Not started
 zinterstore                 | Not started | Not started | Not started  | Not started | Not started | Not started
