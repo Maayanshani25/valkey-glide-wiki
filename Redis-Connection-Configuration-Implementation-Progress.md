@@ -12,7 +12,7 @@ Legend:
 | Connection retry                | +              | +              | +    | -              |
 | Authentication                  | +              | +              | +    | -              |
 | Database ID                     | +              | +              | +    | -              |
-| Protocol version                | +              | +              | +    | -              |
+| Protocol version                | +              | +              | -    | -              |
 | Client name                     | +              | +              | +    | -              |
 | Connection heartbeat check      | +              | +              | -    | -              |
 | Thread pool configuration       | Not applicable | Not applicable | +    | Not applicable |
