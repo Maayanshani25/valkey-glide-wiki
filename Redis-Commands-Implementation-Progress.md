@@ -93,7 +93,7 @@ sscan                       | Not started | Not started | Not started  | Not sta
 flushdb                     | Not started | Not started | Not started  | Not started | Not started | Not started
 xadd                        | Not started | Done        | In Progress  | Not started | Not started | Not started
 hlen                        | Done        | Done        | In progress  | Not started | Not started | Not started
-hsetnx                      | Done        | Done        | In progress  | Not started | Not started | Not started
+hsetnx                      | Done        | Done        | Done         | Not started | Not started | Not started
 zrevrangebyscore            | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 watch                       | Not started | Not started | Not started  | Not started | Not started | Not started
 sismember                   | Done        | Done        | In progress  | Not started | Not started | Not started
