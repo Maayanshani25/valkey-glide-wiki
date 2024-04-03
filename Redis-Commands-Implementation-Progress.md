@@ -119,7 +119,7 @@ strlen                      | Not started | Done        | Done         | Not sta
 zincrby                     | Not started | Not started | Not started  | Not started | Not started | Not started
 xgroup                      | Not started | Not started | Not started  | Not started | Not started | Not started
 getset                      | Not started | Not started | Not started  | Not started | Not started | Not started
-blpop                       | Not started | Not started | In progress  | Not started | Not started | Not started
+blpop                       | Not started | In progress | In progress  | Not started | Not started | Not started
 zscan                       | Not started | Not started | Not started  | Not started | Not started | Not started
 xreadgroup                  | Not started | Not started | Not started  | Not started | Not started | Not started
 pfadd                       | Not started | Not started | In Progress  | Not started | Not started | Not started
