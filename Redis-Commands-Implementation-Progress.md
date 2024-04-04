@@ -206,7 +206,7 @@ zdiff                       | Not started | Not started | Not started  | Not sta
 zrangestore                 | Not started | Not started | Not started  | Not started | Not started | Not started
 geodist                     | Not started | Not started | Not started  | Not started | Not started | Not started 
 georadiusbymember           | Not started | Not started | Not started  | Not started | Not started | Not started 
-bzpopmax                    | Not started | Not started | Not started  | Not started | Not started | Not started 
+bzpopmax                    | Not started | Not started | In Progress  | Not started | Not started | Not started 
 zinter                      | Not started | Not started | Not started  | Not started | Not started | Not started 
 georadiusbymember_ro        | Not started | Not started | Not started  | Not started | Not started | Not started 
 sunsubscribe                | Not started | Not started | Not started  | Not started | Not started | Not started
