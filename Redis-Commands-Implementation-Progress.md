@@ -111,11 +111,11 @@ readwrite                   | Not started | Not started | Not started  | Not sta
 zcount                      | Done        | Done        | In progress  | Not started | Not started | Not started
 time                        | Done        | Done        | Done         | Not started | Not started | Not started
 append                      | Not started | In progress | Not started  | Not started | Not started | Not started
-rename                      | Not started | In progress | In progress  | Not started | Not started | Not started
+rename                      | In progress | Done        | In progress  | Not started | Not started | Not started
 lindex                      | Done        | Done        | In progress  | Not started | Not started | Not started
 punsubscribe                | In progress | In progress | Not started  | Not started | Not started | Not started
 persist                     | Done        | Done        | Done         | Not started | Not started | Not started
-strlen                      | Not started | Done        | Done         | Not started | Not started | Not started
+strlen                      | In Progress | Done        | Done         | Not started | Not started | Not started
 zincrby                     | Not started | Not started | Not started  | Not started | Not started | Not started
 xgroup                      | Not started | Not started | Not started  | Not started | Not started | Not started
 getset                      | Not started | Not started | Not started  | Not started | Not started | Not started
