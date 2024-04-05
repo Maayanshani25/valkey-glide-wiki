@@ -223,7 +223,7 @@ save                        | Not started | Not started | Not started  | Not sta
 shutdown                    | Not started | Not started | Not started  | Not started | Not started | Not started 
 zintercard                  | Not started | Not started | Not started  | Not started | Not started | Not started 
 zmpop                       | Not started | Not started | Not started  | Not started | Not started | Not started 
-bzmpop                      | Not started | Not started | Not started  | Not started | Not started | Not started 
+bzmpop                      | Not started | Not started | In Progress  | Not started | Not started | Not started 
 lcs                         | Not started | Not started | Not started  | Not started | Not started | Not started 
 pfselftest                  | Not started | Not started | Not started  | Not started | Not started | Not started 
 xsetid                      | Not started | Not started | Not started  | Not started | Not started | Not started
