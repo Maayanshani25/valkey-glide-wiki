@@ -171,14 +171,14 @@ msetnx                      | Not started | Not started | Not started  | Not sta
 sdiff                       | Not started | Not started | Not started  | Not started | Not started | Not started
 setrange                    | Not started | Not started | In Progress  | Not started | Not started | Not started
 sinterstore                 | Not started | Not started | Not started  | Not started | Not started | Not started
-zpopmax                     | Done        | Done        | Done  | Not started | Not started | Not started
+zpopmax                     | Done        | Done        | Done         | Not started | Not started | Not started
 georadius_ro                | Not started | Not started | Not started  | Not started | Not started | Not started
 georadius                   | Not started | Not started | Not started  | Not started | Not started | Not started
 pfmerge                     | Not started | Not started | In progress  | Not started | Not started | Not started
 bitcount                    | Not started | Not started | Not started  | Not started | Not started | Not started
 sdiffstore                  | Not started | Not started | Not started  | Not started | Not started | Not started
 touch                       | Not started | Not started | Not started  | Not started | Not started | Not started
-smismember                  | Not started | Not started | Not started  | Not started | Not started | Not started
+smismember                  | Not started | Not started | In progress  | Not started | Not started | Not started
 zremrangebylex              | Not started | Not started | Not started  | Not started | Not started | Not started
 zrevrangebylex              | Not started | Not started | Not started  | Not started | Not started | Not started
 lpushx                      | Not started | Not started | Done         | Not started | Not started | Not started
