@@ -126,7 +126,7 @@ pfadd                       | Not started | Not started | Done         | Not sta
 renamenx                    | Not started | Not started | Not started  | Not started | Not started | Not started
 zpopmin                     | Done        | Done        | In Progress  | Not started | Not started | Not started
 monitor                     | Not started | Not started | Not started  | Not started | Not started | Not started
-pfcount                     | Not started | Not started | In Progress  | Not started | Not started | Not started
+pfcount                     | Not started | Not started | Done         | Not started | Not started | Not started
 wait                        | Not started | Not started | Not started  | Not started | Not started | Not started
 spop                        | Not started | Not started | Not started  | Not started | Not started | Not started
 restore                     | Not started | Not started | Not started  | Not started | Not started | Not started
@@ -174,7 +174,7 @@ sinterstore                 | Not started | Not started | Not started  | Not sta
 zpopmax                     | Done        | Done        | Done         | Not started | Not started | Not started
 georadius_ro                | Not started | Not started | Not started  | Not started | Not started | Not started
 georadius                   | Not started | Not started | Not started  | Not started | Not started | Not started
-pfmerge                     | Not started | Not started | In progress  | Not started | Not started | Not started
+pfmerge                     | Not started | Not started | Done         | Not started | Not started | Not started
 bitcount                    | Not started | Not started | Not started  | Not started | Not started | Not started
 sdiffstore                  | Not started | Not started | Not started  | Not started | Not started | Not started
 touch                       | Not started | Not started | Not started  | Not started | Not started | Not started
