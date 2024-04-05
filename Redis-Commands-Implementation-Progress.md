@@ -96,9 +96,9 @@ hlen                        | Done        | Done        | Done         | Not sta
 hsetnx                      | Done        | Done        | Done         | Not started | Not started | Not started
 zrevrangebyscore            | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 watch                       | Not started | Not started | Not started  | Not started | Not started | Not started
-sismember                   | Done        | Done        | In progress  | Not started | Not started | Not started
+sismember                   | Done        | Done        | Done         | Not started | Not started | Not started
 pttl                        | Done        | Done        | Done         | Not started | Not started | Not started
-zscore                      | Done        | Done        | Done  | Not started | Not started | Not started
+zscore                      | Done        | Done        | Done         | Not started | Not started | Not started
 dbsize                      | Done        | Not started | Not started  | Not started | Not started | Not started
 zrevrange                   | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 hscan                       | Not started | Not started | Not started  | Not started | Not started | Not started
