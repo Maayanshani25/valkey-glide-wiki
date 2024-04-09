@@ -128,7 +128,7 @@ zpopmin                     | Done        | Done        | In Progress  | Not sta
 monitor                     | Not started | Not started | Not started  | Not started | Not started | Not started
 pfcount                     | Not started | Not started | Done         | Not started | Not started | Not started
 wait                        | Not started | Not started | Not started  | Not started | Not started | Not started
-spop                        | Not started | Not started | Not started  | Not started | Not started | Not started
+spop                        | Not started | Done        | Not started  | Not started | Not started | Not started
 restore                     | Not started | Not started | Not started  | Not started | Not started | Not started
 hvals                       | Done        | Done        | Done         | Not started | Not started | Not started
 sinter                      | Not started | Not started | In Progress  | Not started | Not started | Not started
