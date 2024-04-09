@@ -73,7 +73,7 @@ scan                        | Not started | Not started | Not started  | Not sta
 keys                        | Not started | Not started | Not started  | Not started | Not started | Not started
 slowlog                     | Not started | Not started | Not started  | Not started | Not started | Not started
 zrangebyscore               | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
-zremrangebyscore            | In progress | Done        | Not started  | Not started | Not started | Not started
+zremrangebyscore            | Done        | Done        | Not started  | Not started | Not started | Not started
 setnx                       | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 bgsave                      | Not started | Not started | Not started  | Not started | Not started | Not started
 setex                       | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
