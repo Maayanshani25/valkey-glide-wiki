@@ -112,7 +112,7 @@ zcount                      | Done        | Done        | In progress  | Not sta
 time                        | Done        | Done        | Done         | Not started | Not started | Not started
 append                      | Not started | In progress | Not started  | Not started | Not started | Not started
 rename                      | In progress | Done        | In progress  | Not started | Not started | Not started
-lindex                      | Done        | Done        | In progress  | Not started | Not started | Not started
+lindex                      | Done        | Done        | Done         | Not started | Not started | Not started
 punsubscribe                | In progress | In progress | Not started  | Not started | Not started | Not started
 persist                     | Done        | Done        | Done         | Not started | Not started | Not started
 strlen                      | In Progress | Done        | Done         | Not started | Not started | Not started
@@ -155,7 +155,7 @@ setbit                      | Not started | Not started | Not started  | Not sta
 smove                       | Not started | Not started | In Progress  | Not started | Not started | Not started
 xrange                      | Not started | Not started | Not started  | Not started | Not started | Not started
 xdel                        | Not started | Not started | Not started  | Not started | Not started | Not started
-linsert                     | Not started | Not started | In Progress  | Not started | Not started | Not started
+linsert                     | Not started | Not started | Done         | Not started | Not started | Not started
 xlen                        | Not started | Not started | Not started  | Not started | Not started | Not started
 xpending                    | Not started | Not started | Not started  | Not started | Not started | Not started
 discard                     | Not started | Not started | Not started  | Not started | Not started | Not started
@@ -187,7 +187,7 @@ hrandfield                  | In progress | Not started | Not started  | Not sta
 lpos                        | Not started | Not started | Not started  | Not started | Not started | Not started
 geopos                      | Not started | Not started | Not started  | Not started | Not started | Not started
 xautoclaim                  | Not started | Not started | Not started  | Not started | Not started | Not started
-zmscore                     | Not started | Not started | In Progress  | Not started | Not started | Not started
+zmscore                     | Not started | Not started | Done         | Not started | Not started | Not started
 bitop                       | Not started | Not started | Not started  | Not started | Not started | Not started
 lastsave                    | Not started | Not started | Not started  | Not started | Not started | Not started
 geosearch                   | Not started | Not started | Not started  | Not started | Not started | Not started
