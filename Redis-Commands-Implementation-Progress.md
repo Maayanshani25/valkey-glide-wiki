@@ -79,7 +79,7 @@ bgsave                      | Not started | Not started | Not started  | Not sta
 setex                       | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 zadd                        | Done        | Done        | Done         | Not started | Not started | Not started
 zrem                        | Done        | Done        | Done         | Not started | Not started | Not started
-zrange                      | Done        | In progress | Done         | Not started | Not started | Not started
+zrange                      | Done        | Done        | Done         | Not started | Not started | Not started
 unsubscribe                 | In progress | In progress | Not started  | Not started | Not started | Not started
 psubscribe                  | In progress | In progress | Not started  | Not started | Not started | Not started
 zcard                       | Done        | Done        | Done         | Not started | Not started | Not started
