@@ -86,7 +86,7 @@ zcard                       | Done        | Done        | Done         | Not sta
 type                        | Done        | Done        | Done         | Not started | Not started | Not started
 echo                        | Done        | Done        | Done         | Not started | Not started | Not started
 brpop                       | In progress | Done        | Done         | Not started | Not started | Not started
-zremrangebyrank             | Not started | Done        | Not started  | Not started | Not started | Not started
+zremrangebyrank             | Not started | Done        | Done         | Not started | Not started | Not started
 psetex                      | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 flushall                    | Not started | Not started | Not started  | Not started | Not started | Not started
 sscan                       | Not started | Not started | Not started  | Not started | Not started | Not started
