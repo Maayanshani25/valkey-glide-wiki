@@ -169,7 +169,7 @@ zrangebylex                 | deprecated  | deprecated  | deprecated   | depreca
 getbit                      | Not started | Not started | Not started  | Not started | Not started | Not started
 msetnx                      | Not started | Not started | Not started  | Not started | Not started | Not started
 sdiff                       | Not started | Not started | Not started  | Not started | Not started | Not started
-setrange                    | Not started | Not started | In Progress  | Not started | Not started | Not started
+setrange                    | Not started | Not started | Done         | Not started | Not started | Not started
 sinterstore                 | Not started | Not started | Not started  | Not started | Not started | Not started
 zpopmax                     | Done        | Done        | Done         | Not started | Not started | Not started
 georadius_ro                | Not started | Not started | Not started  | Not started | Not started | Not started
@@ -197,12 +197,12 @@ zrandmember                 | Not started | Not started | Not started  | Not sta
 replicaof                   | Not started | Not started | Not started  | Not started | Not started | Not started
 bitfield_ro                 | Not started | Not started | Not started  | Not started | Not started | Not started
 fcall                       | Not started | Not started | Not started  | Not started | Not started | Not started
-zdiffstore                  | Not started | Not started | Not started  | Not started | Not started | Not started
+zdiffstore                  | Not started | Not started | Done         | Not started | Not started | Not started
 move                        | Not started | Not started | Not started  | Not started | Not started | Not started
 geohash                     | Not started | Not started | Not started  | Not started | Not started | Not started
 bitpos                      | Not started | Not started | Not started  | Not started | Not started | Not started
 substr                      | Not started | Not started | Not started  | Not started | Not started | Not started 
-zdiff                       | Not started | Not started | Not started  | Not started | Not started | Not started
+zdiff                       | Not started | Not started | Done         | Not started | Not started | Not started
 zrangestore                 | Not started | Not started | Not started  | Not started | Not started | Not started
 geodist                     | Not started | Not started | Not started  | Not started | Not started | Not started 
 georadiusbymember           | Not started | Not started | Not started  | Not started | Not started | Not started 
