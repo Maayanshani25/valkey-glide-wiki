@@ -162,7 +162,7 @@ discard                     | Not started | Not started | Not started  | Not sta
 sunionstore                 | Not started | Not started | In Progress  | Not started | Not started | Not started
 xrevrange                   | Not started | Not started | Not started  | Not started | Not started | Not started
 bzpopmin                    | Not started | Not started | Not started  | Not started | Not started | Not started
-rpushx                      | In progress | Not started | Done         | Not started | Not started | Not started
+rpushx                      | Done        | Not started | Done         | Not started | Not started | Not started
 sort                        | Not started | Not started | Not started  | Not started | Not started | Not started
 geoadd                      | Not started | Not started | Not started  | Not started | Not started | Not started
 zrangebylex                 | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
@@ -181,7 +181,7 @@ touch                       | Not started | Not started | Not started  | Not sta
 smismember                  | Not started | Not started | In Progress  | Not started | Not started | Not started
 zremrangebylex              | Not started | Not started | Not started  | Not started | Not started | Not started
 zrevrangebylex              | Not started | Not started | Not started  | Not started | Not started | Not started
-lpushx                      | In progress | Not started | Done         | Not started | Not started | Not started
+lpushx                      | Done        | Not started | Done         | Not started | Not started | Not started
 copy                        | Not started | Not started | Not started  | Not started | Not started | Not started
 hrandfield                  | In progress | Not started | Not started  | Not started | Not started | Not started
 lpos                        | Not started | Not started | Not started  | Not started | Not started | Not started
