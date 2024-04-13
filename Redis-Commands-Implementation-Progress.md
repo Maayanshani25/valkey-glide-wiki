@@ -75,7 +75,7 @@ slowlog                     | Not started | Not started | Not started  | Not sta
 zrangebyscore               | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 zremrangebyscore            | Done        | Done        | Not started  | Not started | Not started | Not started
 setnx                       | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
-bgsave                      | Not started | Not started | Not started  | Not started | Not started | Not started
+bgsave                      | Not started | Not started | In progress  | Not started | Not started | Not started
 setex                       | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 zadd                        | Done        | Done        | Done         | Not started | Not started | Not started
 zrem                        | Done        | Done        | Done         | Not started | Not started | Not started
