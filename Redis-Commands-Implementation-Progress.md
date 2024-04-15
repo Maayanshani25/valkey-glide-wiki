@@ -73,7 +73,7 @@ scan                        | Not started | Not started | Not started  | Not sta
 keys                        | Not started | Not started | Not started  | Not started | Not started | Not started
 slowlog                     | Not started | Not started | Not started  | Not started | Not started | Not started
 zrangebyscore               | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
-zremrangebyscore            | Done        | Done        | Not started  | Not started | Not started | Not started
+zremrangebyscore            | Done        | Done        | Done         | Not started | Not started | Not started
 setnx                       | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 bgsave                      | Not started | Not started | In progress  | Not started | Not started | Not started
 setex                       | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
@@ -108,7 +108,7 @@ brpoplpush                  | Not started | Not started | Not started  | Not sta
 quit                        | Not started | Not started | Not started  | Not started | Not started | Not started
 xread                       | Not started | Done        | Not started  | Not started | Not started | Not started
 readwrite                   | Not started | Not started | Not started  | Not started | Not started | Not started
-zcount                      | Done        | Done        | In progress  | Not started | Not started | Not started
+zcount                      | Done        | Done        | Done         | Not started | Not started | Not started
 time                        | Done        | Done        | Done         | Not started | Not started | Not started
 append                      | Not started | In progress | Not started  | Not started | Not started | Not started
 rename                      | Done        | Done        | In progress  | Not started | Not started | Not started
@@ -124,7 +124,7 @@ zscan                       | Not started | Not started | Not started  | Not sta
 xreadgroup                  | Not started | Not started | Not started  | Not started | Not started | Not started
 pfadd                       | Not started | Not started | Done         | Not started | Not started | Not started
 renamenx                    | Not started | Not started | Not started  | Not started | Not started | Not started
-zpopmin                     | Done        | Done        | In Progress  | Not started | Not started | Not started
+zpopmin                     | Done        | Done        | Done         | Not started | Not started | Not started
 monitor                     | Not started | Not started | Not started  | Not started | Not started | Not started
 pfcount                     | Not started | Not started | Done         | Not started | Not started | Not started
 wait                        | Not started | Not started | Not started  | Not started | Not started | Not started
@@ -192,7 +192,7 @@ bitop                       | Not started | Not started | Not started  | Not sta
 lastsave                    | Not started | Not started | Not started  | Not started | Not started | Not started
 geosearch                   | Not started | Not started | Not started  | Not started | Not started | Not started
 function                    | Not started | Not started | Not started  | Not started | Not started | Not started
-zlexcount                   | Not started | Not started | Not started  | Not started | Not started | Not started
+zlexcount                   | Not started | Not started | Done         | Not started | Not started | Not started
 zrandmember                 | Not started | Not started | Not started  | Not started | Not started | Not started
 replicaof                   | Not started | Not started | Not started  | Not started | Not started | Not started
 bitfield_ro                 | Not started | Not started | Not started  | Not started | Not started | Not started
