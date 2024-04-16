@@ -110,7 +110,7 @@ xread                       | Not started | Done        | Not started  | Not sta
 readwrite                   | Not started | Not started | Not started  | Not started | Not started | Not started
 zcount                      | Done        | Done        | Done         | Not started | Not started | Not started
 time                        | Done        | Done        | Done         | Not started | Not started | Not started
-append                      | Not started | In progress | Not started  | Not started | Not started | Not started
+append                      | Done        | In progress | Not started  | Not started | Not started | Not started
 rename                      | Done        | Done        | In progress  | Not started | Not started | Not started
 lindex                      | Done        | Done        | Done         | Not started | Not started | Not started
 punsubscribe                | In progress | In progress | Not started  | Not started | Not started | Not started
