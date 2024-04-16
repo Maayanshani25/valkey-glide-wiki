@@ -189,7 +189,7 @@ geopos                      | Not started | Not started | Not started  | Not sta
 xautoclaim                  | Not started | Not started | Not started  | Not started | Not started | Not started
 zmscore                     | Not started | Not started | Done         | Not started | Not started | Not started
 bitop                       | Not started | Not started | Not started  | Not started | Not started | Not started
-lastsave                    | Not started | Not started | Not started  | Not started | Not started | Not started
+lastsave                    | Not started | Not started | In Progress  | Not started | Not started | Not started
 geosearch                   | Not started | Not started | Not started  | Not started | Not started | Not started
 function                    | Not started | Not started | Not started  | Not started | Not started | Not started
 zlexcount                   | Not started | Not started | Done         | Not started | Not started | Not started
