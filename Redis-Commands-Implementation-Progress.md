@@ -219,7 +219,7 @@ sync                        | Not started | Not started | Not started  | Not sta
 bgrewriteaof                | Not started | Not started | Not started  | Not started | Not started | Not started 
 debug                       | Not started | Not started | Not started  | Not started | Not started | Not started 
 migrate                     | Not started | Not started | Not started  | Not started | Not started | Not started 
-save                        | Not started | Not started | Not started  | Not started | Not started | Not started 
+save                        | Not started | Not started | In Progress  | Not started | Not started | Not started 
 shutdown                    | Not started | Not started | Not started  | Not started | Not started | Not started 
 zintercard                  | Not started | Not started | Not started  | Not started | Not started | Not started 
 zmpop                       | Not started | Not started | Not started  | Not started | Not started | Not started 
