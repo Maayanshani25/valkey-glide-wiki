@@ -146,7 +146,7 @@ zunionstore                 | Not started | Not started | Not started  | Not sta
 lset                        | Not started | Not started | Not started  | Not started | Not started | Not started
 xclaim                      | Not started | Not started | Not started  | Not started | Not started | Not started
 bitfield                    | Not started | Not started | Not started  | Not started | Not started | Not started
-getrange                    | Not started | Not started | In Progress  | Not started | Not started | Not started
+getrange                    | Not started | Not started | Done         | Not started | Not started | Not started
 randomkey                   | Not started | Not started | Not started  | Not started | Not started | Not started
 srandmember                 | Not started | Not started | Not started  | Not started | Not started | Not started
 dump                        | Not started | Not started | Not started  | Not started | Not started | Not started
@@ -203,7 +203,7 @@ geohash                     | Not started | Not started | Not started  | Not sta
 bitpos                      | Not started | Not started | Not started  | Not started | Not started | Not started
 substr                      | Not started | Not started | Not started  | Not started | Not started | Not started 
 zdiff                       | Not started | Not started | Done         | Not started | Not started | Not started
-zrangestore                 | Not started | Not started | Not started  | Not started | Not started | Not started
+zrangestore                 | Not started | Not started | Done         | Not started | Not started | Not started
 geodist                     | Not started | Not started | Not started  | Not started | Not started | Not started 
 georadiusbymember           | Not started | Not started | Not started  | Not started | Not started | Not started 
 bzpopmax                    | Not started | Not started | In Progress  | Not started | Not started | Not started 
