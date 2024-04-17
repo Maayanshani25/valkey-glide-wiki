@@ -132,7 +132,7 @@ spop                        | Done        | Done        | Not started  | Not sta
 restore                     | Not started | Not started | Not started  | Not started | Not started | Not started
 hvals                       | Done        | Done        | Done         | Not started | Not started | Not started
 sinter                      | Not started | Not started | Done         | Not started | Not started | Not started
-xtrim                       | Not started | Done        | Not started  | Not started | Not started | Not started
+xtrim                       | Not started | Done        | In progress  | Not started | Not started | Not started
 zrank                       | Done        | Not started | Done         | Not started | Not started | Not started
 zinterstore                 | In progress | Not started | Not started  | Not started | Not started | Not started
 xack                        | Not started | Not started | Not started  | Not started | Not started | Not started
@@ -156,7 +156,7 @@ smove                       | Not started | Not started | Done         | Not sta
 xrange                      | Not started | Not started | Not started  | Not started | Not started | Not started
 xdel                        | Not started | Not started | Not started  | Not started | Not started | Not started
 linsert                     | In progress | Not started | Done         | Not started | Not started | Not started
-xlen                        | Not started | Not started | Not started  | Not started | Not started | Not started
+xlen                        | Not started | Not started | In progress  | Not started | Not started | Not started
 xpending                    | Not started | Not started | Not started  | Not started | Not started | Not started
 discard                     | Not started | Not started | Not started  | Not started | Not started | Not started
 sunionstore                 | Not started | Not started | Done         | Not started | Not started | Not started
