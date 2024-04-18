@@ -199,7 +199,7 @@ bitfield_ro                 | Not started | Not started | Not started  | Not sta
 fcall                       | Not started | Not started | Not started  | Not started | Not started | Not started
 zdiffstore                  | Not started | Not started | Done         | Not started | Not started | Not started
 move                        | Not started | Not started | Not started  | Not started | Not started | Not started
-geohash                     | Not started | Not started | Not started  | Not started | Not started | Not started
+geohash                     | Done        | Not started | Not started  | Not started | Not started | Not started
 bitpos                      | Not started | Not started | Not started  | Not started | Not started | Not started
 substr                      | Not started | Not started | Not started  | Not started | Not started | Not started 
 zdiff                       | Not started | Not started | Done         | Not started | Not started | Not started
