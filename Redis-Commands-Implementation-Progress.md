@@ -122,7 +122,7 @@ getset                      | Not started | Not started | Not started  | Not sta
 blpop                       | In progress | In progress | Done         | Not started | Not started | Not started
 zscan                       | Not started | Not started | Not started  | Not started | Not started | Not started
 xreadgroup                  | Not started | Not started | Not started  | Not started | Not started | Not started
-pfadd                       | Not started | Not started | Done         | Not started | Not started | Not started
+pfadd                       | In progress | in progress | Done         | Not started | Not started | Not started
 renamenx                    | Not started | Not started | Not started  | Not started | Not started | Not started
 zpopmin                     | Done        | Done        | Done         | Not started | Not started | Not started
 monitor                     | Not started | Not started | Not started  | Not started | Not started | Not started
