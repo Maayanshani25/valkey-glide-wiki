@@ -187,7 +187,7 @@ hrandfield                  | In progress | Not started | Not started  | Not sta
 lpos                        | Not started | Not started | Not started  | Not started | Not started | Not started
 geopos                      | Not started | Not started | Not started  | Not started | Not started | Not started
 xautoclaim                  | Not started | Not started | Not started  | Not started | Not started | Not started
-zmscore                     | Not started | Not started | Done         | Not started | Not started | Not started
+zmscore                     | In Progress | Not started | Done         | Not started | Not started | Not started
 bitop                       | Not started | Not started | Not started  | Not started | Not started | Not started
 lastsave                    | Not started | Not started | In Progress  | Not started | Not started | Not started
 geosearch                   | Not started | Not started | Not started  | Not started | Not started | Not started
