@@ -179,7 +179,7 @@ bitcount                    | Not started | Not started | Not started  | Not sta
 sdiffstore                  | Not started | Not started | Done         | Not started | Not started | Not started
 touch                       | Not started | Not started | Not started  | Not started | Not started | Not started
 smismember                  | Not started | Not started | Done         | Not started | Not started | Not started
-zremrangebylex              | In Progress | Not started | Done         | Not started | Not started | Not started
+zremrangebylex              | Done        | Not started | Done         | Not started | Not started | Not started
 zrevrangebylex              | Not started | Not started | Not started  | Not started | Not started | Not started
 lpushx                      | Done        | Not started | Done         | Not started | Not started | Not started
 copy                        | Not started | Not started | Not started  | Not started | Not started | Not started
