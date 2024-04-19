@@ -227,3 +227,4 @@ bzmpop                      | Not started | Not started | In Progress  | Not sta
 lcs                         | Not started | Not started | Not started  | Not started | Not started | Not started 
 pfselftest                  | Not started | Not started | Not started  | Not started | Not started | Not started 
 xsetid                      | Not started | Not started | Not started  | Not started | Not started | Not started
+lolwut                      | Not started | Not started | In Progress  | Not started | Not started | Not started
