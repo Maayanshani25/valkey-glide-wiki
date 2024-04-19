@@ -17,7 +17,7 @@ client ID                   | Done        | Done        | Done         | Not sta
 multi                       | Done        | Done        | Done         | Not started | Not started | Not started
 exec                        | Done        | Done        | Done         | Not started | Not started | Not started
 CLIENT GETNAME              | Done        | Done        | Done         | Not started | Not started | Not started
-auth                        | Done, API not required | Done, API not required | Not started | Not started | Not started  | Not started
+auth                        | Done, API not required | Done, API not required | Done, API not required | Not started | Not started  | Not started
 set                         | Done        | Done        | Done         | Not started | Not started | Not started
 mset                        | Done        | Done        | Done         | Not started | Not started | Not started
 mget                        | Done        | Done        | Done         | Not started | Not started | Not started
@@ -183,7 +183,7 @@ sdiffstore                  | Not started | Not started | Done         | Not sta
 touch                       | Not started | Not started | Not started  | Not started | Not started | Not started
 smismember                  | Not started | Not started | Done         | Not started | Not started | Not started
 zremrangebylex              | Done        | Not started | Done         | Not started | Not started | Not started
-zrevrangebylex              | Not started | Not started | Not started  | Not started | Not started | Not started
+zrevrangebylex              | deprecated  | deprecated  | deprecated   | Not started | Not started | Not started
 lpushx                      | Done        | Not started | Done         | Not started | Not started | Not started
 copy                        | Not started | Not started | Not started  | Not started | Not started | Not started
 hrandfield                  | In progress | Not started | Not started  | Not started | Not started | Not started
