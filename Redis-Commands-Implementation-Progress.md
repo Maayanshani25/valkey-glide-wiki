@@ -192,7 +192,7 @@ bitop                       | Not started | Not started | Not started  | Not sta
 lastsave                    | Not started | Not started | Done         | Not started | Not started | Not started
 geosearch                   | Not started | Not started | Not started  | Not started | Not started | Not started
 function                    | Not started | Not started | Not started  | Not started | Not started | Not started
-zlexcount                   | In Progress | Not started | Done         | Not started | Not started | Not started
+zlexcount                   | Done        | Not started | Done         | Not started | Not started | Not started
 zrandmember                 | Not started | Not started | Not started  | Not started | Not started | Not started
 replicaof                   | Not started | Not started | Not started  | Not started | Not started | Not started
 bitfield_ro                 | Not started | Not started | Not started  | Not started | Not started | Not started
