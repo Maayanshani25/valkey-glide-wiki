@@ -175,8 +175,8 @@ sdiff                       | Not started | Not started | In Progress  | Not sta
 setrange                    | Not started | Not started | Done         | Not started | Not started | Not started
 sinterstore                 | Not started | Not started | Done         | Not started | Not started | Not started
 zpopmax                     | Done        | Done        | Done         | Not started | Not started | Not started
-georadius_ro                | Not started | Not started | Not started  | Not started | Not started | Not started
-georadius                   | Not started | Not started | Not started  | Not started | Not started | Not started
+georadius_ro                | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated 
+georadius                   | Deprecated  | Deprecated  | Deprecated   |  Deprecated |  Deprecated | Deprecated  
 pfmerge                     | Not started | Not started | Done         | Not started | Not started | Not started
 bitcount                    | Not started | Not started | Not started  | Not started | Not started | Not started
 sdiffstore                  | Not started | Not started | Done         | Not started | Not started | Not started
@@ -188,12 +188,12 @@ lpushx                      | Done        | Not started | Done         | Not sta
 copy                        | Not started | Not started | Not started  | Not started | Not started | Not started
 hrandfield                  | In progress | Not started | Not started  | Not started | Not started | Not started
 lpos                        | Not started | Not started | Not started  | Not started | Not started | Not started
-geopos                      | Not started | Not started | Not started  | Not started | Not started | Not started
+geopos                      | In progress | Not started | Not started  | Not started | Not started | Not started
 xautoclaim                  | Not started | Not started | Not started  | Not started | Not started | Not started
 zmscore                     | In Progress | Not started | Done         | Not started | Not started | Not started
 bitop                       | Not started | Not started | Not started  | Not started | Not started | Not started
 lastsave                    | Not started | Not started | Done         | Not started | Not started | Not started
-geosearch                   | Not started | Not started | Not started  | Not started | Not started | Not started
+geosearch                   | In progress | Not started | Not started  | Not started | Not started | Not started
 function                    | Not started | Not started | Not started  | Not started | Not started | Not started
 zlexcount                   | Done        | Not started | Done         | Not started | Not started | Not started
 zrandmember                 | Not started | Not started | Not started  | Not started | Not started | Not started
@@ -207,17 +207,17 @@ bitpos                      | Not started | Not started | Not started  | Not sta
 substr                      | Not started | Not started | Not started  | Not started | Not started | Not started 
 zdiff                       | Not started | Not started | Done         | Not started | Not started | Not started
 zrangestore                 | Not started | Not started | Done         | Not started | Not started | Not started
-geodist                     | Not started | Not started | Not started  | Not started | Not started | Not started 
-georadiusbymember           | Not started | Not started | Not started  | Not started | Not started | Not started 
+geodist                     | In progress | Not started | Not started  | Not started | Not started | Not started 
+georadiusbymember           | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated  
 bzpopmax                    | Not started | Not started | In Progress  | Not started | Not started | Not started 
 zinter                      | Not started | Not started | Not started  | Not started | Not started | Not started 
-georadiusbymember_ro        | Not started | Not started | Not started  | Not started | Not started | Not started 
+georadiusbymember_ro        | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated  
 sunsubscribe                | Not started | Not started | Not started  | Not started | Not started | Not started
 zunion                      | Not started | Not started | Not started  | Not started | Not started | Not started
 sort_ro                     | Not started | Not started | Not started  | Not started | Not started | Not started
 fcall_ro                    | Not started | Not started | Not started  | Not started | Not started | Not started
 lmpop                       | Not started | Not started | Not started  | Not started | Not started | Not started
-geosearchstore              | Not started | Not started | Not started  | Not started | Not started | Not started 
+geosearchstore              | In progress | Not started | Not started  | Not started | Not started | Not started 
 sync                        | Not started | Not started | Not started  | Not started | Not started | Not started 
 bgrewriteaof                | Not started | Not started | Not started  | Not started | Not started | Not started 
 debug                       | Not started | Not started | Not started  | Not started | Not started | Not started 
