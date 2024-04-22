@@ -224,7 +224,7 @@ debug                       | Not started | Not started | Not started  | Not sta
 migrate                     | Not started | Not started | Not started  | Not started | Not started | Not started 
 save                        | Not started | Not started | In Progress  | Not started | Not started | Not started 
 shutdown                    | Not started | Not started | Not started  | Not started | Not started | Not started 
-zintercard                  | Not started | Not started | Not started  | Not started | Not started | Not started 
+zintercard                  | Not started | Not started | In Progress  | Not started | Not started | Not started 
 zmpop                       | Not started | Not started | Not started  | Not started | Not started | Not started 
 bzmpop                      | Not started | Not started | In Progress  | Not started | Not started | Not started 
 lcs                         | Not started | Not started | Not started  | Not started | Not started | Not started 
