@@ -103,7 +103,7 @@ dbsize                      | Done        | Not started | Not started  | Not sta
 zrevrange                   | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 hscan                       | Not started | Not started | Not started  | Not started | Not started | Not started
 unwatch                     | Not started | Not started | Not started  | Not started | Not started | Not started
-hkeys                       | Done        | Not started | Not started  | Not started | Not started | Not started
+hkeys                       | Done        | Not started | In progress  | Not started | Not started | Not started
 brpoplpush                  | Not started | Not started | Not started  | Not started | Not started | Not started
 quit                        | Not started | Not started | Not started  | Not started | Not started | Not started
 xread                       | Not started | Done        | Not started  | Not started | Not started | Not started
