@@ -139,7 +139,7 @@ xack                        | Not started | Not started | Not started  | Not sta
 object encoding             | Not started | Not started | Done         | Not started | Not started | Not started
 object freq                 | Not started | Not started | In progress  | Not started | Not started | Not started
 object idletime             | Not started | Not started | Not started  | Not started | Not started | Not started
-object refcount             | Not started | Not started | Not started  | Not started | Not started | Not started
+object refcount             | Not started | Not started | Done         | Not started | Not started | Not started
 spublish                    | In progress | Not started | Not started  | Not started | Not started | Not started
 ssubscribe                  | In progress | Not started | Not started  | Not started | Not started | Not started
 zrevrank                    | Not started | Not started | Not started  | Not started | Not started | Not started
@@ -171,7 +171,7 @@ geoadd                      | Done        | Not started | Not started  | Not sta
 zrangebylex                 | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 getbit                      | Not started | Not started | Not started  | Not started | Not started | Not started
 msetnx                      | Not started | Not started | Not started  | Not started | Not started | Not started
-sdiff                       | Not started | Not started | In Progress  | Not started | Not started | Not started
+sdiff                       | Not started | Not started | Done         | Not started | Not started | Not started
 setrange                    | Not started | Not started | Done         | Not started | Not started | Not started
 sinterstore                 | Not started | Not started | Done         | Not started | Not started | Not started
 zpopmax                     | Done        | Done        | Done         | Not started | Not started | Not started
@@ -230,4 +230,4 @@ bzmpop                      | Not started | Not started | In Progress  | Not sta
 lcs                         | Not started | Not started | Not started  | Not started | Not started | Not started 
 pfselftest                  | Not started | Not started | Not started  | Not started | Not started | Not started 
 xsetid                      | Not started | Not started | Not started  | Not started | Not started | Not started
-lolwut                      | Not started | Not started | In Progress  | Not started | Not started | Not started
+lolwut                      | Not started | Not started | Done         | Not started | Not started | Not started
