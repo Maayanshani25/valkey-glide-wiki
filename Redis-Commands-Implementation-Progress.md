@@ -188,7 +188,7 @@ lpushx                      | Done        | Not started | Done         | Not sta
 copy                        | Not started | Not started | Not started  | Not started | Not started | Not started
 hrandfield                  | In progress | Not started | Not started  | Not started | Not started | Not started
 lpos                        | Not started | Not started | Not started  | Not started | Not started | Not started
-geopos                      | In progress | Not started | Not started  | Not started | Not started | Not started
+geopos                      | Done        | Not started | Not started  | Not started | Not started | Not started
 xautoclaim                  | Not started | Not started | Not started  | Not started | Not started | Not started
 zmscore                     | In Progress | Not started | Done         | Not started | Not started | Not started
 bitop                       | Not started | Not started | Not started  | Not started | Not started | Not started
@@ -207,7 +207,7 @@ bitpos                      | Not started | Not started | Not started  | Not sta
 substr                      | Not started | Not started | Not started  | Not started | Not started | Not started 
 zdiff                       | Not started | Not started | Done         | Not started | Not started | Not started
 zrangestore                 | Not started | Not started | Done         | Not started | Not started | Not started
-geodist                     | In progress | Not started | Not started  | Not started | Not started | Not started 
+geodist                     | Done        | Not started | Not started  | Not started | Not started | Not started 
 georadiusbymember           | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated  
 bzpopmax                    | Not started | Not started | In Progress  | Not started | Not started | Not started 
 zinter                      | Not started | Not started | Not started  | Not started | Not started | Not started 
