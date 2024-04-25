@@ -132,7 +132,7 @@ spop                        | Done        | Done        | Not started  | Not sta
 restore                     | Not started | Not started | Not started  | Not started | Not started | Not started
 hvals                       | Done        | Done        | Done         | Not started | Not started | Not started
 sinter                      | Not started | Not started | Done         | Not started | Not started | Not started
-xtrim                       | In progress | Done        | In progress  | Not started | Not started | Not started
+xtrim                       | In progress | Done        | Done         | Not started | Not started | Not started
 zrank                       | Done        | Not started | Done         | Not started | Not started | Not started
 zinterstore                 | In progress | Not started | In Progress  | Not started | Not started | Not started
 xack                        | Not started | Not started | Not started  | Not started | Not started | Not started
