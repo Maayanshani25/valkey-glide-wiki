@@ -137,7 +137,7 @@ zrank                       | Done        | Not started | Done         | Not sta
 zinterstore                 | In progress | Not started | In Progress  | Not started | Not started | Not started
 xack                        | Not started | Not started | Not started  | Not started | Not started | Not started
 object encoding             | Not started | Not started | Done         | Not started | Not started | Not started
-object freq                 | Not started | Not started | In progress  | Not started | Not started | Not started
+object freq                 | Not started | Not started | Done         | Not started | Not started | Not started
 object idletime             | Not started | Not started | Done         | Not started | Not started | Not started
 object refcount             | Not started | Not started | Done         | Not started | Not started | Not started
 spublish                    | In progress | Not started | Not started  | Not started | Not started | Not started
