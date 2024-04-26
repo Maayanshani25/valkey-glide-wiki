@@ -106,7 +106,7 @@ unwatch                     | Not started | Not started | Not started  | Not sta
 hkeys                       | Done        | Not started | In progress  | Not started | Not started | Not started
 brpoplpush                  | Not started | Not started | Not started  | Not started | Not started | Not started
 quit                        | Not started | Not started | Not started  | Not started | Not started | Not started
-xread                       | Not started | Done        | Not started  | Not started | Not started | Not started
+xread                       | Not started | Done        | In Progress  | Not started | Not started | Not started
 readwrite                   | Not started | Not started | Not started  | Not started | Not started | Not started
 zcount                      | Done        | Done        | Done         | Not started | Not started | Not started
 time                        | Done        | Done        | Done         | Not started | Not started | Not started
@@ -159,7 +159,7 @@ smove                       | Not started | Not started | Done         | Not sta
 xrange                      | Not started | Not started | Not started  | Not started | Not started | Not started
 xdel                        | Not started | Not started | Not started  | Not started | Not started | Not started
 linsert                     | Done        | Not started | Done         | Not started | Not started | Not started
-xlen                        | Not started | Not started | In progress  | Not started | Not started | Not started
+xlen                        | Not started | Not started | In Progress  | Not started | Not started | Not started
 xpending                    | Not started | Not started | Not started  | Not started | Not started | Not started
 discard                     | Not started | Not started | Not started  | Not started | Not started | Not started
 sunionstore                 | Not started | Not started | Done         | Not started | Not started | Not started
