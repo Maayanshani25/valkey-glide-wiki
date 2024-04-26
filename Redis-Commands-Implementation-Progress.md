@@ -205,7 +205,7 @@ move                        | Not started | Not started | Not started  | Not sta
 geohash                     | Done        | Not started | Not started  | Not started | Not started | Not started
 bitpos                      | Not started | Not started | Not started  | Not started | Not started | Not started
 substr                      | Not started | Not started | Not started  | Not started | Not started | Not started 
-zdiff                       | Not started | Not started | Done         | Not started | Not started | Not started
+zdiff                       | In Progress | Not started | Done         | Not started | Not started | Not started
 zrangestore                 | Not started | Not started | Done         | Not started | Not started | Not started
 geodist                     | Done        | Not started | Not started  | Not started | Not started | Not started 
 georadiusbymember           | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated  
