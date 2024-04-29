@@ -123,7 +123,7 @@ blpop                       | In progress | In progress | Done         | Not sta
 zscan                       | Not started | Not started | Not started  | Not started | Not started | Not started
 xreadgroup                  | Not started | Not started | Not started  | Not started | Not started | Not started
 pfadd                       | Done        | Done        | Done         | Not started | Not started | Not started
-renamenx                    | Not started | Not started | In progress  | Not started | Not started | Not started
+renamenx                    | Not started | Not started | Done         | Not started | Not started | Not started
 zpopmin                     | Done        | Done        | Done         | Not started | Not started | Not started
 monitor                     | Not started | Not started | Not started  | Not started | Not started | Not started
 pfcount                     | Not started | Not started | Done         | Not started | Not started | Not started
@@ -142,10 +142,10 @@ object idletime             | Not started | Not started | Done         | Not sta
 object refcount             | Not started | Not started | Done         | Not started | Not started | Not started
 spublish                    | In progress | Not started | Not started  | Not started | Not started | Not started
 ssubscribe                  | In progress | Not started | Not started  | Not started | Not started | Not started
-zrevrank                    | Not started | Not started | In Progress  | Not started | Not started | Not started
+zrevrank                    | Not started | Not started | Done         | Not started | Not started | Not started
 pubsub                      | In progress | Not started | Not started  | Not started | Not started | Not started
 sunion                      | Not started | Not started | Not started  | Not started | Not started | Not started
-zunionstore                 | Not started | Not started |In Progress  | Not started | Not started | Not started
+zunionstore                 | Not started | Not started | In Progress  | Not started | Not started | Not started
 lset                        | Not started | Not started | Not started  | Not started | Not started | Not started
 xclaim                      | Not started | Not started | Not started  | Not started | Not started | Not started
 bitfield                    | Not started | Not started | Not started  | Not started | Not started | Not started
