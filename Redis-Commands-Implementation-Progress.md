@@ -103,7 +103,7 @@ dbsize                      | Done        | Not started | Not started  | Not sta
 zrevrange                   | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 hscan                       | Not started | Not started | Not started  | Not started | Not started | Not started
 unwatch                     | Not started | Not started | Not started  | Not started | Not started | Not started
-hkeys                       | Done        | Not started | In progress  | Not started | Not started | Not started
+hkeys                       | Done        | Not started | Done         | Not started | Not started | Not started
 brpoplpush                  | Not started | Not started | Not started  | Not started | Not started | Not started
 quit                        | Not started | Not started | Not started  | Not started | Not started | Not started
 xread                       | Not started | Done        | In Progress  | Not started | Not started | Not started
@@ -180,7 +180,7 @@ georadius                   | Deprecated  | Deprecated  | Deprecated   |  Deprec
 pfmerge                     | Not started | Not started | Done         | Not started | Not started | Not started
 bitcount                    | Not started | Not started | Not started  | Not started | Not started | Not started
 sdiffstore                  | Not started | Not started | Done         | Not started | Not started | Not started
-touch                       | Not started | Not started | Not started  | Not started | Not started | Not started
+touch                       | Not started | Not started | Done         | Not started | Not started | Not started
 smismember                  | Not started | Not started | Done         | Not started | Not started | Not started
 zremrangebylex              | Done        | Not started | Done         | Not started | Not started | Not started
 zrevrangebylex              | deprecated  | deprecated  | deprecated   | Not started | Not started | Not started
