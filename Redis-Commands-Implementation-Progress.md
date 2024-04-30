@@ -134,7 +134,7 @@ hvals                       | Done        | Done        | Done         | Not sta
 sinter                      | Not started | Not started | Done         | Not started | Not started | Not started
 xtrim                       | In progress | Done        | Done         | Not started | Not started | Not started
 zrank                       | Done        | Not started | Done         | Not started | Not started | Not started
-zinterstore                 | In progress | Not started | In Progress  | Not started | Not started | Not started
+zinterstore                 | In progress | Not started | Done         | Not started | Not started | Not started
 xack                        | Not started | Not started | Not started  | Not started | Not started | Not started
 object encoding             | Not started | Not started | Done         | Not started | Not started | Not started
 object freq                 | Not started | Not started | Done         | Not started | Not started | Not started
