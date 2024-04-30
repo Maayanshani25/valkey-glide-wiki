@@ -206,7 +206,7 @@ geohash                     | Done        | Not started | Not started  | Not sta
 bitpos                      | Not started | Not started | Not started  | Not started | Not started | Not started
 substr                      | Not started | Not started | Not started  | Not started | Not started | Not started 
 zdiff                       | In Progress | Not started | Done         | Not started | Not started | Not started
-zrangestore                 | Not started | Not started | Done         | Not started | Not started | Not started
+zrangestore                 | In Progress | Not started | Done         | Not started | Not started | Not started
 geodist                     | Done        | Not started | Not started  | Not started | Not started | Not started 
 georadiusbymember           | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated  
 bzpopmax                    | Not started | Not started | Done         | Not started | Not started | Not started 
