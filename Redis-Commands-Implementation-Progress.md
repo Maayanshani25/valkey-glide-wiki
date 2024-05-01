@@ -54,24 +54,11 @@ lrange                      | Done        | Done        | Done         | Not sta
 unlink                      | Done        | Done        | Done         | Not started | Not started | Not started
 ttl                         | Done        | Done        | Done         | Not started | Not started | Not started
 publish                     | In progress | In progress | Not started  | Not started | Not started | Not started
-CLIENT KILL                 | Not started | Not started | Not started  | Not started | Not started | Not started
-CLIENT LIST                 | Not started | Not started | Not started  | Not started | Not started | Not started
-CLIENT PAUSE                | Not started | Not started | Not started  | Not started | Not started | Not started
-client INFO                 | Not started | Not started | Not started  | Not started | Not started | Not started
-CLIENT SETNAME              | Not started | Not started | Not started  | Not started | Not started | Not started
-replconf                    | Not started | Not started | Not started  | Not started | Not started | Not started
-CLIENT REPLY                | Not started | Not started | Not started  | Not started | Not started | Not started
-CLIENT UNBLOCK              | Not started | Not started | Not started  | Not started | Not started | Not started
-CLIENT UNPAUSE              | Not started | Not started | Not started  | Not started | Not started | Not started
-psync                       | Not started | Not started | Not started  | Not started | Not started | Not started
-cluster                     | Not started | Not started | Not started  | Not started | Not started | Not started
 subscribe                   | In progress | Not started | Not started  | Not started | Not started | Not started
 eval                        | Done        | Done        | Done         | Not started | Not started | Not started
 evalsha                     | Done        | Done        | Done         | Not started | Not started | Not started
 script                      | Done        | Done        | Done         | Not started | Not started | Not started
 scan                        | Not started | Not started | Not started  | Not started | Not started | Not started
-keys                        | Not started | Not started | Not started  | Not started | Not started | Not started
-slowlog                     | Not started | Not started | Not started  | Not started | Not started | Not started
 zrangebyscore               | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 zremrangebyscore            | Done        | Done        | Done         | Not started | Not started | Not started
 setnx                       | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
@@ -221,8 +208,6 @@ geosearchstore              | In progress | Not started | Not started  | Not sta
 sync                        | Not started | Not started | Not started  | Not started | Not started | Not started 
 bgrewriteaof                | Not started | Not started | Not started  | Not started | Not started | Not started 
 debug                       | Not started | Not started | Not started  | Not started | Not started | Not started 
-migrate                     | Not started | Not started | Not started  | Not started | Not started | Not started 
-save                        | Not started | Not started | Paused       | Not started | Not started | Not started 
 shutdown                    | Not started | Not started | Not started  | Not started | Not started | Not started 
 zintercard                  | Not started | Not started | In Progress  | Not started | Not started | Not started 
 zmpop                       | Not started | Not started | Not started  | Not started | Not started | Not started 
