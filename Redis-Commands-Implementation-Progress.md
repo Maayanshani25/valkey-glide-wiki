@@ -173,7 +173,7 @@ zremrangebylex              | Done        | Not started | Done         | Not sta
 zrevrangebylex              | deprecated  | deprecated  | deprecated   | Not started | Not started | Not started
 lpushx                      | Done        | Not started | Done         | Not started | Not started | Not started
 copy                        | Not started | Not started | Not started  | Not started | Not started | Not started
-hrandfield                  | In progress | Not started | Not started  | Not started | Not started | Not started
+hrandfield                  | Done        | Not started | Not started  | Not started | Not started | Not started
 lpos                        | Not started | Not started | Not started  | Not started | Not started | Not started
 geopos                      | Done        | Not started | In Progress  | Not started | Not started | Not started
 xautoclaim                  | Not started | Not started | Not started  | Not started | Not started | Not started
