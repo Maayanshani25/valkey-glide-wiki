@@ -200,7 +200,7 @@ bzpopmax                    | Not started | Not started | Done         | Not sta
 zinter                      | Not started | Not started | Not started  | Not started | Not started | Not started 
 georadiusbymember_ro        | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated  
 sunsubscribe                | Not started | Not started | Not started  | Not started | Not started | Not started
-zunion                      | Not started | Not started | In Progress  | Not started | Not started | Not started
+zunion                      | Not started | Not started | Done         | Not started | Not started | Not started
 sort_ro                     | Not started | Not started | Not started  | Not started | Not started | Not started
 fcall_ro                    | Not started | Not started | Not started  | Not started | Not started | Not started
 lmpop                       | Not started | Not started | Not started  | Not started | Not started | Not started
