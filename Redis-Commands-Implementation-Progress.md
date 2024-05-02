@@ -204,14 +204,8 @@ sort_ro                     | Not started | Not started | Not started  | Not sta
 fcall_ro                    | Not started | Not started | Not started  | Not started | Not started | Not started
 lmpop                       | Not started | Not started | Not started  | Not started | Not started | Not started
 geosearchstore              | In progress | Not started | Not started  | Not started | Not started | Not started 
-sync                        | Not started | Not started | Not started  | Not started | Not started | Not started 
-bgrewriteaof                | Not started | Not started | Not started  | Not started | Not started | Not started 
-debug                       | Not started | Not started | Not started  | Not started | Not started | Not started 
-shutdown                    | Not started | Not started | Not started  | Not started | Not started | Not started 
 zintercard                  | Not started | Not started | In Progress  | Not started | Not started | Not started 
 zmpop                       | Not started | Not started | Not started  | Not started | Not started | Not started 
 bzmpop                      | Not started | Not started | In Progress  | Not started | Not started | Not started 
 lcs                         | Not started | Not started | Not started  | Not started | Not started | Not started 
-pfselftest                  | Not started | Not started | Not started  | Not started | Not started | Not started 
-xsetid                      | Not started | Not started | Not started  | Not started | Not started | Not started
 lolwut                      | Not started | Not started | Done         | Not started | Not started | Not started
