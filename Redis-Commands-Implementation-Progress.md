@@ -78,7 +78,7 @@ psetex                      | deprecated  | deprecated  | deprecated   | depreca
 flushall                    | Not started | Not started | In progress  | Not started | Not started | Not started
 sscan                       | Not started | Not started | Not started  | Not started | Not started | Not started
 flushdb                     | Not started | Not started | Not started  | Not started | Not started | Not started
-xadd                        | In progress | Done        | Done         | Not started | Not started | Not started
+xadd                        | Done        | Done        | Done         | Not started | Not started | Not started
 hlen                        | Done        | Done        | Done         | Not started | Not started | Not started
 hsetnx                      | Done        | Done        | Done         | Not started | Not started | Not started
 zrevrangebyscore            | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
@@ -118,7 +118,7 @@ spop                        | Done        | Done        | Not started  | Not sta
 restore                     | Not started | Not started | Not started  | Not started | Not started | Not started
 hvals                       | Done        | Done        | Done         | Not started | Not started | Not started
 sinter                      | Not started | Not started | Done         | Not started | Not started | Not started
-xtrim                       | In progress | Done        | Done         | Not started | Not started | Not started
+xtrim                       | Done        | Done        | Done         | Not started | Not started | Not started
 zrank                       | Done        | Not started | Done         | Not started | Not started | Not started
 zinterstore                 | In progress | Not started | Done         | Not started | Not started | Not started
 xack                        | Not started | Not started | Not started  | Not started | Not started | Not started
