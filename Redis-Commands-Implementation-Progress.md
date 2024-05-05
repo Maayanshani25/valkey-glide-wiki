@@ -111,7 +111,6 @@ xreadgroup                  | Not started | Not started | Not started  | Not sta
 pfadd                       | Done        | Done        | Done         | Not started | Not started | Not started
 renamenx                    | Not started | Not started | Done         | Not started | Not started | Not started
 zpopmin                     | Done        | Done        | Done         | Not started | Not started | Not started
-monitor                     | Not started | Not started | Not started  | Not started | Not started | Not started
 pfcount                     | Not started | Not started | Done         | Not started | Not started | Not started
 wait                        | Not started | Not started | Not started  | Not started | Not started | Not started
 spop                        | Done        | Done        | Not started  | Not started | Not started | Not started
