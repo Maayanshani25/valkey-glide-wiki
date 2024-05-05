@@ -104,7 +104,7 @@ persist                     | Done        | Done        | Done         | Not sta
 strlen                      | Done        | Done        | Done         | Not started | Not started | Not started
 zincrby                     | Not started | Not started | Not started  | Not started | Not started | Not started
 xgroup                      | Not started | Not started | Not started  | Not started | Not started | Not started
-getset                      | Not started | Not started | Not started  | Not started | Not started | Not started
+getset                      | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated 
 blpop                       | In progress | In progress | Done         | Not started | Not started | Not started
 zscan                       | Not started | Not started | Not started  | Not started | Not started | Not started
 xreadgroup                  | Not started | Not started | Not started  | Not started | Not started | Not started
