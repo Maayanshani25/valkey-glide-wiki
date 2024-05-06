@@ -105,7 +105,7 @@ strlen                      | Done        | Done        | Done         | Not sta
 zincrby                     | Not started | Not started | Not started  | Not started | Not started | Not started
 xgroup                      | Not started | Not started | Not started  | Not started | Not started | Not started
 getset                      | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated 
-blpop                       | In progress | In progress | Done         | Not started | Not started | Not started
+blpop                       | In progress | Done        | Done         | Not started | Not started | Not started
 zscan                       | Not started | Not started | Not started  | Not started | Not started | Not started
 xreadgroup                  | Not started | Not started | Not started  | Not started | Not started | Not started
 pfadd                       | Done        | Done        | Done         | Not started | Not started | Not started
@@ -191,7 +191,7 @@ geohash                     | Done        | Not started | Not started  | Not sta
 bitpos                      | Not started | Not started | Not started  | Not started | Not started | Not started
 substr                      | Not started | Not started | Not started  | Not started | Not started | Not started 
 zdiff                       | In Progress | Not started | Done         | Not started | Not started | Not started
-zrangestore                 | In Progress | Not started | Done         | Not started | Not started | Not started
+zrangestore                 | Done        | Not started | Done         | Not started | Not started | Not started
 geodist                     | Done        | Not started | Not started  | Not started | Not started | Not started 
 georadiusbymember           | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated  
 bzpopmax                    | Not started | Not started | Done         | Not started | Not started | Not started 
