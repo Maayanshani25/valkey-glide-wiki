@@ -149,7 +149,7 @@ xpending                    | Not started | Not started | Not started  | Not sta
 discard                     | Not started | Not started | Not started  | Not started | Not started | Not started
 sunionstore                 | Not started | Not started | Done         | Not started | Not started | Not started
 xrevrange                   | Not started | Not started | Not started  | Not started | Not started | Not started
-bzpopmin                    | Not started | Not started | In Progress  | Not started | Not started | Not started
+bzpopmin                    | Not started | Not started | Done         | Not started | Not started | Not started
 rpushx                      | Done        | Not started | Done         | Not started | Not started | Not started
 sort                        | Not started | Not started | Not started  | Not started | Not started | Not started
 geoadd                      | Done        | Not started | Done         | Not started | Not started | Not started
