@@ -72,7 +72,7 @@ psubscribe                  | In progress | In progress | Not started  | Not sta
 zcard                       | Done        | Done        | Done         | Not started | Not started | Not started
 type                        | Done        | Done        | Done         | Not started | Not started | Not started
 echo                        | Done        | Done        | Done         | Not started | Not started | Not started
-brpop                       | In progress | Done        | Done         | Not started | Not started | Not started
+brpop                       | Done        | Done        | Done         | Not started | Not started | Not started
 zremrangebyrank             | Not started | Done        | Done         | Not started | Not started | Not started
 psetex                      | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 flushall                    | Not started | Not started | In progress  | Not started | Not started | Not started
@@ -105,7 +105,7 @@ strlen                      | Done        | Done        | Done         | Not sta
 zincrby                     | Not started | Not started | Not started  | Not started | Not started | Not started
 xgroup                      | Not started | Not started | Not started  | Not started | Not started | Not started
 getset                      | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated 
-blpop                       | In progress | Done        | Done         | Not started | Not started | Not started
+blpop                       | Done        | Done        | Done         | Not started | Not started | Not started
 zscan                       | Not started | Not started | Not started  | Not started | Not started | Not started
 xreadgroup                  | Not started | Not started | Not started  | Not started | Not started | Not started
 pfadd                       | Done        | Done        | Done         | Not started | Not started | Not started
