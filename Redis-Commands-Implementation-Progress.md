@@ -192,7 +192,7 @@ bitpos                      | Not started | Not started | Not started  | Not sta
 substr                      | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated  
 zdiff                       | In Progress | Not started | Done         | Not started | Not started | Not started
 zrangestore                 | Done        | Not started | Done         | Not started | Not started | Not started
-geodist                     | Done        | Not started | Not started  | Not started | Not started | Not started 
+geodist                     | Done        | Not started | In Progress  | Not started | Not started | Not started 
 georadiusbymember           | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated  
 bzpopmax                    | In Progress | Not started | Done         | Not started | Not started | Not started 
 zinter                      | Not started | Not started | Not started  | Not started | Not started | Not started 
