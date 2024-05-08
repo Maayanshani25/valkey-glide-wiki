@@ -189,7 +189,7 @@ zdiffstore                  | In Progress | Not started | Done         | Not sta
 move                        | Not started | Not started | Not started  | Not started | Not started | Not started
 geohash                     | Done        | Not started | Not started  | Not started | Not started | Not started
 bitpos                      | Not started | Not started | Not started  | Not started | Not started | Not started
-substr                      | Not started | Not started | Not started  | Not started | Not started | Not started 
+substr                      | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated  
 zdiff                       | In Progress | Not started | Done         | Not started | Not started | Not started
 zrangestore                 | Done        | Not started | Done         | Not started | Not started | Not started
 geodist                     | Done        | Not started | Not started  | Not started | Not started | Not started 
