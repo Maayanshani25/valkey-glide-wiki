@@ -163,7 +163,7 @@ zpopmax                     | Done        | Done        | Done         | Not sta
 georadius_ro                | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated 
 georadius                   | Deprecated  | Deprecated  | Deprecated   |  Deprecated |  Deprecated | Deprecated  
 pfmerge                     | Not started | Not started | Done         | Not started | Not started | Not started
-bitcount                    | Not started | Not started | In Progress  | Not started | Not started | Not started
+bitcount                    | Not started | Not started | Done         | Not started | Not started | Not started
 sdiffstore                  | Not started | Not started | Done         | Not started | Not started | Not started
 touch                       | Not started | Not started | Done         | Not started | Not started | Not started
 smismember                  | Not started | Not started | Done         | Not started | Not started | Not started
