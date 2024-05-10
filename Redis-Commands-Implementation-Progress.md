@@ -181,7 +181,7 @@ lastsave                    | Not started | Not started | Done         | Not sta
 geosearch                   | In progress | Not started | Not started  | Not started | Not started | Not started
 function                    | Not started | Not started | Not started  | Not started | Not started | Not started
 zlexcount                   | Done        | Not started | Done         | Not started | Not started | Not started
-zrandmember                 | Not started | Not started | In Progress  | Not started | Not started | Not started
+zrandmember                 | Not started | Not started | Done         | Not started | Not started | Not started
 replicaof                   | Not started | Not started | Not started  | Not started | Not started | Not started
 bitfield_ro                 | Not started | Not started | Not started  | Not started | Not started | Not started
 fcall                       | Not started | Not started | Not started  | Not started | Not started | Not started
