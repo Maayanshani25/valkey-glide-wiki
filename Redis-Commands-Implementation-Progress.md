@@ -187,7 +187,7 @@ bitfield_ro                 | Not started | Not started | Not started  | Not sta
 fcall                       | Not started | Not started | Not started  | Not started | Not started | Not started
 zdiffstore                  | Done        | Not started | Done         | Not started | Not started | Not started
 move                        | Not started | Not started | Not started  | Not started | Not started | Not started
-geohash                     | Done        | Not started | Not started  | Not started | Not started | Not started
+geohash                     | Done        | Not started | In Progress  | Not started | Not started | Not started
 bitpos                      | Not started | Not started | In Progress  | Not started | Not started | Not started
 substr                      | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated  
 zdiff                       | In Progress | Not started | Done         | Not started | Not started | Not started
