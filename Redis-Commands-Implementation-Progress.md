@@ -203,7 +203,7 @@ sort_ro                     | Not started | Not started | Not started  | Not sta
 fcall_ro                    | Not started | Not started | Not started  | Not started | Not started | Not started
 lmpop                       | Not started | Not started | Not started  | Not started | Not started | Not started
 geosearchstore              | In progress | Not started | Not started  | Not started | Not started | Not started 
-zintercard                  | Not started | Not started | In Progress  | Not started | Not started | Not started 
+zintercard                  | In Progress | Not started | In Progress  | Not started | Not started | Not started 
 zmpop                       | Not started | Not started | Not started  | Not started | Not started | Not started 
 bzmpop                      | In Progress | Not started | Done         | Not started | Not started | Not started 
 lcs                         | In progress | Not started | Not started  | Not started | Not started | Not started 
