@@ -204,7 +204,7 @@ fcall_ro                    | Not started | Not started | Not started  | Not sta
 lmpop                       | Not started | Not started | Not started  | Not started | Not started | Not started
 geosearchstore              | In progress | Not started | Not started  | Not started | Not started | Not started 
 zintercard                  | In Progress | Not started | In Progress  | Not started | Not started | Not started 
-zmpop                       | Not started | Not started | Not started  | Not started | Not started | Not started 
+zmpop                       | In Progress | Not started | Not started  | Not started | Not started | Not started 
 bzmpop                      | In Progress | Not started | Done         | Not started | Not started | Not started 
 lcs                         | In progress | Not started | Not started  | Not started | Not started | Not started 
 lolwut                      | Not started | Not started | Done         | Not started | Not started | Not started
