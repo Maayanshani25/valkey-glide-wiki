@@ -179,7 +179,14 @@ zmscore                     | Done        | Not started | Done         | Not sta
 bitop                       | Not started | Not started | Not started  | Not started | Not started | Not started
 lastsave                    | Not started | Not started | Done         | Not started | Not started | Not started
 geosearch                   | In progress | Not started | Not started  | Not started | Not started | Not started
-function                    | Not started | Not started | Not started  | Not started | Not started | Not started
+function delete             | Not started | Not started | Not started  | Not started | Not started | Not started
+function dump               | Not started | Not started | Not started  | Not started | Not started | Not started
+function flush              | Not started | Not started | Not started  | Not started | Not started | Not started
+function kill               | Not started | Not started | Not started  | Not started | Not started | Not started
+function list               | Not started | Not started | In progress  | Not started | Not started | Not started
+function load               | Not started | Not started | In progress  | Not started | Not started | Not started
+function restore            | Not started | Not started | Not started  | Not started | Not started | Not started
+function stats              | Not started | Not started | Not started  | Not started | Not started | Not started
 zlexcount                   | Done        | Not started | Done         | Not started | Not started | Not started
 zrandmember                 | In Progress | Not started | Done         | Not started | Not started | Not started
 replicaof                   | Not started | Not started | Not started  | Not started | Not started | Not started
