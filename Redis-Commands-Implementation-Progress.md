@@ -58,11 +58,11 @@ subscribe                   | In progress | Not started | Not started  | Not sta
 eval                        | Done        | Done        | Done         | Not started | Not started | Not started
 evalsha                     | Done        | Done        | Done         | Not started | Not started | Not started
 script                      | Done        | Done        | Done         | Not started | Not started | Not started
-scan                        | Not started | Not started | Not started  | Not started | Not started | Not started
+scan                        | In progress | Not started | Not started  | Not started | Not started | Not started
 zrangebyscore               | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 zremrangebyscore            | Done        | Done        | Done         | Not started | Not started | Not started
 setnx                       | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
-bgsave                      | Not started | Not started | Paused       | Not started | Not started | Not started
+bgsave                      | Not needed  | Not needed  | Not needed   | Not started | Not started | Not started
 setex                       | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 zadd                        | Done        | Done        | Done         | Not started | Not started | Not started
 zrem                        | Done        | Done        | Done         | Not started | Not started | Not started
