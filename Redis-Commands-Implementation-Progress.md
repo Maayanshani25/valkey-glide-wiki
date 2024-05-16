@@ -133,7 +133,7 @@ sunion                      | Not started | Not started | Not started  | Not sta
 zunionstore                 | Done        | Not started | Done         | Not started | Not started | Not started
 lset                        | Not started | Not started | Not started  | Not started | Not started | Not started
 xclaim                      | Not started | Not started | Not started  | Not started | Not started | Not started
-bitfield                    | Not started | Not started | Not started  | Not started | Not started | Not started
+bitfield                    | Not started | Not started | In progress  | Not started | Not started | Not started
 getrange                    | Not started | Not started | Done         | Not started | Not started | Not started
 randomkey                   | Not started | Not started | Not started  | Not started | Not started | Not started
 srandmember                 | Not started | Not started | Not started  | Not started | Not started | Not started
@@ -190,7 +190,7 @@ function stats              | Not started | Not started | Not started  | Not sta
 zlexcount                   | Done        | Not started | Done         | Not started | Not started | Not started
 zrandmember                 | In Progress | Not started | Done         | Not started | Not started | Not started
 replicaof                   | Not started | Not started | Not started  | Not started | Not started | Not started
-bitfield_ro                 | Not started | Not started | Not started  | Not started | Not started | Not started
+bitfield_ro                 | Not started | Not started |In Progress  | Not started | Not started | Not started
 fcall                       | Not started | Not started | Not started  | Not started | Not started | Not started
 zdiffstore                  | Done        | Not started | Done         | Not started | Not started | Not started
 move                        | Not started | Not started | Not started  | Not started | Not started | Not started
