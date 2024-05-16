@@ -188,7 +188,7 @@ function load               | Not started | Not started | In progress  | Not sta
 function restore            | Not started | Not started | Not started  | Not started | Not started | Not started
 function stats              | Not started | Not started | Not started  | Not started | Not started | Not started
 zlexcount                   | Done        | Not started | Done         | Not started | Not started | Not started
-zrandmember                 | In Progress | Not started | Done         | Not started | Not started | Not started
+zrandmember                 | Done        | Not started | Done         | Not started | Not started | Not started
 replicaof                   | Not started | Not started | Not started  | Not started | Not started | Not started
 bitfield_ro                 | Not started | Not started |In Progress  | Not started | Not started | Not started
 fcall                       | Not started | Not started | Not started  | Not started | Not started | Not started
