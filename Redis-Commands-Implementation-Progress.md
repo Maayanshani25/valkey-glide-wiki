@@ -161,7 +161,7 @@ setrange                    | Not started | Not started | Done         | Not sta
 sinterstore                 | Not started | Not started | Done         | Not started | Not started | Not started
 zpopmax                     | Done        | Done        | Done         | Not started | Not started | Not started
 georadius_ro                | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated 
-georadius                   | Deprecated  | Deprecated  | Deprecated   |  Deprecated |  Deprecated | Deprecated  
+georadius                   | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated  
 pfmerge                     | Not started | Not started | Done         | Not started | Not started | Not started
 bitcount                    | Not started | Not started | Done         | Not started | Not started | Not started
 sdiffstore                  | Not started | Not started | Done         | Not started | Not started | Not started
@@ -190,11 +190,11 @@ function stats              | Not started | Not started | Not started  | Not sta
 zlexcount                   | Done        | Not started | Done         | Not started | Not started | Not started
 zrandmember                 | Done        | Not started | Done         | Not started | Not started | Not started
 replicaof                   | Not started | Not started | Not started  | Not started | Not started | Not started
-bitfield_ro                 | Not started | Not started |In Progress  | Not started | Not started | Not started
+bitfield_ro                 | Not started | Not started | In Progress  | Not started | Not started | Not started
 fcall                       | Not started | Not started | Not started  | Not started | Not started | Not started
 zdiffstore                  | Done        | Not started | Done         | Not started | Not started | Not started
 move                        | Not started | Not started | Not started  | Not started | Not started | Not started
-geohash                     | Done        | Not started | In Progress  | Not started | Not started | Not started
+geohash                     | Done        | Not started | Done         | Not started | Not started | Not started
 bitpos                      | Not started | Not started | In Progress  | Not started | Not started | Not started
 substr                      | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated  
 zdiff                       | Done        | Not started | Done         | Not started | Not started | Not started
@@ -213,16 +213,16 @@ geosearchstore              | In progress | Not started | Not started  | Not sta
 zintercard                  | In Progress | Not started | In Progress  | Not started | Not started | Not started 
 zmpop                       | In Progress | Not started | Not started  | Not started | Not started | Not started 
 bzmpop                      | In Progress | Not started | Done         | Not started | Not started | Not started 
-lcs                         | In progress | Not started |In Progress  | Not started | Not started | Not started 
+lcs                         | In progress | Not started | In Progress  | Not started | Not started | Not started 
 lolwut                      | Not started | Not started | Done         | Not started | Not started | Not started
-expiretime                  | Not started | Not started | Not started | Not started | Not started | Not started
-pexpiretime                 | Not started | Not started | Not started | Not started | Not started | Not started
-hstrlen                     | Not started | Not started | Not started | Not started | Not started | Not started
-blmove                      | Not started | Not started | Not started | Not started | Not started | Not started
-blmpop                      | Not started | Not started | Not started | Not started | Not started | Not started
-brpop                       | Not started | Not started | Not started | Not started | Not started | Not started
-brpoplpush                  | Not started | Not started | Not started | Not started | Not started | Not started
-lmove                       | Not started | Not started | Not started | Not started | Not started | Not started
-sintercard                  | Not started | Not started | Not started | Not started | Not started | Not started
-getdel                      | Not started | Not started | Not started | Not started | Not started | Not started
-getex                       | Not started | Not started | Not started | Not started | Not started | Not started
+expiretime                  | Not started | Not started | Not started  | Not started | Not started | Not started
+pexpiretime                 | Not started | Not started | Not started  | Not started | Not started | Not started
+hstrlen                     | Not started | Not started | Not started  | Not started | Not started | Not started
+blmove                      | Not started | Not started | Not started  | Not started | Not started | Not started
+blmpop                      | Not started | Not started | Not started  | Not started | Not started | Not started
+brpop                       | Not started | Not started | Not started  | Not started | Not started | Not started
+brpoplpush                  | Not started | Not started | Not started  | Not started | Not started | Not started
+lmove                       | Not started | Not started | Not started  | Not started | Not started | Not started
+sintercard                  | Not started | Not started | Not started  | Not started | Not started | Not started
+getdel                      | Not started | Not started | Not started  | Not started | Not started | Not started
+getex                       | Not started | Not started | Not started  | Not started | Not started | Not started
