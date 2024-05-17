@@ -202,7 +202,7 @@ zrangestore                 | Done        | Not started | Done         | Not sta
 geodist                     | Done        | Not started | Done         | Not started | Not started | Not started 
 georadiusbymember           | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated  
 bzpopmax                    | Done        | Not started | Done         | Not started | Not started | Not started 
-zinter                      | Not started | Not started | Not started  | Not started | Not started | Not started 
+zinter                      | Not started | Not started | In Progress  | Not started | Not started | Not started 
 georadiusbymember_ro        | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated  
 sunsubscribe                | Not started | Not started | Not started  | Not started | Not started | Not started
 zunion                      | Not started | Not started | Done         | Not started | Not started | Not started
@@ -210,8 +210,8 @@ sort_ro                     | Not started | Not started | Not started  | Not sta
 fcall_ro                    | Not started | Not started | Not started  | Not started | Not started | Not started
 lmpop                       | Not started | Not started | In progress  | Not started | Not started | Not started
 geosearchstore              | In progress | Not started | Not started  | Not started | Not started | Not started 
-zintercard                  | Done        | Not started | In Progress  | Not started | Not started | Not started 
-zmpop                       | In Progress | Not started | Not started  | Not started | Not started | Not started 
+zintercard                  | Done        | Not started | Done         | Not started | Not started | Not started 
+zmpop                       | Done        | Not started | In Progress  | Not started | Not started | Not started 
 bzmpop                      | Done        | Not started | Done         | Not started | Not started | Not started 
 lcs                         | In progress | Not started | In Progress  | Not started | Not started | Not started 
 lolwut                      | Not started | Not started | Done         | Not started | Not started | Not started
