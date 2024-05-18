@@ -147,7 +147,7 @@ linsert                     | Done        | Not started | Done         | Not sta
 xlen                        | Not started | Not started | In Progress  | Not started | Not started | Not started
 xpending                    | Not started | Not started | Not started  | Not started | Not started | Not started
 discard                     | Not started | Not started | Not started  | Not started | Not started | Not started
-sunionstore                 | In Progress | Not started | Done         | Not started | Not started | Not started
+sunionstore                 | Done        | Not started | Done         | Not started | Not started | Not started
 xrevrange                   | Not started | Not started | Not started  | Not started | Not started | Not started
 bzpopmin                    | Done        | Not started | Done         | Not started | Not started | Not started
 rpushx                      | Done        | Not started | Done         | Not started | Not started | Not started
