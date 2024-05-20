@@ -91,7 +91,6 @@ zrevrange                   | deprecated  | deprecated  | deprecated   | depreca
 hscan                       | Not started | Not started | Not started  | Not started | Not started | Not started
 unwatch                     | Not started | Not started | Not started  | Not started | Not started | Not started
 hkeys                       | Done        | Not started | Done         | Not started | Not started | Not started
-brpoplpush                  | Not started | Not started | Not started  | Not started | Not started | Not started
 xread                       | Not started | Done        | In Progress  | Not started | Not started | Not started
 readwrite                   | Not started | Not started | Not started  | Not started | Not started | Not started
 zcount                      | Done        | Done        | Done         | Not started | Not started | Not started
