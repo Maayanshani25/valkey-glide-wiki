@@ -221,7 +221,7 @@ hstrlen                     | Not started | Not started | Not started  | Not sta
 blmove                      | Not started | Not started | Not started  | Not started | Not started | Not started
 blmpop                      | Not started | Not started | Not started  | Not started | Not started | Not started
 brpop                       | Not started | Not started | Not started  | Not started | Not started | Not started
-brpoplpush                  | Not started | Not started | Not started  | Not started | Not started | Not started
+brpoplpush                  | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 lmove                       | Not started | Not started | Not started  | Not started | Not started | Not started
 sintercard                  | Not started | Not started | Not started  | Not started | Not started | Not started
 getdel                      | Not started | Not started | Not started  | Not started | Not started | Not started
