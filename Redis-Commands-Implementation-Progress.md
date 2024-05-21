@@ -170,7 +170,7 @@ zremrangebylex              | Done        | Not started | Done         | Not sta
 zrevrangebylex              | deprecated  | deprecated  | deprecated   | Not started | Not started | Not started
 lpushx                      | Done        | Not started | Done         | Not started | Not started | Not started
 copy                        | Not started | Not started | Not started  | Not started | Not started | Not started
-hrandfield                  | Done        | Not started | Not started  | Not started | Not started | Not started
+hrandfield                  | Done        | Not started | In progress  | Not started | Not started | Not started
 lpos                        | Not started | Not started | Not started  | Not started | Not started | Not started
 geopos                      | Done        | Not started | Done         | Not started | Not started | Not started
 xautoclaim                  | Not started | Not started | Not started  | Not started | Not started | Not started
@@ -178,7 +178,7 @@ zmscore                     | Done        | Not started | Done         | Not sta
 bitop                       | Not started | Not started | Not started  | Not started | Not started | Not started
 lastsave                    | Not started | Not started | Done         | Not started | Not started | Not started
 geosearch                   | In progress | Not started | In progress  | Not started | Not started | Not started
-function delete             | Not started | Not started | Not started  | Not started | Not started | Not started
+function delete             | Not started | Not started | In progress  | Not started | Not started | Not started
 function dump               | Not started | Not started | Not started  | Not started | Not started | Not started
 function flush              | Not started | Not started | In progress  | Not started | Not started | Not started
 function kill               | Not started | Not started | Not started  | Not started | Not started | Not started
