@@ -153,7 +153,7 @@ rpushx                      | Done        | Not started | Done         | Not sta
 sort                        | In Progress | Not started | Not started  | Not started | Not started | Not started
 geoadd                      | Done        | Not started | Done         | Not started | Not started | Not started
 zrangebylex                 | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
-getbit                      | Not started | Not started | In Progress  | Not started | Not started | Not started
+getbit                      | Not started | Not started | Done         | Not started | Not started | Not started
 msetnx                      | Not started | Not started | Not started  | Not started | Not started | Not started
 sdiff                       | In Progress | Not started | Done         | Not started | Not started | Not started
 setrange                    | Not started | Not started | Done         | Not started | Not started | Not started
@@ -216,7 +216,7 @@ lcs                         | In progress | Not started | In Progress  | Not sta
 lolwut                      | Not started | Not started | Done         | Not started | Not started | Not started
 expiretime                  | Not started | Not started | Not started  | Not started | Not started | Not started
 pexpiretime                 | Not started | Not started | Not started  | Not started | Not started | Not started
-hstrlen                     | Not started | Not started | Not started  | Not started | Not started | Not started
+hstrlen                     | Not started | Not started | In Progress  | Not started | Not started | Not started
 blmove                      | Not started | Not started | Not started  | Not started | Not started | Not started
 blmpop                      | Not started | Not started | Not started  | Not started | Not started | Not started
 brpop                       | Not started | Not started | Not started  | Not started | Not started | Not started
