@@ -201,7 +201,7 @@ zrangestore                 | Done        | Not started | Done         | Not sta
 geodist                     | Done        | Not started | Done         | Not started | Not started | Not started 
 georadiusbymember           | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated  
 bzpopmax                    | Done        | Not started | Done         | Not started | Not started | Not started 
-zinter                      | Not started | Not started | In Progress  | Not started | Not started | Not started 
+zinter                      | Not started | Not started | Done         | Not started | Not started | Not started 
 georadiusbymember_ro        | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated  
 sunsubscribe                | Not started | Not started | Not started  | Not started | Not started | Not started
 zunion                      | Not started | Not started | Done         | Not started | Not started | Not started
