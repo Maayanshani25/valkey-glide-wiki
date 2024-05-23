@@ -95,7 +95,7 @@ xread                       | Not started | Done        | In Progress  | Not sta
 readwrite                   | Not started | Not started | Not started  | Not started | Not started | Not started
 zcount                      | Done        | Done        | Done         | Not started | Not started | Not started
 time                        | Done        | Done        | Done         | Not started | Not started | Not started
-append                      | Done        | In progress | In progress  | Not started | Not started | Not started
+append                      | Done        | In progress | Done         | Not started | Not started | Not started
 rename                      | Done        | Done        | In progress  | Not started | Not started | Not started
 lindex                      | Done        | Done        | Done         | Not started | Not started | Not started
 punsubscribe                | In progress | In progress | Not started  | Not started | Not started | Not started
@@ -115,7 +115,7 @@ wait                        | Not started | Not started | Not started  | Not sta
 spop                        | Done        | Done        | Not started  | Not started | Not started | Not started
 restore                     | Not started | Not started | In progress  | Not started | Not started | Not started
 hvals                       | Done        | Done        | Done         | Not started | Not started | Not started
-sinter                      | In Progress | Not started | Done         | Not started | Not started | Not started
+sinter                      | Done        | Not started | Done         | Not started | Not started | Not started
 xtrim                       | Done        | Done        | Done         | Not started | Not started | Not started
 zrank                       | Done        | Not started | Done         | Not started | Not started | Not started
 zinterstore                 | Done        | Not started | Done         | Not started | Not started | Not started
@@ -138,7 +138,7 @@ randomkey                   | Not started | Not started | Not started  | Not sta
 srandmember                 | Not started | Not started | Not started  | Not started | Not started | Not started
 dump                        | Not started | Not started | In progress  | Not started | Not started | Not started
 xinfo                       | Not started | Not started | Not started  | Not started | Not started | Not started
-setbit                      | Not started | Not started | In Progress  | Not started | Not started | Not started
+setbit                      | Not started | Not started | Done         | Not started | Not started | Not started
 smove                       | Done        | In Progress | Done         | Not started | Not started | Not started
 xrange                      | Not started | Not started | Not started  | Not started | Not started | Not started
 xdel                        | Not started | Not started | Not started  | Not started | Not started | Not started
@@ -155,7 +155,7 @@ geoadd                      | Done        | Not started | Done         | Not sta
 zrangebylex                 | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 getbit                      | Not started | Not started | Done         | Not started | Not started | Not started
 msetnx                      | Not started | Not started | Not started  | Not started | Not started | Not started
-sdiff                       | In Progress | Not started | Done         | Not started | Not started | Not started
+sdiff                       | Done        | Not started | Done         | Not started | Not started | Not started
 setrange                    | Not started | Not started | Done         | Not started | Not started | Not started
 sinterstore                 | Not started | Not started | Done         | Not started | Not started | Not started
 zpopmax                     | Done        | Done        | Done         | Not started | Not started | Not started
