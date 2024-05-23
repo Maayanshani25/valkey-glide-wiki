@@ -145,7 +145,7 @@ xdel                        | Not started | Not started | Not started  | Not sta
 linsert                     | Done        | Not started | Done         | Not started | Not started | Not started
 xlen                        | Not started | Not started | In Progress  | Not started | Not started | Not started
 xpending                    | Not started | Not started | Not started  | Not started | Not started | Not started
-discard                     | Not started | Not started | Not started  | Not started | Not started | Not started
+discard                     | API not required | API not required | API not required | Not started | Not started | Not started
 sunionstore                 | Done        | Not started | Done         | Not started | Not started | Not started
 xrevrange                   | Not started | Not started | Not started  | Not started | Not started | Not started
 bzpopmin                    | Done        | Not started | Done         | Not started | Not started | Not started
