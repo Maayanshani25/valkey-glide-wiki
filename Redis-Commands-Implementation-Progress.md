@@ -156,7 +156,7 @@ zrangebylex                 | deprecated  | deprecated  | deprecated   | depreca
 getbit                      | Not started | Not started | Done         | Not started | Not started | Not started
 msetnx                      | Not started | Not started | Not started  | Not started | Not started | Not started
 sdiff                       | Done        | Not started | Done         | Not started | Not started | Not started
-setrange                    | In progress | Not started | Done         | Not started | Not started | Not started
+setrange                    | Done        | Not started | Done         | Not started | Not started | Not started
 sinterstore                 | Done        | Not started | Done         | Not started | Not started | Not started
 zpopmax                     | Done        | Done        | Done         | Not started | Not started | Not started
 georadius_ro                | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated 
@@ -207,7 +207,7 @@ sunsubscribe                | Not started | Not started | Not started  | Not sta
 zunion                      | Not started | Not started | Done         | Not started | Not started | Not started
 sort_ro                     | Not started | Not started | Not started  | Not started | Not started | Not started
 fcall_ro                    | Not started | Not started | Not started  | Not started | Not started | Not started
-lmpop                       | Not started | Not started | In progress  | Not started | Not started | Not started
+lmpop                       | Not started | Not started | Done         | Not started | Not started | Not started
 geosearchstore              | In progress | Not started | Not started  | Not started | Not started | Not started 
 zintercard                  | Done        | Not started | Done         | Not started | Not started | Not started 
 zmpop                       | Done        | Not started | Done         | Not started | Not started | Not started 
