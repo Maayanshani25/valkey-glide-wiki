@@ -156,7 +156,7 @@ zrangebylex                 | deprecated  | deprecated  | deprecated   | depreca
 getbit                      | Not started | Not started | Done         | Not started | Not started | Not started
 msetnx                      | Not started | Not started | Not started  | Not started | Not started | Not started
 sdiff                       | Done        | Not started | Done         | Not started | Not started | Not started
-setrange                    | Not started | Not started | Done         | Not started | Not started | Not started
+setrange                    | In progress | Not started | Done         | Not started | Not started | Not started
 sinterstore                 | In progress | Not started | Done         | Not started | Not started | Not started
 zpopmax                     | Done        | Done        | Done         | Not started | Not started | Not started
 georadius_ro                | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated 
