@@ -130,7 +130,7 @@ zrevrank                    | Not started | Not started | Done         | Not sta
 pubsub                      | In progress | Not started | Not started  | Not started | Not started | Not started
 sunion                      | Not started | Not started | Not started  | Not started | Not started | Not started
 zunionstore                 | Done        | Not started | Done         | Not started | Not started | Not started
-lset                        | Not started | Not started | Not started  | Not started | Not started | Not started
+lset                        | Not started | Not started | In progress  | Not started | Not started | Not started
 xclaim                      | Not started | Not started | Not started  | Not started | Not started | Not started
 bitfield                    | Not started | Not started | In progress  | Not started | Not started | Not started
 getrange                    | Not started | Not started | Done         | Not started | Not started | Not started
@@ -218,7 +218,7 @@ expiretime                  | Not started | Not started | Not started  | Not sta
 pexpiretime                 | Not started | Not started | Not started  | Not started | Not started | Not started
 hstrlen                     | Not started | Not started | In Progress  | Not started | Not started | Not started
 blmove                      | Not started | Not started | Not started  | Not started | Not started | Not started
-blmpop                      | Not started | Not started | Not started  | Not started | Not started | Not started
+blmpop                      | Not started | Not started | In progress  | Not started | Not started | Not started
 brpop                       | Not started | Not started | Not started  | Not started | Not started | Not started
 brpoplpush                  | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 lmove                       | Not started | Not started | Not started  | Not started | Not started | Not started
