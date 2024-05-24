@@ -181,7 +181,7 @@ geosearch                   | In progress | Not started | In progress  | Not sta
 function delete             | Not started | Not started | In progress  | Not started | Not started | Not started
 function dump               | Not started | Not started | Not started  | Not started | Not started | Not started
 function flush              | Not started | Not started | In progress  | Not started | Not started | Not started
-function kill               | Not started | Not started | Not started  | Not started | Not started | Not started
+function kill               | Not started | Not started | In Progress  | Not started | Not started | Not started
 function list               | Not started | Not started | In progress  | Not started | Not started | Not started
 function load               | Not started | Not started | Done         | Not started | Not started | Not started
 function restore            | Not started | Not started | Not started  | Not started | Not started | Not started
@@ -190,7 +190,7 @@ zlexcount                   | Done        | Not started | Done         | Not sta
 zrandmember                 | Done        | Not started | Done         | Not started | Not started | Not started
 replicaof                   | Not started | Not started | Not started  | Not started | Not started | Not started
 bitfield_ro                 | Not started | Not started | In Progress  | Not started | Not started | Not started
-fcall                       | Not started | Not started | Not started  | Not started | Not started | Not started
+fcall                       | Not started | Not started | In Progress  | Not started | Not started | Not started
 zdiffstore                  | Done        | Not started | Done         | Not started | Not started | Not started
 move                        | Not started | Not started | Not started  | Not started | Not started | Not started
 geohash                     | Done        | Not started | Done         | Not started | Not started | Not started
