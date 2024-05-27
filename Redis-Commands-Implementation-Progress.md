@@ -123,7 +123,7 @@ xack                        | Not started | Not started | Not started  | Not sta
 object encoding             | Done        | Not started | Done         | Not started | Not started | Not started
 object freq                 | Done        | Not started | Done         | Not started | Not started | Not started
 object idletime             | In progress | Not started | Done         | Not started | Not started | Not started
-object refcount             | Not started | Not started | Done         | Not started | Not started | Not started
+object refcount             | In progress | Not started | Done         | Not started | Not started | Not started
 spublish                    | In progress | Not started | Not started  | Not started | Not started | Not started
 ssubscribe                  | In progress | Not started | Not started  | Not started | Not started | Not started
 zrevrank                    | Not started | Not started | Done         | Not started | Not started | Not started
