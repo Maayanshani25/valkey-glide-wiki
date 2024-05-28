@@ -92,7 +92,7 @@ hscan                       | Not started | Not started | Not started  | Not sta
 unwatch                     | Not started | Not started | Not started  | Not started | Not started | Not started
 hkeys                       | Done        | Not started | Done         | Not started | Not started | Not started
 xread                       | Not started | Done        | In Progress  | Not started | Not started | Not started
-readwrite                   | Not started | Not started | Not started  | Not started | Not started | Not started
+readwrite                   | Done, API not required | Done, API not required | Done, API not required  | Not started | Not started | Not started
 zcount                      | Done        | Done        | Done         | Not started | Not started | Not started
 time                        | Done        | Done        | Done         | Not started | Not started | Not started
 append                      | Done        | In progress | Done         | Not started | Not started | Not started
