@@ -90,7 +90,7 @@ dbsize                      | Done        | Not started | Not started  | Not sta
 zrevrange                   | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 hscan                       | Not started | Not started | Not started  | Not started | Not started | Not started
 unwatch                     | Not started | Not started | Not started  | Not started | Not started | Not started
-hkeys                       | Done        | Not started | Done         | Not started | Not started | Not started
+hkeys                       | Done        | In progress | Done         | Not started | Not started | Not started
 xread                       | Not started | Done        | In Progress  | Not started | Not started | Not started
 readwrite                   | Done, API not required | Done, API not required | Done, API not required  | Not started | Not started | Not started
 zcount                      | Done        | Done        | Done         | Not started | Not started | Not started
@@ -118,7 +118,7 @@ hvals                       | Done        | Done        | Done         | Not sta
 sinter                      | Done        | Not started | Done         | Not started | Not started | Not started
 xtrim                       | Done        | Done        | Done         | Not started | Not started | Not started
 zrank                       | Done        | Not started | Done         | Not started | Not started | Not started
-zinterstore                 | Done        | Not started | Done         | Not started | Not started | Not started
+zinterstore                 | Done        | In progress | Done         | Not started | Not started | Not started
 xack                        | Not started | Not started | Not started  | Not started | Not started | Not started
 object encoding             | Done        | Not started | Done         | Not started | Not started | Not started
 object freq                 | Done        | Not started | Done         | Not started | Not started | Not started
@@ -139,7 +139,7 @@ srandmember                 | Not started | Not started | Not started  | Not sta
 dump                        | Not started | Not started | In progress  | Not started | Not started | Not started
 xinfo                       | Not started | Not started | Not started  | Not started | Not started | Not started
 setbit                      | Not started | Not started | Done         | Not started | Not started | Not started
-smove                       | Done        | In Progress | Done         | Not started | Not started | Not started
+smove                       | Done        | Done | Done         | Not started | Not started | Not started
 xrange                      | Not started | Not started | Not started  | Not started | Not started | Not started
 xdel                        | Not started | Not started | In progress  | Not started | Not started | Not started
 linsert                     | Done        | Not started | Done         | Not started | Not started | Not started
