@@ -130,7 +130,7 @@ zrevrank                    | Not started | Not started | Done         | Not sta
 pubsub                      | In progress | Not started | Not started  | Not started | Not started | Not started
 sunion                      | Not started | Not started | Not started  | Not started | Not started | Not started
 zunionstore                 | Done        | Not started | Done         | Not started | Not started | Not started
-lset                        | Not started | Not started | In progress  | Not started | Not started | Not started
+lset                        | Not started | Not started | Done         | Not started | Not started | Not started
 xclaim                      | Not started | Not started | Not started  | Not started | Not started | Not started
 bitfield                    | Not started | Not started | In progress  | Not started | Not started | Not started
 getrange                    | Not started | Not started | Done         | Not started | Not started | Not started
