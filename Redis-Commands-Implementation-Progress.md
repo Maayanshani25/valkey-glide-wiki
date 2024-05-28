@@ -188,7 +188,7 @@ function restore            | Not started | Not started | Not started  | Not sta
 function stats              | Not started | Not started | Not started  | Not started | Not started | Not started
 zlexcount                   | Done        | Not started | Done         | Not started | Not started | Not started
 zrandmember                 | Done        | Not started | Done         | Not started | Not started | Not started
-replicaof                   | Not started | Not started | Not started  | Not started | Not started | Not started
+replicaof                   | Done, API not required | Done, API not required | Done, API not required   | Not started | Not started | Not started
 bitfield_ro                 | Not started | Not started | In Progress  | Not started | Not started | Not started
 fcall                       | Not started | Not started | In Progress  | Not started | Not started | Not started
 zdiffstore                  | Done        | Not started | Done         | Not started | Not started | Not started
