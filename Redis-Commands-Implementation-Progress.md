@@ -140,7 +140,7 @@ dump                        | Not started | Not started | In progress  | Not sta
 xinfo                       | Not started | Not started | Not started  | Not started | Not started | Not started
 setbit                      | Not started | Not started | Done         | Not started | Not started | Not started
 smove                       | Done        | Done        | Done         | Not started | Not started | Not started
-xrange                      | Not started | Not started | Not started  | Not started | Not started | Not started
+xrange                      | Not started | Not started | In Progress  | Not started | Not started | Not started
 xdel                        | Not started | Not started | Done         | Not started | Not started | Not started
 linsert                     | Done        | Not started | Done         | Not started | Not started | Not started
 xlen                        | Not started | Not started | Done         | Not started | Not started | Not started
@@ -217,7 +217,7 @@ lolwut                      | Not started | Not started | Done         | Not sta
 expiretime                  | Not started | Not started | In Progress  | Not started | Not started | Not started
 pexpiretime                 | Not started | Not started | In Progress  | Not started | Not started | Not started
 hstrlen                     | Not started | Not started | Done         | Not started | Not started | Not started
-blmove                      | Not started | Not started | Not started  | Not started | Not started | Not started
+blmove                      | Not started | Not started | In Progress  | Not started | Not started | Not started
 blmpop                      | Not started | Not started | Done         | Not started | Not started | Not started
 brpoplpush                  | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 lmove                       | Not started | Not started | Done         | Not started | Not started | Not started
