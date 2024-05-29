@@ -108,7 +108,7 @@ blpop                       | Done        | Done        | Done         | Not sta
 zscan                       | Not started | Not started | Not started  | Not started | Not started | Not started
 xreadgroup                  | Not started | Not started | Not started  | Not started | Not started | Not started
 pfadd                       | Done        | Done        | Done         | Not started | Not started | Not started
-renamenx                    | In progress | Not started | Done         | Not started | Not started | Not started
+renamenx                    | In progress | Done        | Done         | Not started | Not started | Not started
 zpopmin                     | Done        | Done        | Done         | Not started | Not started | Not started
 pfcount                     | In progress | Not started | Done         | Not started | Not started | Not started
 wait                        | Not started | Not started | Not started  | Not started | Not started | Not started
