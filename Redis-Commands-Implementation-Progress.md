@@ -143,7 +143,7 @@ smove                       | Done        | Done        | Done         | Not sta
 xrange                      | Not started | Not started | In Progress  | Not started | Not started | Not started
 xdel                        | Not started | Not started | Done         | Not started | Not started | Not started
 linsert                     | Done        | Not started | Done         | Not started | Not started | Not started
-xlen                        | Not started | Not started | Done         | Not started | Not started | Not started
+xlen                        | In progress | Not started | Done         | Not started | Not started | Not started
 xpending                    | Not started | Not started | Not started  | Not started | Not started | Not started
 discard                     | API not required | API not required | API not required | Not started | Not started | Not started
 sunionstore                 | Done        | Not started | Done         | Not started | Not started | Not started
