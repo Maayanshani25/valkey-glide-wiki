@@ -134,7 +134,7 @@ lset                        | Not started | Not started | Done         | Not sta
 xclaim                      | Not started | Not started | Not started  | Not started | Not started | Not started
 bitfield                    | Not started | Not started | In progress  | Not started | Not started | Not started
 getrange                    | Not started | Not started | Done         | Not started | Not started | Not started
-randomkey                   | Not started | Not started | Not started  | Not started | Not started | Not started
+randomkey                   | Not started | Not started | In Progress  | Not started | Not started | Not started
 srandmember                 | Not started | Not started | In Progress  | Not started | Not started | Not started
 dump                        | Not started | Not started | In progress  | Not started | Not started | Not started
 xinfo                       | Not started | Not started | Not started  | Not started | Not started | Not started
