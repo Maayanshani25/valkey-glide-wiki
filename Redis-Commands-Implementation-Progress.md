@@ -115,7 +115,7 @@ wait                        | Not started | Not started | Not started  | Not sta
 spop                        | Done        | Done        | Not started  | Not started | Not started | Not started
 restore                     | Not started | Not started | In progress  | Not started | Not started | Not started
 hvals                       | Done        | Done        | Done         | Not started | Not started | Not started
-sinter                      | Done        | Not started | Done         | Not started | Not started | Not started
+sinter                      | Done        | In Progress | Done         | Not started | Not started | Not started
 xtrim                       | Done        | Done        | Done         | Not started | Not started | Not started
 zrank                       | Done        | Not started | Done         | Not started | Not started | Not started
 zinterstore                 | Done        | In progress | Done         | Not started | Not started | Not started
