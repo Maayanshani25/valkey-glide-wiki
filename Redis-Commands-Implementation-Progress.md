@@ -201,10 +201,10 @@ zrangestore                 | Done        | Not started | Done         | Not sta
 geodist                     | Done        | Not started | Done         | Not started | Not started | Not started 
 georadiusbymember           | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated  
 bzpopmax                    | Done        | Not started | Done         | Not started | Not started | Not started 
-zinter                      | In progress | Not started | Done         | Not started | Not started | Not started 
+zinter                      | Done        | Not started | Done         | Not started | Not started | Not started 
 georadiusbymember_ro        | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated  
 sunsubscribe                | Not started | Not started | Not started  | Not started | Not started | Not started
-zunion                      | In progress | Not started | Done         | Not started | Not started | Not started
+zunion                      | Done        | Not started | Done         | Not started | Not started | Not started
 sort_ro                     | Will be handled as part of SORT | Will be handled as part of SORT | Will be handled as part of SORT  | Not started | Not started | Not started
 fcall_ro                    | Not started | Not started | In Progress  | Not started | Not started | Not started
 lmpop                       | Not started | Not started | Done         | Not started | Not started | Not started
@@ -222,5 +222,5 @@ blmpop                      | Not started | Not started | Done         | Not sta
 brpoplpush                  | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 lmove                       | Not started | Not started | Done         | Not started | Not started | Not started
 sintercard                  | In progress | Not started | Not started  | Not started | Not started | Not started
-getdel                      | In progress | Not started | Done         | Not started | Not started | Not started
+getdel                      | Done        | Not started | Done         | Not started | Not started | Not started
 getex                       | Not started | Not started | Not started  | Not started | Not started | Not started
