@@ -221,6 +221,6 @@ blmove                      | Not started | Not started | Done         | Not sta
 blmpop                      | Not started | Not started | Done         | Not started | Not started | Not started
 brpoplpush                  | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 lmove                       | Not started | Not started | Done         | Not started | Not started | Not started
-sintercard                  | Done        | Not started | In Progress  | Not started | Not started | Not started
+sintercard                  | Done        | Not started | Done         | Not started | Not started | Not started
 getdel                      | Done        | Not started | Done         | Not started | Not started | Not started
 getex                       | Not started | Not started | Not started  | Not started | Not started | Not started
