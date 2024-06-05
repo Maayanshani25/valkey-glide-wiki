@@ -112,7 +112,7 @@ renamenx                    | Done        | Done        | Done         | Not sta
 zpopmin                     | Done        | Done        | Done         | Not started | Not started | Not started
 pfcount                     | Done        | Not started | Done         | Not started | Not started | Not started
 wait                        | Not started | Not started | Not started  | Not started | Not started | Not started
-spop                        | Done        | Done        | In Progress  | Not started | Not started | Not started
+spop                        | Done        | Done        | Done         | Not started | Not started | Not started
 restore                     | Not started | Not started | In progress  | Not started | Not started | Not started
 hvals                       | Done        | Done        | Done         | Not started | Not started | Not started
 sinter                      | Done        | Done        | Done         | Not started | Not started | Not started
