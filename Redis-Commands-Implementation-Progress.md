@@ -128,23 +128,23 @@ spublish                    | In progress | Not started | Not started  | Not sta
 ssubscribe                  | In progress | Not started | Not started  | Not started | Not started | Not started
 zrevrank                    | Not started | Not started | Done         | Not started | Not started | Not started
 pubsub                      | In progress | Not started | Not started  | Not started | Not started | Not started
-sunion                      | on hold.    | on hold.    | on hold.     | Not started | Not started | Not started
+sunion                      | On hold     | On hold     | On hold      | Not started | Not started | Not started
 zunionstore                 | Done        | In progress | Done         | Not started | Not started | Not started
 lset                        | Not started | Not started | Done         | Not started | Not started | Not started
-xclaim                      | on hold.    |on hold.     | on hold.     | Not started | Not started | Not started
+xclaim                      | On hold     | On hold     | On hold      | Not started | Not started | Not started
 bitfield                    | Not started | Not started | Done         | Not started | Not started | Not started
 getrange                    | Not started | Not started | Done         | Not started | Not started | Not started
 randomkey                   | Not started | Not started | In Progress  | Not started | Not started | Not started
 srandmember                 | Not started | Not started | Done         | Not started | Not started | Not started
 dump                        | Not started | Not started | In progress  | Not started | Not started | Not started
-xinfo                       | on hold     | on hold     | on hold.     | Not started | Not started | Not started
+xinfo                       | On hold     | On hold     | On hold      | Not started | Not started | Not started
 setbit                      | Not started | Not started | Done         | Not started | Not started | Not started
 smove                       | Done        | Done        | Done         | Not started | Not started | Not started
 xrange                      | Not started | Not started | Done         | Not started | Not started | Not started
 xdel                        | Not started | Not started | Done         | Not started | Not started | Not started
 linsert                     | Done        | Not started | Done         | Not started | Not started | Not started
 xlen                        | Done        | Not started | Done         | Not started | Not started | Not started
-xpending                    | on hold.    | on hold.    | On hold.     | Not started | Not started | Not started
+xpending                    | On hold     | On hold     | On hold      | Not started | Not started | Not started
 discard                     | API not required | API not required | API not required | Not started | Not started | Not started
 sunionstore                 | Done        | Not started | Done         | Not started | Not started | Not started
 xrevrange                   | Not started | Not started | In Progress  | Not started | Not started | Not started
@@ -154,7 +154,7 @@ sort                        | In Progress | Not started | Not started  | Not sta
 geoadd                      | Done        | Not started | Done         | Not started | Not started | Not started
 zrangebylex                 | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 getbit                      | Not started | Not started | Done         | Not started | Not started | Not started
-msetnx                      | on hold     | on hold     | on hold      | Not started | Not started | Not started
+msetnx                      | On hold     | On hold     | On hold      | Not started | Not started | Not started
 sdiff                       | Done        | Not started | Done         | Not started | Not started | Not started
 setrange                    | Done        | Not started | Done         | Not started | Not started | Not started
 sinterstore                 | Done        | Not started | Done         | Not started | Not started | Not started
@@ -173,7 +173,7 @@ copy                        | Not started | Not started | In Progress  | Not sta
 hrandfield                  | Done        | Not started | Done         | Not started | Not started | Not started
 lpos                        | Not started | Not started | In Progress  | Not started | Not started | Not started
 geopos                      | Done        | Not started | Done         | Not started | Not started | Not started
-xautoclaim                  | on hold     | on hold     | on hold      | Not started | Not started | Not started
+xautoclaim                  | On hold     | On hold     | On hold      | Not started | Not started | Not started
 zmscore                     | Done        | Not started | Done         | Not started | Not started | Not started
 bitop                       | Not started | Not started | Done         | Not started | Not started | Not started
 lastsave                    | Done        | Not started | Done         | Not started | Not started | Not started
@@ -223,4 +223,4 @@ brpoplpush                  | deprecated  | deprecated  | deprecated   | depreca
 lmove                       | Not started | Not started | Done         | Not started | Not started | Not started
 sintercard                  | Done        | Not started | Done         | Not started | Not started | Not started
 getdel                      | Done        | Not started | Done         | Not started | Not started | Not started
-getex                       |  on hold    | on hold     | on hold      | Not started | Not started | Not started
+getex                       | On hold     | On hold     | On hold      | Not started | Not started | Not started
