@@ -150,7 +150,7 @@ sunionstore                 | Done        | Not started | Done         | Not sta
 xrevrange                   | Not started | Not started | In Progress  | Not started | Not started | Not started
 bzpopmin                    | Done        | Not started | Done         | Not started | Not started | Not started
 rpushx                      | Done        | Not started | Done         | Not started | Not started | Not started
-sort                        | In Progress | Not started | Not started  | Not started | Not started | Not started
+sort                        | Done        | Not started | Not started  | Not started | Not started | Not started
 geoadd                      | Done        | Not started | Done         | Not started | Not started | Not started
 zrangebylex                 | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 getbit                      | Not started | Not started | Done         | Not started | Not started | Not started
