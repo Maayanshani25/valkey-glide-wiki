@@ -120,8 +120,8 @@ xtrim                       | Done        | Done        | Done         | Not sta
 zrank                       | Done        | Done | Done         | Not started | Not started | Not started
 zinterstore                 | Done        | In progress | Done         | Not started | Not started | Not started
 xack                        | Not started | In Progress | Not started  | Not started | Not started | Not started
-object encoding             | Done        | Not started | Done         | Not started | Not started | Not started
-object freq                 | Done        | Not started | Done         | Not started | Not started | Not started
+object encoding             | Done        | Done        | Done         | Not started | Not started | Not started
+object freq                 | Done        | In Progress | Done         | Not started | Not started | Not started
 object idletime             | Done        | Not started | Done         | Not started | Not started | Not started
 object refcount             | Done        | Not started | Done         | Not started | Not started | Not started
 spublish                    | In progress | Not started | Not started  | Not started | Not started | Not started
