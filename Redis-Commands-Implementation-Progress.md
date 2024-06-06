@@ -217,10 +217,10 @@ lolwut                      | Not started | Not started | Done         | Not sta
 expiretime                  | Not started | Not started | Done         | Not started | Not started | Not started
 pexpiretime                 | Not started | Not started | Done         | Not started | Not started | Not started
 hstrlen                     | Not started | Not started | Done         | Not started | Not started | Not started
-blmove                      | Not started | Not started | Done         | Not started | Not started | Not started
+blmove                      | In progress | Not started | Done         | Not started | Not started | Not started
 blmpop                      | Not started | Not started | Done         | Not started | Not started | Not started
 brpoplpush                  | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
-lmove                       | Not started | Not started | Done         | Not started | Not started | Not started
+lmove                       | In progress | Not started | Done         | Not started | Not started | Not started
 sintercard                  | Done        | Not started | Done         | Not started | Not started | Not started
 getdel                      | Done        | Not started | Done         | Not started | Not started | Not started
 getex                       | On hold     | On hold     | On hold      | Not started | Not started | Not started
