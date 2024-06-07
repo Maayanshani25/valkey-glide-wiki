@@ -209,7 +209,7 @@ sort_ro                     | Will be handled as part of SORT | Will be handled 
 fcall_ro                    | Not started | Not started | In Progress  | Not started | Not started | Not started
 lmpop                       | Not started | Not started | Done         | Not started | Not started | Not started
 geosearchstore              | In progress | Not started | Not started  | Not started | Not started | Not started 
-zintercard                  | Done        | Not started | Done         | Not started | Not started | Not started 
+zintercard                  | Done        | In Progress | Done         | Not started | Not started | Not started 
 zmpop                       | Done        | Not started | Done         | Not started | Not started | Not started 
 bzmpop                      | Done        | Not started | Done         | Not started | Not started | Not started 
 lcs                         | In progress | Not started | In Progress  | Not started | Not started | Not started 
