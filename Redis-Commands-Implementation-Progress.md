@@ -207,7 +207,7 @@ sunsubscribe                | Not started | Not started | Not started  | Not sta
 zunion                      | Done        | Not started | Done         | Not started | Not started | Not started
 sort_ro                     | In progress | Not started | Not started  | Not started | Not started | Not started
 fcall_ro                    | Not started | Not started | In Progress  | Not started | Not started | Not started
-lmpop                       | Not started | Not started | Done         | Not started | Not started | Not started
+lmpop                       | In progress | Not started | Done         | Not started | Not started | Not started
 geosearchstore              | In progress | Not started | Not started  | Not started | Not started | Not started 
 zintercard                  | Done        | In Progress | Done         | Not started | Not started | Not started 
 zmpop                       | Done        | Not started | Done         | Not started | Not started | Not started 
@@ -217,7 +217,7 @@ lolwut                      | Not started | Not started | Done         | Not sta
 expiretime                  | Not started | Not started | Done         | Not started | Not started | Not started
 pexpiretime                 | Not started | Not started | Done         | Not started | Not started | Not started
 hstrlen                     | Not started | Not started | Done         | Not started | Not started | Not started
-blmove                      | Done        | Not started | Done         | Not started | Not started | Not started
+blmove                      | In progress | Not started | Done         | Not started | Not started | Not started
 blmpop                      | Not started | Not started | Done         | Not started | Not started | Not started
 brpoplpush                  | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 lmove                       | Done        | Not started | Done         | Not started | Not started | Not started
