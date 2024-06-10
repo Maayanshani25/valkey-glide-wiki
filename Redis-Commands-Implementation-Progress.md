@@ -218,7 +218,7 @@ expiretime                  | Not started | Not started | Done         | Not sta
 pexpiretime                 | Not started | Not started | Done         | Not started | Not started | Not started
 hstrlen                     | Not started | Not started | Done         | Not started | Not started | Not started
 blmove                      | In progress | Not started | Done         | Not started | Not started | Not started
-blmpop                      | Not started | Not started | Done         | Not started | Not started | Not started
+blmpop                      | In progress | Not started | Done         | Not started | Not started | Not started
 brpoplpush                  | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 lmove                       | Done        | Not started | Done         | Not started | Not started | Not started
 sintercard                  | Done        | Not started | Done         | Not started | Not started | Not started
