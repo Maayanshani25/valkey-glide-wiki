@@ -224,3 +224,4 @@ lmove                       | Done        | Not started | Done         | Not sta
 sintercard                  | Done        | Not started | Done         | Not started | Not started | Not started
 getdel                      | Done        | Not started | Done         | Not started | Not started | Not started
 getex                       | On hold     | On hold     | On hold      | Not started | Not started | Not started
+quit                        | Done, API not required | Done, API not required | Done, API not required | Done, API not required | Done, API not required | Done, API not required
