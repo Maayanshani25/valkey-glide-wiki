@@ -118,7 +118,7 @@ hvals                       | Done        | Done        | Done         | Not sta
 sinter                      | Done        | Done        | Done         | Not started | Not started | Not started
 xtrim                       | Done        | Done        | Done         | Not started | Not started | Not started
 zrank                       | Done        | Done | Done         | Not started | Not started | Not started
-zinterstore                 | Done        | In progress | Done         | Not started | Not started | Not started
+zinterstore                 | Done        | Done | Done         | Not started | Not started | Not started
 xack                        | Not started | In Progress | Not started  | Not started | Not started | Not started
 object encoding             | Done        | Done        | Done         | Not started | Not started | Not started
 object freq                 | Done        | In Progress | Done         | Not started | Not started | Not started
@@ -129,7 +129,7 @@ ssubscribe                  | In progress | Not started | Not started  | Not sta
 zrevrank                    | Not started | Not started | Done         | Not started | Not started | Not started
 pubsub                      | In progress | Not started | Not started  | Not started | Not started | Not started
 sunion                      | On hold     | On hold     | On hold      | Not started | Not started | Not started
-zunionstore                 | Done        | In progress | Done         | Not started | Not started | Not started
+zunionstore                 | Done        | Done | Done         | Not started | Not started | Not started
 lset                        | Not started | Not started | Done         | Not started | Not started | Not started
 xclaim                      | On hold     | On hold     | On hold      | Not started | Not started | Not started
 bitfield                    | Not started | Not started | Done         | Not started | Not started | Not started
@@ -201,10 +201,10 @@ zrangestore                 | Done        | Not started | Done         | Not sta
 geodist                     | Done        | Not started | Done         | Not started | Not started | Not started 
 georadiusbymember           | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated  
 bzpopmax                    | Done        | Not started | Done         | Not started | Not started | Not started 
-zinter                      | Done        | Not started | Done         | Not started | Not started | Not started 
+zinter                      | Done        | In progress | Done         | Not started | Not started | Not started 
 georadiusbymember_ro        | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated  
 sunsubscribe                | Not started | Not started | Not started  | Not started | Not started | Not started
-zunion                      | Done        | Not started | Done         | Not started | Not started | Not started
+zunion                      | Done        | In progress | Done         | Not started | Not started | Not started
 sort_ro                     | In progress | Not started | Not started  | Not started | Not started | Not started
 fcall_ro                    | Not started | Not started | In Progress  | Not started | Not started | Not started
 lmpop                       | In progress | Not started | Done         | Not started | Not started | Not started
