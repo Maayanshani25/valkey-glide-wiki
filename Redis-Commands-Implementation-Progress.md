@@ -110,7 +110,7 @@ xreadgroup                  | Not started | Not started | Not started  | Not sta
 pfadd                       | Done        | Done        | Done         | Not started | Not started | Not started
 renamenx                    | Done        | Done        | Done         | Not started | Not started | Not started
 zpopmin                     | Done        | Done        | Done         | Not started | Not started | Not started
-pfcount                     | Done        | In progress | Done         | Not started | Not started | Not started
+pfcount                     | Done        | Done        | Done         | Not started | Not started | Not started
 wait                        | Not started | Not started | Not started  | Not started | Not started | Not started
 spop                        | Done        | Done        | Done         | Not started | Not started | Not started
 restore                     | Not started | Not started | In progress  | Not started | Not started | Not started
