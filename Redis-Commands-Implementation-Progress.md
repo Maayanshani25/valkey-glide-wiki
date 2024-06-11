@@ -142,7 +142,7 @@ setbit                      | Not started | Not started | Done         | Not sta
 smove                       | Done        | Done        | Done         | Not started | Not started | Not started
 xrange                      | Not started | Not started | Done         | Not started | Not started | Not started
 xdel                        | Not started | Not started | Done         | Not started | Not started | Not started
-linsert                     | Done        | In progress | Done         | Not started | Not started | Not started
+linsert                     | Done        | Done        | Done         | Not started | Not started | Not started
 xlen                        | Done        | Not started | Done         | Not started | Not started | Not started
 xpending                    | Not started | Not started | Not started  | Not started | Not started | Not started
 discard                     | API not required | API not required | API not required | Not started | Not started | Not started
