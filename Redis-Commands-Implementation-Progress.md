@@ -190,7 +190,7 @@ zlexcount                   | Done        | Not started | Done         | Not sta
 zrandmember                 | Done        | Not started | Done         | Not started | Not started | Not started
 replicaof                   | Done, API not required | Done, API not required | Done, API not required   | Not started | Not started | Not started
 bitfield_ro                 | Not started | Not started | Done         | Not started | Not started | Not started
-fcall                       | Not started | Not started | In Progress  | Not started | Not started | Not started
+fcall                       | Not started | Not started | Done         | Not started | Not started | Not started
 zdiffstore                  | Done        | Not started | Done         | Not started | Not started | Not started
 move                        | Not started | Not started | Done         | Not started | Not started | Not started
 geohash                     | Done        | Not started | Done         | Not started | Not started | Not started
