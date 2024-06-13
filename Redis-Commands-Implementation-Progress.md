@@ -117,19 +117,19 @@ restore                     | Not started | Not started | In progress  | Not sta
 hvals                       | Done        | Done        | Done         | Not started | Not started | Not started
 sinter                      | Done        | Done        | Done         | Not started | Not started | Not started
 xtrim                       | Done        | Done        | Done         | Not started | Not started | Not started
-zrank                       | Done        | Done | Done         | Not started | Not started | Not started
-zinterstore                 | Done        | Done | Done         | Not started | Not started | Not started
+zrank                       | Done        | Done        | Done         | Not started | Not started | Not started
+zinterstore                 | Done        | Done        | Done         | Not started | Not started | Not started
 xack                        | Not started | In Progress | Not started  | Not started | Not started | Not started
 object encoding             | Done        | Done        | Done         | Not started | Not started | Not started
 object freq                 | Done        | Done        | Done         | Not started | Not started | Not started
-object idletime             | Done        | In progress | Done         | Not started | Not started | Not started
+object idletime             | Done        | Done        | Done         | Not started | Not started | Not started
 object refcount             | Done        | In progress | Done         | Not started | Not started | Not started
 spublish                    | In progress | Not started | Not started  | Not started | Not started | Not started
 ssubscribe                  | In progress | Not started | Not started  | Not started | Not started | Not started
 zrevrank                    | Not started | Not started | Done         | Not started | Not started | Not started
 pubsub                      | In progress | Not started | Not started  | Not started | Not started | Not started
 sunion                      | Not started | Not started | Not started  | Not started | Not started | Not started
-zunionstore                 | Done        | Done | Done         | Not started | Not started | Not started
+zunionstore                 | Done        | Done        | Done         | Not started | Not started | Not started
 lset                        | Not started | Not started | Done         | Not started | Not started | Not started
 xclaim                      | Not started | Not started | Not started  | Not started | Not started | Not started
 bitfield                    | Not started | Not started | Done         | Not started | Not started | Not started
