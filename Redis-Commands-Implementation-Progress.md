@@ -138,7 +138,7 @@ randomkey                   | Not started | Not started | In Progress  | Not sta
 srandmember                 | Not started | Not started | Done         | Not started | Not started | Not started
 dump                        | Not started | Not started | In progress  | Not started | Not started | Not started
 xinfo                       | Not started | Not started | Not started  | Not started | Not started | Not started
-setbit                      | Not started | Not started | Done         | Not started | Not started | Not started
+setbit                      | In progress | Not started | Done         | Not started | Not started | Not started
 smove                       | Done        | Done        | Done         | Not started | Not started | Not started
 xrange                      | Not started | Not started | Done         | Not started | Not started | Not started
 xdel                        | Not started | Not started | Done         | Not started | Not started | Not started
