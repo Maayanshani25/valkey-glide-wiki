@@ -77,7 +77,7 @@ zremrangebyrank             | Done        | Done        | Done         | Not sta
 psetex                      | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 flushall                    | Not started | Not started | Done         | Not started | Not started | Not started
 sscan                       | Not started | Not started | Not started  | Not started | Not started | Not started
-flushdb                     | Not started | Not started | Not started  | Not started | Not started | Not started
+flushdb                     | Not started | Not started | In Progress  | Not started | Not started | Not started
 xadd                        | Done        | Done        | Done         | Not started | Not started | Not started
 hlen                        | Done        | Done        | Done         | Not started | Not started | Not started
 hsetnx                      | Done        | Done        | Done         | Not started | Not started | Not started
