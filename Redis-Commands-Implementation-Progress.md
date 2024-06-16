@@ -75,7 +75,7 @@ echo                        | Done        | Done        | Done         | Not sta
 brpop                       | Done        | Done        | Done         | Not started | Not started | Not started
 zremrangebyrank             | Done        | Done        | Done         | Not started | Not started | Not started
 psetex                      | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
-flushall                    | Not started | Not started | Done         | Not started | Not started | Not started
+flushall                    | In progress | Not started | Done         | Not started | Not started | Not started
 sscan                       | Not started | Not started | Not started  | Not started | Not started | Not started
 flushdb                     | Not started | Not started | In Progress  | Not started | Not started | Not started
 xadd                        | Done        | Done        | Done         | Not started | Not started | Not started
@@ -135,7 +135,7 @@ xclaim                      | Not started | Not started | Not started  | Not sta
 bitfield                    | Not started | Not started | Done         | Not started | Not started | Not started
 getrange                    | Not started | Not started | Done         | Not started | Not started | Not started
 randomkey                   | Not started | Not started | In Progress  | Not started | Not started | Not started
-srandmember                 | Not started | Not started | Done         | Not started | Not started | Not started
+srandmember                 | In progress | Not started | Done         | Not started | Not started | Not started
 dump                        | Not started | Not started | In progress  | Not started | Not started | Not started
 xinfo                       | Not started | Not started | Not started  | Not started | Not started | Not started
 setbit                      | Done        | Not started | Done         | Not started | Not started | Not started
