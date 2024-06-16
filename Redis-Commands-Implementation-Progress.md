@@ -1,7 +1,7 @@
 cmd type                    | Python      | Node        | Java         | .NET        | Go          | PHP        
 --                          | --          | --          | --           | --          | --          | --         
 ping                        | Done        | Done        | Done         | Not started | Not started | Not started 
-info                        | Done        | Done        | Done         | Not started | Not started | Not started 
+info                        | Done        | Done        | Done         | Not started | Not started |f Not started 
 Config get                  | Done        | Done        | Done         | Not started | Not started | Not started 
 Config set                  | Done        | Done        | Done         | Not started | Not started | Not started 
 Config rewrite              | Done        | Done        | Done         | Not started | Not started | Not started 
@@ -177,7 +177,7 @@ xautoclaim                  | Not started | Not started | Not started  | Not sta
 zmscore                     | Done        | Not started | Done         | Not started | Not started | Not started
 bitop                       | Not started | Not started | Done         | Not started | Not started | Not started
 lastsave                    | Done        | Not started | Done         | Not started | Not started | Not started
-geosearch                   | In progress | Not started | In progress  | Not started | Not started | Not started
+geosearch                   | Done        | Not started | In progress  | Not started | Not started | Not started
 function delete             | Not started | Not started | Done         | Not started | Not started | Not started
 function dump               | Not started | Not started | In progress  | Not started | Not started | Not started
 function flush              | Not started | Not started | Done         | Not started | Not started | Not started
