@@ -101,7 +101,7 @@ lindex                      | Done        | Done        | Done         | Not sta
 punsubscribe                | In progress | In progress | Not started  | Not started | Not started | Not started
 persist                     | Done        | Done        | Done         | Not started | Not started | Not started
 strlen                      | Done        | Done        | Done         | Not started | Not started | Not started
-zincrby                     | Not started | Not started | Done         | Not started | Not started | Not started
+zincrby                     | In progress | Not started | Done         | Not started | Not started | Not started
 xgroup                      | Not started | Not started | In Progress  | Not started | Not started | Not started
 getset                      | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated 
 blpop                       | Done        | Done        | Done         | Not started | Not started | Not started
