@@ -183,7 +183,7 @@ function dump               | Not started | Not started | In progress  | Not sta
 function flush              | Not started | Not started | Done         | Not started | Not started | Not started
 function kill               | Not started | Not started | Done         | Not started | Not started | Not started
 function list               | Not started | Not started | Done         | Not started | Not started | Not started
-function load               | Not started | Not started | Done         | Not started | Not started | Not started
+function load               | In progress | Not started | Done         | Not started | Not started | Not started
 function restore            | Not started | Not started | In progress  | Not started | Not started | Not started
 function stats              | Not started | Not started | Done         | Not started | Not started | Not started
 zlexcount                   | Done        | Not started | Done         | Not started | Not started | Not started
