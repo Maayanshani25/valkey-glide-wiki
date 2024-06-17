@@ -133,7 +133,7 @@ zunionstore                 | Done        | Done        | Done         | Not sta
 lset                        | In progress | Not started | Done         | Not started | Not started | Not started
 xclaim                      | Not started | Not started | Not started  | Not started | Not started | Not started
 bitfield                    | Not started | Not started | Done         | Not started | Not started | Not started
-getrange                    | Not started | Not started | Done         | Not started | Not started | Not started
+getrange                    | In progress | Not started | Done         | Not started | Not started | Not started
 randomkey                   | Not started | Not started | In Progress  | Not started | Not started | Not started
 srandmember                 | In progress | Not started | Done         | Not started | Not started | Not started
 dump                        | Not started | Not started | In progress  | Not started | Not started | Not started
