@@ -82,14 +82,14 @@ xadd                        | Done        | Done        | Done         | Not sta
 hlen                        | Done        | Done        | Done         | Not started | Not started | Not started
 hsetnx                      | Done        | Done        | Done         | Not started | Not started | Not started
 zrevrangebyscore            | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
-watch                       | Not started | Not started | In Progress  | Not started | Not started | Not started
+watch                       | Not started | Not started | Done         | Not started | Not started | Not started
 sismember                   | Done        | Done        | Done         | Not started | Not started | Not started
 pttl                        | Done        | Done        | Done         | Not started | Not started | Not started
 zscore                      | Done        | Done        | Done         | Not started | Not started | Not started
 dbsize                      | Done        | Not started | Done         | Not started | Not started | Not started
 zrevrange                   | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 hscan                       | Not started | Not started | Not started  | Not started | Not started | Not started
-unwatch                     | Not started | Not started | In Progress  | Not started | Not started | Not started
+unwatch                     | Not started | Not started | Done         | Not started | Not started | Not started
 hkeys                       | Done        | In progress | Done         | Not started | Not started | Not started
 xread                       | Not started | Done        | Done         | Not started | Not started | Not started
 readwrite                   | Done, API not required | Done, API not required | Done, API not required  | Not started | Not started | Not started
