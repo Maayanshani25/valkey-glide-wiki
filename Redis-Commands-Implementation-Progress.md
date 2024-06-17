@@ -153,7 +153,7 @@ rpushx                      | Done        | Not started | Done         | Not sta
 sort                        | Done        | Not started | In Progress  | Not started | Not started | Not started
 geoadd                      | Done        | Not started | Done         | Not started | Not started | Not started
 zrangebylex                 | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
-getbit                      | In progress | Not started | Done         | Not started | Not started | Not started
+getbit                      | Done        | Not started | Done         | Not started | Not started | Not started
 msetnx                      | Done        | Not started | Done         | Not started | Not started | Not started
 sdiff                       | Done        | Not started | Done         | Not started | Not started | Not started
 setrange                    | Done        | Not started | Done         | Not started | Not started | Not started
