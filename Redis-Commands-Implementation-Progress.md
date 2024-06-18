@@ -214,8 +214,8 @@ zmpop                       | Done        | Not started | Done         | Not sta
 bzmpop                      | Done        | Not started | Done         | Not started | Not started | Not started 
 lcs                         | Not started | Not started | In Progress  | Not started | Not started | Not started 
 lolwut                      | Not started | Not started | Done         | Not started | Not started | Not started
-expiretime                  | In progress | Not started | Done         | Not started | Not started | Not started
-pexpiretime                 | In progress | Not started | Done         | Not started | Not started | Not started
+expiretime                  | Done        | Not started | Done         | Not started | Not started | Not started
+pexpiretime                 | Done        | Not started | Done         | Not started | Not started | Not started
 hstrlen                     | Done        | Not started | Done         | Not started | Not started | Not started
 blmove                      | In progress | Not started | Done         | Not started | Not started | Not started
 blmpop                      | Done        | Not started | Done         | Not started | Not started | Not started
