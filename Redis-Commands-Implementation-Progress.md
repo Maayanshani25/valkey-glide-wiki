@@ -106,7 +106,7 @@ xgroup                      | Not started | Not started | In Progress  | Not sta
 getset                      | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated 
 blpop                       | Done        | Done        | Done         | Not started | Not started | Not started
 zscan                       | Not started | Not started | Not started  | Not started | Not started | Not started
-xreadgroup                  | Not started | Not started | Not started  | Not started | Not started | Not started
+xreadgroup                  | Not started | Not started | In Progress  | Not started | Not started | Not started
 pfadd                       | Done        | Done        | Done         | Not started | Not started | Not started
 renamenx                    | Done        | Done        | Done         | Not started | Not started | Not started
 zpopmin                     | Done        | Done        | Done         | Not started | Not started | Not started
@@ -131,7 +131,7 @@ pubsub                      | In progress | Not started | Not started  | Not sta
 sunion                      | Done        | Not started | In progress  | Not started | Not started | Not started
 zunionstore                 | Done        | Done        | Done         | Not started | Not started | Not started
 lset                        | Done        | Not started | Done         | Not started | Not started | Not started
-xclaim                      | Not started | Not started | Not started  | Not started | Not started | Not started
+xclaim                      | Not started | Not started | In Progress  | Not started | Not started | Not started
 bitfield                    | In progress | Not started | Done         | Not started | Not started | Not started
 getrange                    | Done        | Not started | Done         | Not started | Not started | Not started
 randomkey                   | Not started | Not started | In Progress  | Not started | Not started | Not started
@@ -144,7 +144,7 @@ xrange                      | Not started | Not started | Done         | Not sta
 xdel                        | Not started | Not started | Done         | Not started | Not started | Not started
 linsert                     | Done        | Done        | Done         | Not started | Not started | Not started
 xlen                        | Done        | Done        | Done         | Not started | Not started | Not started
-xpending                    | Not started | Not started | Not started  | Not started | Not started | Not started
+xpending                    | Not started | Not started | In Progress  | Not started | Not started | Not started
 discard                     | API not required | API not required | API not required | Not started | Not started | Not started
 sunionstore                 | Done        | Done        | Done         | Not started | Not started | Not started
 xrevrange                   | Not started | Not started | Done         | Not started | Not started | Not started
