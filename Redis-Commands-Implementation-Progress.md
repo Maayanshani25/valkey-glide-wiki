@@ -164,7 +164,7 @@ georadius                   | Deprecated  | Deprecated  | Deprecated   | Depreca
 pfmerge                     | Done        | Not started | Done         | Not started | Not started | Not started
 bitcount                    | Done        | Not started | Done         | Not started | Not started | Not started
 sdiffstore                  | Done        | Not started | Done         | Not started | Not started | Not started
-touch                       | In progress | Not started | Done         | Not started | Not started | Not started
+touch                       | Done        | Not started | Done         | Not started | Not started | Not started
 smismember                  | Done        | Not started | Done         | Not started | Not started | Not started
 zremrangebylex              | Done        | Not started | Done         | Not started | Not started | Not started
 zrevrangebylex              | deprecated  | deprecated  | deprecated   | Not started | Not started | Not started
