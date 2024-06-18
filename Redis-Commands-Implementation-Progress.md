@@ -132,7 +132,7 @@ sunion                      | In progress | Not started | In progress  | Not sta
 zunionstore                 | Done        | Done        | Done         | Not started | Not started | Not started
 lset                        | In progress | Not started | Done         | Not started | Not started | Not started
 xclaim                      | Not started | Not started | Not started  | Not started | Not started | Not started
-bitfield                    | Not started | Not started | Done         | Not started | Not started | Not started
+bitfield                    | In progress | Not started | Done         | Not started | Not started | Not started
 getrange                    | In progress | Not started | Done         | Not started | Not started | Not started
 randomkey                   | Not started | Not started | In Progress  | Not started | Not started | Not started
 srandmember                 | In progress | Not started | Done         | Not started | Not started | Not started
@@ -189,7 +189,7 @@ function stats              | Not started | Not started | Done         | Not sta
 zlexcount                   | Done        | Not started | Done         | Not started | Not started | Not started
 zrandmember                 | Done        | Not started | Done         | Not started | Not started | Not started
 replicaof                   | Done, API not required | Done, API not required | Done, API not required   | Not started | Not started | Not started
-bitfield_ro                 | Not started | Not started | Done         | Not started | Not started | Not started
+bitfield_ro                 | In progress | Not started | Done         | Not started | Not started | Not started
 fcall                       | Not started | Not started | Done         | Not started | Not started | Not started
 zdiffstore                  | Done        | Not started | Done         | Not started | Not started | Not started
 move                        | Done        | Not started | Done         | Not started | Not started | Not started
