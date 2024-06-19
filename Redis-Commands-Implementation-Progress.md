@@ -175,7 +175,7 @@ lpos                        | Not started | Not started | In Progress  | Not sta
 geopos                      | Done        | Not started | Done         | Not started | Not started | Not started
 xautoclaim                  | Not started | Not started | Not started  | Not started | Not started | Not started
 zmscore                     | Done        | Not started | Done         | Not started | Not started | Not started
-bitop                       | In progress | Not started | Done         | Not started | Not started | Not started
+bitop                       | Done        | Not started | Done         | Not started | Not started | Not started
 lastsave                    | Done        | Not started | Done         | Not started | Not started | Not started
 geosearch                   | Done        | Not started | In progress  | Not started | Not started | Not started
 function delete             | In progress | Not started | Done         | Not started | Not started | Not started
@@ -194,7 +194,7 @@ fcall                       | Not started | Not started | Done         | Not sta
 zdiffstore                  | Done        | Not started | Done         | Not started | Not started | Not started
 move                        | Done        | Not started | Done         | Not started | Not started | Not started
 geohash                     | Done        | Not started | Done         | Not started | Not started | Not started
-bitpos                      | In progress | Not started | Done         | Not started | Not started | Not started
+bitpos                      | Done        | Not started | Done         | Not started | Not started | Not started
 substr                      | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated  
 zdiff                       | Done        | Not started | Done         | Not started | Not started | Not started
 zrangestore                 | Done        | Not started | Done         | Not started | Not started | Not started
