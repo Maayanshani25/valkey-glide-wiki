@@ -128,7 +128,7 @@ spublish                    | Done        | Not started | Not started  | Not sta
 ssubscribe                  | Done        | Not started | Not started  | Not started | Not started | Not started
 zrevrank                    | In progress | Not started | Done         | Not started | Not started | Not started
 pubsub                      | In progress | Not started | Not started  | Not started | Not started | Not started
-sunion                      | Done        | Not started | In progress  | Not started | Not started | Not started
+sunion                      | Done        | Not started | Done         | Not started | Not started | Not started
 zunionstore                 | Done        | Done        | Done         | Not started | Not started | Not started
 lset                        | Done        | Not started | Done         | Not started | Not started | Not started
 xclaim                      | Not started | Not started | In Progress  | Not started | Not started | Not started
