@@ -223,5 +223,5 @@ brpoplpush                  | deprecated  | deprecated  | deprecated   | depreca
 lmove                       | Done        | Not started | Done         | Not started | Not started | Not started
 sintercard                  | Done        | Not started | Done         | Not started | Not started | Not started
 getdel                      | Done        | Not started | Done         | Not started | Not started | Not started
-getex                       | Not started | Not started | Not started  | Not started | Not started | Not started
+getex                       | In progress | Not started | Not started  | In progress | Not started | Not started
 quit                        | Done, API not required | Done, API not required | Done, API not required | Done, API not required | Done, API not required | Done, API not required
