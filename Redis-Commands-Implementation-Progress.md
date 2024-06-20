@@ -75,7 +75,7 @@ echo                        | Done        | Done        | Done         | Not sta
 brpop                       | Done        | Done        | Done         | Not started | Not started | Not started
 zremrangebyrank             | Done        | Done        | Done         | Not started | Not started | Not started
 psetex                      | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
-flushall                    | In progress | Not started | Done         | Not started | Not started | Not started
+flushall                    | Done        | Not started | Done         | Not started | Not started | Not started
 sscan                       | Not started | Not started | Not started  | Not started | Not started | Not started
 flushdb                     | Not started | Not started | Done         | Not started | Not started | Not started
 xadd                        | Done        | Done        | Done         | Not started | Not started | Not started
