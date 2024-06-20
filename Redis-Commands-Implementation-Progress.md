@@ -141,7 +141,7 @@ xinfo                       | Not started | Not started | Not started  | Not sta
 setbit                      | Done        | Not started | Done         | Not started | Not started | Not started
 smove                       | Done        | Done        | Done         | Not started | Not started | Not started
 xrange                      | Not started | Not started | Done         | Not started | Not started | Not started
-xdel                        | In progress | Not started | Done         | Not started | Not started | Not started
+xdel                        | Done        | Not started | Done         | Not started | Not started | Not started
 linsert                     | Done        | Done        | Done         | Not started | Not started | Not started
 xlen                        | Done        | Done        | Done         | Not started | Not started | Not started
 xpending                    | Not started | Not started | In Progress  | Not started | Not started | Not started
