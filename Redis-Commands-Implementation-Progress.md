@@ -1,7 +1,7 @@
 cmd type                    | Python      | Node        | Java         | .NET        | Go          | PHP        
 --                          | --          | --          | --           | --          | --          | --         
 ping                        | Done        | Done        | Done         | Not started | Not started | Not started 
-info                        | Done        | Done        | Done         | Not started | Not started |f Not started 
+info                        | Done        | Done        | Done         | Not started | Not started | Not started 
 Config get                  | Done        | Done        | Done         | Not started | Not started | Not started 
 Config set                  | Done        | Done        | Done         | Not started | Not started | Not started 
 Config rewrite              | Done        | Done        | Done         | Not started | Not started | Not started 
@@ -53,8 +53,8 @@ ltrim                       | Done        | Done        | Done         | Not sta
 lrange                      | Done        | Done        | Done         | Not started | Not started | Not started
 unlink                      | Done        | Done        | Done         | Not started | Not started | Not started
 ttl                         | Done        | Done        | Done         | Not started | Not started | Not started
-publish                     | Done        | In progress | Not started  | Not started | Not started | Not started
-subscribe                   | Done        | Not started | Not started  | Not started | Not started | Not started
+publish                     | Done        | In progress | In progress  | Not started | Not started | Not started
+subscribe                   | Done        | Not started | In progress  | Not started | Not started | Not started
 eval                        | Done        | Done        | Done         | Not started | Not started | Not started
 evalsha                     | Done        | Done        | Done         | Not started | Not started | Not started
 script                      | Done        | Done        | Done         | Not started | Not started | Not started
@@ -68,7 +68,7 @@ zadd                        | Done        | Done        | Done         | Not sta
 zrem                        | Done        | Done        | Done         | Not started | Not started | Not started
 zrange                      | Done        | Done        | Done         | Not started | Not started | Not started
 unsubscribe                 | Done        | In progress | Not started  | Not started | Not started | Not started
-psubscribe                  | Done        | In progress | Not started  | Not started | Not started | Not started
+psubscribe                  | Done        | In progress | In progress  | Not started | Not started | Not started
 zcard                       | Done        | Done        | Done         | Not started | Not started | Not started
 type                        | Done        | Done        | Done         | Not started | Not started | Not started
 echo                        | Done        | Done        | Done         | Not started | Not started | Not started
@@ -124,10 +124,10 @@ object encoding             | Done        | Done        | Done         | Not sta
 object freq                 | Done        | Done        | Done         | Not started | Not started | Not started
 object idletime             | Done        | Done        | Done         | Not started | Not started | Not started
 object refcount             | Done        | Done        | Done         | Not started | Not started | Not started
-spublish                    | Done        | Not started | Not started  | Not started | Not started | Not started
-ssubscribe                  | Done        | Not started | Not started  | Not started | Not started | Not started
+spublish                    | Done        | Not started | In progress  | Not started | Not started | Not started
+ssubscribe                  | Done        | Not started | In progress  | Not started | Not started | Not started
 zrevrank                    | In progress | Not started | Done         | Not started | Not started | Not started
-pubsub                      | In progress | Not started | Not started  | Not started | Not started | Not started
+pubsub                      | In progress | Not started | In progress  | Not started | Not started | Not started
 sunion                      | Done        | Not started | Done         | Not started | Not started | Not started
 zunionstore                 | Done        | Done        | Done         | Not started | Not started | Not started
 lset                        | Done        | Not started | Done         | Not started | Not started | Not started
