@@ -213,7 +213,7 @@ zintercard                  | Done        | Done        | Done         | Not sta
 zmpop                       | Done        | Not started | Done         | Not started | Not started | Not started 
 bzmpop                      | Done        | Not started | Done         | Not started | Not started | Not started 
 lcs                         | Not started | Not started | In Progress  | Not started | Not started | Not started 
-lolwut                      | Not started | Not started | Done         | Not started | Not started | Not started
+lolwut                      | In progress | Not started | Done         | Not started | Not started | Not started
 expiretime                  | Done        | Not started | Done         | Not started | Not started | Not started
 pexpiretime                 | Done        | Not started | Done         | Not started | Not started | Not started
 hstrlen                     | Done        | Not started | Done         | Not started | Not started | Not started
