@@ -147,7 +147,7 @@ xlen                        | Done        | Done        | Done         | Not sta
 xpending                    | Not started | Not started | In Progress  | Not started | Not started | Not started
 discard                     | API not required | API not required | API not required | Not started | Not started | Not started
 sunionstore                 | Done        | Done        | Done         | Not started | Not started | Not started
-xrevrange                   | Not started | Not started | Done         | Not started | Not started | Not started
+xrevrange                   | In progress | Not started | Done         | Not started | Not started | Not started
 bzpopmin                    | Done        | Not started | Done         | Not started | Not started | Not started
 rpushx                      | Done        | Not started | Done         | Not started | Not started | Not started
 sort                        | Done        | Not started | In Progress  | Not started | Not started | Not started
