@@ -140,7 +140,7 @@ dump                        | Not started | Not started | Done         | Not sta
 xinfo                       | Not started | Not started | Not started  | Not started | Not started | Not started
 setbit                      | Done        | Not started | Done         | Not started | Not started | Not started
 smove                       | Done        | Done        | Done         | Not started | Not started | Not started
-xrange                      | In progress | Not started | Done         | Not started | Not started | Not started
+xrange                      | Done        | Not started | Done         | Not started | Not started | Not started
 xdel                        | Done        | Not started | Done         | Not started | Not started | Not started
 linsert                     | Done        | Done        | Done         | Not started | Not started | Not started
 xlen                        | Done        | Done        | Done         | Not started | Not started | Not started
