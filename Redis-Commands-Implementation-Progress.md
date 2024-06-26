@@ -144,7 +144,7 @@ xrange                      | Done        | Not started | Done         | Not sta
 xdel                        | Done        | Not started | Done         | Not started | Not started | Not started
 linsert                     | Done        | Done        | Done         | Not started | Not started | Not started
 xlen                        | Done        | Done        | Done         | Not started | Not started | Not started
-xpending                    | Not started | Not started | In Progress  | Not started | Not started | Not started
+xpending                    | Not started | Not started | Done         | Not started | Not started | Not started
 discard                     | API not required | API not required | API not required | Not started | Not started | Not started
 sunionstore                 | Done        | Done        | Done         | Not started | Not started | Not started
 xrevrange                   | Done        | Not started | Done         | Not started | Not started | Not started
