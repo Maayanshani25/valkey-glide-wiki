@@ -106,7 +106,7 @@ xgroup                      | In progress | Not started | Done         | Not sta
 getset                      | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated 
 blpop                       | Done        | Done        | Done         | Not started | Not started | Not started
 zscan                       | Not started | Not started | Not started  | Not started | Not started | Not started
-xreadgroup                  | Not started | Not started | Done         | Not started | Not started | Not started
+xreadgroup                  | In progress | Not started | Done         | Not started | Not started | Not started
 pfadd                       | Done        | Done        | Done         | Not started | Not started | Not started
 renamenx                    | Done        | Done        | Done         | Not started | Not started | Not started
 zpopmin                     | Done        | Done        | Done         | Not started | Not started | Not started
