@@ -76,7 +76,7 @@ brpop                       | Done        | Done        | Done         | Not sta
 zremrangebyrank             | Done        | Done        | Done         | Not started | Not started | Not started
 psetex                      | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 flushall                    | Done        | Not started | Done         | Not started | Not started | Not started
-sscan                       | Not started | Not started | In Progress  | Not started | Not started | Not started
+sscan                       | In Progress | Not started | In Progress  | Not started | Not started | Not started
 flushdb                     | Done        | Not started | Done         | Not started | Not started | Not started
 xadd                        | Done        | Done        | Done         | Not started | Not started | Not started
 hlen                        | Done        | Done        | Done         | Not started | Not started | Not started
