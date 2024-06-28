@@ -88,7 +88,7 @@ pttl                        | Done        | Done        | Done         | Not sta
 zscore                      | Done        | Done        | Done         | Not started | Not started | Not started
 dbsize                      | Done        | Not started | Done         | Not started | Not started | Not started
 zrevrange                   | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
-hscan                       | Not started | Not started | Not started  | Not started | Not started | Not started
+hscan                       | Not started | Not started | In Progress  | Not started | Not started | Not started
 unwatch                     | Not started | Not started | Done         | Not started | Not started | Not started
 hkeys                       | Done        | In progress | Done         | Not started | Not started | Not started
 xread                       | Done        | Done        | Done         | Not started | Not started | Not started
