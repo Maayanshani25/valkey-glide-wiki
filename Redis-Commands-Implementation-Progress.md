@@ -180,7 +180,7 @@ lastsave                    | Done        | Not started | Done         | Not sta
 geosearch                   | Done        | Not started | In progress  | Not started | Not started | Not started
 function delete             | In progress | Not started | Done         | Not started | Not started | Not started
 function dump               | Not started | Not started | Done         | Not started | Not started | Not started
-function flush              | In progress | Not started | Done         | Not started | Not started | Not started
+function flush              | Done        | Not started | Done         | Not started | Not started | Not started
 function kill               | Not started | Not started | Done         | Not started | Not started | Not started
 function list               | Not started | Not started | Done         | Not started | Not started | Not started
 function load               | Done        | Not started | Done         | Not started | Not started | Not started
