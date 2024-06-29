@@ -82,7 +82,7 @@ xadd                        | Done        | Done        | Done         | Not sta
 hlen                        | Done        | Done        | Done         | Not started | Not started | Not started
 hsetnx                      | Done        | Done        | Done         | Not started | Not started | Not started
 zrevrangebyscore            | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
-watch                       | Not started | Not started | Done         | Not started | Not started | Not started
+watch                       | In progress | Not started | Done         | Not started | Not started | Not started
 sismember                   | Done        | Done        | Done         | Not started | Not started | Not started
 pttl                        | Done        | Done        | Done         | Not started | Not started | Not started
 zscore                      | Done        | Done        | Done         | Not started | Not started | Not started
