@@ -67,8 +67,8 @@ setex                       | deprecated  | deprecated  | deprecated   | depreca
 zadd                        | Done        | Done        | Done         | Not started | Not started | Not started
 zrem                        | Done        | Done        | Done         | Not started | Not started | Not started
 zrange                      | Done        | Done        | Done         | Not started | Not started | Not started
-unsubscribe                 | Done        | In progress | Not started  | Not started | Not started | Not started
-psubscribe                  | Done        | In progress | In progress  | Not started | Not started | Not started
+unsubscribe                 | Done        | In progress | Done         | Not started | Not started | Not started
+psubscribe                  | Done        | In progress | Done         | Not started | Not started | Not started
 zcard                       | Done        | Done        | Done         | Not started | Not started | Not started
 type                        | Done        | Done        | Done         | Not started | Not started | Not started
 echo                        | Done        | Done        | Done         | Not started | Not started | Not started
@@ -98,7 +98,7 @@ time                        | Done        | Done        | Done         | Not sta
 append                      | Done        | In progress | Done         | Not started | Not started | Not started
 rename                      | Done        | Done        | Done         | Not started | Not started | Not started
 lindex                      | Done        | Done        | Done         | Not started | Not started | Not started
-punsubscribe                | Done        | In progress | Not started  | Not started | Not started | Not started
+punsubscribe                | Done        | In progress | Done         | Not started | Not started | Not started
 persist                     | Done        | Done        | Done         | Not started | Not started | Not started
 strlen                      | Done        | Done        | Done         | Not started | Not started | Not started
 zincrby                     | Done        | Not started | Done         | Not started | Not started | Not started
@@ -178,7 +178,7 @@ zmscore                     | Done        | Not started | Done         | Not sta
 bitop                       | Done        | Not started | Done         | Not started | Not started | Not started
 lastsave                    | Done        | Not started | Done         | Not started | Not started | Not started
 geosearch                   | Done        | Not started | Done         | Not started | Not started | Not started
-function delete             | In progress | Not started | Done         | Not started | Not started | Not started
+function delete             | Done        | Not started | Done         | Not started | Not started | Not started
 function dump               | Not started | Not started | Done         | Not started | Not started | Not started
 function flush              | Done        | Not started | Done         | Not started | Not started | Not started
 function kill               | Not started | Not started | Done         | Not started | Not started | Not started
