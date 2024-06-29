@@ -89,7 +89,7 @@ zscore                      | Done        | Done        | Done         | Not sta
 dbsize                      | Done        | Not started | Done         | Not started | Not started | Not started
 zrevrange                   | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 hscan                       | Not started | Not started | In Progress  | Not started | Not started | Not started
-unwatch                     | Not started | Not started | Done         | Not started | Not started | Not started
+unwatch                     | In progress | Not started | Done         | Not started | Not started | Not started
 hkeys                       | Done        | In progress | Done         | Not started | Not started | Not started
 xread                       | Done        | Done        | Done         | Not started | Not started | Not started
 readwrite                   | Done, API not required | Done, API not required | Done, API not required  | Not started | Not started | Not started
