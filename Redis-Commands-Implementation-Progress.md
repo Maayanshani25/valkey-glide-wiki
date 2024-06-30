@@ -111,7 +111,7 @@ pfadd                       | Done        | Done        | Done         | Not sta
 renamenx                    | Done        | Done        | Done         | Not started | Not started | Not started
 zpopmin                     | Done        | Done        | Done         | Not started | Not started | Not started
 pfcount                     | Done        | Done        | Done         | Not started | Not started | Not started
-wait                        | In Progress | Not started | In Progress  | Not started | Not started | Not started
+wait                        | Done        | Not started | Done         | Not started | Not started | Not started
 spop                        | Done        | Done        | Done         | Not started | Not started | Not started
 restore                     | Not started | Not started | Done         | Not started | Not started | Not started
 hvals                       | Done        | Done        | Done         | Not started | Not started | Not started
