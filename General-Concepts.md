@@ -14,7 +14,8 @@ The `custom_command` function is designed to execute a single command without ch
 Work in progress...
 ### Commands
 Work in progress...
-### Cluster Scan
+
+## Cluster Scan
 TODO: Edit, this is just a copy paste from the command doc before make it lighter
 Incrementally iterates over the keys in the Cluster.
 The method returns a list containing the next cursor and a list of keys.
