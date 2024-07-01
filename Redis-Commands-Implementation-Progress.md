@@ -88,7 +88,7 @@ pttl                        | Done        | Done        | Done         | Not sta
 zscore                      | Done        | Done        | Done         | Not started | Not started | Not started
 dbsize                      | Done        | Not started | Done         | Not started | Not started | Not started
 zrevrange                   | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
-hscan                       | In Progress | Not started | Done         | Not started | Not started | Not started
+hscan                       | Done        | Not started | Done         | Not started | Not started | Not started
 unwatch                     | In progress | Not started | Done         | Not started | Not started | Not started
 hkeys                       | Done        | In progress | Done         | Not started | Not started | Not started
 xread                       | Done        | Done        | Done         | Not started | Not started | Not started
@@ -105,7 +105,7 @@ zincrby                     | Done        | Not started | Done         | Not sta
 xgroup                      | Done        | Not started | Done         | Not started | Not started | Not started
 getset                      | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated 
 blpop                       | Done        | Done        | Done         | Not started | Not started | Not started
-zscan                       | In Progress | Not started | Done         | Not started | Not started | Not started
+zscan                       | Done        | Not started | Done         | Not started | Not started | Not started
 xreadgroup                  | Done        | Not started | Done         | Not started | Not started | Not started
 pfadd                       | Done        | Done        | Done         | Not started | Not started | Not started
 renamenx                    | Done        | Done        | Done         | Not started | Not started | Not started
