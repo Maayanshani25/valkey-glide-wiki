@@ -53,8 +53,8 @@ ltrim                       | Done        | Done        | Done         | Not sta
 lrange                      | Done        | Done        | Done         | Not started | Not started | Not started
 unlink                      | Done        | Done        | Done         | Not started | Not started | Not started
 ttl                         | Done        | Done        | Done         | Not started | Not started | Not started
-publish                     | Done        | In progress | In progress  | Not started | Not started | Not started
-subscribe                   | Done        | Not started | In progress  | Not started | Not started | Not started
+publish                     | Done        | In progress | Done         | Not started | Not started | Not started
+subscribe                   | Done        | Not started | Done         | Not started | Not started | Not started
 eval                        | Done        | Done        | Done         | Not started | Not started | Not started
 evalsha                     | Done        | Done        | Done         | Not started | Not started | Not started
 script                      | Done        | Done        | Done         | Not started | Not started | Not started
@@ -124,10 +124,10 @@ object encoding             | Done        | Done        | Done         | Not sta
 object freq                 | Done        | Done        | Done         | Not started | Not started | Not started
 object idletime             | Done        | Done        | Done         | Not started | Not started | Not started
 object refcount             | Done        | Done        | Done         | Not started | Not started | Not started
-spublish                    | Done        | Not started | In progress  | Not started | Not started | Not started
-ssubscribe                  | Done        | Not started | In progress  | Not started | Not started | Not started
+spublish                    | Done        | Not started | Done         | Not started | Not started | Not started
+ssubscribe                  | Done        | Not started | Done         | Not started | Not started | Not started
 zrevrank                    | Done        | Not started | Done         | Not started | Not started | Not started
-pubsub                      | In progress | Not started | In progress  | Not started | Not started | Not started
+pubsub                      | In progress | Not started | Done         | Not started | Not started | Not started
 sunion                      | Done        | Not started | Done         | Not started | Not started | Not started
 zunionstore                 | Done        | Done        | Done         | Not started | Not started | Not started
 lset                        | Done        | Not started | Done         | Not started | Not started | Not started
@@ -203,12 +203,12 @@ georadiusbymember           | Deprecated  | Deprecated  | Deprecated   | Depreca
 bzpopmax                    | Done        | Not started | Done         | Not started | Not started | Not started 
 zinter                      | Done        | In progress | Done         | Not started | Not started | Not started 
 georadiusbymember_ro        | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated  
-sunsubscribe                | Done        | Not started | Not started  | Not started | Not started | Not started
+sunsubscribe                | Done        | Not started | Done         | Not started | Not started | Not started
 zunion                      | Done        | In progress | Done         | Not started | Not started | Not started
 sort_ro                     | In progress | Not started | Done         | Not started | Not started | Not started
 fcall_ro                    | In Progress | Not started | Done         | Not started | Not started | Not started
 lmpop                       | Done        | Not started | Done         | Not started | Not started | Not started
-geosearchstore              | Done        | Not started | Done  |      | Not started | Not started | Not started 
+geosearchstore              | Done        | Not started | Done         | Not started | Not started | Not started 
 zintercard                  | Done        | Done        | Done         | Not started | Not started | Not started 
 zmpop                       | Done        | Not started | Done         | Not started | Not started | Not started 
 bzmpop                      | Done        | Not started | Done         | Not started | Not started | Not started 
