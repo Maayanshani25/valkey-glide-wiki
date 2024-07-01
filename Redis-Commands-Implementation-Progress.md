@@ -217,7 +217,7 @@ lolwut                      | Done        | Not started | Done         | Not sta
 expiretime                  | Done        | Not started | Done         | Not started | Not started | Not started
 pexpiretime                 | Done        | Not started | Done         | Not started | Not started | Not started
 hstrlen                     | Done        | Not started | Done         | Not started | Not started | Not started
-blmove                      | Not Started | Not started | Done         | Not started | Not started | Not started
+blmove                      | Done        | Not started | Done         | Not started | Not started | Not started
 blmpop                      | Done        | Not started | Done         | Not started | Not started | Not started
 brpoplpush                  | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 lmove                       | Done        | Not started | Done         | Not started | Not started | Not started
