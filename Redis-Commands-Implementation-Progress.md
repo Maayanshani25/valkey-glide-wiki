@@ -173,7 +173,7 @@ copy                        | Done        | Not started | Done         | Not sta
 hrandfield                  | Done        | Not started | Done         | Not started | Not started | Not started
 lpos                        | In progress | Not started | Done         | Not started | Not started | Not started
 geopos                      | Done        | Not started | Done         | Not started | Not started | Not started
-xautoclaim                  | In progress | Not started | In Progress  | Not started | Not started | Not started
+xautoclaim                  | Done        | Not started | In Progress  | Not started | Not started | Not started
 zmscore                     | Done        | Not started | Done         | Not started | Not started | Not started
 bitop                       | Done        | Not started | Done         | Not started | Not started | Not started
 lastsave                    | Done        | Not started | Done         | Not started | Not started | Not started
