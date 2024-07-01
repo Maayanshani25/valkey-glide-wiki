@@ -131,7 +131,7 @@ pubsub                      | In progress | Not started | Done         | Not sta
 sunion                      | Done        | Not started | Done         | Not started | Not started | Not started
 zunionstore                 | Done        | Done        | Done         | Not started | Not started | Not started
 lset                        | Done        | Not started | Done         | Not started | Not started | Not started
-xclaim                      | Not started | Not started | Done         | Not started | Not started | Not started
+xclaim                      | In progress | Not started | Done         | Not started | Not started | Not started
 bitfield                    | Done        | Not started | Done         | Not started | Not started | Not started
 getrange                    | Done        | Not started | Done         | Not started | Not started | Not started
 randomkey                   | Done        | Not started | Done         | Not started | Not started | Not started
