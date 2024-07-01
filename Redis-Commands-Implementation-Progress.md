@@ -205,8 +205,8 @@ zinter                      | Done        | In progress | Done         | Not sta
 georadiusbymember_ro        | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated  
 sunsubscribe                | Done        | Not started | Done         | Not started | Not started | Not started
 zunion                      | Done        | In progress | Done         | Not started | Not started | Not started
-sort_ro                     | In progress | Not started | Done         | Not started | Not started | Not started
-fcall_ro                    |Done         | Not started | Done         | Not started | Not started | Not started
+sort_ro                     | Done        | Not started | Done         | Not started | Not started | Not started
+fcall_ro                    | Done        | Not started | Done         | Not started | Not started | Not started
 lmpop                       | Done        | Not started | Done         | Not started | Not started | Not started
 geosearchstore              | Done        | Not started | Done         | Not started | Not started | Not started 
 zintercard                  | Done        | Done        | Done         | Not started | Not started | Not started 
