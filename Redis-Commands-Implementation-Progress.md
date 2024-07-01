@@ -136,7 +136,7 @@ bitfield                    | Done        | Not started | Done         | Not sta
 getrange                    | Done        | Not started | Done         | Not started | Not started | Not started
 randomkey                   | Done        | Not started | Done         | Not started | Not started | Not started
 srandmember                 | Done        | Not started | Done         | Not started | Not started | Not started
-dump                        | Not started | Not started | Done         | Not started | Not started | Not started
+dump                        | In Progress | Not started | Done         | Not started | Not started | Not started
 xinfo                       | In progress | Not started | In Progress  | Not started | Not started | Not started
 setbit                      | Done        | Not started | Done         | Not started | Not started | Not started
 smove                       | Done        | Done        | Done         | Not started | Not started | Not started
@@ -179,12 +179,12 @@ bitop                       | Done        | Not started | Done         | Not sta
 lastsave                    | Done        | Not started | Done         | Not started | Not started | Not started
 geosearch                   | Done        | Not started | Done         | Not started | Not started | Not started
 function delete             | Done        | Not started | Done         | Not started | Not started | Not started
-function dump               | Not started | Not started | Done         | Not started | Not started | Not started
+function dump               | In Progress | Not started | Done         | Not started | Not started | Not started
 function flush              | Done        | Not started | Done         | Not started | Not started | Not started
 function kill               | Not started | Not started | Done         | Not started | Not started | Not started
 function list               | In progress | Not started | Done         | Not started | Not started | Not started
 function load               | Done        | Not started | Done         | Not started | Not started | Not started
-function restore            | Not started | Not started | Done         | Not started | Not started | Not started
+function restore            | In Progress | Not started | Done         | Not started | Not started | Not started
 function stats              | Not started | Not started | Done         | Not started | Not started | Not started
 zlexcount                   | Done        | Not started | Done         | Not started | Not started | Not started
 zrandmember                 | Done        | Not started | Done         | Not started | Not started | Not started
