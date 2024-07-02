@@ -67,7 +67,7 @@ setex                       | deprecated  | deprecated  | deprecated   | depreca
 zadd                        | Done        | Done        | Done         | Not started | Not started | Not started
 zrem                        | Done        | Done        | Done         | Not started | Not started | Not started
 zrange                      | Done        | Done        | Done         | Not started | Not started | Not started
-unsubscribe                 | Done        | In progress | Done         | Not started | Not started | Not started
+unsubscribe                 | Done        | In progress | In Progress  | Not started | Not started | Not started
 psubscribe                  | Done        | In progress | Done         | Not started | Not started | Not started
 zcard                       | Done        | Done        | Done         | Not started | Not started | Not started
 type                        | Done        | Done        | Done         | Not started | Not started | Not started
@@ -127,7 +127,7 @@ object refcount             | Done        | Done        | Done         | Not sta
 spublish                    | Done        | Not started | Done         | Not started | Not started | Not started
 ssubscribe                  | Done        | Not started | Done         | Not started | Not started | Not started
 zrevrank                    | Done        | Not started | Done         | Not started | Not started | Not started
-pubsub                      | In progress | Not started | Done         | Not started | Not started | Not started
+pubsub                      | In progress | Not started | In Progress  | Not started | Not started | Not started
 sunion                      | Done        | Not started | Done         | Not started | Not started | Not started
 zunionstore                 | Done        | Done        | Done         | Not started | Not started | Not started
 lset                        | Done        | Not started | Done         | Not started | Not started | Not started
@@ -203,7 +203,7 @@ georadiusbymember           | Deprecated  | Deprecated  | Deprecated   | Depreca
 bzpopmax                    | Done        | Not started | Done         | Not started | Not started | Not started 
 zinter                      | Done        | In progress | Done         | Not started | Not started | Not started 
 georadiusbymember_ro        | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated  
-sunsubscribe                | Done        | Not started | Done         | Not started | Not started | Not started
+sunsubscribe                | Done        | Not started | In Progress  | Not started | Not started | Not started
 zunion                      | Done        | In progress | Done         | Not started | Not started | Not started
 sort_ro                     | Done        | Not started | Done         | Not started | Not started | Not started
 fcall_ro                    | Done        | Not started | Done         | Not started | Not started | Not started
