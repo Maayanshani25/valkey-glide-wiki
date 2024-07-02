@@ -9,6 +9,128 @@ The `custom_command` function is designed to execute a single command without ch
 - **Key-Based Command Limitation**: Key-based commands should not be used with multi-node routing. Ensure that key-based commands are routed to a single node to maintain consistency and avoid unexpected behavior.
 
 
+## GLIDE PubSub feature
+
+### Subscription
+
+GLIDE takes responsibility of tracking topology changes in real time and ensures client is kept subscribed regardless of any connectivity issues. If the client is migrated to a new node or re-connected to a node, GLIDE will automatically re-subscribe the client.
+To provide that, GLIDE gets subscription configuration at the moment of client creation. A regular command `SUBSCRIBE`/`PSUBSCRIBE`/`SSUBSCRIBE` cannot trigger connection status tracking, so such API isn't exposed. Due to the same reason, unsubscribing could be done once client closes all connections and shuts down. Unfortunately, there is no option to unsubscribe from one of the channels.
+
+### Receiving the messages
+
+All GLIDE clients provide following API to receive incoming messages:
+1. Sync `tryGet` method which returns a message or `null`/`None` if no unread messages left.
+2. Async `get` method which returns a future/promise for the next message.
+3. A callback called for every incoming message.
+
+To avoid conflicts, callback mechanism cannot be activated alongside with first two methods. Meanwhile, `tryGet` and `get` coexist and don't interfere.
+A user can configure client to use the callback when client configuration is created. This configuration cannot be changed later. If callback is not configured, incoming messages are available through `tryGet` and `get`.
+Callback is a function, which takes two arguments - an incoming message and an arbitrary user-defined context. The context is stored and configured together with the callback.
+
+### Java client example
+
+#### Configuration with callback
+
+```java
+MessageCallback callback =
+    (msg, context) -> System.out.printf("Received %s, context %s\n", msg, context);
+
+var regularClient =
+    GlideClient.CreateClient(
+            GlideClientConfiguration.builder()
+                .address(NodeAddress.builder().port(6379).build())
+                .requestTimeout(3000)
+                .subscriptionConfiguration(               // subscriptions are configured here
+                    StandaloneSubscriptionConfiguration.builder()
+                        .subscription(EXACT, "ch1")       // this forces client to submit "SUBSCRIBE ch1" command and re-submit it on reconnection
+                        .subscription(EXACT, "ch2")
+                        .subscription(PATTERN, "chat*")   // this is backed by "PSUBSCRIBE chat*" command
+                        .callback(callback)
+                        .callback(callback, context)      // callback or callback with context are configured here
+                        .build())
+                .build())
+        .get();
+
+// work with client
+
+regularClient.close(); // unsubscribe happens here
+```
+
+#### Configuration without callback
+
+```java
+var regularClient =
+    GlideClient.CreateClient(
+            GlideClientConfiguration.builder()
+                .address(NodeAddress.builder().port(6379).build())
+                .requestTimeout(3000)
+                .subscriptionConfiguration(               // subscriptions are configured here
+                    StandaloneSubscriptionConfiguration.builder()
+                        .subscription(EXACT, Set.of("ch1", "ch2"))   // there is option to set multiple subscriptions at a time
+                        .subscription(Map.of(PATTERN, "chat*", EXACT, Set.of("ch1", "ch2")))
+                                                                     // or even all subscriptions at a time
+                        .build())                                    // no callback is configured
+                .build())
+        .get();
+
+// wait for messages
+
+Message msg = regularClient.tryGetPubSubMessage(); // sync
+Message msg = regularClient.getPubSubMessage().get(); // async
+```
+
+### Python client example
+
+#### Configuration with callback
+
+```py
+def callback (msg: CoreCommands.PubSubMsg, context: Any):
+    print(f"Received {msg}, context {context}\n")
+
+config = GlideClientConfiguration(
+    [NodeAddress("localhost", 6379)],
+    pubsub_subscriptions = GlideClientConfiguration.PubSubSubscriptions(          # subscriptions are configured here
+        channels_and_patterns={
+	    GlideClientConfiguration.PubSubChannelModes.Exact: {"ch1", "ch2"},    # this forces client to submit "SUBSCRIBE ch1 ch2" command and re-submit it on reconnection
+	    GlideClientConfiguration.PubSubChannelModes.Pattern: {"chat*"}        # this is backed by "PSUBSCRIBE chat*" command
+	},
+        callback=callback,
+        context=context,
+    )
+)
+
+client = await GlideClient.create(config)
+
+## wait for messages
+
+await client.close()    # unsubscribe happens here
+```
+
+
+#### Configuration without callback
+
+```py
+config = GlideClientConfiguration(
+    [NodeAddress("localhost", 6379)],
+    pubsub_subscriptions = GlideClientConfiguration.PubSubSubscriptions(          # subscriptions are configured here
+        channels_and_patterns={
+	    GlideClientConfiguration.PubSubChannelModes.Exact: {"ch1", "ch2"},    # this forces client to submit "SUBSCRIBE ch1 ch2" command and re-submit it on reconnection
+	    GlideClientConfiguration.PubSubChannelModes.Pattern: {"chat*"}        # this is backed by "PSUBSCRIBE chat*" command
+	}
+    )
+)
+
+client = await GlideClient.create(config)
+
+## wait for messages
+
+message = client.try_get_pubsub_message()    # sync method to get next message
+message = await client.get_pubsub_message()  # async method to get a message
+
+await client.close()    # unsubscribe happens here
+```
+
+
 ## Blocking Commands
 ### Overview
 Work in progress...
