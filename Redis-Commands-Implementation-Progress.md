@@ -182,7 +182,7 @@ function delete             | Done        | Not started | Done         | Not sta
 function dump               | In Progress | Not started | Done         | Not started | Not started | Not started
 function flush              | Done        | Not started | Done         | Not started | Not started | Not started
 function kill               | In Progress | Not started | Done         | Not started | Not started | Not started
-function list               | In progress | Not started | Done         | Not started | Not started | Not started
+function list               | Done        | Not started | Done         | Not started | Not started | Not started
 function load               | Done        | Not started | Done         | Not started | Not started | Not started
 function restore            | In Progress | Not started | Done         | Not started | Not started | Not started
 function stats              | In Progress | Not started | Done         | Not started | Not started | Not started
