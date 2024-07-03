@@ -113,10 +113,11 @@ await client.close()    # unsubscribe happens here
 config = GlideClientConfiguration(
     [NodeAddress("localhost", 6379)],
     pubsub_subscriptions = GlideClientConfiguration.PubSubSubscriptions(          # subscriptions are configured here
-        channels_and_patterns={
+        {
 	    GlideClientConfiguration.PubSubChannelModes.Exact: {"ch1", "ch2"},    # this forces client to submit "SUBSCRIBE ch1 ch2" command and re-submit it on reconnection
 	    GlideClientConfiguration.PubSubChannelModes.Pattern: {"chat*"}        # this is backed by "PSUBSCRIBE chat*" command
-	}
+	},
+	None, None
     )
 )
 
