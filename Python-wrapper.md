@@ -132,9 +132,9 @@ GLIDE for Redis provides support for next read strategies, allowing you to choos
 
 ```python
 addresses = [NodeAddress(host="redis.example.com", port=6379)]
-client_config = ClusterClientConfiguration(addresses)
+client_config = ClusterClientConfiguration(addresses, read_from=ReadFrom.PREFER_REPLICA)
 
-client = await RedisClusterClient.create(client_config, read_from=ReadFrom.PREFER_REPLICA)
+client = await RedisClusterClient.create(client_config)
 await client.set("key1", "val1")
 # get will read from one of the replicas
 await client.get("key1")
