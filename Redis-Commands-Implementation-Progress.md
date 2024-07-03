@@ -58,7 +58,7 @@ subscribe                   | Done        | Not started | Done         | Not sta
 eval                        | Done        | Done        | Done         | Not started | Not started | Not started
 evalsha                     | Done        | Done        | Done         | Not started | Not started | Not started
 script                      | Done        | Done        | Done         | Not started | Not started | Not started
-scan                        | In progress | Not started | In Progress  | Not started | Not started | Not started
+scan                        | Done        | Not started | In Progress  | Not started | Not started | Not started
 zrangebyscore               | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 zremrangebyscore            | Done        | Done        | Done         | Not started | Not started | Not started
 setnx                       | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
