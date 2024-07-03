@@ -113,7 +113,7 @@ zpopmin                     | Done        | Done        | Done         | Not sta
 pfcount                     | Done        | Done        | Done         | Not started | Not started | Not started
 wait                        | Done        | Not started | Done         | Not started | Not started | Not started
 spop                        | Done        | Done        | Done         | Not started | Not started | Not started
-restore                     | In progress | Not started | Done         | Not started | Not started | Not started
+restore                     | Done        | Not started | Done         | Not started | Not started | Not started
 hvals                       | Done        | Done        | Done         | Not started | Not started | Not started
 sinter                      | Done        | Done        | Done         | Not started | Not started | Not started
 xtrim                       | Done        | Done        | Done         | Not started | Not started | Not started
@@ -136,7 +136,7 @@ bitfield                    | Done        | Not started | Done         | Not sta
 getrange                    | Done        | Not started | Done         | Not started | Not started | Not started
 randomkey                   | Done        | Not started | Done         | Not started | Not started | Not started
 srandmember                 | Done        | Not started | Done         | Not started | Not started | Not started
-dump                        | In Progress | Not started | Done         | Not started | Not started | Not started
+dump                        | Done        | Not started | Done         | Not started | Not started | Not started
 xinfo                       | In progress | Not started | In Progress  | Not started | Not started | Not started
 setbit                      | Done        | Not started | Done         | Not started | Not started | Not started
 smove                       | Done        | Done        | Done         | Not started | Not started | Not started
