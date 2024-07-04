@@ -127,7 +127,7 @@ object refcount             | Done        | Done        | Done         | Not sta
 spublish                    | Done        | Not started | Done         | Not started | Not started | Not started
 ssubscribe                  | Done        | Not started | Done         | Not started | Not started | Not started
 zrevrank                    | Done        | Not started | Done         | Not started | Not started | Not started
-pubsub                      | In progress | Not started | In Progress  | Not started | Not started | Not started
+pubsub                      | Not needed  | Not started | Not needed   | Not started | Not started | Not started
 sunion                      | Done        | Not started | Done         | Not started | Not started | Not started
 zunionstore                 | Done        | Done        | Done         | Not started | Not started | Not started
 lset                        | Done        | Not started | Done         | Not started | Not started | Not started
