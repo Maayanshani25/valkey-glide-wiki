@@ -181,11 +181,11 @@ geosearch                   | Done        | Not started | Done         | Not sta
 function delete             | Done        | Not started | Done         | Not started | Not started | Not started
 function dump               | In Progress | Not started | Done         | Not started | Not started | Not started
 function flush              | Done        | Not started | Done         | Not started | Not started | Not started
-function kill               | In Progress | Not started | Done         | Not started | Not started | Not started
+function kill               | Done        | Not started | Done         | Not started | Not started | Not started
 function list               | Done        | Not started | Done         | Not started | Not started | Not started
 function load               | Done        | Not started | Done         | Not started | Not started | Not started
 function restore            | In Progress | Not started | Done         | Not started | Not started | Not started
-function stats              | Done | Not started | Done         | Not started | Not started | Not started
+function stats              | Done        | Not started | Done         | Not started | Not started | Not started
 zlexcount                   | Done        | Not started | Done         | Not started | Not started | Not started
 zrandmember                 | Done        | Not started | Done         | Not started | Not started | Not started
 replicaof                   | Done, API not required | Done, API not required | Done, API not required   | Not started | Not started | Not started
