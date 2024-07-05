@@ -137,7 +137,7 @@ getrange                    | Done        | Not started | Done         | Not sta
 randomkey                   | Done        | Not started | Done         | Not started | Not started | Not started
 srandmember                 | Done        | Not started | Done         | Not started | Not started | Not started
 dump                        | Done        | Not started | Done         | Not started | Not started | Not started
-xinfo                       | In progress | Not started | In Progress  | Not started | Not started | Not started
+xinfo                       | Done        | Not started | In Progress  | Not started | Not started | Not started
 setbit                      | Done        | Not started | Done         | Not started | Not started | Not started
 smove                       | Done        | Done        | Done         | Not started | Not started | Not started
 xrange                      | Done        | Not started | Done         | Not started | Not started | Not started
