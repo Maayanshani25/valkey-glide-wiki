@@ -175,8 +175,8 @@ This is equivalent to the Valkey commands [MULTI](https://valkey.io/commands/mul
 
 There are two primary modes for handling transactions in Glide:
 
-1. *Standalone Mode:* Use the `Transaction` class.
-2. *Cluster Mode:* Use the `ClusterTransaction` class.
+1. **Standalone Mode:** Use the `Transaction` class.
+2. **Cluster Mode:** Use the `ClusterTransaction` class.
 
 
 
@@ -219,27 +219,27 @@ await client.exec(cluster_transaction)
 # Output: [OK, "value"]
 ```
 
-*Cluster Mode Considerations:* When using `ClusterTransaction`, all keys in the transaction must be mapped to the same slot.
+**Cluster Mode Considerations:** When using `ClusterTransaction`, all keys in the transaction must be mapped to the same slot.
 
 
 #### Detailed Steps:
 
-*Creating a Transaction:* Initialize the `Transaction` or `ClusterTransaction` object.
+**Creating a Transaction:** Initialize the `Transaction` or `ClusterTransaction` object.
 ```python
 transaction = Transaction()  # For standalone mode
 cluster_transaction = ClusterTransaction()  # For cluster mode
 ```
-*Adding Commands:* Use the transaction object to queue up the desired commands.
+**Adding Commands:** Use the transaction object to queue up the desired commands.
 ```python
 transaction.set("key", "value")
 transaction.get("key")
 ```
-*Executing the Transaction:* Use the `exec` method of the Valkey Glide client to execute the transaction.
+**Executing the Transaction:** Use the `exec` method of the Valkey Glide client to execute the transaction.
 ```python
 await client.exec(transaction)
 ```
 
-*Handling Results:* The result of the transaction execution will be a list of responses corresponding to each command in the transaction.
+**Handling Results:** The result of the transaction execution will be a list of responses corresponding to each command in the transaction.
 ```python
 result = await client.exec(transaction)
 print(result)  # Output: [OK, 'value']
