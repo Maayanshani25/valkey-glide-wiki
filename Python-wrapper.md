@@ -17,9 +17,9 @@ The `NodeAddress` class represents the host and port of a Redis node. The host c
 
 ```python
 addresses = [NodeAddress(host="redis.example.com", port=6379)]
-client_config = ClusterClientConfiguration(addresses)
+client_config = GlideClusterClientConfiguration(addresses)
 
-client = await RedisClusterClient.create(client_config)
+client = await GlideClusterClient.create(client_config)
 ```
 
 #### Request Routing
@@ -46,13 +46,13 @@ GLIDE for Redis also supports Redis Standalone deployments, where the Redis data
 
 ```python
 addresses = [
-    NodeAddress(host="redis_primary.example.com", port=6379),
-    NodeAddress(host="redis_replica1.example.com", port=6379),
-    NodeAddress(host="redis_replica2.example.com", port=6379)
+    NodeAddress(host="valkey_primary.example.com", port=6379),
+    NodeAddress(host="valkey_replica1.example.com", port=6379),
+    NodeAddress(host="valkey_replica2.example.com", port=6379)
   ]
-client_config = RedisClientConfiguration(addresses)
+client_config = GlideClientConfiguration(addresses)
 
-client = await RedisClient.create(client_config)
+client = await GlideClient.create(client_config)
 ```
 
 ## Redis commands
@@ -77,10 +77,10 @@ To provide the necessary authentication credentials to the client, you can use t
 
 ```python
 addresses = [NodeAddress(host="redis.example.com", port=6379)]
-credentials = RedisCredentials("passwordA", "user1")
-client_config = ClusterClientConfiguration(addresses, credentials=credentials)
+credentials = ServerCredentials("passwordA", "user1")
+client_config = GlideClusterClientConfiguration(addresses, credentials=credentials)
 
-client = await RedisClusterClient.create(client_config)
+client = await GlideClusterClient.create(client_config)
 ```
 
 
@@ -88,10 +88,10 @@ client = await RedisClusterClient.create(client_config)
 
 ```python
 addresses = [NodeAddress(host="redis.example.com", port=6379)]
-credentials = RedisCredentials("passwordA", "user1")
-client_config = RedisClientConfiguration(addresses, credentials=credentials)
+credentials = ServerCredentials("passwordA", "user1")
+client_config = GlideClientConfiguration(addresses, credentials=credentials)
 
-client = await RedisClient.create(client_config)
+client = await GlideClient.create(client_config)
 ```
 
 ### TLS
@@ -104,22 +104,22 @@ It's important to note that TLS support in GLIDE for Redis relies on [rusttls](h
 
 ```python
 addresses = [NodeAddress(host="redis.example.com", port=6379)]
-client_config = ClusterClientConfiguration(addresses, use_tls=True)
+client_config = GlideClusterClientConfiguration(addresses, use_tls=True)
 
-client = await RedisClusterClient.create(client_config)
+client = await GlideClusterClient.create(client_config)
 ```
 #### Example - Connecting with TLS Mode Enabled to a Redis Standalone
 
 ```python
 addresses = [NodeAddress(host="redis.example.com", port=6379)]
-client_config = RedisClientConfiguration(addresses, use_tls=True)
+client_config = GlideClientConfiguration(addresses, use_tls=True)
 
-client = await RedisClient.create(client_config)
+client = await GlideClient.create(client_config)
 ```
 
 ### Read Strategy
 
-By default, GLIDE for Redis directs read commands to the primary node that owns a specific slot. For applications that prioritize read throughput and can tolerate possibly stale data, GLIDE for Redis provides the flexibility to route reads to replica nodes.
+By default, Valkey GLIDE directs read commands to the primary node that owns a specific slot. For applications that prioritize read throughput and can tolerate possibly stale data, GLIDE for Redis provides the flexibility to route reads to replica nodes.
 
 GLIDE for Redis provides support for next read strategies, allowing you to choose the one that best fits your specific use case.
 
@@ -132,9 +132,9 @@ GLIDE for Redis provides support for next read strategies, allowing you to choos
 
 ```python
 addresses = [NodeAddress(host="redis.example.com", port=6379)]
-client_config = ClusterClientConfiguration(addresses, read_from=ReadFrom.PREFER_REPLICA)
+client_config = GlideClusterClientConfiguration(addresses, read_from=ReadFrom.PREFER_REPLICA)
 
-client = await RedisClusterClient.create(client_config)
+client = await GlideClusterClient.create(client_config)
 await client.set("key1", "val1")
 # get will read from one of the replicas
 await client.get("key1")
@@ -142,7 +142,7 @@ await client.get("key1")
 
 ### Timeouts and Reconnect Strategy
 
-GLIDE for Redis allows you to configure timeout settings and reconnect strategies. These configurations can be applied through the `ClusterClientConfiguration` and `RedisClientConfiguration` parameters.
+GLIDE for Redis allows you to configure timeout settings and reconnect strategies. These configurations can be applied through the `GlideClusterClientConfiguration` and `GlideClientConfiguration` parameters.
 
 
 |Configuration setting	|Description	|**Default value**	|
@@ -158,9 +158,9 @@ GLIDE for Redis allows you to configure timeout settings and reconnect strategie
 
 ```python
 addresses = [NodeAddress(host="redis.example.com", port=6379)]
-client_config = ClusterClientConfiguration(addresses, request_timeout=500)
+client_config = GlideClusterClientConfiguration(addresses, request_timeout=500)
 
-client = await RedisClusterClient.create(client_config)
+client = await GlideClusterClient.create(client_config)
 ```
 
 
