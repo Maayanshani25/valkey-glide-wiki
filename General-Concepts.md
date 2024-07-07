@@ -152,12 +152,25 @@ The `ScanState` is not held as a static or global object. Instead, a `ClusterSca
 ### Creating a ClusterScanCursor
 
 To start iterating, create a `ClusterScanCursor`:
-
+In python:
 ```py
 cursor = ClusterScanCursor()
 ```
+
+In Java:
+```java
+ClusterScanCursor cursor = ClusterScanCursor.initalCursor();
+```
+
 Each cursor returned by an iteration is an RC to a new state object. Using the same cursor object will handle the same scan iteration again. A new cursor object should be used for each iteration to continue the scan.
+
+### Optional Parameters
+The `SCAN` command accepts three optional parameters:
+* `MATCH`: Iterates over keys that match the provided pattern.
+* `COUNT`: Specifies the number of keys to return in a single iteration. The actual number may vary, serving as a hint to the server on the number of steps to perform in each iteration. The default value is 10.
+* `TYPE`: Filters the keys by a specific type.
 ### General Usage Example
+#### Python exampels:
 ```py
 cursor = ClusterScanCursor()
 all_keys = []
@@ -165,16 +178,21 @@ while not cursor.is_finished():
     cursor, keys = await client.scan(cursor)
     all_keys.extend(keys)
 ```
-### Optional Parameters
-The `SCAN` command accepts three optional parameters:
 
-* `MATCH`: Iterates over keys that match the provided pattern.
 ```py
+await client.mset({b'my_key1': b'value1', b'my_key2': b'value2', b'not_my_key': b'value3', b'something_else': b'value4'})
+cursor = ClusterScanCursor()
 await client.scan(cursor, match=b"*key*")
 # Returns matching keys such as [b'my_key1', b'my_key2', b'not_my_key']
 ```
-* `COUNT`: Specifies the number of keys to return in a single iteration. The actual number may vary, serving as a hint to the server on the number of steps to perform in each iteration. The default value is 10.
-* `TYPE`: Filters the keys by a specific type.
+
+```py
+await client.mset({b'my_key1': b'value1', b'my_key2': b'value2', b'not_my_key': b'value3', b'something_else': b'value4'})
+cursor = ClusterScanCursor()
+await client.scan(cursor, count=1)
+# Returns around `count` amount of keys: [b'my_key1']
+```
+
 ```py
 await client.mset({b'key1': b'value1', b'key2': b'value2', b'key3': b'value3'})
 await client.sadd(b"this_is_a_set", [b"value4"])
@@ -185,18 +203,24 @@ while not cursor.is_finished():
     all_keys.extend(keys)
 print(all_keys)  # Output: [b'key1', b'key2', b'key3']
 ```
-### Java exampels: 
+#### Java exampels: 
 ```java
+String key = "key:test_cluster_scan_simple" + UUID.randomUUID();
+Map<String, String> expectedData = new LinkedHashMap<>();
+for (int i = 0; i < 100; i++) {
+    expectedData.put(key + ":" + i, "value " + i);
+}
+
 Set<String> result = new LinkedHashSet<>();
 ClusterScanCursor cursor = ClusterScanCursor.initalCursor();
 while (!cursor.isFinished()) {
-    final Object[] response = clusterClient.scan(cursor).get();
-    cursor.releaseCursorHandle();
+     final Object[] response = clusterClient.scan(cursor).get();
+     cursor.releaseCursorHandle();
 
      cursor = (ClusterScanCursor) response[0];
      final Object[] data = (Object[]) response[1];
-      for (Object datum : data) {
-           result.add(datum.toString());
+     for (Object datum : data) {
+         result.add(datum.toString());
       }
 }
 cursor.releaseCursorHandle();
