@@ -152,6 +152,7 @@ The `ScanState` is not held as a static or global object. Instead, a `ClusterSca
 ### Creating a ClusterScanCursor
 
 To start iterating, create a `ClusterScanCursor`:
+
 In python:
 ```py
 cursor = ClusterScanCursor()
