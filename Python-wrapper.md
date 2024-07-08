@@ -1,22 +1,22 @@
 ## Client Initialization
 
-Valkey GLIDE provides support for both [Redis Cluster](https://github.com/aws/glide-for-redis/wiki/Python-wrapper#redis-cluster) and [Redis Standalone](https://github.com/aws/glide-for-redis/wiki/Python-wrapper#redis-standalone) configurations. Please refer to the relevant section based on your specific setup.
+Valkey GLIDE provides support for both [Cluster](https://github.com/aws/glide-for-redis/wiki/Python-wrapper#redis-cluster) and [Standalone](https://github.com/aws/glide-for-redis/wiki/Python-wrapper#redis-standalone) configurations. Please refer to the relevant section based on your specific setup.
 
-### Redis Cluster
+### Cluster
 
-Valkey GLIDE supports [Redis Cluster](https://redis.io/docs/reference/cluster-spec) deployments, where the Redis database is partitioned across multiple primary Redis shards, with each shard being represented by a primary node and zero or more replica nodes.. 
+Valkey GLIDE supports [Cluster](https://valkey.io/docs/topics/cluster-spec) deployments, where the database is partitioned across multiple primary shards, with each shard being represented by a primary node and zero or more replica nodes.. 
 
 
 To initialize a `GlideClusterClient`, you need to provide a `GlideClusterClientConfiguration` that includes the addresses of initial seed nodes. Valkey GLIDE automatically discovers the entire cluster topology, eliminating the necessity of explicitly listing all cluster nodes.
 
 #### **Connecting to a Cluster**
 
-The `NodeAddress` class represents the host and port of a Redis node. The host can be either an IP address, a hostname, or a fully qualified domain name (FQDN).
+The `NodeAddress` class represents the host and port of a cluster node. The host can be either an IP address, a hostname, or a fully qualified domain name (FQDN).
 
-#### Example - Connecting to a Redis cluster
+#### Example - Connecting to a cluster
 
 ```python
-addresses = [NodeAddress(host="redis.example.com", port=6379)]
+addresses = [NodeAddress(host="address.example.com", port=6379)]
 client_config = GlideClusterClientConfiguration(addresses)
 
 client = await GlideClusterClient.create(client_config)
@@ -24,38 +24,38 @@ client = await GlideClusterClient.create(client_config)
 
 #### Request Routing
 
-In the Redis cluster, data is divided into slots, and each primary node within the cluster is responsible for specific slots. Valkey GLIDE adheres to [Redis OSS guidelines](https://redis.io/docs/reference/command-tips/#request_policy) when determining the node(s) to which a command should be sent in clustering mode. 
+In the cluster, data is divided into slots, and each primary node within the cluster is responsible for specific slots. Valkey GLIDE adheres to [Valkey OSS guidelines](https://valkey.io/docs/topics/command-tips/#:~:text=_script%20flag.-,request_policy,-This%20tip%20can) when determining the node(s) to which a command should be sent in clustering mode. 
 
 For more details on the routing of specific commands, please refer to the documentation within the code.
 
 #### Response Aggregation
 
-When requests are dispatched to multiple shards in a cluster (as discussed in the Request routing section), the Redis client needs to aggregate the responses for a given command. Valkey GLIDE follows [Redis OSS guidelines](https://redis.io/docs/reference/command-tips/#response_policy) for determining how to aggregate the responses from multiple shards within a cluster. 
+When requests are dispatched to multiple shards in a cluster (as discussed in the Request routing section), the client needs to aggregate the responses for a given command. Valkey GLIDE follows [Valkey OSS guidelines](https://valkey.io/docs/topics/command-tips/#:~:text=the%20SCAN%20command.-,response_policy,-This%20tip%20can) for determining how to aggregate the responses from multiple shards within a cluster. 
 
 To learn more about response aggregation for specific commands, please refer to the documentation within the code.
 
 #### Topology Updates
 
-The cluster's topology can change over time. New nodes can be added or removed, and the primary node owning a specific slot may change. Valkey GLIDE is designed to automatically rediscover the topology whenever Redis indicates a change in slot ownership. This ensures that the Valkey GLIDE client stays in sync with the cluster's topology.
+The cluster's topology can change over time. New nodes can be added or removed, and the primary node owning a specific slot may change. Valkey GLIDE is designed to automatically rediscover the topology whenever the server indicates a change in slot ownership. This ensures that the Valkey GLIDE client stays in sync with the cluster's topology.
 
-### Redis Standalone 
+### Standalone 
 
-Valkey GLIDE also supports Redis Standalone deployments, where the Redis database is hosted on a single primary node, optionally with replica nodes. To initialize a `GlideClient`  for a standalone Redis setup, you should create a `GlideClientConfiguration` that includes the addresses of primary and all replica nodes.
+Valkey GLIDE also supports Standalone deployments, where the database is hosted on a single primary node, optionally with replica nodes. To initialize a `GlideClient` for a standalone setup, you should create a `GlideClientConfiguration` that includes the addresses of primary and all replica nodes.
 
-#### **Example - Connecting to a standalone Redis** 
+#### **Example - Connecting to a standalone** 
 
 ```python
 addresses = [
-    NodeAddress(host="valkey_primary.example.com", port=6379),
-    NodeAddress(host="valkey_replica1.example.com", port=6379),
-    NodeAddress(host="valkey_replica2.example.com", port=6379)
+    NodeAddress(host="primary.example.com", port=6379),
+    NodeAddress(host="replica1.example.com", port=6379),
+    NodeAddress(host="replica2.example.com", port=6379)
   ]
 client_config = GlideClientConfiguration(addresses)
 
 client = await GlideClient.create(client_config)
 ```
 
-## Redis commands
+## Valkey commands
 For information on the supported commands and their corresponding parameters, we recommend referring to the documentation in the code. This documentation provides in-depth insights into the usage and options available for each command.
 
 ## Advanced Configuration Settings
@@ -68,15 +68,15 @@ Valkey GLIDE also offers support for an authenticated connection mode.
 
 In authenticated mode, you have the following options:
 
-* Use both a username and password, which is recommended and configured through [ACLs](https://redis.io/docs/management/security/acl) on the Redis server.
-* Use a password only, which is applicable if Redis is configured with the [requirepass](https://redis.io/docs/management/security/#authentication) setting.
+* Use both a username and password, which is recommended and configured through [ACLs](https://valkey.io/docs/topics/acl/) on the server.
+* Use a password only, which is applicable if the server is configured with the [requirepass](https://valkey.io/docs/topics/security/#:~:text=all%20the%20interfaces.-,Authentication,-Valkey%20provides%20two) setting.
 
-To provide the necessary authentication credentials to the client, you can use the `RedisCredentials` class.
+To provide the necessary authentication credentials to the client, you can use the `ServerCredentials` class.
 
-#### Example - Connecting with Username and Password to a Redis Cluster
+#### Example - Connecting with Username and Password to a Cluster
 
 ```python
-addresses = [NodeAddress(host="redis.example.com", port=6379)]
+addresses = [NodeAddress(host="address.example.com", port=6379)]
 credentials = ServerCredentials("passwordA", "user1")
 client_config = GlideClusterClientConfiguration(addresses, credentials=credentials)
 
@@ -84,10 +84,14 @@ client = await GlideClusterClient.create(client_config)
 ```
 
 
-#### Example - Connecting with Username and Password to a Redis Standalone
+#### Example - Connecting with Username and Password to a Standalone server
 
 ```python
-addresses = [NodeAddress(host="redis.example.com", port=6379)]
+addresses = [
+    NodeAddress(host="primary.example.com", port=6379),
+    NodeAddress(host="replica1.example.com", port=6379),
+    NodeAddress(host="replica2.example.com", port=6379)
+  ]
 credentials = ServerCredentials("passwordA", "user1")
 client_config = GlideClientConfiguration(addresses, credentials=credentials)
 
@@ -96,22 +100,26 @@ client = await GlideClient.create(client_config)
 
 ### TLS
 
-Valkey GLIDE supports secure TLS connections to a Redis data store.
+Valkey GLIDE supports secure TLS connections to a data store.
 
 It's important to note that TLS support in Valkey GLIDE relies on [rusttls](https://github.com/rustls/rustls). Currently, Valkey GLIDE employs the default rustls settings with no option for customization.
 
-#### Example - Connecting with TLS Mode Enabled to a Redis Cluster
+#### Example - Connecting with TLS Mode Enabled to a Cluster
 
 ```python
-addresses = [NodeAddress(host="redis.example.com", port=6379)]
+addresses = [NodeAddress(host="address.example.com", port=6379)]
 client_config = GlideClusterClientConfiguration(addresses, use_tls=True)
 
 client = await GlideClusterClient.create(client_config)
 ```
-#### Example - Connecting with TLS Mode Enabled to a Redis Standalone
+#### Example - Connecting with TLS Mode Enabled to a Standalone server
 
 ```python
-addresses = [NodeAddress(host="redis.example.com", port=6379)]
+addresses = [
+    NodeAddress(host="primary.example.com", port=6379),
+    NodeAddress(host="replica1.example.com", port=6379),
+    NodeAddress(host="replica2.example.com", port=6379)
+  ]
 client_config = GlideClientConfiguration(addresses, use_tls=True)
 
 client = await GlideClient.create(client_config)
@@ -131,7 +139,7 @@ Valkey GLIDE provides support for next read strategies, allowing you to choose t
 #### Example - Use PREFER_REPLICA Read Strategy
 
 ```python
-addresses = [NodeAddress(host="redis.example.com", port=6379)]
+addresses = [NodeAddress(host="address.example.com", port=6379)]
 client_config = GlideClusterClientConfiguration(addresses, read_from=ReadFrom.PREFER_REPLICA)
 
 client = await GlideClusterClient.create(client_config)
@@ -151,13 +159,13 @@ Valkey GLIDE allows you to configure timeout settings and reconnect strategies. 
 |reconnect_strategy	|The reconnection strategy defines how and when reconnection attempts are made in the event of connection failures	|Exponential backoff	|
 
 **Notes:**
-1. In the case of Redis Standalone, the only reconnect strategy currently supported is exponential backoff.
-2. Regarding Redis Cluster, an exponential backoff strategy is **currently in the process of being developed**. In the event of a disconnection, a single reconnect attempt is initiated per request.
+1. In the case of a Standalone server, the only reconnect strategy currently supported is exponential backoff.
+2. Regarding a Cluster, an exponential backoff strategy is **currently in the process of being developed**. In the event of a disconnection, a single reconnect attempt is initiated per request.
 
 #### Example - Setting Increased Request Timeout for Long-Running Commands
 
 ```python
-addresses = [NodeAddress(host="redis.example.com", port=6379)]
+addresses = [NodeAddress(host="address.example.com", port=6379)]
 client_config = GlideClusterClientConfiguration(addresses, request_timeout=500)
 
 client = await GlideClusterClient.create(client_config)
