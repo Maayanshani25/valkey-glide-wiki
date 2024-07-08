@@ -42,48 +42,41 @@ Callback is a function, which takes two arguments - an incoming message and an a
 MessageCallback callback =
     (msg, context) -> System.out.printf("Received %s, context %s\n", msg, context);
 
-var regularClient =
-    GlideClient.createClient(
-            GlideClientConfiguration.builder()
-                .address(NodeAddress.builder().port(6379).build())
-                .requestTimeout(3000)
-                .subscriptionConfiguration(               // subscriptions are configured here
-                    StandaloneSubscriptionConfiguration.builder()
-                        .subscription(EXACT, "ch1")       // this forces client to submit "SUBSCRIBE ch1" command and re-submit it on reconnection
-                        .subscription(EXACT, "ch2")
-                        .subscription(PATTERN, "chat*")   // this is backed by "PSUBSCRIBE chat*" command
-                        .callback(callback)
-                        .callback(callback, context)      // callback or callback with context are configured here
-                        .build())
-                .build())
-        .get();
-
-// work with client
-
-regularClient.close(); // unsubscribe happens here
+GlideClientConfiguration config = GlideClientConfiguration.builder()
+        .address(NodeAddress.builder().port(6379).build())
+        .requestTimeout(3000)
+        // subscriptions are configured here
+        .subscriptionConfiguration(StandaloneSubscriptionConfiguration.builder()
+            .subscription(EXACT, "ch1")       // this forces client to submit "SUBSCRIBE ch1" command and re-submit it on reconnection
+            .subscription(EXACT, "ch2")
+            .subscription(PATTERN, "chat*")   // this is backed by "PSUBSCRIBE chat*" command
+            .callback(callback)
+             .callback(callback, context)      // callback or callback with context are configured here    
+             .build())
+        .build());
+try (var regularClient = GlideClient.createClient(config).get()) {
+    // work with client
+} // unsubscribe happens here
 ```
 
 #### Configuration without callback
 
 ```java
-var regularClient =
-    GlideClient.createClient(
-            GlideClientConfiguration.builder()
-                .address(NodeAddress.builder().port(6379).build())
-                .requestTimeout(3000)
-                .subscriptionConfiguration(               // subscriptions are configured here
-                    StandaloneSubscriptionConfiguration.builder()
-                        .subscription(EXACT, Set.of("ch1", "ch2"))   // there is option to set multiple subscriptions at a time
-                        .subscription(Map.of(PATTERN, "chat*", EXACT, Set.of("ch1", "ch2")))
-                                                                     // or even all subscriptions at a time
-                        .build())                                    // no callback is configured
-                .build())
-        .get();
+GlideClientConfiguration config = GlideClientConfiguration.builder()
+        .address(NodeAddress.builder().port(6379).build())
+        .requestTimeout(3000)
+        // subscriptions are configured here
+        .subscriptionConfiguration(StandaloneSubscriptionConfiguration.builder()
+                .subscription(EXACT, Set.of("ch1", "ch2"))   // there is option to set multiple subscriptions at a time
+                .subscription(Map.of(PATTERN, "chat*", EXACT, Set.of("ch1", "ch2")))
+                                                             // or even all subscriptions at a time
+                .build())                                    // no callback is configured
+        .build())
+try (var regularClient = GlideClient.createClient(config).get()) {
+    Message msg = regularClient.tryGetPubSubMessage(); // sync
+    Message msg = regularClient.getPubSubMessage().get(); // async
+}
 
-// wait for messages
-
-Message msg = regularClient.tryGetPubSubMessage(); // sync
-Message msg = regularClient.getPubSubMessage().get(); // async
 ```
 
 ### Python client example
