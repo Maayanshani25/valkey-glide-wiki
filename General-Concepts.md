@@ -43,7 +43,7 @@ MessageCallback callback =
     (msg, context) -> System.out.printf("Received %s, context %s\n", msg, context);
 
 var regularClient =
-    GlideClient.CreateClient(
+    GlideClient.createClient(
             GlideClientConfiguration.builder()
                 .address(NodeAddress.builder().port(6379).build())
                 .requestTimeout(3000)
@@ -67,7 +67,7 @@ regularClient.close(); // unsubscribe happens here
 
 ```java
 var regularClient =
-    GlideClient.CreateClient(
+    GlideClient.createClient(
             GlideClientConfiguration.builder()
                 .address(NodeAddress.builder().port(6379).build())
                 .requestTimeout(3000)
