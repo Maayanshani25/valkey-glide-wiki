@@ -1,13 +1,13 @@
 ## Client Initialization
 
-GLIDE for Redis provides support for both [Redis Cluster](https://github.com/aws/glide-for-redis/wiki/Java-wrapper#redis-cluster) and [Redis Standalone](https://github.com/aws/glide-for-redis/wiki/Java-wrapper#redis-standalone) and configurations. Please refer to the relevant section based on your specific setup.
+Valkey GLIDE provides support for both [Redis Cluster](https://github.com/aws/glide-for-redis/wiki/Java-wrapper#redis-cluster) and [Redis Standalone](https://github.com/aws/glide-for-redis/wiki/Java-wrapper#redis-standalone) and configurations. Please refer to the relevant section based on your specific setup.
 
 ### Redis Cluster
 
 GLIDE for Redis supports [Redis Cluster](https://redis.io/docs/reference/cluster-spec) deployments, where the Redis database is partitioned across multiple primary Redis shards, with each shard being represented by a primary node and zero or more replica nodes. 
 
 
-To initialize a [`RedisClusterClient`](https://github.com/aws/glide-for-redis/blob/main/java/client/src/main/java/glide/api/RedisClusterClient.java), you need to provide a [`RedisClusterClientConfiguration`](https://github.com/aws/glide-for-redis/blob/main/java/client/src/main/java/glide/api/models/configuration/RedisClusterClientConfiguration.java) that includes the addresses of initial seed nodes. GLIDE for Redis automatically discovers the entire cluster topology, eliminating the necessity of explicitly listing all cluster nodes.
+To initialize a [`RedisClusterClient`](https://github.com/aws/glide-for-redis/blob/main/java/client/src/main/java/glide/api/RedisClusterClient.java), you need to provide a [`GlideClusterClientConfiguration`](https://github.com/aws/glide-for-redis/blob/main/java/client/src/main/java/glide/api/models/configuration/GlideClusterClientConfiguration.java) that includes the addresses of initial seed nodes. Valkey GLIDE automatically discovers the entire cluster topology, eliminating the necessity of explicitly listing all cluster nodes.
 
 #### **Connecting to a Cluster**
 
@@ -21,11 +21,11 @@ NodeAddress address = NodeAddress.builder()
     .port(6379)
     .build();
 
-RedisClusterClientConfiguration config = RedisClusterClientConfiguration.builder()
+GlideClusterClientConfiguration config = GlideClusterClientConfiguration.builder()
     .address(address)
     .build();
 
-RedisClusterClient clusterClient = RedisClusterClient.CreateClient(config).get();
+GlideClusterClient clusterClient = GlideClusterClient.CreateClient(config).get();
 ```
 
 #### Request Routing
@@ -46,12 +46,12 @@ The cluster's topology can change over time. New nodes can be added or removed, 
 
 ### Redis Standalone 
 
-GLIDE for Redis also supports Redis Standalone deployments, where the Redis database is hosted on a single primary node, optionally with replica nodes. To initialize a `RedisClient`  for a standalone Redis setup, you should create a `RedisClientConfiguration` that includes the addresses of primary and all replica nodes.
+GLIDE for Redis also supports Redis Standalone deployments, where the Redis database is hosted on a single primary node, optionally with replica nodes. To initialize a `GlideClient`  for a standalone Redis setup, you should create a `GlideClientConfiguration` that includes the addresses of primary and all replica nodes.
 
 #### **Example - Connecting to a standalone Redis** 
 
 ```java
-RedisClientConfiguration config = RedisClientConfiguration.builder()
+GlideClientConfiguration config = GlideClientConfiguration.builder()
     .address(NodeAddress.builder()
         .host("redis_primary.example.com")
         .port(6379)
@@ -66,19 +66,19 @@ RedisClientConfiguration config = RedisClientConfiguration.builder()
         .build())
     .build();
 
-RedisClient standaloneClient = RedisClient.CreateClient(config).get();
+GlideClient standaloneClient = GlideClient.CreateClient(config).get();
 ```
 
-## Redis Commands
+## Glide Commands
 For information on the supported commands and their corresponding parameters, we recommend referring to [the documentation in the code](https://github.com/aws/glide-for-redis/tree/main/java/client/src/main/java/glide/api/commands). This documentation provides in-depth insights into the usage and options available for each command.
 
 ## Advanced Configuration Settings
 
 ### Authentication
 
-By default, when connecting to Redis, GLIDE for Redis operates in an unauthenticated mode.
+By default, when connecting to Valkey, Valkey GLIDE operates in an unauthenticated mode.
 
-GLIDE for Redis also offers support for an authenticated connection mode. 
+Valkey GLIDE also offers support for an authenticated connection mode. 
 
 In authenticated mode, you have the following options:
 
@@ -90,48 +90,48 @@ To provide the necessary authentication credentials to the client, you can use t
 #### Example - Connecting with Username and Password to a Redis Cluster
 
 ```java
-RedisClusterClientConfiguration config = RedisClusterClientConfiguration.builder() 
+GlideClusterClientConfiguration config = GlideClusterClientConfiguration.builder() 
     .address(NodeAddress.builder()
         .host("redis.example.com")
         .port(6379)
         .build())
-    .credentials(RedisCredentials.builder()
+    .credentials(ServerCredentials.builder()
         .username("user1")
         .password("passwordA")
         .build())
     .build();
 
-RedisClusterClient client = RedisClusterClient.CreateClient(config).get();
+GlideClusterClient client = GlideClusterClient.CreateClient(config).get();
 ```
 
 
 #### Example - Connecting with Username and Password to a Redis Standalone
 
 ```java
-RedisClientConfiguration config = RedisClientConfiguration.builder()
+GlideClientConfiguration config = GlideClientConfiguration.builder()
     .address(NodeAddress.builder()
         .host("redis.example.com")
         .port(6379)
         .build())
-    .credentials(RedisCredentials.builder()
+    .credentials(ServerCredentials.builder()
         .username("user1")
         .password("passwordA")
         .build())
     .build();
 
-RedisClient client = RedisClient.CreateClient(config).get();
+GlideClient client = GlideClient.CreateClient(config).get();
 ```
 
 ### TLS
 
-GLIDE for Redis supports secure TLS connections to a Redis data store.
+Valkey GLIDE supports secure TLS connections to a Redis data store.
 
-It's important to note that TLS support in GLIDE for Redis relies on [Rusttls](https://github.com/rustls/rustls). Currently, GLIDE for Redis employs the default rustls settings with no option for customization.
+It's important to note that TLS support in GLIDE for Redis relies on [Rusttls](https://github.com/rustls/rustls). Currently, Valkey GLIDE employs the default rustls settings with no option for customization.
 
 #### Example - Connecting with TLS Mode Enabled to a Redis Cluster
 
 ```java
-RedisClusterClientConfiguration config = RedisClusterClientConfiguration.builder()
+GlideClusterClientConfiguration config = GlideClusterClientConfiguration.builder()
     .address(NodeAddress.builder()
         .host("redis.example.com")
         .port(6379)
@@ -139,13 +139,13 @@ RedisClusterClientConfiguration config = RedisClusterClientConfiguration.builder
     .useTLS(true)
     .build();
 
-RedisClusterClient client = RedisClusterClient.CreateClient(config).get();
+GlideClusterClient client = GlideClusterClient.CreateClient(config).get();
 ```
 
 #### Example - Connecting with TLS Mode Enabled to a Redis Standalone
 
 ```java
-RedisClientConfiguration config = RedisClientConfiguration.builder()
+GlideClientConfiguration config = GlideClientConfiguration.builder()
     .address(NodeAddress.builder()
         .host("redis.example.com")
         .port(6379)
@@ -153,14 +153,14 @@ RedisClientConfiguration config = RedisClientConfiguration.builder()
     .useTLS(true)
     .build();
 
-RedisClient client = RedisClient.CreateClient(config).get();
+GlideClient client = GlideClient.CreateClient(config).get();
 ```
 
 ### Read Strategy
 
-By default, GLIDE for Redis directs read commands to the primary node that owns a specific slot. For applications that prioritize read throughput and can tolerate possibly stale data, GLIDE for Redis provides the flexibility to route reads to replica nodes.
+By default, Valkey GLIDE directs read commands to the primary node that owns a specific slot. For applications that prioritize read throughput and can tolerate possibly stale data, Valkey GLIDE provides the flexibility to route reads to replica nodes.
 
-GLIDE for Redis provides support for next read strategies, allowing you to choose the one that best fits your specific use case.
+Valkey GLIDE provides support for next read strategies, allowing you to choose the one that best fits your specific use case.
 
 |Strategy	|Description	|
 |---	|---	|
@@ -170,14 +170,14 @@ GLIDE for Redis provides support for next read strategies, allowing you to choos
 #### Example - Use PREFER_REPLICA Read Strategy
 
 ```java
-RedisClusterClientConfiguration config = RedisClusterClientConfiguration.builder()
+GlideClusterClientConfiguration config = GlideClusterClientConfiguration.builder()
     .address(NodeAddress.builder()
         .host("redis.example.com")
         .port(6379)
         .build())
     .readFrom(ReadFrom.PREFER_REPLICA)
     .build()
-RedisClusterClient client = RedisClusterClient.CreateClient(config).get();
+GlideClusterClient client = GlidesClusterClient.CreateClient(config).get();
 
 client.set("key1", "val1").get();
 
@@ -187,7 +187,7 @@ client.get("key1").get();
 
 ### Timeouts and Reconnect Strategy
 
-GLIDE for Redis allows you to configure timeout settings and reconnect strategies. These configurations can be applied through the [`RedisClusterClientConfiguration`](https://github.com/aws/glide-for-redis/blob/main/java/client/src/main/java/glide/api/models/configuration/RedisClusterClientConfiguration.java) and [`RedisClientConfiguration`](https://github.com/aws/glide-for-redis/blob/main/java/client/src/main/java/glide/api/models/configuration/RedisClientConfiguration.java) parameters.
+Valkey GLIDE allows you to configure timeout settings and reconnect strategies. These configurations can be applied through the [`GlideClusterClientConfiguration`](https://github.com/aws/glide-for-redis/blob/main/java/client/src/main/java/glide/api/models/configuration/GlideClusterClientConfiguration.java) and [`GlideClientConfiguration`](https://github.com/aws/glide-for-redis/blob/main/java/client/src/main/java/glide/api/models/configuration/GlideClientConfiguration.java) parameters.
 
 
 |Configuration setting	|Description	|**Default value**	|
@@ -202,12 +202,12 @@ GLIDE for Redis allows you to configure timeout settings and reconnect strategie
 #### Example - Setting Increased Request Timeout for Long-Running Commands
 
 ```java
-RedisClusterClient config = RedisClusterClientConfiguration.builder()
+GlideClusterClient config = GlideClusterClientConfiguration.builder()
     .address(NodeAddress.builder()
         .host("redis.example.com")
         .port(6379).build())
     .requestTimeout(500)
     .build();
 
-RedisClusterClient client = RedisClusterClient.CreateClient(config).get();
+GlideClusterClient client = GlideClusterClient.CreateClient(config).get();
 ```
