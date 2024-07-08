@@ -1,6 +1,6 @@
 ## Client Initialization
 
-Valkey GLIDE provides support for both [Cluster](https://github.com/aws/glide-for-redis/wiki/Python-wrapper#cluster) and [Standalone](https://github.com/aws/glide-for-redis/wiki/Python-wrapper#standalone) configurations. Please refer to the relevant section based on your specific setup.
+Valkey GLIDE provides support for both [Cluster](https://github.com/valkey-io/valkey-glide/wiki/Python-wrapper#cluster) and [Standalone](https://github.com/valkey-io/valkey-glide/wiki/Python-wrapper#standalone) configurations. Please refer to the relevant section based on your specific setup.
 
 ### Cluster
 

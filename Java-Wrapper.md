@@ -1,12 +1,12 @@
 ## Client Initialization
 
-Valkey GLIDE provides support for both [Cluster](https://github.com/aws/glide-for-redis/wiki/Java-wrapper#cluster) and [Standalone](https://github.com/aws/glide-for-redis/wiki/Java-wrapper#standalone) and configurations. Please refer to the relevant section based on your specific setup.
+Valkey GLIDE provides support for both [Cluster](https://github.com/valkey-io/valkey-glide/wiki/Java-wrapper#cluster) and [Standalone](https://github.com/valkey-io/valkey-glide/wiki/Java-wrapper#standalone) and configurations. Please refer to the relevant section based on your specific setup.
 
 ### Cluster
 
 Valkey GLIDE supports [Cluster](https://valkey.io/docs/topics/cluster-spec) deployments, where the database is partitioned across multiple primary shards, with each shard being represented by a primary node and zero or more replica nodes.
 
-To initialize a [`GlideClusterClient`](https://github.com/aws/glide-for-redis/blob/main/java/client/src/main/java/glide/api/GlideClusterClient.java), you need to provide a [`GlideClusterClientConfiguration`](https://github.com/aws/glide-for-redis/blob/main/java/client/src/main/java/glide/api/models/configuration/GlideClusterClientConfiguration.java) that includes the addresses of initial seed nodes. Valkey GLIDE automatically discovers the entire cluster topology, eliminating the necessity of explicitly listing all cluster nodes.
+To initialize a [`GlideClusterClient`](https://github.com/valkey-io/valkey-glide/blob/main/java/client/src/main/java/glide/api/GlideClusterClient.java), you need to provide a [`GlideClusterClientConfiguration`](https://github.com/valkey-io/valkey-glide/blob/main/java/client/src/main/java/glide/api/models/configuration/GlideClusterClientConfiguration.java) that includes the addresses of initial seed nodes. Valkey GLIDE automatically discovers the entire cluster topology, eliminating the necessity of explicitly listing all cluster nodes.
 
 #### **Connecting to a Cluster**
 
@@ -31,13 +31,13 @@ GlideClusterClient clusterClient = GlideClusterClient.CreateClient(config).get()
 
 In the cluster, data is divided into slots, and each primary node within the cluster is responsible for specific slots. Valkey GLIDE adheres to [Valkey OSS guidelines](https://valkey.io/docs/topics/command-tips/#:~:text=_script%20flag.-,request_policy,-This%20tip%20can) when determining the node(s) to which a command should be sent in clustering mode. 
 
-For more details on the routing of specific commands, please refer to [the documentation within the code](https://github.com/aws/glide-for-redis/blob/main/java/client/src/main/java/glide/api/models/configuration/RequestRoutingConfiguration.java) for routing configuration.
+For more details on the routing of specific commands, please refer to [the documentation within the code](https://github.com/valkey-io/valkey-glide/blob/main/java/client/src/main/java/glide/api/models/configuration/RequestRoutingConfiguration.java) for routing configuration.
 
 #### Response Aggregation
 
 When requests are dispatched to multiple shards in a cluster (as discussed in the Request routing section), the client needs to aggregate the responses for a given command. Valkey GLIDE follows [Valkey OSS guidelines](https://valkey.io/docs/topics/command-tips/#:~:text=the%20SCAN%20command.-,response_policy,-This%20tip%20can) for determining how to aggregate the responses from multiple shards within a cluster. 
 
-To learn more about response aggregation for specific commands, please refer to [the documentation within the code](https://github.com/aws/glide-for-redis/blob/main/java/client/src/main/java/glide/api/models/ClusterValue.java).
+To learn more about response aggregation for specific commands, please refer to [the documentation within the code](https://github.com/valkey-io/valkey-glide/blob/main/java/client/src/main/java/glide/api/models/ClusterValue.java).
 
 #### Topology Updates
 
@@ -70,7 +70,7 @@ GlideClient standaloneClient = GlideClient.CreateClient(config).get();
 
 ## Valkey Commands
 
-For information on the supported commands and their corresponding parameters, we recommend referring to [the documentation in the code](https://github.com/aws/glide-for-redis/tree/main/java/client/src/main/java/glide/api/commands). This documentation provides in-depth insights into the usage and options available for each command.
+For information on the supported commands and their corresponding parameters, we recommend referring to [the documentation in the code](https://github.com/valkey-io/valkey-glide/tree/main/java/client/src/main/java/glide/api/commands). This documentation provides in-depth insights into the usage and options available for each command.
 
 ## Advanced Configuration Settings
 
@@ -187,7 +187,7 @@ client.get("key1").get();
 
 ### Timeouts and Reconnect Strategy
 
-Valkey GLIDE allows you to configure timeout settings and reconnect strategies. These configurations can be applied through the [`GlideClusterClientConfiguration`](https://github.com/aws/glide-for-redis/blob/main/java/client/src/main/java/glide/api/models/configuration/GlideClusterClientConfiguration.java) and [`GlideClientConfiguration`](https://github.com/aws/glide-for-redis/blob/main/java/client/src/main/java/glide/api/models/configuration/GlideClientConfiguration.java) parameters.
+Valkey GLIDE allows you to configure timeout settings and reconnect strategies. These configurations can be applied through the [`GlideClusterClientConfiguration`](https://github.com/valkey-io/valkey-glide/blob/main/java/client/src/main/java/glide/api/models/configuration/GlideClusterClientConfiguration.java) and [`GlideClientConfiguration`](https://github.com/valkey-io/valkey-glide/blob/main/java/client/src/main/java/glide/api/models/configuration/GlideClientConfiguration.java) parameters.
 
 
 |Configuration setting	|Description	|**Default value**	|
