@@ -24,7 +24,7 @@ GlideClusterClientConfiguration config = GlideClusterClientConfiguration.builder
     .address(address)
     .build();
 
-GlideClusterClient clusterClient = GlideClusterClient.CreateClient(config).get();
+GlideClusterClient clusterClient = GlideClusterClient.createClient(config).get();
 ```
 
 #### Request Routing
@@ -65,7 +65,7 @@ GlideClientConfiguration config = GlideClientConfiguration.builder()
         .build())
     .build();
 
-GlideClient standaloneClient = GlideClient.CreateClient(config).get();
+GlideClient standaloneClient = GlideClient.createClient(config).get();
 ```
 
 ## Valkey Commands
@@ -101,7 +101,7 @@ GlideClusterClientConfiguration config = GlideClusterClientConfiguration.builder
         .build())
     .build();
 
-GlideClusterClient client = GlideClusterClient.CreateClient(config).get();
+GlideClusterClient client = GlideClusterClient.createClient(config).get();
 ```
 
 
@@ -119,7 +119,7 @@ GlideClientConfiguration config = GlideClientConfiguration.builder()
         .build())
     .build();
 
-GlideClient client = GlideClient.CreateClient(config).get();
+GlideClient client = GlideClient.createClient(config).get();
 ```
 
 ### TLS
@@ -139,7 +139,7 @@ GlideClusterClientConfiguration config = GlideClusterClientConfiguration.builder
     .useTLS(true)
     .build();
 
-GlideClusterClient client = GlideClusterClient.CreateClient(config).get();
+GlideClusterClient client = GlideClusterClient.createClient(config).get();
 ```
 
 #### Example - Connecting with TLS Mode Enabled to a Standalone server
@@ -153,7 +153,7 @@ GlideClientConfiguration config = GlideClientConfiguration.builder()
     .useTLS(true)
     .build();
 
-GlideClient client = GlideClient.CreateClient(config).get();
+GlideClient client = GlideClient.createClient(config).get();
 ```
 
 ### Read Strategy
@@ -177,7 +177,7 @@ GlideClusterClientConfiguration config = GlideClusterClientConfiguration.builder
         .build())
     .readFrom(ReadFrom.PREFER_REPLICA)
     .build()
-GlideClusterClient client = GlidesClusterClient.CreateClient(config).get();
+GlideClusterClient client = GlidesClusterClient.createClient(config).get();
 
 client.set("key1", "val1").get();
 
@@ -206,5 +206,5 @@ GlideClusterClient config = GlideClusterClientConfiguration.builder()
     .requestTimeout(500)
     .build();
 
-GlideClusterClient client = GlideClusterClient.CreateClient(config).get();
+GlideClusterClient client = GlideClusterClient.createClient(config).get();
 ```
