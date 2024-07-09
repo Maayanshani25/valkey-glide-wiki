@@ -204,8 +204,8 @@ transaction.select(1)  # Standalone command
 transaction.get("key")
 
 # Execute the transaction
-await client.exec(transaction)
-# Output: [OK, OK, None]
+result = await client.exec(transaction)
+print(result) # Output: [OK, OK, None]
 ```
 
 #### Command Chaining
