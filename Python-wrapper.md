@@ -4,7 +4,7 @@ Valkey GLIDE provides support for both [Cluster](https://github.com/valkey-io/va
 
 ### Cluster
 
-Valkey GLIDE supports [Cluster](https://valkey.io/docs/topics/cluster-spec) deployments, where the database is partitioned across multiple primary shards, with each shard being represented by a primary node and zero or more replica nodes.
+Valkey GLIDE supports [Cluster](https://valkey.io/topics/cluster-spec) deployments, where the database is partitioned across multiple primary shards, with each shard being represented by a primary node and zero or more replica nodes.
 
 
 To initialize a `GlideClusterClient`, you need to provide a `GlideClusterClientConfiguration` that includes the addresses of initial seed nodes. Valkey GLIDE automatically discovers the entire cluster topology, eliminating the necessity of explicitly listing all cluster nodes.
@@ -24,13 +24,13 @@ client = await GlideClusterClient.create(client_config)
 
 #### Request Routing
 
-In the cluster, data is divided into slots, and each primary node within the cluster is responsible for specific slots. Valkey GLIDE adheres to [Valkey OSS guidelines](https://valkey.io/docs/topics/command-tips/#:~:text=_script%20flag.-,request_policy,-This%20tip%20can) when determining the node(s) to which a command should be sent in clustering mode. 
+In the cluster, data is divided into slots, and each primary node within the cluster is responsible for specific slots. Valkey GLIDE adheres to [Valkey OSS guidelines](https://valkey.io/topics/command-tips/#request-policy) when determining the node(s) to which a command should be sent in clustering mode. 
 
 For more details on the routing of specific commands, please refer to the documentation within the code.
 
 #### Response Aggregation
 
-When requests are dispatched to multiple shards in a cluster (as discussed in the Request routing section), the client needs to aggregate the responses for a given command. Valkey GLIDE follows [Valkey OSS guidelines](https://valkey.io/docs/topics/command-tips/#:~:text=the%20SCAN%20command.-,response_policy,-This%20tip%20can) for determining how to aggregate the responses from multiple shards within a cluster. 
+When requests are dispatched to multiple shards in a cluster (as discussed in the Request routing section), the client needs to aggregate the responses for a given command. Valkey GLIDE follows [Valkey OSS guidelines](https://valkey.io/topics/command-tips/#response-policy) for determining how to aggregate the responses from multiple shards within a cluster. 
 
 To learn more about response aggregation for specific commands, please refer to the documentation within the code.
 
@@ -68,8 +68,8 @@ Valkey GLIDE also offers support for an authenticated connection mode.
 
 In authenticated mode, you have the following options:
 
-* Use both a username and password, which is recommended and configured through [ACLs](https://valkey.io/docs/topics/acl/) on the server.
-* Use a password only, which is applicable if the server is configured with the [requirepass](https://valkey.io/docs/topics/security/#:~:text=all%20the%20interfaces.-,Authentication,-Valkey%20provides%20two) setting.
+* Use both a username and password, which is recommended and configured through [ACLs](https://valkey.io/topics/acl/) on the server.
+* Use a password only, which is applicable if the server is configured with the [requirepass](https://valkey.io/topics/security/#authentication) setting.
 
 To provide the necessary authentication credentials to the client, you can use the `ServerCredentials` class.
 
@@ -171,7 +171,7 @@ client = await GlideClusterClient.create(client_config)
 
 ### Transaction
 
-A transaction in Valkey Glide allows you to execute a group of commands in a single, atomic step. This ensures that all commands in the transaction are executed sequentially and without interruption. See https://valkey.io/docs/topics/transactions/
+A transaction in Valkey Glide allows you to execute a group of commands in a single, atomic step. This ensures that all commands in the transaction are executed sequentially and without interruption. See https://valkey.io/topics/transactions/
 
 
 This is equivalent to the Valkey commands [MULTI](https://valkey.io/commands/multi/) / [EXEC](https://valkey.io/commands/exec/).
