@@ -4,7 +4,7 @@ Valkey GLIDE provides support for both [Cluster](https://github.com/valkey-io/va
 
 ### Cluster
 
-Valkey GLIDE supports [Cluster](https://valkey.io/docs/topics/cluster-spec) deployments, where the database is partitioned across multiple primary shards, with each shard being represented by a primary node and zero or more replica nodes.
+Valkey GLIDE supports [Cluster](https://valkey.io/topics/cluster-spec) deployments, where the database is partitioned across multiple primary shards, with each shard being represented by a primary node and zero or more replica nodes.
 
 To initialize a [`GlideClusterClient`](https://github.com/valkey-io/valkey-glide/blob/main/java/client/src/main/java/glide/api/GlideClusterClient.java), you need to provide a [`GlideClusterClientConfiguration`](https://github.com/valkey-io/valkey-glide/blob/main/java/client/src/main/java/glide/api/models/configuration/GlideClusterClientConfiguration.java) that includes the addresses of initial seed nodes. Valkey GLIDE automatically discovers the entire cluster topology, eliminating the necessity of explicitly listing all cluster nodes.
 
