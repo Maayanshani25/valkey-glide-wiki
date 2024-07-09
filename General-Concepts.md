@@ -206,7 +206,7 @@ The `SCAN` command accepts three optional parameters:
 * `COUNT`: Specifies the number of keys to return in a single iteration. The actual number may vary, serving as a hint to the server on the number of steps to perform in each iteration. The default value is 10.
 * `TYPE`: Filters the keys by a specific type.
 ### General Usage Example
-#### Python exampels:
+#### Python examples:
 ```py
 cursor = ClusterScanCursor()
 all_keys = []
@@ -239,7 +239,7 @@ while not cursor.is_finished():
     all_keys.extend(keys)
 print(all_keys)  # Output: [b'key1', b'key2', b'key3']
 ```
-#### Java exampels: 
+#### Java examples: 
 ```java
 String key = "key:test_cluster_scan_simple" + UUID.randomUUID();
 Map<String, String> expectedData = new LinkedHashMap<>();
