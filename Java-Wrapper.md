@@ -212,7 +212,7 @@ GlideClusterClient client = GlideClusterClient.createClient(config).get();
 
 ### Transaction
 
-A transaction in Valkey Glide allows you to execute a group of commands in a single, atomic step. This ensures that all commands in the transaction are executed sequentially and without interruption. See https://valkey.io/topics/transactions/
+A transaction in Valkey Glide allows you to execute a group of commands in a single, atomic step. This ensures that all commands in the transaction are executed sequentially and without interruption. See [Valkey Transactions](https://valkey.io/topics/transactions).
 
 
 This is equivalent to the Valkey commands [MULTI](https://valkey.io/commands/multi/) / [EXEC](https://valkey.io/commands/exec/).
@@ -236,17 +236,17 @@ Transaction objects can be reused. If you need to execute a particular group of 
 Here's a simple example demonstrating how to create and execute a transaction in standalone mode:
 
 ```java
-# Initialize a transaction object
+// Initialize a transaction object
 Transaction transaction = new Transaction();
 
-# Add commands to the transaction
-transaction.set("key", "value")
-transaction.select(1)  # Standalone command
-transaction.get("key")
+// Add commands to the transaction
+transaction.set("key", "value");
+transaction.select(1);  // Standalone command
+transaction.get("key");
 
-# Execute the transaction
+// Execute the transaction
 Object[] result = client.exec(transaction).get();
-System.out.println(result); # Output: [OK, OK, None]
+System.out.println(Arrays.toString(result)); // Output: [OK, OK, None]
 ```
 
 #### Command Chaining
@@ -254,15 +254,15 @@ System.out.println(result); # Output: [OK, OK, None]
 Valkey Glide supports command chaining within a transaction, allowing for a more concise and readable code. Here's how you can use chaining in transactions:
 
 ```java
-# Initialize a cluster transaction object
+// Initialize a cluster transaction object
 ClusterTransaction transaction = new ClusterTransaction();
 
-# Chain commands
-transaction.set("key", "value").get("key")
+// Chain commands
+transaction.set("key", "value").get("key");
 
-# Execute the transaction
+// Execute the transaction
 Object[] result = client.exec(transaction).get();
-System.out.println(result); // Output: [OK, "value"]
+System.out.println(Arrays.toString(result)); // Output: [OK, "value"]
 ```
 
 **Cluster Mode Considerations:** When using `ClusterTransaction`, all keys in the transaction must be mapped to the same slot.
@@ -277,8 +277,8 @@ ClusterTransaction transaction = new ClusterTransaction();  // For cluster mode
 ```
 **Adding Commands:** Use the transaction object to queue up the desired commands.
 ```java
-transaction.set("key", "value")
-transaction.get("key")
+transaction.set("key", "value");
+transaction.get("key");
 ```
 **Executing the Transaction:** Use the `exec` method of the Valkey Glide client to execute the transaction.
 ```java
@@ -288,5 +288,5 @@ client.exec(transaction).get();
 **Handling Results:** The result of the transaction execution will be a list of responses corresponding to each command in the transaction.
 ```java
 Object[] result = client.exec(transaction).get();
-System.out.println(result); // Output: [OK, "value"]
+System.out.println(Arrays.toString(result)); // Output: [OK, "value"]
 ```
