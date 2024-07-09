@@ -16,23 +16,54 @@ However, in some scenarios, opening multiple connections can be more beneficial.
 - **Reading and Writing Large Values**: Valkey has a fairness mechanism to ensure minimal impact on other clients when handling large values. With a multiplex connection, requests are processed sequentially. Thus, large requests can delay the processing of subsequent smaller requests. When dealing with large values or transactions, it is advisable to use a separate client to prevent delays for other requests.
 
 
-## GLIDE PubSub feature
+## GLIDE PubSub support
 
-### Subscription
+The design of the PubSub support aims to unify the various nuances into a coherent interface, minimizing differences between Sharded, Cluster and Standalone flavors.
 
-GLIDE takes responsibility of tracking topology changes in real time and ensures client is kept subscribed regardless of any connectivity issues. If the client is migrated to a new node or re-connected to a node, GLIDE will automatically re-subscribe the client.
-To provide that, GLIDE gets subscription configuration at the moment of client creation. A regular command `SUBSCRIBE`/`PSUBSCRIBE`/`SSUBSCRIBE` cannot trigger connection status tracking, so such API isn't exposed. Due to the same reason, unsubscribing could be done once client closes all connections and shuts down. Unfortunately, there is no option to unsubscribe from one of the channels.
+In addition, GLIDE takes responsibility of tracking topology changes in real time and ensures client is kept subscribed regardless of any connectivity issues.
+Conceptually the PubSub functionality can be divided into 4 actions: Subscribing, Publishing, Receiving and Unsubscribing.
 
-### Receiving the messages
+### Subscribing ###
+Subscribing in GLIDE takes a different approach from the canonical RESP3 protocol. In order to be able to restore subscription state after a topology change or server disconnect, the subscription configuration is immutable and provided during the client creation.
+Thus, the subscription commands such as `SUBSCRIBE`/`PSUBSCRIBE`/`SSUBSCRIBE` are not supported by this model and are not exposed to user. While it is still possible to issue these commands as custom commands, using them alongside this model is not supported and might have unpredictable behavior.
+The subscription configuration is applied to the servers using the following logic:
+- Standalone mode: The subscriptions are applied to a random node - a primary or one of replicas.
+- Cluster node: For both Sharded and Non-sharded subscriptions, the Sharded semantics are used - the subscription is applied to the node holding the slot for subscription's channel/pattern.
 
-All GLIDE clients provide following API to receive incoming messages:
-1. Sync `tryGet` method which returns a message or `null`/`None` if no unread messages left.
-2. Async `get` method which returns a future/promise for the next message.
-3. A callback called for every incoming message.
+Best practice: Due to the implementation of resubscription logic, it is recommended to use a dedicated client for PubSub subscriptions, i.e. The client that has subscriptions is not the client that issues commands.
+This is because in case of topology changes, the internal connections might be reestablished in order to resubscribe on the correct servers.
 
-To avoid conflicts, callback mechanism cannot be activated alongside with first two methods. Meanwhile, `tryGet` and `get` coexist and don't interfere.
-A user can configure client to use the callback when client configuration is created. This configuration cannot be changed later. If callback is not configured, incoming messages are available through `tryGet` and `get`.
-Callback is a function, which takes two arguments - an incoming message and an arbitrary user-defined context. The context is stored and configured together with the callback.
+Note, since GLIDE implements the automatic reconnections and resubscriptions on behalf of the user, there is a possibility for the messages to get lost during these activities.
+This is not a GLIDE-introduced characteristic, since the same effects will be present if user deals with such issues by himself.
+Since RESP protocol does not guaranty strong delivery semantics for the PubSub functionality, GLIDE does not introduce additional constrains in that regard.
+
+### Publishing ###
+Publishing functionality is unified into a singe command method with an optional/default parameter for Sharded mode (only for Cluster mode clients).
+The routing logic for this command is as follows:
+- Standalone mode: The command is routed to a primary or a replica in case `read-only` mode is configured.
+- Cluster mode: The command is routed to the server holding the slot for command's channel
+
+### Receiving ###
+There are 3 flavors for receiving messages:
+- Polling: a non-blocking method, typically named `tryGetMessage`. Returns next available message or nothing if no messages are available.
+- Async: an async method, returning a completable future, typically named `getMessage`.
+- Callback: an user-provided callback function, that receives the incoming message along with the user-provided context. Note, the callback code is required to be threadsave for applicable languages.
+
+The intended flavor is selected during the client creation with the subscription configuration - when the configuration includes a callback (and an optional context), the incoming messages will be passed to that callback as they arrive, calls to the polling/async methods are prohibited and will fail.
+Note that in case of async/polling, the incoming messages will be buffered for the extraction in an unbounded buffer. The user should take care to drain the incoming messaged in a timely manner, in order not to strain the memory subsystem.
+
+### Unsubscribing ###
+Since the subscription configuration is immutable and applied upon client's creation, the model does not provide methods for unsubscribing during the lifetime of the client.
+In addition, issuing commands such as `UNSUBSCRIBE`/`PUNSUBSCRIBE`/`SUNSUBSCRIBE` (via the means of custom commands interface) has unpredictable behavior.
+The subscriptions will be wiped from servers as a result of client's closure, typically as a result of client's object destructor.
+Note, some languages such as Python, might require an explicit call to cleaning method. e.g:
+```py
+ client.close()
+```
+
+### Unimplemented commands ###
+The `PUBSUB` commands will be added to the following releases of GLIDE.
+
 
 ### Java client example
 
@@ -47,15 +78,15 @@ GlideClientConfiguration config = GlideClientConfiguration.builder()
         .requestTimeout(3000)
         // subscriptions are configured here
         .subscriptionConfiguration(StandaloneSubscriptionConfiguration.builder()
-            .subscription(EXACT, "ch1")       // this forces client to submit "SUBSCRIBE ch1" command and re-submit it on reconnection
-            .subscription(EXACT, "ch2")
-            .subscription(PATTERN, "chat*")   // this is backed by "PSUBSCRIBE chat*" command
+            .subscription(EXACT, "ch1")       // Listens for messages published to 'ch1' channel, in unsharded mode
+            .subscription(EXACT, "ch2")       // Listens for messages published to 'ch2' channel, in unsharded mode
+            .subscription(PATTERN, "chat*")   // Listens for messages published to channels matched by 'chat*' glob pattern, in unsharded mode
             .callback(callback)
-             .callback(callback, context)      // callback or callback with context are configured here    
+             .callback(callback, context)     // callback or callback with context are configured here
              .build())
         .build());
 try (var regularClient = GlideClient.createClient(config).get()) {
-    // work with client
+    // Do some work/wait - the callbacks will be dispatched on incomming messages
 } // unsubscribe happens here
 ```
 
@@ -73,9 +104,9 @@ GlideClientConfiguration config = GlideClientConfiguration.builder()
                 .build())                                    // no callback is configured
         .build())
 try (var regularClient = GlideClient.createClient(config).get()) {
-    Message msg = regularClient.tryGetPubSubMessage(); // sync
-    Message msg = regularClient.getPubSubMessage().get(); // async
-}
+    Message msg = regularClient.tryGetPubSubMessage(); // sync, does not block
+    Message msg = regularClient.getPubSubMessage().get(); // async, waits for the next message
+} // unsubscribe happens here
 
 ```
 
@@ -87,48 +118,66 @@ try (var regularClient = GlideClient.createClient(config).get()) {
 def callback (msg: CoreCommands.PubSubMsg, context: Any):
     print(f"Received {msg}, context {context}\n")
 
-config = GlideClientConfiguration(
+listening_config = GlideClientConfiguration(
     [NodeAddress("localhost", 6379)],
     pubsub_subscriptions = GlideClientConfiguration.PubSubSubscriptions(          # subscriptions are configured here
         channels_and_patterns={
-	    GlideClientConfiguration.PubSubChannelModes.Exact: {"ch1", "ch2"},    # this forces client to submit "SUBSCRIBE ch1 ch2" command and re-submit it on reconnection
-	    GlideClientConfiguration.PubSubChannelModes.Pattern: {"chat*"}        # this is backed by "PSUBSCRIBE chat*" command
-	},
+            GlideClientConfiguration.PubSubChannelModes.Exact: {"ch1", "ch2"},    # Listens for messages published to 'ch1' and 'ch2' channel, in unsharded mode
+            GlideClientConfiguration.PubSubChannelModes.Pattern: {"chat*"}        # Listens for messages published to channels matched by 'chat*' glob pattern, in unsharded mode
+	    },
         callback=callback,
         context=context,
     )
 )
 
-client = await GlideClient.create(config)
+publishing_config = GlideClientConfiguration(
+    [NodeAddress("localhost", 6379)]
+)
 
-## wait for messages
+listening_client = await GlideClient.create(listening_config)
+publishing_client = await GlideClient.create(publishing_config)
 
-await client.close()    # unsubscribe happens here
+# publish message on ch1 channel
+await publishing_client.publish("Test message", "ch1")
+
+# Do some work/wait - the callback will receive "Test message" message
+
+await listening_client.close()    # unsubscribe happens here
 ```
 
 
 #### Configuration without callback
 
 ```py
-config = GlideClientConfiguration(
+listening_config = GlideClientConfiguration(
     [NodeAddress("localhost", 6379)],
     pubsub_subscriptions = GlideClientConfiguration.PubSubSubscriptions(          # subscriptions are configured here
-        {
-	    GlideClientConfiguration.PubSubChannelModes.Exact: {"ch1", "ch2"},    # this forces client to submit "SUBSCRIBE ch1 ch2" command and re-submit it on reconnection
-	    GlideClientConfiguration.PubSubChannelModes.Pattern: {"chat*"}        # this is backed by "PSUBSCRIBE chat*" command
-	},
-	None, None
+        channels_and_patterns={
+            GlideClientConfiguration.PubSubChannelModes.Exact: {"ch1", "ch2"},    # Listens for messages published to 'ch1' and 'ch2' channel, in unsharded mode
+            GlideClientConfiguration.PubSubChannelModes.Pattern: {"chat*"}        # Listens for messages published to channels matched by 'chat*' glob pattern, in unsharded mode
+	    },
+        None,
+        None,
     )
 )
 
-client = await GlideClient.create(config)
+publishing_config = GlideClientConfiguration(
+    [NodeAddress("localhost", 6379)]
+)
 
-## wait for messages
+listening_client = await GlideClient.create(listening_config)
+publishing_client = await GlideClient.create(publishing_config)
 
-message = client.try_get_pubsub_message()    # sync method to get next message
-message = await client.get_pubsub_message()  # async method to get a message
+# publish message on ch1 channel
+await publishing_client.publish("Test message", "ch1")
 
-await client.close()    # unsubscribe happens here
+# waits for "Test message" to arrive
+message = await listening_client.get_pubsub_message()
+
+# returns None since only one message was published
+message = listening_client.try_get_pubsub_message()
+
+await listening_client.close()    # unsubscribe happens here
 ```
 
 
