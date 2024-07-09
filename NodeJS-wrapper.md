@@ -274,11 +274,11 @@ Valkey Glide supports command chaining within a transaction, allowing for a more
 const clusterTransaction = new ClusterTransaction();
 
 // Chain commands
-clusterTransaction.set("key", "value").get("key")
+clusterTransaction.set('key', 'value').get('key')
 
 // Execute the transaction
 const result = await client.exec(clusterTransaction);
-console.log(result); // Output: [OK, "value"]
+console.log(result); // Output: [OK, 'value']
 ```
 
 **Cluster Mode Considerations:** When using `ClusterTransaction`, all keys in the transaction must be mapped to the same slot.
