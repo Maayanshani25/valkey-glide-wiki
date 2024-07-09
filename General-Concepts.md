@@ -16,54 +16,47 @@ However, in some scenarios, opening multiple connections can be more beneficial.
 - **Reading and Writing Large Values**: Valkey has a fairness mechanism to ensure minimal impact on other clients when handling large values. With a multiplex connection, requests are processed sequentially. Thus, large requests can delay the processing of subsequent smaller requests. When dealing with large values or transactions, it is advisable to use a separate client to prevent delays for other requests.
 
 
-## GLIDE PubSub support
+## GLIDE PubSub Support
 
-The design of the PubSub support aims to unify the various nuances into a coherent interface, minimizing differences between Sharded, Cluster and Standalone flavors.
+The design of the PubSub support in GLIDE aims to unify various nuances into a coherent interface, minimizing differences between Sharded, Cluster, and Standalone configurations.
 
-In addition, GLIDE takes responsibility of tracking topology changes in real time and ensures client is kept subscribed regardless of any connectivity issues.
-Conceptually the PubSub functionality can be divided into 4 actions: Subscribing, Publishing, Receiving and Unsubscribing.
+Additionally, GLIDE is responsible for tracking topology changes in real time, ensuring the client remains subscribed regardless of any connectivity issues. Conceptually, the PubSub functionality can be divided into four actions: Subscribing, Publishing, Receiving, and Unsubscribing.
 
-### Subscribing ###
-Subscribing in GLIDE takes a different approach from the canonical RESP3 protocol. In order to be able to restore subscription state after a topology change or server disconnect, the subscription configuration is immutable and provided during the client creation.
-Thus, the subscription commands such as `SUBSCRIBE`/`PSUBSCRIBE`/`SSUBSCRIBE` are not supported by this model and are not exposed to user. While it is still possible to issue these commands as custom commands, using them alongside this model is not supported and might have unpredictable behavior.
-The subscription configuration is applied to the servers using the following logic:
-- Standalone mode: The subscriptions are applied to a random node - a primary or one of replicas.
-- Cluster node: For both Sharded and Non-sharded subscriptions, the Sharded semantics are used - the subscription is applied to the node holding the slot for subscription's channel/pattern.
+### Subscribing
 
-Best practice: Due to the implementation of resubscription logic, it is recommended to use a dedicated client for PubSub subscriptions, i.e. The client that has subscriptions is not the client that issues commands.
-This is because in case of topology changes, the internal connections might be reestablished in order to resubscribe on the correct servers.
+Subscribing in GLIDE differs from the canonical RESP3 protocol. To restore subscription state after a topology change or server disconnect, the subscription configuration is immutable and provided during client creation. Thus, while it is possible to use subscription commands such as `SUBSCRIBE`/`PSUBSCRIBE`/`SSUBSCRIBE` via the custom commands interface, using them alongside this model might lead to unpredictable behavior. The subscription configuration is applied to the servers using the following logic:
 
-Note, since GLIDE implements the automatic reconnections and resubscriptions on behalf of the user, there is a possibility for the messages to get lost during these activities.
-This is not a GLIDE-introduced characteristic, since the same effects will be present if user deals with such issues by himself.
-Since RESP protocol does not guaranty strong delivery semantics for the PubSub functionality, GLIDE does not introduce additional constrains in that regard.
+- **Standalone mode:** The subscriptions are applied to a random node, either a primary or one of the replicas.
+- **Cluster mode:** For both Sharded and Non-sharded subscriptions, the Sharded semantics are used; the subscription is applied to the node holding the slot for the subscription's channel/pattern.
 
-### Publishing ###
-Publishing functionality is unified into a singe command method with an optional/default parameter for Sharded mode (only for Cluster mode clients).
-The routing logic for this command is as follows:
-- Standalone mode: The command is routed to a primary or a replica in case `read-only` mode is configured.
-- Cluster mode: The command is routed to the server holding the slot for command's channel
+**Best Practice:** Due to the implementation of the resubscription logic, it is recommended to use a dedicated client for PubSub subscriptions. That is, the client with subscriptions should not be the same client that issues commands. In case of topology changes, the internal connections might be reestablished to resubscribe to the correct servers.
 
-### Receiving ###
-There are 3 flavors for receiving messages:
-- Polling: a non-blocking method, typically named `tryGetMessage`. Returns next available message or nothing if no messages are available.
-- Async: an async method, returning a completable future, typically named `getMessage`.
-- Callback: an user-provided callback function, that receives the incoming message along with the user-provided context. Note, the callback code is required to be threadsave for applicable languages.
+Note: Since GLIDE implements automatic reconnections and resubscriptions on behalf of the user, there is a possibility of message loss during these activities. This is not a GLIDE-specific characteristic; similar effects will occur if the user handles such issues independently. Since the RESP protocol does not guarantee strong delivery semantics for PubSub functionality, GLIDE does not introduce additional constraints in this regard.
 
-The intended flavor is selected during the client creation with the subscription configuration - when the configuration includes a callback (and an optional context), the incoming messages will be passed to that callback as they arrive, calls to the polling/async methods are prohibited and will fail.
-Note that in case of async/polling, the incoming messages will be buffered for the extraction in an unbounded buffer. The user should take care to drain the incoming messaged in a timely manner, in order not to strain the memory subsystem.
+### Publishing
 
-### Unsubscribing ###
-Since the subscription configuration is immutable and applied upon client's creation, the model does not provide methods for unsubscribing during the lifetime of the client.
-In addition, issuing commands such as `UNSUBSCRIBE`/`PUNSUBSCRIBE`/`SUNSUBSCRIBE` (via the means of custom commands interface) has unpredictable behavior.
-The subscriptions will be wiped from servers as a result of client's closure, typically as a result of client's object destructor.
-Note, some languages such as Python, might require an explicit call to cleaning method. e.g:
-```py
- client.close()
+Publishing functionality is unified into a single command method with an optional/default parameter for Sharded mode (applicable only for Cluster mode clients). The routing logic for this command is as follows:
+
+- **Standalone mode:** The command is routed to a primary node or a replica if `read-only` mode is configured.
+- **Cluster mode:** The command is routed to the server holding the slot for the command's channel.
+
+### Receiving
+
+There are three methods for receiving messages:
+
+- **Polling:** A non-blocking method, typically named `tryGetMessage`. It returns the next available message or nothing if no messages are available.
+- **Async:** An asynchronous method, returning a CompletableFuture, typically named `getMessage`.
+- **Callback:** A user-provided callback function that receives the incoming message along with the user-provided context. Note that the callback code must be thread-safe for applicable languages.
+
+The intended method is selected during client creation with the subscription configuration. When the configuration includes a callback (and an optional context), incoming messages will be passed to that callback as they arrive. Calls to the polling/async methods are prohibited and will fail. In the case of async/polling, incoming messages will be buffered in an unbounded buffer. The user should ensure timely extraction of incoming messages to avoid straining the memory subsystem.
+
+### Unsubscribing
+
+Since the subscription configuration is immutable and applied upon client creation, the model does not provide methods for unsubscribing during the client's lifetime. Additionally, issuing commands such as `UNSUBSCRIBE`/`PUNSUBSCRIBE`/`SUNSUBSCRIBE` via the custom commands interface may lead to unpredictable behavior. Subscriptions will be removed from servers upon client closure, typically as a result of the client's object destructor. Note that some languages, such as Python, might require an explicit call to a cleanup method, e.g.:
+
+```python
+client.close()
 ```
-
-### Unimplemented commands ###
-The `PUBSUB` commands will be added to the following releases of GLIDE.
-
 
 ### Java client example
 
