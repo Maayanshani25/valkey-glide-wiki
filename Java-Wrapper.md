@@ -270,9 +270,15 @@ System.out.println(Arrays.toString(result)); // Output: [OK, "value"]
 
 #### Detailed Steps:
 
-**Creating a Transaction:** Initialize the `Transaction` or `ClusterTransaction` object.
+**Create a Transaction Object:** Initialize either a `Transaction` or a `ClusterTransaction` object.
+
+For a client with cluster-mode disabled: 
 ```java
 Transaction transaction = new Transaction();  // For standalone mode
+```
+
+For a client with cluster-mode enabled: 
+```java
 ClusterTransaction transaction = new ClusterTransaction();  // For cluster mode
 ```
 **Adding Commands:** Use the transaction object to queue up the desired commands.
@@ -288,5 +294,6 @@ client.exec(transaction).get();
 **Handling Results:** The result of the transaction execution will be a list of responses corresponding to each command in the transaction.
 ```java
 Object[] result = client.exec(transaction).get();
-System.out.println(Arrays.toString(result)); // Output: [OK, "value"]
+System.out.println(result[0]); // Output: OK
+System.out.println(result[1]); // Output: "value"
 ```
