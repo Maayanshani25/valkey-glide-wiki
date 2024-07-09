@@ -29,13 +29,13 @@ GlideClusterClient clusterClient = GlideClusterClient.createClient(config).get()
 
 #### Request Routing
 
-In the cluster, data is divided into slots, and each primary node within the cluster is responsible for specific slots. Valkey GLIDE adheres to [Valkey OSS guidelines](https://valkey.io/docs/topics/command-tips/#:~:text=_script%20flag.-,request_policy,-This%20tip%20can) when determining the node(s) to which a command should be sent in clustering mode. 
+In the cluster, data is divided into slots, and each primary node within the cluster is responsible for specific slots. Valkey GLIDE adheres to [Valkey OSS guidelines](https://valkey.io/topics/command-tips/#request-policy) when determining the node(s) to which a command should be sent in clustering mode. 
 
 For more details on the routing of specific commands, please refer to [the documentation within the code](https://github.com/valkey-io/valkey-glide/blob/main/java/client/src/main/java/glide/api/models/configuration/RequestRoutingConfiguration.java) for routing configuration.
 
 #### Response Aggregation
 
-When requests are dispatched to multiple shards in a cluster (as discussed in the Request routing section), the client needs to aggregate the responses for a given command. Valkey GLIDE follows [Valkey OSS guidelines](https://valkey.io/docs/topics/command-tips/#:~:text=the%20SCAN%20command.-,response_policy,-This%20tip%20can) for determining how to aggregate the responses from multiple shards within a cluster. 
+When requests are dispatched to multiple shards in a cluster (as discussed in the Request routing section), the client needs to aggregate the responses for a given command. Valkey GLIDE follows [Valkey OSS guidelines](https://valkey.io/topics/command-tips/#response-policy) for determining how to aggregate the responses from multiple shards within a cluster. 
 
 To learn more about response aggregation for specific commands, please refer to [the documentation within the code](https://github.com/valkey-io/valkey-glide/blob/main/java/client/src/main/java/glide/api/models/ClusterValue.java).
 
@@ -83,7 +83,7 @@ Valkey GLIDE also offers support for an authenticated connection mode.
 In authenticated mode, you have the following options:
 
 * Use both a username and password, which is recommended and configured through [ACLs](https://valkey.io/docs/topics/acl/) on the server.
-* Use a password only, which is applicable if the server is configured with the [requirepass](https://valkey.io/docs/topics/security/#:~:text=all%20the%20interfaces.-,Authentication,-Valkey%20provides%20two) setting.
+* Use a password only, which is applicable if the server is configured with the [requirepass](https://valkey.io/topics/security/#authentication) setting.
 
 To provide the necessary authentication credentials to the client, you can use the `ServerCredentials` class.
 
