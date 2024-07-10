@@ -72,6 +72,28 @@ GlideClient standaloneClient = GlideClient.createClient(config).get();
 
 For information on the supported commands and their corresponding parameters, we recommend referring to [the documentation in the code](https://github.com/valkey-io/valkey-glide/tree/main/java/client/src/main/java/glide/api/commands). This documentation provides in-depth insights into the usage and options available for each command.
 
+### Command String Arguments
+Valkey strings store sequences of bytes, that may include text, serialized objects, or binary arrays. As such, to pass Valkey strings as arguments to commands, or receive Valkey strings in responses, Glide offers two APIs:
+1. `String`:  for common case `UTF-8` converted strings keys and `String` objects can be passed and receives as a Java `String`.
+2. `GlideString`:  to pass `byte[]` data, a `GlideString` container object can be passed as an argument to a command or received as a response from a command.
+
+A rule about the API:
+* Command signatures either take and return `String`'s or `GlideString`'s, but not both.
+* `String`'s are returned if the commands are passed in `String`'s. e.g `CompletableFuture<String[]> mget(String[] keys)`
+* `GlideStrings`'s are returned if the commands are passed in `GlideStrings`'s. e.g `CompletableFuture<GlideString[]> mget(GlideString[] keys)`
+
+Arguments for commands that require a `String` can also be substituted with `GlideString` in order to pass in or return a binary value.
+* `gs()` is a static constructor that can be called with a `byte[]` or `String` argument to convert to `GlideString`. For example,
+```
+byte[] byteKey = Base64.getDecoder().decode("byteKey");
+client.set(gs(byteKey), gs("GlideString value")).get();
+```
+* A `GlideString byte[]` object can be converted to `UTF-8 String` by calling `.getString()` on the `GlideString` object. For example,
+```
+client.get(gs(byteKey)).get();              // "GlideString value" as a GlideString
+client.get(gs(byteKey)).get().getString();  // "GlideString value" as a String
+```
+
 ### Transaction
 
 A transaction in Valkey Glide allows you to execute a group of commands in a single, atomic step. This ensures that all commands in the transaction are executed sequentially and without interruption. See [Valkey Transactions](https://valkey.io/topics/transactions).
