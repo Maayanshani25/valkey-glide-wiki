@@ -171,7 +171,7 @@ zrevrangebylex              | deprecated  | deprecated  | deprecated   | Not sta
 lpushx                      | Done        | Not started | Done         | Not started | Not started | Not started
 copy                        | Done        | Not started | Done         | Not started | Not started | Not started
 hrandfield                  | Done        | Not started | Done         | Not started | Not started | Not started
-lpos                        | Done        | Not started | Done         | Not started | Not started | Not started
+lpos                        | Done        | In Progress | Done         | Not started | Not started | Not started
 geopos                      | Done        | Not started | Done         | Not started | Not started | Not started
 xautoclaim                  | Done        | Not started | Done         | Not started | Not started | Not started
 zmscore                     | Done        | Not started | Done         | Not started | Not started | Not started
