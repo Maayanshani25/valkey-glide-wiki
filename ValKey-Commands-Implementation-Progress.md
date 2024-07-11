@@ -155,7 +155,7 @@ geoadd                      | Done        | Not started | Done         | Not sta
 zrangebylex                 | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 getbit                      | Done        | Not started | Done         | Not started | Not started | Not started
 msetnx                      | Done        | Not started | Done         | Not started | Not started | Not started
-sdiff                       | Done        | Not started | Done         | Not started | Not started | Not started
+sdiff                       | Done        | In progress | Done         | Not started | Not started | Not started
 setrange                    | Done        | Not started | Done         | Not started | Not started | Not started
 sinterstore                 | Done        | Not started | Done         | Not started | Not started | Not started
 zpopmax                     | Done        | Done        | Done         | Not started | Not started | Not started
