@@ -163,7 +163,7 @@ georadius_ro                | Deprecated  | Deprecated  | Deprecated   | Depreca
 georadius                   | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated  
 pfmerge                     | Done        | Not started | Done         | Not started | Not started | Not started
 bitcount                    | Done        | Not started | Done         | Not started | Not started | Not started
-sdiffstore                  | Done        | Not started | Done         | Not started | Not started | Not started
+sdiffstore                  | Done        | In progress | Done         | Not started | Not started | Not started
 touch                       | Done        | Not started | Done         | Not started | Not started | Not started
 smismember                  | Done        | Not started | Done         | Not started | Not started | Not started
 zremrangebylex              | Done        | Not started | Done         | Not started | Not started | Not started
