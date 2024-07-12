@@ -168,7 +168,7 @@ touch                       | Done        | Not started | Done         | Not sta
 smismember                  | Done        | Not started | Done         | Not started | Not started | Not started
 zremrangebylex              | Done        | Not started | Done         | Not started | Not started | Not started
 zrevrangebylex              | deprecated  | deprecated  | deprecated   | Not started | Not started | Not started
-lpushx                      | Done        | Not started | Done         | Not started | Not started | Not started
+lpushx                      | Done        | In progress | Done         | Not started | Not started | Not started
 copy                        | Done        | Not started | Done         | Not started | Not started | Not started
 hrandfield                  | Done        | Not started | Done         | Not started | Not started | Not started
 lpos                        | Done        | In Progress | Done         | Not started | Not started | Not started
