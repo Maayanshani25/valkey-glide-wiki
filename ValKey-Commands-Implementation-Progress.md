@@ -135,7 +135,7 @@ xclaim                      | Done        | Not started | Done         | Not sta
 bitfield                    | Done        | Not started | Done         | Not started | Not started | Not started
 getrange                    | Done        | Not started | Done         | Not started | Not started | Not started
 randomkey                   | Done        | Not started | Done         | Not started | Not started | Not started
-srandmember                 | Done        | Not started | Done         | Not started | Not started | Not started
+srandmember                 | Done        | In Progress | Done         | Not started | Not started | Not started
 dump                        | Done        | Not started | Done         | Not started | Not started | Not started
 xinfo                       | Done        | Not started | Done         | Not started | Not started | Not started
 setbit                      | Done        | Not started | Done         | Not started | Not started | Not started
