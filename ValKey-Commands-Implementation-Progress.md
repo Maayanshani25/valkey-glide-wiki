@@ -165,7 +165,7 @@ pfmerge                     | Done        | Not started | Done         | Not sta
 bitcount                    | Done        | Not started | Done         | Not started | Not started | Not started
 sdiffstore                  | Done        | Done        | Done         | Not started | Not started | Not started
 touch                       | Done        | Not started | Done         | Not started | Not started | Not started
-smismember                  | Done        | Not started | Done         | Not started | Not started | Not started
+smismember                  | Done        | In progress | Done         | Not started | Not started | Not started
 zremrangebylex              | Done        | Not started | Done         | Not started | Not started | Not started
 zrevrangebylex              | deprecated  | deprecated  | deprecated   | Not started | Not started | Not started
 lpushx                      | Done        | In progress | Done         | Not started | Not started | Not started
