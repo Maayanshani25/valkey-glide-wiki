@@ -75,7 +75,7 @@ echo                        | Done        | Done        | Done         | Not sta
 brpop                       | Done        | Done        | Done         | Not started | Not started | Not started
 zremrangebyrank             | Done        | Done        | Done         | Not started | Not started | Not started
 psetex                      | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
-flushall                    | Done        | Not started | Done         | Not started | Not started | Not started
+flushall                    | Done        | In progress | Done         | Not started | Not started | Not started
 sscan                       | Done        | Not started | Done         | Not started | Not started | Not started
 flushdb                     | Done        | Not started | Done         | Not started | Not started | Not started
 xadd                        | Done        | Done        | Done         | Not started | Not started | Not started
@@ -210,7 +210,7 @@ fcall_ro                    | Done        | Not started | Done         | Not sta
 lmpop                       | Done        | Not started | Done         | Not started | Not started | Not started
 geosearchstore              | Done        | Not started | Done         | Not started | Not started | Not started 
 zintercard                  | Done        | Done        | Done         | Not started | Not started | Not started 
-zmpop                       | Done        | Not started | Done         | Not started | Not started | Not started 
+zmpop                       | Done        | In progress | Done         | Not started | Not started | Not started 
 bzmpop                      | Done        | Not started | Done         | Not started | Not started | Not started 
 lcs                         | Done        | Not started | Done         | Not started | Not started | Not started 
 lolwut                      | Done        | In progress | Done         | Not started | Not started | Not started
