@@ -86,7 +86,7 @@ watch                       | Done        | Not started | Done         | Not sta
 sismember                   | Done        | Done        | Done         | Not started | Not started | Not started
 pttl                        | Done        | Done        | Done         | Not started | Not started | Not started
 zscore                      | Done        | Done        | Done         | Not started | Not started | Not started
-dbsize                      | Done        | Not started | Done         | Not started | Not started | Not started
+dbsize                      | Done        | In progress | Done         | Not started | Not started | Not started
 zrevrange                   | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 hscan                       | Done        | Not started | Done         | Not started | Not started | Not started
 unwatch                     | Done        | Not started | Done         | Not started | Not started | Not started
