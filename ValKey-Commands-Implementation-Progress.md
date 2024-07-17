@@ -126,7 +126,7 @@ object idletime             | Done        | Done        | Done         | Not sta
 object refcount             | Done        | Done        | Done         | Not started | Not started | Not started
 spublish                    | Done        | Not started | Done         | Not started | Not started | Not started
 ssubscribe                  | Done        | Not started | Done         | Not started | Not started | Not started
-zrevrank                    | Done        | Not started | Done         | Not started | Not started | Not started
+zrevrank                    | Done        | In Progress | Done         | Not started | Not started | Not started
 pubsub                      | Not needed  | Not started | Not needed   | Not started | Not started | Not started
 sunion                      | Done        | Done        | Done         | Not started | Not started | Not started
 zunionstore                 | Done        | Done        | Done         | Not started | Not started | Not started
