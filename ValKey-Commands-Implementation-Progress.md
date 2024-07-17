@@ -165,7 +165,7 @@ pfmerge                     | Done        | Not started | Done         | Not sta
 bitcount                    | Done        | Not started | Done         | Not started | Not started | Not started
 sdiffstore                  | Done        | Done        | Done         | Not started | Not started | Not started
 touch                       | Done        | Not started | Done         | Not started | Not started | Not started
-smismember                  | Done        | In progress | Done         | Not started | Not started | Not started
+smismember                  | Done        | Done        | Done         | Not started | Not started | Not started
 zremrangebylex              | Done        | Not started | Done         | Not started | Not started | Not started
 zrevrangebylex              | deprecated  | deprecated  | deprecated   | Not started | Not started | Not started
 lpushx                      | Done        | In progress | Done         | Not started | Not started | Not started
@@ -221,7 +221,7 @@ blmove                      | Done        | Not started | Done         | Not sta
 blmpop                      | Done        | Not started | Done         | Not started | Not started | Not started
 brpoplpush                  | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 lmove                       | Done        | Not started | Done         | Not started | Not started | Not started
-sintercard                  | Done        | In progress | Done         | Not started | Not started | Not started
-getdel                      | Done        | In progress| Done         | Not started | Not started | Not started
+sintercard                  | Done        | Done        | Done         | Not started | Not started | Not started
+getdel                      | Done        | In progress | Done         | Not started | Not started | Not started
 getex                       | Done        | Not started | Done         | Not started | Not started | Not started
 quit                        | Done, API not required | Done, API not required | Done, API not required | Done, API not required | Done, API not required | Done, API not required
