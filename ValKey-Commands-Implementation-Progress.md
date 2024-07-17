@@ -149,7 +149,7 @@ discard                     | API not required | API not required | API not requ
 sunionstore                 | Done        | Done        | Done         | Not started | Not started | Not started
 xrevrange                   | Done        | Not started | Done         | Not started | Not started | Not started
 bzpopmin                    | Done        | Not started | Done         | Not started | Not started | Not started
-rpushx                      | Done        | Not started | Done         | Not started | Not started | Not started
+rpushx                      | Done        | In progress | Done         | Not started | Not started | Not started
 sort                        | Done        | Not started | Done         | Not started | Not started | Not started
 geoadd                      | Done        | Not started | Done         | Not started | Not started | Not started
 zrangebylex                 | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
