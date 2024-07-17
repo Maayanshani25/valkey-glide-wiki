@@ -222,6 +222,6 @@ blmpop                      | Done        | Not started | Done         | Not sta
 brpoplpush                  | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 lmove                       | Done        | Not started | Done         | Not started | Not started | Not started
 sintercard                  | Done        | In progress | Done         | Not started | Not started | Not started
-getdel                      | Done        | Not started | Done         | Not started | Not started | Not started
+getdel                      | Done        | In progress| Done         | Not started | Not started | Not started
 getex                       | Done        | Not started | Done         | Not started | Not started | Not started
 quit                        | Done, API not required | Done, API not required | Done, API not required | Done, API not required | Done, API not required | Done, API not required
