@@ -220,7 +220,7 @@ hstrlen                     | Done        | Not started | Done         | Not sta
 blmove                      | Done        | Not started | Done         | Not started | Not started | Not started
 blmpop                      | Done        | Not started | Done         | Not started | Not started | Not started
 brpoplpush                  | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
-lmove                       | Done        | Not started | Done         | Not started | Not started | Not started
+lmove                       | Done        | In progress | Done         | Not started | Not started | Not started
 sintercard                  | Done        | Done        | Done         | Not started | Not started | Not started
 getdel                      | Done        | Done | Done         | Not started | Not started | Not started
 getex                       | Done        | Not started | Done         | Not started | Not started | Not started
