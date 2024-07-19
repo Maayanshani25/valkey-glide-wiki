@@ -151,7 +151,7 @@ xrevrange                   | Done        | Not started | Done         | Not sta
 bzpopmin                    | Done        | Not started | Done         | Not started | Not started | Not started
 rpushx                      | Done        | Done        | Done         | Not started | Not started | Not started
 sort                        | Done        | Not started | Done         | Not started | Not started | Not started
-geoadd                      | Done        | Not started | Done         | Not started | Not started | Not started
+geoadd                      | Done        | In Progress | Done         | Not started | Not started | Not started
 zrangebylex                 | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 getbit                      | Done        | Not started | Done         | Not started | Not started | Not started
 msetnx                      | Done        | Not started | Done         | Not started | Not started | Not started
