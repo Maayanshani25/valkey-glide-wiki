@@ -191,7 +191,7 @@ zrandmember                 | Done        | Not started | Done         | Not sta
 replicaof                   | Done, API not required | Done, API not required | Done, API not required   | Not started | Not started | Not started
 bitfield_ro                 | Done        | Not started | Done         | Not started | Not started | Not started
 fcall                       | Done        | Not started | Done         | Not started | Not started | Not started
-zdiffstore                  | Done        | In progress | Done         | Not started | Not started | Not started
+zdiffstore                  | Done        | Done        | Done         | Not started | Not started | Not started
 move                        | Done        | Not started | Done         | Not started | Not started | Not started
 geohash                     | Done        | Not started | Done         | Not started | Not started | Not started
 bitpos                      | Done        | Not started | Done         | Not started | Not started | Not started
