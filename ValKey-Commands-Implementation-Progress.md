@@ -75,7 +75,7 @@ echo                        | Done        | Done        | Done         | Not sta
 brpop                       | Done        | Done        | Done         | Not started | Not started | Not started
 zremrangebyrank             | Done        | Done        | Done         | Not started | Not started | Not started
 psetex                      | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
-flushall                    | Done        | In progress | Done         | Not started | Not started | Not started
+flushall                    | Done        | Done.       | Done         | Not started | Not started | Not started
 sscan                       | Done        | Not started | Done         | Not started | Not started | Not started
 flushdb                     | Done        | Not started | Done         | Not started | Not started | Not started
 xadd                        | Done        | Done        | Done         | Not started | Not started | Not started
@@ -86,7 +86,7 @@ watch                       | Done        | Not started | Done         | Not sta
 sismember                   | Done        | Done        | Done         | Not started | Not started | Not started
 pttl                        | Done        | Done        | Done         | Not started | Not started | Not started
 zscore                      | Done        | Done        | Done         | Not started | Not started | Not started
-dbsize                      | Done        | In progress | Done         | Not started | Not started | Not started
+dbsize                      | Done        | Done        | Done         | Not started | Not started | Not started
 zrevrange                   | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 hscan                       | Done        | Not started | Done         | Not started | Not started | Not started
 unwatch                     | Done        | Not started | Done         | Not started | Not started | Not started
