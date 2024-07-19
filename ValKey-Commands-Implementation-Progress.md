@@ -186,7 +186,7 @@ function list               | Done        | Not started | Done         | Not sta
 function load               | Done        | Done        | Done         | Not started | Not started | Not started
 function restore            | Done        | Not started | Done         | Not started | Not started | Not started
 function stats              | Done        | Not started | Done         | Not started | Not started | Not started
-zlexcount                   | Done        | In progress | Done         | Not started | Not started | Not started
+zlexcount                   | Done        | Not started | Done         | Not started | Not started | Not started
 zrandmember                 | Done        | Not started | Done         | Not started | Not started | Not started
 replicaof                   | Done, API not required | Done, API not required | Done, API not required   | Not started | Not started | Not started
 bitfield_ro                 | Done        | Not started | Done         | Not started | Not started | Not started
