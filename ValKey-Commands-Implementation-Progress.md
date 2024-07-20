@@ -162,7 +162,7 @@ zpopmax                     | Done        | Done        | Done         | Not sta
 georadius_ro                | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated 
 georadius                   | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated  
 pfmerge                     | Done        | Not started | Done         | Not started | Not started | Not started
-bitcount                    | Done        | In Progress | Done         | Not started | Not started | Not started
+bitcount                    | Done        | Done        | Done         | Not started | Not started | Not started
 sdiffstore                  | Done        | Done        | Done         | Not started | Not started | Not started
 touch                       | Done        | Not started | Done         | Not started | Not started | Not started
 smismember                  | Done        | Done        | Done         | Not started | Not started | Not started
@@ -174,13 +174,13 @@ hrandfield                  | Done        | Not started | Done         | Not sta
 lpos                        | Done        | Done        | Done         | Not started | Not started | Not started
 geopos                      | Done        | In progress | Done         | Not started | Not started | Not started
 xautoclaim                  | Done        | Not started | Done         | Not started | Not started | Not started
-zmscore                     | Done        | In progress | Done         | Not started | Not started | Not started
+zmscore                     | Done        | Done        | Done         | Not started | Not started | Not started
 bitop                       | Done        | Not started | Done         | Not started | Not started | Not started
 lastsave                    | Done        | Not started | Done         | Not started | Not started | Not started
 geosearch                   | Done        | Not started | Done         | Not started | Not started | Not started
 function delete             | Done        | In progress | Done         | Not started | Not started | Not started
 function dump               | Done        | Not started | Done         | Not started | Not started | Not started
-function flush              | Done        | In progress | Done         | Not started | Not started | Not started
+function flush              | Done        | Done        | Done         | Not started | Not started | Not started
 function kill               | Done        | Not started | Done         | Not started | Not started | Not started
 function list               | Done        | Not started | Done         | Not started | Not started | Not started
 function load               | Done        | Done        | Done         | Not started | Not started | Not started
