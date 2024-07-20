@@ -126,7 +126,7 @@ object idletime             | Done        | Done        | Done         | Not sta
 object refcount             | Done        | Done        | Done         | Not started | Not started | Not started
 spublish                    | Done        | Not started | Done         | Not started | Not started | Not started
 ssubscribe                  | Done        | Not started | Done         | Not started | Not started | Not started
-zrevrank                    | Done        | In Progress | Done         | Not started | Not started | Not started
+zrevrank                    | Done        | Done        | Done         | Not started | Not started | Not started
 pubsub                      | Not needed  | Not started | Not needed   | Not started | Not started | Not started
 sunion                      | Done        | Done        | Done         | Not started | Not started | Not started
 zunionstore                 | Done        | Done        | Done         | Not started | Not started | Not started
@@ -151,7 +151,7 @@ xrevrange                   | Done        | Not started | Done         | Not sta
 bzpopmin                    | Done        | Not started | Done         | Not started | Not started | Not started
 rpushx                      | Done        | Done        | Done         | Not started | Not started | Not started
 sort                        | Done        | Not started | Done         | Not started | Not started | Not started
-geoadd                      | Done        | In Progress | Done         | Not started | Not started | Not started
+geoadd                      | Done        | Done        | Done         | Not started | Not started | Not started
 zrangebylex                 | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 getbit                      | Done        | In progress | Done         | Not started | Not started | Not started
 msetnx                      | Done        | Not started | Done         | Not started | Not started | Not started
