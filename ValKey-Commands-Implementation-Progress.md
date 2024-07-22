@@ -177,7 +177,7 @@ xautoclaim                  | Done        | Not started | Done         | Not sta
 zmscore                     | Done        | Done        | Done         | Not started | Not started | Not started
 bitop                       | Done        | Not started | Done         | Not started | Not started | Not started
 lastsave                    | Done        | Not started | Done         | Not started | Not started | Not started
-geosearch                   | Done        | Not started | Done         | Not started | Not started | Not started
+geosearch                   | Done        | In progress | Done         | Not started | Not started | Not started
 function delete             | Done        | Done        | Done         | Not started | Not started | Not started
 function dump               | Done        | Not started | Done         | Not started | Not started | Not started
 function flush              | Done        | Done        | Done         | Not started | Not started | Not started
@@ -208,7 +208,7 @@ zunion                      | Done        | In progress | Done         | Not sta
 sort_ro                     | Done        | Not started | Done         | Not started | Not started | Not started
 fcall_ro                    | Done        | Not started | Done         | Not started | Not started | Not started
 lmpop                       | Done        | Not started | Done         | Not started | Not started | Not started
-geosearchstore              | Done        | Not started | Done         | Not started | Not started | Not started 
+geosearchstore              | Done        | In progress | Done         | Not started | Not started | Not started 
 zintercard                  | Done        | Done        | Done         | Not started | Not started | Not started 
 zmpop                       | Done        | In progress | Done         | Not started | Not started | Not started 
 bzmpop                      | Done        | Not started | Done         | Not started | Not started | Not started 
