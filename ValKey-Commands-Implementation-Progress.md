@@ -178,7 +178,7 @@ zmscore                     | Done        | Done        | Done         | Not sta
 bitop                       | Done        | Not started | Done         | Not started | Not started | Not started
 lastsave                    | Done        | Not started | Done         | Not started | Not started | Not started
 geosearch                   | Done        | Not started | Done         | Not started | Not started | Not started
-function delete             | Done        | In progress | Done         | Not started | Not started | Not started
+function delete             | Done        | Done        | Done         | Not started | Not started | Not started
 function dump               | Done        | Not started | Done         | Not started | Not started | Not started
 function flush              | Done        | Done        | Done         | Not started | Not started | Not started
 function kill               | Done        | Not started | Done         | Not started | Not started | Not started
