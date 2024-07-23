@@ -172,7 +172,7 @@ lpushx                      | Done        | Done        | Done         | Not sta
 copy                        | Done        | Not started | Done         | Not started | Not started | Not started
 hrandfield                  | Done        | Not started | Done         | Not started | Not started | Not started
 lpos                        | Done        | Done        | Done         | Not started | Not started | Not started
-geopos                      | Done        | In progress | Done         | Not started | Not started | Not started
+geopos                      | Done        | Done        | Done         | Not started | Not started | Not started
 xautoclaim                  | Done        | Not started | Done         | Not started | Not started | Not started
 zmscore                     | Done        | Done        | Done         | Not started | Not started | Not started
 bitop                       | Done        | Not started | Done         | Not started | Not started | Not started
