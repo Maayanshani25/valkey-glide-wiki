@@ -206,7 +206,7 @@ georadiusbymember_ro        | Deprecated  | Deprecated  | Deprecated   | Depreca
 sunsubscribe                | Done        | Not started | Done         | Not started | Not started | Not started
 zunion                      | Done        | In progress | Done         | Not started | Not started | Not started
 sort_ro                     | Done        | Not started | Done         | Not started | Not started | Not started
-fcall_ro                    | Done        | Not started | Done         | Not started | Not started | Not started
+fcall_ro                    | Done        | In progress | Done         | Not started | Not started | Not started
 lmpop                       | Done        | Not started | Done         | Not started | Not started | Not started
 geosearchstore              | Done        | In progress | Done         | Not started | Not started | Not started 
 zintercard                  | Done        | Done        | Done         | Not started | Not started | Not started 
