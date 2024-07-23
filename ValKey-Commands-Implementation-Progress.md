@@ -101,7 +101,7 @@ lindex                      | Done        | Done        | Done         | Not sta
 punsubscribe                | Done        | In progress | Done         | Not started | Not started | Not started
 persist                     | Done        | Done        | Done         | Not started | Not started | Not started
 strlen                      | Done        | Done        | Done         | Not started | Not started | Not started
-zincrby                     | Done        | Not started | Done         | Not started | Not started | Not started
+zincrby                     | Done        | In progress | Done         | Not started | Not started | Not started
 xgroup                      | Done        | Not started | Done         | Not started | Not started | Not started
 getset                      | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated 
 blpop                       | Done        | Done        | Done         | Not started | Not started | Not started
@@ -198,7 +198,7 @@ bitpos                      | Done        | In progress | Done         | Not sta
 substr                      | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated  
 zdiff                       | Done        | Done        | Done         | Not started | Not started | Not started
 zrangestore                 | Done        | Not started | Done         | Not started | Not started | Not started
-geodist                     | Done        | Not started | Done         | Not started | Not started | Not started 
+geodist                     | Done        | Done        | Done         | Not started | Not started | Not started 
 georadiusbymember           | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated  
 bzpopmax                    | Done        | Not started | Done         | Not started | Not started | Not started 
 zinter                      | Done        | In progress | Done         | Not started | Not started | Not started 
