@@ -207,7 +207,7 @@ sunsubscribe                | Done        | Not started | Done         | Not sta
 zunion                      | Done        | In progress | Done         | Not started | Not started | Not started
 sort_ro                     | Done        | Not started | Done         | Not started | Not started | Not started
 fcall_ro                    | Done        | In progress | Done         | Not started | Not started | Not started
-lmpop                       | Done        | Not started | Done         | Not started | Not started | Not started
+lmpop                       | Done        | In progress | Done         | Not started | Not started | Not started
 geosearchstore              | Done        | In progress | Done         | Not started | Not started | Not started 
 zintercard                  | Done        | Done        | Done         | Not started | Not started | Not started 
 zmpop                       | Done        | Done        | Done         | Not started | Not started | Not started 
