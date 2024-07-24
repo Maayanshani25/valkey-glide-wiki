@@ -132,7 +132,7 @@ sunion                      | Done        | Done        | Done         | Not sta
 zunionstore                 | Done        | Done        | Done         | Not started | Not started | Not started
 lset                        | Done        | Done | Done         | Not started | Not started | Not started
 xclaim                      | Done        | Not started | Done         | Not started | Not started | Not started
-bitfield                    | Done        | Not started | Done         | Not started | Not started | Not started
+bitfield                    | Done        | In progress | Done         | Not started | Not started | Not started
 getrange                    | Done        | Not started | Done         | Not started | Not started | Not started
 randomkey                   | Done        | Not started | Done         | Not started | Not started | Not started
 srandmember                 | Done        | In Progress | Done         | Not started | Not started | Not started
