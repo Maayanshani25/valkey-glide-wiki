@@ -175,7 +175,7 @@ lpos                        | Done        | Done        | Done         | Not sta
 geopos                      | Done        | Done        | Done         | Not started | Not started | Not started
 xautoclaim                  | Done        | Not started | Done         | Not started | Not started | Not started
 zmscore                     | Done        | Done        | Done         | Not started | Not started | Not started
-bitop                       | Done        | In progress | Done         | Not started | Not started | Not started
+bitop                       | Done        | Done        | Done         | Not started | Not started | Not started
 lastsave                    | Done        | Not started | Done         | Not started | Not started | Not started
 geosearch                   | Done        | In progress | Done         | Not started | Not started | Not started
 function delete             | Done        | Done        | Done         | Not started | Not started | Not started
