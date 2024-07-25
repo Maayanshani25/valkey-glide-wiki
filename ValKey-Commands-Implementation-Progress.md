@@ -190,7 +190,7 @@ zlexcount                   | Done        | Not started | Done         | Not sta
 zrandmember                 | Done        | In Progress | Done         | Not started | Not started | Not started
 replicaof                   | Done, API not required | Done, API not required | Done, API not required   | Not started | Not started | Not started
 bitfield_ro                 | Done        | Not started | Done         | Not started | Not started | Not started
-fcall                       | Done        | In progress | Done         | Not started | Not started | Not started
+fcall                       | Done        | Done        | Done         | Not started | Not started | Not started
 zdiffstore                  | Done        | Done        | Done         | Not started | Not started | Not started
 move                        | Done        | Not started | Done         | Not started | Not started | Not started
 geohash                     | Done        | Done        | Done         | Not started | Not started | Not started
@@ -206,7 +206,7 @@ georadiusbymember_ro        | Deprecated  | Deprecated  | Deprecated   | Depreca
 sunsubscribe                | Done        | Not started | Done         | Not started | Not started | Not started
 zunion                      | Done        | In progress | Done         | Not started | Not started | Not started
 sort_ro                     | Done        | Not started | Done         | Not started | Not started | Not started
-fcall_ro                    | Done        | In progress | Done         | Not started | Not started | Not started
+fcall_ro                    | Done        | Done        | Done         | Not started | Not started | Not started
 lmpop                       | Done        | In progress | Done         | Not started | Not started | Not started
 geosearchstore              | Done        | In progress | Done         | Not started | Not started | Not started 
 zintercard                  | Done        | Done        | Done         | Not started | Not started | Not started 
