@@ -169,7 +169,7 @@ smismember                  | Done        | Done        | Done         | Not sta
 zremrangebylex              | Done        | Not started | Done         | Not started | Not started | Not started
 zrevrangebylex              | deprecated  | deprecated  | deprecated   | Not started | Not started | Not started
 lpushx                      | Done        | Done        | Done         | Not started | Not started | Not started
-copy                        | Done        | Not started | Done         | Not started | Not started | Not started
+copy                        | Done        | In progress | Done         | Not started | Not started | Not started
 hrandfield                  | Done        | Not started | Done         | Not started | Not started | Not started
 lpos                        | Done        | Done        | Done         | Not started | Not started | Not started
 geopos                      | Done        | Done        | Done         | Not started | Not started | Not started
