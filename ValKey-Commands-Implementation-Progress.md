@@ -156,7 +156,7 @@ zrangebylex                 | deprecated  | deprecated  | deprecated   | depreca
 getbit                      | Done        | Done        | Done         | Not started | Not started | Not started
 msetnx                      | Done        | Not started | Done         | Not started | Not started | Not started
 sdiff                       | Done        | Done        | Done         | Not started | Not started | Not started
-setrange                    | Done        | Not started | Done         | Not started | Not started | Not started
+setrange                    | Done        | In Progress | Done         | Not started | Not started | Not started
 sinterstore                 | Done        | Done        | Done         | Not started | Not started | Not started
 zpopmax                     | Done        | Done        | Done         | Not started | Not started | Not started
 georadius_ro                | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated 
@@ -216,7 +216,7 @@ lcs                         | Done        | Not started | Done         | Not sta
 lolwut                      | Done        | Done        | Done         | Not started | Not started | Not started
 expiretime                  | Done        | Not started | Done         | Not started | Not started | Not started
 pexpiretime                 | Done        | Not started | Done         | Not started | Not started | Not started
-hstrlen                     | Done        | Not started | Done         | Not started | Not started | Not started
+hstrlen                     | Done        | In Progress | Done         | Not started | Not started | Not started
 blmove                      | Done        | In progress | Done         | Not started | Not started | Not started
 blmpop                      | Done        | Not started | Done         | Not started | Not started | Not started
 brpoplpush                  | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
