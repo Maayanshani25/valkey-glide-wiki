@@ -216,7 +216,7 @@ lcs                         | Done        | Not started | Done         | Not sta
 lolwut                      | Done        | Done        | Done         | Not started | Not started | Not started
 expiretime                  | Done        | Not started | Done         | Not started | Not started | Not started
 pexpiretime                 | Done        | Not started | Done         | Not started | Not started | Not started
-hstrlen                     | Done        | In Progress | Done         | Not started | Not started | Not started
+hstrlen                     | Done        | Done        | Done         | Not started | Not started | Not started
 blmove                      | Done        | In progress | Done         | Not started | Not started | Not started
 blmpop                      | Done        | Not started | Done         | Not started | Not started | Not started
 brpoplpush                  | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
