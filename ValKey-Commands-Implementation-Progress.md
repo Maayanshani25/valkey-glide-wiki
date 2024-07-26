@@ -166,7 +166,7 @@ bitcount                    | Done        | Done        | Done         | Not sta
 sdiffstore                  | Done        | Done        | Done         | Not started | Not started | Not started
 touch                       | Done        | Not started | Done         | Not started | Not started | Not started
 smismember                  | Done        | Done        | Done         | Not started | Not started | Not started
-zremrangebylex              | Done        | Not started | Done         | Not started | Not started | Not started
+zremrangebylex              | Done        | In progress | Done         | Not started | Not started | Not started
 zrevrangebylex              | deprecated  | deprecated  | deprecated   | Not started | Not started | Not started
 lpushx                      | Done        | Done        | Done         | Not started | Not started | Not started
 copy                        | Done        | In progress | Done         | Not started | Not started | Not started
