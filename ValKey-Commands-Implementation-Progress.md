@@ -208,11 +208,11 @@ zunion                      | Done        | In progress | Done         | Not sta
 sort_ro                     | Done        | In progress | Done         | Not started | Not started | Not started
 fcall_ro                    | Done        | Done        | Done         | Not started | Not started | Not started
 lmpop                       | Done        | In progress | Done         | Not started | Not started | Not started
-geosearchstore              | Done        | In progress | Done         | Not started | Not started | Not started 
+geosearchstore              | Done        | Done        | Done         | Not started | Not started | Not started 
 zintercard                  | Done        | Done        | Done         | Not started | Not started | Not started 
 zmpop                       | Done        | Done        | Done         | Not started | Not started | Not started 
 bzmpop                      | Done        | Done        | Done         | Not started | Not started | Not started 
-lcs                         | Done        | Not started | Done         | Not started | Not started | Not started 
+lcs                         | Done        | In progress | Done         | Not started | Not started | Not started 
 lolwut                      | Done        | Done        | Done         | Not started | Not started | Not started
 expiretime                  | Done        | Not started | Done         | Not started | Not started | Not started
 pexpiretime                 | Done        | Not started | Done         | Not started | Not started | Not started
