@@ -1,3 +1,7 @@
+## Java Wrapper Examples
+
+Please refer to the [README](https://github.com/valkey-io/valkey-glide/blob/main/examples/java/README.md#README) of the Java examples for the instructions on how to run [StandaloneExample](https://github.com/valkey-io/valkey-glide/blob/main/examples/java/src/main/java/glide/examples/StandaloneExample.java#StandaloneExample) and [ClusterExample](https://github.com/valkey-io/valkey-glide/blob/main/examples/java/src/main/java/glide/examples/ClusterExample.java#ClusterExample).
+
 ## Client Initialization
 
 Valkey GLIDE provides support for both [Cluster](https://github.com/valkey-io/valkey-glide/wiki/Java-wrapper#cluster) and [Standalone](https://github.com/valkey-io/valkey-glide/wiki/Java-wrapper#standalone) and configurations. Please refer to the relevant section based on your specific setup.
