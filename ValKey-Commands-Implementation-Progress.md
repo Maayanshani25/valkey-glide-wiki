@@ -132,7 +132,7 @@ sunion                      | Done        | Done        | Done         | Not sta
 zunionstore                 | Done        | Done        | Done         | Not started | Not started | Not started
 lset                        | Done        | Done | Done         | Not started | Not started | Not started
 xclaim                      | Done        | Not started | Done         | Not started | Not started | Not started
-bitfield                    | Done        | In progress | Done         | Not started | Not started | Not started
+bitfield                    | Done        | Done        | Done         | Not started | Not started | Not started
 getrange                    | Done        | Not started | Done         | Not started | Not started | Not started
 randomkey                   | Done        | Not started | Done         | Not started | Not started | Not started
 srandmember                 | Done        | In Progress | Done         | Not started | Not started | Not started
@@ -189,7 +189,7 @@ function stats              | Done        | Not started | Done         | Not sta
 zlexcount                   | Done        | In Progress | Done         | Not started | Not started | Not started
 zrandmember                 | Done        | Done.       | Done         | Not started | Not started | Not started
 replicaof                   | Done, API not required | Done, API not required | Done, API not required   | Not started | Not started | Not started
-bitfield_ro                 | Done        | In progress | Done         | Not started | Not started | Not started
+bitfield_ro                 | Done        | Done        | Done         | Not started | Not started | Not started
 fcall                       | Done        | Done        | Done         | Not started | Not started | Not started
 zdiffstore                  | Done        | Done        | Done         | Not started | Not started | Not started
 move                        | Done        | Not started | Done         | Not started | Not started | Not started
