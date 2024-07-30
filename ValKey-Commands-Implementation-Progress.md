@@ -161,7 +161,7 @@ sinterstore                 | Done        | Done        | Done         | Not sta
 zpopmax                     | Done        | Done        | Done         | Not started | Not started | Not started
 georadius_ro                | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated 
 georadius                   | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated  
-pfmerge                     | Done        | Not started | Done         | Not started | Not started | Not started
+pfmerge                     | Done        | In Progress | Done         | Not started | Not started | Not started
 bitcount                    | Done        | Done        | Done         | Not started | Not started | Not started
 sdiffstore                  | Done        | Done        | Done         | Not started | Not started | Not started
 touch                       | Done        | In progress | Done         | Not started | Not started | Not started
