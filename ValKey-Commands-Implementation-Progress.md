@@ -215,7 +215,7 @@ bzmpop                      | Done        | Done        | Done         | Not sta
 lcs                         | Done        | In progress | Done         | Not started | Not started | Not started 
 lolwut                      | Done        | Done        | Done         | Not started | Not started | Not started
 expiretime                  | Done        | In progress | Done         | Not started | Not started | Not started
-pexpiretime                 | Done        | Not started | Done         | Not started | Not started | Not started
+pexpiretime                 | Done        | In progress | Done         | Not started | Not started | Not started
 hstrlen                     | Done        | Done        | Done         | Not started | Not started | Not started
 blmove                      | Done        | Done        | Done         | Not started | Not started | Not started
 blmpop                      | Done        | In Progress | Done         | Not started | Not started | Not started
