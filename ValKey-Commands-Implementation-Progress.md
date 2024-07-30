@@ -129,8 +129,8 @@ ssubscribe                  | Done        | Not started | Done         | Not sta
 zrevrank                    | Done        | Done        | Done         | Not started | Not started | Not started
 pubsub                      | Not needed  | Not started | Not needed   | Not started | Not started | Not started
 sunion                      | Done        | Done        | Done         | Not started | Not started | Not started
-zunionstore                 | Done        | Done        | Done         | Not started | Not started | Not started
-lset                        | Done        | Done | Done         | Not started | Not started | Not started
+zunionstore                 | Done        | In Progress | Done         | Not started | Not started | Not started
+lset                        | Done        | Done        | Done         | Not started | Not started | Not started
 xclaim                      | Done        | Not started | Done         | Not started | Not started | Not started
 bitfield                    | Done        | Done        | Done         | Not started | Not started | Not started
 getrange                    | Done        | Not started | Done         | Not started | Not started | Not started
