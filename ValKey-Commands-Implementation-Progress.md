@@ -154,7 +154,7 @@ sort                        | Done        | In progress | Done         | Not sta
 geoadd                      | Done        | Done        | Done         | Not started | Not started | Not started
 zrangebylex                 | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 getbit                      | Done        | Done        | Done         | Not started | Not started | Not started
-msetnx                      | Done        | In progress| Done         | Not started | Not started | Not started
+msetnx                      | Done        | In progress | Done         | Not started | Not started | Not started
 sdiff                       | Done        | Done        | Done         | Not started | Not started | Not started
 setrange                    | Done        | In Progress | Done         | Not started | Not started | Not started
 sinterstore                 | Done        | Done        | Done         | Not started | Not started | Not started
@@ -176,7 +176,7 @@ geopos                      | Done        | Done        | Done         | Not sta
 xautoclaim                  | Done        | Not started | Done         | Not started | Not started | Not started
 zmscore                     | Done        | Done        | Done         | Not started | Not started | Not started
 bitop                       | Done        | Done        | Done         | Not started | Not started | Not started
-lastsave                    | Done        | Not started | Done         | Not started | Not started | Not started
+lastsave                    | Done        | in progress | Done         | Not started | Not started | Not started
 geosearch                   | Done        | Done        | Done         | Not started | Not started | Not started
 function delete             | Done        | Done        | Done         | Not started | Not started | Not started
 function dump               | Done        | Not started | Done         | Not started | Not started | Not started
