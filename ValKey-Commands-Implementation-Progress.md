@@ -208,7 +208,7 @@ zunion                      | Done        | In progress | Done         | Not sta
 sort_ro                     | Done        | In progress | Done         | Not started | Not started | Not started
 fcall_ro                    | Done        | Done        | Done         | Not started | Not started | Not started
 lmpop                       | Done        | In progress | Done         | Not started | Not started | Not started
-geosearchstore              | Done        | Done        | Done         | Not started | Not started | Not started 
+geosearchstore              | Done        | in progress | Done         | Not started | Not started | Not started 
 zintercard                  | Done        | Done        | Done         | Not started | Not started | Not started 
 zmpop                       | Done        | Done        | Done         | Not started | Not started | Not started 
 bzmpop                      | Done        | Done        | Done         | Not started | Not started | Not started 
