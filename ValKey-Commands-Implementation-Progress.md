@@ -102,7 +102,7 @@ punsubscribe                | Done        | In progress | Done         | Not sta
 persist                     | Done        | Done        | Done         | Not started | Not started | Not started
 strlen                      | Done        | Done        | Done         | Not started | Not started | Not started
 zincrby                     | Done        | Done        | Done         | Not started | Not started | Not started
-xgroup                      | Done        | Not started | Done         | Not started | Not started | Not started
+xgroup                      | Done        | In Progress | Done         | Not started | Not started | Not started
 getset                      | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated 
 blpop                       | Done        | Done        | Done         | Not started | Not started | Not started
 zscan                       | Done        | Not started | Done         | Not started | Not started | Not started
