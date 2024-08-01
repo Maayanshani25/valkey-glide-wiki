@@ -150,7 +150,7 @@ sunionstore                 | Done        | Done        | Done         | Not sta
 xrevrange                   | Done        | Not started | Done         | Not started | Not started | Not started
 bzpopmin                    | Done        | Not started | Done         | Not started | Not started | Not started
 rpushx                      | Done        | Done        | Done         | Not started | Not started | Not started
-sort                        | Done        | In progress | Done         | Not started | Not started | Not started
+sort                        | Done        | Done        | Done         | Not started | Not started | Not started
 geoadd                      | Done        | Done        | Done         | Not started | Not started | Not started
 zrangebylex                 | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 getbit                      | Done        | Done        | Done         | Not started | Not started | Not started
@@ -205,7 +205,7 @@ zinter                      | Done        | In progress | Done         | Not sta
 georadiusbymember_ro        | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated  
 sunsubscribe                | Done        | Not started | Done         | Not started | Not started | Not started
 zunion                      | Done        | In progress | Done         | Not started | Not started | Not started
-sort_ro                     | Done        | In progress | Done         | Not started | Not started | Not started
+sort_ro                     | Done        | Done        | Done         | Not started | Not started | Not started
 fcall_ro                    | Done        | Done        | Done         | Not started | Not started | Not started
 lmpop                       | Done        | In progress | Done         | Not started | Not started | Not started
 geosearchstore              | Done        | in progress | Done         | Not started | Not started | Not started 
