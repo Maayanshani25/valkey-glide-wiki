@@ -212,7 +212,7 @@ geosearchstore              | Done        | in progress | Done         | Not sta
 zintercard                  | Done        | Done        | Done         | Not started | Not started | Not started 
 zmpop                       | Done        | Done        | Done         | Not started | Not started | Not started 
 bzmpop                      | Done        | Done        | Done         | Not started | Not started | Not started 
-lcs                         | Done        | In progress | Done         | Not started | Not started | Not started 
+lcs                         | Done        | Done        | Done         | Not started | Not started | Not started 
 lolwut                      | Done        | Done        | Done         | Not started | Not started | Not started
 expiretime                  | Done        | In progress | Done         | Not started | Not started | Not started
 pexpiretime                 | Done        | In progress | Done         | Not started | Not started | Not started
