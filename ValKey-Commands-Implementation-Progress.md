@@ -131,7 +131,7 @@ pubsub                      | Not needed  | Not started | Not needed   | Not sta
 sunion                      | Done        | Done        | Done         | Not started | Not started | Not started
 zunionstore                 | Done        | In Progress | Done         | Not started | Not started | Not started
 lset                        | Done        | Done        | Done         | Not started | Not started | Not started
-xclaim                      | Done        | Not started | Done         | Not started | Not started | Not started
+xclaim                      | Done        | in progress | Done         | Not started | Not started | Not started
 bitfield                    | Done        | Done        | Done         | Not started | Not started | Not started
 getrange                    | Done        | In Progress | Done         | Not started | Not started | Not started
 randomkey                   | Done        | Done        | Done         | Not started | Not started | Not started
@@ -144,7 +144,7 @@ xrange                      | Done        | In Progress | Done         | Not sta
 xdel                        | Done        | Done        | Done         | Not started | Not started | Not started
 linsert                     | Done        | Done        | Done         | Not started | Not started | Not started
 xlen                        | Done        | Done        | Done         | Not started | Not started | Not started
-xpending                    | Done        | Not started | Done         | Not started | Not started | Not started
+xpending                    | Done        | in porgress | Done         | Not started | Not started | Not started
 discard                     | API not required | API not required | API not required | Not started | Not started | Not started
 sunionstore                 | Done        | Done        | Done         | Not started | Not started | Not started
 xrevrange                   | Done        | Not started | Done         | Not started | Not started | Not started
