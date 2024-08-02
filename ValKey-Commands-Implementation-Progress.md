@@ -200,7 +200,7 @@ zdiff                       | Done        | Done        | Done         | Not sta
 zrangestore                 | Done        | In progress | Done         | Not started | Not started | Not started
 geodist                     | Done        | Done        | Done         | Not started | Not started | Not started 
 georadiusbymember           | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated  
-bzpopmax                    | Done        | Not started | Done         | Not started | Not started | Not started 
+bzpopmax                    | Done        | In progress | Done         | Not started | Not started | Not started 
 zinter                      | Done        | In progress | Done         | Not started | Not started | Not started 
 georadiusbymember_ro        | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated  
 sunsubscribe                | Done        | Not started | Done         | Not started | Not started | Not started
