@@ -156,7 +156,7 @@ zrangebylex                 | deprecated  | deprecated  | deprecated   | depreca
 getbit                      | Done        | Done        | Done         | Not started | Not started | Not started
 msetnx                      | Done        | In progress | Done         | Not started | Not started | Not started
 sdiff                       | Done        | Done        | Done         | Not started | Not started | Not started
-setrange                    | Done        | In Progress | Done         | Not started | Not started | Not started
+setrange                    | Done        | Done        | Done         | Not started | Not started | Not started
 sinterstore                 | Done        | Done        | Done         | Not started | Not started | Not started
 zpopmax                     | Done        | Done        | Done         | Not started | Not started | Not started
 georadius_ro                | Deprecated  | Deprecated  | Deprecated   | Deprecated  | Deprecated  | Deprecated 
@@ -207,7 +207,7 @@ sunsubscribe                | Done        | Not started | Done         | Not sta
 zunion                      | Done        | In progress | Done         | Not started | Not started | Not started
 sort_ro                     | Done        | Done        | Done         | Not started | Not started | Not started
 fcall_ro                    | Done        | Done        | Done         | Not started | Not started | Not started
-lmpop                       | Done        | In progress | Done         | Not started | Not started | Not started
+lmpop                       | Done        | Done        | Done         | Not started | Not started | Not started
 geosearchstore              | Done        | in progress | Done         | Not started | Not started | Not started 
 zintercard                  | Done        | Done        | Done         | Not started | Not started | Not started 
 zmpop                       | Done        | Done        | Done         | Not started | Not started | Not started 
@@ -218,7 +218,7 @@ expiretime                  | Done        | In progress | Done         | Not sta
 pexpiretime                 | Done        | In progress | Done         | Not started | Not started | Not started
 hstrlen                     | Done        | Done        | Done         | Not started | Not started | Not started
 blmove                      | Done        | Done        | Done         | Not started | Not started | Not started
-blmpop                      | Done        | In Progress | Done         | Not started | Not started | Not started
+blmpop                      | Done        | Done        | Done         | Not started | Not started | Not started
 brpoplpush                  | deprecated  | deprecated  | deprecated   | deprecated  | deprecated  | deprecated 
 lmove                       | Done        | Done        | Done         | Not started | Not started | Not started
 sintercard                  | Done        | Done        | Done         | Not started | Not started | Not started
