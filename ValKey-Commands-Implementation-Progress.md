@@ -148,7 +148,7 @@ xpending                    | Done        | in porgress | Done         | Not sta
 discard                     | API not required | API not required | API not required | Not started | Not started | Not started
 sunionstore                 | Done        | Done        | Done         | Not started | Not started | Not started
 xrevrange                   | Done        | Not started | Done         | Not started | Not started | Not started
-bzpopmin                    | Done        | Not started | Done         | Not started | Not started | Not started
+bzpopmin                    | Done        | In progress | Done         | Not started | Not started | Not started
 rpushx                      | Done        | Done        | Done         | Not started | Not started | Not started
 sort                        | Done        | Done        | Done         | Not started | Not started | Not started
 geoadd                      | Done        | Done        | Done         | Not started | Not started | Not started
@@ -223,5 +223,5 @@ brpoplpush                  | deprecated  | deprecated  | deprecated   | depreca
 lmove                       | Done        | Done        | Done         | Not started | Not started | Not started
 sintercard                  | Done        | Done        | Done         | Not started | Not started | Not started
 getdel                      | Done        | Done        | Done         | Not started | Not started | Not started
-getex                       | Done        | Not started | Done         | Not started | Not started | Not started
+getex                       | Done        | In progress | Done         | Not started | Not started | Not started
 quit                        | Done, API not required | Done, API not required | Done, API not required | Done, API not required | Done, API not required | Done, API not required
