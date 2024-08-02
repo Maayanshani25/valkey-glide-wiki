@@ -185,7 +185,7 @@ function kill               | Done        | Not started | Done         | Not sta
 function list               | Done        | Done        | Done         | Not started | Not started | Not started
 function load               | Done        | Done        | Done         | Not started | Not started | Not started
 function restore            | Done        | Not started | Done         | Not started | Not started | Not started
-function stats              | Done        | Not started | Done         | Not started | Not started | Not started
+function stats              | Done        | in progress | Done         | Not started | Not started | Not started
 zlexcount                   | Done        | Done        | Done         | Not started | Not started | Not started
 zrandmember                 | Done        | Done        | Done         | Not started | Not started | Not started
 replicaof                   | Done, API not required | Done, API not required | Done, API not required   | Not started | Not started | Not started
