@@ -141,7 +141,9 @@ getrange                    | Done        | In Progress | Done         | Not sta
 randomkey                   | Done        | Done        | Done         | Not started | Not started | Not started
 srandmember                 | Done        | In Progress | Done         | Not started | Not started | Not started
 dump                        | Done        | Not started | Done         | Not started | Not started | Not started
-xinfo                       | Done        | In Progress | Done         | Not started | Not started | Not started
+xinfo consumers             | Done        | In Progress | Done         | Not started | Not started | Not started
+xinfo groups                | Done        | In Progress | Done         | Not started | Not started | Not started
+xinfo stream                | Done        | Not started | Done         | Not started | Not started | Not started
 setbit                      | Done        | Done        | Done         | Not started | Not started | Not started
 smove                       | Done        | Done        | Done         | Not started | Not started | Not started
 xrange                      | Done        | In Progress | Done         | Not started | Not started | Not started
