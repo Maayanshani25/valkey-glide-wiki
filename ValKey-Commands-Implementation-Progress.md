@@ -184,7 +184,7 @@ zremrangebylex              | Done        | Done        | Done        | Not star
 zrevrangebylex              | deprecated  | deprecated  | deprecated  | Not started | Not started | Not started
 lpushx                      | Done        | Done        | Done        | Not started | Not started | Not started
 copy                        | Done        | Done        | Done        | Not started | Not started | Not started
-hrandfield                  | Done        | Not started | Done        | Not started | Not started | Not started
+hrandfield                  | Done        | In progress | Done        | Not started | Not started | Not started
 lpos                        | Done        | Done        | Done        | Not started | Not started | Not started
 geopos                      | Done        | Done        | Done        | Not started | Not started | Not started
 xautoclaim                  | Done        | Not started | Done        | Not started | Not started | Not started
