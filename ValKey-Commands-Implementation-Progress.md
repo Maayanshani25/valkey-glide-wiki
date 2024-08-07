@@ -206,7 +206,7 @@ replicaof                   | Done, API not required | Done, API not required | 
 bitfield_ro                 | Done        | Done        | Done        | Not started | Not started | Not started
 fcall                       | Done        | Done        | Done        | Not started | Not started | Not started
 zdiffstore                  | Done        | Done        | Done        | Not started | Not started | Not started
-move                        | Done        | Not started | Done        | Not started | Not started | Not started
+move                        | Done        | In progress | Done        | Not started | Not started | Not started
 geohash                     | Done        | Done        | Done        | Not started | Not started | Not started
 bitpos                      | Done        | Done        | Done        | Not started | Not started | Not started
 substr                      | Deprecated  | Deprecated  | Deprecated  | Deprecated  | Deprecated  | Deprecated  
