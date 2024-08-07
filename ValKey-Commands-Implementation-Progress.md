@@ -147,7 +147,7 @@ xclaim                      | Done        | in progress | Done        | Not star
 bitfield                    | Done        | Done        | Done        | Not started | Not started | Not started
 getrange                    | Done        | Done        | Done        | Not started | Not started | Not started
 randomkey                   | Done        | Done        | Done        | Not started | Not started | Not started
-srandmember                 | Done        | In Progress | Done        | Not started | Not started | Not started
+srandmember                 | Done        | Done        | Done        | Not started | Not started | Not started
 dump                        | Done        | Not started | Done        | Not started | Not started | Not started
 xinfo consumers             | Done        | In Progress | Done        | Not started | Not started | Not started
 xinfo groups                | Done        | In Progress | Done        | Not started | Not started | Not started
@@ -168,7 +168,7 @@ sort                        | Done        | Done        | Done        | Not star
 geoadd                      | Done        | Done        | Done        | Not started | Not started | Not started
 zrangebylex                 | deprecated  | deprecated  | deprecated  | deprecated  | deprecated  | deprecated 
 getbit                      | Done        | Done        | Done        | Not started | Not started | Not started
-msetnx                      | Done        | In progress | Done        | Not started | Not started | Not started
+msetnx                      | Done        | Done        | Done        | Not started | Not started | Not started
 sdiff                       | Done        | Done        | Done        | Not started | Not started | Not started
 setrange                    | Done        | Done        | Done        | Not started | Not started | Not started
 sinterstore                 | Done        | Done        | Done        | Not started | Not started | Not started
