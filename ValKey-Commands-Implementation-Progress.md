@@ -98,7 +98,7 @@ xread                       | Done        | Done        | Done        | Not star
 readwrite                   | Done, API not required | Done, API not required | Done, API not required  | Not started | Not started | Not started
 zcount                      | Done        | Done        | Done        | Not started | Not started | Not started
 time                        | Done        | Done        | Done        | Not started | Not started | Not started
-append                      | Done        | In progress | Done        | Not started | Not started | Not started
+append                      | Done        | Done        | Done        | Not started | Not started | Not started
 rename                      | Done        | Done        | Done        | Not started | Not started | Not started
 lindex                      | Done        | Done        | Done        | Not started | Not started | Not started
 punsubscribe                | Done        | Done        | Done        | Not started | Not started | Not started
