@@ -53,8 +53,8 @@ ltrim                       | Done        | Done        | Done        | Not star
 lrange                      | Done        | Done        | Done        | Not started | Not started | Not started
 unlink                      | Done        | Done        | Done        | Not started | Not started | Not started
 ttl                         | Done        | Done        | Done        | Not started | Not started | Not started
-publish                     | Done        | In progress | Done        | Not started | Not started | Not started
-subscribe                   | Done        | Not started | Done        | Not started | Not started | Not started
+publish                     | Done        | Done        | Done        | Not started | Not started | Not started
+subscribe                   | Done        | Done        | Done        | Not started | Not started | Not started
 eval                        | Done        | Done        | Done        | Not started | Not started | Not started
 evalsha                     | Done        | Done        | Done        | Not started | Not started | Not started
 script API (load + eval)    | Done        | Done        | Done        | Not started | Not started | Not started
@@ -70,8 +70,8 @@ setex                       | deprecated  | deprecated  | deprecated  | deprecat
 zadd                        | Done        | Done        | Done        | Not started | Not started | Not started
 zrem                        | Done        | Done        | Done        | Not started | Not started | Not started
 zrange                      | Done        | Done        | Done        | Not started | Not started | Not started
-unsubscribe                 | Done        | In progress | Done        | Not started | Not started | Not started
-psubscribe                  | Done        | In progress | Done        | Not started | Not started | Not started
+unsubscribe                 | Done        | Done        | Done        | Not started | Not started | Not started
+psubscribe                  | Done        | Done        | Done        | Not started | Not started | Not started
 zcard                       | Done        | Done        | Done        | Not started | Not started | Not started
 type                        | Done        | Done        | Done        | Not started | Not started | Not started
 echo                        | Done        | Done        | Done        | Not started | Not started | Not started
@@ -101,7 +101,7 @@ time                        | Done        | Done        | Done        | Not star
 append                      | Done        | In progress | Done        | Not started | Not started | Not started
 rename                      | Done        | Done        | Done        | Not started | Not started | Not started
 lindex                      | Done        | Done        | Done        | Not started | Not started | Not started
-punsubscribe                | Done        | In progress | Done        | Not started | Not started | Not started
+punsubscribe                | Done        | Done        | Done        | Not started | Not started | Not started
 persist                     | Done        | Done        | Done        | Not started | Not started | Not started
 strlen                      | Done        | Done        | Done        | Not started | Not started | Not started
 zincrby                     | Done        | Done        | Done        | Not started | Not started | Not started
@@ -132,8 +132,8 @@ object encoding             | Done        | Done        | Done        | Not star
 object freq                 | Done        | Done        | Done        | Not started | Not started | Not started
 object idletime             | Done        | Done        | Done        | Not started | Not started | Not started
 object refcount             | Done        | Done        | Done        | Not started | Not started | Not started
-spublish                    | Done        | Not started | Done        | Not started | Not started | Not started
-ssubscribe                  | Done        | Not started | Done        | Not started | Not started | Not started
+spublish                    | Done        | Done        | Done        | Not started | Not started | Not started
+ssubscribe                  | Done        | Done        | Done        | Not started | Not started | Not started
 zrevrank                    | Done        | Done        | Done        | Not started | Not started | Not started
 pubsub channels             | Done        | Done        | In progress | Not started | Not started | Not started
 pubsub numpat               | Done        | Done        | In progress | Not started | Not started | Not started
@@ -217,7 +217,7 @@ georadiusbymember           | Deprecated  | Deprecated  | Deprecated  | Deprecat
 bzpopmax                    | Done        | In progress | Done        | Not started | Not started | Not started 
 zinter                      | Done        | In progress | Done        | Not started | Not started | Not started 
 georadiusbymember_ro        | Deprecated  | Deprecated  | Deprecated  | Deprecated  | Deprecated  | Deprecated  
-sunsubscribe                | Done        | Not started | Done        | Not started | Not started | Not started
+sunsubscribe                | Done        | Done        | Done        | Not started | Not started | Not started
 zunion                      | Done        | In progress | Done        | Not started | Not started | Not started
 sort_ro                     | Done        | Done        | Done        | Not started | Not started | Not started
 fcall_ro                    | Done        | Done        | Done        | Not started | Not started | Not started
