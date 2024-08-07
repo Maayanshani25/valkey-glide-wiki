@@ -162,7 +162,7 @@ xpending                    | Done        | in porgress | Done        | Not star
 discard                     | API not required | API not required | API not required | Not started | Not started | Not started
 sunionstore                 | Done        | Done        | Done        | Not started | Not started | Not started
 xrevrange                   | Done        | Not started | Done        | Not started | Not started | Not started
-bzpopmin                    | Done        | In progress | Done        | Not started | Not started | Not started
+bzpopmin                    | Done        | Done        | Done        | Not started | Not started | Not started
 rpushx                      | Done        | Done        | Done        | Not started | Not started | Not started
 sort                        | Done        | Done        | Done        | Not started | Not started | Not started
 geoadd                      | Done        | Done        | Done        | Not started | Not started | Not started
@@ -214,7 +214,7 @@ zdiff                       | Done        | Done        | Done        | Not star
 zrangestore                 | Done        | In progress | Done        | Not started | Not started | Not started
 geodist                     | Done        | Done        | Done        | Not started | Not started | Not started 
 georadiusbymember           | Deprecated  | Deprecated  | Deprecated  | Deprecated  | Deprecated  | Deprecated  
-bzpopmax                    | Done        | In progress | Done        | Not started | Not started | Not started 
+bzpopmax                    | Done        | Done        | Done        | Not started | Not started | Not started 
 zinter                      | Done        | In progress | Done        | Not started | Not started | Not started 
 georadiusbymember_ro        | Deprecated  | Deprecated  | Deprecated  | Deprecated  | Deprecated  | Deprecated  
 sunsubscribe                | Done        | Done        | Done        | Not started | Not started | Not started
