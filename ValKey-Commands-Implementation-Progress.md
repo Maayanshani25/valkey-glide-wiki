@@ -142,13 +142,13 @@ pubsub shardnumsub          | Done        | Done        | Not started | Not star
 sunion                      | Done        | Done        | Done        | Not started | Not started | Not started
 zunionstore                 | Done        | In Progress | Done        | Not started | Not started | Not started
 lset                        | Done        | Done        | Done        | Not started | Not started | Not started
-xclaim                      | Done        | in progress | Done        | Not started | Not started | Not started
+xclaim                      | Done        | Done        | Done        | Not started | Not started | Not started
 bitfield                    | Done        | Done        | Done        | Not started | Not started | Not started
 getrange                    | Done        | Done        | Done        | Not started | Not started | Not started
 randomkey                   | Done        | Done        | Done        | Not started | Not started | Not started
 srandmember                 | Done        | Done        | Done        | Not started | Not started | Not started
 dump                        | Done        | Not started | Done        | Not started | Not started | Not started
-xinfo consumers             | Done        | In Progress | Done        | Not started | Not started | Not started
+xinfo consumers             | Done        | Done        | Done        | Not started | Not started | Not started
 xinfo groups                | Done        | In Progress | Done        | Not started | Not started | Not started
 xinfo stream                | Done        | Not started | Done        | Not started | Not started | Not started
 setbit                      | Done        | Done        | Done        | Not started | Not started | Not started
