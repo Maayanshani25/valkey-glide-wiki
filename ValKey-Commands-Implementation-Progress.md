@@ -106,8 +106,8 @@ persist                     | Done        | Done        | Done        | Not star
 strlen                      | Done        | Done        | Done        | Not started | Not started | Not started
 zincrby                     | Done        | Done        | Done        | Not started | Not started | Not started
 xgroup create               | Done        | Done        | Done        | Not started | Not started | Not started
-xgroup createconsumer       | Done        | In Progress | Done        | Not started | Not started | Not started
-xgroup delconsumer          | Done        | In Progress | Done        | Not started | Not started | Not started
+xgroup createconsumer       | Done        | Done        | Done        | Not started | Not started | Not started
+xgroup delconsumer          | Done        | Done        | Done        | Not started | Not started | Not started
 xgroup destroy              | Done        | Done        | Done        | Not started | Not started | Not started
 xgroup setid                | Done        | Not started | Done        | Not started | Not started | Not started
 getset                      | Deprecated  | Deprecated  | Deprecated  | Deprecated  | Deprecated  | Deprecated 
