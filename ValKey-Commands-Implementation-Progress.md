@@ -120,7 +120,7 @@ zpopmin                     | Done        | Done        | Done        | Not star
 pfcount                     | Done        | Done        | Done        | Not started | Not started | Not started
 wait                        | Done        | In Progress | Done        | Not started | Not started | Not started
 spop                        | Done        | Done        | Done        | Not started | Not started | Not started
-restore                     | Done        | Not started | Done        | Not started | Not started | Not started
+restore                     | Done        | In Progress | Done        | Not started | Not started | Not started
 hvals                       | Done        | Done        | Done        | Not started | Not started | Not started
 sinter                      | Done        | Done        | Done        | Not started | Not started | Not started
 xtrim                       | Done        | Done        | Done        | Not started | Not started | Not started
@@ -147,7 +147,7 @@ bitfield                    | Done        | Done        | Done        | Not star
 getrange                    | Done        | Done        | Done        | Not started | Not started | Not started
 randomkey                   | Done        | Done        | Done        | Not started | Not started | Not started
 srandmember                 | Done        | Done        | Done        | Not started | Not started | Not started
-dump                        | Done        | Not started | Done        | Not started | Not started | Not started
+dump                        | Done        | In Progress | Done        | Not started | Not started | Not started
 xinfo consumers             | Done        | Done        | Done        | Not started | Not started | Not started
 xinfo groups                | Done        | In Progress | Done        | Not started | Not started | Not started
 xinfo stream                | Done        | Done        | Done        | Not started | Not started | Not started
