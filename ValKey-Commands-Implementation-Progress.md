@@ -113,7 +113,7 @@ xgroup setid                | Done        | Not started | Done        | Not star
 getset                      | Deprecated  | Deprecated  | Deprecated  | Deprecated  | Deprecated  | Deprecated 
 blpop                       | Done        | Done        | Done        | Not started | Not started | Not started
 zscan                       | Done        | Done        | Done        | Not started | Not started | Not started
-xreadgroup                  | Done        | Not started | Done        | Not started | Not started | Not started
+xreadgroup                  | Done        | In progress | Done        | Not started | Not started | Not started
 pfadd                       | Done        | Done        | Done        | Not started | Not started | Not started
 renamenx                    | Done        | Done        | Done        | Not started | Not started | Not started
 zpopmin                     | Done        | Done        | Done        | Not started | Not started | Not started
