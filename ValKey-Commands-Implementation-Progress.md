@@ -194,7 +194,7 @@ geosearch                   | Done        | Done        | Done        | Not star
 function delete             | Done        | Done        | Done        | Not started | Not started | Not started
 function dump               | Done        | Not started | Done        | Not started | Not started | Not started
 function flush              | Done        | Done        | Done        | Not started | Not started | Not started
-function kill               | Done        | In progress | Done        | Not started | Not started | Not started
+function kill               | Done        | Done        | Done        | Not started | Not started | Not started
 function list               | Done        | Done        | Done        | Not started | Not started | Not started
 function load               | Done        | Done        | Done        | Not started | Not started | Not started
 function restore            | Done        | Not started | Done        | Not started | Not started | Not started
