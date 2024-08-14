@@ -153,14 +153,14 @@ xinfo groups                | Done        | In Progress | Done        | Not star
 xinfo stream                | Done        | Done        | Done        | Not started | Not started | Not started
 setbit                      | Done        | Done        | Done        | Not started | Not started | Not started
 smove                       | Done        | Done        | Done        | Not started | Not started | Not started
-xrange                      | Done        | In Progress | Done        | Not started | Not started | Not started
+xrange                      | Done        | Done        | Done        | Not started | Not started | Not started
 xdel                        | Done        | Done        | Done        | Not started | Not started | Not started
 linsert                     | Done        | Done        | Done        | Not started | Not started | Not started
 xlen                        | Done        | Done        | Done        | Not started | Not started | Not started
 xpending                    | Done        | Done        | Done        | Not started | Not started | Not started
 discard                     | API not required | API not required | API not required | Not started | Not started | Not started
 sunionstore                 | Done        | Done        | Done        | Not started | Not started | Not started
-xrevrange                   | Done        | Not started | Done        | Not started | Not started | Not started
+xrevrange                   | Done        | In Progress | Done        | Not started | Not started | Not started
 bzpopmin                    | Done        | Done        | Done        | Not started | Not started | Not started
 rpushx                      | Done        | Done        | Done        | Not started | Not started | Not started
 sort                        | Done        | Done        | Done        | Not started | Not started | Not started
