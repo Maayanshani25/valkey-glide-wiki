@@ -91,9 +91,9 @@ pttl                        | Done        | Done        | Done        | Not star
 zscore                      | Done        | Done        | Done        | Not started | Not started | Not started
 dbsize                      | Done        | Done        | Done        | Not started | Not started | Not started
 zrevrange                   | deprecated  | deprecated  | deprecated  | deprecated  | deprecated  | deprecated 
-hscan                       | Done        | Done | Done        | Not started | Not started | Not started
+hscan                       | Done        | Done        | Done        | Not started | Not started | Not started
 unwatch                     | Done        | Done        | Done        | Not started | Not started | Not started
-hkeys                       | Done        | In progress | Done        | Not started | Not started | Not started
+hkeys                       | Done        | Done        | Done        | Not started | Not started | Not started
 xread                       | Done        | Done        | Done        | Not started | Not started | Not started
 readwrite                   | Done, API not required | Done, API not required | Done, API not required  | Not started | Not started | Not started
 zcount                      | Done        | Done        | Done        | Not started | Not started | Not started
@@ -192,12 +192,12 @@ bitop                       | Done        | Done        | Done        | Not star
 lastsave                    | Done        | Done        | Done        | Not started | Not started | Not started
 geosearch                   | Done        | Done        | Done        | Not started | Not started | Not started
 function delete             | Done        | Done        | Done        | Not started | Not started | Not started
-function dump               | Done        | Not started | Done        | Not started | Not started | Not started
+function dump               | Done        | In Progress | Done        | Not started | Not started | Not started
 function flush              | Done        | Done        | Done        | Not started | Not started | Not started
 function kill               | Done        | Done        | Done        | Not started | Not started | Not started
 function list               | Done        | Done        | Done        | Not started | Not started | Not started
 function load               | Done        | Done        | Done        | Not started | Not started | Not started
-function restore            | Done        | Not started | Done        | Not started | Not started | Not started
+function restore            | Done        | In Progress | Done        | Not started | Not started | Not started
 function stats              | Done        | Done        | Done        | Not started | Not started | Not started
 zlexcount                   | Done        | Done        | Done        | Not started | Not started | Not started
 zrandmember                 | Done        | Done        | Done        | Not started | Not started | Not started
@@ -236,5 +236,5 @@ brpoplpush                  | deprecated  | deprecated  | deprecated  | deprecat
 lmove                       | Done        | Done        | Done        | Not started | Not started | Not started
 sintercard                  | Done        | Done        | Done        | Not started | Not started | Not started
 getdel                      | Done        | Done        | Done        | Not started | Not started | Not started
-getex                       | Done        | In progress | Done        | Not started | Not started | Not started
+getex                       | Done        | Done        | Done        | Not started | Not started | Not started
 quit                        | Done, API not required | Done, API not required | Done, API not required | Done, API not required | Done, API not required | Done, API not required
