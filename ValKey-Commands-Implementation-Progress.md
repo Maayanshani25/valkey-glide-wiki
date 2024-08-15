@@ -134,9 +134,9 @@ object refcount             | Done        | Done        | Done        | Not star
 spublish                    | Done        | Done        | Done        | Not started | Not started | Not started
 ssubscribe                  | Done        | Done        | Done        | Not started | Not started | Not started
 zrevrank                    | Done        | Done        | Done        | Not started | Not started | Not started
-pubsub channels             | Done        | Done        | In progress | Not started | Not started | Not started
-pubsub numpat               | Done        | Done        | In progress | Not started | Not started | Not started
-pubsub numsub               | Done        | Done        | In progress | Not started | Not started | Not started
+pubsub channels             | Done        | Done        | Done        | Not started | Not started | Not started
+pubsub numpat               | Done        | Done        | Done        | Not started | Not started | Not started
+pubsub numsub               | Done        | Done        | Done        | Not started | Not started | Not started
 pubsub shardchannels        | Done        | Done        | Not started | Not started | Not started | Not started
 pubsub shardnumsub          | Done        | Done        | Not started | Not started | Not started | Not started
 sunion                      | Done        | Done        | Done        | Not started | Not started | Not started
