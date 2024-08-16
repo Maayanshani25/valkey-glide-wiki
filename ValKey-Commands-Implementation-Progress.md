@@ -149,7 +149,7 @@ randomkey                   | Done        | Done        | Done        | Not star
 srandmember                 | Done        | Done        | Done        | Not started | Not started | Not started
 dump                        | Done        | In Progress | Done        | Not started | Not started | Not started
 xinfo consumers             | Done        | Done        | Done        | Not started | Not started | Not started
-xinfo groups                | Done        | In Progress | Done        | Not started | Not started | Not started
+xinfo groups                | Done        | Done        | Done        | Not started | Not started | Not started
 xinfo stream                | Done        | Done        | Done        | Not started | Not started | Not started
 setbit                      | Done        | Done        | Done        | Not started | Not started | Not started
 smove                       | Done        | Done        | Done        | Not started | Not started | Not started
