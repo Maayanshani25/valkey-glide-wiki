@@ -62,11 +62,11 @@ georadius_ro | Not started |   |   | deprecated |   |   |   |   |   |   
 geosearch | Not started |   |   |   |   |   |   |   |   |   |  
 geosearchstore | Not started |   |   |   |   |   |   |   |   |   |  
 get | Done | Adar Ovadia | Yes |   |   |   |   |   |   |   |  
-getbit | Not started |   | No |   |   |   |   |   |   |   |  
+getbit | In Progress | Andrew C | No |   |   |   |   |   |   |   |  
 getdel | WIP | Adar Ovadia | Yes |   |   |   |   |   |   |   |  
 getex | Not started |   |   |   |   |   |   |   |   |   |  
 getrange | WIP | Lior Sventitzky | Yes |   |   |   |   |   |   |   |  
-getset | Not started |   |   | deprecated |   |   |   |   |   |   |  
+getset | In Progress | Andrew C |   | deprecated |   |   |   |   |   |   |  
 hdel | Not started |   | No |   |   |   |   |   |   |   |  
 hexists | Not started |   | No |   |   |   |   |   |   |   |  
 hget | WIP | Lior Sventitzky |   |   |   |   |   |   |   |   |  
