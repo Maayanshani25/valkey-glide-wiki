@@ -137,8 +137,8 @@ zrevrank                    | Done        | Done        | Done        | Not star
 pubsub channels             | Done        | Done        | Done        | Not started | Not started | Not started
 pubsub numpat               | Done        | Done        | Done        | Not started | Not started | Not started
 pubsub numsub               | Done        | Done        | Done        | Not started | Not started | Not started
-pubsub shardchannels        | Done        | Done        | Not started | Not started | Not started | Not started
-pubsub shardnumsub          | Done        | Done        | Not started | Not started | Not started | Not started
+pubsub shardchannels        | Done        | Done        | In progress | Not started | Not started | Not started
+pubsub shardnumsub          | Done        | Done        | In progress | Not started | Not started | Not started
 sunion                      | Done        | Done        | Done        | Not started | Not started | Not started
 zunionstore                 | Done        | In Progress | Done        | Not started | Not started | Not started
 lset                        | Done        | Done        | Done        | Not started | Not started | Not started
