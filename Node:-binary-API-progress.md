@@ -4,11 +4,11 @@ Command | Node | Owner | Function returns binary data? | Comment |   |   |   
 append | WIP | Lior Sventitzky | No |   |   |   |   |   |   |   |  
 auth | Not started |   |   | not in the API |   |   |   |   |   |   |  
 bgsave | Not started |   |   | not needed |   |   |   |   |   |   |  
-bitcount | In Progress |   | No |   |   |   |   |   |   |   |  
-bitfield | In Progress |   |   |   |   |   |   |   |   |   |  
-bitfield_ro | In Progress |   |   |   |   |   |   |   |   |   |  
-bitop | In Progress |   | No |   |   |   |   |   |   |   |  
-bitpos | In Progress |   | No |   |   |   |   |   |   |   |  
+bitcount | In Progress | Andrew C | No |   |   |   |   |   |   |   |  
+bitfield | In Progress | Andrew C |   |   |   |   |   |   |   |   |  
+bitfield_ro | In Progress | Andrew C |   |   |   |   |   |   |   |   |  
+bitop | In Progress | Andrew C | No |   |   |   |   |   |   |   |  
+bitpos | In Progress | Andrew C | No |   |   |   |   |   |   |   |  
 blmove | Not started |   |   |   |   |   |   |   |   |   |  
 blmpop | Not started |   | Yes |   |   |   |   |   |   |   |  
 blpop | Not started |   | Yes |   |   |   |   |   |   |   |  
