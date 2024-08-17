@@ -62,7 +62,7 @@ geosearch            | Not started | Yury Fridlyand  |                         
 geosearchstore       | Not started | Yury Fridlyand  |                               |
 get                  | Done        | Adar Ovadia     | Yes                           |
 getbit               | In Progress | Andrew C        | No                            |
-getdel               | WIP         | Adar Ovadia     | Yes                           |
+getdel               | Done         | Adar Ovadia     | Yes                           |
 getex                | Not started |                 |                               |
 getrange             | WIP         | Lior Sventitzky | Yes                           |
 getset               | In Progress | Andrew C        |                               | deprecated
@@ -119,7 +119,7 @@ pexpiretime          | Not started |                 | No                      
 pfadd                | Not started |                 | No                            |
 pfcount              | Not started |                 | No                            |
 pfmerge              | Not started |                 | Yes                           |
-ping                 | WIP         | Adar Ovadia     | Yes                           |
+ping                 | Done         | Adar Ovadia     | Yes                           |
 psetex               | Not started |                 |                               | deprecated
 psubscribe           | Not started |                 |                               |
 pttl                 | Not started |                 | No                            |
