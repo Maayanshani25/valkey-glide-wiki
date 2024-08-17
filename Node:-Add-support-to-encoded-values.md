@@ -15,39 +15,39 @@ Change Getdel and ping command for example: - https://github.com/valkey-io/valke
 Changes which should happen for all commands which returns string:
 
 1. Change which should happen for all commands which get string:
-```
+```ts
 public getdel(
         key: GlideString,
         decoder?: Decoder,
     )
 ```
 1. Add optional decoder to the signature command:
-```
+```ts
 public getdel(
         key: GlideString,
         decoder?: Decoder,
     )
 ```
 if there is more optionals parameter use anonymous options parameters: 
-```
+```ts
 public ping(options?: {message?: string; route?: Routes; decoder?: Decoder}): Promise<string>
 ```
 use it in the func: 
-```
+```ts
 
 return this.createWritePromise(createPing(options?.message), {
             route: toProtobufRoute(options?.route), decoder: options?.decoder,
         });
 ```
 1. Change the return type to GlideString instead of string.
-```
+```ts
 public getdel(
         key: GlideString,
         decoder?: Decoder,
     ): Promise<GlideString | null> 
 ```
 1. change the createCommand for example, createPing to get GlideString also:
-```
+```ts
 
 export function createPing(str?: GlideString): command_request.Command {
     const args: GlideString[] = str == undefined ? [] : [str];
@@ -55,7 +55,8 @@ export function createPing(str?: GlideString): command_request.Command {
 }
 ```
 5. The documentation should be updated accordingly:
-/**
+```ts
+    /**
      * Gets a string value associated with the given `key`and deletes the key.
      *
      * See https://valkey.io/commands/getdel/ for details.
@@ -72,11 +73,11 @@ export function createPing(str?: GlideString): command_request.Command {
      * const value = client.getdel("key");  // value is null
      * ```
      */
-
+```
 
 1. Add test
 
-
+```ts
     it.each([ProtocolVersion.RESP2, ProtocolVersion.RESP3])(
         `getdel test_%p`,
         async (protocol) => {
@@ -101,7 +102,7 @@ export function createPing(str?: GlideString): command_request.Command {
                 await expect(client.getdel(key2)).rejects.toThrow(RequestError);
             }, protocol);
         },
-
+```
 
 
 Notes:
