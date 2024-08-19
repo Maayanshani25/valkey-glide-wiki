@@ -1,6 +1,6 @@
 Command              | Node        | Owner           | Function returns binary data? | Comment
 --                   | --          | --              | --                            | --
-append               | WIP         | Lior Sventitzky | No                            |
+append               | Done         | Lior Sventitzky | No                            |
 auth                 | Not started |                 |                               | not in the API
 bgsave               | Not started |                 |                               | not needed
 bitcount             | In Progress | Andrew C        | No                            |
@@ -64,11 +64,11 @@ get                  | Done        | Adar Ovadia     | Yes                      
 getbit               | In Progress | Andrew C        | No                            |
 getdel               | Done         | Adar Ovadia     | Yes                           |
 getex                | Not started |                 |                               |
-getrange             | WIP         | Lior Sventitzky | Yes                           |
+getrange             | Done         | Lior Sventitzky | Yes                           |
 getset               | In Progress | Andrew C        |                               | deprecated
 hdel                 | Not started |                 | No                            |
 hexists              | Not started |                 | No                            |
-hget                 | WIP         | Lior Sventitzky |                               |
+hget                 | Done         | Lior Sventitzky |                               |
 hgetall              | Not started |                 | Yes                           |
 hincrby              | Not started |                 | No                            |
 hincrbyfloat         | Not started |                 | No                            |
@@ -81,7 +81,7 @@ hscan                | Not started |                 |                        
 hset                 | Not started |                 |                               |
 hsetnx               | Not started |                 | No                            |
 hstrlen              | Not started |                 | No                            |
-hvals                | WIP         | Lior Sventitzky |                               |
+hvals                | Done         | Lior Sventitzky |                               |
 incr                 | Not started |                 | No                            |
 incrby               | Not started |                 | No                            |
 incrbyfloat          | Not started |                 | No                            |
