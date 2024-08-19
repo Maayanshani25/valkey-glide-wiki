@@ -214,10 +214,10 @@ zrangestore                 | Done        | Done        | Done        | Not star
 geodist                     | Done        | Done        | Done        | Not started | Not started | Not started 
 georadiusbymember           | Deprecated  | Deprecated  | Deprecated  | Deprecated  | Deprecated  | Deprecated  
 bzpopmax                    | Done        | Done        | Done        | Not started | Not started | Not started 
-zinter                      | Done        | In progress | Done        | Not started | Not started | Not started 
+zinter                      | Done        | Done        | Done        | Not started | Not started | Not started 
 georadiusbymember_ro        | Deprecated  | Deprecated  | Deprecated  | Deprecated  | Deprecated  | Deprecated  
 sunsubscribe                | Done        | Done        | Done        | Not started | Not started | Not started
-zunion                      | Done        | In progress | Done        | Not started | Not started | Not started
+zunion                      | Done        | Done        | Done        | Not started | Not started | Not started
 sort_ro                     | Done        | Done        | Done        | Not started | Not started | Not started
 fcall_ro                    | Done        | Done        | Done        | Not started | Not started | Not started
 lmpop                       | Done        | Done        | Done        | Not started | Not started | Not started
