@@ -23,21 +23,21 @@ Config get           | Not started |                 |                        
 Config resetstat     | Not started |                 |                               |
 Config rewrite       | Not started |                 |                               |
 Config set           | Not started |                 |                               |
-copy                 | Not started |                 | No                            |
+copy                 | In Progress | Yury Fridlyand  | No                            |
 dbsize               | Not started |                 | No                            |
 decr                 | Not started |                 | No                            |
 decrby               | Not started |                 | No                            |
-del                  | Not started |                 | No                            |
+del                  | In Progress | Yury Fridlyand  | No                            |
 discard              | Not started |                 |                               | not in the API
 dump                 | Not started |                 |                               |
 echo                 | Not started |                 | Yes                           |
 eval                 | Not started |                 |                               |
 evalsha              | Not started |                 |                               |
 exec                 | Not started |                 |                               |
-exists               | Not started |                 | No                            |
-expire               | Not started |                 | No                            |
-expireat             | Not started |                 | No                            |
-expiretime           | Not started |                 | No                            |
+exists               | In Progress | Yury Fridlyand  | No                            |
+expire               | In Progress | Yury Fridlyand  | No                            |
+expireat             | In Progress | Yury Fridlyand  | No                            |
+expiretime           | In Progress | Yury Fridlyand  | No                            |
 fcall                | Not started |                 | No                            |
 fcall_ro             | Not started |                 | No                            |
 flushall             | Not started |                 | No                            | No changes needed
@@ -108,30 +108,30 @@ move                 | Not started |                 | No                      
 mset                 | Not started |                 | No                            |
 msetnx               | Not started |                 |                               |
 multi                | Not started |                 |                               | No changes needed
-object encoding      | Not started |                 | No                            |
-object freq          | Not started |                 | No                            |
-object idletime      | Not started |                 | No                            |
-object refcount      | Not started |                 | No                            |
-persist              | Not started |                 | No                            |
-pexpire              | Not started |                 | No                            |
-pexpireat            | Not started |                 | No                            |
-pexpiretime          | Not started |                 | No                            |
+object encoding      | In Progress | Yury Fridlyand  | No                            |
+object freq          | In Progress | Yury Fridlyand  | No                            |
+object idletime      | In Progress | Yury Fridlyand  | No                            |
+object refcount      | In Progress | Yury Fridlyand  | No                            |
+persist              | In Progress | Yury Fridlyand  | No                            |
+pexpire              | In Progress | Yury Fridlyand  | No                            |
+pexpireat            | In Progress | Yury Fridlyand  | No                            |
+pexpiretime          | In Progress | Yury Fridlyand  | No                            |
 pfadd                | Not started |                 | No                            |
 pfcount              | Not started |                 | No                            |
 pfmerge              | Not started |                 | Yes                           |
-ping                 | Done         | Adar Ovadia     | Yes                           |
+ping                 | Done        | Adar Ovadia     | Yes                           |
 psetex               | Not started |                 |                               | deprecated
 psubscribe           | Not started |                 |                               |
-pttl                 | Not started |                 | No                            |
+pttl                 | In Progress | Yury Fridlyand  | No                            |
 publish              | Not started |                 |                               |
 pubsub               | Not started |                 |                               |
 punsubscribe         | Not started |                 |                               |
 quit                 | Not started |                 |                               | not in the API
-randomkey            | Not started |                 |                               |
+randomkey            | In Progress | Yury Fridlyand  | Yes                           |
 readonly             | Not started |                 |                               | N/A
 readwrite            | Not started |                 |                               | not in the API
-rename               | Not started |                 | No                            |
-renamenx             | Not started |                 | No                            |
+rename               | In Progress | Yury Fridlyand  | No                            |
+renamenx             | In Progress | Yury Fridlyand  | No                            |
 replicaof            | Not started |                 |                               | not in the API
 restore              | Not started |                 |                               |
 rpop                 | WIP         | Lior Sventitzky | Yes                           |
@@ -158,8 +158,8 @@ sismember            | Not started |                 | No                      
 smembers             | Not started |                 | Yes                           |
 smismember           | Not started |                 |                               |
 smove                | Not started |                 | No                            |
-sort                 | Not started |                 |                               |
-sort_ro              | Not started |                 |                               |
+sort                 | In Progress | Yury Fridlyand  | Yes                           |
+sort_ro              | In Progress | Yury Fridlyand  | Yes                           |
 spop                 | Not started |                 | Yes                           |
 spopCount            | Not started |                 | Yes                           |
 spublish             | Not started |                 |                               |
@@ -174,10 +174,10 @@ sunion               | Not started |                 | Yes                     
 sunionstore          | Not started |                 | No                            |
 sunsubscribe         | Not started |                 |                               | Not implemented
 time                 | Not started |                 | No                            | No changes needed
-touch                | Not started |                 | No                            |
-ttl                  | Not started |                 | No                            |
-type                 | Not started |                 | No                            |
-unlink               | Not started |                 | No                            |
+touch                | In Progress | Yury Fridlyand  | No                            |
+ttl                  | In Progress | Yury Fridlyand  | No                            |
+type                 | In Progress | Yury Fridlyand  | No                            |
+unlink               | In Progress | Yury Fridlyand  | No                            |
 unsubscribe          | Not started |                 |                               | Not implemented
 unwatch              | Not started |                 |                               | No changes needed
 wait                 | Not started |                 |                               | No changes needed
