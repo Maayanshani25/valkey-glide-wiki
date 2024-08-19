@@ -135,6 +135,7 @@ renamenx             | Not started |                 | No                      
 replicaof            | Not started |                 |                               | not in the API
 restore              | Not started |                 |                               |
 rpop                 | WIP         | Lior Sventitzky | Yes                           |
+rpopcount            | WIP         | Lior Sventitzky | Yes                           |
 rpoplpush            | Not started |                 |                               | deprecated
 rpush                | WIP         | Lior Sventitzky | No                            |
 rpushx               | Not started |                 | No                            |
