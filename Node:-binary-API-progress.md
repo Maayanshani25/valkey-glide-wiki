@@ -50,16 +50,16 @@ function list        | Not started |                 |                        
 function load        | Not started |                 |                               |
 function restore     | Not started |                 |                               |
 function stats       | Not started |                 |                               |
-geoadd               | Not started | Yury Fridlyand  |                               |
-geodist              | Not started | Yury Fridlyand  | No                            |
-geohash              | Not started | Yury Fridlyand  |                               |
-geopos               | Not started | Yury Fridlyand  | No                            |
-georadius            | Not started | Yury Fridlyand  |                               | deprecated
-georadiusbymember    | Not started | Yury Fridlyand  |                               | deprecated
-georadiusbymember_ro | Not started | Yury Fridlyand  |                               | deprecated
-georadius_ro         | Not started | Yury Fridlyand  |                               | deprecated
-geosearch            | Not started | Yury Fridlyand  |                               |
-geosearchstore       | Not started | Yury Fridlyand  |                               |
+geoadd               | In Progress | Yury Fridlyand  | No                            | [#2149](https://github.com/valkey-io/valkey-glide/pull/2149)
+geodist              | In Progress | Yury Fridlyand  | No                            | [#2149](https://github.com/valkey-io/valkey-glide/pull/2149)
+geohash              | In Progress | Yury Fridlyand  | No                            | [#2149](https://github.com/valkey-io/valkey-glide/pull/2149)
+geopos               | In Progress | Yury Fridlyand  | No                            | [#2149](https://github.com/valkey-io/valkey-glide/pull/2149)
+georadius            | Not started |                 |                               | deprecated
+georadiusbymember    | Not started |                 |                               | deprecated
+georadiusbymember_ro | Not started |                 |                               | deprecated
+georadius_ro         | Not started |                 |                               | deprecated
+geosearch            | In Progress | Yury Fridlyand  | Yes                           | [#2149](https://github.com/valkey-io/valkey-glide/pull/2149)
+geosearchstore       | In Progress | Yury Fridlyand  | No                            | [#2149](https://github.com/valkey-io/valkey-glide/pull/2149)
 get                  | Done        | Adar Ovadia     | Yes                           |
 getbit               | In Progress | Andrew C        | No                            |
 getdel               | Done        | Adar Ovadia     | Yes                           |
