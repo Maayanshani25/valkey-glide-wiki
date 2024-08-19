@@ -94,12 +94,12 @@ llen                 | Not started |                 | No                      
 lmove                | Not started |                 |                               |
 lmpop                | Not started |                 | Yes                           |
 lolwut               | Not started |                 |                               | No changes needed
-lpop                 | Not started |                 | Yes                           |
-lpopCount            | Not started | promise         | Yes                           |
+lpop                 | WIP         | Lior Sventitzky | Yes                           |
+lpopCount            | WIP         | Lior Sventitzky | Yes                           |
 lpos                 | Not started |                 |                               |
-lpush                | Not started |                 | No                            |
+lpush                | WIP         | Lior Sventitzky | No                            |
 lpushx               | Not started |                 | No                            |
-lrange               | Not started |                 | Yes                           |
+lrange               | WIP         | Lior Sventitzky | Yes                           |
 lrem                 | Not started |                 | No                            |
 lset                 | Not started |                 | No                            |
 ltrim                | Not started |                 | No                            |
