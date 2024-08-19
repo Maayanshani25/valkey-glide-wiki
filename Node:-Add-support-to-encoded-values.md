@@ -21,7 +21,7 @@ public getdel(
         decoder?: Decoder,
     )
 ```
-1. Add optional decoder to the signature command:
+2. Add optional decoder to the signature command:
 ```ts
 public getdel(
         key: GlideString,
@@ -30,15 +30,31 @@ public getdel(
 ```
 if there is more optionals parameter use anonymous options parameters: 
 ```ts
-public ping(options?: {message?: string; route?: Routes; decoder?: Decoder}): Promise<string>
+public ping(options?: {message?: string}): Promise<string>
 ```
 use it in the func: 
 ```ts
-
 return this.createWritePromise(createPing(options?.message), {
             route: toProtobufRoute(options?.route), decoder: options?.decoder,
         });
 ```
+if a command already has an optional option, extend it using `DecoderOption`:
+```ts
+options?: WhatEverOptions,
+```
+should be changed to
+```ts
+options?: WhatEverOptions & DecoderOption,
+```
+in case if command has also routing, the final set of options should be
+```ts
+options?: WhatEverOptions & RoutingOption & DecoderOption,
+```
+Documentation for this argument should be updated as well by adding corresponding link(s):
+```ts
+     * @param options - (Optional) ... - see {@link WhatEverOptions} and {@link DecoderOption}.
+```
+
 1. Change the return type to GlideString instead of string.
 ```ts
 public getdel(
@@ -62,7 +78,8 @@ export function createPing(str?: GlideString): command_request.Command {
      * See https://valkey.io/commands/getdel/ for details.
      *
      * @param key - The key to retrieve from the database.
-     * @param decoder - Optional enum parameter for decoding the response.
+     * @param decoder - (Optional) {@link Decoder} type which defines how to handle the response.
+     *     If not set, the {@link BaseClientConfiguration.defaultDecoder|default decoder} will be used.
      * @returns If `key` exists, returns the `value` of `key`. Otherwise, return `null`.
      *
      * @example
@@ -75,7 +92,7 @@ export function createPing(str?: GlideString): command_request.Command {
      */
 ```
 
-1. Add test
+6. Add test
 
 ```ts
     it.each([ProtocolVersion.RESP2, ProtocolVersion.RESP3])(
