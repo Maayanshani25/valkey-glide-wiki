@@ -140,7 +140,7 @@ pubsub numsub               | Done        | Done        | Done        | Not star
 pubsub shardchannels        | Done        | Done        | In progress | Not started | Not started | Not started
 pubsub shardnumsub          | Done        | Done        | In progress | Not started | Not started | Not started
 sunion                      | Done        | Done        | Done        | Not started | Not started | Not started
-zunionstore                 | Done        | In Progress | Done        | Not started | Not started | Not started
+zunionstore                 | Done        | Done        | Done        | Not started | Not started | Not started
 lset                        | Done        | Done        | Done        | Not started | Not started | Not started
 xclaim                      | Done        | Done        | Done        | Not started | Not started | Not started
 bitfield                    | Done        | Done        | Done        | Not started | Not started | Not started
