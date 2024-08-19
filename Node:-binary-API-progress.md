@@ -1,6 +1,6 @@
 Command              | Node        | Owner           | Function returns binary data? | Comment
 --                   | --          | --              | --                            | --
-append               | Done         | Lior Sventitzky | No                            |
+append               | Done        | Lior Sventitzky | No                            |
 auth                 | Not started |                 |                               | not in the API
 bgsave               | Not started |                 |                               | not needed
 bitcount             | In Progress | Andrew C        | No                            |
@@ -10,8 +10,8 @@ bitop                | In Progress | Andrew C        | No                       
 bitpos               | In Progress | Andrew C        | No                            |
 blmove               | Not started |                 |                               |
 blmpop               | Not started |                 | Yes                           |
-blpop                | Not started |                 | Yes                           |
-brpop                | Not started |                 | Yes                           |
+blpop                | WIP         | Lior Sventitzky | Yes                           |
+brpop                | WIP         | Lior Sventitzky | Yes                           |
 brpoplpush           | Not started |                 |                               | deprecated
 bzmpop               | Not started |                 | Yes                           |
 bzpopmax             | Not started |                 | Yes                           |
@@ -62,13 +62,13 @@ geosearch            | Not started | Yury Fridlyand  |                         
 geosearchstore       | Not started | Yury Fridlyand  |                               |
 get                  | Done        | Adar Ovadia     | Yes                           |
 getbit               | In Progress | Andrew C        | No                            |
-getdel               | Done         | Adar Ovadia     | Yes                           |
+getdel               | Done        | Adar Ovadia     | Yes                           |
 getex                | Not started |                 |                               |
-getrange             | Done         | Lior Sventitzky | Yes                           |
+getrange             | Done        | Lior Sventitzky | Yes                           |
 getset               | In Progress | Andrew C        |                               | deprecated
 hdel                 | Not started |                 | No                            |
 hexists              | Not started |                 | No                            |
-hget                 | Done         | Lior Sventitzky |                               |
+hget                 | Done        | Lior Sventitzky |                               |
 hgetall              | Not started |                 | Yes                           |
 hincrby              | Not started |                 | No                            |
 hincrbyfloat         | Not started |                 | No                            |
@@ -134,9 +134,9 @@ rename               | Not started |                 | No                      
 renamenx             | Not started |                 | No                            |
 replicaof            | Not started |                 |                               | not in the API
 restore              | Not started |                 |                               |
-rpop                 | Not started |                 | Yes                           |
+rpop                 | WIP         | Lior Sventitzky | Yes                           |
 rpoplpush            | Not started |                 |                               | deprecated
-rpush                | Not started |                 | No                            |
+rpush                | WIP         | Lior Sventitzky | No                            |
 rpushx               | Not started |                 | No                            |
 sadd                 | Not started |                 | No                            |
 scan                 | Not started |                 |                               | No changes needed
