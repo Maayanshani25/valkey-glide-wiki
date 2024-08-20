@@ -94,16 +94,16 @@ llen                 | Not started |                 | No                      
 lmove                | Not started |                 |                               |
 lmpop                | Not started |                 | Yes                           |
 lolwut               | Not started |                 |                               | No changes needed
-lpop                 | WIP         | Lior Sventitzky | Yes                           |
-lpopCount            | WIP         | Lior Sventitzky | Yes                           |
+lpop                 | Done        | Lior Sventitzky | Yes                           |
+lpopCount            | Done        | Lior Sventitzky | Yes                           |
 lpos                 | Not started |                 |                               |
-lpush                | WIP         | Lior Sventitzky | No                            |
+lpush                | Done        | Lior Sventitzky | No                            |
 lpushx               | Not started |                 | No                            |
-lrange               | WIP         | Lior Sventitzky | Yes                           |
+lrange               | Done        | Lior Sventitzky | Yes                           |
 lrem                 | Not started |                 | No                            |
 lset                 | Not started |                 | No                            |
 ltrim                | Not started |                 | No                            |
-mget                 | WIP         | Lior Sventitzky | Yes                           |
+mget                 | Done        | Lior Sventitzky | Yes                           |
 move                 | Not started |                 | No                            |
 mset                 | Not started |                 | No                            |
 msetnx               | Not started |                 |                               |
