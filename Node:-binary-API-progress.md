@@ -8,7 +8,7 @@ bitfield             | In Progress | Andrew C        |                         
 bitfield_ro          | In Progress | Andrew C        |                               |
 bitop                | In Progress | Andrew C        | No                            |
 bitpos               | In Progress | Andrew C        | No                            |
-blmove               | Not started |                 |                               |
+blmove               | WIP         | Lior Sventitzky |                               |
 blmpop               | Not started |                 | Yes                           |
 blpop                | WIP         | Lior Sventitzky | Yes                           |
 brpop                | WIP         | Lior Sventitzky | Yes                           |
@@ -88,10 +88,10 @@ incrbyfloat          | Not started |                 | No                      
 info                 | Not started |                 |                               | No changes needed
 lastsave             | Not started |                 |                               | No changes needed
 lcs                  | Not started |                 | Yes                           |
-lindex               | Not started |                 |                               |
-linsert              | Not started |                 |                               |
-llen                 | Not started |                 | No                            |
-lmove                | Not started |                 |                               |
+lindex               | WIP         | Lior Sventitzky | No                            |
+linsert              | WIP         | Lior Sventitzky | No                            |
+llen                 | WIP         | Lior Sventitzky | No                            |
+lmove                | WIP         | Lior Sventitzky | Yes                           |
 lmpop                | Not started |                 | Yes                           |
 lolwut               | Not started |                 |                               | No changes needed
 lpop                 | Done        | Lior Sventitzky | Yes                           |
