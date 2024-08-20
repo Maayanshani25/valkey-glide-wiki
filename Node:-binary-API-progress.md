@@ -65,7 +65,7 @@ getbit               | In Progress | Andrew C        | No                       
 getdel               | Done        | Adar Ovadia     | Yes                           |
 getex                | Not started |                 |                               |
 getrange             | Done        | Lior Sventitzky | Yes                           |
-getset               | In Progress | Andrew C        |                               | deprecated
+getset               | Not started |                 |                               | deprecated
 hdel                 | Not started |                 | No                            |
 hexists              | Not started |                 | No                            |
 hget                 | Done        | Lior Sventitzky |                               |
@@ -147,7 +147,7 @@ sdiff                | Not started |                 | Yes                     
 sdiffstore           | Not started |                 | No                            |
 select               | In Progress | Yury Fridlyand  | No                            | [#2160](https://github.com/valkey-io/valkey-glide/pull/2160)
 set                  | Not started |                 | No                            |
-setbit               | Not started |                 | No                            |
+setbit               | In Progress |  Andrew C       | No                            |
 setex                | Not started |                 |                               | deprecated
 setnx                | Not started |                 |                               | deprecated
 setrange             | Not started |                 | No                            |
