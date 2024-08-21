@@ -16,15 +16,15 @@ brpoplpush           | Not started |                 |                        
 bzmpop               | Not started |                 | Yes                           |
 bzpopmax             | Not started |                 | Yes                           |
 bzpopmin             | Not started |                 | Yes                           |
-CLIENT GETNAME       | In Progress | Yury Fridlyand  | Yes                            | [#2160](https://github.com/valkey-io/valkey-glide/pull/2160)
+CLIENT GETNAME       | In Progress | Yury Fridlyand  | Yes                           | [#2160](https://github.com/valkey-io/valkey-glide/pull/2160)
 client ID            | In Progress | Yury Fridlyand  | No                            | [#2160](https://github.com/valkey-io/valkey-glide/pull/2160)
-command              | Not started |                 |                               | N/A
-Config get           | Not started |                 |                               |
-Config resetstat     | Not started |                 |                               |
-Config rewrite       | Not started |                 |                               |
-Config set           | Not started |                 |                               |
+command              | Not started |                 |                               | Not implemented
+Config get           | In Progress | Yury Fridlyand  | Yes                           |
+Config resetstat     | In Progress | Yury Fridlyand  | No                            |
+Config rewrite       | In Progress | Yury Fridlyand  | No                            |
+Config set           | In Progress | Yury Fridlyand  | No                            |
 copy                 | In Progress | Yury Fridlyand  | No                            | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
-dbsize               | Not started |                 | No                            |
+dbsize               | In Progress | Yury Fridlyand  | No                            |
 decr                 | Not started |                 | No                            |
 decrby               | Not started |                 | No                            |
 del                  | In Progress | Yury Fridlyand  | No                            | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
@@ -40,8 +40,8 @@ expireat             | In Progress | Yury Fridlyand  | No                       
 expiretime           | In Progress | Yury Fridlyand  | No                            | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
 fcall                | In Progress | Yi-Pin Chen     | No                            | [#2172](https://github.com/valkey-io/valkey-glide/pull/2172)
 fcall_ro             | In Progress | Yi-Pin Chen     | No                            | [#2172](https://github.com/valkey-io/valkey-glide/pull/2172)
-flushall             | Not started |                 | No                            | No changes needed
-flushdb              | Not started |                 | No                            |
+flushall             | In Progress | Yury Fridlyand  | No                            |
+flushdb              | In Progress | Yury Fridlyand  | No                            |
 function delete      | In Progress | Yi-Pin Chen     |                               | [#2172](https://github.com/valkey-io/valkey-glide/pull/2172)
 function dump        | Not started |                 |                               | No changes needed
 function flush       | In Progress | Yi-Pin Chen     |                               | [#2172](https://github.com/valkey-io/valkey-glide/pull/2172)
@@ -85,7 +85,7 @@ hvals                | Done        | Lior Sventitzky |                         
 incr                 | Not started |                 | No                            |
 incrby               | Not started |                 | No                            |
 incrbyfloat          | Not started |                 | No                            |
-info                 | Not started |                 |                               | No changes needed
+info                 | In Progress | Yury Fridlyand  | No                            |
 lastsave             | Not started |                 |                               | No changes needed
 lcs                  | Not started |                 | Yes                           |
 lindex               | WIP         | Lior Sventitzky | No                            |
@@ -93,7 +93,7 @@ linsert              | WIP         | Lior Sventitzky | No                       
 llen                 | WIP         | Lior Sventitzky | No                            |
 lmove                | WIP         | Lior Sventitzky | Yes                           |
 lmpop                | Not started |                 | Yes                           |
-lolwut               | Not started |                 |                               | No changes needed
+lolwut               | In Progress | Yury Fridlyand  | No                            |
 lpop                 | Done        | Lior Sventitzky | Yes                           |
 lpopCount            | Done        | Lior Sventitzky | Yes                           |
 lpos                 | Not started |                 |                               |
@@ -104,7 +104,7 @@ lrem                 | Not started |                 | No                      
 lset                 | Not started |                 | No                            |
 ltrim                | Not started |                 | No                            |
 mget                 | Done        | Lior Sventitzky | Yes                           |
-move                 | Not started |                 | No                            |
+move                 | In Progress | Yury Fridlyand  | No                            | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
 mset                 | Not started |                 | No                            |
 msetnx               | Not started |                 |                               |
 multi                | Not started |                 |                               | No changes needed
@@ -173,7 +173,7 @@ substr               | Not started |                 |                        
 sunion               | Not started |                 | Yes                           |
 sunionstore          | Not started |                 | No                            |
 sunsubscribe         | Not started |                 |                               | Not implemented
-time                 | Not started |                 | No                            | No changes needed
+time                 | In Progress | Yury Fridlyand  | No                            |
 touch                | In Progress | Yury Fridlyand  | No                            | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
 ttl                  | In Progress | Yury Fridlyand  | No                            | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
 type                 | In Progress | Yury Fridlyand  | No                            | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
