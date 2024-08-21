@@ -139,7 +139,7 @@ rpopcount            | WIP         | Lior Sventitzky | Yes                      
 rpoplpush            | Not started |                 |                               | deprecated
 rpush                | WIP         | Lior Sventitzky | No                            |
 rpushx               | Not started |                 | No                            |
-sadd                 | Not started |                 | No                            |
+sadd                 | WIP         | Lior Sventitzky | No                            |
 scan                 | Not started |                 |                               | No changes needed
 scard                | Not started |                 |                               |
 script               | Not started |                 |                               | Not implemented
@@ -160,11 +160,11 @@ smismember           | Not started |                 |                        
 smove                | Not started |                 | No                            |
 sort                 | In Progress | Yury Fridlyand  | Yes                           | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
 sort_ro              | In Progress | Yury Fridlyand  | Yes                           | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
-spop                 | Not started |                 | Yes                           |
-spopCount            | Not started |                 | Yes                           |
+spop                 | WIP         | Lior Sventitzky | Yes                           |
+spopCount            | WIP         | Lior Sventitzky | Yes                           |
 spublish             | Not started |                 |                               |
 srandmember          | Not started |                 |                               |
-srem                 | Not started |                 | No                            |
+srem                 | WIP         | Lior Sventitzky | No                            |
 sscan                | Not started |                 |                               |
 ssubscribe           | Not started |                 |                               | Not implemented
 strlen               | Not started |                 | No                            |
