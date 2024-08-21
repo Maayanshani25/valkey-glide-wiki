@@ -38,18 +38,18 @@ exists               | In Progress | Yury Fridlyand  | No                       
 expire               | In Progress | Yury Fridlyand  | No                            | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
 expireat             | In Progress | Yury Fridlyand  | No                            | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
 expiretime           | In Progress | Yury Fridlyand  | No                            | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
-fcall                | In Progress | Yi-Pin Chen     | No                            |
-fcall_ro             | In Progress | Yi-Pin Chen     | No                            |
+fcall                | In Progress | Yi-Pin Chen     | No                            | [#2172](https://github.com/valkey-io/valkey-glide/pull/2172)
+fcall_ro             | In Progress | Yi-Pin Chen     | No                            | [#2172](https://github.com/valkey-io/valkey-glide/pull/2172)
 flushall             | Not started |                 | No                            | No changes needed
 flushdb              | Not started |                 | No                            |
-function delete      | In Progress | Yi-Pin Chen     |                               |
-function dump        | In Progress | Yi-Pin Chen     |                               |
-function flush       | In Progress | Yi-Pin Chen     |                               |
-function kill        | In Progress | Yi-Pin Chen     |                               |
-function list        | In Progress | Yi-Pin Chen     |                               |
-function load        | In Progress | Yi-Pin Chen     |                               |
-function restore     | In Progress | Yi-Pin Chen     |                               |
-function stats       | In Progress | Yi-Pin Chen     |                               |
+function delete      | In Progress | Yi-Pin Chen     |                               | [#2172](https://github.com/valkey-io/valkey-glide/pull/2172)
+function dump        | Done        |                 |                               | 
+function flush       | In Progress | Yi-Pin Chen     |                               | [#2172](https://github.com/valkey-io/valkey-glide/pull/2172)
+function kill        | In Progress | Yi-Pin Chen     |                               | [#2172](https://github.com/valkey-io/valkey-glide/pull/2172)
+function list        | In Progress | Yi-Pin Chen     |                               | [#2172](https://github.com/valkey-io/valkey-glide/pull/2172)
+function load        | In Progress | Yi-Pin Chen     |                               | [#2172](https://github.com/valkey-io/valkey-glide/pull/2172)
+function restore     | Done        |                 |                               |
+function stats       | In Progress | Yi-Pin Chen     |                               | [#2172](https://github.com/valkey-io/valkey-glide/pull/2172)
 geoadd               | In Progress | Yury Fridlyand  | No                            | [#2149](https://github.com/valkey-io/valkey-glide/pull/2149)
 geodist              | In Progress | Yury Fridlyand  | No                            | [#2149](https://github.com/valkey-io/valkey-glide/pull/2149)
 geohash              | In Progress | Yury Fridlyand  | No                            | [#2149](https://github.com/valkey-io/valkey-glide/pull/2149)
