@@ -155,7 +155,7 @@ sinter               | Not started |                 |                        
 sintercard           | Not started |                 |                               |
 sinterstore          | Not started |                 |                               |
 sismember            | Not started |                 | No                            |
-smembers             | Not started |                 | Yes                           |
+smembers             | WIP         | Lior Sventitzky | Yes                           |
 smismember           | Not started |                 |                               |
 smove                | Not started |                 | No                            |
 sort                 | In Progress | Yury Fridlyand  | Yes                           | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
