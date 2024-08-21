@@ -92,17 +92,17 @@ lindex               | Done        | Lior Sventitzky | No                       
 linsert              | Done        | Lior Sventitzky | No                            | [#2166](https://github.com/valkey-io/valkey-glide/pull/2166)
 llen                 | Done        | Lior Sventitzky | No                            | [#2166](https://github.com/valkey-io/valkey-glide/pull/2166)
 lmove                | Done        | Lior Sventitzky | Yes                           | [#2166](https://github.com/valkey-io/valkey-glide/pull/2166)
-lmpop                | Not started |                 | Yes                           |
+lmpop                | In Progress | Prateek K       | Yes                           |
 lolwut               | In Progress | Yury Fridlyand  | No                            | [#2179](https://github.com/valkey-io/valkey-glide/pull/2179)
 lpop                 | Done        | Lior Sventitzky | Yes                           | [#2151](https://github.com/valkey-io/valkey-glide/pull/2151)
 lpopCount            | Done        | Lior Sventitzky | Yes                           | [#2151](https://github.com/valkey-io/valkey-glide/pull/2151)
-lpos                 | Not started |                 |                               |
+lpos                 | In Progress | Prateek K       |                               |
 lpush                | Done        | Lior Sventitzky | No                            | [#2151](https://github.com/valkey-io/valkey-glide/pull/2151)
-lpushx               | Not started |                 | No                            |
+lpushx               | In Progress | Prateek K       | No                            |
 lrange               | Done        | Lior Sventitzky | Yes                           | [#2151](https://github.com/valkey-io/valkey-glide/pull/2151)
-lrem                 | Not started |                 | No                            |
-lset                 | Not started |                 | No                            |
-ltrim                | Not started |                 | No                            |
+lrem                 | In Progress | Prateek K       | No                            |
+lset                 | In Progress | Prateek K       | No                            |
+ltrim                | In Progress | Prateek K       | No                            |
 mget                 | Done        | Lior Sventitzky | Yes                           | [#2150](https://github.com/valkey-io/valkey-glide/pull/2150)
 move                 | In Progress | Yury Fridlyand  | No                            | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
 mset                 | Not started |                 | No                            |
