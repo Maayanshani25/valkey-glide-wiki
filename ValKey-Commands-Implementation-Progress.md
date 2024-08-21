@@ -137,8 +137,8 @@ zrevrank                    | Done        | Done        | Done        | Not star
 pubsub channels             | Done        | Done        | Done        | Not started | Not started | Not started
 pubsub numpat               | Done        | Done        | Done        | Not started | Not started | Not started
 pubsub numsub               | Done        | Done        | Done        | Not started | Not started | Not started
-pubsub shardchannels        | Done        | Done        | In progress | Not started | Not started | Not started
-pubsub shardnumsub          | Done        | Done        | In progress | Not started | Not started | Not started
+pubsub shardchannels        | Done        | Done        | Not started | Not started | Not started | Not started
+pubsub shardnumsub          | Done        | Done        | Not started | Not started | Not started | Not started
 sunion                      | Done        | Done        | Done        | Not started | Not started | Not started
 zunionstore                 | Done        | Done        | Done        | Not started | Not started | Not started
 lset                        | Done        | Done        | Done        | Not started | Not started | Not started
@@ -192,12 +192,12 @@ bitop                       | Done        | Done        | Done        | Not star
 lastsave                    | Done        | Done        | Done        | Not started | Not started | Not started
 geosearch                   | Done        | Done        | Done        | Not started | Not started | Not started
 function delete             | Done        | Done        | Done        | Not started | Not started | Not started
-function dump               | Done        | In Progress | Done        | Not started | Not started | Not started
+function dump               | Done        | Done        | Done        | Not started | Not started | Not started
 function flush              | Done        | Done        | Done        | Not started | Not started | Not started
 function kill               | Done        | Done        | Done        | Not started | Not started | Not started
 function list               | Done        | Done        | Done        | Not started | Not started | Not started
 function load               | Done        | Done        | Done        | Not started | Not started | Not started
-function restore            | Done        | In Progress | Done        | Not started | Not started | Not started
+function restore            | Done        | Done        | Done        | Not started | Not started | Not started
 function stats              | Done        | Done        | Done        | Not started | Not started | Not started
 zlexcount                   | Done        | Done        | Done        | Not started | Not started | Not started
 zrandmember                 | Done        | Done        | Done        | Not started | Not started | Not started
