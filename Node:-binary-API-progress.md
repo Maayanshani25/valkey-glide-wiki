@@ -8,10 +8,10 @@ bitfield             | In Progress | Andrew C        |                         
 bitfield_ro          | In Progress | Andrew C        |                               |
 bitop                | In Progress | Andrew C        | No                            |
 bitpos               | In Progress | Andrew C        | No                            |
-blmove               | WIP         | Lior Sventitzky |                               |
+blmove               | DONE        | Lior Sventitzky |                               |
 blmpop               | Not started |                 | Yes                           |
-blpop                | WIP         | Lior Sventitzky | Yes                           |
-brpop                | WIP         | Lior Sventitzky | Yes                           |
+blpop                | DONE        | Lior Sventitzky | Yes                           |
+brpop                | DONE        | Lior Sventitzky | Yes                           |
 brpoplpush           | Not started |                 |                               | deprecated
 bzmpop               | Not started |                 | Yes                           |
 bzpopmax             | Not started |                 | Yes                           |
@@ -88,10 +88,10 @@ incrbyfloat          | Not started |                 | No                      
 info                 | In Progress | Yury Fridlyand  | No                            | [#2179](https://github.com/valkey-io/valkey-glide/pull/2179)
 lastsave             | Not started |                 |                               | No changes needed
 lcs                  | Not started |                 | Yes                           |
-lindex               | WIP         | Lior Sventitzky | No                            |
-linsert              | WIP         | Lior Sventitzky | No                            |
-llen                 | WIP         | Lior Sventitzky | No                            |
-lmove                | WIP         | Lior Sventitzky | Yes                           |
+lindex               | DONE        | Lior Sventitzky | No                            |
+linsert              | DONE        | Lior Sventitzky | No                            |
+llen                 | DONE        | Lior Sventitzky | No                            |
+lmove                | DONE        | Lior Sventitzky | Yes                           |
 lmpop                | Not started |                 | Yes                           |
 lolwut               | In Progress | Yury Fridlyand  | No                            | [#2179](https://github.com/valkey-io/valkey-glide/pull/2179)
 lpop                 | Done        | Lior Sventitzky | Yes                           |
@@ -134,10 +134,10 @@ rename               | In Progress | Yury Fridlyand  | No                       
 renamenx             | In Progress | Yury Fridlyand  | No                            | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
 replicaof            | Not started |                 |                               | not in the API
 restore              | Not started |                 |                               |
-rpop                 | WIP         | Lior Sventitzky | Yes                           |
-rpopcount            | WIP         | Lior Sventitzky | Yes                           |
+rpop                 | Done        | Lior Sventitzky | Yes                           |
+rpopcount            | Done        | Lior Sventitzky | Yes                           |
 rpoplpush            | Not started |                 |                               | deprecated
-rpush                | WIP         | Lior Sventitzky | No                            |
+rpush                | Done        | Lior Sventitzky | No                            |
 rpushx               | Not started |                 | No                            |
 sadd                 | WIP         | Lior Sventitzky | No                            |
 scan                 | Not started |                 |                               | No changes needed
