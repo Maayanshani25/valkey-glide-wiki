@@ -14,14 +14,14 @@ Change Getdel and ping command for example: - https://github.com/valkey-io/valke
 
 Changes which should happen for all commands which returns string:
 
-1. Change which should happen for all commands which get string:
+1. Change which should happen for all commands which get string, both for the client commands and the transaction commands :
 ```ts
 public getdel(
         key: GlideString,
         decoder?: Decoder,
     )
 ```
-2. Add optional decoder to the signature command:
+2. Add optional decoder to the signature command (not in transaction commands, see notes below):
 ```ts
 public getdel(
         key: GlideString,
@@ -55,14 +55,14 @@ Documentation for this argument should be updated as well by adding correspondin
      * @param options - (Optional) ... - see {@link WhatEverOptions} and {@link DecoderOption}.
 ```
 
-1. Change the return type to GlideString instead of string.
+3. Change the return type to GlideString instead of string.
 ```ts
 public getdel(
         key: GlideString,
         decoder?: Decoder,
     ): Promise<GlideString | null> 
 ```
-1. change the createCommand for example, createPing to get GlideString also:
+4. change the createCommand for example, createPing to get GlideString also:
 ```ts
 
 export function createPing(str?: GlideString): command_request.Command {
