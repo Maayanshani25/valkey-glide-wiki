@@ -141,19 +141,19 @@ rpush                | Done        | Lior Sventitzky | No                       
 rpushx               | Not started |                 | No                            |
 sadd                 | WIP         | Lior Sventitzky | No                            |
 scan                 | Not started |                 |                               | No changes needed
-scard                | Not started |                 |                               |
+scard                | WIP         | Lior Sventitzky |                               |
 script               | Not started |                 |                               | Not implemented
-sdiff                | Not started |                 | Yes                           |
-sdiffstore           | Not started |                 | No                            |
+sdiff                | WIP         | Lior Sventitzky | Yes                           |
+sdiffstore           | WIP         | Lior Sventitzky | No                            |
 select               | In Progress | Yury Fridlyand  | No                            | [#2160](https://github.com/valkey-io/valkey-glide/pull/2160)
 set                  | Not started |                 | No                            |
 setbit               | In Progress |  Andrew C       | No                            |
 setex                | Not started |                 |                               | deprecated
 setnx                | Not started |                 |                               | deprecated
 setrange             | Not started |                 | No                            |
-sinter               | Not started |                 |                               |
+sinter               | WIP         | Lior Sventitzky |                               |
 sintercard           | Not started |                 |                               |
-sinterstore          | Not started |                 |                               |
+sinterstore          | WIP         | Lior Sventitzky |                               |
 sismember            | Not started |                 | No                            |
 smembers             | WIP         | Lior Sventitzky | Yes                           |
 smismember           | Not started |                 |                               |
