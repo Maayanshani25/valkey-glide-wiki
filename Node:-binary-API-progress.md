@@ -151,19 +151,19 @@ setbit               | In Progress |  Andrew C       | No                      
 setex                | Not started |                 |                               | deprecated
 setnx                | Not started |                 |                               | deprecated
 setrange             | Not started |                 | No                            |
-sinter               | WIP         | Lior Sventitzky |                               |
-sintercard           | WIP         | Lior Sventitzky |                               |
-sinterstore          | WIP         | Lior Sventitzky |                               |
-sismember            | Not started |                 | No                            |
+sinter               | WIP         | Lior Sventitzky | Yes                           |
+sintercard           | WIP         | Lior Sventitzky | No                            |
+sinterstore          | WIP         | Lior Sventitzky | No                            |
+sismember            | WIP         | Lior Sventitzky | No                            |
 smembers             | WIP         | Lior Sventitzky | Yes                           |
-smismember           | Not started |                 |                               |
-smove                | Not started |                 | No                            |
+smismember           | WIP         | Lior Sventitzky | No                            |
+smove                | WIP         | Lior Sventitzky | No                            |
 sort                 | In Progress | Yury Fridlyand  | Yes                           | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
 sort_ro              | In Progress | Yury Fridlyand  | Yes                           | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
 spop                 | WIP         | Lior Sventitzky | Yes                           |
 spopCount            | WIP         | Lior Sventitzky | Yes                           |
 spublish             | Not started |                 |                               |
-srandmember          | Not started |                 |                               |
+srandmember          | WIP         | Lior Sventitzky | Yes                           |
 srem                 | WIP         | Lior Sventitzky | No                            |
 sscan                | Not started |                 |                               |
 ssubscribe           | Not started |                 |                               | Not implemented
