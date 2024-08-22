@@ -152,7 +152,7 @@ setex                | Not started |                 |                        
 setnx                | Not started |                 |                               | deprecated
 setrange             | Not started |                 | No                            |
 sinter               | WIP         | Lior Sventitzky |                               |
-sintercard           | Not started |                 |                               |
+sintercard           | WIP         | Lior Sventitzky |                               |
 sinterstore          | WIP         | Lior Sventitzky |                               |
 sismember            | Not started |                 | No                            |
 smembers             | WIP         | Lior Sventitzky | Yes                           |
