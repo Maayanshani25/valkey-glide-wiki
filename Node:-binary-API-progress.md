@@ -16,8 +16,8 @@ brpoplpush           | Won't Do    |                 |                        
 bzmpop               | In Progress | Yury Fridlyand  | Yes                           | [#2190](https://github.com/valkey-io/valkey-glide/pull/2190)
 bzpopmax             | In Progress | Yury Fridlyand  | Yes                           | [#2190](https://github.com/valkey-io/valkey-glide/pull/2190)
 bzpopmin             | In Progress | Yury Fridlyand  | Yes                           | [#2190](https://github.com/valkey-io/valkey-glide/pull/2190)
-CLIENT GETNAME       | In Progress | Yury Fridlyand  | Yes                           | [#2160](https://github.com/valkey-io/valkey-glide/pull/2160)
-client ID            | In Progress | Yury Fridlyand  | No                            | [#2160](https://github.com/valkey-io/valkey-glide/pull/2160)
+CLIENT GETNAME       | Done        | Yury Fridlyand  | Yes                           | [#2160](https://github.com/valkey-io/valkey-glide/pull/2160)
+client ID            | Done        | Yury Fridlyand  | No                            | [#2160](https://github.com/valkey-io/valkey-glide/pull/2160)
 command              | Won't Do    |                 |                               | Not implemented
 Config get           | In Progress | Yury Fridlyand  | Yes                           | [#2179](https://github.com/valkey-io/valkey-glide/pull/2179)
 Config resetstat     | In Progress | Yury Fridlyand  | No                            | [#2179](https://github.com/valkey-io/valkey-glide/pull/2179)
@@ -30,7 +30,7 @@ decrby               | Not started |                 | No                      
 del                  | Done        | Yury Fridlyand  | No                            | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
 discard              | Won't Do    |                 |                               | not in the API
 dump                 | Not started |                 |                               |
-echo                 | In Progress | Yury Fridlyand  | Yes                           | [#2160](https://github.com/valkey-io/valkey-glide/pull/2160)
+echo                 | Done        | Yury Fridlyand  | Yes                           | [#2160](https://github.com/valkey-io/valkey-glide/pull/2160)
 eval                 | Not started |                 |                               |
 evalsha              | Not started |                 |                               |
 exec                 | Not started |                 |                               |
@@ -145,7 +145,7 @@ scard                | WIP         | Lior Sventitzky |                         
 script               | Won't Do    |                 |                               | Not implemented
 sdiff                | WIP         | Lior Sventitzky | Yes                           |
 sdiffstore           | WIP         | Lior Sventitzky | No                            |
-select               | In Progress | Yury Fridlyand  | No                            | [#2160](https://github.com/valkey-io/valkey-glide/pull/2160)
+select               | Done        | Yury Fridlyand  | No                            | [#2160](https://github.com/valkey-io/valkey-glide/pull/2160)
 set                  | Not started |                 | No                            |
 setbit               | Done        |  Andrew C       | No                            | [#2178](https://github.com/valkey-io/valkey-glide/pull/2178)
 setex                | Won't Do    |                 |                               | deprecated
@@ -179,9 +179,9 @@ ttl                  | Done        | Yury Fridlyand  | No                       
 type                 | Done        | Yury Fridlyand  | No                            | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
 unlink               | Done        | Yury Fridlyand  | No                            | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
 unsubscribe          | Won't Do    |                 |                               | Not implemented
-unwatch              | In Progress | Yury Fridlyand  | No                            | [#2160](https://github.com/valkey-io/valkey-glide/pull/2160)
+unwatch              | Done        | Yury Fridlyand  | No                            | [#2160](https://github.com/valkey-io/valkey-glide/pull/2160)
 wait                 | Won't Do    |                 |                               | No changes needed
-watch                | In Progress | Yury Fridlyand  | No                            | [#2160](https://github.com/valkey-io/valkey-glide/pull/2160)
+watch                | Done        | Yury Fridlyand  | No                            | [#2160](https://github.com/valkey-io/valkey-glide/pull/2160)
 xack                 | Not started |                 | No                            |
 xadd                 | Not started |                 | Yes                           | Can return NULL with NOMKSTREAM flag
 xautoclaim           | Not started |                 |                               |
