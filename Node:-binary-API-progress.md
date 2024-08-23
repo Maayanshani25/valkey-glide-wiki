@@ -9,7 +9,7 @@ bitfield_ro          | Done        | Andrew C        | No                       
 bitop                | Done        | Andrew C        | No                            | [#2178](https://github.com/valkey-io/valkey-glide/pull/2178)
 bitpos               | Done        | Andrew C        | No                            | [#2178](https://github.com/valkey-io/valkey-glide/pull/2178)
 blmove               | Done        | Lior Sventitzky |                               | [#2166](https://github.com/valkey-io/valkey-glide/pull/2166)
-blmpop               | Not started |                 | Yes                           |
+blmpop               | In Progress | Prateek Kumar   | Yes                           |
 blpop                | Done        | Lior Sventitzky | Yes                           | [#2153](https://github.com/valkey-io/valkey-glide/pull/2153)
 brpop                | Done        | Lior Sventitzky | Yes                           | [#2153](https://github.com/valkey-io/valkey-glide/pull/2153)
 brpoplpush           | Won't Do    |                 |                               | deprecated
@@ -138,7 +138,7 @@ rpop                 | Done        | Lior Sventitzky | Yes                      
 rpopcount            | Done        | Lior Sventitzky | Yes                           | [#2153](https://github.com/valkey-io/valkey-glide/pull/2153)
 rpoplpush            | Not started |                 |                               | deprecated
 rpush                | Done        | Lior Sventitzky | No                            | [#2153](https://github.com/valkey-io/valkey-glide/pull/2153)
-rpushx               | Not started |                 | No                            |
+rpushx               | In Progress | Prateek Kumar   | No                            |
 sadd                 | WIP         | Lior Sventitzky | No                            |
 scan                 | Done        |                 |                               | No changes needed
 scard                | WIP         | Lior Sventitzky |                               |
