@@ -3,19 +3,19 @@ Command              | Node        | Owner           | Function returns binary d
 append               | Done        | Lior Sventitzky | No                            | [#2150](https://github.com/valkey-io/valkey-glide/pull/2150)
 auth                 | Won't Do    |                 |                               | not in the API
 bgsave               | Won't Do    |                 |                               | not needed
-bitcount             | In Progress | Andrew C        | No                            |
-bitfield             | In Progress | Andrew C        |                               |
-bitfield_ro          | In Progress | Andrew C        |                               |
-bitop                | In Progress | Andrew C        | No                            |
-bitpos               | In Progress | Andrew C        | No                            |
+bitcount             | Done        | Andrew C        | No                            | [#2178](https://github.com/valkey-io/valkey-glide/pull/2178)
+bitfield             | Done        | Andrew C        | No                            | [#2178](https://github.com/valkey-io/valkey-glide/pull/2178)
+bitfield_ro          | Done        | Andrew C        | No                            | [#2178](https://github.com/valkey-io/valkey-glide/pull/2178)
+bitop                | Done        | Andrew C        | No                            | [#2178](https://github.com/valkey-io/valkey-glide/pull/2178)
+bitpos               | Done        | Andrew C        | No                            | [#2178](https://github.com/valkey-io/valkey-glide/pull/2178)
 blmove               | Done        | Lior Sventitzky |                               | [#2166](https://github.com/valkey-io/valkey-glide/pull/2166)
 blmpop               | Not started |                 | Yes                           |
 blpop                | Done        | Lior Sventitzky | Yes                           | [#2153](https://github.com/valkey-io/valkey-glide/pull/2153)
 brpop                | Done        | Lior Sventitzky | Yes                           | [#2153](https://github.com/valkey-io/valkey-glide/pull/2153)
 brpoplpush           | Won't Do    |                 |                               | deprecated
-bzmpop               | Not started |                 | Yes                           |
-bzpopmax             | Not started |                 | Yes                           |
-bzpopmin             | Not started |                 | Yes                           |
+bzmpop               | In Progress | Yury Fridlyand  | Yes                           | [#2190](https://github.com/valkey-io/valkey-glide/pull/2190)
+bzpopmax             | In Progress | Yury Fridlyand  | Yes                           | [#2190](https://github.com/valkey-io/valkey-glide/pull/2190)
+bzpopmin             | In Progress | Yury Fridlyand  | Yes                           | [#2190](https://github.com/valkey-io/valkey-glide/pull/2190)
 CLIENT GETNAME       | In Progress | Yury Fridlyand  | Yes                           | [#2160](https://github.com/valkey-io/valkey-glide/pull/2160)
 client ID            | In Progress | Yury Fridlyand  | No                            | [#2160](https://github.com/valkey-io/valkey-glide/pull/2160)
 command              | Won't Do    |                 |                               | Not implemented
@@ -61,7 +61,7 @@ georadius_ro         | Won't Do    |                 |                        
 geosearch            | Done        | Yury Fridlyand  | Yes                           | [#2149](https://github.com/valkey-io/valkey-glide/pull/2149)
 geosearchstore       | Done        | Yury Fridlyand  | No                            | [#2149](https://github.com/valkey-io/valkey-glide/pull/2149)
 get                  | Done        | Adar Ovadia     | Yes                           |
-getbit               | In Progress | Andrew C        | No                            |
+getbit               | Done        | Andrew C        | No                            | [#2178](https://github.com/valkey-io/valkey-glide/pull/2178)
 getdel               | Done        | Adar Ovadia     | Yes                           |
 getex                | Not started |                 |                               |
 getrange             | Done        | Lior Sventitzky | Yes                           | [#2150](https://github.com/valkey-io/valkey-glide/pull/2150)
@@ -147,7 +147,7 @@ sdiff                | WIP         | Lior Sventitzky | Yes                      
 sdiffstore           | WIP         | Lior Sventitzky | No                            |
 select               | In Progress | Yury Fridlyand  | No                            | [#2160](https://github.com/valkey-io/valkey-glide/pull/2160)
 set                  | Not started |                 | No                            |
-setbit               | In Progress |  Andrew C       | No                            |
+setbit               | Done        |  Andrew C       | No                            | [#2178](https://github.com/valkey-io/valkey-glide/pull/2178)
 setex                | Won't Do    |                 |                               | deprecated
 setnx                | Won't Do    |                 |                               | deprecated
 setrange             | Not started |                 | No                            |
@@ -196,15 +196,15 @@ xread                | Not started |                 |                        
 xreadgroup           | Not started |                 |                               |
 xrevrange            | Not started |                 | Yes                           |
 xtrim                | Not started |                 |                               |
-zadd                 | Not started |                 | No                            |
-zcard                | Not started |                 | No                            |
-zcount               | Not started |                 | No                            |
-zdiff                | Not started |                 | Yes                           |
-zdiffstore           | Not started |                 | No                            |
-zincrby              | Not started |                 | No                            |
-zinter               | Not started |                 | Yes                           |
-zintercard           | Not started |                 | No                            |
-zinterstore          | Not started |                 | No                            |
+zadd                 | In Progress | Yury Fridlyand  | No                            | [#2190](https://github.com/valkey-io/valkey-glide/pull/2190)
+zcard                | In Progress | Yury Fridlyand  | No                            | [#2190](https://github.com/valkey-io/valkey-glide/pull/2190)
+zcount               | In Progress | Yury Fridlyand  | No                            | [#2190](https://github.com/valkey-io/valkey-glide/pull/2190)
+zdiff                | In Progress | Yury Fridlyand  | Yes                           | [#2190](https://github.com/valkey-io/valkey-glide/pull/2190)
+zdiffstore           | In Progress | Yury Fridlyand  | No                            | [#2190](https://github.com/valkey-io/valkey-glide/pull/2190)
+zincrby              | In Progress | Yury Fridlyand  | No                            | [#2190](https://github.com/valkey-io/valkey-glide/pull/2190)
+zinter               | In Progress | Yury Fridlyand  | Yes                           | [#2190](https://github.com/valkey-io/valkey-glide/pull/2190)
+zintercard           | In Progress | Yury Fridlyand  | No                            | [#2190](https://github.com/valkey-io/valkey-glide/pull/2190)
+zinterstore          | In Progress | Yury Fridlyand  | No                            | [#2190](https://github.com/valkey-io/valkey-glide/pull/2190)
 zlexcount            | Not started |                 | No                            |
 zmpop                | Not started |                 | Yes                           |
 zmscore              | Not started |                 | No                            |
