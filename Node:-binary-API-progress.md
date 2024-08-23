@@ -105,8 +105,8 @@ lset                 | In Progress | Prateek K       | No                       
 ltrim                | In Progress | Prateek K       | No                            |
 mget                 | Done        | Lior Sventitzky | Yes                           | [#2150](https://github.com/valkey-io/valkey-glide/pull/2150)
 move                 | Done        | Yury Fridlyand  | No                            | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
-mset                 | Not started |                 | No                            |
-msetnx               | Not started |                 |                               |
+mset                 | In Progress | Andrew C        | No                            |
+msetnx               | In Progress | Andrew C        |                               |
 multi                | Won't Do    |                 |                               | No changes needed
 object encoding      | Done        | Yury Fridlyand  | No                            | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
 object freq          | Done        | Yury Fridlyand  | No                            | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
