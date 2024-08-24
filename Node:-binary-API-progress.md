@@ -196,35 +196,38 @@ xread                | Not started |                 |                        
 xreadgroup           | Not started |                 |                               |
 xrevrange            | Not started |                 | Yes                           |
 xtrim                | Not started |                 |                               |
-zadd                 | In Progress | Yury Fridlyand  | No                            | [#2190](https://github.com/valkey-io/valkey-glide/pull/2190)
+zadd                 | Not started |                 | No                            |
+zaddIncr             | Not started |                 | No                            |
 zcard                | In Progress | Yury Fridlyand  | No                            | [#2190](https://github.com/valkey-io/valkey-glide/pull/2190)
 zcount               | In Progress | Yury Fridlyand  | No                            | [#2190](https://github.com/valkey-io/valkey-glide/pull/2190)
 zdiff                | In Progress | Yury Fridlyand  | Yes                           | [#2190](https://github.com/valkey-io/valkey-glide/pull/2190)
+zdiffWithScores      | Not started |                 | Yes                           |
 zdiffstore           | In Progress | Yury Fridlyand  | No                            | [#2190](https://github.com/valkey-io/valkey-glide/pull/2190)
 zincrby              | In Progress | Yury Fridlyand  | No                            | [#2190](https://github.com/valkey-io/valkey-glide/pull/2190)
 zinter               | In Progress | Yury Fridlyand  | Yes                           | [#2190](https://github.com/valkey-io/valkey-glide/pull/2190)
+zinterWithScores     | Not started |                 | Yes                           |
 zintercard           | In Progress | Yury Fridlyand  | No                            | [#2190](https://github.com/valkey-io/valkey-glide/pull/2190)
 zinterstore          | In Progress | Yury Fridlyand  | No                            | [#2190](https://github.com/valkey-io/valkey-glide/pull/2190)
-zlexcount            | Not started |                 | No                            |
-zmpop                | Not started |                 | Yes                           |
-zmscore              | Not started |                 | No                            |
-zpopmax              | Not started |                 | Yes                           |
-zpopmin              | Not started |                 | Yes                           |
-zrandmember          | Not started |                 | Yes                           |
-zrange               | Not started |                 | Yes                           |
+zlexcount            | In Progress | Yury Fridlyand  | No                            |
+zmpop                | In Progress | Yury Fridlyand  | Yes                           |
+zmscore              | In Progress | Yury Fridlyand  | No                            |
+zpopmax              | In Progress | Yury Fridlyand  | Yes                           |
+zpopmin              | In Progress | Yury Fridlyand  | Yes                           |
+zrandmember          | In Progress | Yury Fridlyand  | Yes                           |
+zrange               | In Progress | Yury Fridlyand  | Yes                           |
 zrangebylex          | Won't Do    |                 |                               | deprecated
 zrangebyscore        | Won't Do    |                 |                               | deprecated
-zrangestore          | Not started |                 | No                            |
-zrank                | Not started |                 | No                            |
-zrem                 | Not started |                 | No                            |
-zremrangebylex       | Not started |                 | No                            |
-zremrangebyrank      | Not started |                 | No                            |
-zremrangebyscore     | Not started |                 | No                            |
+zrangestore          | In Progress | Yury Fridlyand  | No                            |
+zrank                | In Progress | Yury Fridlyand  | No                            |
+zrem                 | In Progress | Yury Fridlyand  | No                            |
+zremrangebylex       | In Progress | Yury Fridlyand  | No                            |
+zremrangebyrank      | In Progress | Yury Fridlyand  | No                            |
+zremrangebyscore     | In Progress | Yury Fridlyand  | No                            |
 zrevrange            | Won't Do    |                 |                               | deprecated
 zrevrangebylex       | Won't Do    |                 |                               | deprecated
 zrevrangebyscore     | Won't Do    |                 |                               | deprecated
-zrevrank             | Not started |                 |                               |
-zscan                | Not started |                 |                               |
-zscore               | Not started |                 | No                            |
-zunion               | Not started |                 | Yes                           |
-zunionstore          | Not started |                 | No                            |           
+zrevrank             | In Progress | Yury Fridlyand  |                               |
+zscan                | In Progress | Yury Fridlyand  |                               |
+zscore               | In Progress | Yury Fridlyand  | No                            |
+zunion               | In Progress | Yury Fridlyand  | Yes                           |
+zunionstore          | In Progress | Yury Fridlyand  | No                            |           
