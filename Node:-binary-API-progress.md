@@ -164,6 +164,7 @@ spop                 | WIP         | Lior Sventitzky | Yes                      
 spopCount            | WIP         | Lior Sventitzky | Yes                           |
 spublish             | Not started |                 |                               |
 srandmember          | WIP         | Lior Sventitzky | Yes                           |
+srandmemberCount     | WIP         | Lior Sventitzky | Yes                           |
 srem                 | WIP         | Lior Sventitzky | No                            |
 sscan                | Not started |                 |                               |
 ssubscribe           | Won't Do    |                 |                               | Not implemented
