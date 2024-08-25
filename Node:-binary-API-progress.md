@@ -166,13 +166,13 @@ spublish             | Not started |                 |                        
 srandmember          | WIP         | Lior Sventitzky | Yes                           |
 srandmemberCount     | WIP         | Lior Sventitzky | Yes                           |
 srem                 | WIP         | Lior Sventitzky | No                            |
-sscan                | Not started |                 |                               |
+sscan                | WIP         | Lior Sventitzky |                               |
 ssubscribe           | Won't Do    |                 |                               | Not implemented
-strlen               | Not started |                 | No                            |
+strlen               | WIP         | Lior Sventitzky | No                            |
 subscribe            | Won't Do    |                 |                               | Not implemented
 substr               | Won't Do    |                 |                               | deprecated
-sunion               | Not started |                 | Yes                           |
-sunionstore          | Not started |                 | No                            |
+sunion               | WIP         | Lior Sventitzky | Yes                           |
+sunionstore          | WIP         | Lior Sventitzky | No                            |
 sunsubscribe         | Won't Do    |                 |                               | Not implemented
 time                 | Done        | Yury Fridlyand  | No                            | [#2179](https://github.com/valkey-io/valkey-glide/pull/2179)
 touch                | Done        | Yury Fridlyand  | No                            | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
