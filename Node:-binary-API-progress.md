@@ -123,8 +123,8 @@ ping                 | Done        | Adar Ovadia     | Yes                      
 psetex               | Won't Do    |                 |                               | deprecated
 psubscribe           | Not started |                 |                               |
 pttl                 | In Progress | Yury Fridlyand  | No                            | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
-publish              | Not started |                 |                               |
-pubsub               | Not started |                 |                               |
+publish              | In Progress | Yi-Pin Chen     |                               | [#2201](https://github.com/valkey-io/valkey-glide/pull/2201)
+pubsub               | WIP (part1) | Yi-Pin Chen     |                               | [#2201](https://github.com/valkey-io/valkey-glide/pull/2201)
 punsubscribe         | Not started |                 |                               |
 quit                 | Won't Do    |                 |                               | not in the API
 randomkey            | Done        | Yury Fridlyand  | Yes                           | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
@@ -162,7 +162,7 @@ sort                 | Done        | Yury Fridlyand  | Yes                      
 sort_ro              | Done        | Yury Fridlyand  | Yes                           | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
 spop                 | WIP         | Lior Sventitzky | Yes                           |
 spopCount            | WIP         | Lior Sventitzky | Yes                           |
-spublish             | Not started |                 |                               |
+spublish             | In Progress | Yi-Pin Chen     |                               | [#2201](https://github.com/valkey-io/valkey-glide/pull/2201)
 srandmember          | WIP         | Lior Sventitzky | Yes                           |
 srandmemberCount     | WIP         | Lior Sventitzky | Yes                           |
 srem                 | WIP         | Lior Sventitzky | No                            |
