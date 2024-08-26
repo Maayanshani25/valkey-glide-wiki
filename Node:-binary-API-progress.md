@@ -9,7 +9,7 @@ bitfield_ro          | Done        | Andrew C        | No                       
 bitop                | Done        | Andrew C        | No                            | [#2178](https://github.com/valkey-io/valkey-glide/pull/2178)
 bitpos               | Done        | Andrew C        | No                            | [#2178](https://github.com/valkey-io/valkey-glide/pull/2178)
 blmove               | Done        | Lior Sventitzky |                               | [#2166](https://github.com/valkey-io/valkey-glide/pull/2166)
-blmpop               | In Progress | Prateek Kumar   | Yes                           |
+blmpop               | Done        | Prateek Kumar   | Yes                           | [#2195](https://github.com/valkey-io/valkey-glide/pull/2195)
 blpop                | Done        | Lior Sventitzky | Yes                           | [#2153](https://github.com/valkey-io/valkey-glide/pull/2153)
 brpop                | Done        | Lior Sventitzky | Yes                           | [#2153](https://github.com/valkey-io/valkey-glide/pull/2153)
 brpoplpush           | Won't Do    |                 |                               | deprecated
@@ -100,9 +100,9 @@ lpos                 | Done        | Prateek K       |                         
 lpush                | Done        | Lior Sventitzky | No                            | [#2151](https://github.com/valkey-io/valkey-glide/pull/2151)
 lpushx               | In Progress | Prateek K       | No                            |
 lrange               | Done        | Lior Sventitzky | Yes                           | [#2151](https://github.com/valkey-io/valkey-glide/pull/2151)
-lrem                 | In Progress | Prateek K       | No                            |
-lset                 | In Progress | Prateek K       | No                            |
-ltrim                | In Progress | Prateek K       | No                            |
+lrem                 | Done        | Prateek K       | No                            | [#2195](https://github.com/valkey-io/valkey-glide/pull/2195)
+lset                 | Done        | Prateek K       | No                            | [#2195](https://github.com/valkey-io/valkey-glide/pull/2195)
+ltrim                | Done        | Prateek K       | No                            | [#2195](https://github.com/valkey-io/valkey-glide/pull/2195)
 mget                 | Done        | Lior Sventitzky | Yes                           | [#2150](https://github.com/valkey-io/valkey-glide/pull/2150)
 move                 | Done        | Yury Fridlyand  | No                            | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
 mset                 | In Progress | Andrew C        | No                            |
@@ -138,7 +138,7 @@ rpop                 | Done        | Lior Sventitzky | Yes                      
 rpopcount            | Done        | Lior Sventitzky | Yes                           | [#2153](https://github.com/valkey-io/valkey-glide/pull/2153)
 rpoplpush            | Not started |                 |                               | deprecated
 rpush                | Done        | Lior Sventitzky | No                            | [#2153](https://github.com/valkey-io/valkey-glide/pull/2153)
-rpushx               | In Progress | Prateek Kumar   | No                            |
+rpushx               | Done        | Prateek Kumar   | No                            | [#2195](https://github.com/valkey-io/valkey-glide/pull/2195)
 sadd                 | WIP         | Lior Sventitzky | No                            |
 scan                 | Done        |                 |                               | No changes needed
 scard                | WIP         | Lior Sventitzky |                               |
