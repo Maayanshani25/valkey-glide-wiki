@@ -29,7 +29,7 @@ decr                 | Not started |                 | No                      
 decrby               | Not started |                 | No                            |
 del                  | Done        | Yury Fridlyand  | No                            | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
 discard              | Won't Do    |                 |                               | not in the API
-dump                 | Not started |                 |                               |
+dump                 | Done.       |                 | Yes                           | No changes needed
 echo                 | Done        | Yury Fridlyand  | Yes                           | [#2160](https://github.com/valkey-io/valkey-glide/pull/2160)
 eval                 | Not started |                 |                               |
 evalsha              | Not started |                 |                               |
@@ -133,7 +133,7 @@ readwrite            | Won't Do    |                 |                        
 rename               | Done        | Yury Fridlyand  | No                            | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
 renamenx             | Done        | Yury Fridlyand  | No                            | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
 replicaof            | Won't Do    |                 |                               | not in the API
-restore              | Not started |                 |                               |
+restore              | Done.       |                 | No                            | No changes needed
 rpop                 | Done        | Lior Sventitzky | Yes                           | [#2153](https://github.com/valkey-io/valkey-glide/pull/2153)
 rpopcount            | Done        | Lior Sventitzky | Yes                           | [#2153](https://github.com/valkey-io/valkey-glide/pull/2153)
 rpoplpush            | Not started |                 |                               | deprecated
