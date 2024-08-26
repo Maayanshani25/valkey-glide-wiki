@@ -38,18 +38,18 @@ exists               | Done        | Yury Fridlyand  | No                       
 expire               | Done        | Yury Fridlyand  | No                            | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
 expireat             | Done        | Yury Fridlyand  | No                            | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
 expiretime           | Done        | Yury Fridlyand  | No                            | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
-fcall                | In Progress | Yi-Pin Chen     | No                            | [#2172](https://github.com/valkey-io/valkey-glide/pull/2172)
-fcall_ro             | In Progress | Yi-Pin Chen     | No                            | [#2172](https://github.com/valkey-io/valkey-glide/pull/2172)
+fcall                | Done        | Yi-Pin Chen     | Yes                           | [#2172](https://github.com/valkey-io/valkey-glide/pull/2172)
+fcall_ro             | Done        | Yi-Pin Chen     | Yes                           | [#2172](https://github.com/valkey-io/valkey-glide/pull/2172)
 flushall             | Done        | Yury Fridlyand  | No                            | [#2179](https://github.com/valkey-io/valkey-glide/pull/2179)
 flushdb              | Done        | Yury Fridlyand  | No                            | [#2179](https://github.com/valkey-io/valkey-glide/pull/2179)
-function delete      | In Progress | Yi-Pin Chen     |                               | [#2172](https://github.com/valkey-io/valkey-glide/pull/2172)
-function dump        | Done        |                 |                               | No changes needed
-function flush       | In Progress | Yi-Pin Chen     |                               | [#2172](https://github.com/valkey-io/valkey-glide/pull/2172)
-function kill        | In Progress | Yi-Pin Chen     |                               | [#2172](https://github.com/valkey-io/valkey-glide/pull/2172)
-function list        | In Progress | Yi-Pin Chen     |                               | [#2172](https://github.com/valkey-io/valkey-glide/pull/2172)
-function load        | In Progress | Yi-Pin Chen     |                               | [#2172](https://github.com/valkey-io/valkey-glide/pull/2172)
-function restore     | Done        |                 |                               | No changes needed
-function stats       | In Progress | Yi-Pin Chen     |                               | [#2172](https://github.com/valkey-io/valkey-glide/pull/2172)
+function delete      | Done        | Yi-Pin Chen     | No                            | [#2172](https://github.com/valkey-io/valkey-glide/pull/2172)
+function dump        | Done        |                 | Yes                           | No changes needed
+function flush       | Done        | Yi-Pin Chen     | No                            | [#2172](https://github.com/valkey-io/valkey-glide/pull/2172)
+function kill        | Done        | Yi-Pin Chen     | No                            | [#2172](https://github.com/valkey-io/valkey-glide/pull/2172)
+function list        | Done.       | Yi-Pin Chen     | Yes                           | [#2172](https://github.com/valkey-io/valkey-glide/pull/2172)
+function load        | Done.       | Yi-Pin Chen     | Yes                           | [#2172](https://github.com/valkey-io/valkey-glide/pull/2172)
+function restore     | Done        |                 | No                            | No changes needed
+function stats       | Done        | Yi-Pin Chen     | Yes                           | [#2172](https://github.com/valkey-io/valkey-glide/pull/2172)
 geoadd               | Done        | Yury Fridlyand  | No                            | [#2149](https://github.com/valkey-io/valkey-glide/pull/2149)
 geodist              | Done        | Yury Fridlyand  | No                            | [#2149](https://github.com/valkey-io/valkey-glide/pull/2149)
 geohash              | Done        | Yury Fridlyand  | No                            | [#2149](https://github.com/valkey-io/valkey-glide/pull/2149)
