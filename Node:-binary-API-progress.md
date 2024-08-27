@@ -150,7 +150,7 @@ set                  | Not started |                 | No                      
 setbit               | Done        |  Andrew C       | No                            | [#2178](https://github.com/valkey-io/valkey-glide/pull/2178)
 setex                | Won't Do    |                 |                               | deprecated
 setnx                | Won't Do    |                 |                               | deprecated
-setrange             | Not started |                 | No                            |
+setrange             | WIP         | Maayan Shani    | No                            |
 sinter               | WIP         | Lior Sventitzky | Yes                           |
 sintercard           | WIP         | Lior Sventitzky | No                            |
 sinterstore          | WIP         | Lior Sventitzky | No                            |
