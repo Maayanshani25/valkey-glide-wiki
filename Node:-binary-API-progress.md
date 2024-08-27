@@ -139,40 +139,40 @@ rpopcount            | Done        | Lior Sventitzky | Yes                      
 rpoplpush            | Not started |                 |                               | deprecated
 rpush                | Done        | Lior Sventitzky | No                            | [#2153](https://github.com/valkey-io/valkey-glide/pull/2153)
 rpushx               | Done        | Prateek Kumar   | No                            | [#2195](https://github.com/valkey-io/valkey-glide/pull/2195)
-sadd                 | WIP         | Lior Sventitzky | No                            |
+sadd                 | Done        | Lior Sventitzky | No                            | [#2181](https://github.com/valkey-io/valkey-glide/pull/2181)
 scan                 | Done        |                 |                               | No changes needed
-scard                | WIP         | Lior Sventitzky |                               |
+scard                | Done        | Lior Sventitzky |                               | [#2197](https://github.com/valkey-io/valkey-glide/pull/2197)
 script               | Won't Do    |                 |                               | Not implemented
-sdiff                | WIP         | Lior Sventitzky | Yes                           |
-sdiffstore           | WIP         | Lior Sventitzky | No                            |
+sdiff                | Done        | Lior Sventitzky | Yes                           | [#2188](https://github.com/valkey-io/valkey-glide/pull/2188)
+sdiffstore           | Done        | Lior Sventitzky | No                            | [#2188](https://github.com/valkey-io/valkey-glide/pull/2188)
 select               | Done        | Yury Fridlyand  | No                            | [#2160](https://github.com/valkey-io/valkey-glide/pull/2160)
 set                  | Not started |                 | No                            |
 setbit               | Done        |  Andrew C       | No                            | [#2178](https://github.com/valkey-io/valkey-glide/pull/2178)
 setex                | Won't Do    |                 |                               | deprecated
 setnx                | Won't Do    |                 |                               | deprecated
 setrange             | WIP         | Maayan Shani    | No                            |
-sinter               | WIP         | Lior Sventitzky | Yes                           |
-sintercard           | WIP         | Lior Sventitzky | No                            |
-sinterstore          | WIP         | Lior Sventitzky | No                            |
-sismember            | WIP         | Lior Sventitzky | No                            |
-smembers             | WIP         | Lior Sventitzky | Yes                           |
-smismember           | WIP         | Lior Sventitzky | No                            |
-smove                | WIP         | Lior Sventitzky | No                            |
+sinter               | Done        | Lior Sventitzky | Yes                           | [#2188](https://github.com/valkey-io/valkey-glide/pull/2188)
+sintercard           | Done        | Lior Sventitzky | No                            | [#2188](https://github.com/valkey-io/valkey-glide/pull/2188)
+sinterstore          | Done        | Lior Sventitzky | No                            | [#2188](https://github.com/valkey-io/valkey-glide/pull/2188)
+sismember            | Done        | Lior Sventitzky | No                            | [#2197](https://github.com/valkey-io/valkey-glide/pull/2197)
+smembers             | Done        | Lior Sventitzky | Yes                           | [#2181](https://github.com/valkey-io/valkey-glide/pull/2181)
+smismember           | Done        | Lior Sventitzky | No                            | [#2197](https://github.com/valkey-io/valkey-glide/pull/2197)
+smove                | Done        | Lior Sventitzky | No                            | [#2197](https://github.com/valkey-io/valkey-glide/pull/2197)
 sort                 | Done        | Yury Fridlyand  | Yes                           | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
 sort_ro              | Done        | Yury Fridlyand  | Yes                           | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
-spop                 | WIP         | Lior Sventitzky | Yes                           |
-spopCount            | WIP         | Lior Sventitzky | Yes                           |
+spop                 | Done        | Lior Sventitzky | Yes                           | [#2181](https://github.com/valkey-io/valkey-glide/pull/2181)
+spopCount            | Done        | Lior Sventitzky | Yes                           | [#2181](https://github.com/valkey-io/valkey-glide/pull/2181)
 spublish             | In Progress | Yi-Pin Chen     |                               | [#2201](https://github.com/valkey-io/valkey-glide/pull/2201)
-srandmember          | WIP         | Lior Sventitzky | Yes                           |
-srandmemberCount     | WIP         | Lior Sventitzky | Yes                           |
-srem                 | WIP         | Lior Sventitzky | No                            |
-sscan                | WIP         | Lior Sventitzky |                               |
+srandmember          | Done        | Lior Sventitzky | Yes                           | [#2197](https://github.com/valkey-io/valkey-glide/pull/2197)
+srandmemberCount     | Done        | Lior Sventitzky | Yes                           | [#2197](https://github.com/valkey-io/valkey-glide/pull/2197)
+srem                 | Done        | Lior Sventitzky | No                            | [#2181](https://github.com/valkey-io/valkey-glide/pull/2181)
+sscan                | Done        | Lior Sventitzky |                               | [#2199](https://github.com/valkey-io/valkey-glide/pull/2199)
 ssubscribe           | Won't Do    |                 |                               | Not implemented
-strlen               | WIP         | Lior Sventitzky | No                            |
+strlen               | Done        | Lior Sventitzky | No                            | [#2199](https://github.com/valkey-io/valkey-glide/pull/2199)
 subscribe            | Won't Do    |                 |                               | Not implemented
 substr               | Won't Do    |                 |                               | deprecated
-sunion               | WIP         | Lior Sventitzky | Yes                           |
-sunionstore          | WIP         | Lior Sventitzky | No                            |
+sunion               | Done        | Lior Sventitzky | Yes                           | [#2199](https://github.com/valkey-io/valkey-glide/pull/2199)
+sunionstore          | Done        | Lior Sventitzky | No                            | [#2199](https://github.com/valkey-io/valkey-glide/pull/2199)
 sunsubscribe         | Won't Do    |                 |                               | Not implemented
 time                 | Done        | Yury Fridlyand  | No                            | [#2179](https://github.com/valkey-io/valkey-glide/pull/2179)
 touch                | Done        | Yury Fridlyand  | No                            | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
