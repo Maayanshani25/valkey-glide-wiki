@@ -189,14 +189,14 @@ xautoclaim           | Not started |                 |                        
 xclaim               | Not started |                 |                               |
 xdel                 | Not started |                 | No                            |
 xgroup               | Not started |                 |                               |
-xinfo                | Not started |                 |                               |
-xlen                 | Not started |                 | No                            |
-xpending             | Not started |                 |                               |
-xrange               | Not started |                 | Yes                           |
-xread                | Not started |                 |                               |
-xreadgroup           | Not started |                 |                               |
-xrevrange            | Not started |                 | Yes                           |
-xtrim                | Not started |                 |                               |
+xinfo                | In Progress | James Xin       |                               |
+xlen                 | In Progress | James Xin       | No                            |
+xpending             | In Progress | James Xin       |                               |
+xrange               | In Progress | James Xin       | Yes                           |
+xread                | In Progress | James Xin       |                               |
+xreadgroup           | In Progress | James Xin       |                               |
+xrevrange            | In Progress | James Xin       | Yes                           |
+xtrim                | In Progress | James Xin       |                               |
 zadd                 | Not started |                 | No                            |
 zaddIncr             | Not started |                 | No                            |
 zcard                | Done        | Yury Fridlyand  | No                            | [#2190](https://github.com/valkey-io/valkey-glide/pull/2190)
