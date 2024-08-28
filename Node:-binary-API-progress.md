@@ -123,7 +123,7 @@ ping                 | Done        | Adar Ovadia     | Yes                      
 psetex               | Won't Do    |                 |                               | deprecated
 psubscribe           | Not started |                 |                               |
 pttl                 | In Progress | Yury Fridlyand  | No                            | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
-publish              | In Progress | Yi-Pin Chen     |                               | [#2201](https://github.com/valkey-io/valkey-glide/pull/2201)
+publish              | Done        | Yi-Pin Chen     |                               | [#2201](https://github.com/valkey-io/valkey-glide/pull/2201)
 pubsub               | WIP (part1) | Yi-Pin Chen     |                               | [#2201](https://github.com/valkey-io/valkey-glide/pull/2201)
 punsubscribe         | Not started |                 |                               |
 quit                 | Won't Do    |                 |                               | not in the API
