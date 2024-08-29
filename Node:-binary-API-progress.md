@@ -197,16 +197,16 @@ xread                | In Progress | James Xin       |                        
 xreadgroup           | In Progress | James Xin       |                               |
 xrevrange            | In Progress | James Xin       | Yes                           |
 xtrim                | In Progress | James Xin       |                               |
-zadd                 | Not started |                 | No                            |
-zaddIncr             | Not started |                 | No                            |
+zadd                 | In Progress | Yury Fridlyand  | No                            |
+zaddIncr             | In Progress | Yury Fridlyand  | No                            |
 zcard                | Done        | Yury Fridlyand  | No                            | [#2190](https://github.com/valkey-io/valkey-glide/pull/2190)
 zcount               | Done        | Yury Fridlyand  | No                            | [#2190](https://github.com/valkey-io/valkey-glide/pull/2190)
 zdiff                | Done        | Yury Fridlyand  | Yes                           | [#2190](https://github.com/valkey-io/valkey-glide/pull/2190)
-zdiffWithScores      | Not started |                 | Yes                           |
+zdiffWithScores      | In Progress | Yury Fridlyand  | Yes                           |
 zdiffstore           | Done        | Yury Fridlyand  | No                            | [#2190](https://github.com/valkey-io/valkey-glide/pull/2190)
 zincrby              | Done        | Yury Fridlyand  | No                            | [#2190](https://github.com/valkey-io/valkey-glide/pull/2190)
 zinter               | Done        | Yury Fridlyand  | Yes                           | [#2190](https://github.com/valkey-io/valkey-glide/pull/2190)
-zinterWithScores     | Not started |                 | Yes                           |
+zinterWithScores     | In Progress | Yury Fridlyand  | Yes                           |
 zintercard           | Done        | Yury Fridlyand  | No                            | [#2190](https://github.com/valkey-io/valkey-glide/pull/2190)
 zinterstore          | Done        | Yury Fridlyand  | No                            | [#2190](https://github.com/valkey-io/valkey-glide/pull/2190)
 zlexcount            | In Progress | Yury Fridlyand  | No                            |
