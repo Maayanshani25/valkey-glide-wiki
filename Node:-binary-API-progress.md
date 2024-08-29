@@ -183,7 +183,7 @@ unsubscribe          | Won't Do    |                 |                        
 unwatch              | Done        | Yury Fridlyand  | No                            | [#2160](https://github.com/valkey-io/valkey-glide/pull/2160)
 wait                 | Won't Do    |                 |                               | No changes needed
 watch                | Done        | Yury Fridlyand  | No                            | [#2160](https://github.com/valkey-io/valkey-glide/pull/2160)
-xack                 | Not started |                 | No                            |
+xack                 | Done        | TJ Zhang        | No                            |
 xadd                 | Not started |                 | Yes                           | Can return NULL with NOMKSTREAM flag
 xautoclaim           | Not started |                 |                               |
 xclaim               | Not started |                 |                               |
