@@ -183,12 +183,12 @@ unsubscribe          | Won't Do    |                 |                        
 unwatch              | Done        | Yury Fridlyand  | No                            | [#2160](https://github.com/valkey-io/valkey-glide/pull/2160)
 wait                 | Won't Do    |                 |                               | No changes needed
 watch                | Done        | Yury Fridlyand  | No                            | [#2160](https://github.com/valkey-io/valkey-glide/pull/2160)
-xack                 | Done        | TJ Zhang        | No                            |
-xadd                 | Not started |                 | Yes                           | Can return NULL with NOMKSTREAM flag
-xautoclaim           | Not started |                 |                               |
-xclaim               | Not started |                 |                               |
-xdel                 | Not started |                 | No                            |
-xgroup               | Not started |                 |                               |
+xack                 | Done        | TJ Zhang        | No                            | [#2200](https://github.com/valkey-io/valkey-glide/pull/2200)
+xadd                 | Done        | TJ Zhang        | Yes                           | [#2200](https://github.com/valkey-io/valkey-glide/pull/2200)
+xautoclaim           | Done        | TJ Zhang        | Yes                           | [#2200](https://github.com/valkey-io/valkey-glide/pull/2200)
+xclaim               | Done        | TJ Zhang        | Yes                           | [#2200](https://github.com/valkey-io/valkey-glide/pull/2200)
+xdel                 | Done        | TJ Zhang        | No                            | [#2200](https://github.com/valkey-io/valkey-glide/pull/2200)
+xgroup               | Done        | TJ Zhang        |                               | [#2200](https://github.com/valkey-io/valkey-glide/pull/2200)
 xinfo                | In Progress | James Xin       |                               |
 xlen                 | In Progress | James Xin       | No                            |
 xpending             | In Progress | James Xin       |                               |
