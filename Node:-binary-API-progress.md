@@ -25,8 +25,8 @@ Config rewrite       | Done        | Yury Fridlyand  | No                       
 Config set           | Done        | Yury Fridlyand  | No                            | [#2179](https://github.com/valkey-io/valkey-glide/pull/2179)
 copy                 | Done        | Yury Fridlyand  | No                            | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
 dbsize               | Done        | Yury Fridlyand  | No                            | [#2179](https://github.com/valkey-io/valkey-glide/pull/2179)
-decr                 | Not started |                 | No                            |
-decrby               | Not started |                 | No                            |
+decr                 | Done        | TJ Zhang        | No                            | [#2183](https://github.com/valkey-io/valkey-glide/pull/2183)
+decrby               | Done        | TJ Zhang        | No                            | [#2183](https://github.com/valkey-io/valkey-glide/pull/2183)
 del                  | Done        | Yury Fridlyand  | No                            | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
 discard              | Won't Do    |                 |                               | not in the API
 dump                 | Done        |                 | Yes                           | No changes needed
@@ -63,7 +63,7 @@ geosearchstore       | Done        | Yury Fridlyand  | No                       
 get                  | Done        | Adar Ovadia     | Yes                           |
 getbit               | Done        | Andrew C        | No                            | [#2178](https://github.com/valkey-io/valkey-glide/pull/2178)
 getdel               | Done        | Adar Ovadia     | Yes                           |
-getex                | Not started |                 |                               |
+getex                | Done        | TJ Zhang        | Yes                           | [#2183](https://github.com/valkey-io/valkey-glide/pull/2183)
 getrange             | Done        | Lior Sventitzky | Yes                           | [#2150](https://github.com/valkey-io/valkey-glide/pull/2150)
 getset               | Won't Do    |                 |                               | deprecated
 hdel                 | Done        | Jonathan Louie  | No                            | [#2194](https://github.com/valkey-io/valkey-glide/pull/2194)
@@ -82,12 +82,12 @@ hset                 | Not started |                 |                        
 hsetnx               | Done        | Jonathan Louie  | No                            | [#2194](https://github.com/valkey-io/valkey-glide/pull/2194)
 hstrlen              | Done        | Jonathan Louie  | No                            | [#2194](https://github.com/valkey-io/valkey-glide/pull/2194)
 hvals                | Done        | Lior Sventitzky |                               | [#2150](https://github.com/valkey-io/valkey-glide/pull/2150)
-incr                 | Not started |                 | No                            |
-incrby               | Not started |                 | No                            |
-incrbyfloat          | Not started |                 | No                            |
+incr                 | Done        | TJ Zhang        | No                            |
+incrby               | Done        | TJ Zhang        | No                            |
+incrbyfloat          | Done        | TJ Zhang        | No                            |
 info                 | Done        | Yury Fridlyand  | No                            | [#2179](https://github.com/valkey-io/valkey-glide/pull/2179)
 lastsave             | Done        |                 |                               | No changes needed
-lcs                  | Not started |                 | Yes                           |
+lcs                  | Done        | TJ Zhang        | Yes                           |
 lindex               | Done        | Lior Sventitzky | No                            | [#2166](https://github.com/valkey-io/valkey-glide/pull/2166)
 linsert              | Done        | Lior Sventitzky | No                            | [#2166](https://github.com/valkey-io/valkey-glide/pull/2166)
 llen                 | Done        | Lior Sventitzky | No                            | [#2166](https://github.com/valkey-io/valkey-glide/pull/2166)
@@ -146,11 +146,11 @@ script               | Won't Do    |                 |                        
 sdiff                | Done        | Lior Sventitzky | Yes                           | [#2188](https://github.com/valkey-io/valkey-glide/pull/2188)
 sdiffstore           | Done        | Lior Sventitzky | No                            | [#2188](https://github.com/valkey-io/valkey-glide/pull/2188)
 select               | Done        | Yury Fridlyand  | No                            | [#2160](https://github.com/valkey-io/valkey-glide/pull/2160)
-set                  | Not started |                 | No                            |
+set                  | Done        | TJ Zhang        | No                            | [#2183](https://github.com/valkey-io/valkey-glide/pull/2183)
 setbit               | Done        |  Andrew C       | No                            | [#2178](https://github.com/valkey-io/valkey-glide/pull/2178)
 setex                | Won't Do    |                 |                               | deprecated
 setnx                | Won't Do    |                 |                               | deprecated
-setrange             | WIP         | Maayan Shani    | No                            |
+setrange             | Done        | TJ Zhang        | No                            | [#2183](https://github.com/valkey-io/valkey-glide/pull/2183)
 sinter               | Done        | Lior Sventitzky | Yes                           | [#2188](https://github.com/valkey-io/valkey-glide/pull/2188)
 sintercard           | Done        | Lior Sventitzky | No                            | [#2188](https://github.com/valkey-io/valkey-glide/pull/2188)
 sinterstore          | Done        | Lior Sventitzky | No                            | [#2188](https://github.com/valkey-io/valkey-glide/pull/2188)
