@@ -66,21 +66,21 @@ getdel               | Done        | Adar Ovadia     | Yes                      
 getex                | Not started |                 |                               |
 getrange             | Done        | Lior Sventitzky | Yes                           | [#2150](https://github.com/valkey-io/valkey-glide/pull/2150)
 getset               | Won't Do    |                 |                               | deprecated
-hdel                 | Not started |                 | No                            |
-hexists              | Not started |                 | No                            |
+hdel                 | Done        | Jonathan Louie  | No                            | [#2194](https://github.com/valkey-io/valkey-glide/pull/2194)
+hexists              | Done        | Jonathan Louie  | No                            | [#2194](https://github.com/valkey-io/valkey-glide/pull/2194)
 hget                 | Done        | Lior Sventitzky |                               | [#2150](https://github.com/valkey-io/valkey-glide/pull/2150)
 hgetall              | Not started |                 | Yes                           |
-hincrby              | Not started |                 | No                            |
-hincrbyfloat         | Not started |                 | No                            |
-hkeys                | Not started |                 |                               |
-hlen                 | Not started |                 |                               |
-hmget                | Not started |                 |                               |
+hincrby              | Done        | Jonathan Louie  | No                            | [#2194](https://github.com/valkey-io/valkey-glide/pull/2194)
+hincrbyfloat         | Done        | Jonathan Louie  | No                            | [#2194](https://github.com/valkey-io/valkey-glide/pull/2194)
+hkeys                | Done        | Jonathan Louie  | Yes                           | [#2194](https://github.com/valkey-io/valkey-glide/pull/2194)
+hlen                 | Done        | Jonathan Louie  | No                            | [#2194](https://github.com/valkey-io/valkey-glide/pull/2194)
+hmget                | Done        | Jonathan Louie  | Yes                           | [#2194](https://github.com/valkey-io/valkey-glide/pull/2194)
 hmset                | Won't Do    |                 |                               | deprecated
-hrandfield           | Not started |                 |                               |
+hrandfield           | Done        | Jonathan Louie  | Yes                           | [#2194](https://github.com/valkey-io/valkey-glide/pull/2194)
 hscan                | Not started |                 |                               |
 hset                 | Not started |                 |                               |
-hsetnx               | Not started |                 | No                            |
-hstrlen              | Not started |                 | No                            |
+hsetnx               | Done        | Jonathan Louie  | No                            | [#2194](https://github.com/valkey-io/valkey-glide/pull/2194)
+hstrlen              | Done        | Jonathan Louie  | No                            | [#2194](https://github.com/valkey-io/valkey-glide/pull/2194)
 hvals                | Done        | Lior Sventitzky |                               | [#2150](https://github.com/valkey-io/valkey-glide/pull/2150)
 incr                 | Not started |                 | No                            |
 incrby               | Not started |                 | No                            |
