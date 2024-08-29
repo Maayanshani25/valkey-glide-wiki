@@ -162,7 +162,7 @@ sort                 | Done        | Yury Fridlyand  | Yes                      
 sort_ro              | Done        | Yury Fridlyand  | Yes                           | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
 spop                 | Done        | Lior Sventitzky | Yes                           | [#2181](https://github.com/valkey-io/valkey-glide/pull/2181)
 spopCount            | Done        | Lior Sventitzky | Yes                           | [#2181](https://github.com/valkey-io/valkey-glide/pull/2181)
-spublish             | In Progress | Yi-Pin Chen     |                               | [#2201](https://github.com/valkey-io/valkey-glide/pull/2201)
+spublish             | Done        | Yi-Pin Chen     |                               | [#2201](https://github.com/valkey-io/valkey-glide/pull/2201)
 srandmember          | Done        | Lior Sventitzky | Yes                           | [#2197](https://github.com/valkey-io/valkey-glide/pull/2197)
 srandmemberCount     | Done        | Lior Sventitzky | Yes                           | [#2197](https://github.com/valkey-io/valkey-glide/pull/2197)
 srem                 | Done        | Lior Sventitzky | No                            | [#2181](https://github.com/valkey-io/valkey-glide/pull/2181)
