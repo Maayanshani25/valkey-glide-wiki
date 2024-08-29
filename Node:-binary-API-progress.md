@@ -197,8 +197,8 @@ xread                | In Progress | James Xin       |                        
 xreadgroup           | In Progress | James Xin       |                               |
 xrevrange            | In Progress | James Xin       | Yes                           |
 xtrim                | In Progress | James Xin       |                               |
-zadd                 | In Progress | Yury Fridlyand  | No                            |
-zaddIncr             | In Progress | Yury Fridlyand  | No                            |
+zadd                 | In Progress | Yury Fridlyand  | No                            | [#2210](https://github.com/valkey-io/valkey-glide/pull/2210)
+zaddIncr             | In Progress | Yury Fridlyand  | No                            | [#2210](https://github.com/valkey-io/valkey-glide/pull/2210)
 zcard                | Done        | Yury Fridlyand  | No                            | [#2190](https://github.com/valkey-io/valkey-glide/pull/2190)
 zcount               | Done        | Yury Fridlyand  | No                            | [#2190](https://github.com/valkey-io/valkey-glide/pull/2190)
 zdiff                | Done        | Yury Fridlyand  | Yes                           | [#2190](https://github.com/valkey-io/valkey-glide/pull/2190)
@@ -209,26 +209,26 @@ zinter               | Done        | Yury Fridlyand  | Yes                      
 zinterWithScores     | In Progress | Yury Fridlyand  | Yes                           |
 zintercard           | Done        | Yury Fridlyand  | No                            | [#2190](https://github.com/valkey-io/valkey-glide/pull/2190)
 zinterstore          | Done        | Yury Fridlyand  | No                            | [#2190](https://github.com/valkey-io/valkey-glide/pull/2190)
-zlexcount            | In Progress | Yury Fridlyand  | No                            |
-zmpop                | In Progress | Yury Fridlyand  | Yes                           |
-zmscore              | In Progress | Yury Fridlyand  | No                            |
-zpopmax              | In Progress | Yury Fridlyand  | Yes                           |
-zpopmin              | In Progress | Yury Fridlyand  | Yes                           |
-zrandmember          | In Progress | Yury Fridlyand  | Yes                           |
-zrange               | In Progress | Yury Fridlyand  | Yes                           |
+zlexcount            | In Progress | Yury Fridlyand  | No                            | [#2210](https://github.com/valkey-io/valkey-glide/pull/2210)
+zmpop                | In Progress | Yury Fridlyand  | Yes                           | [#2210](https://github.com/valkey-io/valkey-glide/pull/2210)
+zmscore              | In Progress | Yury Fridlyand  | No                            | [#2210](https://github.com/valkey-io/valkey-glide/pull/2210)
+zpopmax              | In Progress | Yury Fridlyand  | Yes                           | [#2210](https://github.com/valkey-io/valkey-glide/pull/2210)
+zpopmin              | In Progress | Yury Fridlyand  | Yes                           | [#2210](https://github.com/valkey-io/valkey-glide/pull/2210)
+zrandmember          | In Progress | Yury Fridlyand  | Yes                           | [#2210](https://github.com/valkey-io/valkey-glide/pull/2210)
+zrange               | In Progress | Yury Fridlyand  | Yes                           | [#2210](https://github.com/valkey-io/valkey-glide/pull/2210)
 zrangebylex          | Won't Do    |                 |                               | deprecated
 zrangebyscore        | Won't Do    |                 |                               | deprecated
-zrangestore          | In Progress | Yury Fridlyand  | No                            |
-zrank                | In Progress | Yury Fridlyand  | No                            |
-zrem                 | In Progress | Yury Fridlyand  | No                            |
-zremrangebylex       | In Progress | Yury Fridlyand  | No                            |
-zremrangebyrank      | In Progress | Yury Fridlyand  | No                            |
-zremrangebyscore     | In Progress | Yury Fridlyand  | No                            |
+zrangestore          | In Progress | Yury Fridlyand  | No                            | [#2210](https://github.com/valkey-io/valkey-glide/pull/2210)
+zrank                | In Progress | Yury Fridlyand  | No                            | [#2210](https://github.com/valkey-io/valkey-glide/pull/2210)
+zrem                 | In Progress | Yury Fridlyand  | No                            | [#2210](https://github.com/valkey-io/valkey-glide/pull/2210)
+zremrangebylex       | In Progress | Yury Fridlyand  | No                            | [#2210](https://github.com/valkey-io/valkey-glide/pull/2210)
+zremrangebyrank      | In Progress | Yury Fridlyand  | No                            | [#2210](https://github.com/valkey-io/valkey-glide/pull/2210)
+zremrangebyscore     | In Progress | Yury Fridlyand  | No                            | [#2210](https://github.com/valkey-io/valkey-glide/pull/2210)
 zrevrange            | Won't Do    |                 |                               | deprecated
 zrevrangebylex       | Won't Do    |                 |                               | deprecated
 zrevrangebyscore     | Won't Do    |                 |                               | deprecated
-zrevrank             | In Progress | Yury Fridlyand  |                               |
-zscan                | In Progress | Yury Fridlyand  |                               |
-zscore               | In Progress | Yury Fridlyand  | No                            |
-zunion               | In Progress | Yury Fridlyand  | Yes                           |
-zunionstore          | In Progress | Yury Fridlyand  | No                            |           
+zrevrank             | In Progress | Yury Fridlyand  |                               | [#2210](https://github.com/valkey-io/valkey-glide/pull/2210)
+zscan                | In Progress | Yury Fridlyand  |                               | [#2210](https://github.com/valkey-io/valkey-glide/pull/2210)
+zscore               | In Progress | Yury Fridlyand  | No                            | [#2210](https://github.com/valkey-io/valkey-glide/pull/2210)
+zunion               | In Progress | Yury Fridlyand  | Yes                           | [#2210](https://github.com/valkey-io/valkey-glide/pull/2210)
+zunionstore          | In Progress | Yury Fridlyand  | No                            | [#2210](https://github.com/valkey-io/valkey-glide/pull/2210)          
