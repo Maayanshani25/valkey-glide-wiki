@@ -33,7 +33,7 @@ dump                 | Done        |                 | Yes                     
 echo                 | Done        | Yury Fridlyand  | Yes                           | [#2160](https://github.com/valkey-io/valkey-glide/pull/2160)
 eval                 | Not started |                 |                               |
 evalsha              | Not started |                 |                               |
-exec                 | Not started |                 |                               |
+exec                 | Done |  Adar Ovadia               | Yes                              | [#2052](https://github.com/valkey-io/valkey-glide/pull/2052)
 exists               | Done        | Yury Fridlyand  | No                            | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
 expire               | Done        | Yury Fridlyand  | No                            | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
 expireat             | Done        | Yury Fridlyand  | No                            | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
