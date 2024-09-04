@@ -78,7 +78,7 @@ hmget                | Done        | Jonathan Louie  | Yes                      
 hmset                | Won't Do    |                 |                               | deprecated
 hrandfield           | Done        | Jonathan Louie  | Yes                           | [#2194](https://github.com/valkey-io/valkey-glide/pull/2194)
 hscan                | Not started |                 |                               |
-hset                 | Not started |                 |                               |
+hset                 | Done        | Prateek Kumar   |                               | [#2209](https://github.com/valkey-io/valkey-glide/pull/2209)
 hsetnx               | Done        | Jonathan Louie  | No                            | [#2194](https://github.com/valkey-io/valkey-glide/pull/2194)
 hstrlen              | Done        | Jonathan Louie  | No                            | [#2194](https://github.com/valkey-io/valkey-glide/pull/2194)
 hvals                | Done        | Lior Sventitzky |                               | [#2150](https://github.com/valkey-io/valkey-glide/pull/2150)
@@ -136,7 +136,7 @@ replicaof            | Won't Do    |                 |                        
 restore              | Done        |                 | No                            | No changes needed
 rpop                 | Done        | Lior Sventitzky | Yes                           | [#2153](https://github.com/valkey-io/valkey-glide/pull/2153)
 rpopcount            | Done        | Lior Sventitzky | Yes                           | [#2153](https://github.com/valkey-io/valkey-glide/pull/2153)
-rpoplpush            | Not started |                 |                               | deprecated
+rpoplpush            | Won't Do    |                 |                               | deprecated
 rpush                | Done        | Lior Sventitzky | No                            | [#2153](https://github.com/valkey-io/valkey-glide/pull/2153)
 rpushx               | Done        | Prateek Kumar   | No                            | [#2195](https://github.com/valkey-io/valkey-glide/pull/2195)
 sadd                 | Done        | Lior Sventitzky | No                            | [#2181](https://github.com/valkey-io/valkey-glide/pull/2181)
