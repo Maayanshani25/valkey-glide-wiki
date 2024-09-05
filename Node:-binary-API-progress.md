@@ -189,14 +189,14 @@ xautoclaim           | Done        | TJ Zhang        | Yes                      
 xclaim               | Done        | TJ Zhang        | Yes                           | [#2200](https://github.com/valkey-io/valkey-glide/pull/2200)
 xdel                 | Done        | TJ Zhang        | No                            | [#2200](https://github.com/valkey-io/valkey-glide/pull/2200)
 xgroup               | Done        | TJ Zhang        |                               | [#2200](https://github.com/valkey-io/valkey-glide/pull/2200)
-xinfo                | In Progress | James Xin       |                               |
-xlen                 | In Progress | James Xin       | No                            |
-xpending             | In Progress | James Xin       |                               |
-xrange               | In Progress | James Xin       | Yes                           |
-xread                | In Progress | James Xin       |                               |
-xreadgroup           | In Progress | James Xin       |                               |
-xrevrange            | In Progress | James Xin       | Yes                           |
-xtrim                | In Progress | James Xin       |                               |
+xinfo                | Done        | James Xin       |                               |
+xlen                 | Done        | James Xin       | No                            |
+xpending             | Done        | James Xin       |                               |
+xrange               | Done        | James Xin       | Yes                           |
+xread                | Done        | James Xin       |                               |
+xreadgroup           | Done        | James Xin       |                               |
+xrevrange            | Done        | James Xin       | Yes                           |
+xtrim                | Done        | James Xin       |                               |
 zadd                 | In Progress | Yury Fridlyand  | No                            | [#2210](https://github.com/valkey-io/valkey-glide/pull/2210)
 zaddIncr             | In Progress | Yury Fridlyand  | No                            | [#2210](https://github.com/valkey-io/valkey-glide/pull/2210)
 zcard                | Done        | Yury Fridlyand  | No                            | [#2190](https://github.com/valkey-io/valkey-glide/pull/2190)
@@ -231,4 +231,4 @@ zrevrank             | In Progress | Yury Fridlyand  |                         
 zscan                | In Progress | Yury Fridlyand  |                               | [#2210](https://github.com/valkey-io/valkey-glide/pull/2210)
 zscore               | In Progress | Yury Fridlyand  | No                            | [#2210](https://github.com/valkey-io/valkey-glide/pull/2210)
 zunion               | In Progress | Yury Fridlyand  | Yes                           | [#2210](https://github.com/valkey-io/valkey-glide/pull/2210)
-zunionstore          | In Progress | Yury Fridlyand  | No                            | [#2210](https://github.com/valkey-io/valkey-glide/pull/2210)          
+zunionstore          | In Progress | Yury Fridlyand  | No                            | [#2210](https://github.com/valkey-io/valkey-glide/pull/2210)
