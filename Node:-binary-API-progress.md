@@ -77,7 +77,7 @@ hlen                 | Done        | Jonathan Louie   | No                      
 hmget                | Done        | Jonathan Louie   | Yes                           | [#2194](https://github.com/valkey-io/valkey-glide/pull/2194)
 hmset                | Won't Do    |                  |                               | deprecated
 hrandfield           | Done        | Jonathan Louie   | Yes                           | [#2194](https://github.com/valkey-io/valkey-glide/pull/2194)
-hscan                | In Progress | Jonathan Louie   |                               |
+hscan                | Done        | Jonathan Louie   |                               | [#2240](https://github.com/valkey-io/valkey-glide/pull/2240)
 hset                 | Done        | Prateek Kumar    |                               | [#2209](https://github.com/valkey-io/valkey-glide/pull/2209)
 hsetnx               | Done        | Jonathan Louie   | No                            | [#2194](https://github.com/valkey-io/valkey-glide/pull/2194)
 hstrlen              | Done        | Jonathan Louie   | No                            | [#2194](https://github.com/valkey-io/valkey-glide/pull/2194)
