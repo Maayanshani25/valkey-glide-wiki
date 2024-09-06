@@ -74,6 +74,163 @@ const client = await GlideClient.createClient({
 ## Valkey commands
 For information on the supported commands and their corresponding parameters, we recommend referring to the documentation in the code. This documentation provides in-depth insights into the usage and options available for each command.
 
+### Command String Arguments
+
+Valkey strings are stored in its simplest form: as a sequence of bytes. GLIDE offers [GlideString](https://github.com/valkey-io/valkey-glide/blob/79fdec50bbef4310cb12e46a69f14c18378afb44/node/src/BaseClient.ts#L278) which maps to Valkey strings. Use it to pass Valkey strings as arguments to commands, or receive Valkey strings in response to commands. GlideString represents either:
+
+1. `string`: as a UTF-8 encoded string.
+2. `Buffer`: as a `byte[]`.
+
+The return types of command API:
+
+-   Command uses `string` instead of `GlideString` as the return type if it contains a simple string value (simple strings in Valkey are always UTF-8 encoded strings). For example, [`type`](https://github.com/valkey-io/valkey-glide/blob/79fdec50bbef4310cb12e46a69f14c18378afb44/node/src/BaseClient.ts#L4488) command returns one of pre-defined strings, or [`set`](https://github.com/valkey-io/valkey-glide/blob/79fdec50bbef4310cb12e46a69f14c18378afb44/node/src/BaseClient.ts#L1182) command which returns `"OK"`.
+-   Command uses `Buffer` as the return type, because it always contains binary data. For example, `dump` and `functionDump` commands.
+-   Most commands use `GlideString` as the common return type.
+
+### Decoder
+
+In Node.js, most users expect the responses to be in string format unless specified otherwise. Users can select which data type they expect to receive as a response. The user has the option, using [`DecoderOption`](https://github.com/valkey-io/valkey-glide/blob/79fdec50bbef4310cb12e46a69f14c18378afb44/node/src/BaseClient.ts#L295) as an extension to command option types with [`Decoder`](https://github.com/valkey-io/valkey-glide/blob/79fdec50bbef4310cb12e46a69f14c18378afb44/node/src/BaseClient.ts#L283), of converting the response into either a string or bytes for each command. In addition, as part of the client creation process, the user has the option of setting a default for all commands if no decoder argument is passed to the command.
+
+`Decoder` is an optional parameter for all commands and it has two options
+
+1. `Bytes`: decodes the response into a `Buffer` (byte array).
+2. `String`: decodes the response into a string.
+
+If `Decoder` is not configured, `Decoder.String` will be used as the default decoder.
+Note: Using the `Decoder.String` to convert Non-UTF-8 encoded Valkey strings can lead to errors unrecoverable data lost. See: [#2221](https://github.com/valkey-io/valkey-glide/discussions/2221).
+
+#### Example Usage
+
+Here is an example of command implementation to outline arguments using [`DecoderOption`](https://github.com/valkey-io/valkey-glide/blob/79fdec50bbef4310cb12e46a69f14c18378afb44/node/src/BaseClient.ts#L295) and response type:
+
+```typescript
+public getdel(
+        key: GlideString,
+        options?: DecoderOption,
+    ): Promise<GlideString | null>
+```
+
+Here's a simple example demonstrating how to use `Decoder` in command API and `Buffer.from()` to encode binary data:
+
+```typescript
+expect(await client.set(key, value)).toEqual("OK");
+expect(await client.getdel(key)).toEqual(value);
+
+const valueEncoded = Buffer.from(value);
+expect(await client.set(key, value)).toEqual("OK");
+expect(await client.getdel(key, { decoder: Decoder.Bytes })).toEqual(
+    valueEncoded,
+);
+```
+
+### Transaction
+
+A transaction in Valkey Glide allows you to execute a group of commands in a single, atomic step. This ensures that all commands in the transaction are executed sequentially and without interruption. See [Valkey Transactions](https://valkey.io/topics/transactions).
+
+This is equivalent to the Valkey commands [MULTI](https://valkey.io/commands/multi/) / [EXEC](https://valkey.io/commands/exec/).
+
+#### Modes of Operation
+
+There are two primary modes for handling transactions in Glide:
+
+1. **Standalone Mode:** Use the `Transaction` class.
+2. **Cluster Mode:** Use the `ClusterTransaction` class.
+
+#### Reusing Transaction Objects
+
+Transaction objects can be reused. If you need to execute a particular group of commands multiple times, you can simply resend the same transaction object.
+
+#### Example Usage
+
+Here's a simple example demonstrating how to create and execute a transaction in standalone mode:
+
+```typescript
+// Initialize a transaction object
+const transaction = new Transaction();
+
+// Add commands to the transaction
+transaction.set("key", "value");
+transaction.select(1); // Standalone command
+transaction.get("key");
+
+// Execute the transaction
+const results = await client.exec(transaction);
+expect(results).toEqual(["OK", "OK", "value"]);
+```
+
+#### Decoder
+
+Transactions use the same decoder for all commands in the transaction. For example, if a user runs `client.exec(transaction, { decoder: Decoder.Bytes })`, then all the command responses in the transaction will be encoded into `Buffer`s. There is an [issue](https://github.com/valkey-io/valkey-glide/issues/2147) to track the support of adding option to set a decoder per each command in transaction.
+
+Here's an example demonstrating how to use `Decoder` and [`route`](https://github.com/valkey-io/valkey-glide/blob/main/node/src/GlideClusterClient.ts#L202) with transaction:
+
+```typescript
+let transaction = new ClusterTransaction().functionDump();
+const result = await client.exec(transaction, {
+    decoder: Decoder.Bytes,
+    route: route,
+});
+const data = result?.[0] as Buffer;
+```
+
+#### Command Chaining
+
+Valkey Glide supports command chaining within a transaction, allowing for a more concise and readable code. Here's how you can use chaining in transactions:
+
+```typescript
+// Initialize a cluster transaction object
+const transaction = new ClusterTransaction();
+
+// Chain commands
+transaction.set(key, value)
+    .get(key)
+    .get(key, Decoder.Bytes);
+
+// Execute the transaction
+const results = await client.exec(transaction. { decoder: Decoder.Bytes });
+
+expect(results).toEqual(["OK", value, Buffer.from(value)]);
+```
+
+**Cluster Mode Considerations:** When using `ClusterTransaction`, all keys in the transaction must be mapped to the same slot.
+
+#### Detailed Steps:
+
+**Create a Transaction Object:** Initialize either a `Transaction` or a `ClusterTransaction` object.
+
+For a client with cluster-mode disabled:
+
+```typescript
+const transaction = new Transaction(); // For standalone mode
+```
+
+For a client with cluster-mode enabled:
+
+```typescript
+const transaction = new ClusterTransaction(); // For cluster mode
+```
+
+**Adding Commands:** Use the transaction object to queue up the desired commands.
+
+```typescript
+transaction.set("key", "value");
+transaction.get("key");
+```
+
+**Executing the Transaction:** Use the `exec` method of the Valkey Glide client to execute the transaction.
+
+```typescript
+client.exec(transaction);
+```
+
+**Handling Results:** The result of the transaction execution will be a list of responses corresponding to each command in the transaction.
+
+```typescript
+const results = await client.exec(transaction);
+expect(results).toEqual(["OK", "OK", "value"]);
+```
+
+
 ## Advanced Configuration Settings
 
 ### Authentication
