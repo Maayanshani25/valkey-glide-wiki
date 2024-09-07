@@ -6,11 +6,11 @@ Config get                  | Done        | Done        | Done        | Not star
 Config set                  | Done        | Done        | Done        | Not started | Not started | Not started 
 Config rewrite              | Done        | Done        | Done        | Not started | Not started | Not started 
 Config resetstat            | Done        | Done        | Done        | Not started | Not started | Not started 
-incrby                      | Done        | Done        | Done        | Not started | Not started | Not started 
-incr                        | Done        | Done        | Done        | Not started | Not started | Not started 
-incrbyfloat                 | Done        | Done        | Done        | Not started | Not started | Not started 
-decr                        | Done        | Done        | Done        | Not started | Not started | Not started
-decrby                      | Done        | Done        | Done        | Not started | Not started | Not started
+incrby                      | Done        | Done        | Done        | Not started | Done        | Not started 
+incr                        | Done        | Done        | Done        | Not started | Done        | Not started 
+incrbyfloat                 | Done        | Done        | Done        | Not started | Done        | Not started 
+decr                        | Done        | Done        | Done        | Not started | Done        | Not started
+decrby                      | Done        | Done        | Done        | Not started | Done        | Not started
 del                         | Done        | Done        | Done        | Not started | Not started | Not started
 select                      | Done        | Done        | Done        | Not started | Not started | Not started
 client ID                   | Done        | Done        | Done        | Not started | Not started | Not started
@@ -18,10 +18,10 @@ multi                       | Done        | Done        | Done        | Not star
 exec                        | Done        | Done        | Done        | Not started | Not started | Not started
 CLIENT GETNAME              | Done        | Done        | Done        | Not started | Not started | Not started
 auth                        | Done, API not required | Done, API not required | Done, API not required | Not started | Not started  | Not started
-set                         | Done        | Done        | Done        | Not started | Not started | Not started
+set                         | Done        | Done        | Done        | Not started | Done        | Not started
 mset                        | Done        | Done        | Done        | Not started | Not started | Not started
 mget                        | Done        | Done        | Done        | Not started | Not started | Not started
-get                         | Done        | Done        | Done        | Not started | Not started | Not started
+get                         | Done        | Done        | Done        | Not started | Done        | Not started
 hset                        | Done        | Done        | Done        | Not started | Not started | Not started
 sadd                        | Done        | Done        | Done        | Not started | Not started | Not started
 srem                        | Done        | Done        | Done        | Not started | Not started | Not started
@@ -235,6 +235,6 @@ blmpop                      | Done        | Done        | Done        | Not star
 brpoplpush                  | deprecated  | deprecated  | deprecated  | deprecated  | deprecated  | deprecated 
 lmove                       | Done        | Done        | Done        | Not started | Not started | Not started
 sintercard                  | Done        | Done        | Done        | Not started | Not started | Not started
-getdel                      | Done        | Done        | Done        | Not started | Not started | Not started
+getdel                      | Done        | Done        | Done        | Not started | Done        | Not started
 getex                       | Done        | Done        | Done        | Not started | Not started | Not started
 quit                        | Done, API not required | Done, API not required | Done, API not required | Done, API not required | Done, API not required | Done, API not required
