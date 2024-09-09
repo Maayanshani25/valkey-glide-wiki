@@ -31,8 +31,8 @@ del                  | Done        | Yury Fridlyand   | No                      
 discard              | Won't Do    |                  |                               | not in the API
 dump                 | Done        |                  | Yes                           | No changes needed
 echo                 | Done        | Yury Fridlyand   | Yes                           | [#2160](https://github.com/valkey-io/valkey-glide/pull/2160)
-eval                 | Not started |                  |                               |
-evalsha              | Not started |                  |                               |
+eval                 | Done        | Adar Ovadi       |                               |
+evalsha              | Done        | Adar Ovadi       |                               |
 exec                 | Done        | Adar Ovadi       | Yes                           | [#2052](https://github.com/valkey-io/valkey-glide/pull/2052)
 exists               | Done        | Yury Fridlyand   | No                            | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
 expire               | Done        | Yury Fridlyand   | No                            | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
