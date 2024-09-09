@@ -98,7 +98,7 @@ lpop                 | Done        | Lior Sventitzky  | Yes                    
 lpopCount            | Done        | Lior Sventitzky  | Yes                           | [#2151](https://github.com/valkey-io/valkey-glide/pull/2151)
 lpos                 | Done        | Prateek K        |                               |
 lpush                | Done        | Lior Sventitzky  | No                            | [#2151](https://github.com/valkey-io/valkey-glide/pull/2151)
-lpushx               | In Progress | Prateek K        | No                            |
+lpushx               | Done        | Prateek K        | No                            | [#2195](https://github.com/valkey-io/valkey-glide/pull/2195)
 lrange               | Done        | Lior Sventitzky  | Yes                           | [#2151](https://github.com/valkey-io/valkey-glide/pull/2151)
 lrem                 | Done        | Prateek K        | No                            | [#2195](https://github.com/valkey-io/valkey-glide/pull/2195)
 lset                 | Done        | Prateek K        | No                            | [#2195](https://github.com/valkey-io/valkey-glide/pull/2195)
