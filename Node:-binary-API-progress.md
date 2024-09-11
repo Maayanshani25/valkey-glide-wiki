@@ -124,7 +124,7 @@ psetex               | Won't Do    |                  |                       
 psubscribe           | Done        | Yi-Pin Chen      |                               |
 pttl                 | Done        | Yury Fridlyand   | No                            | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
 publish              | Done        | Yi-Pin Chen      |                               | [#2201](https://github.com/valkey-io/valkey-glide/pull/2201)
-pubsub               | WIP (part1) | Yi-Pin Chen      |                               | [#2201](https://github.com/valkey-io/valkey-glide/pull/2201)
+pubsub               | Done        | Yi-Pin Chen      |                               | [#2201](https://github.com/valkey-io/valkey-glide/pull/2201)
 pubsub numsub        | Done        | Yi-Pin Chen      |                               | [#2207](https://github.com/valkey-io/valkey-glide/pull/2207)
 pubsub shardnumsub   | Done        | Yi-Pin Chen      |                               | [#2207](https://github.com/valkey-io/valkey-glide/pull/2207)
 punsubscribe         | Done        | Yi-Pin Chen      |                               |
@@ -169,13 +169,13 @@ srandmember          | Done        | Lior Sventitzky  | Yes                     
 srandmemberCount     | Done        | Lior Sventitzky  | Yes                           | [#2197](https://github.com/valkey-io/valkey-glide/pull/2197)
 srem                 | Done        | Lior Sventitzky  | No                            | [#2181](https://github.com/valkey-io/valkey-glide/pull/2181)
 sscan                | Done        | Lior Sventitzky  |                               | [#2199](https://github.com/valkey-io/valkey-glide/pull/2199)
-ssubscribe           | Done        | Yi-Pin           |                               | 
+ssubscribe           | Done        | Yi-Pin Chen      |                               | 
 strlen               | Done        | Lior Sventitzky  | No                            | [#2199](https://github.com/valkey-io/valkey-glide/pull/2199)
-subscribe            | Done        |                  |                               | 
+subscribe            | Done        | Yi-Pin Chen      |                               | 
 substr               | Won't Do    |                  |                               | deprecated
 sunion               | Done        | Lior Sventitzky  | Yes                           | [#2199](https://github.com/valkey-io/valkey-glide/pull/2199)
 sunionstore          | Done        | Lior Sventitzky  | No                            | [#2199](https://github.com/valkey-io/valkey-glide/pull/2199)
-sunsubscribe         | Done        |                  |                               | 
+sunsubscribe         | Done        | Yi-Pin Chen      |                               | 
 time                 | Done        | Yury Fridlyand   | No                            | [#2179](https://github.com/valkey-io/valkey-glide/pull/2179)
 touch                | Done        | Yury Fridlyand   | No                            | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
 ttl                  | Done        | Yury Fridlyand   | No                            | [#2158](https://github.com/valkey-io/valkey-glide/pull/2158)
