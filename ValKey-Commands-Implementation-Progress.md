@@ -58,9 +58,9 @@
 | eval                     | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | evalsha                  | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | script API (load + eval) | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
-| script exists            | Done                   | Not started            | In Progress            | Not started            | Not started            | Not started            |
-| script flush             | Done                   | Not started            | In Progress            | Not started            | Not started            | Not started            |
-| script kill              | Done           | Not started            | In Progress            | Not started            | Not started            | Not started            |
+| script exists            | Done                   | Done                   | In Progress            | Not started            | Not started            | Not started            |
+| script flush             | Done                   | Done                   | In Progress            | Not started            | Not started            | Not started            |
+| script kill              | Done                   | Done                   | In Progress            | Not started            | Not started            | Not started            |
 | scan                     | Done                   | Not started            | Done                   | Not started            | Not started            | Not started            |
 | zrangebyscore            | deprecated             | deprecated             | deprecated             | deprecated             | deprecated             | deprecated             |
 | zremrangebyscore         | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
