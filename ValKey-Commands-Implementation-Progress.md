@@ -19,8 +19,8 @@
 | CLIENT GETNAME           | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | auth                     | Done, API not required | Done, API not required | Done, API not required | Not started            | Not started            | Not started            |
 | set                      | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
-| mset                     | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
-| mget                     | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
+| mset                     | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
+| mget                     | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
 | get                      | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
 | hset                     | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
 | sadd                     | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
@@ -98,12 +98,12 @@
 | readwrite                | Done, API not required | Done, API not required | Done, API not required | Not started            | Not started            | Not started            |
 | zcount                   | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | time                     | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
-| append                   | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
+| append                   | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
 | rename                   | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | lindex                   | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | punsubscribe             | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | persist                  | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
-| strlen                   | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
+| strlen                   | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
 | zincrby                  | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | xgroup create            | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | xgroup createconsumer    | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
@@ -144,7 +144,7 @@
 | lset                     | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | xclaim                   | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | bitfield                 | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
-| getrange                 | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
+| getrange                 | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
 | randomkey                | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | srandmember              | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | dump                     | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
@@ -167,9 +167,9 @@
 | geoadd                   | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | zrangebylex              | deprecated             | deprecated             | deprecated             | deprecated             | deprecated             | deprecated             |
 | getbit                   | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
-| msetnx                   | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
+| msetnx                   | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
 | sdiff                    | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
-| setrange                 | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
+| setrange                 | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
 | sinterstore              | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | zpopmax                  | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | georadius_ro             | Deprecated             | Deprecated             | Deprecated             | Deprecated             | Deprecated             | Deprecated             |
