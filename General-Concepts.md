@@ -17,7 +17,7 @@ However, in some scenarios, opening multiple connections can be more beneficial.
 - **Reading and Writing Large Values**: Valkey has a fairness mechanism to ensure minimal impact on other clients when handling large values. With a multiplex connection, requests are processed sequentially. Thus, large requests can delay the processing of subsequent smaller requests. When dealing with large values or transactions, it is advisable to use a separate client to prevent delays for other requests.
 
 
-## GLIDE PubSub Support
+## PubSub Support
 
 The design of the PubSub support in GLIDE aims to unify various nuances into a coherent interface, minimizing differences between Sharded, Cluster, and Standalone configurations.
 
