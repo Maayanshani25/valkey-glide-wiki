@@ -61,7 +61,7 @@
 | script exists            | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | script flush             | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | script kill              | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
-| scan                     | Done                   | Not started            | Done                   | Not started            | Not started            | Not started            |
+| scan                     | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | zrangebyscore            | deprecated             | deprecated             | deprecated             | deprecated             | deprecated             | deprecated             |
 | zremrangebyscore         | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | setnx                    | deprecated             | deprecated             | deprecated             | deprecated             | deprecated             | deprecated             |
