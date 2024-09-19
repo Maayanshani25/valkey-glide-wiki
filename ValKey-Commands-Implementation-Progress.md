@@ -236,5 +236,5 @@
 | lmove                    | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | sintercard               | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | getdel                   | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
-| getex                    | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
+| getex                    | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
 | quit                     | Done, API not required | Done, API not required | Done, API not required | Done, API not required | Done, API not required | Done, API not required |
