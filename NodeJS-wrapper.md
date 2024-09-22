@@ -42,13 +42,13 @@ To learn more about response aggregation for specific commands, please refer to 
 
 #### Topology Updates
 
-The cluster's topology can change over time. New nodes can be added or removed, and the primary node owning a specific slot may change. GLIDE for Redis is designed to automatically rediscover the topology whenever Redis indicates a change in slot ownership. This ensures that the GLIDE for Redis client stays in sync with the cluster's topology.
+The cluster's topology can change over time. New nodes can be added or removed, and the primary node owning a specific slot may change. Valkey GLIDE is designed to automatically rediscover the topology whenever the server indicates a change in slot ownership. This ensures that the Valkey GLIDE client stays in sync with the cluster's topology.
 
 ### Standalone 
 
 Valkey GLIDE also supports Standalone deployments, where the database is hosted on a single primary node, optionally with replica nodes. To initialize a `GlideClient` for a standalone setup, you should create a `GlideClientConfiguration` that includes the addresses of primary and all replica nodes.
 
-#### **Example - Connecting to a standalone Redis** 
+#### **Example - Connecting to a standalone** 
 
 ```typescript
 const addresses = [
