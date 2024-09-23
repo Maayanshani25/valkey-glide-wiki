@@ -310,7 +310,7 @@ const client = await GlideClusterClient.createClient({
     useTLS: true
 });
 ```
-#### Example - Connecting with TLS Mode Enabled to a Redis Standalone
+#### Example - Connecting with TLS Mode Enabled to a Standalone
 
 ```typescript
 const addresses = [
@@ -363,7 +363,7 @@ Valkey GLIDE allows you to configure timeout settings and reconnect strategies. 
 
 |Configuration setting	|Description	|**Default value**	|
 |---	|---	|---	|
-|requestTimeout	|This specified time duration, measured in milliseconds, represents the period during which the client will await the completion of a request. This time frame includes the process of sending the request, waiting for a response from the Redis node(s), and any necessary reconnection or retry attempts. If a pending request exceeds the specified timeout, it will trigger a timeout error. If no timeout value is explicitly set, a default value will be employed.	|250 milliseconds	|
+|requestTimeout	|This specified time duration, measured in milliseconds, represents the period during which the client will await the completion of a request. This time frame includes the process of sending the request, waiting for a response from the node(s), and any necessary reconnection or retry attempts. If a pending request exceeds the specified timeout, it will trigger a timeout error. If no timeout value is explicitly set, a default value will be employed.	|250 milliseconds	|
 |connectionBackoff	|The reconnection strategy defines how and when reconnection attempts are made in the event of connection failures	|Exponential backoff	|
 
 
