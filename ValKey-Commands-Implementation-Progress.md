@@ -42,8 +42,8 @@
 | pexpireat                | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | pexpire                  | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | expireat                 | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
-| lpush                    | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
-| lpop                     | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
+| lpush                    | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
+| lpop                     | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
 | rpush                    | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | rpop                     | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | rpoplpush                | deprecated             | deprecated             | deprecated             | deprecated             | deprecated             | deprecated             |
@@ -184,7 +184,7 @@
 | lpushx                   | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | copy                     | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | hrandfield               | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
-| lpos                     | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
+| lpos                     | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
 | geopos                   | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | xautoclaim               | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | zmscore                  | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
