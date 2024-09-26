@@ -22,7 +22,7 @@
 | mset                     | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
 | mget                     | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
 | get                      | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
-| hset                     | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
+| hset                     | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
 | sadd                     | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | srem                     | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | smembers                 | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
@@ -31,11 +31,11 @@
 | exists                   | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | command                  | N/A                    | N/A                    | N/A                    | N/A                    | N/A                    | N/A                    |
 | readonly                 | N/A                    | N/A                    | N/A                    | N/A                    | N/A                    | N/A                    |
-| hget                     | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
-| hgetall                  | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
-| hdel                     | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
-| hmget                    | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
-| hexists                  | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
+| hget                     | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
+| hgetall                  | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
+| hdel                     | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
+| hmget                    | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
+| hexists                  | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
 | hincrby                  | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | hincrbyfloat             | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | expire                   | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
@@ -82,8 +82,8 @@
 | sscan                    | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | flushdb                  | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | xadd                     | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
-| hlen                     | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
-| hsetnx                   | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
+| hlen                     | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
+| hsetnx                   | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
 | zrevrangebyscore         | deprecated             | deprecated             | deprecated             | deprecated             | deprecated             | deprecated             |
 | watch                    | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | sismember                | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
@@ -93,7 +93,7 @@
 | zrevrange                | deprecated             | deprecated             | deprecated             | deprecated             | deprecated             | deprecated             |
 | hscan                    | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | unwatch                  | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
-| hkeys                    | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
+| hkeys                    | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
 | xread                    | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | readwrite                | Done, API not required | Done, API not required | Done, API not required | Not started            | Not started            | Not started            |
 | zcount                   | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
@@ -121,7 +121,7 @@
 | wait                     | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | spop                     | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | restore                  | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
-| hvals                    | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
+| hvals                    | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
 | sinter                   | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | xtrim                    | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | zrank                    | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
@@ -229,7 +229,7 @@
 | lolwut                   | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | expiretime               | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | pexpiretime              | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
-| hstrlen                  | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
+| hstrlen                  | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
 | blmove                   | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | blmpop                   | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | brpoplpush               | deprecated             | deprecated             | deprecated             | deprecated             | deprecated             | deprecated             |
