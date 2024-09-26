@@ -44,7 +44,7 @@
 | expireat                 | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | lpush                    | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
 | lpop                     | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
-| rpush                    | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
+| rpush                    | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
 | rpop                     | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | rpoplpush                | deprecated             | deprecated             | deprecated             | deprecated             | deprecated             | deprecated             |
 | llen                     | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
