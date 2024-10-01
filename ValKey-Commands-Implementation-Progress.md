@@ -155,7 +155,7 @@
 | smove                    | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | xrange                   | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | xdel                     | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
-| linsert                  | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
+| linsert                  | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
 | xlen                     | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | xpending                 | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | discard                  | API not required       | API not required       | API not required       | Not started            | Not started            | Not started            |
