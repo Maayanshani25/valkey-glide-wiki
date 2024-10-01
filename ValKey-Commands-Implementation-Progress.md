@@ -17,7 +17,7 @@
 | multi                    | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | exec                     | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | CLIENT GETNAME           | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
-| auth                     | Done, API not required | Done, API not required | Done, API not required | Not started            | Not started            | Not started            |
+| auth                     | Done, API not required | Done, API not required | Done, API not required | Not started            | Done, API not required            | Not started            |
 | set                      | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
 | mset                     | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
 | mget                     | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
@@ -95,7 +95,7 @@
 | unwatch                  | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | hkeys                    | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
 | xread                    | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
-| readwrite                | Done, API not required | Done, API not required | Done, API not required | Not started            | Not started            | Not started            |
+| readwrite                | Done, API not required | Done, API not required | Done, API not required | Not started            | Done, API not required            | Not started            |
 | zcount                   | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | time                     | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | append                   | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
@@ -158,7 +158,7 @@
 | linsert                  | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
 | xlen                     | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | xpending                 | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
-| discard                  | API not required       | API not required       | API not required       | Not started            | Not started            | Not started            |
+| discard                  | API not required       | API not required       | API not required       | API not required            | API not required            | Not started            |
 | sunionstore              | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | xrevrange                | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | bzpopmin                 | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
@@ -180,7 +180,7 @@
 | touch                    | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | smismember               | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | zremrangebylex           | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
-| zrevrangebylex           | deprecated             | deprecated             | deprecated             | Not started            | Not started            | Not started            |
+| zrevrangebylex           | deprecated             | deprecated             | deprecated             | deprecated            | deprecated            | Not started            |
 | lpushx                   | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | copy                     | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | hrandfield               | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
@@ -201,7 +201,7 @@
 | function stats           | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | zlexcount                | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | zrandmember              | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
-| replicaof                | Done, API not required | Done, API not required | Done, API not required | Not started            | Not started            | Not started            |
+| replicaof                | Done, API not required | Done, API not required | Done, API not required | Done, API not required            | Not started            | Done, API not required            |
 | bitfield_ro              | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | fcall                    | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | zdiffstore               | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
