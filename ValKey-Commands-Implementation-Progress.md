@@ -263,8 +263,8 @@
 | FT.CREATE                | Not started            | Not started            | In Progress            | Not started            | Not started            | Not started            |
 | FT.SEARCH                | Not started            | Not started            | In Progress            | Not started            | Not started            | Not started            |
 | FT.AGGREGATE             | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
-| FT.DROPINDEX             | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
-| FT.INFO                  | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
+| FT.DROPINDEX             | Not started            | Not started            | In Progress            | Not started            | Not started            | Not started            |
+| FT.INFO                  | Not started            | Not started            | In Progress            | Not started            | Not started            | Not started            |
 | FT._LIST                 | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
 | FT.ALIASADD              | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
 | FT.ALIASDEL              | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
