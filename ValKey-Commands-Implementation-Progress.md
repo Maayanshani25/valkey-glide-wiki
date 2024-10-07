@@ -241,7 +241,7 @@
 | JSON.ARRAPPEND           | In Progress            | Not started            | Not started            | Not started            | Not started            | Not started            |
 | JSON.ARRINDEX            | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
 | JSON.ARRINSERT           | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
-| JSON.ARRLEN              | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
+| JSON.ARRLEN              | In Progress            | Not started            | Not started            | Not started            | Not started            | Not started            |
 | JSON.ARRPOP              | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
 | JSON.ARRTRIM             | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
 | JSON.CLEAR               | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
