@@ -238,7 +238,7 @@
 | getdel                   | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
 | getex                    | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
 | quit                     | Done, API not required | Done, API not required | Done, API not required | Done, API not required | Done, API not required | Done, API not required |
-| JSON.ARRAPPEND           | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
+| JSON.ARRAPPEND           | In Progress            | Not started            | Not started            | Not started            | Not started            | Not started            |
 | JSON.ARRINDEX            | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
 | JSON.ARRINSERT           | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
 | JSON.ARRLEN              | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
@@ -252,14 +252,14 @@
 | JSON.MGET                | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
 | JSON.NUMINCRBY           | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
 | JSON.NUMMULTBY           | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
-| JSON.OBJLEN              | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
-| JSON.OBJKEYS             | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
+| JSON.OBJLEN              | In Progress            | Not started            | Not started            | Not started            | Not started            | Not started            |
+| JSON.OBJKEYS             | In Progress           | Not started            | Not started            | Not started            | Not started            | Not started            |
 | JSON.RESP                | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
 | JSON.SET                 | Done                   | Not started            | Not started            | Not started            | Not started            | Not started            |
-| JSON.STRAPPEND           | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
-| JSON.STRLEN              | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
+| JSON.STRAPPEND           | In Progress            | Not started            | Not started            | Not started            | Not started            | Not started            |
+| JSON.STRLEN              | In Progress            | Not started            | Not started            | Not started            | Not started            | Not started            |
 | JSON.TOGGLE              | Done                   | Not started            | Not started            | Not started            | Not started            | Not started            |
-| JSON.TYPE                | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
+| JSON.TYPE                | In Progress            | Not started            | Not started            | Not started            | Not started            | Not started            |
 | FT.CREATE                | Not started            | Not started            | In Progress            | Not started            | Not started            | Not started            |
 | FT.SEARCH                | Not started            | Not started            | In Progress            | Not started            | Not started            | Not started            |
 | FT.AGGREGATE             | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
