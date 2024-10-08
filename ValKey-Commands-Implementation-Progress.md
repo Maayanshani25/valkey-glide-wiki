@@ -276,8 +276,8 @@
 | FT.DROPINDEX             | Not started            | Not started            | In Progress            | Not started            | Not started            | Not started            |
 | FT.INFO                  | Not started            | Not started            | In Progress            | Not started            | Not started            | Not started            |
 | FT._LIST                 | Won't Do               | Won't Do               | Won't Do               | Won't Do               | Won't Do               | Won't Do               |
-| FT.ALIASADD              | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
-| FT.ALIASDEL              | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
+| FT.ALIASADD              | Not started            | Not started            | In progress           | Not started            | Not started            | Not started            |
+| FT.ALIASDEL              | Not started            | Not started            | In progress          | Not started            | Not started            | Not started            |
 | FT.ALIASUPDATE           | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
 | FT._ALIASLIST            | Won't Do               | Won't Do               | Won't Do               | Won't Do               | Won't Do               | Won't Do               |
 | FT.PROFILE               | Not started            | Not started            | Not started          | Not started            | Not started            | Not started            |
