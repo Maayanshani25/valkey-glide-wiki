@@ -280,6 +280,6 @@
 | FT.ALIASDEL              | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
 | FT.ALIASUPDATE           | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
 | FT._ALIASLIST            | Won't Do               | Won't Do               | Won't Do               | Won't Do               | Won't Do               | Won't Do               |
-| FT.PROFILE               | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
+| FT.PROFILE               | Not started            | Not started            | In progress           | Not started            | Not started            | Not started            |
 | FT.EXPLAIN               | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
 | FT.EXPLAINCLI            | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
