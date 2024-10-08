@@ -253,14 +253,14 @@
 | JSON.DEBUG               | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
 | JSON.DEL                 | Done                   | Not started            | Not started            | Not started            | Not started            | Not started            |
 | JSON.FORGET              | Done                   | Not started            | Not started            | Not started            | Not started            | Not started            |
-| JSON.GET                 | Done                   | Not started            | Not started            | Not started            | Not started            | Not started            |
+| JSON.GET                 | Done                   | Not started            | In Progress            | Not started            | Not started            | Not started            |
 | JSON.MGET                | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
 | JSON.NUMINCRBY           | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
 | JSON.NUMMULTBY           | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
 | JSON.OBJLEN              | In Progress            | Not started            | Not started            | Not started            | Not started            | Not started            |
 | JSON.OBJKEYS             | In Progress           | Not started            | Not started            | Not started            | Not started            | Not started            |
 | JSON.RESP                | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
-| JSON.SET                 | Done                   | Not started            | Not started            | Not started            | Not started            | Not started            |
+| JSON.SET                 | Done                   | Not started            | In Progress            | Not started            | Not started            | Not started            |
 | JSON.STRAPPEND           | In Progress            | Not started            | Not started            | Not started            | Not started            | Not started            |
 | JSON.STRLEN              | In Progress            | Not started            | Not started            | Not started            | Not started            | Not started            |
 | JSON.TOGGLE              | Done                   | Not started            | Not started            | Not started            | Not started            | Not started            |
