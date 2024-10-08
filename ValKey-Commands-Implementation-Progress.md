@@ -238,6 +238,11 @@
 | getdel                   | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
 | getex                    | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
 | quit                     | Done, API not required | Done, API not required | Done, API not required | Done, API not required | Done, API not required | Done, API not required |
+
+### JSON Module
+
+| cmd type                 | Python                 | Node                   | Java                   | .NET                   | Go                     | PHP                    |
+| ------------------------ | ---------------------- | ---------------------- | ---------------------- | ---------------------- | ---------------------- | ---------------------- |
 | JSON.ARRAPPEND           | In Progress            | Not started            | Not started            | Not started            | Not started            | Not started            |
 | JSON.ARRINDEX            | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
 | JSON.ARRINSERT           | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
@@ -260,6 +265,11 @@
 | JSON.STRLEN              | In Progress            | Not started            | Not started            | Not started            | Not started            | Not started            |
 | JSON.TOGGLE              | Done                   | Not started            | Not started            | Not started            | Not started            | Not started            |
 | JSON.TYPE                | In Progress            | Not started            | Not started            | Not started            | Not started            | Not started            |
+
+### Vector Search Module
+
+| cmd type                 | Python                 | Node                   | Java                   | .NET                   | Go                     | PHP                    |
+| ------------------------ | ---------------------- | ---------------------- | ---------------------- | ---------------------- | ---------------------- | ---------------------- |
 | FT.CREATE                | Not started            | Not started            | In Progress            | Not started            | Not started            | Not started            |
 | FT.SEARCH                | Not started            | Not started            | In Progress            | Not started            | Not started            | Not started            |
 | FT.AGGREGATE             | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
