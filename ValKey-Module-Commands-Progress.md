@@ -37,7 +37,7 @@ Supported versions: N/A
 | FT.AGGREGATE             | Not started | Not Started | Not started | Not started | Not started | Not started |
 | FT.DROPINDEX             | Not started | Not Started | Not started | Not started | Not started | Not started |
 | FT.INFO                  | Not started | Not Started | Not started | Not started | Not started | Not started |
-| FT._LIST                 | Won't Do    | Won't Do    | Won't Do    | Won't Do    | Won't Do    | Won't Do    |
+| FT._LIST                 | Started   | Won't Do    | Won't Do    | Won't Do    | Won't Do    | Won't Do    |
 | FT.ALIASADD              | Not started | Not Started | Not started | Not started | Not started | Not started |
 | FT.ALIASDEL              | Not started | Not Started | Not started | Not started | Not started | Not started |
 | FT.ALIASUPDATE           | Not started | Not Started | Not started | Not started | Not started | Not started |
