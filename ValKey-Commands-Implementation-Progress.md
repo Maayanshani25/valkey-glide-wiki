@@ -75,7 +75,7 @@
 | zcard                    | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | type                     | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | echo                     | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
-| brpop                    | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
+| brpop                    | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
 | zremrangebyrank          | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | psetex                   | deprecated             | deprecated             | deprecated             | deprecated             | deprecated             | deprecated             |
 | flushall                 | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
@@ -111,7 +111,7 @@
 | xgroup destroy           | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | xgroup setid             | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | getset                   | Deprecated             | Deprecated             | Deprecated             | Deprecated             | Deprecated             | Deprecated             |
-| blpop                    | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
+| blpop                    | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
 | zscan                    | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | xreadgroup               | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | pfadd                    | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
@@ -141,7 +141,7 @@
 | pubsub shardnumsub       | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | sunion                   | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | zunionstore              | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
-| lset                     | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
+| lset                     | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
 | xclaim                   | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | bitfield                 | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | getrange                 | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
@@ -162,7 +162,7 @@
 | sunionstore              | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | xrevrange                | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | bzpopmin                 | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
-| rpushx                   | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
+| rpushx                   | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
 | sort                     | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | geoadd                   | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | zrangebylex              | deprecated             | deprecated             | deprecated             | deprecated             | deprecated             | deprecated             |
@@ -181,7 +181,7 @@
 | smismember               | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | zremrangebylex           | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | zrevrangebylex           | deprecated             | deprecated             | deprecated             | deprecated            | deprecated            | Not started            |
-| lpushx                   | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
+| lpushx                   | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
 | copy                     | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | hrandfield               | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | lpos                     | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
@@ -220,7 +220,7 @@
 | zunion                   | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | sort_ro                  | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | fcall_ro                 | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
-| lmpop                    | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
+| lmpop                    | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
 | geosearchstore           | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | zintercard               | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | zmpop                    | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
@@ -230,10 +230,10 @@
 | expiretime               | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | pexpiretime              | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | hstrlen                  | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
-| blmove                   | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
-| blmpop                   | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
+| blmove                   | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
+| blmpop                   | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
 | brpoplpush               | deprecated             | deprecated             | deprecated             | deprecated             | deprecated             | deprecated             |
-| lmove                    | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
+| lmove                    | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
 | sintercard               | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | getdel                   | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
 | getex                    | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
