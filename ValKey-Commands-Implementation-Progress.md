@@ -201,7 +201,7 @@
 | function stats           | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | zlexcount                | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | zrandmember              | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
-| replicaof                | Done, API not required | Done, API not required | Done, API not required | Done, API not required            | Not started            | Done, API not required            |
+| replicaof                | Done, API not required | Done, API not required | Done, API not required | Done, API not required            | Done, API not required            | Done, API not required            |
 | bitfield_ro              | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | fcall                    | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | zdiffstore               | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
