@@ -264,7 +264,7 @@
 | JSON.STRAPPEND           | In Progress            | Not started            | Not started            | Not started            | Not started            | Not started            |
 | JSON.STRLEN              | In Progress            | Not started            | Not started            | Not started            | Not started            | Not started            |
 | JSON.TOGGLE              | Done                   | Not started            | Not started            | Not started            | Not started            | Not started            |
-| JSON.TYPE                | In Progress            | Not started            | Not started            | Not started            | Not started            | Not started            |
+| JSON.TYPE                | Done                   | Not started            | Not started            | Not started            | Not started            | Not started            |
 
 ### Vector Search Module
 
