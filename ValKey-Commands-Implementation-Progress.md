@@ -45,12 +45,12 @@
 | lpush                    | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
 | lpop                     | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
 | rpush                    | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
-| rpop                     | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
+| rpop                     | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
 | rpoplpush                | deprecated             | deprecated             | deprecated             | deprecated             | deprecated             | deprecated             |
-| llen                     | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
-| lrem                     | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
-| ltrim                    | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
-| lrange                   | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
+| llen                     | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
+| lrem                     | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
+| ltrim                    | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
+| lrange                   | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
 | unlink                   | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | ttl                      | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | publish                  | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
@@ -100,7 +100,7 @@
 | time                     | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | append                   | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
 | rename                   | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
-| lindex                   | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
+| lindex                   | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
 | punsubscribe             | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | persist                  | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | strlen                   | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
@@ -155,7 +155,7 @@
 | smove                    | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | xrange                   | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | xdel                     | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
-| linsert                  | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
+| linsert                  | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
 | xlen                     | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | xpending                 | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | discard                  | API not required       | API not required       | API not required       | API not required            | API not required            | Not started            |
