@@ -270,9 +270,9 @@
 
 | cmd type                 | Python                 | Node                   | Java                   | .NET                   | Go                     | PHP                    |
 | ------------------------ | ---------------------- | ---------------------- | ---------------------- | ---------------------- | ---------------------- | ---------------------- |
-| FT.CREATE                | In Progress            | Not started            | In Progress            | Not started            | Not started            | Not started            |
+| FT.CREATE                | In Progress            | Not started            | Done                   | Not started            | Not started            | Not started            |
 | FT.SEARCH                | In Progress            | Not started            | In Progress            | Not started            | Not started            | Not started            |
-| FT.AGGREGATE             | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
+| FT.AGGREGATE             | Not started            | Not started            | In Progress            | Not started            | Not started            | Not started            |
 | FT.DROPINDEX             | In Progress            | Not started            | In Progress            | Not started            | Not started            | Not started            |
 | FT.INFO                  | In Progress            | Not started            | In Progress            | Not started            | Not started            | Not started            |
 | FT._LIST                 | Won't Do               | Won't Do               | Won't Do               | Won't Do               | Won't Do               | Won't Do               |
