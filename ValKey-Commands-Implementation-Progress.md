@@ -11,7 +11,7 @@
 | incrbyfloat              | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
 | decr                     | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
 | decrby                   | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
-| del                      | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
+| del                      | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
 | select                   | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | client ID                | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | multi                    | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
