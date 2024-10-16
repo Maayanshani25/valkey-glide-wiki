@@ -256,7 +256,7 @@
 | JSON.GET       | Done        | In Progress | In Progress | Not started | Not started | Not started |
 | JSON.MGET      | Not started | Not started | Not started | Not started | Not started | Not started |
 | JSON.NUMINCRBY | Done        | Not started | Not started | Not started | Not started | Not started |
-| JSON.NUMMULTBY | In Progress | Not started | Not started | Not started | Not started | Not started |
+| JSON.NUMMULTBY | Done.       | Not started | Not started | Not started | Not started | Not started |
 | JSON.OBJLEN    | In Progress | Not started | Not started | Not started | Not started | Not started |
 | JSON.OBJKEYS   | In Progress | Not started | Not started | Not started | Not started | Not started |
 | JSON.RESP      | Not started | Not started | Not started | Not started | Not started | Not started |
