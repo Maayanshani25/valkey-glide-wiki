@@ -241,45 +241,45 @@
 
 ### JSON Module
 
-| cmd type                 | Python                 | Node                   | Java                   | .NET                   | Go                     | PHP                    |
-| ------------------------ | ---------------------- | ---------------------- | ---------------------- | ---------------------- | ---------------------- | ---------------------- |
-| JSON.ARRAPPEND           | In Progress            | Not started            | Not started            | Not started            | Not started            | Not started            |
-| JSON.ARRINDEX            | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
-| JSON.ARRINSERT           | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
-| JSON.ARRLEN              | In Progress            | Not started            | Not started            | Not started            | Not started            | Not started            |
-| JSON.ARRPOP              | In Progress            | Not started            | Not started            | Not started            | Not started            | Not started            |
-| JSON.ARRTRIM             | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
-| JSON.CLEAR               | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
-| JSON.DEBUG               | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
-| JSON.DEL                 | Done                   | Not started            | Not started            | Not started            | Not started            | Not started            |
-| JSON.FORGET              | Done                   | Not started            | Not started            | Not started            | Not started            | Not started            |
-| JSON.GET                 | Done                   | In Progress            | In Progress            | Not started            | Not started            | Not started            |
-| JSON.MGET                | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
-| JSON.NUMINCRBY           | Done                   | Not started            | Not started            | Not started            | Not started            | Not started            |
-| JSON.NUMMULTBY           | In Progress            | Not started            | Not started            | Not started            | Not started            | Not started            |
-| JSON.OBJLEN              | In Progress            | Not started            | Not started            | Not started            | Not started            | Not started            |
-| JSON.OBJKEYS             | In Progress            | Not started            | Not started            | Not started            | Not started            | Not started            |
-| JSON.RESP                | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
-| JSON.SET                 | Done                   | In Progress            | In Progress            | Not started            | Not started            | Not started            |
-| JSON.STRAPPEND           | In Progress            | Not started            | Not started            | Not started            | Not started            | Not started            |
-| JSON.STRLEN              | In Progress            | Not started            | Not started            | Not started            | Not started            | Not started            |
-| JSON.TOGGLE              | Done                   | Not started            | Not started            | Not started            | Not started            | Not started            |
-| JSON.TYPE                | Done                   | Not started            | Not started            | Not started            | Not started            | Not started            |
+| cmd type       | Python      | Node        | Java        | .NET        | Go          | PHP         |
+| -------------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+| JSON.ARRAPPEND | In Progress | Not started | Not started | Not started | Not started | Not started |
+| JSON.ARRINDEX  | Not started | Not started | Not started | Not started | Not started | Not started |
+| JSON.ARRINSERT | Not started | Not started | Not started | Not started | Not started | Not started |
+| JSON.ARRLEN    | In Progress | Not started | Not started | Not started | Not started | Not started |
+| JSON.ARRPOP    | In Progress | Not started | Not started | Not started | Not started | Not started |
+| JSON.ARRTRIM   | Not started | Not started | Not started | Not started | Not started | Not started |
+| JSON.CLEAR     | Not started | Not started | Not started | Not started | Not started | Not started |
+| JSON.DEBUG     | Not started | Not started | Not started | Not started | Not started | Not started |
+| JSON.DEL       | Done        | Not started | Not started | Not started | Not started | Not started |
+| JSON.FORGET    | Done        | Not started | Not started | Not started | Not started | Not started |
+| JSON.GET       | Done        | In Progress | In Progress | Not started | Not started | Not started |
+| JSON.MGET      | Not started | Not started | Not started | Not started | Not started | Not started |
+| JSON.NUMINCRBY | Done        | Not started | Not started | Not started | Not started | Not started |
+| JSON.NUMMULTBY | In Progress | Not started | Not started | Not started | Not started | Not started |
+| JSON.OBJLEN    | In Progress | Not started | Not started | Not started | Not started | Not started |
+| JSON.OBJKEYS   | In Progress | Not started | Not started | Not started | Not started | Not started |
+| JSON.RESP      | Not started | Not started | Not started | Not started | Not started | Not started |
+| JSON.SET       | Done        | In Progress | In Progress | Not started | Not started | Not started |
+| JSON.STRAPPEND | In Progress | Not started | Not started | Not started | Not started | Not started |
+| JSON.STRLEN    | In Progress | Not started | Not started | Not started | Not started | Not started |
+| JSON.TOGGLE    | Done        | Not started | Not started | Not started | Not started | Not started |
+| JSON.TYPE      | Done        | Not started | Not started | Not started | Not started | Not started |
 
 ### Vector Search Module
 
-| cmd type                 | Python                 | Node                   | Java                   | .NET                   | Go                     | PHP                    |
-| ------------------------ | ---------------------- | ---------------------- | ---------------------- | ---------------------- | ---------------------- | ---------------------- |
-| FT.CREATE                | Done                   | In Progress            | Done                   | Not started            | Not started            | Not started            |
-| FT.SEARCH                | In Progress            | Not started            | In Progress            | Not started            | Not started            | Not started            |
-| FT.AGGREGATE             | Not started            | Not started            | In Progress            | Not started            | Not started            | Not started            |
-| FT.DROPINDEX             | Done                   | In Progress            | In Progress            | Not started            | Not started            | Not started            |
-| FT.INFO                  | In Progress            | Not started            | In Progress            | Not started            | Not started            | Not started            |
-| FT._LIST                 | Won't Do               | Won't Do               | Won't Do               | Won't Do               | Won't Do               | Won't Do               |
-| FT.ALIASADD              | Not started            | Not started            | In progress            | Not started            | Not started            | Not started            |
-| FT.ALIASDEL              | Not started            | Not started            | In progress            | Not started            | Not started            | Not started            |
-| FT.ALIASUPDATE           | Not started            | Not started            | In progress           | Not started            | Not started            | Not started            |
-| FT._ALIASLIST            | Won't Do               | Won't Do               | Won't Do               | Won't Do               | Won't Do               | Won't Do               |
-| FT.PROFILE               | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
-| FT.EXPLAIN               | Not started            | Not started            | In progress            | Not started            | Not started            | Not started            |
-| FT.EXPLAINCLI            | Not started            | Not started            | Not started            | Not started            | Not started            | Not started            |
+| cmd type       | Python      | Node        | Java        | .NET        | Go          | PHP         |
+| -------------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+| FT.CREATE      | Done        | In Progress | Done        | Not started | Not started | Not started |
+| FT.SEARCH      | In Progress | Not started | In Progress | Not started | Not started | Not started |
+| FT.AGGREGATE   | Not started | Not started | In Progress | Not started | Not started | Not started |
+| FT.DROPINDEX   | Done        | In Progress | Done        | Not started | Not started | Not started |
+| FT.INFO        | In Progress | Not started | In Progress | Not started | Not started | Not started |
+| FT._LIST       | Won't Do    | Won't Do    | Won't Do    | Won't Do    | Won't Do    | Won't Do    |
+| FT.ALIASADD    | Not started | Not started | In progress | Not started | Not started | Not started |
+| FT.ALIASDEL    | Not started | Not started | In progress | Not started | Not started | Not started |
+| FT.ALIASUPDATE | Not started | Not started | In progress | Not started | Not started | Not started |
+| FT._ALIASLIST  | Won't Do    | Won't Do    | Won't Do    | Won't Do    | Won't Do    | Won't Do    |
+| FT.PROFILE     | Not started | Not started | Not started | Not started | Not started | Not started |
+| FT.EXPLAIN     | Not started | Not started | In progress | Not started | Not started | Not started |
+| FT.EXPLAINCLI  | Not started | Not started | Not started | Not started | Not started | Not started |
