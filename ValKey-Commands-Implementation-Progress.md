@@ -245,9 +245,9 @@
 | -------------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
 | JSON.ARRAPPEND | In Progress | Not started | Not started | Not started | Not started | Not started |
 | JSON.ARRINDEX  | Not started | Not started | Not started | Not started | Not started | Not started |
-| JSON.ARRINSERT | In Progress | Not started | Not started | Not started | Not started | Not started |
-| JSON.ARRLEN    | In Progress | Not started | Not started | Not started | Not started | Not started |
-| JSON.ARRPOP    | In Progress | Not started | Not started | Not started | Not started | Not started |
+| JSON.ARRINSERT | In Progress | Not started | In Progress | Not started | Not started | Not started |
+| JSON.ARRLEN    | In Progress | Not started | In Progress | Not started | Not started | Not started |
+| JSON.ARRPOP    | In Progress | Not started | In Progress | Not started | Not started | Not started |
 | JSON.ARRTRIM   | In Progress | Not started | Not started | Not started | Not started | Not started |
 | JSON.CLEAR     | Done        | Not started | Not started | Not started | Not started | Not started |
 | JSON.DEBUG     | Not started | Not started | Not started | Not started | Not started | Not started |
@@ -272,9 +272,9 @@
 | -------------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
 | FT.CREATE      | Done        | In Progress | Done        | Not started | Not started | Not started |
 | FT.SEARCH      | In Progress | Not started | Done        | Not started | Not started | Not started |
-| FT.AGGREGATE   | Not started | Not started | In Progress | Not started | Not started | Not started |
+| FT.AGGREGATE   | Not started | Not started | Done        | Not started | Not started | Not started |
 | FT.DROPINDEX   | Done        | In Progress | Done        | Not started | Not started | Not started |
-| FT.INFO        | In Progress | Not started | In Progress | Not started | Not started | Not started |
+| FT.INFO        | In Progress | Not started | Done        | Not started | Not started | Not started |
 | FT._LIST       | Won't Do    | Won't Do    | Won't Do    | Won't Do    | Won't Do    | Won't Do    |
 | FT.ALIASADD    | Not started | Not started | In progress | Not started | Not started | Not started |
 | FT.ALIASDEL    | Not started | Not started | In progress | Not started | Not started | Not started |
