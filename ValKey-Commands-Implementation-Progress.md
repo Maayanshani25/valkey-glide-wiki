@@ -1,6 +1,6 @@
 | cmd type                 | Python                 | Node                   | Java                   | .NET                   | Go                     | PHP                    |
 | ------------------------ | ---------------------- | ---------------------- | ---------------------- | ---------------------- | ---------------------- | ---------------------- |
-| ping                     | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
+| ping                     | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
 | info                     | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | Config get               | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
 | Config set               | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
