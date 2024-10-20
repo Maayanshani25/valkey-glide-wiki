@@ -244,13 +244,13 @@
 | cmd type       | Python      | Node        | Java        | .NET        | Go          | PHP         |
 | -------------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
 | JSON.ARRAPPEND | In Progress | Not started | Not started | Not started | Not started | Not started |
-| JSON.ARRINDEX  | Not started | Not started | Not started | Not started | Not started | Not started |
+| JSON.ARRINDEX  | In Progress | Not started | Not started | Not started | Not started | Not started |
 | JSON.ARRINSERT | In Progress | Not started | Done        | Not started | Not started | Not started |
 | JSON.ARRLEN    | In Progress | Not started | Done        | Not started | Not started | Not started |
 | JSON.ARRPOP    | In Progress | Not started | In Progress | Not started | Not started | Not started |
 | JSON.ARRTRIM   | In Progress | Not started | Not started | Not started | Not started | Not started |
 | JSON.CLEAR     | Done        | Not started | Not started | Not started | Not started | Not started |
-| JSON.DEBUG     | Not started | Not started | Not started | Not started | Not started | Not started |
+| JSON.DEBUG     | In Progress | Not started | Not started | Not started | Not started | Not started |
 | JSON.DEL       | Done        | Not started | In Progress | Not started | Not started | Not started |
 | JSON.FORGET    | Done        | Not started | In Progress | Not started | Not started | Not started |
 | JSON.GET       | Done        | In Progress | Done        | Not started | Not started | Not started |
