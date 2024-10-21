@@ -243,7 +243,7 @@
 
 | cmd type       | Python      | Node        | Java        | .NET        | Go          | PHP         |
 | -------------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
-| JSON.ARRAPPEND | In Progress | Not started | Not started | Not started | Not started | Not started |
+| JSON.ARRAPPEND | In Progress | Not started | In Progress | Not started | Not started | Not started |
 | JSON.ARRINDEX  | In Progress | Not started | Not started | Not started | Not started | Not started |
 | JSON.ARRINSERT | In Progress | Not started | Done        | Not started | Not started | Not started |
 | JSON.ARRLEN    | In Progress | Not started | Done        | Not started | Not started | Not started |
@@ -255,8 +255,8 @@
 | JSON.FORGET    | Done        | Not started | In Progress | Not started | Not started | Not started |
 | JSON.GET       | Done        | In Progress | Done        | Not started | Not started | Not started |
 | JSON.MGET      | Not started | Not started | Not started | Not started | Not started | Not started |
-| JSON.NUMINCRBY | Done        | Not started | Not started | Not started | Not started | Not started |
-| JSON.NUMMULTBY | Done        | Not started | Not started | Not started | Not started | Not started |
+| JSON.NUMINCRBY | Done        | Not started | In Progress | Not started | Not started | Not started |
+| JSON.NUMMULTBY | Done        | Not started | In Progress | Not started | Not started | Not started |
 | JSON.OBJLEN    | In Progress | Not started | Not started | Not started | Not started | Not started |
 | JSON.OBJKEYS   | In Progress | Not started | Not started | Not started | Not started | Not started |
 | JSON.RESP      | In Progress | Not started | Not started | Not started | Not started | Not started |
