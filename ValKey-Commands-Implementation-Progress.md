@@ -1,6 +1,6 @@
 | cmd type                 | Python                 | Node                   | Java                   | .NET                   | Go                     | PHP                    |
 | ------------------------ | ---------------------- | ---------------------- | ---------------------- | ---------------------- | ---------------------- | ---------------------- |
-| ping                     | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
+| ping                     | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
 | info                     | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | Config get               | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
 | Config set               | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
@@ -23,10 +23,10 @@
 | mget                     | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
 | get                      | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
 | hset                     | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
-| sadd                     | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
-| srem                     | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
-| smembers                 | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
-| scard                    | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
+| sadd                     | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
+| srem                     | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
+| smembers                 | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
+| scard                    | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
 | hmset                    | deprecated             | deprecated             | deprecated             | deprecated             | deprecated             | deprecated             |
 | exists                   | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | command                  | N/A                    | N/A                    | N/A                    | N/A                    | N/A                    | N/A                    |
@@ -42,15 +42,15 @@
 | pexpireat                | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | pexpire                  | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | expireat                 | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
-| lpush                    | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
-| lpop                     | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
-| rpush                    | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
-| rpop                     | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
+| lpush                    | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
+| lpop                     | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
+| rpush                    | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
+| rpop                     | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
 | rpoplpush                | deprecated             | deprecated             | deprecated             | deprecated             | deprecated             | deprecated             |
-| llen                     | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
-| lrem                     | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
-| ltrim                    | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
-| lrange                   | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
+| llen                     | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
+| lrem                     | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
+| ltrim                    | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
+| lrange                   | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
 | unlink                   | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | ttl                      | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | publish                  | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
@@ -86,7 +86,7 @@
 | hsetnx                   | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
 | zrevrangebyscore         | deprecated             | deprecated             | deprecated             | deprecated             | deprecated             | deprecated             |
 | watch                    | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
-| sismember                | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
+| sismember                | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
 | pttl                     | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | zscore                   | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | dbsize                   | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
@@ -100,7 +100,7 @@
 | time                     | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | append                   | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
 | rename                   | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
-| lindex                   | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
+| lindex                   | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
 | punsubscribe             | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | persist                  | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | strlen                   | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
@@ -119,7 +119,7 @@
 | zpopmin                  | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | pfcount                  | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | wait                     | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
-| spop                     | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
+| spop                     | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
 | restore                  | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | hvals                    | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
 | sinter                   | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
@@ -146,7 +146,7 @@
 | bitfield                 | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | getrange                 | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
 | randomkey                | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
-| srandmember              | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
+| srandmember              | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
 | dump                     | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | xinfo consumers          | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | xinfo groups             | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
@@ -155,10 +155,10 @@
 | smove                    | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | xrange                   | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | xdel                     | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
-| linsert                  | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
+| linsert                  | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
 | xlen                     | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | xpending                 | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
-| discard                  | API not required       | API not required       | API not required       | API not required            | API not required            | Not started            |
+| discard                  | API not required       | API not required       | API not required       | API not required       | API not required       | Not started            |
 | sunionstore              | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | xrevrange                | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | bzpopmin                 | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
@@ -168,23 +168,23 @@
 | zrangebylex              | deprecated             | deprecated             | deprecated             | deprecated             | deprecated             | deprecated             |
 | getbit                   | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | msetnx                   | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
-| sdiff                    | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
-| setrange                 | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
+| sdiff                    | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
+| setrange                 | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
 | sinterstore              | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | zpopmax                  | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | georadius_ro             | Deprecated             | Deprecated             | Deprecated             | Deprecated             | Deprecated             | Deprecated             |
 | georadius                | Deprecated             | Deprecated             | Deprecated             | Deprecated             | Deprecated             | Deprecated             |
 | pfmerge                  | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | bitcount                 | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
-| sdiffstore               | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
+| sdiffstore               | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
 | touch                    | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | smismember               | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | zremrangebylex           | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
-| zrevrangebylex           | deprecated             | deprecated             | deprecated             | deprecated            | deprecated            | Not started            |
+| zrevrangebylex           | deprecated             | deprecated             | deprecated             | deprecated             | deprecated             | Not started            |
 | lpushx                   | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
 | copy                     | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | hrandfield               | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
-| lpos                     | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
+| lpos                     | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
 | geopos                   | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | xautoclaim               | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | zmscore                  | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
@@ -201,7 +201,7 @@
 | function stats           | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | zlexcount                | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | zrandmember              | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
-| replicaof                | Done, API not required | Done, API not required | Done, API not required | Done, API not required            | Done, API not required            | Done, API not required            |
+| replicaof                | Done, API not required | Done, API not required | Done, API not required | Done, API not required | Done, API not required | Done, API not required            |
 | bitfield_ro              | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | fcall                    | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | zdiffstore               | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
@@ -234,9 +234,9 @@
 | blmpop                   | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
 | brpoplpush               | deprecated             | deprecated             | deprecated             | deprecated             | deprecated             | deprecated             |
 | lmove                    | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
-| sintercard               | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
+| sintercard               | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
 | getdel                   | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
-| getex                    | Done                   | Done                   | Done                   | Not started            | Done            | Not started            |
+| getex                    | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
 | quit                     | Done, API not required | Done, API not required | Done, API not required | Done, API not required | Done, API not required | Done, API not required |
 
 ### JSON Module
@@ -251,8 +251,8 @@
 | JSON.ARRTRIM   | In Progress | Not started | Not started | Not started | Not started | Not started |
 | JSON.CLEAR     | Done        | Not started | Not started | Not started | Not started | Not started |
 | JSON.DEBUG     | In Progress | Not started | Not started | Not started | Not started | Not started |
-| JSON.DEL       | Done        | Not started | In Progress | Not started | Not started | Not started |
-| JSON.FORGET    | Done        | Not started | In Progress | Not started | Not started | Not started |
+| JSON.DEL       | Done        | Not started | Done        | Not started | Not started | Not started |
+| JSON.FORGET    | Done        | Not started | Done        | Not started | Not started | Not started |
 | JSON.GET       | Done        | In Progress | Done        | Not started | Not started | Not started |
 | JSON.MGET      | In Progress | Not started | In Progress | Not started | Not started | Not started |
 | JSON.NUMINCRBY | Done        | Not started | In Progress | Not started | Not started | Not started |
