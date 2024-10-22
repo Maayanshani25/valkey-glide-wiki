@@ -254,11 +254,11 @@
 | JSON.DEL       | Done        | Not started | In Progress | Not started | Not started | Not started |
 | JSON.FORGET    | Done        | Not started | In Progress | Not started | Not started | Not started |
 | JSON.GET       | Done        | In Progress | Done        | Not started | Not started | Not started |
-| JSON.MGET      | Not started | Not started | Not started | Not started | Not started | Not started |
+| JSON.MGET      | Not started | Not started | In Progress | Not started | Not started | Not started |
 | JSON.NUMINCRBY | Done        | Not started | In Progress | Not started | Not started | Not started |
 | JSON.NUMMULTBY | Done        | Not started | In Progress | Not started | Not started | Not started |
-| JSON.OBJLEN    | In Progress | Not started | Not started | Not started | Not started | Not started |
-| JSON.OBJKEYS   | In Progress | Not started | Not started | Not started | Not started | Not started |
+| JSON.OBJLEN    | In Progress | Not started | In Progress | Not started | Not started | Not started |
+| JSON.OBJKEYS   | In Progress | Not started | In Progress | Not started | Not started | Not started |
 | JSON.RESP      | In Progress | Not started | In Progress | Not started | Not started | Not started |
 | JSON.SET       | Done        | In Progress | Done        | Not started | Not started | Not started |
 | JSON.STRAPPEND | In Progress | Not started | Not started | Not started | Not started | Not started |
