@@ -251,16 +251,16 @@
 | JSON.ARRTRIM   | In Progress | Not started | Not started | Not started | Not started | Not started |
 | JSON.CLEAR     | Done        | Not started | Not started | Not started | Not started | Not started |
 | JSON.DEBUG     | In Progress | Not started | Not started | Not started | Not started | Not started |
-| JSON.DEL       | Done        | Not started | Done        | Not started | Not started | Not started |
-| JSON.FORGET    | Done        | Not started | Done        | Not started | Not started | Not started |
-| JSON.GET       | Done        | In Progress | Done        | Not started | Not started | Not started |
+| JSON.DEL       | Done        | In Progress | Done        | Not started | Not started | Not started |
+| JSON.FORGET    | Done        | In Progress | Done        | Not started | Not started | Not started |
+| JSON.GET       | Done        | Done        | Done        | Not started | Not started | Not started |
 | JSON.MGET      | In Progress | Not started | In Progress | Not started | Not started | Not started |
 | JSON.NUMINCRBY | Done        | Not started | In Progress | Not started | Not started | Not started |
 | JSON.NUMMULTBY | Done        | Not started | In Progress | Not started | Not started | Not started |
 | JSON.OBJLEN    | In Progress | Not started | In Progress | Not started | Not started | Not started |
 | JSON.OBJKEYS   | In Progress | Not started | In Progress | Not started | Not started | Not started |
 | JSON.RESP      | In Progress | Not started | In Progress | Not started | Not started | Not started |
-| JSON.SET       | Done        | In Progress | Done        | Not started | Not started | Not started |
+| JSON.SET       | Done        | Done        | Done        | Not started | Not started | Not started |
 | JSON.STRAPPEND | In Progress | Not started | Not started | Not started | Not started | Not started |
 | JSON.STRLEN    | In Progress | Not started | Not started | Not started | Not started | Not started |
 | JSON.TOGGLE    | Done        | Not started | In Progress | Not started | Not started | Not started |
