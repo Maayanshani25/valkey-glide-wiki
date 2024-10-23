@@ -248,7 +248,7 @@
 | JSON.ARRINSERT | In Progress | Not started | Done        | Not started | Not started | Not started |
 | JSON.ARRLEN    | In Progress | Not started | Done        | Not started | Not started | Not started |
 | JSON.ARRPOP    | In Progress | Not started | In Progress | Not started | Not started | Not started |
-| JSON.ARRTRIM   | In Progress | Not started | Not started | Not started | Not started | Not started |
+| JSON.ARRTRIM   | In Progress | Not started | In Progress | Not started | Not started | Not started |
 | JSON.CLEAR     | Done        | Not started | Not started | Not started | Not started | Not started |
 | JSON.DEBUG     | In Progress | Not started | Not started | Not started | Not started | Not started |
 | JSON.DEL       | Done        | In Progress | Done        | Not started | Not started | Not started |
@@ -263,7 +263,7 @@
 | JSON.SET       | Done        | Done        | Done        | Not started | Not started | Not started |
 | JSON.STRAPPEND | In Progress | Not started | Not started | Not started | Not started | Not started |
 | JSON.STRLEN    | In Progress | Not started | Not started | Not started | Not started | Not started |
-| JSON.TOGGLE    | Done        | Done        | In Progress | Not started | Not started | Not started |
+| JSON.TOGGLE    | Done        | Done        | Done        | Not started | Not started | Not started |
 | JSON.TYPE      | Done        | Not started | In Progress | Not started | Not started | Not started |
 
 ### Vector Search Module
