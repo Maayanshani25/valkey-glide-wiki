@@ -270,7 +270,7 @@
 
 | cmd type       | Python      | Node        | Java        | .NET        | Go          | PHP         |
 | -------------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
-| FT.CREATE      | Done        | In Progress | Done        | Not started | Not started | Not started |
+| FT.CREATE      | Done        | Done        | Done        | Not started | Not started | Not started |
 | FT.SEARCH      | Done        | Not started | Done        | Not started | Not started | Not started |
 | FT.AGGREGATE   | In Progress | Not started | Done        | Not started | Not started | Not started |
 | FT.DROPINDEX   | Done        | In Progress | Done        | Not started | Not started | Not started |
@@ -281,5 +281,5 @@
 | FT.ALIASUPDATE | Done        | Not started | Done        | Not started | Not started | Not started |
 | FT._ALIASLIST  | Won't Do    | Won't Do    | Won't Do    | Won't Do    | Won't Do    | Won't Do    |
 | FT.PROFILE     | Not started | Not started | In Progress | Not started | Not started | Not started |
-| FT.EXPLAIN     | Not started | Not started | In progress | Not started | Not started | Not started |
-| FT.EXPLAINCLI  | Not started | Not started | In progress | Not started | Not started | Not started |
+| FT.EXPLAIN     | In Progress | Not started | In progress | Not started | Not started | Not started |
+| FT.EXPLAINCLI  | In Progress | Not started | In progress | Not started | Not started | Not started |
