@@ -273,7 +273,7 @@
 | FT.CREATE      | Done        | Done        | Done        | Not started | Not started | Not started |
 | FT.SEARCH      | Done        | Not started | Done        | Not started | Not started | Not started |
 | FT.AGGREGATE   | In Progress | Not started | Done        | Not started | Not started | Not started |
-| FT.DROPINDEX   | Done        | In Progress | Done        | Not started | Not started | Not started |
+| FT.DROPINDEX   | Done        | Done        | Done        | Not started | Not started | Not started |
 | FT.INFO        | In Progress | Not started | Done        | Not started | Not started | Not started |
 | FT._LIST       | Won't Do    | Won't Do    | Won't Do    | Won't Do    | Won't Do    | Won't Do    |
 | FT.ALIASADD    | Done        | Not started | Done        | Not started | Not started | Not started |
