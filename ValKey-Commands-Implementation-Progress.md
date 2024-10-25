@@ -259,7 +259,7 @@
 | JSON.NUMMULTBY | Done        | Not started | In Progress | Not started | Not started | Not started |
 | JSON.OBJLEN    | In Progress | Not started | Done        | Not started | Not started | Not started |
 | JSON.OBJKEYS   | In Progress | Not started | Done        | Not started | Not started | Not started |
-| JSON.RESP      | In Progress | Not started | In Progress | Not started | Not started | Not started |
+| JSON.RESP      | In Progress | Not started | Done        | Not started | Not started | Not started |
 | JSON.SET       | Done        | Done        | Done        | Not started | Not started | Not started |
 | JSON.STRAPPEND | In Progress | Not started | In Progress | Not started | Not started | Not started |
 | JSON.STRLEN    | In Progress | Not started | In Progress | Not started | Not started | Not started |
