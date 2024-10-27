@@ -182,7 +182,7 @@
 | zremrangebylex           | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | zrevrangebylex           | deprecated             | deprecated             | deprecated             | deprecated             | deprecated             | Not started            |
 | lpushx                   | Done                   | Done                   | Done                   | Not started            | In progress            | Not started            |
-| copy                     | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
+| copy                     | Done                   | Done                   | Done                   | Not started            | In progress           | Not started            |
 | hrandfield               | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
 | lpos                     | Done                   | Done                   | Done                   | Not started            | Done                   | Not started            |
 | geopos                   | Done                   | Done                   | Done                   | Not started            | Not started            | Not started            |
