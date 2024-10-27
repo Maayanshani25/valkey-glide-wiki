@@ -250,7 +250,7 @@
 | JSON.ARRPOP    | In Progress | Not started | In Progress | Not started | Not started | Not started |
 | JSON.ARRTRIM   | In Progress | Not started | Done        | Not started | Not started | Not started |
 | JSON.CLEAR     | Done        | Not started | In Progress | Not started | Not started | Not started |
-| JSON.DEBUG     | Done.       | Not started | In Progress | Not started | Not started | Not started |
+| JSON.DEBUG     | Done        | Not started | In Progress | Not started | Not started | Not started |
 | JSON.DEL       | Done        | In Progress | Done        | Not started | Not started | Not started |
 | JSON.FORGET    | Done        | In Progress | Done        | Not started | Not started | Not started |
 | JSON.GET       | Done        | Done        | Done        | Not started | Not started | Not started |
