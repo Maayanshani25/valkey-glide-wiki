@@ -274,12 +274,12 @@
 | FT.SEARCH      | Done        | Not started | Done        | Not started | Not started | Not started |
 | FT.AGGREGATE   | In Progress | Not started | Done        | Not started | Not started | Not started |
 | FT.DROPINDEX   | Done        | Done        | Done        | Not started | Not started | Not started |
-| FT.INFO        | In Progress | Not started | Done        | Not started | Not started | Not started |
+| FT.INFO        | Done        | Not started | Done        | Not started | Not started | Not started |
 | FT._LIST       | Won't Do    | Won't Do    | Won't Do    | Won't Do    | Won't Do    | Won't Do    |
 | FT.ALIASADD    | Done        | Not started | Done        | Not started | Not started | Not started |
 | FT.ALIASDEL    | Done        | Not started | Done        | Not started | Not started | Not started |
 | FT.ALIASUPDATE | Done        | Not started | Done        | Not started | Not started | Not started |
 | FT._ALIASLIST  | Won't Do    | Won't Do    | Won't Do    | Won't Do    | Won't Do    | Won't Do    |
-| FT.PROFILE     | Not started | Not started | Done        | Not started | Not started | Not started |
-| FT.EXPLAIN     | In Progress | Not started | In progress | Not started | Not started | Not started |
-| FT.EXPLAINCLI  | In Progress | Not started | In progress | Not started | Not started | Not started |
+| FT.PROFILE     | In Progress | Not started | Done        | Not started | Not started | Not started |
+| FT.EXPLAIN     | Done        | Not started | In progress | Not started | Not started | Not started |
+| FT.EXPLAINCLI  | Done        | Not started | In progress | Not started | Not started | Not started |
