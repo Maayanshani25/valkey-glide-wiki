@@ -245,9 +245,9 @@
 | -------------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
 | JSON.ARRAPPEND | In Progress | Not started | Done        | Not started | Not started | Not started |
 | JSON.ARRINDEX  | In Progress | Not started | In Progress | Not started | Not started | Not started |
-| JSON.ARRINSERT | Done        | Not started | Done        | Not started | Not started | Not started |
-| JSON.ARRLEN    | Done        | Not started | Done        | Not started | Not started | Not started |
-| JSON.ARRPOP    | In Progress | Not started | Done        | Not started | Not started | Not started |
+| JSON.ARRINSERT | Done        | In Progress | Done        | Not started | Not started | Not started |
+| JSON.ARRLEN    | Done        | In Progress | Done        | Not started | Not started | Not started |
+| JSON.ARRPOP    | In Progress | In Progress | Done        | Not started | Not started | Not started |
 | JSON.ARRTRIM   | Done        | Not started | Done        | Not started | Not started | Not started |
 | JSON.CLEAR     | Done        | Not started | Done        | Not started | Not started | Not started |
 | JSON.DEBUG     | Done        | Not started | Done        | Not started | Not started | Not started |
