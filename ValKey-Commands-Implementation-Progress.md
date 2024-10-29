@@ -274,7 +274,7 @@
 | FT.SEARCH      | Done        | Not started | Done        | Not started | Not started | Not started |
 | FT.AGGREGATE   | Done        | Not started | Done        | Not started | Not started | Not started |
 | FT.DROPINDEX   | Done        | Done        | Done        | Not started | Not started | Not started |
-| FT.INFO        | Done        | Not started | Done        | Not started | Not started | Not started |
+| FT.INFO        | Done        | In Progress | Done        | Not started | Not started | Not started |
 | FT._LIST       | Won't Do    | Won't Do    | Won't Do    | Won't Do    | Won't Do    | Won't Do    |
 | FT.ALIASADD    | Done        | Not started | Done        | Not started | Not started | Not started |
 | FT.ALIASDEL    | Done        | Not started | Done        | Not started | Not started | Not started |
