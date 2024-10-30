@@ -271,7 +271,7 @@
 | cmd type       | Python      | Node        | Java        | .NET        | Go          | PHP         |
 | -------------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
 | FT.CREATE      | Done        | Done        | Done        | Not started | Not started | Not started |
-| FT.SEARCH      | Done        | Not started | Done        | Not started | Not started | Not started |
+| FT.SEARCH      | Done        | In Progress | Done        | Not started | Not started | Not started |
 | FT.AGGREGATE   | Done        | Not started | Done        | Not started | Not started | Not started |
 | FT.DROPINDEX   | Done        | Done        | Done        | Not started | Not started | Not started |
 | FT.INFO        | Done        | In Progress | Done        | Not started | Not started | Not started |
