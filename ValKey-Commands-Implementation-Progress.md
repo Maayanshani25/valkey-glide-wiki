@@ -248,7 +248,7 @@
 | JSON.ARRINSERT | Done        | Done        | Done        | Not started | Not started | Not started |
 | JSON.ARRLEN    | Done        | Done        | Done        | Not started | Not started | Not started |
 | JSON.ARRPOP    | In Progress | Done        | Done        | Not started | Not started | Not started |
-| JSON.ARRTRIM   | Done        | In Progress | Done        | Not started | Not started | Not started |
+| JSON.ARRTRIM   | Done        | Done        | Done        | Not started | Not started | Not started |
 | JSON.CLEAR     | Done        | Not started | Done        | Not started | Not started | Not started |
 | JSON.DEBUG     | Done        | Not started | Done        | Not started | Not started | Not started |
 | JSON.DEL       | Done        | Done        | Done        | Not started | Not started | Not started |
