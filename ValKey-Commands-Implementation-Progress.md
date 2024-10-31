@@ -243,7 +243,7 @@
 
 | cmd type       | Python      | Node        | Java        | .NET        | Go          | PHP         |
 | -------------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
-| JSON.ARRAPPEND | In Progress | Not started | Done        | Not started | Not started | Not started |
+| JSON.ARRAPPEND | In Progress | In Progress | Done        | Not started | Not started | Not started |
 | JSON.ARRINDEX  | Done        | In Progress | In Progress | Not started | Not started | Not started |
 | JSON.ARRINSERT | Done        | Done        | Done        | Not started | Not started | Not started |
 | JSON.ARRLEN    | Done        | Done        | Done        | Not started | Not started | Not started |
