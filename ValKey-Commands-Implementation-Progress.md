@@ -275,11 +275,11 @@
 | FT.AGGREGATE   | Done        | In Progress | Done        | Not started | Not started | Not started |
 | FT.DROPINDEX   | Done        | Done        | Done        | Not started | Not started | Not started |
 | FT.INFO        | Done        | Done        | Done        | Not started | Not started | Not started |
-| FT._LIST       | Won't Do    | Won't Do    | In Progress | Won't Do    | Won't Do    | Won't Do    |
+| FT._LIST       | In Progress | In Progress | In Progress | Won't Do    | Won't Do    | Won't Do    |
 | FT.ALIASADD    | Done        | In Progress | Done        | Not started | Not started | Not started |
 | FT.ALIASDEL    | Done        | In Progress | Done        | Not started | Not started | Not started |
 | FT.ALIASUPDATE | Done        | In Progress | Done        | Not started | Not started | Not started |
-| FT._ALIASLIST  | Won't Do    | Won't Do    | Won't Do    | Won't Do    | Won't Do    | Won't Do    |
+| FT._ALIASLIST  | In Progress | In Progress | In Progress | Won't Do    | Won't Do    | Won't Do    |
 | FT.PROFILE     | Done        | Not started | Done        | Not started | Not started | Not started |
 | FT.EXPLAIN     | Done        | In Progress | Done        | Not started | Not started | Not started |
 | FT.EXPLAINCLI  | Done        | In Progress | Done        | Not started | Not started | Not started |
