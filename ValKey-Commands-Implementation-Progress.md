@@ -254,7 +254,7 @@
 | JSON.DEL       | Done        | Done        | Done        | Not started | Not started | Not started |
 | JSON.FORGET    | Done        | Done        | Done        | Not started | Not started | Not started |
 | JSON.GET       | Done        | Done        | Done        | Not started | Not started | Not started |
-| JSON.MGET      | In Progress | Not started | In Progress | Not started | Not started | Not started |
+| JSON.MGET      | In Progress | In Progress | In Progress | Not started | Not started | Not started |
 | JSON.NUMINCRBY | Done        | In Progress | Done        | Not started | Not started | Not started |
 | JSON.NUMMULTBY | Done        | In Progress | Done        | Not started | Not started | Not started |
 | JSON.OBJLEN    | In Progress | In Progress | Done        | Not started | Not started | Not started |
