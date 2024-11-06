@@ -16,6 +16,64 @@ However, in some scenarios, opening multiple connections can be more beneficial.
 - **WATCH/UNWATCH**: Commands like WATCH, which are used to monitor changes to keys in conjunction with transaction commands, affect the state of the connection. When these commands are executed, they can lead to interactions between threads sharing the same client, since each client utilizes a single multiplexed connection per cluster node. Consequently, threads will share the same connection, and any modifications to its state will impact how subsequent commands are processed. For example, executing WATCH on one thread will cause other threads to watch the same keys, and executing MULTI/EXEC on one thread will UNWATCH the keys for other threads as well. To prevent any issues and ensure the isolation of transactions and watched keys, it is required to create separate clients for these commands.
 - **Reading and Writing Large Values**: Valkey has a fairness mechanism to ensure minimal impact on other clients when handling large values. With a multiplex connection, requests are processed sequentially. Thus, large requests can delay the processing of subsequent smaller requests. When dealing with large values or transactions, it is advisable to use a separate client to prevent delays for other requests.
 
+## Multi-Slot Command Handling
+
+In Valkey or Redis Cluster mode, certain commands can operate on multiple keys that may be spread across different hash slots. When these commands receive keys that map to multiple slots, they are termed as **multi-slot commands**. Glide supports efficient handling of these commands, ensuring they execute correctly across the cluster.
+
+### What are Multi-Slot Commands?
+Multi-slot commands are those which allow multiple keys as inputs, with each key potentially belonging to a different hash slot. In cluster mode, if keys within a command map to different hash slots, the command must be split according to each slot and executed separately. Examples of such commands include `MSET`, `MGET`, and `DEL`, which can target multiple keys that are not necessarily in the same slot.
+
+For example, the command:
+```
+DEL {foo} {foo}1 bar
+```
+should be split into:
+```
+DEL {foo} {foo}1
+DEL bar
+```
+Even if all slots are managed by the same shard, the command must be split by slot. However, certain commands, such as `SUNIONSTORE`, are **not** considered multi-slot because they require all keys to be in the same slot.
+
+### Multi-Slot Command Execution in Glide
+
+When handling multi-slot commands, Glide automatically splits the command based on the slots of the input key arguments. Each sub-command is then sent to the appropriate shard for execution. The multi-slot handling process in Glide is as follows:
+
+1. **Command Splitting**:
+   Glide determines if a command should be split based on the hash slot of each key. The command is divided into sub-commands that each target a single slot, ensuring accurate routing across the cluster.
+
+2. **Atomicity at Slot Level**:
+   Since each sub-command operates independently, multi-slot commands are atomic only at the slot level. If a command fails on one slot while succeeding on others, the entire command call will return the first encountered error. Some parts of the request may succeed, while others fail, depending on the execution per slot.
+
+3. **Error Handling**:
+   If one or more slot-specific requests fail, Glide will return the first encountered error. This behavior ensures consistency in reporting errors but may impact atomicity across the entire command if sub-requests are involved. If this behavior impacts your application logic, consider splitting the request into sub-requests per slot to ensure atomicity.
+
+### Supported Multi-Slot Commands in Glide
+
+The following commands are supported as multi-slot commands in Glide, meaning they can operate on keys distributed across multiple hash slots:
+
+- `MSET`
+- `MGET`
+- `DEL`
+- `UNLINK`
+- `EXISTS`
+- `TOUCH`
+- `WATCH`
+- `JSON.MGET`
+
+### Example Use Case
+
+Consider the command:
+```
+MSET foo1 bar1 foo2 bar2 {foo3} bar3
+```
+In this example, keys `foo1` and `foo2` hash to different slots from `{foo3}` due to their hash slots. Glide will split the `MSET` command into separate commands based on slot grouping to ensure each key is routed to the correct shard, and execute them asynchronously.
+
+```
+MSET foo1 bar1 foo2 bar2
+MSET {foo3} bar3
+```
+
+This setup allows Glide to handle multi-slot commands efficiently across distributed nodes.
 
 ## PubSub Support
 
