@@ -255,8 +255,8 @@
 | JSON.FORGET    | Done        | Done        | Done        | Not started | Not started | Not started |
 | JSON.GET       | Done        | Done        | Done        | Not started | Not started | Not started |
 | JSON.MGET      | In Progress | In Progress | In Progress | Not started | Not started | Not started |
-| JSON.NUMINCRBY | Done        | In Progress | Done        | Not started | Not started | Not started |
-| JSON.NUMMULTBY | Done        | In Progress | Done        | Not started | Not started | Not started |
+| JSON.NUMINCRBY | Done        | Done        | Done        | Not started | Not started | Not started |
+| JSON.NUMMULTBY | Done        | Done        | Done        | Not started | Not started | Not started |
 | JSON.OBJLEN    | In Progress | In Progress | Done        | Not started | Not started | Not started |
 | JSON.OBJKEYS   | Done        | In Progress | Done        | Not started | Not started | Not started |
 | JSON.RESP      | In Progress | Done        | Done        | Not started | Not started | Not started |
@@ -272,14 +272,14 @@
 | -------------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
 | FT.CREATE      | Done        | Done        | Done        | Not started | Not started | Not started |
 | FT.SEARCH      | Done        | Done        | Done        | Not started | Not started | Not started |
-| FT.AGGREGATE   | Done        | In Progress | Done        | Not started | Not started | Not started |
+| FT.AGGREGATE   | Done        | Done        | Done        | Not started | Not started | Not started |
 | FT.DROPINDEX   | Done        | Done        | Done        | Not started | Not started | Not started |
 | FT.INFO        | Done        | Done        | Done        | Not started | Not started | Not started |
 | FT._LIST       | In Progress | In Progress | In Progress | Won't Do    | Won't Do    | Won't Do    |
 | FT.ALIASADD    | Done        | In Progress | Done        | Not started | Not started | Not started |
 | FT.ALIASDEL    | Done        | In Progress | Done        | Not started | Not started | Not started |
 | FT.ALIASUPDATE | Done        | In Progress | Done        | Not started | Not started | Not started |
-| FT._ALIASLIST  | In Progress | In Progress | In Progress | Won't Do    | Won't Do    | Won't Do    |
+| FT._ALIASLIST  | In Progress | In Progress | Done        | Won't Do    | Won't Do    | Won't Do    |
 | FT.PROFILE     | Done        | In Progress | Done        | Not started | Not started | Not started |
-| FT.EXPLAIN     | Done        | In Progress | Done        | Not started | Not started | Not started |
-| FT.EXPLAINCLI  | Done        | In Progress | Done        | Not started | Not started | Not started |
+| FT.EXPLAIN     | Done        | Done        | Done        | Not started | Not started | Not started |
+| FT.EXPLAINCLI  | Done        | Done        | Done        | Not started | Not started | Not started |
