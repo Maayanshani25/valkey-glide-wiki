@@ -276,9 +276,9 @@
 | FT.DROPINDEX   | Done        | Done        | Done        | Not started | Not started | Not started |
 | FT.INFO        | Done        | Done        | Done        | Not started | Not started | Not started |
 | FT._LIST       | Done        | Done        | Done        | Won't Do    | Won't Do    | Won't Do    |
-| FT.ALIASADD    | Done        | In Progress | Done        | Not started | Not started | Not started |
-| FT.ALIASDEL    | Done        | In Progress | Done        | Not started | Not started | Not started |
-| FT.ALIASUPDATE | Done        | In Progress | Done        | Not started | Not started | Not started |
+| FT.ALIASADD    | Done        | Done        | Done        | Not started | Not started | Not started |
+| FT.ALIASDEL    | Done        | Done        | Done        | Not started | Not started | Not started |
+| FT.ALIASUPDATE | Done        | Done        | Done        | Not started | Not started | Not started |
 | FT._ALIASLIST  | In Progress | In Progress | Done        | Won't Do    | Won't Do    | Won't Do    |
 | FT.PROFILE     | Done        | In Progress | Done        | Not started | Not started | Not started |
 | FT.EXPLAIN     | Done        | Done        | Done        | Not started | Not started | Not started |
