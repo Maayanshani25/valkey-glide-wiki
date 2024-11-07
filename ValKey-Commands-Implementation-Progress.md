@@ -279,7 +279,7 @@
 | FT.ALIASADD    | Done        | Done        | Done        | Not started | Not started | Not started |
 | FT.ALIASDEL    | Done        | Done        | Done        | Not started | Not started | Not started |
 | FT.ALIASUPDATE | Done        | Done        | Done        | Not started | Not started | Not started |
-| FT._ALIASLIST  | In Progress | In Progress | Done        | Won't Do    | Won't Do    | Won't Do    |
+| FT._ALIASLIST  | Done        | In Progress | Done        | Won't Do    | Won't Do    | Won't Do    |
 | FT.PROFILE     | Done        | In Progress | Done        | Not started | Not started | Not started |
 | FT.EXPLAIN     | Done        | Done        | Done        | Not started | Not started | Not started |
 | FT.EXPLAINCLI  | Done        | Done        | Done        | Not started | Not started | Not started |
