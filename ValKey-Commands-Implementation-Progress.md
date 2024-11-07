@@ -249,7 +249,7 @@
 | JSON.ARRLEN    | Done        | Done        | Done        | Not started | Not started | Not started |
 | JSON.ARRPOP    | In Progress | Done        | Done        | Not started | Not started | Not started |
 | JSON.ARRTRIM   | Done        | Done        | Done        | Not started | Not started | Not started |
-| JSON.CLEAR     | Done        | In Progress | Done        | Not started | Not started | Not started |
+| JSON.CLEAR     | Done        | Done        | Done        | Not started | Not started | Not started |
 | JSON.DEBUG     | Done        | In Progress | Done        | Not started | Not started | Not started |
 | JSON.DEL       | Done        | Done        | Done        | Not started | Not started | Not started |
 | JSON.FORGET    | Done        | Done        | Done        | Not started | Not started | Not started |
