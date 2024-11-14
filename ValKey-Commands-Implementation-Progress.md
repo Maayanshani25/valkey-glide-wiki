@@ -254,7 +254,7 @@
 | JSON.DEL       | Done        | Done        | Done        | Not started | Not started | Not started |
 | JSON.FORGET    | Done        | Done        | Done        | Not started | Not started | Not started |
 | JSON.GET       | Done        | Done        | Done        | Not started | Not started | Not started |
-| JSON.MGET      | In Progress | In Progress | In Progress | Not started | Not started | Not started |
+| JSON.MGET      | In Progress | Done        | Done        | Not started | Not started | Not started |
 | JSON.NUMINCRBY | Done        | Done        | Done        | Not started | Not started | Not started |
 | JSON.NUMMULTBY | Done        | Done        | Done        | Not started | Not started | Not started |
 | JSON.OBJLEN    | Done        | Done        | Done        | Not started | Not started | Not started |
@@ -280,6 +280,6 @@
 | FT.ALIASDEL    | Done        | Done        | Done        | Not started | Not started | Not started |
 | FT.ALIASUPDATE | Done        | Done        | Done        | Not started | Not started | Not started |
 | FT._ALIASLIST  | Done        | Done        | Done        | Won't Do    | Won't Do    | Won't Do    |
-| FT.PROFILE     | Done        | In Progress | Done        | Not started | Not started | Not started |
+| FT.PROFILE     | Done        | Done        | Done        | Not started | Not started | Not started |
 | FT.EXPLAIN     | Done        | Done        | Done        | Not started | Not started | Not started |
 | FT.EXPLAINCLI  | Done        | Done        | Done        | Not started | Not started | Not started |
