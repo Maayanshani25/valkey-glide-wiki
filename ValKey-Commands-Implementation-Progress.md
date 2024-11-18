@@ -39,9 +39,9 @@
 | hincrby                  | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | hincrbyfloat             | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | expire                   | Done             | Done             | Done             | Not started      | In progress      | Not started      |
-| pexpireat                | Done             | Done             | Done             | Not started      | Not started      | Not started      |
-| pexpire                  | Done             | Done             | Done             | Not started      | Not started      | Not started      |
-| expireat                 | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| pexpireat                | Done             | Done             | Done             | Not started      | In progress      | Not started      |
+| pexpire                  | Done             | Done             | Done             | Not started      | In progress      | Not started      |
+| expireat                 | Done             | Done             | Done             | Not started      | In progress      | Not started      |
 | lpush                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | lpop                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | rpush                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
@@ -102,7 +102,7 @@
 | rename                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | lindex                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | punsubscribe             | Done             | Done             | Done             | Not started      | Not started      | Not started      |
-| persist                  | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| persist                  | Done             | Done             | Done             | Not started      | In progress      | Not started      |
 | strlen                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | zincrby                  | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | xgroup create            | Done             | Done             | Done             | Not started      | Not started      | Not started      |
@@ -147,7 +147,7 @@
 | getrange                 | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | randomkey                | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | srandmember              | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| dump                     | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| dump                     | Done             | Done             | Done             | Not started      | In progress      | Not started      |
 | xinfo consumers          | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | xinfo groups             | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | xinfo stream             | Done             | Done             | Done             | Not started      | Not started      | Not started      |
@@ -227,8 +227,8 @@
 | bzmpop                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | lcs                      | Done             | Done             | Done             | Not started      | In progress      | Not started      |
 | lolwut                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
-| expiretime               | Done             | Done             | Done             | Not started      | Not started      | Not started      |
-| pexpiretime              | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| expiretime               | Done             | Done             | Done             | Not started      | In progress      | Not started      |
+| pexpiretime              | Done             | Done             | Done             | Not started      | In progress      | Not started      |
 | hstrlen                  | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | blmove                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | blmpop                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
