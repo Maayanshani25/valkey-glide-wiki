@@ -77,19 +77,20 @@ This setup allows Glide to handle multi-slot commands efficiently across distrib
 
 ## Inflight Request Limit
 
-We limit the maximum number of concurrent (inflight) requests sent to Valkey through **each connection** of a Glide client.
+To ensure system stability and prevent out-of-memory (OOM) errors, Valkey Glide limits the maximum number of concurrent (inflight) requests sent through each connection of a Glide client.
+Excessive inflight requests can lead to queuing within the Glide infrastructure, increasing memory usage and potentially causing OOM issues.
+By capping inflight requests per connection, this feature reduces the risk of excessive queuing and helps maintain reliable system performance.
+The default inflight request limit is 1000 per connection, though this value can be configured in all Glide wrappers to suit application needs.
 
-Limiting the number of inflight requests per connection can help prevent the queues in the Glide infrastructure from running out of memory (OOM) due to excessive queuing or blocking. When the Glide infrastructure receives more requests than it can handle, it may start queuing requests, leading to increased memory usage and potential OOM situations in the queues. By controlling the number of inflight requests, this feature aims to mitigate the risk of the Glide queues running out of memory and improve overall system stability and reliability.
+The limit is designed based on Little’s Law, ensuring that the system can operate efficiently at peak throughput while allowing a buffer for bursts. 
+* Maximum request rate: 50,000 requests/second.
+* Average response time: 1 millisecond.
+Using Little’s Law:
+* Inflight requests = (Request rate) × (Response time)
+* Inflight requests = 50,000 requests/second × (1 ms/1000 ms) = 50 requests
 
-The default value for this feature is 1000, however the vale can be configured by all the wrappers.
-
-Expected maximum request rate: 50,000 requests/second
-Expected response time: 1 millisecond
-According to Little's Law, the maximum number of inflight requests required to fully utilize the maximum request rate is:
-(50,000 requests/second) × (1 millisecond / 1000 milliseconds) = 50 requests
-The value of 1000 provides a buffer for bursts while still allowing full utilization of the maximum request rate.
-
-The expected behavior of exceeding the limit is getting errors right away on the exceeding requests.
+A default value of 1000 allows for sufficient headroom above this calculated baseline, ensuring performance during short bursts of activity.
+When the inflight request limit is exceeded, excess requests are immediately rejected, and errors are returned to the client.
 
 ## PubSub Support
 
