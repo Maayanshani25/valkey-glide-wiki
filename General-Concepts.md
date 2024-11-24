@@ -75,6 +75,22 @@ MSET {foo3} bar3
 
 This setup allows Glide to handle multi-slot commands efficiently across distributed nodes.
 
+## Inflight Request Limit
+
+We limit the maximum number of concurrent (inflight) requests sent to Valkey through **each connection** of a Glide client.
+
+Limiting the number of inflight requests per connection can help prevent the queues in the Glide infrastructure from running out of memory (OOM) due to excessive queuing or blocking. When the Glide infrastructure receives more requests than it can handle, it may start queuing requests, leading to increased memory usage and potential OOM situations in the queues. By controlling the number of inflight requests, this feature aims to mitigate the risk of the Glide queues running out of memory and improve overall system stability and reliability.
+
+The default value for this feature is 1000, however the vale can be configured by all the wrappers.
+
+Expected maximum request rate: 50,000 requests/second
+Expected response time: 1 millisecond
+According to Little's Law, the maximum number of inflight requests required to fully utilize the maximum request rate is:
+(50,000 requests/second) × (1 millisecond / 1000 milliseconds) = 50 requests
+The value of 1000 provides a buffer for bursts while still allowing full utilization of the maximum request rate.
+
+The expected behavior of exceeding the limit is getting errors right away on the exceeding requests.
+
 ## PubSub Support
 
 The design of the PubSub support in GLIDE aims to unify various nuances into a coherent interface, minimizing differences between Sharded, Cluster, and Standalone configurations.
