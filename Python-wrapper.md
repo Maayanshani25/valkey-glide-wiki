@@ -179,6 +179,7 @@ from glide import (
     ServerCredentials,
     NodeAddress
 )
+
 addresses = [NodeAddress(host="address.example.com", port=6379)]
 credentials = ServerCredentials("passwordA", "user1")
 client_config = GlideClusterClientConfiguration(addresses, credentials=credentials)
@@ -196,6 +197,7 @@ from glide import (
     ServerCredentials,
     NodeAddress
 )
+
 addresses = [
     NodeAddress(host="primary.example.com", port=6379),
     NodeAddress(host="replica1.example.com", port=6379),
@@ -221,6 +223,7 @@ from glide import (
     GlideClusterClientConfiguration,
     NodeAddress
 )
+
 addresses = [NodeAddress(host="address.example.com", port=6379)]
 client_config = GlideClusterClientConfiguration(addresses, use_tls=True)
 
@@ -234,6 +237,7 @@ from glide import (
     GlideClientConfiguration,
     NodeAddress
 )
+
 addresses = [
     NodeAddress(host="primary.example.com", port=6379),
     NodeAddress(host="replica1.example.com", port=6379),
