@@ -16,6 +16,8 @@ The `NodeAddress` class represents the host and port of a cluster node. The host
 #### Example - Connecting to a cluster
 
 ```typescript
+import GlideClusterClient from "@valkey/valkey-glide";
+
 const addresses = [
     {
         host: "address.example.com",
@@ -51,6 +53,8 @@ Valkey GLIDE also supports Standalone deployments, where the database is hosted 
 #### **Example - Connecting to a standalone** 
 
 ```typescript
+import GlideClient from "@valkey/valkey-glide";
+
 const addresses = [
     {
         host: "primary.example.com",
@@ -145,6 +149,8 @@ Transaction objects can be reused. If you need to execute a particular group of 
 Here's a simple example demonstrating how to create and execute a transaction in standalone mode:
 
 ```typescript
+import Transaction from "@valkey/valkey-glide";
+
 // Initialize a transaction object
 const transaction = new Transaction();
 
@@ -165,6 +171,8 @@ Transactions use the same decoder for all commands in the transaction. For examp
 Here's an example demonstrating how to use `Decoder` and [`route`](https://github.com/valkey-io/valkey-glide/blob/main/node/src/GlideClusterClient.ts#L202) with transaction:
 
 ```typescript
+import ClusterTransaction from "@valkey/valkey-glide";
+
 let transaction = new ClusterTransaction().functionDump();
 const result = await client.exec(transaction, {
     decoder: Decoder.Bytes,
@@ -178,6 +186,8 @@ const data = result?.[0] as Buffer;
 Valkey Glide supports command chaining within a transaction, allowing for a more concise and readable code. Here's how you can use chaining in transactions:
 
 ```typescript
+import ClusterTransaction from "@valkey/valkey-glide";
+
 // Initialize a cluster transaction object
 const transaction = new ClusterTransaction();
 
@@ -201,12 +211,16 @@ expect(results).toEqual(["OK", value, Buffer.from(value)]);
 For a client with cluster-mode disabled:
 
 ```typescript
+import Transaction from "@valkey/valkey-glide";
+
 const transaction = new Transaction(); // For standalone mode
 ```
 
 For a client with cluster-mode enabled:
 
 ```typescript
+import ClusterTransaction from "@valkey/valkey-glide";
+
 const transaction = new ClusterTransaction(); // For cluster mode
 ```
 
@@ -249,6 +263,8 @@ To provide the necessary authentication credentials to the client, you can use t
 #### Example - Connecting with Username and Password to a Cluster
 
 ```typescript
+import GlideClusterClient from "@valkey/valkey-glide";
+
 const addresses = [
     {
         host: "address.example.com",
@@ -271,6 +287,7 @@ const client = await GlideClusterClient.createClient({
 #### Example - Connecting with Username and Password to a Standalone server
 
 ```typescript
+import GlideClient from "@valkey/valkey-glide";
 const addresses = [
     {
         host: "address.example.com",
@@ -298,6 +315,8 @@ It's important to note that TLS support in Valkey GLIDE relies on [rusttls](http
 #### Example - Connecting with TLS Mode Enabled to a Cluster
 
 ```typescript
+import GlideClusterClient from "@valkey/valkey-glide";
+
 const addresses = [
     {
         host: "address.example.com",
@@ -313,6 +332,8 @@ const client = await GlideClusterClient.createClient({
 #### Example - Connecting with TLS Mode Enabled to a Standalone
 
 ```typescript
+import GlideClient from "@valkey/valkey-glide";
+
 const addresses = [
     {
         host: "address.example.com",
@@ -340,6 +361,8 @@ Valkey GLIDE provides support for next read strategies, allowing you to choose t
 #### Example - Use preferReplica Read Strategy
 
 ```typescript
+import GlideClusterClient from "@valkey/valkey-glide";
+
 const addresses = [
     {
         host: "address.example.com",
@@ -370,6 +393,8 @@ Valkey GLIDE allows you to configure timeout settings and reconnect strategies. 
 #### Example - Setting Increased Request Timeout for Long-Running Commands
 
 ```typescript
+import GlideClusterClient from "@valkey/valkey-glide";
+
 const addresses = [
     {
         host: "address.example.com",
@@ -409,6 +434,8 @@ Transaction objects can be reused. If you need to execute a particular group of 
 Here's a simple example demonstrating how to create and execute a transaction in standalone mode:
 
 ```ts
+import Transaction from "@valkey/valkey-glide";
+
 // Initialize a transaction object
 const transaction = new Transaction();
 
@@ -427,6 +454,8 @@ console.log(result); // Output: [OK, OK, null]
 Valkey Glide supports command chaining within a transaction, allowing for a more concise and readable code. Here's how you can use chaining in transactions:
 
 ```ts
+import ClusterTransaction from "@valkey/valkey-glide";
+
 // Initialize a cluster transaction object
 const clusterTransaction = new ClusterTransaction();
 
@@ -445,6 +474,9 @@ console.log(result); // Output: [OK, 'value']
 
 **Creating a Transaction:** Initialize the `Transaction` or `ClusterTransaction` object.
 ```ts
+import Transaction from "@valkey/valkey-glide";
+import ClusterTransaction from "@valkey/valkey-glide";
+
 const transaction = new Transaction();  // For standalone mode
 const clusterTransaction = new ClusterTransaction();  // For cluster mode
 ```
