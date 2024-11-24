@@ -51,6 +51,12 @@ Valkey GLIDE also supports Standalone deployments, where the database is hosted 
 #### **Example - Connecting to a standalone** 
 
 ```python
+from glide import (
+    GlideClient,
+    GlideClientConfiguration,
+    NodeAddress
+)
+
 addresses = [
     NodeAddress(host="primary.example.com", port=6379),
     NodeAddress(host="replica1.example.com", port=6379),
@@ -90,6 +96,8 @@ Transaction objects can be reused. If you need to execute a particular group of 
 Here's a simple example demonstrating how to create and execute a transaction in standalone mode:
 
 ```python
+from glide import Transaction
+
 # Initialize a transaction object
 transaction = Transaction()
 
@@ -108,6 +116,8 @@ print(result) # Output: [OK, OK, None]
 Valkey Glide supports command chaining within a transaction, allowing for a more concise and readable code. Here's how you can use chaining in transactions:
 
 ```python
+from glide import ClusterTransaction
+
 # Initialize a cluster transaction object
 cluster_transaction = ClusterTransaction()
 
@@ -163,6 +173,12 @@ To provide the necessary authentication credentials to the client, you can use t
 #### Example - Connecting with Username and Password to a Cluster
 
 ```python
+from glide import (
+    GlideClusterClient,
+    GlideClusterClientConfiguration,
+    ServerCredentials,
+    NodeAddress
+)
 addresses = [NodeAddress(host="address.example.com", port=6379)]
 credentials = ServerCredentials("passwordA", "user1")
 client_config = GlideClusterClientConfiguration(addresses, credentials=credentials)
@@ -174,6 +190,12 @@ client = await GlideClusterClient.create(client_config)
 #### Example - Connecting with Username and Password to a Standalone server
 
 ```python
+from glide import (
+    GlideClient,
+    GlideClientConfiguration,
+    ServerCredentials,
+    NodeAddress
+)
 addresses = [
     NodeAddress(host="primary.example.com", port=6379),
     NodeAddress(host="replica1.example.com", port=6379),
@@ -194,6 +216,11 @@ It's important to note that TLS support in Valkey GLIDE relies on [rusttls](http
 #### Example - Connecting with TLS Mode Enabled to a Cluster
 
 ```python
+from glide import (
+    GlideClusterClient,
+    GlideClusterClientConfiguration,
+    NodeAddress
+)
 addresses = [NodeAddress(host="address.example.com", port=6379)]
 client_config = GlideClusterClientConfiguration(addresses, use_tls=True)
 
@@ -202,6 +229,11 @@ client = await GlideClusterClient.create(client_config)
 #### Example - Connecting with TLS Mode Enabled to a Standalone server
 
 ```python
+from glide import (
+    GlideClient,
+    GlideClientConfiguration,
+    NodeAddress
+)
 addresses = [
     NodeAddress(host="primary.example.com", port=6379),
     NodeAddress(host="replica1.example.com", port=6379),
@@ -226,6 +258,13 @@ Valkey GLIDE provides support for next read strategies, allowing you to choose t
 #### Example - Use PREFER_REPLICA Read Strategy
 
 ```python
+from glide import (
+    GlideClient,
+    GlideClientConfiguration,
+    NodeAddress,
+    ReadFrom
+)
+
 addresses = [NodeAddress(host="address.example.com", port=6379)]
 client_config = GlideClusterClientConfiguration(addresses, read_from=ReadFrom.PREFER_REPLICA)
 
@@ -249,6 +288,12 @@ Valkey GLIDE allows you to configure timeout settings and reconnect strategies. 
 #### Example - Setting Increased Request Timeout for Long-Running Commands
 
 ```python
+from glide import (
+    GlideClient,
+    GlideClusterClientConfiguration,
+    GlideClusterClient
+)
+
 addresses = [NodeAddress(host="address.example.com", port=6379)]
 client_config = GlideClusterClientConfiguration(addresses, request_timeout=500)
 
