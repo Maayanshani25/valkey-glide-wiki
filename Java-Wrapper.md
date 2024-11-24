@@ -322,3 +322,23 @@ GlideClusterClient config = GlideClusterClientConfiguration.builder()
 
 GlideClusterClient client = GlideClusterClient.createClient(config).get();
 ```
+
+### Tracking resources
+
+GLIDE 1.2 introduces a new NONE Valkey API: `getStatistics` which returns a `HashMap` with (currently) 2 properties (available for both `GlideClient` & `GlideClusterClient`):
+
+- `total_connections` contains the number of active connections across **all** clients
+- `total_clients` contains the number of active clients (regardless of its type)
+
+```java
+GlideClusterClient config = GlideClusterClientConfiguration.builder()
+    .address(NodeAddress.builder()
+        .host("address.example.com")
+        .port(6379).build())
+    .requestTimeout(500)
+    .build();
+
+GlideClusterClient client = GlideClusterClient.createClient(config).get();
+HashMap<String, String> stats = client.getStatistics();
+// do something with the `stats`
+```
