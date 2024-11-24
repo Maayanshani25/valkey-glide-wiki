@@ -16,6 +16,12 @@ The `NodeAddress` class represents the host and port of a cluster node. The host
 #### Example - Connecting to a cluster
 
 ```python
+from glide import (
+    GlideClusterClient,
+    GlideClusterClientConfiguration,
+    NodeAddress
+)
+
 addresses = [NodeAddress(host="address.example.com", port=6379)]
 client_config = GlideClusterClientConfiguration(addresses)
 
