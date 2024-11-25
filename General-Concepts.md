@@ -412,10 +412,9 @@ Valkey Glide's dynamic password update feature supports integration with cloud s
   > *"Google Cloud Memorystore's IAM authentication requires periodic renewal of tokens to maintain secure connections."* - [GCP Memorystore IAM Authentication](https://cloud.google.com/memorystore/docs/cluster/about-iam-auth?hl=en)
 
 
-In all these scenarios, frequently updating passwords or tokens is essential to maintain secure connections and handle failovers effectively. \
-Valkey Glide's dynamic password update feature allows you to update these credentials on-the-fly, ensuring continuous secure access without the need for client restarts or reconnections.
+In all these scenarios, frequently updating passwords or tokens is essential to maintain secure connections and handle failovers effectively. 
 
-By leveraging Valkey Glide's dynamic password update, you can maintain secure and uninterrupted connections, adhering to best practices for password and token management.
+Valkey Glide's dynamic password update feature allows you to update these credentials on-the-fly, ensuring continuous secure access without the need for client restarts or reconnections.
 
 ### Dynamic Password Update Feature
 
