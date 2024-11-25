@@ -92,6 +92,24 @@ Using Little’s Law:
 A default value of 1000 allows for sufficient headroom above this calculated baseline, ensuring performance during short bursts of activity.
 When the inflight request limit is exceeded, excess requests are immediately rejected, and errors are returned to the client.
 
+Python example:
+```python
+cluster_config = GlideClusterClientConfiguration(
+    <some general config>,
+    inflight_requests_limit=inflight_requests_limit,
+)
+```
+
+Java example:
+```java
+GlideClientConfiguration glideClientConfiguration =
+    GlideClientConfiguration.builder()
+        .address(node1address)
+        .inflightRequestsLimit(1000)
+        .build();
+)
+```
+
 ## PubSub Support
 
 The design of the PubSub support in GLIDE aims to unify various nuances into a coherent interface, minimizing differences between Sharded, Cluster, and Standalone configurations.
