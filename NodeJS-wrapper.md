@@ -504,13 +504,23 @@ GLIDE 1.2 introduces a new NONE Valkey API: `getStatistics` which returns an `Ob
 - `total_clients` contains the number of active clients (regardless of its type)
 
 ```ts
-const addresses: NodeAddress[] = [{ host: 'address.example.com', port: 6379 }];
-const clientConfig: GlideClusterClientConfiguration = {
-  addresses,
-  requestTimeout: 500,
-};
+import GlideClusterClient from "@valkey/valkey-glide";
 
-const client = await GlideClusterClient.createClient(clientConfig);
+const addresses = [
+    {
+        host: "address.example.com",
+        port: 6379
+    }
+];
 
+const client = await GlideClusterClient.createClient({
+    addresses: addresses,
+    requestTimeout: 500
+});
+
+// Retrieve statistics
 const stats = await client.getStatistics();
-// do something with the `stats`
+
+// Example: Accessing and printing statistics
+console.log(`Total Connections: ${stats.total_connections}`);
+console.log(`Total Clients: ${stats.total_clients}`);;
