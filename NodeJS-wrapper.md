@@ -495,3 +495,22 @@ await client.exec(transaction);
 const result = await client.exec(transaction)
 console.log(result);  // Output: [OK, 'value']
 ```
+
+### Tracking resources
+
+GLIDE 1.2 introduces a new NONE Valkey API: `getStatistics` which returns an `Object` with (currently) 2 properties (available for both `GlideClient` & `GlideClusterClient`):
+
+- `total_connections` contains the number of active connections across **all** clients
+- `total_clients` contains the number of active clients (regardless of its type)
+
+```ts
+const addresses: NodeAddress[] = [{ host: 'address.example.com', port: 6379 }];
+const clientConfig: GlideClusterClientConfiguration = {
+  addresses,
+  requestTimeout: 500,
+};
+
+const client = await GlideClusterClient.createClient(clientConfig);
+
+const stats = await client.getStatistics();
+// do something with the `stats`
