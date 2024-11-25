@@ -323,6 +323,10 @@ client_config = GlideClusterClientConfiguration(addresses, request_timeout=500)
 
 client = await GlideClusterClient.create(client_config)
 
+# Retrieve statistics
 stats = await client.get_statistics()
-// do something with the `stats`
+
+# Example: Accessing and printing statistics
+print(f"Total Connections: {stats['total_connections']}")
+print(f"Total Clients: {stats['total_clients']}")
 ```
