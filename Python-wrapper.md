@@ -312,10 +312,17 @@ GLIDE 1.2 introduces a new NONE Valkey API: `getStatistics` which returns a `Dic
 - `total_clients` contains the number of active clients (regardless of its type)
 
 ```python
+from glide import (
+    NodeAddress,
+    GlideClusterClientConfiguration,
+    GlideClusterClient
+)
+
 addresses = [NodeAddress(host="address.example.com", port=6379)]
 client_config = GlideClusterClientConfiguration(addresses, request_timeout=500)
 
 client = await GlideClusterClient.create(client_config)
+
 stats = await client.get_statistics()
 // do something with the `stats`
 ```
