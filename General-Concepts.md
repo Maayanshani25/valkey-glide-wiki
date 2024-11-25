@@ -397,7 +397,7 @@ Valkey/Redis-OSS supports authentication mechanisms, enabling secure connections
 
 ### Integration with AWS and GCP Services
 
-Valkey Glide's dynamic password update feature supports integration with cloud services like Amazon ElastiCache, MemoryDB, and Google Cloud Memorystore.
+Glide's dynamic password update feature supports integration with cloud services like Amazon ElastiCache, MemoryDB, and Google Cloud Memorystore.
 
 - **Amazon ElastiCache**: Supports password-based and IAM authentication. AWS recommends regular password rotations.
   
@@ -414,7 +414,7 @@ Valkey Glide's dynamic password update feature supports integration with cloud s
 
 In all these scenarios, frequently updating passwords or tokens is essential to maintain secure connections and handle failovers effectively. 
 
-Valkey Glide's dynamic password update feature allows you to update these credentials on-the-fly, ensuring continuous secure access without the need for client restarts or reconnections.
+Glide's dynamic password update feature allows you to update these credentials on-the-fly, ensuring continuous secure access without the need for client restarts or reconnections.
 
 ### Dynamic Password Update Feature
 
@@ -431,7 +431,7 @@ For most scenarios, you can update the password without immediate re-authenticat
 
 ### Usage Examples
 
-Below are examples demonstrating how to utilize the dynamic password update feature in different programming languages using Valkey Glide.
+Below are examples demonstrating how to utilize the dynamic password update feature in different programming languages using Glide.
 
 #### Java Example
 
@@ -551,4 +551,4 @@ asyncio.run(main())
 - **Principle of Least Privilege**: Use ACLs to assign minimal necessary permissions to users.
 - **Monitor Authentication Events**: Track authentication attempts and token renewals to detect and respond to potential security threats promptly.
 
-By leveraging Valkey Glide's dynamic password update capability, you ensure that your applications maintain secure and uninterrupted connections to Valkey, adhering to both internal security policies and best practices recommended by cloud service providers like AWS and GCP.
+By leveraging Glide's dynamic password update capability, you ensure that your applications maintain secure and uninterrupted connections to Valkey, adhering to both internal security policies and best practices recommended by cloud service providers like AWS and GCP.
