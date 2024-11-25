@@ -258,6 +258,7 @@ Valkey GLIDE provides support for next read strategies, allowing you to choose t
 |---	|---	|
 |`PRIMARY`	|Always read from primary, in order to get the freshest data	|
 |`PREFER_REPLICA`	|Spread requests between all replicas in a round robin manner. If no replica is available, route the requests to the primary	|
+|`AZ_AFFINITY`	|Spread the read requests between replicas in the same client's availability zone in a round robin manner, falling back to other replicas or the primary if needed.	|
 
 #### Example - Use PREFER_REPLICA Read Strategy
 
@@ -275,6 +276,26 @@ client_config = GlideClusterClientConfiguration(addresses, read_from=ReadFrom.PR
 client = await GlideClusterClient.create(client_config)
 await client.set("key1", "val1")
 # get will read from one of the replicas
+await client.get("key1")
+```
+
+#### Example - Use AZ_AFFINITY Read Strategy
+If ReadFrom strategy is AZ_AFFINITY, 'client_az' setting is required to ensures that readonly commands are directed to replicas within the specified AZ if exits.
+
+```python
+from glide import (
+    GlideClient,
+    GlideClientConfiguration,
+    NodeAddress,
+    ReadFrom
+)
+
+addresses = [NodeAddress(host="address.example.com", port=6379)]
+client_config = GlideClusterClientConfiguration(addresses, read_from=ReadFrom.AZ_AFFINITY, client_az="us-east-1a")
+
+client = await GlideClusterClient.create(client_config)
+await client.set("key1", "val1")
+# get will read from one of the replicas in the same client's availability zone if exits.
 await client.get("key1")
 ```
 
