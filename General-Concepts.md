@@ -414,8 +414,6 @@ Glide's dynamic password update feature supports integration with cloud services
 
 In all these scenarios, frequently updating passwords or tokens is essential to maintain secure connections and handle failovers effectively. 
 
-Glide's dynamic password update feature allows you to update these credentials on-the-fly, ensuring continuous secure access without the need for client restarts or reconnections.
-
 ### Dynamic Password Update Feature
 
 The dynamic password update functionality allows clients to update their connection passwords on-the-fly, ensuring continuous operation without the need for client restarts or reconnections. \
