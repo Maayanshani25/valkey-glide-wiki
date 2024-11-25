@@ -381,6 +381,7 @@ await client.get("key1");
 ```
 
 #### Example - Use AZAffinity Read Strategy
+If ReadFrom strategy is AZAffinity, 'clientAz' setting is required to ensures that readonly commands are directed to replicas within the specified AZ if exits.
 
 ```typescript
 import GlideClusterClient from "@valkey/valkey-glide";
