@@ -523,4 +523,4 @@ const stats = await client.getStatistics();
 
 // Example: Accessing and printing statistics
 console.log(`Total Connections: ${stats.total_connections}`);
-console.log(`Total Clients: ${stats.total_clients}`);;
+console.log(`Total Clients: ${stats.total_clients}`);
