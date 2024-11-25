@@ -416,7 +416,7 @@ Valkey Glide's dynamic password update feature allows you to update these creden
 
 By leveraging Valkey Glide's dynamic password update, you can maintain secure and uninterrupted connections, adhering to best practices for password and token management.
 
-#### Dynamic Password Update Feature
+### Dynamic Password Update Feature
 
 The dynamic password update functionality allows clients to update their connection passwords on-the-fly, ensuring continuous operation without the need for client restarts or reconnections. \
 This feature is particularly useful for scenarios where passwords need to be rotated regularly to maintain secure connections. Updating the password immediately when server-side password changes is crucial to avoid disconnection and reconnection issues due to password mismatch.
