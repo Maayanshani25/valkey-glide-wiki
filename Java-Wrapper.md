@@ -280,7 +280,7 @@ Valkey GLIDE provides support for next read strategies, allowing you to choose t
 |---	|---	|
 |`PRIMARY`	|Always read from primary, in order to get the freshest data.	|
 |`PREFER_REPLICA`	|Spread requests between all replicas in a round robin manner. If no replica is available, route the requests to the primary.	|
-|`AZ_AFFINITY`	|Spread the read requests between replicas in the same client's Aviliablity zone in a round robin manner, falling back to other replicas or the primary if needed.	|
+|`AZ_AFFINITY`	|Spread the read requests between replicas in the same client's availability zone in a round robin manner, falling back to other replicas or the primary if needed.	|
 
 #### Example - Use PREFER_REPLICA Read Strategy
 
