@@ -388,7 +388,7 @@ This enhancement facilitates seamless password rotations, ensuring uninterrupted
 
 ### Authentication Context
 
-Valkey Glide supports authentication mechanisms similar to Redis-OSS, enabling secure connections through passwords. Proper authentication is crucial for restricting access to authorized clients and safeguarding your data.
+Valkey/Redis-OSS supports authentication mechanisms, enabling secure connections through passwords. Proper authentication is crucial for restricting access to authorized clients and safeguarding your data.
 
 - **Password Authentication**: Clients authenticate using a predefined password.
 - **Access Control Lists (ACLs)**: Offers granular user permissions with individual passwords. For more information, refer to the [Valkey ACL documentation](https://valkey.io/topics/acl/).
