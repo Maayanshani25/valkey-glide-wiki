@@ -316,7 +316,6 @@ addresses = [NodeAddress(host="address.example.com", port=6379)]
 client_config = GlideClusterClientConfiguration(addresses, request_timeout=500)
 
 client = await GlideClusterClient.create(client_config)
-
 stats = await client.get_statistics()
 // do something with the `stats`
 ```
