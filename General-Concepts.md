@@ -421,6 +421,8 @@ This feature is particularly useful for scenarios where passwords need to be rot
 
 For most scenarios, you can update the password without immediate re-authentication. However, for cases like IAM authentication where tokens need to be refreshed periodically (e.g., every 12 hours), you can utilize the `immediateAuth`/`immediate_auth` option to re-authenticate immediately.
 
+In case you want to remove the password from the connection configuration, you can pass `null`/`None` as the password.
+
 * *Note that the functionality does not rotate the password on the server-side. It only updates the client-side password to maintain secure connections.*
 
 **Benefits:**
