@@ -357,6 +357,7 @@ Valkey GLIDE provides support for next read strategies, allowing you to choose t
 |---	|---	|
 |`primary`	|Always read from primary, in order to get the freshest data	|
 |`preferReplica`	|Spread requests between all replicas in a round robin manner. If no replica is available, route the requests to the primary	|
+|`AZAffinity`	|Spread the read requests between replicas in the same client's availability zone in a round robin manner, falling back to other replicas or the primary if needed.	|
 
 #### Example - Use preferReplica Read Strategy
 
@@ -376,6 +377,28 @@ const client = await GlideClusterClient.createClient({
 });
 await client.set("key1", "val1");
 /// get will read from one of the replicas
+await client.get("key1");
+```
+
+#### Example - Use AZAffinity Read Strategy
+
+```typescript
+import GlideClusterClient from "@valkey/valkey-glide";
+
+const addresses = [
+    {
+        host: "address.example.com",
+        port: 6379
+    }
+];
+
+const client = await GlideClusterClient.createClient({
+    addresses: addresses,
+    readFrom: "AZAffinity" as ReadFrom,
+    clientAz: "us-east-1a",
+});
+await client.set("key1", "val1");
+/// get will read from one of the replicas in the same client's availability zone if exits.
 await client.get("key1");
 ```
 
