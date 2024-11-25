@@ -96,7 +96,7 @@ Python example:
 ```python
 cluster_config = GlideClusterClientConfiguration(
     <some general config>,
-    inflight_requests_limit=<Customer config>,
+    inflight_requests_limit=<customer config>,
 )
 ```
 
@@ -105,7 +105,7 @@ Java example:
 GlideClientConfiguration glideClientConfiguration =
     GlideClientConfiguration.builder()
         .address(node1address)
-        .inflightRequestsLimit(<Customer config>)
+        .inflightRequestsLimit(<customer config>)
         .build();
 )
 ```
