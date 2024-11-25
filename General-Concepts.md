@@ -423,9 +423,11 @@ This feature is particularly useful for scenarios where passwords need to be rot
 
 For most scenarios, you can update the password without immediate re-authentication. However, for cases like IAM authentication where tokens need to be refreshed periodically (e.g., every 12 hours), you can utilize the `immediateAuth`/`immediate_auth` option to re-authenticate immediately.
 
+* *Note that the functionality does not rotate the password on the server-side. It only updates the client-side password to maintain secure connections.*
+
 **Benefits:**
 
-- **Seamless Password Rotation**: Rotate passwords without interrupting service.
+- **Seamless Password Update**: Update passwords without interrupting service.
 - **Enhanced Security**: Regularly update passwords to mitigate unauthorized access risks.
 - **Operational Efficiency**: Simplify password management and reduce maintenance overhead.
 
