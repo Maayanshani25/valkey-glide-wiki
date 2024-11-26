@@ -435,7 +435,7 @@ In all these scenarios, frequently updating passwords or tokens is essential to 
 ### Dynamic Password Update Feature
 
 The dynamic password update functionality allows clients to update their connection passwords on-the-fly, ensuring continuous operation without the need for client restarts or reconnections. \
-This feature is particularly useful for scenarios where passwords need to be rotated regularly to maintain secure connections. Updating the password immediately when server-side password changes is crucial to avoid disconnection and reconnection issues due to password mismatch.
+This feature is particularly useful for scenarios where passwords need to be rotated regularly to maintain secure connections. *Updating the password immediately when server-side password changes is crucial to avoid disconnection and reconnection issues due to password mismatch*.
 
 For most scenarios, you can update the password without immediate re-authentication. However, for cases like IAM authentication where tokens need to be refreshed periodically (e.g., every 12 hours), you can utilize the `immediateAuth`/`immediate_auth` option to re-authenticate immediately.
 
@@ -474,7 +474,10 @@ public class Main {
         );
 
         // Define your server credentials
-        ServerCredentials credentials = new ServerCredentials("your-username", "your-password");
+        ServerCredentials credentials = ServerCredentials.builder()
+            .username("your-username")
+            .password("your-password-or-token")
+            .build();
 
         // Create a configuration for the GlideClusterClient
         GlideClusterClientConfiguration config = new GlideClusterClientConfiguration.Builder()
@@ -489,8 +492,11 @@ public class Main {
 
         // Update password dynamically
         client.updateConnectionPassword("your-new-password");
-        // To perform immediate reauthentication, set the second parameter to true
+        // To perform immediate re-authentication, set the second parameter to true
         client.updateConnectionPassword("your-new-password", true);
+
+        // Resetting password by passing null
+        client.updateConnectionPassword(null); // Note: This will clear the password from the connection configuration.
 
         System.out.println("GlideClusterClient created and password updated.");
     }
@@ -507,7 +513,7 @@ async function main() {
 // Define your server credentials
 const credentials: ServerCredentials = {
     username: 'your-username',
-    password: 'your-password'
+    password: 'your-password-or-token'
 };
 
 // Create a configuration for the GlideClusterClient
@@ -525,8 +531,11 @@ const client = await GlideClusterClient.createClient(config);
 
 // Update password dynamically
 await client.updateConnectionPassword('your-new-password'); 
-// To perform immediate reauthentication, set the second parameter to true
+// To perform immediate re-authentication, set the second parameter to true
 await client.updateConnectionPassword('your-new-password', true);
+
+// Resetting password by passing null
+client.updateConnectionPassword(null); // Note: This will clear the password from the connection configuration.
 }
 ```
 
@@ -540,7 +549,7 @@ async def main():
     # Define your server credentials
     credentials = ServerCredentials(
         username='your-username',
-        password='your-password'
+        password='your-password-or-token'
     )
     # Define the list of node addresses
     addresses = [
@@ -559,10 +568,39 @@ async def main():
 
     # Update password dynamically
     await client.update_connection_password('your-new-password')
-    # To perform immediate reauthentication, set the second parameter to true
+    # To perform immediate re-authentication, set the second parameter to true
     await client.update_connection_password('your-new-password', True)
+    # Resetting password by passing None
+    await client.update_connection_password(None) # Note: This will clear the password from the connection configuration.
+
+
 asyncio.run(main())
 ```
+
+#### Optional Username  
+In scenarios where a username is not required (e.g., IAM authentication), you can omit it or set it to `null`.  
+
+**Java Example**:  
+```java
+ServerCredentials credentials = ServerCredentials.builder()
+    .password("your-password-or-token")
+    .build();
+```
+
+**Node.js Example:**
+```typescript
+const credentials: ServerCredentials = {
+    password: 'your-password-or-token'
+};
+```
+
+**Python Example:**
+```python
+credentials = ServerCredentials(
+    password='your-password-or-token'
+)
+```
+
 #### Best Practices for Authentication
 
 - **Regular Credential Rotation**: Frequently update passwords and tokens using the dynamic password update feature to maintain secure connections.
