@@ -264,8 +264,8 @@ Valkey GLIDE provides support for next read strategies, allowing you to choose t
 
 ```python
 from glide import (
-    GlideClient,
-    GlideClientConfiguration,
+    GlideClusterClient,
+    GlideClusterClientConfiguration,
     NodeAddress,
     ReadFrom
 )
@@ -284,8 +284,8 @@ If ReadFrom strategy is AZ_AFFINITY, 'client_az' setting is required to ensures 
 
 ```python
 from glide import (
-    GlideClient,
-    GlideClientConfiguration,
+    GlideClusterClient,
+    GlideClusterClientConfiguration,
     NodeAddress,
     ReadFrom
 )
