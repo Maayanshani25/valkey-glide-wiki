@@ -738,10 +738,12 @@ try (GlideClient glideClient = GlideClient.createClient(config).get()) {
 
 ```typescript
 import {
+    GlideJson,
     FtSearchOptions,
     FtSearchReturnType,
     GlideClient,
     GlideFt,
+    VectorField
 } from "@valkey/valkey-glide";
 
 const client = await GlideClient.createClient(config);
@@ -783,7 +785,43 @@ console.log(searchResult[1]); // Output: An array with search result containing 
 
 #### Python Vector Search Module Example
 ```python
-TODO
+from glide import (glide_json, NumericField, ReturnField, FtCreateOptions, FtSearchOptions)
+import json
+
+client = await GlideClient.create(config)
+
+prefix = "{json}:"
+json_key1 = prefix + "1"
+json_key2 = prefix + "2"
+json_value1 = {"a": 11111, "b": 2, "c": 3}
+json_value2 = {"a": 22222, "b": 2, "c": 3}
+index = prefix + "index"
+
+await ft.create(client, index, 
+    schema=[
+        NumericField("$.a", "a"),
+        NumericField("$.b", "b"),
+    ],
+    options=FtCreateOptions(DataType.JSON),
+)
+
+await GlideJson.set(client, json_key1, "$", json.dumps(json_value1))
+await GlideJson.set(client, json_key2, "$", json.dumps(json_value2))
+
+time.sleep(1)
+
+ft_search_options = FtSearchOptions(
+    return_fields=[
+        ReturnField(field_identifier="a", alias="a_new"),
+        ReturnField(field_identifier="b", alias="b_new"),
+    ]
+)
+
+# Search the index for string inputs.
+search_result = await ft.search(client, index, "*", options=ft_search_options)
+
+print(search_result[0]) # prints "2"
+print(search_result[1]) # prints a search result with "{json}:1" and "{json}:2"
 ```
 
 
