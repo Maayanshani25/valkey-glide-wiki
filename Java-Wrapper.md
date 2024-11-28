@@ -76,6 +76,59 @@ GlideClient standaloneClient = GlideClient.createClient(config).get();
 
 For information on the supported commands and their corresponding parameters, we recommend referring to [the documentation in the code](https://github.com/valkey-io/valkey-glide/tree/main/java/client/src/main/java/glide/api/commands). This documentation provides in-depth insights into the usage and options available for each command.
 
+### Async Command API
+
+Valkey-Glide provides an async command API.  All single commands (including MULTI/EXEC, and EVAL) return a asynchronous promise to complete the command wrapped by a `CompletableFuture`.  The `CompletableFuture` object will return a result when the action is completed, or will throw an `Exception` if the action times out, is cancelled, or is interrupted.  If the command is otherwise unsuccessful, the result will contain an error result and message.  
+
+Asynchronous APIs lend themselves well to concurrent calls.  See the [BenchmarkingApp](https://github.com/valkey-io/valkey-glide/blob/main/java/benchmarks/src/main/java/glide/benchmarks/utils/Benchmarking.java#L116) for an example on how to execute and handle results using an `ExecutorService`.  
+
+```java
+ExecutorService executor =
+    new ThreadPoolExecutor(
+        0,
+        Integer.MAX_VALUE,
+        60L,
+        TimeUnit.SECONDS,
+        new SynchronousQueue<Runnable>(),
+        // include a RejectedExecutionHandler, as some threads may be interrupted
+        (r, poolExecutor) -> {
+            if (!poolExecutor.isShutdown()) {
+                try {
+                    poolExecutor.getQueue().put(r);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException("interrupted");
+                }
+            }
+        });
+```
+
+The action can be executed in a separate thread by the `Executor`, for example:
+
+```java
+List<CompletableFuture<String>> getCommandTasks = new ArrayList<>();
+getCommandTasks.add(CompletableFuture.supplyAsync(
+    () -> {
+        try {
+            return client.get("myKey").get();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    },
+    executor
+));
+
+CompletableFuture<String>[] completableAsyncTaskArray =
+    getCommandTasks.toArray(new CompletableFuture[getCommandTasks.size()]);
+
+try {
+    // wait for all futures to complete
+    CompletableFuture.allOf(completableAsyncTaskArray).get();
+} catch (InterruptedException | ExecutionException e) {
+    e.printStackTrace();
+    throw new RuntimeException(e);
+}
+```
+
 ### Command String Arguments
 Valkey strings store sequences of bytes, that may include text, serialized objects, or binary arrays. As such, to pass Valkey strings as arguments to commands, or receive Valkey strings in responses, Glide offers two APIs:
 1. `String`:  for common case `UTF-8` converted strings keys and `String` objects can be passed and receives as a Java `String`.
@@ -184,6 +237,32 @@ client.exec(transaction).get();
 Object[] result = client.exec(transaction).get();
 System.out.println(result[0]); // Output: OK
 System.out.println(result[1]); // Output: "value"
+```
+
+## Client Usage
+
+### Command Concurrency
+
+All GLIDE commands make asynchronous calls using CompletableFuture responses.  
+
+### Tracking resources
+
+GLIDE 1.2 introduces a new NONE Valkey API: `getStatistics` which returns a `HashMap` with (currently) 2 properties (available for both `GlideClient` & `GlideClusterClient`):
+
+- `total_connections` contains the number of active connections across **all** clients
+- `total_clients` contains the number of active clients (regardless of its type)
+
+```java
+GlideClusterClient config = GlideClusterClientConfiguration.builder()
+    .address(NodeAddress.builder()
+        .host("address.example.com")
+        .port(6379).build())
+    .requestTimeout(500)
+    .build();
+
+GlideClusterClient client = GlideClusterClient.createClient(config).get();
+HashMap<String, String> stats = client.getStatistics();
+// do something with the `stats`
 ```
 
 ## Advanced Configuration Settings
@@ -343,24 +422,4 @@ GlideClusterClient config = GlideClusterClientConfiguration.builder()
     .build();
 
 GlideClusterClient client = GlideClusterClient.createClient(config).get();
-```
-
-### Tracking resources
-
-GLIDE 1.2 introduces a new NONE Valkey API: `getStatistics` which returns a `HashMap` with (currently) 2 properties (available for both `GlideClient` & `GlideClusterClient`):
-
-- `total_connections` contains the number of active connections across **all** clients
-- `total_clients` contains the number of active clients (regardless of its type)
-
-```java
-GlideClusterClient config = GlideClusterClientConfiguration.builder()
-    .address(NodeAddress.builder()
-        .host("address.example.com")
-        .port(6379).build())
-    .requestTimeout(500)
-    .build();
-
-GlideClusterClient client = GlideClusterClient.createClient(config).get();
-HashMap<String, String> stats = client.getStatistics();
-// do something with the `stats`
 ```
