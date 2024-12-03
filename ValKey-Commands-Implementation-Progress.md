@@ -122,7 +122,7 @@
 | spop                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | restore                  | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | hvals                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| sinter                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| sinter                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | xtrim                    | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | zrank                    | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | zinterstore              | Done             | Done             | Done             | Not started      | Not started      | Not started      |
