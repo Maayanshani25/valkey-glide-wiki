@@ -159,7 +159,7 @@
 | xlen                     | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | xpending                 | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | discard                  | API not required | API not required | API not required | API not required | API not required | Not started      |
-| sunionstore              | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| sunionstore              | Done             | Done             | Done             | Not started      | In Progress     | Not started      |
 | xrevrange                | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | bzpopmin                 | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | rpushx                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
