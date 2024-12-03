@@ -139,7 +139,7 @@
 | pubsub numsub            | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | pubsub shardchannels     | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | pubsub shardnumsub       | Done             | Done             | Done             | Not started      | Not started      | Not started      |
-| sunion                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| sunion                   | Done             | Done             | Done             | Not started      | In progress     | Not started      |
 | zunionstore              | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | lset                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | xclaim                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
@@ -159,7 +159,7 @@
 | xlen                     | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | xpending                 | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | discard                  | API not required | API not required | API not required | API not required | API not required | Not started      |
-| sunionstore              | Done             | Done             | Done             | Not started      | In Progress     | Not started      |
+| sunionstore              | Done             | Done             | Done             | Not started      | Not started    | Not started      |
 | xrevrange                | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | bzpopmin                 | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | rpushx                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
