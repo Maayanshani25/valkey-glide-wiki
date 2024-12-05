@@ -178,7 +178,7 @@
 | bitcount                 | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | sdiffstore               | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | touch                    | Done             | Done             | Done             | Not started      | In progress      | Not started      |
-| smismember               | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| smismember               | Done             | Done             | Done             | Not started      | In progress      | Not started      |
 | zremrangebylex           | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | zrevrangebylex           | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       | Not started      |
 | lpushx                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
