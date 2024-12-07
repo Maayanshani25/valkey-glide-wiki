@@ -79,7 +79,7 @@
 | zremrangebyrank          | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | psetex                   | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       |
 | flushall                 | Done             | Done             | Done             | Not started      | Not started      | Not started      |
-| sscan                    | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| sscan                    | Done             | Done             | Done             | Not started      | In Progress      | Not started      |
 | flushdb                  | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | xadd                     | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | hlen                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
@@ -152,7 +152,7 @@
 | xinfo groups             | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | xinfo stream             | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | setbit                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
-| smove                    | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| smove                    | Done             | Done             | Done             | Not started      | In Progress      | Not started      |
 | xrange                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | xdel                     | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | linsert                  | Done             | Done             | Done             | Not started      | Done             | Not started      |
