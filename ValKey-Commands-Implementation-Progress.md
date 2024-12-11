@@ -159,7 +159,7 @@
 | xlen                     | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | xpending                 | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | discard                  | API not required | API not required | API not required | API not required | API not required | Not started      |
-| sunionstore              | Done             | Done             | Done             | Not started      | Not started    | Not started      |
+| sunionstore              | Done             | Done             | Done             | Not started      | In progress      | Not started      |
 | xrevrange                | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | bzpopmin                 | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | rpushx                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
@@ -170,7 +170,7 @@
 | msetnx                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | sdiff                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | setrange                 | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| sinterstore              | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| sinterstore              | Done             | Done             | Done             | Not started      | In progress      | Not started      |
 | zpopmax                  | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | georadius_ro             | Deprecated       | Deprecated       | Deprecated       | Deprecated       | Deprecated       | Deprecated       |
 | georadius                | Deprecated       | Deprecated       | Deprecated       | Deprecated       | Deprecated       | Deprecated       |
