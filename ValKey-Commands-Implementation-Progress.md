@@ -170,7 +170,7 @@
 | msetnx                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | sdiff                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | setrange                 | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| sinterstore              | Done             | Done             | Done             | Not started      | In progress      | Not started      |
+| sinterstore              | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | zpopmax                  | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | georadius_ro             | Deprecated       | Deprecated       | Deprecated       | Deprecated       | Deprecated       | Deprecated       |
 | georadius                | Deprecated       | Deprecated       | Deprecated       | Deprecated       | Deprecated       | Deprecated       |
