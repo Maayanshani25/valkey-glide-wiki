@@ -28,7 +28,7 @@
 | smembers                 | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | scard                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | hmset                    | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       |
-| exists                   | Done             | Done             | Done             | Not started      | In progress      | Not started      |
+| exists                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | command                  | N/A              | N/A              | N/A              | N/A              | N/A              | N/A              |
 | readonly                 | N/A              | N/A              | N/A              | N/A              | N/A              | N/A              |
 | hget                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
@@ -38,10 +38,10 @@
 | hexists                  | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | hincrby                  | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | hincrbyfloat             | Done             | Done             | Done             | Not started      | Not started      | Not started      |
-| expire                   | Done             | Done             | Done             | Not started      | In progress      | Not started      |
-| pexpireat                | Done             | Done             | Done             | Not started      | In progress      | Not started      |
-| pexpire                  | Done             | Done             | Done             | Not started      | In progress      | Not started      |
-| expireat                 | Done             | Done             | Done             | Not started      | In progress      | Not started      |
+| expire                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
+| pexpireat                | Done             | Done             | Done             | Not started      | Done             | Not started      |
+| pexpire                  | Done             | Done             | Done             | Not started      | Done             | Not started      |
+| expireat                 | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | lpush                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | lpop                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | rpush                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
@@ -52,7 +52,7 @@
 | ltrim                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | lrange                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | unlink                   | Done             | Done             | Done             | Not started      | In progress      | Not started      |
-| ttl                      | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| ttl                      | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | publish                  | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | subscribe                | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | eval                     | Done             | Done             | Done             | Not started      | Not started      | Not started      |
@@ -87,7 +87,7 @@
 | zrevrangebyscore         | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       |
 | watch                    | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | sismember                | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| pttl                     | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| pttl                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | zscore                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | dbsize                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | zrevrange                | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       |
@@ -227,8 +227,8 @@
 | bzmpop                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | lcs                      | Done             | Done             | Done             | Not started      | In progress      | Not started      |
 | lolwut                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
-| expiretime               | Done             | Done             | Done             | Not started      | In progress      | Not started      |
-| pexpiretime              | Done             | Done             | Done             | Not started      | In progress      | Not started      |
+| expiretime               | Done             | Done             | Done             | Not started      | Done             | Not started      |
+| pexpiretime              | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | hstrlen                  | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | blmove                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | blmpop                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
