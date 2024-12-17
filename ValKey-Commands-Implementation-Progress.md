@@ -51,7 +51,7 @@
 | lrem                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | ltrim                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | lrange                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| unlink                   | Done             | Done             | Done             | Not started      | In progress      | Not started      |
+| unlink                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | ttl                      | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | publish                  | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | subscribe                | Done             | Done             | Done             | Not started      | Not started      | Not started      |
@@ -73,7 +73,7 @@
 | unsubscribe              | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | psubscribe               | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | zcard                    | Done             | Done             | Done             | Not started      | Not started      | Not started      |
-| type                     | Done             | Done             | Done             | Not started      | In progress      | Not started      |
+| type                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | echo                     | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | brpop                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | zremrangebyrank          | Done             | Done             | Done             | Not started      | Not started      | Not started      |
@@ -177,7 +177,7 @@
 | pfmerge                  | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | bitcount                 | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | sdiffstore               | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| touch                    | Done             | Done             | Done             | Not started      | In progress      | Not started      |
+| touch                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | smismember               | Done             | Done             | Done             | Not started      | In progress      | Not started      |
 | zremrangebylex           | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | zrevrangebylex           | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       | Not started      |
