@@ -104,7 +104,7 @@
 | punsubscribe             | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | persist                  | Done             | Done             | Done             | Not started      | In progress      | Not started      |
 | strlen                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| zincrby                  | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| zincrby                  | Done             | Done             | Done             | Not started      | In progress      | Not started      |
 | xgroup create            | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | xgroup createconsumer    | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | xgroup delconsumer       | Done             | Done             | Done             | Not started      | Not started      | Not started      |
@@ -161,7 +161,7 @@
 | discard                  | API not required | API not required | API not required | API not required | API not required | Not started      |
 | sunionstore              | Done             | Done             | Done             | Not started      | In progress      | Not started      |
 | xrevrange                | Done             | Done             | Done             | Not started      | Not started      | Not started      |
-| bzpopmin                 | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| bzpopmin                 | Done             | Done             | Done             | Not started      | In progress      | Not started      |
 | rpushx                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | sort                     | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | geoadd                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
