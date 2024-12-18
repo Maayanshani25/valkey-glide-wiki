@@ -99,7 +99,7 @@
 | zcount                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | time                     | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | append                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| rename                   | Done             | Done             | Done             | Not started      | In progress      | Not started      |
+| rename                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | lindex                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | punsubscribe             | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | persist                  | Done             | Done             | Done             | Not started      | In progress      | Not started      |
@@ -115,7 +115,7 @@
 | zscan                    | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | xreadgroup               | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | pfadd                    | Done             | Done             | Done             | Not started      | In progress      | Not started      |
-| renamenx                 | Done             | Done             | Done             | Not started      | In progress      | Not started      |
+| renamenx                 | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | zpopmin                  | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | pfcount                  | Done             | Done             | Done             | Not started      | In progress      | Not started      |
 | wait                     | Done             | Done             | Done             | Not started      | Not started      | Not started      |
