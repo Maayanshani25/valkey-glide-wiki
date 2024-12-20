@@ -36,8 +36,8 @@
 | hdel                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | hmget                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | hexists                  | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| hincrby                  | Done             | Done             | Done             | Not started      | Not started      | Not started      |
-| hincrbyfloat             | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| hincrby                  | Done             | Done             | Done             | Not started      | Done             | Not started      |
+| hincrbyfloat             | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | expire                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | pexpireat                | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | pexpire                  | Done             | Done             | Done             | Not started      | Done             | Not started      |
@@ -67,7 +67,7 @@
 | setnx                    | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       |
 | bgsave                   | Not needed       | Not needed       | Not needed       | Not started      | Not started      | Not started      |
 | setex                    | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       |
-| zadd                     | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| zadd                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | zrem                     | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | zrange                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | unsubscribe              | Done             | Done             | Done             | Not started      | Not started      | Not started      |
@@ -79,7 +79,7 @@
 | zremrangebyrank          | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | psetex                   | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       |
 | flushall                 | Done             | Done             | Done             | Not started      | Not started      | Not started      |
-| sscan                    | Done             | Done             | Done             | Not started      | In Progress      | Not started      |
+| sscan                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | flushdb                  | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | xadd                     | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | hlen                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
@@ -104,7 +104,7 @@
 | punsubscribe             | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | persist                  | Done             | Done             | Done             | Not started      | In progress      | Not started      |
 | strlen                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| zincrby                  | Done             | Done             | Done             | Not started      | In progress      | Not started      |
+| zincrby                  | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | xgroup create            | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | xgroup createconsumer    | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | xgroup delconsumer       | Done             | Done             | Done             | Not started      | Not started      | Not started      |
@@ -139,7 +139,7 @@
 | pubsub numsub            | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | pubsub shardchannels     | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | pubsub shardnumsub       | Done             | Done             | Done             | Not started      | Not started      | Not started      |
-| sunion                   | Done             | Done             | Done             | Not started      | In progress     | Not started      |
+| sunion                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | zunionstore              | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | lset                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | xclaim                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
@@ -152,7 +152,7 @@
 | xinfo groups             | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | xinfo stream             | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | setbit                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
-| smove                    | Done             | Done             | Done             | Not started      | In Progress      | Not started      |
+| smove                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | xrange                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | xdel                     | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | linsert                  | Done             | Done             | Done             | Not started      | Done             | Not started      |
