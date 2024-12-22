@@ -19,6 +19,10 @@ The `NodeAddress` class represents the host and port of a cluster node. The host
 #### Example - Connecting to a cluster
 
 ```java
+import glide.api.GlideClusterClient;
+import glide.api.models.configuration.GlideClusterClientConfiguration;
+import glide.api.models.configuration.NodeAddress;
+
 NodeAddress address = NodeAddress.builder()
     .host("address.example.com")
     .port(6379)
@@ -54,6 +58,10 @@ Valkey GLIDE also supports Standalone deployments, where the database is hosted 
 #### **Example - Connecting to a standalone** 
 
 ```java
+import glide.api.GlideClient;
+import glide.api.models.configuration.GlideClientConfiguration;
+import glide.api.models.configuration.NodeAddress;
+
 GlideClientConfiguration config = GlideClientConfiguration.builder()
     .address(NodeAddress.builder()
         .host("primary.example.com")
