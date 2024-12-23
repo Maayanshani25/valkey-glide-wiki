@@ -91,7 +91,7 @@
 | zscore                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | dbsize                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | zrevrange                | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       |
-| hscan                    | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| hscan                    | Done             | Done             | Done             | Not started      | In Progress      | Not started      |
 | unwatch                  | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | hkeys                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | xread                    | Done             | Done             | Done             | Not started      | Not started      | Not started      |
