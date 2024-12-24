@@ -6,6 +6,10 @@ The schedule will be updated and can be followed here:
 - TBD
 
 ## Next Agenda
+* golang client - windows support
+
+## Past meetings:
+### 17-12-24:
 - Bar — notes from re:invent 
 - Go public preview plans
 - Mort — Glide C++ demo
@@ -13,7 +17,3 @@ The schedule will be updated and can be followed here:
 - Asaf — Open issues 
 - WIP sharing (Optional)
 - Open stage base on time left (Optional)
-
-## Past meetings:
-### 17-12-24:
-1.
