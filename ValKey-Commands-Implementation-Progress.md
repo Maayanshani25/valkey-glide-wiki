@@ -116,7 +116,7 @@
 | xreadgroup               | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | pfadd                    | Done             | Done             | Done             | Not started      | In progress      | Not started      |
 | renamenx                 | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| zpopmin                  | Done             | Done             | Done             | Not started      | In Progress      | Not started      |
+| zpopmin                  | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | pfcount                  | Done             | Done             | Done             | Not started      | In progress      | Not started      |
 | wait                     | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | spop                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
@@ -171,7 +171,7 @@
 | sdiff                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | setrange                 | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | sinterstore              | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| zpopmax                  | Done             | Done             | Done             | Not started      | In Progress      | Not started      |
+| zpopmax                  | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | georadius_ro             | Deprecated       | Deprecated       | Deprecated       | Deprecated       | Deprecated       | Deprecated       |
 | georadius                | Deprecated       | Deprecated       | Deprecated       | Deprecated       | Deprecated       | Deprecated       |
 | pfmerge                  | Done             | Done             | Done             | Not started      | Not started      | Not started      |
