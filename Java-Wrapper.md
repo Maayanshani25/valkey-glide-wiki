@@ -19,6 +19,10 @@ The `NodeAddress` class represents the host and port of a cluster node. The host
 #### Example - Connecting to a cluster
 
 ```java
+import glide.api.GlideClusterClient;
+import glide.api.models.configuration.GlideClusterClientConfiguration;
+import glide.api.models.configuration.NodeAddress;
+
 NodeAddress address = NodeAddress.builder()
     .host("address.example.com")
     .port(6379)
@@ -54,6 +58,10 @@ Valkey GLIDE also supports Standalone deployments, where the database is hosted 
 #### **Example - Connecting to a standalone** 
 
 ```java
+import glide.api.GlideClient;
+import glide.api.models.configuration.GlideClientConfiguration;
+import glide.api.models.configuration.NodeAddress;
+
 GlideClientConfiguration config = GlideClientConfiguration.builder()
     .address(NodeAddress.builder()
         .host("primary.example.com")
@@ -177,6 +185,8 @@ Transaction objects can be reused. If you need to execute a particular group of 
 Here's a simple example demonstrating how to create and execute a transaction in standalone mode:
 
 ```java
+import glide.api.models.Transaction;
+
 // Initialize a transaction object
 Transaction transaction = new Transaction();
 
@@ -195,6 +205,8 @@ System.out.println(Arrays.toString(result)); // Output: [OK, OK, None]
 Valkey Glide supports command chaining within a transaction, allowing for a more concise and readable code. Here's how you can use chaining in transactions:
 
 ```java
+import glide.api.models.ClusterTransaction;
+
 // Initialize a cluster transaction object
 ClusterTransaction transaction = new ClusterTransaction();
 
@@ -215,11 +227,15 @@ System.out.println(Arrays.toString(result)); // Output: [OK, "value"]
 
 For a client with cluster-mode disabled: 
 ```java
+import glide.api.models.Transaction;
+
 Transaction transaction = new Transaction();  // For standalone mode
 ```
 
 For a client with cluster-mode enabled: 
 ```java
+import glide.api.models.ClusterTransaction;
+
 ClusterTransaction transaction = new ClusterTransaction();  // For cluster mode
 ```
 **Adding Commands:** Use the transaction object to queue up the desired commands.
@@ -253,6 +269,10 @@ GLIDE 1.2 introduces a new NONE Valkey API: `getStatistics` which returns a `Has
 - `total_clients` contains the number of active clients (regardless of its type)
 
 ```java
+import glide.api.GlideClusterClient;
+import glide.api.models.configuration.GlideClusterClientConfiguration;
+import glide.api.models.configuration.NodeAddress;
+
 GlideClusterClient config = GlideClusterClientConfiguration.builder()
     .address(NodeAddress.builder()
         .host("address.example.com")
@@ -283,6 +303,11 @@ To provide the necessary authentication credentials to the client, you can use t
 #### Example - Connecting with Username and Password to a Cluster
 
 ```java
+import glide.api.GlideClusterClient;
+import glide.api.models.configuration.GlideClusterClientConfiguration;
+import glide.api.models.configuration.NodeAddress;
+import glide.api.models.configuration.ServerCredentials;
+
 GlideClusterClientConfiguration config = GlideClusterClientConfiguration.builder() 
     .address(NodeAddress.builder()
         .host("address.example.com")
@@ -301,6 +326,11 @@ GlideClusterClient client = GlideClusterClient.createClient(config).get();
 #### Example - Connecting with Username and Password to a Standalone
 
 ```java
+import glide.api.GlideClient;
+import glide.api.models.configuration.GlideClientConfiguration;
+import glide.api.models.configuration.NodeAddress;
+import glide.api.models.configuration.ServerCredentials;
+
 GlideClientConfiguration config = GlideClientConfiguration.builder()
     .address(NodeAddress.builder()
         .host("primary.example.com")
@@ -324,6 +354,10 @@ It's important to note that TLS support in Valkey GLIDE relies on [rusttls](http
 #### Example - Connecting with TLS Mode Enabled to a Cluster
 
 ```java
+import glide.api.GlideClusterClient;
+import glide.api.models.configuration.GlideClusterClientConfiguration;
+import glide.api.models.configuration.NodeAddress;
+
 GlideClusterClientConfiguration config = GlideClusterClientConfiguration.builder()
     .address(NodeAddress.builder()
         .host("adress.example.com")
@@ -338,6 +372,10 @@ GlideClusterClient client = GlideClusterClient.createClient(config).get();
 #### Example - Connecting with TLS Mode Enabled to a Standalone server
 
 ```java
+import glide.api.GlideClient;
+import glide.api.models.configuration.GlideClientConfiguration;
+import glide.api.models.configuration.NodeAddress;
+
 GlideClientConfiguration config = GlideClientConfiguration.builder()
     .address(NodeAddress.builder()
         .host("primary.example.com")
@@ -364,6 +402,10 @@ Valkey GLIDE provides support for next read strategies, allowing you to choose t
 #### Example - Use PREFER_REPLICA Read Strategy
 
 ```java
+import glide.api.GlideClusterClient;
+import glide.api.models.configuration.GlideClusterClientConfiguration;
+import glide.api.models.configuration.NodeAddress;
+
 GlideClusterClientConfiguration config = GlideClusterClientConfiguration.builder()
     .address(NodeAddress.builder()
         .host("address.example.com")
@@ -383,6 +425,10 @@ client.get("key1").get();
 If ReadFrom strategy is AZAffinity, 'clientAZ' setting is required to ensures that readonly commands are directed to replicas within the specified AZ if exits.
 
 ```java
+import glide.api.GlideClusterClient;
+import glide.api.models.configuration.GlideClusterClientConfiguration;
+import glide.api.models.configuration.NodeAddress;
+
 GlideClusterClientConfiguration config = GlideClusterClientConfiguration.builder()
     .address(NodeAddress.builder()
         .host("address.example.com")
@@ -414,6 +460,10 @@ Valkey GLIDE allows you to configure timeout settings and reconnect strategies. 
 #### Example - Setting Increased Request Timeout for Long-Running Commands
 
 ```java
+import glide.api.GlideClusterClient;
+import glide.api.models.configuration.GlideClusterClientConfiguration;
+import glide.api.models.configuration.NodeAddress;
+
 GlideClusterClient config = GlideClusterClientConfiguration.builder()
     .address(NodeAddress.builder()
         .host("address.example.com")
