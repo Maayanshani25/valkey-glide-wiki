@@ -68,7 +68,7 @@
 | bgsave                   | Not needed       | Not needed       | Not needed       | Not started      | Not started      | Not started      |
 | setex                    | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       |
 | zadd                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| zrem                     | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| zrem                     | Done             | Done             | Done             | Not started      | In progress      | Not started      |
 | zrange                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | unsubscribe              | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | psubscribe               | Done             | Done             | Done             | Not started      | Not started      | Not started      |
@@ -81,7 +81,7 @@
 | flushall                 | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | sscan                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | flushdb                  | Done             | Done             | Done             | Not started      | Not started      | Not started      |
-| xadd                     | Done             | Done             | Done             | Not started      | In progress      | Not started      |
+| xadd                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | hlen                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | hsetnx                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | zrevrangebyscore         | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       |
