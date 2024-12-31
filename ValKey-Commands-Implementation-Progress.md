@@ -12,7 +12,7 @@
 | decr                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | decrby                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | del                      | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| select                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| select                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | client ID                | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | multi                    | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | exec                     | Done             | Done             | Done             | Not started      | Not started      | Not started      |
@@ -114,10 +114,10 @@
 | blpop                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | zscan                    | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | xreadgroup               | Done             | Done             | Done             | Not started      | Not started      | Not started      |
-| pfadd                    | Done             | Done             | Done             | Not started      | In progress      | Not started      |
+| pfadd                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | renamenx                 | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | zpopmin                  | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| pfcount                  | Done             | Done             | Done             | Not started      | In progress      | Not started      |
+| pfcount                  | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | wait                     | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | spop                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | restore                  | Done             | Done             | Done             | Not started      | In progress      | Not started      |
