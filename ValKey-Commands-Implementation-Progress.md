@@ -68,11 +68,11 @@
 | bgsave                   | Not needed       | Not needed       | Not needed       | Not started      | Not started      | Not started      |
 | setex                    | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       |
 | zadd                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| zrem                     | Done             | Done             | Done             | Not started      | In progress      | Not started      |
+| zrem                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | zrange                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | unsubscribe              | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | psubscribe               | Done             | Done             | Done             | Not started      | Not started      | Not started      |
-| zcard                    | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| zcard                    | Done             | Done             | Done             | Not started      | In Progress      | Not started      |
 | type                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | echo                     | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | brpop                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
@@ -96,7 +96,7 @@
 | hkeys                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | xread                    | Done             | Done             | Done             | Not started      | In Progress      | Not started      |
 | readwrite                | API not required | API not required | API not required | Not started      | API not required | Not started      |
-| zcount                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| zcount                   | Done             | Done             | Done             | Not started      | In Progress      | Not started      |
 | time                     | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | append                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | rename                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
