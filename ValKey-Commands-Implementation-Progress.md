@@ -72,7 +72,7 @@
 | zrange                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | unsubscribe              | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | psubscribe               | Done             | Done             | Done             | Not started      | Not started      | Not started      |
-| zcard                    | Done             | Done             | Done             | Not started      | In Progress      | Not started      |
+| zcard                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | type                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | echo                     | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | brpop                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
