@@ -161,7 +161,7 @@
 | discard                  | API not required | API not required | API not required | API not required | API not required | Not started      |
 | sunionstore              | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | xrevrange                | Done             | Done             | Done             | Not started      | Not started      | Not started      |
-| bzpopmin                 | Done             | Done             | Done             | Not started      | In progress      | Not started      |
+| bzpopmin                 | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | rpushx                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | sort                     | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | geoadd                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
