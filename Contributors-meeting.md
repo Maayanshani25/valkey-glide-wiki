@@ -8,7 +8,7 @@ The schedule will be updated and can be followed here:
 ## Next Agenda
 * golang client - windows support
 * Takes from 1.2 - Ilia
-# 1.3 - Asaf
+* 1.3 - Asaf
 
 ## Past meetings:
 ### 17-12-24:
