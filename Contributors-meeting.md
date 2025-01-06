@@ -3,7 +3,7 @@
 Since the community is largely distributed, each round will take a different time to fit better to the different time-zones.
 The schedule will be updated and can be followed here:
 - Tuesday, December 17, 2024 at 05:30 UTC
-- Tuesday, Januraym 07, 2025 at 16:00 UTC
+- Tuesday, January 07, 2025 at 16:00 UTC
 
 ## Next Agenda
 * golang client - windows support
