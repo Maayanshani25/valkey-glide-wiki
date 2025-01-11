@@ -123,7 +123,7 @@
 | restore                  | Done             | Done             | Done             | Not started      | In progress      | Not started      |
 | hvals                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | sinter                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| xtrim                    | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| xtrim                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | zrank                    | Done             | Done             | Done             | Not started      | In Progress      | Not started      |
 | zinterstore              | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | xack                     | Done             | Done             | Done             | Not started      | In Progress      | Not started      |
