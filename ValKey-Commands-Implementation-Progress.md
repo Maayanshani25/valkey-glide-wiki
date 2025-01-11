@@ -69,7 +69,7 @@
 | setex                    | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       |
 | zadd                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | zrem                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| zrange                   | Done             | Done             | Done             | Not started      | In Progress      | Not started      |
+| zrange                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | unsubscribe              | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | psubscribe               | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | zcard                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
