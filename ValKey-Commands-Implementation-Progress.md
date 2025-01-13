@@ -88,7 +88,7 @@
 | watch                    | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | sismember                | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | pttl                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| zscore                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| zscore                   | Done             | Done             | Done             | Not started      | In Progress      | Not started      |
 | dbsize                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | zrevrange                | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       |
 | hscan                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
@@ -154,7 +154,7 @@
 | setbit                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | smove                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | xrange                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
-| xdel                     | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| xdel                     | Done             | Done             | Done             | Not started      | In Progress      | Not started      |
 | linsert                  | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | xlen                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | xpending                 | Done             | Done             | Done             | Not started      | In Progress      | Not started      |
