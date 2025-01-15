@@ -94,7 +94,7 @@
 | hscan                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | unwatch                  | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | hkeys                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| xread                    | Done             | Done             | Done             | Not started      | In Progress      | Not started      |
+| xread                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | readwrite                | API not required | API not required | API not required | Not started      | API not required | Not started      |
 | zcount                   | Done             | Done             | Done             | Not started      | In Progress      | Not started      |
 | time                     | Done             | Done             | Done             | Not started      | Not started      | Not started      |
