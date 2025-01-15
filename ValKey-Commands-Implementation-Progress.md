@@ -154,7 +154,7 @@
 | setbit                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | smove                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | xrange                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
-| xdel                     | Done             | Done             | Done             | Not started      | In Progress      | Not started      |
+| xdel                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | linsert                  | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | xlen                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | xpending                 | Done             | Done             | Done             | Not started      | In Progress      | Not started      |
