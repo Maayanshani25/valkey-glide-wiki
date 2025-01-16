@@ -88,7 +88,7 @@
 | watch                    | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | sismember                | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | pttl                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| zscore                   | Done             | Done             | Done             | Not started      | In Progress      | Not started      |
+| zscore                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | dbsize                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | zrevrange                | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       |
 | hscan                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
@@ -96,7 +96,7 @@
 | hkeys                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | xread                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | readwrite                | API not required | API not required | API not required | Not started      | API not required | Not started      |
-| zcount                   | Done             | Done             | Done             | Not started      | In Progress      | Not started      |
+| zcount                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | time                     | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | append                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | rename                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
@@ -112,7 +112,7 @@
 | xgroup setid             | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | getset                   | Deprecated       | Deprecated       | Deprecated       | Deprecated       | Deprecated       | Deprecated       |
 | blpop                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| zscan                    | Done             | Done             | Done             | Not started      | In progress      | Not started      |
+| zscan                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | xreadgroup               | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | pfadd                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | renamenx                 | Done             | Done             | Done             | Not started      | Done             | Not started      |
@@ -157,7 +157,7 @@
 | xdel                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | linsert                  | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | xlen                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| xpending                 | Done             | Done             | Done             | Not started      | In Progress      | Not started      |
+| xpending                 | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | discard                  | API not required | API not required | API not required | API not required | API not required | Not started      |
 | sunionstore              | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | xrevrange                | Done             | Done             | Done             | Not started      | Not started      | Not started      |
