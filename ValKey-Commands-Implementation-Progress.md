@@ -105,7 +105,7 @@
 | persist                  | Done             | Done             | Done             | Not started      | In progress      | Not started      |
 | strlen                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | zincrby                  | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| xgroup create            | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| xgroup create            | Done             | Done             | Done             | Not started      | IN progressssss  | Not started      |
 | xgroup createconsumer    | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | xgroup delconsumer       | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | xgroup destroy           | Done             | Done             | Done             | Not started      | Not started      | Not started      |
