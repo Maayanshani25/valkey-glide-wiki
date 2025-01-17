@@ -186,7 +186,7 @@
 | hrandfield               | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | lpos                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | geopos                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
-| xautoclaim               | Done             | Done             | Done             | Not started      | In progress      | Not started      |
+| xautoclaim               | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | zmscore                  | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | bitop                    | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | lastsave                 | Done             | Done             | Done             | Not started      | Not started      | Not started      |
