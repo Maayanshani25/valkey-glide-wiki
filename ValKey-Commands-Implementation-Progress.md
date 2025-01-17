@@ -113,7 +113,7 @@
 | getset                   | Deprecated       | Deprecated       | Deprecated       | Deprecated       | Deprecated       | Deprecated       |
 | blpop                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | zscan                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| xreadgroup               | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| xreadgroup               | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | pfadd                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | renamenx                 | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | zpopmin                  | Done             | Done             | Done             | Not started      | Done             | Not started      |
