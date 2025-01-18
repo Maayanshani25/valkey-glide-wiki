@@ -63,7 +63,7 @@
 | script kill              | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | scan                     | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | zrangebyscore            | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       |
-| zremrangebyscore         | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| zremrangebyscore         | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | setnx                    | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       |
 | bgsave                   | Not needed       | Not needed       | Not needed       | Not started      | Not started      | Not started      |
 | setex                    | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       |
@@ -76,7 +76,7 @@
 | type                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | echo                     | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | brpop                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| zremrangebyrank          | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| zremrangebyrank          | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | psetex                   | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       |
 | flushall                 | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | sscan                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
@@ -179,7 +179,7 @@
 | sdiffstore               | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | touch                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | smismember               | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| zremrangebylex           | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| zremrangebylex           | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | zrevrangebylex           | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       | Not started      |
 | lpushx                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | copy                     | Done             | Done             | Done             | Not started      | In progress      | Not started      |
