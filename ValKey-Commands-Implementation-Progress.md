@@ -187,7 +187,7 @@
 | lpos                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | geopos                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | xautoclaim               | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| zmscore                  | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| zmscore                  | Done             | Done             | Done             | Not started      | In progress      | Not started      |
 | bitop                    | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | lastsave                 | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | geosearch                | Done             | Done             | Done             | Not started      | Not started      | Not started      |
@@ -213,7 +213,7 @@
 | zrangestore              | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | geodist                  | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | georadiusbymember        | Deprecated       | Deprecated       | Deprecated       | Deprecated       | Deprecated       | Deprecated       |
-| bzpopmax                 | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| bzpopmax                 | Done             | Done             | Done             | Not started      | In progress     | Not started      |
 | zinter                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | georadiusbymember_ro     | Deprecated       | Deprecated       | Deprecated       | Deprecated       | Deprecated       | Deprecated       |
 | sunsubscribe             | Done             | Done             | Done             | Not started      | Not started      | Not started      |
@@ -223,8 +223,8 @@
 | lmpop                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | geosearchstore           | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | zintercard               | Done             | Done             | Done             | Not started      | Not started      | Not started      |
-| zmpop                    | Done             | Done             | Done             | Not started      | Not started      | Not started      |
-| bzmpop                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| zmpop                    | Done             | Done             | Done             | Not started      | In progress      | Not started      |
+| bzmpop                   | Done             | Done             | Done             | Not started      | In progress      | Not started      |
 | lcs                      | Done             | Done             | Done             | Not started      | In progress      | Not started      |
 | lolwut                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | expiretime               | Done             | Done             | Done             | Not started      | Done             | Not started      |
