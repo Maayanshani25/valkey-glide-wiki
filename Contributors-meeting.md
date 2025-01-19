@@ -2,7 +2,7 @@
 ## Schedule
 Since the community is largely distributed, each round will take a different time to fit better to the different time-zones.
 The schedule will be updated and can be followed here:
-- Tuesday 21-01-25 (Hour TBD).
+- Tuesday 21-01-25 (06:00am UTC).
 
 ## Next Agenda
 * Ilia - Takes from 1.2/1.2.1 
