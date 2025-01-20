@@ -120,7 +120,7 @@
 | pfcount                  | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | wait                     | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | spop                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| restore                  | Done             | Done             | Done             | Not started      | In progress      | Not started      |
+| restore                  | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | hvals                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | sinter                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | xtrim                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
@@ -147,7 +147,7 @@
 | getrange                 | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | randomkey                | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | srandmember              | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| dump                     | Done             | Done             | Done             | Not started      | In progress      | Not started      |
+| dump                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | xinfo consumers          | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | xinfo groups             | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | xinfo stream             | Done             | Done             | Done             | Not started      | Not started      | Not started      |
