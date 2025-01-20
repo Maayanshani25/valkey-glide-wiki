@@ -163,7 +163,7 @@
 | xrevrange                | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | bzpopmin                 | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | rpushx                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| sort                     | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| sort                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | geoadd                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | zrangebylex              | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       |
 | getbit                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
@@ -218,7 +218,7 @@
 | georadiusbymember_ro     | Deprecated       | Deprecated       | Deprecated       | Deprecated       | Deprecated       | Deprecated       |
 | sunsubscribe             | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | zunion                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
-| sort_ro                  | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| sort_ro                  | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | fcall_ro                 | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | lmpop                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | geosearchstore           | Done             | Done             | Done             | Not started      | Not started      | Not started      |
