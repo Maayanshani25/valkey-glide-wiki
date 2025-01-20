@@ -127,10 +127,10 @@
 | zrank                    | Done             | Done             | Done             | Not started      | In Progress      | Not started      |
 | zinterstore              | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | xack                     | Done             | Done             | Done             | Not started      | In Progress      | Not started      |
-| object encoding          | Done             | Done             | Done             | Not started      | Not started      | Not started      |
-| object freq              | Done             | Done             | Done             | Not started      | Not started      | Not started      |
-| object idletime          | Done             | Done             | Done             | Not started      | Not started      | Not started      |
-| object refcount          | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| object encoding          | Done             | Done             | Done             | Not started      | Done             | Not started      |
+| object freq              | Done             | Done             | Done             | Not started      | Done             | Not started      |
+| object idletime          | Done             | Done             | Done             | Not started      | Done             | Not started      |
+| object refcount          | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | spublish                 | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | ssubscribe               | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | zrevrank                 | Done             | Done             | Done             | Not started      | In Progress      | Not started      |
