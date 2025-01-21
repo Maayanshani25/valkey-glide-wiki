@@ -108,8 +108,8 @@
 | xgroup create            | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | xgroup createconsumer    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | xgroup delconsumer       | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| xgroup destroy           | Done             | Done             | Done             | Not started      | In progress      | Not started      |
-| xgroup setid             | Done             | Done             | Done             | Not started      | In progress      | Not started      |
+| xgroup destroy           | Done             | Done             | Done             | Not started      | Done             | Not started      |
+| xgroup setid             | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | getset                   | Deprecated       | Deprecated       | Deprecated       | Deprecated       | Deprecated       | Deprecated       |
 | blpop                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | zscan                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
