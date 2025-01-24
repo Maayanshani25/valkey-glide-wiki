@@ -153,14 +153,14 @@
 | xinfo stream             | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | setbit                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | smove                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| xrange                   | Done             | Done             | Done             | Not started      | In Progress      | Not started      |
+| xrange                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | xdel                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | linsert                  | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | xlen                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | xpending                 | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | discard                  | API not required | API not required | API not required | API not required | API not required | Not started      |
 | sunionstore              | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| xrevrange                | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| xrevrange                | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | bzpopmin                 | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | rpushx                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | sort                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
@@ -214,7 +214,7 @@
 | geodist                  | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | georadiusbymember        | Deprecated       | Deprecated       | Deprecated       | Deprecated       | Deprecated       | Deprecated       |
 | bzpopmax                 | Done             | Done             | Done             | Not started      | In progress     | Not started      |
-| zinter                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| zinter                   | Done             | Done             | Done             | Not started      | In Progress     | Not started      |
 | georadiusbymember_ro     | Deprecated       | Deprecated       | Deprecated       | Deprecated       | Deprecated       | Deprecated       |
 | sunsubscribe             | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | zunion                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
