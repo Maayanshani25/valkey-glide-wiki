@@ -65,7 +65,7 @@
 | zrangebyscore            | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       |
 | zremrangebyscore         | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | setnx                    | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       |
-| bgsave                   | Not needed       | Not needed       | Not needed       | Not started      | Not started      | Not started      |
+| bgsave                   | Not needed       | Not needed       | Not needed       | Not needed       | Not needed       | Not needed       |
 | setex                    | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       |
 | zadd                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | zrem                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
@@ -95,7 +95,7 @@
 | unwatch                  | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | hkeys                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | xread                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| readwrite                | API not required | API not required | API not required | Not started      | API not required | Not started      |
+| readwrite                | API not required | API not required | API not required | API not required | API not required | API not required      |
 | zcount                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | time                     | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | append                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
@@ -158,7 +158,7 @@
 | linsert                  | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | xlen                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | xpending                 | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| discard                  | API not required | API not required | API not required | API not required | API not required | Not started      |
+| discard                  | API not required | API not required | API not required | API not required | API not required | API not required      |
 | sunionstore              | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | xrevrange                | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | bzpopmin                 | Done             | Done             | Done             | Not started      | Done             | Not started      |
@@ -180,7 +180,7 @@
 | touch                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | smismember               | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | zremrangebylex           | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| zrevrangebylex           | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       | Not started      |
+| zrevrangebylex           | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       | deprecated started      |
 | lpushx                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | copy                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | hrandfield               | Done             | Done             | Done             | Not started      | Done             | Not started      |
