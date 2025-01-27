@@ -143,7 +143,7 @@
 | zunionstore              | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | lset                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | xclaim                   | Done             | Done             | Done             | Not started      | In Progress      | Not started      |
-| bitfield                 | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| bitfield                 | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | getrange                 | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | randomkey                | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | srandmember              | Done             | Done             | Done             | Not started      | Done             | Not started      |
@@ -202,7 +202,7 @@
 | zlexcount                | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | zrandmember              | Done             | Done             | Done             | Not started      | WIP              | Not started      |
 | replicaof                | API not required | API not required | API not required | API not required | API not required | API not required |
-| bitfield_ro              | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| bitfield_ro              | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | fcall                    | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | zdiffstore               | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | move                     | Done             | Done             | Done             | Not started      | Not started      | Not started      |
