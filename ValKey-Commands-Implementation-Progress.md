@@ -1,7 +1,7 @@
 | cmd type                 | Python           | Node             | Java             | .NET             | Go               | PHP              |
 | ------------------------ | ---------------- | ---------------- | ---------------- | ---------------- | ---------------- | ---------------- |
 | ping                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| info                     | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| info                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | Config get               | Done             | Done             | Done             | Not started      | In progress      | Not started      |
 | Config set               | Done             | Done             | Done             | Not started      | In progress      | Not started      |
 | Config rewrite           | Done             | Done             | Done             | Not started      | Not started      | Not started      |
@@ -150,7 +150,7 @@
 | dump                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | xinfo consumers          | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | xinfo groups             | Done             | Done             | Done             | Not started      | Not started      | Not started      |
-| xinfo stream             | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| xinfo stream             | Done             | Done             | Done             | Not started      | In Progress      | Not started      |
 | setbit                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | smove                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | xrange                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
