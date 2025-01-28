@@ -151,7 +151,7 @@
 | xinfo consumers          | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | xinfo groups             | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | xinfo stream             | Done             | Done             | Done             | Not started      | Not started      | Not started      |
-| setbit                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| setbit                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | smove                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | xrange                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | xdel                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
@@ -166,7 +166,7 @@
 | sort                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | geoadd                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | zrangebylex              | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       |
-| getbit                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| getbit                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | msetnx                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | sdiff                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | setrange                 | Done             | Done             | Done             | Not started      | Done             | Not started      |
@@ -175,7 +175,7 @@
 | georadius_ro             | Deprecated       | Deprecated       | Deprecated       | Deprecated       | Deprecated       | Deprecated       |
 | georadius                | Deprecated       | Deprecated       | Deprecated       | Deprecated       | Deprecated       | Deprecated       |
 | pfmerge                  | Done             | Done             | Done             | Not started      | Not started      | Not started      |
-| bitcount                 | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| bitcount                 | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | sdiffstore               | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | touch                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | smismember               | Done             | Done             | Done             | Not started      | Done             | Not started      |
