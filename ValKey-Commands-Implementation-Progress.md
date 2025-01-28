@@ -102,7 +102,7 @@
 | rename                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | lindex                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | punsubscribe             | Done             | Done             | Done             | Not started      | Not started      | Not started      |
-| persist                  | Done             | Done             | Done             | Not started      | In progress      | Not started      |
+| persist                  | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | strlen                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | zincrby                  | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | xgroup create            | Done             | Done             | Done             | Not started      | Done             | Not started      |
