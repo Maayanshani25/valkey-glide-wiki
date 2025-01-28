@@ -118,7 +118,7 @@
 | renamenx                 | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | zpopmin                  | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | pfcount                  | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| wait                     | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| wait                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | spop                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | restore                  | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | hvals                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
