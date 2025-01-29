@@ -97,7 +97,7 @@
 | xread                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | readwrite                | API not required | API not required | API not required | API not required | API not required | API not required      |
 | zcount                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| time                     | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| time                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | append                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | rename                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | lindex                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
