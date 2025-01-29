@@ -89,7 +89,7 @@
 | sismember                | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | pttl                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | zscore                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| dbsize                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| dbsize                   | Done             | Done             | Done             | Not started      | In-progress      | Not started      |
 | zrevrange                | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       | deprecated       |
 | hscan                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | unwatch                  | Done             | Done             | Done             | Not started      | Not started      | Not started      |
