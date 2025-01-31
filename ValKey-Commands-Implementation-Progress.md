@@ -187,7 +187,7 @@
 | lpos                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | geopos                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | xautoclaim               | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| zmscore                  | Done             | Done             | Done             | Not started      | In progress      | Not started      |
+| zmscore                  | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | bitop                    | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | lastsave                 | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | geosearch                | Done             | Done             | Done             | Not started      | Not started      | Not started      |
@@ -225,7 +225,7 @@
 | geosearchstore           | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | zintercard               | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | zmpop                    | Done             | Done             | Done             | Not started      | In progress      | Not started      |
-| bzmpop                   | Done             | Done             | Done             | Not started      | In progress      | Not started      |
+| bzmpop                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | lcs                      | Done             | Done             | Done             | Not started      | In progress      | Not started      |
 | lolwut                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | expiretime               | Done             | Done             | Done             | Not started      | Done             | Not started      |
