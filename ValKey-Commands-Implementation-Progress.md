@@ -125,7 +125,7 @@
 | sinter                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | xtrim                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | zrank                    | Done             | Done             | Done             | Not started      | In Progress      | Not started      |
-| zinterstore              | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| zinterstore              | Done             | Done             | Done             | Not started      | In Progress      | Not started      |
 | xack                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | object encoding          | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | object freq              | Done             | Done             | Done             | Not started      | Done             | Not started      |
@@ -223,7 +223,7 @@
 | fcall_ro                 | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | lmpop                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | geosearchstore           | Done             | Done             | Done             | Not started      | Not started      | Not started      |
-| zintercard               | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| zintercard               | Done             | Done             | Done             | Not started      | In Progress      | Not started      |
 | zmpop                    | Done             | Done             | Done             | Not started      | In progress      | Not started      |
 | bzmpop                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | lcs                      | Done             | Done             | Done             | Not started      | In progress      | Not started      |
