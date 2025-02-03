@@ -2,15 +2,18 @@
 ## Schedule
 Since the community is largely distributed, each round will take a different time to fit better to the different time-zones.
 The schedule will be updated and can be followed here:
-- Tuesday 21-01-25 (06:00am UTC).
+- Tuesday 04-02-2025 (17:00 UTC).
 
 ## Next Agenda
-* Ilia - Takes from 1.2/1.2.1 
-* Mohsen and Aron - Ruby gem client intro/demo.
-* Mort - CPP communication deep dive.
-* VSS and JSON transactions - VAN team.
+* Asaf - benchmarking using CPP client demo.
+* Mohsen and Aron - Ruby gem client intro/demo?.
 
 ## Past meetings:
+### 21-01-2025
+- Golang progress updates
+- Mort - CPP communication deep dive.
+- VSS and JSON transactions - VAN team.
+
 ### 07-01-2025
 - Golang windows support - we all in for it.
 - Discussed 1.3 plans and went over tasks.
