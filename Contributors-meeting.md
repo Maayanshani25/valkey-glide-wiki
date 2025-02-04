@@ -6,7 +6,7 @@ The schedule will be updated and can be followed here:
 
 ## Next Agenda
 * Asaf - benchmarking using CPP client demo.
-* Mohsen and Aron - Ruby gem client intro/demo?.
+* Yi-Pin - 1.3 updates
 
 ## Past meetings:
 ### 21-01-2025
