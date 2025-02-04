@@ -150,7 +150,7 @@
 | dump                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | xinfo consumers          | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | xinfo groups             | Done             | Done             | Done             | Not started      | Not started      | Not started      |
-| xinfo stream             | Done             | Done             | Done             | Not started      | In Progress      | Not started      |
+| xinfo stream             | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | setbit                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | smove                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | xrange                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
