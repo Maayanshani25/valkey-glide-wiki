@@ -125,7 +125,7 @@
 | sinter                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | xtrim                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | zrank                    | Done             | Done             | Done             | Not started      | In Progress      | Not started      |
-| zinterstore              | Done             | Done             | Done             | Not started      | In Progress      | Not started      |
+| zinterstore              | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | xack                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | object encoding          | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | object freq              | Done             | Done             | Done             | Not started      | Done             | Not started      |
