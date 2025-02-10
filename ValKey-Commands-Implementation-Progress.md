@@ -140,7 +140,7 @@
 | pubsub shardchannels     | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | pubsub shardnumsub       | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | sunion                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| zunionstore              | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| zunionstore              | Done             | Done             | Done             | Not started      | In Progress      | Not started      |
 | lset                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | xclaim                   | Done             | Done             | Done             | Not started      | In Progress      | Not started      |
 | bitfield                 | Done             | Done             | Done             | Not started      | Done             | Not started      |
@@ -210,14 +210,14 @@
 | bitpos                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | substr                   | Deprecated       | Deprecated       | Deprecated       | Deprecated       | Deprecated       | Deprecated       |
 | zdiff                    | Done             | Done             | Done             | Not started      | Not started      | Not started      |
-| zrangestore              | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| zrangestore              | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | geodist                  | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | georadiusbymember        | Deprecated       | Deprecated       | Deprecated       | Deprecated       | Deprecated       | Deprecated       |
 | bzpopmax                 | Done             | Done             | Done             | Not started      | In progress      | Not started      |
 | zinter                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | georadiusbymember_ro     | Deprecated       | Deprecated       | Deprecated       | Deprecated       | Deprecated       | Deprecated       |
 | sunsubscribe             | Done             | Done             | Done             | Not started      | Not started      | Not started      |
-| zunion                   | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| zunion                   | Done             | Done             | Done             | Not started      | In Progress      | Not started      |
 | sortstore                | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | sort_ro                  | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | fcall_ro                 | Done             | Done             | Done             | Not started      | Not started      | Not started      |
