@@ -199,7 +199,7 @@
 | function load            | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | function restore         | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | function stats           | Done             | Done             | Done             | Not started      | Not started      | Not started      |
-| zlexcount                | Done             | Done             | Done             | Not started      | Not started      | Not started      |
+| zlexcount                | Done             | Done             | Done             | Not started      | In progress      | Not started      |
 | zrandmember              | Done             | Done             | Done             | Not started      | WIP              | Not started      |
 | replicaof                | API not required | API not required | API not required | API not required | API not required | API not required |
 | bitfield_ro              | Done             | Done             | Done             | Not started      | Done             | Not started      |
