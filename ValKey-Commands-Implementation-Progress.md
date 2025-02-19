@@ -95,7 +95,7 @@
 | unwatch                  | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | hkeys                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | xread                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| readwrite                | API not required | API not required | API not required | API not required | API not required | API not required      |
+| readwrite                | API not required | API not required | API not required | API not required | API not required | API not required |
 | zcount                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | time                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | append                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
@@ -142,14 +142,14 @@
 | sunion                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | zunionstore              | Done             | Done             | Done             | Not started      | In Progress      | Not started      |
 | lset                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| xclaim                   | Done             | Done             | Done             | Not started      | In Progress      | Not started      |
+| xclaim                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | bitfield                 | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | getrange                 | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | randomkey                | Done             | Done             | Done             | Not started      | Not started      | Not started      |
 | srandmember              | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | dump                     | Done             | Done             | Done             | Not started      | Done             | Not started      |
-| xinfo consumers          | Done             | Done             | Done             | Not started      | In Progress      | Not started      |
-| xinfo groups             | Done             | Done             | Done             | Not started      | In Progress      | Not started      |
+| xinfo consumers          | Done             | Done             | Done             | Not started      | Done             | Not started      |
+| xinfo groups             | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | xinfo stream             | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | setbit                   | Done             | Done             | Done             | Not started      | Done             | Not started      |
 | smove                    | Done             | Done             | Done             | Not started      | Done             | Not started      |
