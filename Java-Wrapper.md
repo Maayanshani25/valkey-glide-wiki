@@ -398,6 +398,7 @@ Valkey GLIDE provides support for next read strategies, allowing you to choose t
 |`PRIMARY`	|Always read from primary, in order to get the freshest data.	|
 |`PREFER_REPLICA`	|Spread requests between all replicas in a round robin manner. If no replica is available, route the requests to the primary.	|
 |`AZ_AFFINITY`	|Spread the read requests between replicas in the same client's availability zone in a round robin manner, falling back to other replicas or the primary if needed.	|
+|`AZ_AFFINITY_REPLICAS_AND_PRIMARY`	|Spread the read requests among nodes within the client's availability zone in a round robin manner, prioritizing local replicas, then the local primary, and falling back to other replicas or the primary if needed.	|
 
 #### Example - Use PREFER_REPLICA Read Strategy
 
@@ -442,6 +443,30 @@ GlideClusterClient client = GlidesClusterClient.createClient(config).get();
 client.set("key1", "val1").get();
 
 /// get will read from one of the replicas in the same client's availability zone if exits.
+client.get("key1").get();
+```
+
+#### Example - Use AZ_AFFINITY_REPLICAS_AND_PRIMARY Read Strategy
+If ReadFrom strategy is AZAffinityReplicasAndPrimary, 'clientAZ' setting is required to ensures that readonly commands are directed to replicas or primary within the specified AZ if exits.
+
+```java
+import glide.api.GlideClusterClient;
+import glide.api.models.configuration.GlideClusterClientConfiguration;
+import glide.api.models.configuration.NodeAddress;
+
+GlideClusterClientConfiguration config = GlideClusterClientConfiguration.builder()
+    .address(NodeAddress.builder()
+        .host("address.example.com")
+        .port(6379)
+        .build())
+    .readFrom(ReadFrom.AZ_AFFINITY_REPLICAS_AND_PRIMARY)
+    .clientAZ("us-east-1a")
+    .build()
+GlideClusterClient client = GlidesClusterClient.createClient(config).get();
+
+client.set("key1", "val1").get();
+
+/// get will read from one of the replicas or the primary in the same client's availability zone if exits.
 client.get("key1").get();
 ```
 
