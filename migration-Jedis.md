@@ -21,8 +21,23 @@ To use **Glide**, add the following dependency to your `pom.xml` file:
 
 ## **Constructor**  
 
-In **Jedis**, there are multiple constructors to configure connections.  
-In **Glide**, there is only **one constructor**, which is created through a **configuration object**.
+In **Jedis**, multiple constructors allow for various connection configurations.  
+In **Glide**, connections are established through a **single configuration object**, which comes **pre-configured with best practices**.
+
+Glide **requires minimal configuration changes**, typically for:  
+- **Timeout settings**  
+- **TLS**  
+- **Read from replica**  
+- **User authentication (username & password)**  
+- **Connection timeout**  
+
+For advanced configurations, refer to the **[Glide Wiki](https://github.com/valkey-io/valkey-glide/wiki)**.
+
+---
+
+This version keeps it **clear and direct**, making the **"configuration object"** concept easier to understand. 🚀
+
+**No Connection Pool Needed:** Glide’s **async API** efficiently handles multiple requests with a **single connection**.
 
 ### **Jedis Example (Cluster Mode)**  
 ```java
@@ -72,29 +87,24 @@ The table below compares **Jedis constructors** with **Glide configuration param
 
 Below is a list of the **most commonly used Valkey commands** in Glide clients and how they compare to Jedis.  
 
-### **Valkey Commands Sorted Alphabetically with Guide Section Numbers**  
+**NOTE**: **Glide** uses asynchronous execution, so most commands return a `CompletableFuture<T>`. Use `.get()` to retrieve the result.
 
-| COMMAND  | NUMBER | COMMAND  | NUMBER | COMMAND  | NUMBER |
-|----------|--------|----------|--------|----------|--------|
-| [AUTH](#6-authentication-auth)     | 6      | [INCR](#4-increment-incr--decrement-decr)     | 4      | [RPUSH](#12-lpush--rpush)     | 12     |
-| [BGSAVE](#9-bgsave-background-save)   | 9      | [INCRBY](#13-incrby)     | 13     | [SCAN](#14-scan)     | 14     |
-| [DECR](#4-increment-incr--decrement-decr)     | 4      | [INFO](#8-info)     | 8      | [SELECT](#9-select-change-database)     | 9      |
-| [DEL](#2-delete-del)     | 2      | [LPUSH](#12-lpush--rpush)     | 12     | [SET](#1-set--get)     | 1      |
-| [EVAL](#10-eval)     | 10     | [MULTI](#5-multi--exec-transactions)     | 5      | [SETEX](#9-set-with-expiry-setex)     | 9      |
-| [EVALSHA](#11-evalsha)  | 11     | [EXISTS](#3-exists)     | 3      | [EXPIRE](#7-expire)     | 7      |
-| [GET](#1-set--get)      | 1      | [HSET](#8-hset-hash-set)     | 8      |          |        |
+### **Valkey Commands Sorted Alphabetically**  
 
----
-
-### **NOTE**  
-In **Glide**, most commands return a **`CompletableFuture<T>`**, meaning `.get()` is required to retrieve the actual value.
+|   |   |   |
+|----------|----------|----------|
+| [AUTH](#6-authentication-auth) | [INCR](#4-increment-incr--decrement-decr) | [RPUSH](#12-lpush--rpush) |
+| [BGSAVE](#9-bgsave-background-save) | [INCRBY](#13-incrby) | [SCAN](#14-scan) |
+| [DECR](#4-increment-incr--decrement-decr) | [INFO](#8-info) | [SELECT](#9-select-change-database) |
+| [DEL](#2-delete-del) | [LPUSH](#12-lpush--rpush) | [SET](#1-set--get) |
+| [EVAL](#10-eval) | [MULTI](#5-multi--exec-transactions) | [SETEX](#9-set-with-expiry-setex) |
+| [EVALSHA](#11-evalsha) | [EXISTS](#3-exists) | [EXPIRE](#7-expire) |
+| [GET](#1-set--get) | [HSET](#8-hset-hash-set) |   |
 
 ---
 
 ## **1. Set & Get**  
 
-The `SET` command stores a value in Valkey under a specific key.  
-The `GET` command retrieves the value associated with a given key.
 - Both Jedis and Glide support this in the same way.
 
 ### **Jedis**
@@ -375,7 +385,7 @@ System.out.println(result); // Output: OK
 
 ---
 
-### **12. Lpush / Rpush**  
+## 12. Lpush / Rpush
 
 The `LPUSH` and `RPUSH` commands add elements to a Valkey list.  
 - **LPUSH** inserts at the **beginning**.  
@@ -398,7 +408,7 @@ long length_of_list = client.lpush("list", elements).get(); // length_of_list = 
 
 ---
 
-### **13. IncrBy**  
+## 13. IncrBy
 
 The `INCRBY` command increases the **value of a key** by a specified amount.  
 - Works **the same way** in **both** Jedis and Glide.  
@@ -415,10 +425,11 @@ long res = client.incrBy("counter", 3).get(); // counter: 3
 
 ---
 
-### **14. Scan**  
+## 14. Scan  
 
 The `SCAN` command iterates through **keys in the Valkey database** without blocking the server.  
-- Both **Jedis** and **Glide** support scanning with or without `ScanParams`.
+- Both **Jedis** and **Glide** support scanning with or without `ScanParams`.  
+- **Glide** supports **cluster mode scanning** to scan the entire cluster. [For more](https://github.com/valkey-io/valkey-glide/wiki/General-Concepts#cluster-scan).
 
 ### **Jedis**
 ```java
