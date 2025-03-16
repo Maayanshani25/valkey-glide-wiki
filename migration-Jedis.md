@@ -1,4 +1,3 @@
-
 # **Migration Guide: Jedis → Glide**  
 
 This guide provides a **side-by-side comparison** of how to migrate common Valkey commands from **Jedis to Glide**.
@@ -33,19 +32,24 @@ Glide **requires minimal configuration changes**, typically for:
 
 For advanced configurations, refer to the **[Glide Wiki](https://github.com/valkey-io/valkey-glide/wiki)**.
 
----
-
-This version keeps it **clear and direct**, making the **"configuration object"** concept easier to understand. 🚀
-
 **No Connection Pool Needed:** Glide’s **async API** efficiently handles multiple requests with a **single connection**.
 
-### **Jedis Example (Cluster Mode)**  
+---
+
+### Standalone Mode
+
+### **Jedis**  
 ```java
+import redis.clients.jedis.Jedis;
+
 Jedis jedis = new Jedis("localhost", 6379);
 ```
 
-### **Glide Example (Cluster Mode)**  
+### **Glide**  
 ```java
+import glide.api.models.configuration.GlideClientConfiguration;
+import glide.api.GlideClient;
+
 GlideClientConfiguration config = GlideClientConfiguration.builder()
     .address(NodeAddress.builder()
         .host("localhost")
@@ -53,13 +57,38 @@ GlideClientConfiguration config = GlideClientConfiguration.builder()
         .build())
     .build();
 
-GlideClient client = GlideClient.createClient(config).get();
+GlideClient glideClient = GlideClient.createClient(config).get();
+
+```
+
+---
+### Cluster Mode
+
+### **Jedis**  
+```java
+import redis.clients.jedis.DefaultJedisClientConfig;
+import redis.clients.jedis.JedisCluster;
+
+JedisCluster jedisCluster = new JedisCluster(
+    Set.of(new HostAndPort(HOST, PORT)),
+    DefaultJedisClientConfig.builder()
+        .ssl(USE_SSL)
+        .build()
+);
+
+```
+
+### **Glide**  
+```java
+
 
 ```
 
 ---
 
 ## **Jedis vs. Glide Constructor Parameters**  
+
+**NEED TO BE DONE**
 
 The table below compares **Jedis constructors** with **Glide configuration parameters**:
 
@@ -91,16 +120,15 @@ Below is a list of the **most commonly used Valkey commands** in Glide clients a
 
 ### **Valkey Commands Sorted Alphabetically**  
 
-|   |   |   |
+| |  |  |
 |----------|----------|----------|
-| [AUTH](#6-authentication-auth) | [EXPIRE](#7-expire)| [MGET](#15-mget) |
-| [BGSAVE](#9-bgsave-background-save) | [GET](#1-set--get) | [MULTI](#5-multi--exec-transactions) |
-| [DECR](#4-increment-incr--decrement-decr) | [HSET](#8-hset-hash-set)|[RPUSH](#12-lpush--rpush) |
+| [AUTH](#6-authentication-auth) | [EXPIRE](#7-expire) | [MGET](#15-mget) |
+| [BGSAVE](#16-bgsave) | [GET](#1-set--get) | [MULTI](#5-multi--exec-transactions) |
+| [DECR](#4-increment-incr--decrement-decr) | [HSET](#17-hset) | [RPUSH](#12-lpush--rpush) |
 | [DEL](#2-delete-del) | [INCR](#4-increment-incr--decrement-decr) | [SCAN](#14-scan) |
 | [EVAL](#10-eval) | [INCRBY](#13-incrby) | [SELECT](#9-select-change-database) |
-| [EVALSHA](#11-evalsha) | [INFO](#8-info)  | [SET](#1-set--get) |
-| [EXISTS](#3-exists)  | [LPUSH](#12-lpush--rpush) | [SETEX](#9-set-with-expiry-setex)   |
-
+| [EVALSHA](#11-evalsha) | [INFO](#8-info) | [SET](#1-set--get) |
+| [EXISTS](#3-exists) | [LPUSH](#12-lpush--rpush) | [SETEX](#18-setex) |
 
 ---
 
@@ -120,10 +148,10 @@ String value = jedis.get("key");  // value = "value"
 ### **Glide**
 ```java
 // Set a key-value pair
-client.set("key", "value");
+glideClient.set("key", "value");
 
 // Retrieve the value
-String value = client.get("key").get();  // value = "value"
+String value = glideClient.get("key").get();  // value = "value"
 ```
 
 **Note:** The `.get()` is required in **Glide** because `get()` returns a **`CompletableFuture<String>`**.
@@ -150,13 +178,13 @@ String value = jedis.get("key");
 
 ### Glide
 ```java
-client.set("key", "value");
+glideClient.set("key", "value");
 
 // Delete a list of keys
-client.del(new String[] { "key" });
+glideClient.del(new String[] { "key" });
 
 // Retrieve the value (should be "null")
-String value = client.get("key").get();
+String value = glideClient.get("key").get();
 ```
 
 ---
@@ -183,14 +211,14 @@ System.out.println("Key exists: " + res2); // true
 ### Glide
 ```java
 // Check if the key exists and return the number of keys that exist
-Long res = client.exists(new String[] { "new_key" }).get();
+Long res = glideClient.exists(new String[] { "new_key" }).get();
 System.out.println("Number of keys existing: " + res); // 0
 
 // Set a key-value pair
-client.set("new_key", "value");
+glideClient.set("new_key", "value");
 
 // Check again
-Long res2 = client.exists(new String[] { "new_key" }).get();
+Long res2 = glideClient.exists(new String[] { "new_key" }).get();
 System.out.println("Number of keys existing: " + res2); // 1
 ```
 
@@ -211,9 +239,9 @@ jedis.decr("key"); // key = 1
 
 ### **Glide**
 ```java
-client.set("key", "1");
-client.incr("key"); // key = 2
-client.decr("key"); // key = 1
+glideClient.set("key", "1");
+glideClient.incr("key"); // key = 2
+glideClient.decr("key"); // key = 1
 ```
 
 ---
@@ -252,7 +280,7 @@ transaction.incr("counter");
 transaction.get("key");
 
 // Execute the transaction
-Object[] result = client.exec(transaction).get();
+Object[] result = glideClient.exec(transaction).get();
 System.out.println(Arrays.toString(result)); // Output: [OK, 1, value]
 ```
 
@@ -274,7 +302,7 @@ String res = jedis.auth("111");
 ### Glide
 ```java
 // Returns OK if the password is correct, otherwise returns an error
-client.updateConnectionPassword("newPassword", true);
+glideClient.updateConnectionPassword("newPassword", true);
 ```
 
 **Note:** Setting `immediateAuth = false` allows the client to use the new password for future connections without re-authentication.
@@ -294,7 +322,7 @@ jedis.expire("key", 2);
 
 ### Glide
 ```java
-client.expire("key", 2);
+glideClient.expire("key", 2);
 ```
 
 ---
@@ -312,7 +340,7 @@ String info = jedis.info();
 
 ### Glide
 ```java
-String info = client.info().get();
+String info = glideClient.info().get();
 ```
 
 ---
@@ -330,7 +358,7 @@ String res = jedis.select(1); // Output: OK
 
 ### Glide
 ```java
-String res = client.select(1).get(); // Output: OK
+String res = glideClient.select(1).get(); // Output: OK
 ```
 
 ---
@@ -354,7 +382,7 @@ System.out.println(result); // Output: Hello, Lua!
 ### Glide
 ```java
 Script luaScript = new Script("return 'Hello, Lua!'", false);
-String result = (String) client.invokeScript(luaScript).get();
+String result = (String) glideClient.invokeScript(luaScript).get();
 System.out.println(result); // Output: Hello, Lua!
 ```
 
@@ -380,7 +408,7 @@ System.out.println(result); // Output: OK
 String script = "return server.call('set', KEYS[1], ARGV[1]);";
 Script luaScript = new Script(script, false);
 ScriptOptions scriptOptions = ScriptOptions.builder().key("myKey").arg("10").build();
-String result = (String) client.invokeScript(luaScript, scriptOptions).get();
+String result = (String) glideClient.invokeScript(luaScript, scriptOptions).get();
 System.out.println(result); // Output: OK
 ```
 
@@ -404,7 +432,7 @@ long length_of_list = jedis.lpush("list", strings); // length_of_list = 3
 ```java
 String[] elements = {"key1", "key2", "key3"};
 
-long length_of_list = client.lpush("list", elements).get(); // length_of_list = 3
+long length_of_list = glideClient.lpush("list", elements).get(); // length_of_list = 3
 ```
 
 ---
@@ -421,7 +449,7 @@ long counter = jedis.incrBy("counter", 3); // counter: 3
 
 ### **Glide**
 ```java
-long res = client.incrBy("counter", 3).get(); // counter: 3
+long res = glideClient.incrBy("counter", 3).get(); // counter: 3
 ```
 
 ---
@@ -454,7 +482,7 @@ String cursor = "0";
 Object[] result;
 
 do {
-    result = client.scan(cursor).get();
+    result = glideClient.scan(cursor).get();
     cursor = result[0].toString();
 
     Object[] stringResults = (Object[]) result[1];
@@ -484,7 +512,72 @@ List<String> values = jedis.mget(keys);
 ### **Glide**  
 ```java
 String[] keys = new String[] {"key1", "key2", "key3"};
-String[] values = client.mget(keys).get();
+String[] values = glideClient.mget(keys).get();
 ```
 
 ---
+
+## 16. **Bgsave**  
+
+The `BGSAVE` command asynchronously saves the dataset to disk without blocking operations.  
+
+- **Jedis:** Supports `bgsave()`.  
+- **Glide:** Not available. Let us know if you’d like this feature added.  
+
+### **Jedis**  
+```java
+jedis.bgsave();
+```
+
+### **Glide**  
+Currently unavailable in Glide.
+
+---
+
+## 17. **Hset**  
+
+The `HSET` command sets multiple field-value pairs in a hash.  
+
+- Both **Jedis** and **Glide** support this in the same way.  
+
+### **Jedis**  
+```java
+Map<String, String> map = new HashMap<>();
+map.put("key1", "value1");
+map.put("key2", "value2");
+
+long result = jedis.hset("my_hash", map);
+System.out.println(result); // Output: 2 - Indicates that 2 fields were successfully set in the hash "my_hash"
+```
+
+### **Glide**  
+```java
+Map<String, String> map = new HashMap<>();
+map.put("key1", "value1");
+map.put("key2", "value2");
+
+long result = glideClient.hset("my_hash", map).get();
+System.out.println(result); // Output: 2 - Indicates that 2 fields were successfully set in the hash "my_hash"
+```
+
+---
+
+## 18. **Setex**  
+
+The `SETEX` command sets a key with an expiration time.  
+
+- In **Jedis**, `setex()` is a dedicated function.  
+- In **Glide**, expiration is handled using `SetOptions` within the `set()` command.  
+
+### **Jedis**  
+```java
+jedis.setex("key", 1, "value");
+```
+
+### **Glide**  
+```java
+SetOptions options = SetOptions.builder().expiry(Expiry.Seconds(1L)).build();
+
+glideClient.set("key", "value", options);
+```
+
