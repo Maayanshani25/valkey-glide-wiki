@@ -105,8 +105,7 @@ libraryDependencies += "io.valkey" % "valkey-glide" % "1.+" classifier "linux-x8
 </details>
 
 ---
-<details>
-<summary><b style="font-size:18px;">Constructor</b></summary>
+## **Constructor**  
 
 - In **Jedis**, multiple constructors allow for various connection configurations.  
 - In **Glide**, connections are established through a **single configuration object**, which comes **pre-configured with best practices**.
@@ -121,9 +120,9 @@ For advanced configurations, refer to the **[Glide Wiki - Java](https://github.c
 
 **No Connection Pool Needed:** Glide’s **async API** efficiently handles multiple requests with a **single connection**.
 
----
-
-### Standalone Mode
+<a id="standalone"></a>
+<details>
+<summary><b style="font-size:18px;">Standalone Mode</b></summary>
 
 ### Jedis  
 ```java
@@ -148,7 +147,12 @@ GlideClient glideClient = GlideClient.createClient(config).get();
 ```
 
 ---
-### Cluster Mode
+
+</details>
+
+<a id="cluster"></a>
+<details>
+<summary><b style="font-size:18px;">Cluster Mode</b></summary>
 
 ### Jedis  
 ```java
@@ -183,21 +187,20 @@ GlideClusterClient glideClusterClient = GlideClusterClient.createClient(clusterC
 
 ---
 
-## **Jedis vs. Glide Constructor Parameters**  
+</details>
 
-<span style="color: yellow; font-size:20px;"><strong>NEED TO BE DONE</strong></span>
+<a id="parameters"></a>
+<details>
+<summary><b style="font-size:18px;">Jedis vs. Glide Constructor Parameters</b></summary>
 
 The table below compares **Jedis constructors** with **Glide configuration parameters**:
 
 | **Jedis Constructor** | **Equivalent Glide Configuration** |
 |----------------------|--------------------------------|
-| `HostAndPort(String host, int port)` | `.address(NodeAddress.builder().host(cluster.getConfigurationEndpoint()).port(PORT).build())` |
-| `int timeout` | N/A |
-| `int maxAttempts` | N/A |
-| `GenericObjectPoolConfig<Connection> poolConfig` | N/A |
-| `String password` | N/A |
-| `String user` | N/A |
-| `String clientName` | N/A |
+| `HostAndPort(String host, int port)` | `.address(NodeAddress.builder().host(String host).port(Integer port).build())` |
+| `int socketTimeout` | `.requestTimeout(Integer requestTimeout)` |
+| `String password, String user` | `.credentials(ServerCredentials.builder().username(String user).password(String pwd).build())`|
+| `String clientName` | `.clientName(String clientName)`|
 | `boolean ssl` | `.useTLS(useTLS)` |
 | `Set<HostAndPort> clusterNodes` | N/A |
 | `Cache clientSideCache` | N/A |
@@ -206,6 +209,17 @@ The table below compares **Jedis constructors** with **Glide configuration param
 | `Duration maxTotalRetriesDuration` | N/A |
 | `JedisClientConfig clientConfig` | N/A |
 | `HostAndPortMapper hostAndPortMap` | N/A |
+| `int maxAttempts` | N/A |
+| `GenericObjectPoolConfig<Connection> poolConfig` | N/A |
+
+## Advanced configuration
+
+- **Standalone Mode** `.advancedConfiguration(AdvancedGlideClientConfiguration.builder()`
+- **Cluster Mode** `.advancedConfiguration(AdvancedGlideClusterClientConfiguration.builder()`
+
+| **Jedis Constructor** | **Equivalent Glide Configuration** |
+|----------------------|--------------------------------|
+| `int connectionTimeout` | `.connectionTimeout(Integer connectionTimeout)`|
 
 </details>
 
@@ -217,17 +231,19 @@ Below is a list of the **most commonly used Valkey commands** in Glide clients a
 
 **NOTE**: **Glide** uses asynchronous execution, so most commands return a `CompletableFuture<T>`. Use `.get()` to retrieve the result.
 
+<a id="commands-table"></a>
+
 ### **Valkey Commands Sorted Alphabetically**  
 
 | |  |  |
 |----------|----------|----------|
 | [AUTH](#auth) | [EXPIRE](#expire) | [MGET](#mget) |
-| [BGSAVE](#bgsave) | [GET](#set-get) | [MULTI](#transaction) |
-| [DECR](#incr-decr) | [HSET](#hset) | [RPUSH](#lpush-rpush) |
-| [DEL](#del) | [INCR](#incr-decr) | [SCAN](#scan) |
-| [EVAL](#eval) | [INCRBY](#incrby) | [SELECT](#select) |
-| [EVALSHA](#evalsha) | [INFO](#info) | [SET](#set-get) |
-| [EXISTS](#exists) | [LPUSH](#lpush-rpush) | [SETEX](#setex) |
+| [DECR](#incr-decr) | [GET](#set-get) | [MULTI](#transaction) |
+| [INCRBY](#incrby-decrby) | [HSET](#hset) | [RPUSH](#lpush-rpush) |
+| [DEL](#del)  |[INCR](#incr-decr) | [SCAN](#scan) |
+| [EVAL](#eval) | [INCRBY](#incrby-decrby) | [SELECT](#select) |
+| [EVALSHA](#evalsha)  | [INFO](#info) | [SET](#set-get) |
+| [EXISTS](#exists)  | [LPUSH](#lpush-rpush) | [SETEX](#setex) |
 
 ---
 <a id="set-get"></a>
@@ -256,9 +272,10 @@ String value = glideClient.get("key").get();  // value = "value"
 
 **Note:** The `.get()` is required in **Glide** because `get()` returns a **`CompletableFuture<String>`**.
 
-</details>
-
+<span style="font-size:14px;">[⬆ Back to commands table](#commands-table)</span>
 ---
+
+</details>
 
 <a id="del"></a>
 <details>
@@ -271,9 +288,9 @@ The `DEL` command removes one or more keys from Valkey.
 
 ### Jedis
 ```java
-String[] Keys = { "key1", "key2" };
+String[] keys = { "key1", "key2" };
 
-jedis.del(Keys);
+jedis.del(keys);
 
 String value1 = jedis.get("key1"); // null
 String value2 = jedis.get("key2"); // null
@@ -281,17 +298,19 @@ String value2 = jedis.get("key2"); // null
 
 ### Glide
 ```java
-String[] Keys = { "key1", "key2" };
+String[] keys = { "key1", "key2" };
 
-glideClient.del(Keys).get();
+glideClient.del(keys).get();
 
 String value1 = glideClient.get("key1").get(); // null
 String value2 = glideClient.get("key2").get(); // null
 ```
 
+<span style="font-size:14px;">[⬆ Back to commands table](#commands-table)</span>
+---
+
 </details>
 
----
 <a id="exists"></a>
 <details>
 <summary><b style="font-size:18px;">EXISTS</b></summary>
@@ -354,9 +373,11 @@ glideClient.set("new_key2", "value2").get();
 long res2 = glideClient.exists(keys).get();  // 2
 ```
 
+<span style="font-size:14px;">[⬆ Back to commands table](#commands-table)</span>
+---
+
 </details>
 
----
 <a id="incr-decr"></a>
 <details>
 <summary><b style="font-size:18px;">Increment (INCR) / Decrement (DECR)</b></summary>
@@ -379,102 +400,149 @@ glideClient.incr("key").get(); // key = 2
 glideClient.decr("key").get(); // key = 1
 ```
 
-</details>
-
+<span style="font-size:14px;">[⬆ Back to commands table](#commands-table)</span>
 ---
 
-<a id="incrby"></a>
+</details>
+
+<a id="incrby-decrby"></a>
 <details>
-<summary><b style="font-size:18px;">INCRBY</b></summary>
+<summary><b style="font-size:18px;">INCRBY / DECRBY</b></summary>
 
 The `INCRBY` command increases the **value of a key** by a specified amount.  
 - Works **the same way** in **both** Jedis and Glide.  
 
 ### Jedis
 ```java
+jedis.set("counter", "0");
 long counter = jedis.incrBy("counter", 3); // counter: 3
+counter = jedis.decrBy("counter", 2); // counter: 1
 ```
 
 ### Glide
 ```java
-long res = glideClient.incrBy("counter", 3).get(); // counter: 3
+glideClient.set("counter", "0").get();
+long counter = glideClient.incrBy("counter", 3).get(); // counter: 3
+counter = glideClient.decrBy("counter", 2).get(); // counter: 1
 ```
+
+<span style="font-size:14px;">[⬆ Back to commands table](#commands-table)</span>
+---
 
 </details>
 
+<a id="mget"></a>
+<details>
+<summary><b style="font-size:18px;">MGET</b></summary>
+
+The `MGET` command retrieves the values of multiple keys from Valkey.  
+
+- In **Jedis**, `mget()` returns a **`List<String>`**.  
+- In **Glide**, `mget()` returns a **`String[]`**.  
+
+### Jedis  
+```java
+String[] keys = new String[] { "key1", "key2", "key3" };
+List<String> values = jedis.mget(keys);
+```
+
+### Glide  
+```java
+String[] keys = new String[] {"key1", "key2", "key3"};
+String[] values = glideClient.mget(keys).get();
+```
+
+<span style="font-size:14px;">[⬆ Back to commands table](#commands-table)</span>
 ---
 
-<a id="transaction"></a>
+</details>
+
+<a id="hset"></a>
 <details>
-<summary><b style="font-size:18px;">Transactions (MULTI & EXEC)</b></summary>
+<summary><b style="font-size:18px;">HSET</b></summary>
 
-The `MULTI` command starts a Valkey transaction.  
-The `EXEC` command executes all queued commands in the transaction.
+The `HSET` command sets multiple field-value pairs in a hash.  
 
-- In **Jedis**, transactions are started using `jedis.multi()`.
-- In **Glide**, transactions are represented as a `Transaction` object.
+- Both **Jedis** and **Glide** support this in the same way.  
+
+### Jedis  
+```java
+Map<String, String> map = new HashMap<>();
+map.put("key1", "value1");
+map.put("key2", "value2");
+
+long result = jedis.hset("my_hash", map);
+System.out.println(result); // Output: 2 - Indicates that 2 fields were successfully set in the hash "my_hash"
+```
+
+### Glide  
+```java
+Map<String, String> map = new HashMap<>();
+map.put("key1", "value1");
+map.put("key2", "value2");
+
+long result = glideClient.hset("my_hash", map).get();
+System.out.println(result); // Output: 2 - Indicates that 2 fields were successfully set in the hash "my_hash"
+```
+
+<span style="font-size:14px;">[⬆ Back to commands table](#commands-table)</span>
+---
+
+</details>
+
+<a id="setex"></a>
+<details>
+<summary><b style="font-size:18px;">SETEX</b></summary>
+
+The `SETEX` command sets a key with an expiration time.  
+
+- In **Jedis**, `setex()` is a dedicated function.  
+- In **Glide**, expiration is handled using `SetOptions` within the `set()` command.  
+
+### Jedis  
+```java
+jedis.setex("key", 1, "value");
+```
+
+### Glide  
+```java
+SetOptions options = SetOptions.builder().expiry(Expiry.Seconds(1L)).build();
+
+glideClient.set("key", "value", options);
+```
+
+<span style="font-size:14px;">[⬆ Back to commands table](#commands-table)</span>
+---
+
+</details>
+
+<a id="lpush-rpush"></a>
+<details>
+<summary><b style="font-size:18px;">LPUSH / RPUSH</b></summary>
+
+The `LPUSH` and `RPUSH` commands add elements to a Valkey list.  
+- **LPUSH** inserts at the **beginning**.  
+- **RPUSH** inserts at the **end**.  
+- This command works **the same way** in both **Jedis and Glide**.  
 
 ### Jedis
 ```java
-// Start a transaction
-Transaction transaction = jedis.multi();
+String[] strings = {"key1", "key2", "key3"};
 
-// Add commands to the transaction
-transaction.set("key", "value");
-transaction.incr("counter");
-transaction.get("key");
-
-// Execute the transaction
-List<Object> result = transaction.exec();
-System.out.println(result); // Output: [OK, 1, value]
+long length_of_list = jedis.lpush("list", strings); // length_of_list = 3
 ```
 
 ### Glide
 ```java
-import glide.api.models.Transaction;
+String[] elements = {"key1", "key2", "key3"};
 
-// Initialize a transaction object
-Transaction transaction = new Transaction();
-
-// Add commands to the transaction
-transaction.set("key", "value");
-transaction.incr("counter");
-transaction.get("key");
-
-// Execute the transaction
-Object[] result = glideClient.exec(transaction).get();
-System.out.println(Arrays.toString(result)); // Output: [OK, 1, value]
+long length_of_list = glideClient.lpush("list", elements).get(); // length_of_list = 3
 ```
+
+<span style="font-size:14px;">[⬆ Back to commands table](#commands-table)</span>
+---
 
 </details>
-
----
-<a id="auth"></a>
-<details>
-<summary><b style="font-size:18px;">Authentication (AUTH)</b></summary>
-
-The `AUTH` command is used to authenticate a Valkey connection with a password.
-
-- In **Jedis**, authentication is done via `auth()`.
-- In **Glide**, authentication is handled using `updateConnectionPassword()`.
-
-### Jedis
-```java
-// Returns OK if the password is correct, otherwise returns an error
-String res = jedis.auth("111");
-```
-
-### Glide
-```java
-// Returns OK if the password is correct, otherwise returns an error
-glideClient.updateConnectionPassword("newPassword", true).get();
-```
-
-**Note:** Setting `immediateAuth = false` allows the client to use the new password for future connections without re-authentication.
-
-</details>
-
----
 
 <a id="expire"></a>
 <details>
@@ -493,51 +561,96 @@ jedis.expire("key", 2);
 ```java
 glideClient.expire("key", 2).get();
 ```
+<span style="font-size:14px;">[⬆ Back to commands table](#commands-table)</span>
+---
 
 </details>
 
----
-<a id="info"></a>
+<a id="transaction"></a>
 <details>
-<summary><b style="font-size:18px;">INFO</b></summary>
+<summary><b style="font-size:18px;">Transactions (MULTI & EXEC)</b></summary>
 
-The `INFO` command retrieves detailed information about the Valkey server, including memory usage, connected clients, and database statistics.
+The `MULTI` command starts a Valkey transaction.  
+The `EXEC` command executes all queued commands in the transaction.
 
-- **Both** Jedis and Glide support this command **in the same way**.
+- In **Jedis**, transactions are started using `jedis.multi()`.
+- In **Glide**, transactions are represented as a `Transaction` object.
+
+### Standalone Mode
 
 ### Jedis
 ```java
-String info = jedis.info();
+// Start a transaction
+Transaction transaction = jedis.multi();
+
+// Add commands to the transaction
+transaction.set("key", "1");
+transaction.incr("key");
+transaction.get("key");
+
+// Execute the transaction
+List<Object> result = transaction.exec();
+System.out.println(result); // Output: [OK, 2, 2]
 ```
 
 ### Glide
 ```java
-String info = glideClient.info().get();
+import glide.api.models.Transaction;
+
+// Initialize a transaction object
+Transaction transaction = new Transaction();
+
+// Add commands to the transaction
+transaction.set("key", "1");
+transaction.incr("key");
+transaction.get("key");
+
+// Execute the transaction
+Object[] result = glideClient.exec(transaction).get();
+System.out.println(Arrays.toString(result)); // Output: [OK, 2, 2]
 ```
-</details>
 
 ---
-<a id="select"></a>
-<details>
-<summary><b style="font-size:18px;">Change Database (SELECT)</b></summary>
 
-The `SELECT` command switches between Valkey databases.
-
-- **Both** Jedis and Glide support this **in the same way**.
+### Cluster Mode
 
 ### Jedis
+
 ```java
-String res = jedis.select(1); // Output: OK
+import redis.clients.jedis.AbstractTransaction;
+
+// Initialize a cluster transaction object
+AbstractTransaction transaction = jedisCluster.multi();
+
+// Add commands to the transaction
+transaction.set("key", "value");
+transaction.get("key");
+
+// Execute the transaction
+List<Object> result = transaction.exec();
+System.out.println(result); // Output: [OK, "value"]
 ```
 
 ### Glide
+
 ```java
-String res = glideClient.select(1).get(); // Output: OK
+import glide.api.models.ClusterTransaction;
+
+// Initialize a cluster transaction object
+ClusterTransaction transaction = new ClusterTransaction();
+
+// Chain commands
+transaction.set("key", "value").get("key");
+
+// Execute the transaction
+Object[] result = client.exec(transaction).get();
+System.out.println(Arrays.toString(result)); // Output: [OK, "value"]
 ```
 
-</details>
-
+<span style="font-size:14px;">[⬆ Back to commands table](#commands-table)</span>
 ---
+
+</details>
 
 <a id="eval"></a>
 <details>
@@ -564,9 +677,11 @@ String result = (String) glideClient.invokeScript(luaScript).get();
 System.out.println(result); // Output: Hello, Lua!
 ```
 
+<span style="font-size:14px;">[⬆ Back to commands table](#commands-table)</span>
+---
+
 </details>
 
----
 <a id="evalsha"></a>
 <details>
 <summary><b style="font-size:18px;">EVALSHA</b></summary>
@@ -593,35 +708,10 @@ String result = (String) glideClient.invokeScript(luaScript, scriptOptions).get(
 System.out.println(result); // Output: OK
 ```
 
-</details>
-
+<span style="font-size:14px;">[⬆ Back to commands table](#commands-table)</span>
 ---
-<a id="lpush-rpush"></a>
-<details>
-<summary><b style="font-size:18px;">LPUSH / RPUSH</b></summary>
-
-The `LPUSH` and `RPUSH` commands add elements to a Valkey list.  
-- **LPUSH** inserts at the **beginning**.  
-- **RPUSH** inserts at the **end**.  
-- This command works **the same way** in both **Jedis and Glide**.  
-
-### Jedis
-```java
-String[] strings = {"key1", "key2", "key3"};
-
-long length_of_list = jedis.lpush("list", strings); // length_of_list = 3
-```
-
-### Glide
-```java
-String[] elements = {"key1", "key2", "key3"};
-
-long length_of_list = glideClient.lpush("list", elements).get(); // length_of_list = 3
-```
 
 </details>
-
----
 
 <a id="scan"></a>
 <details>
@@ -664,106 +754,87 @@ do {
     System.out.println("\nSCAN iteration: " + keyList);
 } while (!cursor.equals("0"));
 ```
-</details>
 
----
-<a id="mget"></a>
-<details>
-<summary><b style="font-size:18px;">MGET</b></summary>
-
-The `MGET` command retrieves the values of multiple keys from Valkey.  
-
-- In **Jedis**, `mget()` returns a **`List<String>`**.  
-- In **Glide**, `mget()` returns a **`String[]`**.  
-
-### Jedis  
-```java
-String[] keys = new String[] { "key1", "key2", "key3" };
-List<String> values = jedis.mget(keys);
-```
-
-### Glide  
-```java
-String[] keys = new String[] {"key1", "key2", "key3"};
-String[] values = glideClient.mget(keys).get();
-```
-
-</details>
-
----
-<a id="bgsave"></a>
-<details>
-<summary><b style="font-size:18px;">BGSAVE</b></summary>
-
-The `BGSAVE` command asynchronously saves the dataset to disk without blocking operations.  
-
-- **Jedis:** Supports `bgsave()`.  
-- **Glide:** Not available. Let us know if you’d like this feature added.  
-
-### Jedis  
-```java
-jedis.bgsave();
-```
-
-### Glide  
-Currently unavailable in Glide.
-
-</details>
-
----
-<a id="hset"></a>
-<details>
-<summary><b style="font-size:18px;">HSET</b></summary>
-
-The `HSET` command sets multiple field-value pairs in a hash.  
-
-- Both **Jedis** and **Glide** support this in the same way.  
-
-### Jedis  
-```java
-Map<String, String> map = new HashMap<>();
-map.put("key1", "value1");
-map.put("key2", "value2");
-
-long result = jedis.hset("my_hash", map);
-System.out.println(result); // Output: 2 - Indicates that 2 fields were successfully set in the hash "my_hash"
-```
-
-### Glide  
-```java
-Map<String, String> map = new HashMap<>();
-map.put("key1", "value1");
-map.put("key2", "value2");
-
-long result = glideClient.hset("my_hash", map).get();
-System.out.println(result); // Output: 2 - Indicates that 2 fields were successfully set in the hash "my_hash"
-```
-</details>
-
+<span style="font-size:14px;">[⬆ Back to commands table](#commands-table)</span>
 ---
 
-<a id="setex"></a>
+</details>
+
+<a id="auth"></a>
 <details>
-<summary><b style="font-size:18px;">SETEX</b></summary>
+<summary><b style="font-size:18px;">Authentication (AUTH)</b></summary>
 
-The `SETEX` command sets a key with an expiration time.  
+The `AUTH` command is used to authenticate a Valkey connection with a password.
 
-- In **Jedis**, `setex()` is a dedicated function.  
-- In **Glide**, expiration is handled using `SetOptions` within the `set()` command.  
+- In **Jedis**, authentication is done via `auth()`.
+- In **Glide**, authentication is handled using `updateConnectionPassword()`.
 
-### Jedis  
+### Jedis
 ```java
-jedis.setex("key", 1, "value");
+// Returns OK if the password is correct, otherwise returns an error
+String res = jedis.auth("111");
 ```
 
-### Glide  
+### Glide
 ```java
-SetOptions options = SetOptions.builder().expiry(Expiry.Seconds(1L)).build();
-
-glideClient.set("key", "value", options);
+// Returns OK if the password is correct, otherwise returns an error
+glideClient.updateConnectionPassword("newPassword", true).get();
 ```
+
+**Note:** Setting `immediateAuth = false` allows the client to use the new password for future connections without re-authentication.
+
+<span style="font-size:14px;">[⬆ Back to commands table](#commands-table)</span>
+---
 
 </details>
+
+<a id="info"></a>
+<details>
+<summary><b style="font-size:18px;">INFO</b></summary>
+
+The `INFO` command retrieves detailed information about the Valkey server, including memory usage, connected clients, and database statistics.
+
+- **Both** Jedis and Glide support this command **in the same way**.
+
+### Jedis
+```java
+String info = jedis.info();
+```
+
+### Glide
+```java
+String info = glideClient.info().get();
+```
+
+<span style="font-size:14px;">[⬆ Back to commands table](#commands-table)</span>
+---
+
+</details>
+
+<a id="select"></a>
+<details>
+<summary><b style="font-size:18px;">Change Database (SELECT)</b></summary>
+
+The `SELECT` command switches between Valkey databases.
+
+- **Both** Jedis and Glide support this **in the same way**.
+
+### Jedis
+```java
+String res = jedis.select(1); // Output: OK
+```
+
+### Glide
+```java
+String res = glideClient.select(1).get(); // Output: OK
+```
+
+<span style="font-size:14px;">[⬆ Back to commands table](#commands-table)</span>
+---
+
+</details>
+
+
 
 
 
