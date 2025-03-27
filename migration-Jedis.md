@@ -125,14 +125,14 @@ For advanced configurations, refer to the **[Glide Wiki - Java](https://github.c
 
 ### Standalone Mode
 
-### **Jedis**  
+### Jedis  
 ```java
 import redis.clients.jedis.Jedis;
 
 Jedis jedis = new Jedis("localhost", 6379);
 ```
 
-### **Glide**  
+### Glide  
 ```java
 import glide.api.GlideClient;
 import glide.api.models.configuration.GlideClientConfiguration;
@@ -150,7 +150,7 @@ GlideClient glideClient = GlideClient.createClient(config).get();
 ---
 ### Cluster Mode
 
-### **Jedis**  
+### Jedis  
 ```java
 import redis.clients.jedis.DefaultJedisClientConfig;
 import redis.clients.jedis.JedisCluster;
@@ -163,7 +163,7 @@ JedisCluster jedisCluster = new JedisCluster(
 );
 ```
 
-### **Glide**  
+### Glide  
 ```java
 import glide.api.GlideClusterClient;
 import glide.api.models.configuration.GlideClusterClientConfiguration;
@@ -236,7 +236,7 @@ Below is a list of the **most commonly used Valkey commands** in Glide clients a
 
 - Both Jedis and Glide support this in the same way.
 
-### **Jedis**
+### Jedis
 ```java
 // Set a key-value pair
 jedis.set("key", "value");
@@ -245,10 +245,10 @@ jedis.set("key", "value");
 String value = jedis.get("key");  // value = "value"
 ```
 
-### **Glide**
+### Glide
 ```java
 // Set a key-value pair
-glideClient.set("key", "value");
+glideClient.set("key", "value").get();
 
 // Retrieve the value
 String value = glideClient.get("key").get();  // value = "value"
@@ -283,7 +283,7 @@ String value2 = jedis.get("key2"); // null
 ```java
 String[] Keys = { "key1", "key2" };
 
-glideClient.del(Keys);
+glideClient.del(Keys).get();
 
 String value1 = glideClient.get("key1").get(); // null
 String value2 = glideClient.get("key2").get(); // null
@@ -319,7 +319,7 @@ boolean res2 = jedis.exists("new_key"); // true
 Long res = glideClient.exists(new String[] { "new_key" }).get(); // 0
 
 // Set a key-value pair
-glideClient.set("new_key", "value");
+glideClient.set("new_key", "value").get();
 
 // Check again
 Long res2 = glideClient.exists(new String[] { "new_key" }).get(); // 1
@@ -348,8 +348,8 @@ String[] keys = { "new_key1", "new_key2" };
 long res1 = glideClient.exists(keys).get(); // 0
 
 // Set the new keys
-glideClient.set("new_key1", "value1");
-glideClient.set("new_key2", "value2");
+glideClient.set("new_key1", "value1").get();
+glideClient.set("new_key2", "value2").get();
 
 long res2 = glideClient.exists(keys).get();  // 2
 ```
@@ -365,18 +365,18 @@ The `INCR` command **increments** the value of a key by **1**, while `DECR` **de
 - Both **Jedis** and **Glide** support these commands with the same syntax and behavior.  
 - The key must contain an **integer value**, otherwise, Valkey will return an error.  
 
-### **Jedis**
+### Jedis
 ```java
 jedis.set("key", "1");
 jedis.incr("key"); // key = 2
 jedis.decr("key"); // key = 1
 ```
 
-### **Glide**
+### Glide
 ```java
-glideClient.set("key", "1");
-glideClient.incr("key"); // key = 2
-glideClient.decr("key"); // key = 1
+glideClient.set("key", "1").get();
+glideClient.incr("key").get(); // key = 2
+glideClient.decr("key").get(); // key = 1
 ```
 
 </details>
@@ -390,12 +390,12 @@ glideClient.decr("key"); // key = 1
 The `INCRBY` command increases the **value of a key** by a specified amount.  
 - Works **the same way** in **both** Jedis and Glide.  
 
-### **Jedis**
+### Jedis
 ```java
 long counter = jedis.incrBy("counter", 3); // counter: 3
 ```
 
-### **Glide**
+### Glide
 ```java
 long res = glideClient.incrBy("counter", 3).get(); // counter: 3
 ```
@@ -467,7 +467,7 @@ String res = jedis.auth("111");
 ### Glide
 ```java
 // Returns OK if the password is correct, otherwise returns an error
-glideClient.updateConnectionPassword("newPassword", true);
+glideClient.updateConnectionPassword("newPassword", true).get();
 ```
 
 **Note:** Setting `immediateAuth = false` allows the client to use the new password for future connections without re-authentication.
@@ -491,7 +491,7 @@ jedis.expire("key", 2);
 
 ### Glide
 ```java
-glideClient.expire("key", 2);
+glideClient.expire("key", 2).get();
 ```
 
 </details>
@@ -605,14 +605,14 @@ The `LPUSH` and `RPUSH` commands add elements to a Valkey list.
 - **RPUSH** inserts at the **end**.  
 - This command works **the same way** in both **Jedis and Glide**.  
 
-### **Jedis**
+### Jedis
 ```java
 String[] strings = {"key1", "key2", "key3"};
 
 long length_of_list = jedis.lpush("list", strings); // length_of_list = 3
 ```
 
-### **Glide**
+### Glide
 ```java
 String[] elements = {"key1", "key2", "key3"};
 
@@ -626,13 +626,12 @@ long length_of_list = glideClient.lpush("list", elements).get(); // length_of_li
 <a id="scan"></a>
 <details>
 <summary><b style="font-size:18px;">SCAN</b></summary>
-## 14. Scan  
 
 The `SCAN` command iterates through **keys in the Valkey database** without blocking the server.  
 - Both **Jedis** and **Glide** support scanning with or without `ScanParams`.  
 - **Glide** supports **cluster mode scanning** to scan the entire cluster. [For more](https://github.com/valkey-io/valkey-glide/wiki/General-Concepts#cluster-scan).
 
-### **Jedis**
+### Jedis
 ```java
 String cursor = ScanParams.SCAN_POINTER_START;
 ScanResult<String> scanResult;
@@ -648,7 +647,7 @@ do {
 } while (!cursor.equals(ScanParams.SCAN_POINTER_START));
 ```
 
-### **Glide**
+### Glide
 ```java
 String cursor = "0";
 Object[] result;
@@ -677,13 +676,13 @@ The `MGET` command retrieves the values of multiple keys from Valkey.
 - In **Jedis**, `mget()` returns a **`List<String>`**.  
 - In **Glide**, `mget()` returns a **`String[]`**.  
 
-### **Jedis**  
+### Jedis  
 ```java
 String[] keys = new String[] { "key1", "key2", "key3" };
 List<String> values = jedis.mget(keys);
 ```
 
-### **Glide**  
+### Glide  
 ```java
 String[] keys = new String[] {"key1", "key2", "key3"};
 String[] values = glideClient.mget(keys).get();
@@ -701,12 +700,12 @@ The `BGSAVE` command asynchronously saves the dataset to disk without blocking o
 - **Jedis:** Supports `bgsave()`.  
 - **Glide:** Not available. Let us know if you’d like this feature added.  
 
-### **Jedis**  
+### Jedis  
 ```java
 jedis.bgsave();
 ```
 
-### **Glide**  
+### Glide  
 Currently unavailable in Glide.
 
 </details>
@@ -720,7 +719,7 @@ The `HSET` command sets multiple field-value pairs in a hash.
 
 - Both **Jedis** and **Glide** support this in the same way.  
 
-### **Jedis**  
+### Jedis  
 ```java
 Map<String, String> map = new HashMap<>();
 map.put("key1", "value1");
@@ -730,7 +729,7 @@ long result = jedis.hset("my_hash", map);
 System.out.println(result); // Output: 2 - Indicates that 2 fields were successfully set in the hash "my_hash"
 ```
 
-### **Glide**  
+### Glide  
 ```java
 Map<String, String> map = new HashMap<>();
 map.put("key1", "value1");
@@ -752,12 +751,12 @@ The `SETEX` command sets a key with an expiration time.
 - In **Jedis**, `setex()` is a dedicated function.  
 - In **Glide**, expiration is handled using `SetOptions` within the `set()` command.  
 
-### **Jedis**  
+### Jedis  
 ```java
 jedis.setex("key", 1, "value");
 ```
 
-### **Glide**  
+### Glide  
 ```java
 SetOptions options = SetOptions.builder().expiry(Expiry.Seconds(1L)).build();
 
