@@ -4,10 +4,15 @@ This guide provides a **side-by-side comparison** of how to migrate common Valke
 
 ---
 
-<details>
-<summary><b style="font-size:18px;">Dependencies</b></summary>
+## Dependencies  
 
-There are 4 types of classifiers for Valkey GLIDE which are
+To use Valkey Glide, you must include a classifier to specify your platform architecture.  
+This section includes setup instructions for Gradle, Maven, and SBT, with or without OS detection tools.
+
+<a id="dependencies"></a>
+<details>
+<summary><b style="font-size:22px;">Dependency Instructions</b></summary>
+
 ```
 osx-aarch_64
 linux-aarch_64
@@ -122,16 +127,16 @@ For advanced configurations, refer to the **[Glide Wiki - Java](https://github.c
 
 <a id="standalone"></a>
 <details>
-<summary><b style="font-size:18px;">Standalone Mode</b></summary>
+<summary><b style="font-size:22px;">Standalone Mode</b></summary>
 
-### Jedis  
+**Jedis**  
 ```java
 import redis.clients.jedis.Jedis;
 
 Jedis jedis = new Jedis("localhost", 6379);
 ```
 
-### Glide  
+**Glide**  
 ```java
 import glide.api.GlideClient;
 import glide.api.models.configuration.GlideClientConfiguration;
@@ -152,9 +157,9 @@ GlideClient glideClient = GlideClient.createClient(config).get();
 
 <a id="cluster"></a>
 <details>
-<summary><b style="font-size:18px;">Cluster Mode</b></summary>
+<summary><b style="font-size:22px;">Cluster Mode</b></summary>
 
-### Jedis  
+**Jedis**  
 ```java
 import redis.clients.jedis.DefaultJedisClientConfig;
 import redis.clients.jedis.JedisCluster;
@@ -167,7 +172,7 @@ JedisCluster jedisCluster = new JedisCluster(
 );
 ```
 
-### Glide  
+**Glide**  
 ```java
 import glide.api.GlideClusterClient;
 import glide.api.models.configuration.GlideClusterClientConfiguration;
@@ -191,7 +196,7 @@ GlideClusterClient glideClusterClient = GlideClusterClient.createClient(clusterC
 
 <a id="parameters"></a>
 <details>
-<summary><b style="font-size:18px;">Jedis vs. Glide Constructor Parameters</b></summary>
+<summary><b style="font-size:22px;">Jedis vs. Glide Constructor Parameters</b></summary>
 
 The table below compares **Jedis constructors** with **Glide configuration parameters**:
 
@@ -212,7 +217,7 @@ The table below compares **Jedis constructors** with **Glide configuration param
 | `int maxAttempts` | N/A |
 | `GenericObjectPoolConfig<Connection> poolConfig` | N/A |
 
-## Advanced configuration
+**Advanced configuration**
 
 - **Standalone Mode** `.advancedConfiguration(AdvancedGlideClientConfiguration.builder()`
 - **Cluster Mode** `.advancedConfiguration(AdvancedGlideClusterClientConfiguration.builder()`
@@ -252,7 +257,7 @@ Below is a list of the **most commonly used Valkey commands** in Glide clients a
 
 - Both Jedis and Glide support this in the same way.
 
-### Jedis
+**Jedis**
 ```java
 // Set a key-value pair
 jedis.set("key", "value");
@@ -261,7 +266,7 @@ jedis.set("key", "value");
 String value = jedis.get("key");  // value = "value"
 ```
 
-### Glide
+**Glide**
 ```java
 // Set a key-value pair
 glideClient.set("key", "value").get();
@@ -272,7 +277,10 @@ String value = glideClient.get("key").get();  // value = "value"
 
 **Note:** The `.get()` is required in **Glide** because `get()` returns a **`CompletableFuture<String>`**.
 
-<span style="font-size:14px;">[⬆ Back to commands table](#commands-table)</span>
+<div style="font-size:14px; margin-top: 10px;">
+  <a href="#commands-table">⬆ Back to commands table</a>
+</div>
+
 ---
 
 </details>
@@ -286,7 +294,7 @@ The `DEL` command removes one or more keys from Valkey.
 - In **Jedis**, `del()` takes a **single key** or **multiple keys**.
 - In **Glide**, `del()` **requires an array (`String[]`)**.
 
-### Jedis
+**Jedis**
 ```java
 String[] keys = { "key1", "key2" };
 
@@ -296,7 +304,7 @@ String value1 = jedis.get("key1"); // null
 String value2 = jedis.get("key2"); // null
 ```
 
-### Glide
+**Glide**
 ```java
 String[] keys = { "key1", "key2" };
 
@@ -306,7 +314,10 @@ String value1 = glideClient.get("key1").get(); // null
 String value2 = glideClient.get("key2").get(); // null
 ```
 
-<span style="font-size:14px;">[⬆ Back to commands table](#commands-table)</span>
+<div style="font-size:14px; margin-top: 10px;">
+  <a href="#commands-table">⬆ Back to commands table</a>
+</div>
+
 ---
 
 </details>
@@ -320,9 +331,9 @@ The `EXISTS` command checks if a key exists in Valkey.
 - In Jedis, exists(String key) returns true if the key exists. If given multiple keys (String... keys), it returns the number of existing keys.
 - In **Glide**, `exists()` takes a **list of keys (`String[]`)** and returns a **Long** indicating how many of the provided keys exist.
 
-### Single key
+**Single key**
 
-### Jedis
+**Jedis**
 ```java
 boolean res1 = jedis.exists("new_key"); // false
 
@@ -332,7 +343,7 @@ jedis.set("new_key", "value");
 boolean res2 = jedis.exists("new_key"); // true
 ```
 
-### Glide
+**Glide**
 ```java
 // Check if the key exists and return the number of keys that exist
 Long res = glideClient.exists(new String[] { "new_key" }).get(); // 0
@@ -345,9 +356,9 @@ Long res2 = glideClient.exists(new String[] { "new_key" }).get(); // 1
 ```
 ---
 
-### Multiple keys
+**Multiple keys**
 
-### Jedis
+**Jedis**
 ```java
 String[] keys = { "new_key1", "new_key2" };
 
@@ -360,7 +371,7 @@ jedis.set("new_key2", "value2");
 long res2 = jedis.exists(keys);  // 2
 ```
 
-### Glide
+**Glide**
 ```java
 String[] keys = { "new_key1", "new_key2" };
 
@@ -373,7 +384,10 @@ glideClient.set("new_key2", "value2").get();
 long res2 = glideClient.exists(keys).get();  // 2
 ```
 
-<span style="font-size:14px;">[⬆ Back to commands table](#commands-table)</span>
+<div style="font-size:14px; margin-top: 10px;">
+  <a href="#commands-table">⬆ Back to commands table</a>
+</div>
+
 ---
 
 </details>
@@ -386,21 +400,24 @@ The `INCR` command **increments** the value of a key by **1**, while `DECR` **de
 - Both **Jedis** and **Glide** support these commands with the same syntax and behavior.  
 - The key must contain an **integer value**, otherwise, Valkey will return an error.  
 
-### Jedis
+**Jedis**
 ```java
 jedis.set("key", "1");
 jedis.incr("key"); // key = 2
 jedis.decr("key"); // key = 1
 ```
 
-### Glide
+**Glide**
 ```java
 glideClient.set("key", "1").get();
 glideClient.incr("key").get(); // key = 2
 glideClient.decr("key").get(); // key = 1
 ```
 
-<span style="font-size:14px;">[⬆ Back to commands table](#commands-table)</span>
+<div style="font-size:14px; margin-top: 10px;">
+  <a href="#commands-table">⬆ Back to commands table</a>
+</div>
+
 ---
 
 </details>
@@ -412,21 +429,24 @@ glideClient.decr("key").get(); // key = 1
 The `INCRBY` command increases the **value of a key** by a specified amount.  
 - Works **the same way** in **both** Jedis and Glide.  
 
-### Jedis
+**Jedis**
 ```java
 jedis.set("counter", "0");
 long counter = jedis.incrBy("counter", 3); // counter: 3
 counter = jedis.decrBy("counter", 2); // counter: 1
 ```
 
-### Glide
+**Glide**
 ```java
 glideClient.set("counter", "0").get();
 long counter = glideClient.incrBy("counter", 3).get(); // counter: 3
 counter = glideClient.decrBy("counter", 2).get(); // counter: 1
 ```
 
-<span style="font-size:14px;">[⬆ Back to commands table](#commands-table)</span>
+<div style="font-size:14px; margin-top: 10px;">
+  <a href="#commands-table">⬆ Back to commands table</a>
+</div>
+
 ---
 
 </details>
@@ -440,19 +460,22 @@ The `MGET` command retrieves the values of multiple keys from Valkey.
 - In **Jedis**, `mget()` returns a **`List<String>`**.  
 - In **Glide**, `mget()` returns a **`String[]`**.  
 
-### Jedis  
+**Jedis**  
 ```java
 String[] keys = new String[] { "key1", "key2", "key3" };
 List<String> values = jedis.mget(keys);
 ```
 
-### Glide  
+**Glide**  
 ```java
 String[] keys = new String[] {"key1", "key2", "key3"};
 String[] values = glideClient.mget(keys).get();
 ```
 
-<span style="font-size:14px;">[⬆ Back to commands table](#commands-table)</span>
+<div style="font-size:14px; margin-top: 10px;">
+  <a href="#commands-table">⬆ Back to commands table</a>
+</div>
+
 ---
 
 </details>
@@ -465,7 +488,7 @@ The `HSET` command sets multiple field-value pairs in a hash.
 
 - Both **Jedis** and **Glide** support this in the same way.  
 
-### Jedis  
+**Jedis**  
 ```java
 Map<String, String> map = new HashMap<>();
 map.put("key1", "value1");
@@ -475,7 +498,7 @@ long result = jedis.hset("my_hash", map);
 System.out.println(result); // Output: 2 - Indicates that 2 fields were successfully set in the hash "my_hash"
 ```
 
-### Glide  
+**Glide**  
 ```java
 Map<String, String> map = new HashMap<>();
 map.put("key1", "value1");
@@ -485,7 +508,10 @@ long result = glideClient.hset("my_hash", map).get();
 System.out.println(result); // Output: 2 - Indicates that 2 fields were successfully set in the hash "my_hash"
 ```
 
-<span style="font-size:14px;">[⬆ Back to commands table](#commands-table)</span>
+<div style="font-size:14px; margin-top: 10px;">
+  <a href="#commands-table">⬆ Back to commands table</a>
+</div>
+
 ---
 
 </details>
@@ -499,19 +525,22 @@ The `SETEX` command sets a key with an expiration time.
 - In **Jedis**, `setex()` is a dedicated function.  
 - In **Glide**, expiration is handled using `SetOptions` within the `set()` command.  
 
-### Jedis  
+**Jedis**  
 ```java
 jedis.setex("key", 1, "value");
 ```
 
-### Glide  
+**Glide**  
 ```java
 SetOptions options = SetOptions.builder().expiry(Expiry.Seconds(1L)).build();
 
 glideClient.set("key", "value", options);
 ```
 
-<span style="font-size:14px;">[⬆ Back to commands table](#commands-table)</span>
+<div style="font-size:14px; margin-top: 10px;">
+  <a href="#commands-table">⬆ Back to commands table</a>
+</div>
+
 ---
 
 </details>
@@ -525,21 +554,24 @@ The `LPUSH` and `RPUSH` commands add elements to a Valkey list.
 - **RPUSH** inserts at the **end**.  
 - This command works **the same way** in both **Jedis and Glide**.  
 
-### Jedis
+**Jedis**
 ```java
 String[] strings = {"key1", "key2", "key3"};
 
 long length_of_list = jedis.lpush("list", strings); // length_of_list = 3
 ```
 
-### Glide
+**Glide**
 ```java
 String[] elements = {"key1", "key2", "key3"};
 
 long length_of_list = glideClient.lpush("list", elements).get(); // length_of_list = 3
 ```
 
-<span style="font-size:14px;">[⬆ Back to commands table](#commands-table)</span>
+<div style="font-size:14px; margin-top: 10px;">
+  <a href="#commands-table">⬆ Back to commands table</a>
+</div>
+
 ---
 
 </details>
@@ -552,16 +584,19 @@ The `EXPIRE` command sets a time-to-live (TTL) for a key.
 
 - **Both** Jedis and Glide support this **in the same way**.
 
-### Jedis
+**Jedis**
 ```java
 jedis.expire("key", 2);
 ```
 
-### Glide
+**Glide**
 ```java
 glideClient.expire("key", 2).get();
 ```
-<span style="font-size:14px;">[⬆ Back to commands table](#commands-table)</span>
+<div style="font-size:14px; margin-top: 10px;">
+  <a href="#commands-table">⬆ Back to commands table</a>
+</div>
+
 ---
 
 </details>
@@ -576,9 +611,9 @@ The `EXEC` command executes all queued commands in the transaction.
 - In **Jedis**, transactions are started using `jedis.multi()`.
 - In **Glide**, transactions are represented as a `Transaction` object.
 
-### Standalone Mode
+**Standalone Mode**
 
-### Jedis
+**Jedis**
 ```java
 // Start a transaction
 Transaction transaction = jedis.multi();
@@ -593,7 +628,7 @@ List<Object> result = transaction.exec();
 System.out.println(result); // Output: [OK, 2, 2]
 ```
 
-### Glide
+**Glide**
 ```java
 import glide.api.models.Transaction;
 
@@ -612,9 +647,9 @@ System.out.println(Arrays.toString(result)); // Output: [OK, 2, 2]
 
 ---
 
-### Cluster Mode
+**Cluster Mode**
 
-### Jedis
+**Jedis**
 
 ```java
 import redis.clients.jedis.AbstractTransaction;
@@ -631,7 +666,7 @@ List<Object> result = transaction.exec();
 System.out.println(result); // Output: [OK, "value"]
 ```
 
-### Glide
+**Glide**
 
 ```java
 import glide.api.models.ClusterTransaction;
@@ -647,7 +682,10 @@ Object[] result = client.exec(transaction).get();
 System.out.println(Arrays.toString(result)); // Output: [OK, "value"]
 ```
 
-<span style="font-size:14px;">[⬆ Back to commands table](#commands-table)</span>
+<div style="font-size:14px; margin-top: 10px;">
+  <a href="#commands-table">⬆ Back to commands table</a>
+</div>
+
 ---
 
 </details>
@@ -663,21 +701,24 @@ The `EVAL` command executes Lua scripts in Valkey.
 The `Script` class wraps the Lua script, and the second parameter (`boolean binaryOutput`) controls the output format:  
 `false` returns a **String**, while `true` returns **binary data**.
 
-### Jedis
+**Jedis**
 ```java
 String script = "return 'Hello, Lua!'";
 Object result = jedis.eval(script);
 System.out.println(result); // Output: Hello, Lua!
 ```
 
-### Glide
+**Glide**
 ```java
 Script luaScript = new Script("return 'Hello, Lua!'", false);
 String result = (String) glideClient.invokeScript(luaScript).get();
 System.out.println(result); // Output: Hello, Lua!
 ```
 
-<span style="font-size:14px;">[⬆ Back to commands table](#commands-table)</span>
+<div style="font-size:14px; margin-top: 10px;">
+  <a href="#commands-table">⬆ Back to commands table</a>
+</div>
+
 ---
 
 </details>
@@ -691,7 +732,7 @@ The `EVALSHA` command is similar to `EVAL`, but instead of passing the Lua scrip
 - In **Jedis**, the script must be preloaded using `scriptLoad()`.
 - In **Glide**, `invokeScript()` is used with `ScriptOptions`.
 
-### Jedis
+**Jedis**
 ```java
 String script = "return redis.call('set', KEYS[1], ARGV[1]);";
 String sha1 = jedis.scriptLoad(script);
@@ -699,7 +740,7 @@ Object result = jedis.evalsha(sha1, Arrays.asList("myKey"), Arrays.asList("10"))
 System.out.println(result); // Output: OK
 ```
 
-### Glide
+**Glide**
 ```java
 String script = "return server.call('set', KEYS[1], ARGV[1]);";
 Script luaScript = new Script(script, false);
@@ -708,7 +749,10 @@ String result = (String) glideClient.invokeScript(luaScript, scriptOptions).get(
 System.out.println(result); // Output: OK
 ```
 
-<span style="font-size:14px;">[⬆ Back to commands table](#commands-table)</span>
+<div style="font-size:14px; margin-top: 10px;">
+  <a href="#commands-table">⬆ Back to commands table</a>
+</div>
+
 ---
 
 </details>
@@ -721,7 +765,7 @@ The `SCAN` command iterates through **keys in the Valkey database** without bloc
 - Both **Jedis** and **Glide** support scanning with or without `ScanParams`.  
 - **Glide** supports **cluster mode scanning** to scan the entire cluster. [For more](https://github.com/valkey-io/valkey-glide/wiki/General-Concepts#cluster-scan).
 
-### Jedis
+**Jedis**
 ```java
 String cursor = ScanParams.SCAN_POINTER_START;
 ScanResult<String> scanResult;
@@ -737,7 +781,7 @@ do {
 } while (!cursor.equals(ScanParams.SCAN_POINTER_START));
 ```
 
-### Glide
+**Glide**
 ```java
 String cursor = "0";
 Object[] result;
@@ -755,7 +799,10 @@ do {
 } while (!cursor.equals("0"));
 ```
 
-<span style="font-size:14px;">[⬆ Back to commands table](#commands-table)</span>
+<div style="font-size:14px; margin-top: 10px;">
+  <a href="#commands-table">⬆ Back to commands table</a>
+</div>
+
 ---
 
 </details>
@@ -769,13 +816,13 @@ The `AUTH` command is used to authenticate a Valkey connection with a password.
 - In **Jedis**, authentication is done via `auth()`.
 - In **Glide**, authentication is handled using `updateConnectionPassword()`.
 
-### Jedis
+**Jedis**
 ```java
 // Returns OK if the password is correct, otherwise returns an error
 String res = jedis.auth("111");
 ```
 
-### Glide
+**Glide**
 ```java
 // Returns OK if the password is correct, otherwise returns an error
 glideClient.updateConnectionPassword("newPassword", true).get();
@@ -783,7 +830,10 @@ glideClient.updateConnectionPassword("newPassword", true).get();
 
 **Note:** Setting `immediateAuth = false` allows the client to use the new password for future connections without re-authentication.
 
-<span style="font-size:14px;">[⬆ Back to commands table](#commands-table)</span>
+<div style="font-size:14px; margin-top: 10px;">
+  <a href="#commands-table">⬆ Back to commands table</a>
+</div>
+
 ---
 
 </details>
@@ -796,17 +846,20 @@ The `INFO` command retrieves detailed information about the Valkey server, inclu
 
 - **Both** Jedis and Glide support this command **in the same way**.
 
-### Jedis
+**Jedis**
 ```java
 String info = jedis.info();
 ```
 
-### Glide
+**Glide**
 ```java
 String info = glideClient.info().get();
 ```
 
-<span style="font-size:14px;">[⬆ Back to commands table](#commands-table)</span>
+<div style="font-size:14px; margin-top: 10px;">
+  <a href="#commands-table">⬆ Back to commands table</a>
+</div>
+
 ---
 
 </details>
@@ -819,17 +872,20 @@ The `SELECT` command switches between Valkey databases.
 
 - **Both** Jedis and Glide support this **in the same way**.
 
-### Jedis
+**Jedis**
 ```java
 String res = jedis.select(1); // Output: OK
 ```
 
-### Glide
+**Glide**
 ```java
 String res = glideClient.select(1).get(); // Output: OK
 ```
 
-<span style="font-size:14px;">[⬆ Back to commands table](#commands-table)</span>
+<div style="font-size:14px; margin-top: 10px;">
+  <a href="#commands-table">⬆ Back to commands table</a>
+</div>
+
 ---
 
 </details>
