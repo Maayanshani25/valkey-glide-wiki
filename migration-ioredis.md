@@ -76,6 +76,8 @@ const val = await client.get('key'); // "value"
 <details>
 <summary><b style="font-size:18px;">DEL</b></summary>
 
+The `DEL` command removes one or more keys from Valkey.
+
 - In **ioredis**, `del()` takes multiple arguments.
 - In **Glide**, `del()` expects an array.
 
@@ -94,23 +96,28 @@ await client.del(['key1', 'key2']); // 2
 <details>
 <summary><b style="font-size:18px;">EXISTS</b></summary>
 
+The `EXISTS` command checks if a key exists in Valkey.
+
 - In **ioredis**, accepts one or more arguments.
 - In **Glide**, expects an array of keys.
+- **Both** return the number of keys that exist.
 
 **ioredis**
 ```js
-await redis.exists('key'); // 0 or 1
+await redis.exists('existKey', 'nonExistKey'); // 1
 ```
 
 **Glide**
 ```js
-await client.exists(['key']); // 0 or 1
+await client.exists(['existKey', 'nonExistKey']); // 1
 ```
 </details>
 
 <a id="incr-decr"></a>
 <details>
 <summary><b style="font-size:18px;">INCR / DECR</b></summary>
+
+The `INCR` command **increments** the value of a key by **1**, while `DECR` **decrements** it by **1**.  
 
 - **Both** clients support `incr` and `decr` identically.
 
@@ -131,6 +138,8 @@ await client.decr('counter'); // counter = 0
 <details>
 <summary><b style="font-size:18px;">INCRBY / DECRBY</b></summary>
 
+The `INCRBY` command increases the **value of a key** by a specified amount.  
+
 - **Both** behave the same: apply an integer delta to a key.
 
 **ioredis**
@@ -150,17 +159,19 @@ await client.decrBy('counter', 2); // 3
 <details>
 <summary><b style="font-size:18px;">MGET</b></summary>
 
+The `MGET` command retrieves the values of multiple keys from Valkey.  
+
 - In **ioredis**, `mget()` accepts multiple string arguments.
 - In **Glide**, pass an array of strings.
 
 **ioredis**
 ```js
-const values = await redis.mget('k1', 'k2'); // ['v1', 'v2']
+const values = await redis.mget('key1', 'key2'); // ['value1', 'value2']
 ```
 
 **Glide**
 ```js
-const values = await client.mget(['k1', 'k2']); // ['v1', 'v2']
+const values = await client.mget(['key1', 'key2']); // ['value1', value2']
 ```
 </details>
 
@@ -168,17 +179,19 @@ const values = await client.mget(['k1', 'k2']); // ['v1', 'v2']
 <details>
 <summary><b style="font-size:18px;">HSET</b></summary>
 
+The `HSET` command sets multiple field-value pairs in a hash.  
+
 - In **ioredis**, fields and values are passed inline.
 - In **Glide**, use a key-value object.
 
 **ioredis**
 ```js
-await redis.hset('hash', 'a', '1', 'b', '2'); // 2
+await redis.hset('hash', 'key1', '1', 'key2', '2'); // 2
 ```
 
 **Glide**
 ```js
-await client.hset('hash', { a: '1', b: '2' }); // 2
+await client.hset('hash', { key1: '1', key2: '2' }); // 2
 ```
 </details>
 
@@ -186,7 +199,11 @@ await client.hset('hash', { a: '1', b: '2' }); // 2
 <details>
 <summary><b style="font-size:18px;">EXPIRE</b></summary>
 
+The `EXPIRE` command sets a time-to-live (TTL) for a key.
+
 - **Both** clients support TTL expiration using `expire`.
+- In **ioredis**, it returns a number 1 if successful or 0 if otherwise.
+- In **Glide**, it returns a boolean indicating success.
 
 **ioredis**
 ```js
@@ -203,6 +220,8 @@ await client.expire('key', 10); // 1
 <details>
 <summary><b style="font-size:18px;">SETEX</b></summary>
 
+The `SETEX` command sets a key with an expiration time.  
+
 - In **ioredis**, `setex` is a dedicated function.
 - In **Glide**, TTL is passed as an option to `set`.
 
@@ -213,7 +232,9 @@ await redis.setex('key', 5, 'value'); // OK
 
 **Glide**
 ```js
-await client.set('key', 'value', { expiry: { seconds: 5 } }); // OK
+import { TimeUnit } from "@valkey/valkey-glide";
+
+await client.set('key', 'value', {expiry: {type: TimeUnit.Seconds, count: 5 }}); // OK
 ```
 </details>
 
@@ -221,8 +242,10 @@ await client.set('key', 'value', { expiry: { seconds: 5 } }); // OK
 <details>
 <summary><b style="font-size:18px;">LPUSH / RPUSH</b></summary>
 
-- In **ioredis**, supports variadic arguments.
-- In **Glide**, values must be passed as an array.
+`LPUSH` adds to the start of a Valkey list, `RPUSH` to the end.
+
+- **ioredis**: accepts multiple values, returns new list length.  
+- **Glide**: values must be in an array, also returns new length.
 
 **ioredis**
 ```js
@@ -266,23 +289,29 @@ do {
 <details>
 <summary><b style="font-size:18px;">Transactions (MULTI/EXEC)</b></summary>
 
-- In **ioredis**, `multi()` queues commands directly.
-- In **Glide**, `multi()` returns a transaction object that is later executed with `exec(tx)`.
+The `MULTI` command starts a Valkey transaction.  
+The `EXEC` command executes all queued commands in the transaction.
+
+- In **ioredis**, transactions are started using `redis.multi()`. `exec` returns `[[error, result], ...]`
+- In **Glide**, transactions are represented as a `Transaction` object. `exec` returns `[result1, result2, ...]`
 
 **ioredis**
 ```js
-const trx = redis.multi();
-trx.set('a', '1');
-trx.incr('a');
-const result = await trx.exec(); // ['OK', 2]
+const transaction = redis.multi()
+        .set("key", "value")
+        .get("key");
+const result = await transaction.exec(); // 
+console.log(result); // Output: [ [ null, 'OK' ], [ null, 'value' ] ]
 ```
 
 **Glide**
 ```js
-const tx = client.multi();
-tx.set('a', '1');
-tx.incr('a');
-const result = await client.exec(tx); // ['OK', 2]
+import { Transaction } from "@valkey/valkey-glide";
+const transaction = new Transaction()
+            .set("key", "value")
+            .get("key");
+const result = await client.exec(transaction);
+console.log(result); // Output: ['OK', 'value']
 ```
 </details>
 
