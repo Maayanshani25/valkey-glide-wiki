@@ -14,6 +14,17 @@ npm i @valkey/valkey-glide
 
 ## Constructor & Initialization
 
+- In **ioredis**, multiple constructors allow for various connection configurations.  
+- In **Glide**, connections are established through a **single configuration object**, which comes **pre-configured with best practices**.
+
+Glide **requires minimal configuration changes**, typically for:  
+- **Timeout settings**  
+- **TLS**  
+- **Read from replica**  
+- **User authentication (username & password)**  
+
+For advanced configurations, refer to the **[Glide Wiki - NodeJS](https://github.com/valkey-io/valkey-glide/wiki/NodeJS-Wrapper)**.
+
 
 <a id="constructor"></a>
 <details>
@@ -332,3 +343,23 @@ await redis.auth('mypass'); // OK
 await client.updateConnectionPassword('mypass'); // OK
 ```
 </details>
+
+---
+
+### Custom Command
+
+The `customCommand` function lets you execute any Valkey command as a raw list of arguments, **without input validation**. It's a flexible option when the standard Glide API doesn't cover a specific command.
+
+You can use it whenever you're unsure of the dedicated method or want to quickly run a command directly.
+
+**Example:**
+
+```js
+await client.customCommand(['SET', 'key', 'value']);
+```
+
+This sends the raw `SET key value` command to Valkey.
+
+---
+
+
