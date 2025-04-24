@@ -1,6 +1,4 @@
-// add about npm version 9.4.1 and higher and how to install
-
-# ioredis → Valkey Glide Migration Guide (Node.js)
+# Migration Guide ioredis
 
 This guide provides a **side-by-side comparison** of how to migrate common Valkey commands from **ioredis to Glide**.
 
@@ -12,7 +10,7 @@ This guide provides a **side-by-side comparison** of how to migrate common Valke
 npm i @valkey/valkey-glide
 ```
 
-## Constructor & Initialization
+## Constructor
 
 - In **ioredis**, multiple constructors allow for various connection configurations.  
 - In **Glide**, connections are established through a **single configuration object**, which comes **pre-configured with best practices**.
@@ -26,24 +24,96 @@ Glide **requires minimal configuration changes**, typically for:
 For advanced configurations, refer to the **[Glide Wiki - NodeJS](https://github.com/valkey-io/valkey-glide/wiki/NodeJS-Wrapper)**.
 
 
-<a id="constructor"></a>
+<a id="standalone"></a>
 <details>
-<summary><b style="font-size:22px;">Connection</b></summary>
+<summary><b style="font-size:22px;">Standalone Mode</b></summary>
 
 **ioredis**
 ```js
-const Redis = require('ioredis');
+const Redis = require("ioredis");
+
 const redis = new Redis();
 ```
 
 **Glide**
 ```js
-import { createClient } from '@valkey/glide';
+import { GlideClient } from '@valkey/glide';
 
-const client = await createClient({
+const client = await GlideClient.createClient({
   address: { host: '127.0.0.1', port: 6379 }
 });
 ```
+
+---
+
+</details>
+
+<a id="cluster"></a>
+<details>
+<summary><b style="font-size:22px;">Cluster Mode</b></summary>
+
+**ioredis**  
+```js
+const cluster = new Redis.Cluster([
+  {
+    host: "127.0.0.1",
+    port: 6379,
+  },
+  {
+    host: "127.0.0.1",
+    port: 6380,
+  },
+]);
+```
+
+**Glide**  
+```js
+import { GlideClusterClient } from '@valkey/glide';
+
+const client = await GlideClusterClient.createClient({
+  addresses: [
+    { host: "127.0.0.1", port: 6379 },
+    { host: "127.0.0.1", port: 6380 },
+  ],
+});
+```
+
+</details>
+
+<a id="parameters"></a>
+<details>
+<summary><b style="font-size:22px;">ioredis vs. Glide Constructor Parameters</b></summary>
+
+// TODO: fix the table
+
+The table below compares **ioredis constructors** with **Glide configuration parameters**:
+
+| **ioredis Constructor** | **Equivalent Glide Configuration** |
+|----------------------|--------------------------------|
+| `HostAndPort(String host, int port)` | `.address(NodeAddress.builder().host(String host).port(Integer port).build())` |
+| `int socketTimeout` | `.requestTimeout(Integer requestTimeout)` |
+| `String password, String user` | `.credentials(ServerCredentials.builder().username(String user).password(String pwd).build())`|
+| `String clientName` | `.clientName(String clientName)`|
+| `boolean ssl` | `.useTLS(useTLS)` |
+| `Set<HostAndPort> clusterNodes` | N/A |
+| `Cache clientSideCache` | N/A |
+| `CacheConfig cacheConfig` | N/A |
+| `Duration topologyRefreshPeriod` | N/A |
+| `Duration maxTotalRetriesDuration` | N/A |
+| `ioredisClientConfig clientConfig` | N/A |
+| `HostAndPortMapper hostAndPortMap` | N/A |
+| `int maxAttempts` | N/A |
+| `GenericObjectPoolConfig<Connection> poolConfig` | N/A |
+
+**Advanced configuration**
+
+- **Standalone Mode** `.advancedConfiguration(AdvancedGlideClientConfiguration.builder()`
+- **Cluster Mode** `.advancedConfiguration(AdvancedGlideClusterClientConfiguration.builder()`
+
+| **ioredis Constructor** | **Equivalent Glide Configuration** |
+|----------------------|--------------------------------|
+| `int connectionTimeout` | `.connectionTimeout(Integer connectionTimeout)`|
+
 </details>
 
 ---
@@ -53,6 +123,8 @@ const client = await createClient({
 <a id="commands-table"></a>
 
 ### **Valkey Commands Sorted Alphabetically**
+
+// todo: Fix the order of the table
 
 | | | |
 |------|------|------|
