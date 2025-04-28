@@ -39,8 +39,12 @@ const redis = new Redis();
 ```js
 import { GlideClient } from '@valkey/glide';
 
+const addresses = [
+        { host: "localhost", port: 6379 },
+    ]; 
+
 const client = await GlideClient.createClient({
-  address: { host: '127.0.0.1', port: 6379 }
+    addresses: addresses
 });
 ```
 
@@ -54,15 +58,11 @@ const client = await GlideClient.createClient({
 
 **ioredis**  
 ```js
+const Redis = require("ioredis");
+
 const cluster = new Redis.Cluster([
-  {
-    host: "127.0.0.1",
-    port: 6379,
-  },
-  {
-    host: "127.0.0.1",
-    port: 6380,
-  },
+  { host: "127.0.0.1", port: 6379 },
+  { host: "127.0.0.1", port: 6380 },
 ]);
 ```
 
@@ -70,11 +70,13 @@ const cluster = new Redis.Cluster([
 ```js
 import { GlideClusterClient } from '@valkey/glide';
 
-const client = await GlideClusterClient.createClient({
-  addresses: [
+const addresses = [
     { host: "127.0.0.1", port: 6379 },
     { host: "127.0.0.1", port: 6380 },
-  ],
+  ];
+
+const client = await GlideClusterClient.createClient({
+  addresses: addresses
 });
 ```
 
@@ -89,30 +91,15 @@ const client = await GlideClusterClient.createClient({
 The table below compares **ioredis constructors** with **Glide configuration parameters**:
 
 | **ioredis Constructor** | **Equivalent Glide Configuration** |
-|----------------------|--------------------------------|
-| `HostAndPort(String host, int port)` | `.address(NodeAddress.builder().host(String host).port(Integer port).build())` |
-| `int socketTimeout` | `.requestTimeout(Integer requestTimeout)` |
-| `String password, String user` | `.credentials(ServerCredentials.builder().username(String user).password(String pwd).build())`|
-| `String clientName` | `.clientName(String clientName)`|
-| `boolean ssl` | `.useTLS(useTLS)` |
-| `Set<HostAndPort> clusterNodes` | N/A |
-| `Cache clientSideCache` | N/A |
-| `CacheConfig cacheConfig` | N/A |
-| `Duration topologyRefreshPeriod` | N/A |
-| `Duration maxTotalRetriesDuration` | N/A |
-| `ioredisClientConfig clientConfig` | N/A |
-| `HostAndPortMapper hostAndPortMap` | N/A |
-| `int maxAttempts` | N/A |
-| `GenericObjectPoolConfig<Connection> poolConfig` | N/A |
+|--------------------------|--------------------------------------|
+| `port: number`           | `BaseClientConfiguration.addresses: { host: string; port?: number; }` |
+| `host: string`           | `BaseClientConfiguration.addresses: { host: string; port?: number; }` |
+| `path: string`           |  Not supported |
+| `options: RedisOptions`  | `options: GlideClientConfiguration` |
 
 **Advanced configuration**
 
-- **Standalone Mode** `.advancedConfiguration(AdvancedGlideClientConfiguration.builder()`
-- **Cluster Mode** `.advancedConfiguration(AdvancedGlideClusterClientConfiguration.builder()`
-
-| **ioredis Constructor** | **Equivalent Glide Configuration** |
-|----------------------|--------------------------------|
-| `int connectionTimeout` | `.connectionTimeout(Integer connectionTimeout)`|
+Both ioredis and Glide support advanced configurations and keep them in the another oprtions object. 
 
 </details>
 
@@ -122,17 +109,21 @@ The table below compares **ioredis constructors** with **Glide configuration par
 
 <a id="commands-table"></a>
 
+Most commands behave the same way in **ioredis** and **Glide**.
+Below is a list of the most commonly used Valkey commands in Glide clients and how they compare to ioredis.
+
 ### **Valkey Commands Sorted Alphabetically**
 
 // todo: Fix the order of the table
 
-| | | |
-|------|------|------|
+| |  |  |
+|----------|----------|----------|
 | [AUTH](#auth) | [EXPIRE](#expire) | [MGET](#mget) |
-| [DEL](#del) | [GET](#set-get) | [MULTI](#transaction) |
-| [HSET](#hset) | [INCR](#incr-decr) | [RPUSH](#lpush-rpush) |
-| [INCRBY](#incrby-decrby) | [LPUSH](#lpush-rpush) | [SET](#set-get) |
-| [SETEX](#setex) | [SCAN](#scan) | [EXISTS](#exists) |
+| [DECR](#incr-decr) | [GET](#set-get) | [MULTI](#transaction) |
+| [INCRBY](#incrby-decrby) | [HSET](#hset) | [RPUSH](#lpush-rpush) |
+| [DEL](#del)  |[INCR](#incr-decr) | [SCAN](#scan) |
+| [EVAL](#eval) | [INCRBY](#incrby-decrby) | [SET](#set-get) |
+|  [EXISTS](#exists)   | [LPUSH](#lpush-rpush) |  [SETEX](#setex) |
 
 ---
 
@@ -221,7 +212,7 @@ await client.decr('counter'); // counter = 0
 <details>
 <summary><b style="font-size:18px;">INCRBY / DECRBY</b></summary>
 
-The `INCRBY` command increases the **value of a key** by a specified amount.  
+The `INCRBY` command increases the **value of a key** by a specified amount, while `DECRBY` decreases it by a specified amount.  
 
 - **Both** behave the same: apply an integer delta to a key.
 
@@ -398,9 +389,54 @@ console.log(result); // Output: ['OK', 'value']
 ```
 </details>
 
+</details>
+
+<a id="eval"></a>
+<details>
+<summary><b style="font-size:18px;">EVAL</b></summary>
+
+The `EVAL` command executes Lua scripts in Valkey.
+
+- In **ioredis**, Lua scripts are executed using `eval()`.
+- In **Glide**, Lua scripts are executed via `invokeScript()` using a `Script` object.  
+The `Script` class wraps the Lua script.
+
+**Jedis**
+```js
+const luaScript = `return { KEYS[1], ARGV[1] }`;
+const scriptOptions = {
+    keys: ["foo"],
+    args: ["bar"],
+};
+
+const result = await redis.eval(luaScript, 1, ...scriptOptions.keys, ...scriptOptions.args);
+console.log(result); // Output: ['foo', 'bar']
+```
+
+**Glide**
+```js
+import { Script } from "@valkey/valkey-glide";
+
+const luaScript = new Script("return { KEYS[1], ARGV[1] }");
+const scriptOptions = {
+    keys: ["foo"],
+    args: ["bar"],
+};
+
+const result = await client.invokeScript(luaScript, scriptOptions);
+console.log(result); // Output: ['foo', 'bar']
+```
+</div>
+
+---
+
+</details>
+
 <a id="auth"></a>
 <details>
 <summary><b style="font-size:18px;">AUTH</b></summary>
+
+The `AUTH` command is used to authenticate a Valkey connection with a password.
 
 - In **ioredis**, `auth()` is a direct method call.
 - In **Glide**, use `updateConnectionPassword`.
