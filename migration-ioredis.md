@@ -86,7 +86,7 @@ const client = await GlideClusterClient.createClient({
 <details>
 <summary><b style="font-size:22px;">ioredis vs. Glide Constructor Parameters</b></summary>
 
-// TODO: fix the table
+TODO: fix the table
 
 The table below compares **ioredis constructors** with **Glide configuration parameters**:
 
@@ -95,11 +95,18 @@ The table below compares **ioredis constructors** with **Glide configuration par
 | `port: number`           | `BaseClientConfiguration.addresses: { host: string; port?: number; }` |
 | `host: string`           | `BaseClientConfiguration.addresses: { host: string; port?: number; }` |
 | `path: string`           |  Not supported |
+| `tls: {}`                | `BaseClientConfiguration.useTLS: true`|
 | `options: RedisOptions`  | `options: GlideClientConfiguration` |
 
 **Advanced configuration**
 
-Both ioredis and Glide support advanced configurations and keep them in the another oprtions object. 
+**Standalone Mode** uses `AdvancedGlideClientConfiguration` and **Cluster Mode** uses `AdvancedGlideClusterClientConfiguration`, 
+but the usage is similar.
+
+| **ioredis Constructor** | **Equivalent Glide Configuration** |
+|----------------------|--------------------------------|
+| `connectTimeout: 500` | `BaseClientConfiguration.advancedConfiguration = {connectionTimeout: 500,};`|
+
 
 </details>
 
@@ -109,23 +116,20 @@ Both ioredis and Glide support advanced configurations and keep them in the anot
 
 <a id="commands-table"></a>
 
-Most commands behave the same way in **ioredis** and **Glide**.
 Below is a list of the most commonly used Valkey commands in Glide clients and how they compare to ioredis.
 
 ### **Valkey Commands Sorted Alphabetically**
 
-// todo: Fix the order of the table
+| | | | 
+|-----------|----------|----------|
+| [AUTH](#auth)            | [EXPIRE](#expire)        | [MULTI](#transaction)   |
+| [DECR](#incr-decr)       | [GET](#set-get)          | [RPUSH](#lpush-rpush)   |
+| [DECRBY](#incrby-decrby) | [HSET](#hset)            | [SCAN](#scan)           |
+| [DEL](#del)              | [INCR](#incr-decr)       | [SET](#set-get)         |
+| [EVAL](#eval)            | [INCRBY](#incrby-decrby) | [SETEX](#setex)         |
+| [EVALSHA](#eval)         | [LPUSH](#lpush-rpush)    |                         |
+| [EXISTS](#exists)        | [MGET](#mget)            |                         |
 
-| |  |  |
-|----------|----------|----------|
-| [AUTH](#auth) | [EXPIRE](#expire) | [MGET](#mget) |
-| [DECR](#incr-decr) | [GET](#set-get) | [MULTI](#transaction) |
-| [INCRBY](#incrby-decrby) | [HSET](#hset) | [RPUSH](#lpush-rpush) |
-| [DEL](#del)  |[INCR](#incr-decr) | [SCAN](#scan) |
-| [EVAL](#eval) | [INCRBY](#incrby-decrby) | [SET](#set-get) |
-|  [EXISTS](#exists)   | [LPUSH](#lpush-rpush) |  [SETEX](#setex) |
-
----
 
 <a id="set-get"></a>
 <details>
@@ -234,6 +238,15 @@ await client.decrBy('counter', 2); // 3
 <summary><b style="font-size:18px;">MGET</b></summary>
 
 The `MGET` command retrieves the values of multiple keys from Valkey.  
+todo
+Note:
+          In cluster mode, if keys in `keys` map to different hash slots,
+          the command will be split across these slots and executed separately for each.
+          This means the command is atomic only at the slot level. If one or more slot-specific
+          requests fail, the entire call will return the first encountered error, even
+          though some requests may have succeeded while others did not.
+          If this behavior impacts your application logic, consider splitting the
+          request into sub-requests per slot to ensure atomicity.
 
 - In **ioredis**, `mget()` accepts multiple string arguments.
 - In **Glide**, pass an array of strings.
@@ -286,7 +299,7 @@ await redis.expire('key', 10); // 1
 
 **Glide**
 ```js
-await client.expire('key', 10); // 1
+await client.expire('key', 10); // true
 ```
 </details>
 
@@ -323,14 +336,14 @@ await client.set('key', 'value', {expiry: {type: TimeUnit.Seconds, count: 5 }});
 
 **ioredis**
 ```js
-await redis.lpush('list', 'a'); // 1
-await redis.rpush('list', 'z'); // 2
+let lengthOfList = await redis.lpush('list', 'a', 'b', "c");    // lengthOfList = 3
+lengthOfList = await redis.rpush('list', 'd', 'e');             // lengthOfList = 5
 ```
 
 **Glide**
 ```js
-await client.lpush('list', ['a']); // 1
-await client.rpush('list', ['z']); // 2
+let lengthOfList = await client.lpush("list", ["a", "b", "c"]); // lengthOfList = 3
+lengthOfList = await client.rpush("list", ["d", "e"]);          // lengthOfList = 5
 ```
 </details>
 
@@ -338,30 +351,44 @@ await client.rpush('list', ['z']); // 2
 <details>
 <summary><b style="font-size:18px;">SCAN</b></summary>
 
-- **Both** return `[nextCursor, keys[]]` in scan loop.
+- **ioredis** ioredis uses different constructors while **Glide** uses a single `scan` method with `options`. 
+- **Glide** supports **cluster mode scanning** to scan the entire cluster. [For more](https://github.com/valkey-io/valkey-glide/wiki/General-Concepts#cluster-scan).
 
 **ioredis**
 ```js
 let cursor = '0';
+let result;
 do {
-  const [next, keys] = await redis.scan(cursor);
-  cursor = next;
+    result = await client.scan(cursor);
+    cursor = result[0];
+
+    const keys = result[1];
+    if (keys.length > 0) {
+        console.log('SCAN iteration: ' + keys.join(', '));
+    }
 } while (cursor !== '0');
 ```
 
 **Glide**
 ```js
 let cursor = '0';
+let result;
 do {
-  const [next, keys] = await client.scan(cursor);
-  cursor = next;
+    result = await client.scan(cursor);
+    cursor = result[0].toString();
+
+    const keys = result[1];
+    if (keys.length > 0) {
+        console.log('SCAN iteration: ' + keys.join(', '));
+    }
 } while (cursor !== '0');
+
 ```
 </details>
 
 <a id="transaction"></a>
 <details>
-<summary><b style="font-size:18px;">Transactions (MULTI/EXEC)</b></summary>
+<summary><b style="font-size:18px;">Transactions (MULTI / EXEC)</b></summary>
 
 The `MULTI` command starts a Valkey transaction.  
 The `EXEC` command executes all queued commands in the transaction.
@@ -387,22 +414,22 @@ const transaction = new Transaction()
 const result = await client.exec(transaction);
 console.log(result); // Output: ['OK', 'value']
 ```
-</details>
 
 </details>
 
 <a id="eval"></a>
 <details>
-<summary><b style="font-size:18px;">EVAL</b></summary>
+<summary><b style="font-size:18px;">EVAL / EVALSHA</b></summary>
 
-The `EVAL` command executes Lua scripts in Valkey.
+The `EVAL` and `EVALSHA` commands execute Lua scripts in Valkey.
 
-- In **ioredis**, Lua scripts are executed using `eval()`.
+- In **ioredis**, Lua scripts are executed using `eval()` or `evalsha()`.
 - In **Glide**, Lua scripts are executed via `invokeScript()` using a `Script` object.  
 The `Script` class wraps the Lua script.
 
 **Jedis**
 ```js
+// EVAL
 const luaScript = `return { KEYS[1], ARGV[1] }`;
 const scriptOptions = {
     keys: ["foo"],
@@ -426,9 +453,6 @@ const scriptOptions = {
 const result = await client.invokeScript(luaScript, scriptOptions);
 console.log(result); // Output: ['foo', 'bar']
 ```
-</div>
-
----
 
 </details>
 
@@ -456,9 +480,9 @@ await client.updateConnectionPassword('mypass'); // OK
 
 ### Custom Command
 
-The `customCommand` function lets you execute any Valkey command as a raw list of arguments, **without input validation**. It's a flexible option when the standard Glide API doesn't cover a specific command.
-
-You can use it whenever you're unsure of the dedicated method or want to quickly run a command directly.
+The `customCommand` function lets you execute any Valkey command as a raw list of arguments, 
+**without input validation**. 
+It's a flexible option when the standard Glide API doesn't cover a specific command.
 
 **Example:**
 
@@ -467,7 +491,3 @@ await client.customCommand(['SET', 'key', 'value']);
 ```
 
 This sends the raw `SET key value` command to Valkey.
-
----
-
-
