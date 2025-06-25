@@ -64,26 +64,7 @@ A fully converted Java snippet that uses Valkey GLIDE instead of Jedis, with app
 ### 🛠 Code to Convert:
 
 ```ts
-import Redis from "ioredis";
-
-const client = new Redis.Cluster(
-  [{ host: 'clustercfg.disney-test-valkey-7-r5.nra7gl.use1.cache.amazonaws.com', port: 6379 }],
-  {
-    dnsLookup: (address, callback) => callback(null, address),
-    redisOptions: {
-      tls: {},
-    },
-  });
-
-(async () => {
-    const setResult = await client.set("key", "value");
-    console.assert(setResult === "OK");
-
-    const getResult = await client.get("key");
-    console.assert(getResult === "value");
-
-    client.disconnect();
-})();
+// Paste your code here
 ```
 
 ---
