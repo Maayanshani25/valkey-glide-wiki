@@ -31,33 +31,34 @@
 
 A fully converted Java snippet that uses Valkey GLIDE instead of Jedis, with appropriate initialization, method mappings, and comments if necessary.
 
-
+---
 
 ## IOREDIS Prompt
 
-> **Task:**
-> Convert the following JavaScript/TypeScript code that uses **ioredis** into equivalent code using the **Valkey GLIDE** client.
+````md
+
+> **Task:**  
+> Convert the following JavaScript/TypeScript code that uses **ioredis** into equivalent code using the **Valkey GLIDE** client.  
 >
-> **Source of Truth:**
-> Use **only** the official migration guide:
+> **Source of Truth:**  
+> Use **only** the official migration guide:  
 > [https://github.com/valkey-io/valkey-glide/wiki/Migration-Guide-ioredis](https://github.com/valkey-io/valkey-glide/wiki/Migration-Guide-ioredis)
 
 ---
 
-> **Goal:**
+> **Goal:**  
 > Perform a line-by-line conversion to Valkey GLIDE, mapping only what is explicitly supported in the guide.
 
 ---
 
 ### ✅ Instructions (strict):
 
-* Use **only** methods, options, and patterns shown in the migration guide.
-* If a parameter, feature, or configuration (like `dnsLookup`, `enableOfflineQueue`, or custom TLS options) is present in the source but **not mentioned in the guide**, then:
-
-  * **Omit it** from the output
-  * Or **comment it as unimplemented / unsupported**
-* Preserve structure, variable names, and flow where possible.
-* Assume Redis **cluster** usage when initialized with `new Redis.Cluster(...)`.
+- Use **only** methods, options, and patterns shown in the migration guide.  
+- If a parameter, feature, or configuration (like `dnsLookup`, `enableOfflineQueue`, or custom TLS options) is present in the source but **not mentioned in the guide**, then:  
+  - **Omit it** from the output  
+  - Or **comment it as unimplemented / unsupported**  
+- Preserve structure, variable names, and flow where possible.  
+- Assume Redis **cluster** usage when initialized with `new Redis.Cluster(...)`.
 
 ---
 
@@ -71,4 +72,7 @@ A fully converted Java snippet that uses Valkey GLIDE instead of Jedis, with app
 
 ### 🔁 Expected Output:
 
-A converted JavaScript/TypeScript snippet using **Valkey GLIDE**
+A converted JavaScript/TypeScript snippet using **Valkey GLIDE**, with unsupported fields clearly marked or removed.
+
+````
+
