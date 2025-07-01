@@ -130,7 +130,7 @@ The table below compares **ioredis constructors** with **Glide configuration par
 | `db: number`             | `database: number` |
 | `tls: {}`                | `useTLS: true` |
 | `connectTimeout: number` | `advancedConfiguration: { connectionTimeout: number }` |
-| `maxRetriesPerRequest: number` | `advancedConfiguration: { maxRetries: number }` |
+| `maxRetriesPerRequest: number` | Not supported |
 | `retryStrategy: function` | Not directly supported, handled internally |
 | `reconnectOnError: function` | Not directly supported, handled internally |
 | `readOnly: boolean`      | `readFrom: "REPLICA"` |
@@ -152,7 +152,6 @@ const client = await GlideClient.createClient({
   addresses: [{ host: "localhost", port: 6379 }],
   advancedConfiguration: {
     connectionTimeout: 500,
-    maxRetries: 3
   }
 });
 
@@ -161,7 +160,6 @@ const clusterClient = await GlideClusterClient.createClient({
   addresses: [{ host: "localhost", port: 6379 }],
   advancedConfiguration: {
     connectionTimeout: 500,
-    maxRetries: 3
   }
 });
 ```
@@ -262,9 +260,8 @@ const result = await redis.setnx('key', 'value'); // Returns 1 if key was set, 0
 
 **Glide**
 ```js
-const result = await client.set('key', 'value', {
-  setMode: "NX" // Only set if key doesn't exist
-}); // Returns "OK" if key was set, null if key exists
+// Returns "OK" if key was set, null if key exists
+const result = await client.set("key", "value", {conditionalSet: "onlyIfDoesNotExist"}); 
 ```
 </details>
 
@@ -1012,15 +1009,15 @@ Below is a comprehensive chart comparing common Redis commands between ioredis a
 | Command | ioredis | Valkey Glide |
 |---------|---------|--------------|
 | **Connection** |
-| Connect | `new Redis()` | `await GlideClient.createClient({})` |
-| Cluster | `new Redis.Cluster([])` | `await GlideClusterClient.createClient({})` |
+| Connect | `new Redis()` | `GlideClient.createClient({addresses: [{host: "localhost", port: 6379 }]})` |
+| Cluster | `new Redis.Cluster([])` | `GlideClusterClient.createClient({addresses: [{ host: "127.0.0.1", port: 6379 }, { host: "127.0.0.1", port: 6380 }]})` |
 | Auth | `redis.auth('pass')` | `client.updateConnectionPassword('pass')` |
 | Select DB | `redis.select(1)` | `client.select(1)` |
 | **Strings** |
 | SET | `redis.set('key', 'val')` | `client.set('key', 'val')` |
 | GET | `redis.get('key')` | `client.get('key')` |
 | SETEX | `redis.setex('key', 10, 'val')` | `client.set('key', 'val', {expiry: {type: TimeUnit.Seconds, count: 10}})` |
-| SETNX | `redis.setnx('key', 'val')` | `client.set('key', 'val', {setMode: "NX"})` |
+| SETNX | `redis.setnx('key', 'val')` | `client.set("key", "value", {conditionalSet: "onlyIfDoesNotExist"})` |
 | MSET | `redis.mset({key1: 'val1'})` | `client.mset({key1: 'val1'})` |
 | MGET | `redis.mget('key1', 'key2')` | `client.mget(['key1', 'key2'])` |
 | INCR | `redis.incr('counter')` | `client.incr('counter')` |
