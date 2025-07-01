@@ -201,10 +201,25 @@ GlideClusterClient clusterClient = GlideClusterClient.createClient(clusterConfig
 
 ## Command Comparison: Lettuce → Glide
 
-Below is a comprehensive list of common Redis commands and how they are implemented in both Lettuce and Glide.
+Below is a [comprehensive list](#command-comparison-chart) of common Redis commands and how they are implemented in both Lettuce and Glide.
+
+### Alphabetical Command Reference
+
+| [APPEND](#append) | [GETRANGE](#getrange--setrange) | [LPUSH](#lpush--rpush) | [RENAME](#rename--renamenx) | [SREM](#srem--sismember) |
+|-------------------|----------------------------------|------------------------|----------------------------|--------------------------|
+| [AUTH](#auth) | [HDEL](#hdel--hexists) | [LRANGE](#lrange) | [RENAMENX](#rename--renamenx) | [TTL](#expire--ttl) |
+| [Custom Commands](#custom-commands) | [HEXISTS](#hdel--hexists) | [MGET](#mset--mget-multiple-setget) | [RPOP](#lpop--rpop) | [ZADD](#zadd--zrange) |
+| [DECR](#incr--decr) | [HGET](#hset--hget) | [MSET](#mset--mget-multiple-setget) | [RPUSH](#lpush--rpush) | [ZRANGE](#zadd--zrange) |
+| [DECRBY](#incrby--decrby) | [HGETALL](#hgetall) | [MULTI/EXEC](#transactions-multi--exec) | [SADD](#sadd--smembers) | [ZRANK](#zrank--zrevrank) |
+| [DEL](#del-delete) | [HMGET](#hmset--hmget) | [SCAN](#keys--scan) | [SETEX](#setex-set-with-expiry) | [ZREM](#zrem--zscore) |
+| [EVAL / EVALSHA](#eval--evalsha) | [HMSET](#hmset--hmget) | [SET](#set--get) | [SETRANGE](#getrange--setrange) | [ZREVRANK](#zrank--zrevrank) |
+| [EXISTS](#exists) | [HSET](#hset--hget) | [SETNX](#setnx-set-if-not-exists) | [SISMEMBER](#srem--sismember) | [ZSCORE](#zrem--zscore) |
+| [EXPIRE & TTL](#expire--ttl) | [INCR](#incr--decr) | [KEYS](#keys--scan) | [SMEMBERS](#sadd--smembers) | |
+| [GET](#set--get) | [INCRBY](#incrby--decrby) | | [LPOP](#lpop--rpop) | |
 
 ### String Operations
 
+<a id="set-get"></a>
 <details>
 <summary><b style="font-size:18px;">SET & GET</b></summary>
 
@@ -231,6 +246,7 @@ client.set("key", "value", 60);
 ```
 </details>
 
+<a id="setex-set-with-expiry"></a>
 <details>
 <summary><b style="font-size:18px;">SETEX (Set with Expiry)</b></summary>
 
@@ -249,6 +265,7 @@ client.set("key", "value", 5);
 ```
 </details>
 
+<a id="setnx-set-if-not-exists"></a>
 <details>
 <summary><b style="font-size:18px;">SETNX (Set if Not Exists)</b></summary>
 
@@ -267,6 +284,7 @@ String result = client.set("key", "value", "NX").get(); // Returns "OK" if key w
 ```
 </details>
 
+<a id="mset-mget-multiple-setget"></a>
 <details>
 <summary><b style="font-size:18px;">MSET & MGET (Multiple Set/Get)</b></summary>
 
@@ -300,6 +318,7 @@ String[] values = client.mget(new String[]{"key1", "key2"}).get(); // ["value1",
 ```
 </details>
 
+<a id="incr-decr"></a>
 <details>
 <summary><b style="font-size:18px;">INCR & DECR</b></summary>
 
@@ -320,6 +339,7 @@ client.decr("counter").get(); // counter = 0
 ```
 </details>
 
+<a id="incrby-decrby"></a>
 <details>
 <summary><b style="font-size:18px;">INCRBY & DECRBY</b></summary>
 
@@ -340,6 +360,7 @@ client.decrBy("counter", 2).get(); // 3
 ```
 </details>
 
+<a id="append"></a>
 <details>
 <summary><b style="font-size:18px;">APPEND</b></summary>
 
@@ -362,6 +383,7 @@ String result = client.get("greeting").get(); // "Hello World"
 ```
 </details>
 
+<a id="getrange-setrange"></a>
 <details>
 <summary><b style="font-size:18px;">GETRANGE & SETRANGE</b></summary>
 
@@ -389,6 +411,7 @@ String updated = client.get("key").get(); // "Hello Redis"
 
 ### Key Operations
 
+<a id="del-delete"></a>
 <details>
 <summary><b style="font-size:18px;">DEL (Delete)</b></summary>
 
@@ -407,6 +430,7 @@ Long deleted = client.del(new String[]{"key1", "key2"}).get(); // 2 (number of k
 ```
 </details>
 
+<a id="exists"></a>
 <details>
 <summary><b style="font-size:18px;">EXISTS</b></summary>
 
@@ -425,6 +449,7 @@ Long count = client.exists(new String[]{"existKey", "nonExistKey"}).get(); // 1 
 ```
 </details>
 
+<a id="expire-ttl"></a>
 <details>
 <summary><b style="font-size:18px;">EXPIRE & TTL</b></summary>
 
@@ -445,6 +470,7 @@ Long ttl = client.ttl("key").get(); // 10 (seconds remaining)
 ```
 </details>
 
+<a id="keys-scan"></a>
 <details>
 <summary><b style="font-size:18px;">KEYS & SCAN</b></summary>
 
@@ -487,6 +513,7 @@ do {
 ```
 </details>
 
+<a id="rename-renamenx"></a>
 <details>
 <summary><b style="font-size:18px;">RENAME & RENAMENX</b></summary>
 
@@ -515,6 +542,7 @@ Long success = client.renameNx("key1", "key2").get(); // 1 (success)
 
 ### Hash Operations
 
+<a id="hset-hget"></a>
 <details>
 <summary><b style="font-size:18px;">HSET & HGET</b></summary>
 
@@ -547,6 +575,7 @@ String value = client.hget("hash", "key1").get(); // "1"
 ```
 </details>
 
+<a id="hmset-hmget"></a>
 <details>
 <summary><b style="font-size:18px;">HMSET & HMGET</b></summary>
 
@@ -580,6 +609,7 @@ String[] values = client.hmget("hash", new String[]{"key1", "key2"}).get(); // [
 ```
 </details>
 
+<a id="hgetall"></a>
 <details>
 <summary><b style="font-size:18px;">HGETALL</b></summary>
 
@@ -608,6 +638,7 @@ Map<String, String> user = client.hgetall("user").get(); // {name=John, age=30}
 ```
 </details>
 
+<a id="hdel-hexists"></a>
 <details>
 <summary><b style="font-size:18px;">HDEL & HEXISTS</b></summary>
 
@@ -647,6 +678,7 @@ Long notExists = client.hexists("hash", "key1").get(); // 0 (doesn't exist)
 
 ### List Operations
 
+<a id="lpush-rpush"></a>
 <details>
 <summary><b style="font-size:18px;">LPUSH & RPUSH</b></summary>
 
@@ -668,6 +700,7 @@ lengthOfList = client.rpush("list", new String[]{"d", "e"}).get(); // lengthOfLi
 ```
 </details>
 
+<a id="lpop-rpop"></a>
 <details>
 <summary><b style="font-size:18px;">LPOP & RPOP</b></summary>
 
@@ -690,6 +723,7 @@ String last = client.rpop("list").get(); // "c"
 ```
 </details>
 
+<a id="lrange"></a>
 <details>
 <summary><b style="font-size:18px;">LRANGE</b></summary>
 
@@ -712,6 +746,7 @@ String[] elements = client.lrange("list", 0, 2).get(); // ["a", "b", "c"]
 
 ### Set Operations
 
+<a id="sadd-smembers"></a>
 <details>
 <summary><b style="font-size:18px;">SADD & SMEMBERS</b></summary>
 
@@ -733,6 +768,7 @@ String[] members = client.smembers("set").get(); // ["a", "b", "c"]
 ```
 </details>
 
+<a id="srem-sismember"></a>
 <details>
 <summary><b style="font-size:18px;">SREM & SISMEMBER</b></summary>
 
@@ -762,6 +798,7 @@ Long notMember = client.sismember("set", "a").get(); // 0 (not member)
 
 ### Sorted Set Operations
 
+<a id="zadd-zrange"></a>
 <details>
 <summary><b style="font-size:18px;">ZADD & ZRANGE</b></summary>
 
@@ -803,6 +840,7 @@ Object[] withScores = client.zrange("sortedSet", 0, -1, "WITHSCORES").get();
 ```
 </details>
 
+<a id="zrem-zscore"></a>
 <details>
 <summary><b style="font-size:18px;">ZREM & ZSCORE</b></summary>
 
@@ -839,6 +877,7 @@ String score = client.zscore("sortedSet", "three").get(); // "3"
 ```
 </details>
 
+<a id="zrank-zrevrank"></a>
 <details>
 <summary><b style="font-size:18px;">ZRANK & ZREVRANK</b></summary>
 
@@ -875,6 +914,7 @@ Long revRank = client.zrevrank("sortedSet", "two").get(); // 1 (0-based index fr
 
 ### Transactions
 
+<a id="transactions-multi-exec"></a>
 <details>
 <summary><b style="font-size:18px;">Transactions (MULTI / EXEC)</b></summary>
 
@@ -906,6 +946,7 @@ System.out.println(result[1]); // "value"
 
 ### Lua Scripts
 
+<a id="eval-evalsha"></a>
 <details>
 <summary><b style="font-size:18px;">EVAL / EVALSHA</b></summary>
 
@@ -949,6 +990,7 @@ System.out.println(Arrays.toString((Object[]) result)); // [foo, bar]
 
 ### Authentication
 
+<a id="auth"></a>
 <details>
 <summary><b style="font-size:18px;">AUTH</b></summary>
 
@@ -969,6 +1011,7 @@ String result = client.updateConnectionPassword("mypass", true).get(); // OK
 
 ### Custom Commands
 
+<a id="custom-commands"></a>
 <details>
 <summary><b style="font-size:18px;">Custom Commands</b></summary>
 
