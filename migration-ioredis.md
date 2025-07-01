@@ -1,8 +1,4 @@
-# Migration Guide ioredis
-
 This guide provides a **side-by-side comparison** of how to migrate common Valkey commands from **ioredis to Glide**.
-
----
 
 ## Installation
 
@@ -37,7 +33,7 @@ const redis = new Redis();
 
 **Glide**
 ```js
-import { GlideClient } from '@valkey/glide';
+import { GlideClient } from '@valkey/valkey-glide';
 
 const addresses = [
         { host: "localhost", port: 6379 },
@@ -68,7 +64,7 @@ const cluster = new Redis.Cluster([
 
 **Glide**  
 ```js
-import { GlideClusterClient } from '@valkey/glide';
+import { GlideClusterClient } from '@valkey/valkey-glide';
 
 const addresses = [
     { host: "127.0.0.1", port: 6379 },
