@@ -170,10 +170,26 @@ const clusterClient = await GlideClusterClient.createClient({
 
 ## Command Comparison: ioredis → Glide
 
-Below is a comprehensive list of common Redis commands and how they are implemented in both ioredis and Glide.
+Below is a [comprehensive list](#command-comparison-chart) of common Redis commands and how they are implemented in both ioredis and Glide.
+
+### Alphabetical Command Reference
+
+|  |  |  | | |
+|-------------------|----------------------------------|------------------------|----------------------------|--------------------------|
+| [APPEND](#append) | [GETRANGE](#getrange-setrange) | [LPUSH](#lpush-rpush) | [RENAME](#rename-renamenx) | [SREM](#srem-sismember) |
+| [AUTH](#auth) | [HDEL](#hdel-hexists) | [LRANGE](#lrange) | [RENAMENX](#rename-renamenx) | [TTL](#expire-ttl) |
+| [Custom Commands](#custom-commands) | [HEXISTS](#hdel-hexists) | [MGET](#mset-mget-multiple-setget) | [RPOP](#lpop-rpop) | [ZADD](#zadd-zrange) |
+| [DECR](#incr-decr) | [HGET](#hset-hget) | [MSET](#mset-mget-multiple-setget) | [RPUSH](#lpush-rpush) | [ZRANGE](#zadd-zrange) |
+| [DECRBY](#incrby-decrby) | [HGETALL](#hgetall) | [MULTI/EXEC](#transactions-multi-exec) | [SADD](#sadd-smembers) | [ZRANK](#zrank-zrevrank) |
+| [DEL](#del-delete) | [HMGET](#hmset-hmget) | [SCAN](#keys-scan) | [SETEX](#setex-set-with-expiry) | [ZREM](#zrem-zscore) |
+| [EVAL / EVALSHA](#eval-evalsha) | [HMSET](#hmset-hmget) | [SET](#set-get) | [SETRANGE](#getrange-setrange) | [ZREVRANK](#zrank-zrevrank) |
+| [EXISTS](#exists) | [HSET](#hset-hget) | [SETNX](#setnx-set-if-not-exists) | [SISMEMBER](#srem-sismember) | [ZSCORE](#zrem-zscore) |
+| [EXPIRE & TTL](#expire-ttl) | [INCR](#incr-decr) | [KEYS](#keys-scan) | [SMEMBERS](#sadd-smembers) | |
+| [GET](#set-get) | [INCRBY](#incrby-decrby) | | [LPOP](#lpop-rpop) | |
 
 ### String Operations
 
+<a id="set-get"></a>
 <details>
 <summary><b style="font-size:18px;">SET & GET</b></summary>
 
@@ -205,6 +221,7 @@ await client.set('key', 'value', {
 ```
 </details>
 
+<a id="setex-set-with-expiry"></a>
 <details>
 <summary><b style="font-size:18px;">SETEX (Set with Expiry)</b></summary>
 
@@ -230,6 +247,7 @@ await client.set('key', 'value', {
 ```
 </details>
 
+<a id="setnx-set-if-not-exists"></a>
 <details>
 <summary><b style="font-size:18px;">SETNX (Set if Not Exists)</b></summary>
 
@@ -250,6 +268,7 @@ const result = await client.set('key', 'value', {
 ```
 </details>
 
+<a id="mset-mget-multiple-setget"></a>
 <details>
 <summary><b style="font-size:18px;">MSET & MGET (Multiple Set/Get)</b></summary>
 
@@ -285,6 +304,7 @@ const values = await client.mget(['key1', 'key2']); // ['value1', 'value2']
 ```
 </details>
 
+<a id="incr-decr"></a>
 <details>
 <summary><b style="font-size:18px;">INCR & DECR</b></summary>
 
@@ -305,6 +325,7 @@ await client.decr('counter'); // counter = 0
 ```
 </details>
 
+<a id="incrby-decrby"></a>
 <details>
 <summary><b style="font-size:18px;">INCRBY & DECRBY</b></summary>
 
@@ -325,6 +346,7 @@ await client.decrBy('counter', 2); // 3
 ```
 </details>
 
+<a id="append"></a>
 <details>
 <summary><b style="font-size:18px;">APPEND</b></summary>
 
@@ -347,6 +369,7 @@ const result = await client.get('greeting'); // "Hello World"
 ```
 </details>
 
+<a id="getrange-setrange"></a>
 <details>
 <summary><b style="font-size:18px;">GETRANGE & SETRANGE</b></summary>
 
@@ -375,6 +398,7 @@ const updated = await client.get('key'); // "Hello Redis"
 
 ### Key Operations
 
+<a id="del-delete"></a>
 <details>
 <summary><b style="font-size:18px;">DEL (Delete)</b></summary>
 
@@ -393,6 +417,7 @@ await client.del(['key1', 'key2']); // 2 (number of keys deleted)
 ```
 </details>
 
+<a id="exists"></a>
 <details>
 <summary><b style="font-size:18px;">EXISTS</b></summary>
 
@@ -411,6 +436,7 @@ await client.exists(['existKey', 'nonExistKey']); // 1 (number of keys that exis
 ```
 </details>
 
+<a id="expire-ttl"></a>
 <details>
 <summary><b style="font-size:18px;">EXPIRE & TTL</b></summary>
 
@@ -431,6 +457,7 @@ const ttl = await client.ttl('key'); // 10 (seconds remaining)
 ```
 </details>
 
+<a id="keys-scan"></a>
 <details>
 <summary><b style="font-size:18px;">KEYS & SCAN</b></summary>
 
@@ -478,6 +505,7 @@ do {
 ```
 </details>
 
+<a id="rename-renamenx"></a>
 <details>
 <summary><b style="font-size:18px;">RENAME & RENAMENX</b></summary>
 
@@ -507,6 +535,7 @@ const result = await client.renameNx('key1', 'key2'); // true (success)
 
 ### Hash Operations
 
+<a id="hset-hget"></a>
 <details>
 <summary><b style="font-size:18px;">HSET & HGET</b></summary>
 
@@ -533,6 +562,7 @@ const value = await client.hget('hash', 'key1'); // "1"
 ```
 </details>
 
+<a id="hmset-hmget"></a>
 <details>
 <summary><b style="font-size:18px;">HMSET & HMGET</b></summary>
 
@@ -562,6 +592,7 @@ const values = await client.hmget('hash', ['key1', 'key2']); // ["1", "2"]
 ```
 </details>
 
+<a id="hgetall"></a>
 <details>
 <summary><b style="font-size:18px;">HGETALL</b></summary>
 
@@ -582,6 +613,7 @@ const user = await client.hgetall('user'); // { name: 'John', age: '30' }
 ```
 </details>
 
+<a id="hdel-hexists"></a>
 <details>
 <summary><b style="font-size:18px;">HDEL & HEXISTS</b></summary>
 
@@ -611,6 +643,7 @@ const notExists = await client.hexists('hash', 'key1'); // false
 
 ### List Operations
 
+<a id="lpush-rpush"></a>
 <details>
 <summary><b style="font-size:18px;">LPUSH & RPUSH</b></summary>
 
@@ -632,6 +665,7 @@ lengthOfList = await client.rpush('list', ['d', 'e']); // lengthOfList = 5
 ```
 </details>
 
+<a id="lpop-rpop"></a>
 <details>
 <summary><b style="font-size:18px;">LPOP & RPOP</b></summary>
 
@@ -654,6 +688,7 @@ const last = await client.rpop('list'); // "c"
 ```
 </details>
 
+<a id="lrange"></a>
 <details>
 <summary><b style="font-size:18px;">LRANGE</b></summary>
 
@@ -676,6 +711,7 @@ const elements = await client.lrange('list', 0, 2); // ["a", "b", "c"]
 
 ### Set Operations
 
+<a id="sadd-smembers"></a>
 <details>
 <summary><b style="font-size:18px;">SADD & SMEMBERS</b></summary>
 
@@ -697,6 +733,7 @@ const members = await client.smembers('set'); // ["a", "b", "c"]
 ```
 </details>
 
+<a id="srem-sismember"></a>
 <details>
 <summary><b style="font-size:18px;">SREM & SISMEMBER</b></summary>
 
@@ -726,6 +763,7 @@ const notMember = await client.sismember('set', 'a'); // false
 
 ### Sorted Set Operations
 
+<a id="zadd-zrange"></a>
 <details>
 <summary><b style="font-size:18px;">ZADD & ZRANGE</b></summary>
 
@@ -760,6 +798,7 @@ const withScores = await client.zrange('sortedSet', 0, -1, { withScores: true })
 ```
 </details>
 
+<a id="zrem-zscore"></a>
 <details>
 <summary><b style="font-size:18px;">ZREM & ZSCORE</b></summary>
 
@@ -789,6 +828,7 @@ const score = await client.zscore('sortedSet', 'three'); // "3"
 ```
 </details>
 
+<a id="zrank-zrevrank"></a>
 <details>
 <summary><b style="font-size:18px;">ZRANK & ZREVRANK</b></summary>
 
@@ -818,6 +858,7 @@ const revRank = await client.zrevrank('sortedSet', 'two'); // 1 (0-based index f
 
 ### Transactions
 
+<a id="transactions-multi-exec"></a>
 <details>
 <summary><b style="font-size:18px;">Transactions (MULTI / EXEC)</b></summary>
 
@@ -848,6 +889,7 @@ console.log(result); // ['OK', 'value']
 
 ### Lua Scripts
 
+<a id="eval-evalsha"></a>
 <details>
 <summary><b style="font-size:18px;">EVAL / EVALSHA</b></summary>
 
@@ -901,6 +943,7 @@ console.log(result); // ['foo', 'bar']
 
 ### Authentication
 
+<a id="auth"></a>
 <details>
 <summary><b style="font-size:18px;">AUTH</b></summary>
 
@@ -921,6 +964,7 @@ await client.updateConnectionPassword('mypass'); // OK
 
 ### Custom Commands
 
+<a id="custom-commands"></a>
 <details>
 <summary><b style="font-size:18px;">Custom Commands</b></summary>
 
