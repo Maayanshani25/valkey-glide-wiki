@@ -304,17 +304,19 @@ Below is a [comprehensive list](#command-comparison-chart) of common Redis comma
 
 ### Alphabetical Command Reference
 
-| [APPEND](#append) | [GETRANGE](#getrange--setrange) | [LPUSH](#lpush--rpush) | [RENAME](#rename--renamenx) | [SREM](#srem--sismember) |
+||||||
 |-------------------|----------------------------------|------------------------|----------------------------|--------------------------|
-| [AUTH](#auth) | [HDEL](#hdel--hexists) | [LRANGE](#lrange) | [RENAMENX](#rename--renamenx) | [TTL](#expire--ttl) |
-| [Custom Commands](#custom-commands) | [HEXISTS](#hdel--hexists) | [MGET](#mset--mget-multiple-setget) | [RPOP](#lpop--rpop) | [ZADD](#zadd--zrange) |
-| [DECR](#incr--decr) | [HGET](#hset--hget) | [MSET](#mset--mget-multiple-setget) | [RPUSH](#lpush--rpush) | [ZRANGE](#zadd--zrange) |
-| [DECRBY](#incrby--decrby) | [HGETALL](#hgetall) | [MULTI/EXEC](#transactions-multi--exec) | [SADD](#sadd--smembers) | [ZRANK](#zrank--zrevrank) |
-| [DEL](#del-delete) | [HMGET](#hmset--hmget) | [SCAN](#keys--scan) | [SETEX](#setex-set-with-expiry) | [ZREM](#zrem--zscore) |
-| [EVAL / EVALSHA](#eval--evalsha) | [HMSET](#hmset--hmget) | [SET](#set--get) | [SETRANGE](#getrange--setrange) | [ZREVRANK](#zrank--zrevrank) |
-| [EXISTS](#exists) | [HSET](#hset--hget) | [SETNX](#setnx-set-if-not-exists) | [SISMEMBER](#srem--sismember) | [ZSCORE](#zrem--zscore) |
-| [EXPIRE & TTL](#expire--ttl) | [INCR](#incr--decr) | [KEYS](#keys--scan) | [SMEMBERS](#sadd--smembers) | |
-| [GET](#set--get) | [INCRBY](#incrby--decrby) | | [LPOP](#lpop--rpop) | |
+| [APPEND](#append) | [GETRANGE](#getrange-setrange) | [LPUSH](#lpush-rpush) | [RENAME](#rename-renamenx) | [SREM](#srem-sismember) |
+| [AUTH](#auth) | [HDEL](#hdel-hexists) | [LRANGE](#lrange) | [RENAMENX](#rename-renamenx) | [TTL](#expire-ttl) |
+| [CLOSE](#close-disconnect) | [HEXISTS](#hdel-hexists) | [MGET](#mset-mget-multiple-setget) | [RPOP](#lpop-rpop) | [ZADD](#zadd-zrange) |
+| [Custom Commands](#custom-commands) | [HGET](#hset-hget) | [MSET](#mset-mget-multiple-setget) | [RPUSH](#lpush-rpush) | [ZRANGE](#zadd-zrange) |
+| [DECR](#incr-decr) | [HGETALL](#hgetall) | [MULTI/EXEC](#transactions-multi-exec) | [SADD](#sadd-smembers) | [ZRANK](#zrank-zrevrank) |
+| [DECRBY](#incrby-decrby) | [HMGET](#hmset-hmget) | [SCAN](#keys-scan) | [SETEX](#setex-set-with-expiry) | [ZREM](#zrem-zscore) |
+| [DEL](#del-delete) | [HMSET](#hmset-hmget) | [SET](#set-get) | [SETRANGE](#getrange-setrange) | [ZREVRANK](#zrank-zrevrank) |
+| [EVAL / EVALSHA](#eval-evalsha) | [HSET](#hset-hget) | [SETNX](#setnx-set-if-not-exists) | [SISMEMBER](#srem-sismember) | [ZSCORE](#zrem-zscore) |
+| [EXISTS](#exists) | [INCR](#incr-decr) | [KEYS](#keys-scan) | [SMEMBERS](#sadd-smembers) | |
+| [EXPIRE & TTL](#expire-ttl) | [INCRBY](#incrby-decrby) | | [LPOP](#lpop-rpop) | |
+| [GET](#set-get) | | | | |
 
 ### String Operations
 
@@ -1141,6 +1143,34 @@ System.out.println(rawResult); // "OK"
 ```
 </details>
 
+### Connection Management
+
+<a id="close-disconnect"></a>
+<details>
+<summary><b style="font-size:18px;">Close / Disconnect</b></summary>
+
+Properly closing connections is important to free up resources and avoid connection leaks.
+- In **Lettuce**, you need to close both the connection and shut down the client.
+- In **Glide**, you only need to call `close()` on the client.
+
+**Lettuce**
+```java
+// Close connection and shutdown client
+connection.close();
+client.shutdown();
+
+// For cluster connections
+clusterConnection.close();
+clusterClient.shutdown();
+```
+
+**Glide**
+```java
+// Close client (works for both standalone and cluster)
+client.close();
+```
+</details>
+
 ## Command Comparison Chart
 
 Below is a comprehensive chart comparing common Redis commands between Lettuce and Valkey Glide:
@@ -1209,3 +1239,5 @@ Below is a comprehensive chart comparing common Redis commands between Lettuce a
 | EVALSHA | `syncCommands.evalsha(sha, outputType, keys, args)` | `client.invokeScript(new Script(script), options)` |
 | **Custom Commands** |
 | Raw Command | `syncCommands.dispatch(commandType, output, args)` | `client.customCommand(new String[]{"CMD", "arg1", "arg2"})` |
+| **Connection Management** |
+| Close | `connection.close(); client.shutdown();` | `client.close()` |

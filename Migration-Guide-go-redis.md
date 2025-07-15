@@ -187,14 +187,15 @@ Below is a [comprehensive list](#command-comparison-chart) of common Redis comma
 |-------------------|----------------------------------|------------------------|----------------------------|--------------------------|
 | [APPEND](#append) | [GETRANGE](#getrange-setrange) | [LPUSH](#lpush-rpush) | [RENAME](#rename-renamenx) | [SREM](#srem-sismember) |
 | [AUTH](#auth) | [HDEL](#hdel-hexists) | [LRANGE](#lrange) | [RENAMENX](#rename-renamenx) | [TTL](#expire-ttl) |
-| [Custom Commands](#custom-commands) | [HEXISTS](#hdel-hexists) | [MGET](#mset-mget-multiple-setget) | [RPOP](#lpop-rpop) | [ZADD](#zadd-zrange) |
-| [DECR](#incr-decr) | [HGET](#hset-hget) | [MSET](#mset-mget-multiple-setget) | [RPUSH](#lpush-rpush) | [ZRANGE](#zadd-zrange) |
-| [DECRBY](#incrby-decrby) | [HGETALL](#hgetall) | [MULTI/EXEC](#transactions-multi-exec) | [SADD](#sadd-smembers) | [ZRANK](#zrank-zrevrank) |
-| [DEL](#del-delete) | [HMGET](#hmset-hmget) | [SCAN](#keys-scan) | [SETEX](#setex-set-with-expiry) | [ZREM](#zrem-zscore) |
-| [EVAL / EVALSHA](#eval-evalsha) | [HMSET](#hmset-hmget) | [SET](#set-get) | [SETRANGE](#getrange-setrange) | [ZREVRANK](#zrank-zrevrank) |
-| [EXISTS](#exists) | [HSET](#hset-hget) | [SETNX](#setnx-set-if-not-exists) | [SISMEMBER](#srem-sismember) | [ZSCORE](#zrem-zscore) |
-| [EXPIRE & TTL](#expire-ttl) | [INCR](#incr-decr) | [KEYS](#keys-scan) | [SMEMBERS](#sadd-smembers) | |
-| [GET](#set-get) | [INCRBY](#incrby-decrby) | | [LPOP](#lpop-rpop) | |
+| [CLOSE](#close-disconnect) | [HEXISTS](#hdel-hexists) | [MGET](#mset-mget-multiple-setget) | [RPOP](#lpop-rpop) | [ZADD](#zadd-zrange) |
+| [Custom Commands](#custom-commands) | [HGET](#hset-hget) | [MSET](#mset-mget-multiple-setget) | [RPUSH](#lpush-rpush) | [ZRANGE](#zadd-zrange) |
+| [DECR](#incr-decr) | [HGETALL](#hgetall) | [MULTI/EXEC](#transactions-multi-exec) | [SADD](#sadd-smembers) | [ZRANK](#zrank-zrevrank) |
+| [DECRBY](#incrby-decrby) | [HMGET](#hmset-hmget) | [SCAN](#keys-scan) | [SETEX](#setex-set-with-expiry) | [ZREM](#zrem-zscore) |
+| [DEL](#del-delete) | [HMSET](#hmset-hmget) | [SET](#set-get) | [SETRANGE](#getrange-setrange) | [ZREVRANK](#zrank-zrevrank) |
+| [EVAL / EVALSHA](#eval-evalsha) | [HSET](#hset-hget) | [SETNX](#setnx-set-if-not-exists) | [SISMEMBER](#srem-sismember) | [ZSCORE](#zrem-zscore) |
+| [EXISTS](#exists) | [INCR](#incr-decr) | [KEYS](#keys-scan) | [SMEMBERS](#sadd-smembers) | |
+| [EXPIRE & TTL](#expire-ttl) | [INCRBY](#incrby-decrby) | | [LPOP](#lpop-rpop) | |
+| [GET](#set-get) | | | | |
 
 ### String Operations
 
@@ -1475,6 +1476,14 @@ if val.IsNil() {
 
 ## Connection Management
 
+<a id="close-disconnect"></a>
+<details>
+<summary><b style="font-size:18px;">Close / Disconnect</b></summary>
+
+Properly closing connections is important to free up resources and avoid connection leaks.
+- In **go-redis**, you call `Close()` on the client and handle any potential errors.
+- In **Glide**, you call `Close()` on the client (no error return).
+
 **go-redis**
 ```go
 // Close connection
@@ -1482,13 +1491,20 @@ err := rdb.Close()
 if err != nil {
     panic(err)
 }
+
+// For cluster connections
+err = cluster.Close()
+if err != nil {
+    panic(err)
+}
 ```
 
 **Glide**
 ```go
-// Close connection
+// Close connection (works for both standalone and cluster)
 client.Close()
 ```
+</details>
 
 ## Summary
 
