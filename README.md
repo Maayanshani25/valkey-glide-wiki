@@ -36,52 +36,59 @@ A fully converted Java snippet that uses Valkey GLIDE instead of Jedis, with app
 ## IOREDIS Prompt
 
 ````md
+### Detailed Task Description for Code Migration
 
-> **Task:**  
-> Convert the following JavaScript/TypeScript code that uses **ioredis** into equivalent code using the **Valkey GLIDE** client.  
+#### Objective:
 
-> **Source of Truth:**  
-> Use **only** the official migration guide:  
-> [https://github.com/valkey-io/valkey-glide/wiki/Migration-Guide-ioredis](https://github.com/valkey-io/valkey-glide/wiki/Migration-Guide-ioredis)
+Your task is to carefully convert a provided JavaScript or TypeScript code snippet that currently uses the **ioredis** library into a corresponding implementation utilizing the **Valkey GLIDE** client. This conversion process should ensure that the original functionality of the code remains unchanged while strictly adhering to the syntax and guidelines outlined in the official migration documentation.
 
----
+#### Reference Material:
 
-> **Goal:**  
-> Perform a precise, line-by-line conversion to Valkey GLIDE, using **only** commands and patterns explicitly documented in the guide.
+As you undertake this migration, you will rely solely on the official migration guide, which can be accessed at the following link:
+[Valkey GLIDE Migration Guide for ioredis](https://github.com/valkey-io/valkey-glide/wiki/Migration-Guide-ioredis)
 
----
+#### Goals for Conversion:
 
-### ✅ Instructions (VERY STRICT):
+Your primary goal is to execute a thorough, step-by-step transformation of the code from using **ioredis** to **Valkey GLIDE**. The conversion must maintain the integrity of the original logic, ensuring that all commands and structures conform precisely to those specified in the migration guide.
 
-- For **every Redis command** used in the source, first **check if it appears in the migration guide**.
-- If the command is **documented** in the guide:
-  - Use only the conversion syntax shown there.
-- If the command is **not mentioned** in the guide:
-  - Do **not** assume or guess.
-  - Instead:
-    - Either omit it, or
-    - Leave it as a commented TODO, like:  
-      `// TODO: 'SOME_COMMAND' command is not documented in the Glide migration guide`
-- Do **not add**, refactor, or optimize beyond what the guide shows.
-- Retain the original logic and structure unless it’s required to change for Glide compatibility.
-- Assume Redis **cluster** usage if `new Redis.Cluster(...)` appears.
+#### Detailed Instructions (Strict Compliance Required):
 
----
+1. **Command Verification**
 
-### 🛠 Code to Convert:
+   * For every command or functionality invoked in the original **ioredis** code, cross-reference it with the migration guide to confirm its availability in the Valkey GLIDE client.
+
+2. **Applying Documented Commands**
+
+   * If a specific command is documented in the migration guide, implement the conversion syntax exactly as demonstrated without introducing any deviations.
+
+3. **Modification Restrictions**
+
+   * Do not introduce new commands, restructure, or optimize beyond what is explicitly defined in the guide. Focus solely on a faithful line-by-line conversion.
+
+4. **Preserving Original Logic**
+
+   * Keep the existing structure and logic intact unless changes are required for compatibility with Valkey GLIDE.
+
+5. **Handling Cluster Usage**
+
+   * If the original code uses `new Redis.Cluster(...)`, assume that clustering should also be applied in the Valkey implementation, following the migration guide’s pattern.
+
+#### Code Submission:
+
+Paste the **ioredis** code snippet you wish to convert here:
 
 ```ts
-// Paste your code here
+// Paste your ioredis code here
 ```
+
+#### Expected Output:
+
+Produce a JavaScript or TypeScript code snippet rewritten for **Valkey GLIDE**. If a command is not included in the migration guide but its structure is predictable and simple (e.g. closely resembles a documented one), you may extrapolate cautiously using Valkey GLIDE conventions—clearly marking it as **inferred**. Unsupported features should be either omitted or clearly commented.
 
 ---
 
-### 🔁 Expected Output:
-
-A converted JavaScript/TypeScript snippet using **Valkey GLIDE**, with unsupported fields clearly marked or removed.
-- Each command is only converted if its GLIDE form appears in the official guide.
-- Unsupported or undocumented commands are either skipped or clearly commented as TODO.
-
+**ANSWER:**
+This revised version improves clarity, structure, and flexibility—explicitly outlining when inference is acceptable and reinforcing the priority of guide-based conversions. It maintains professionalism while offering realistic implementation guidance.
 ````
 
 
@@ -147,3 +154,5 @@ You are expected to produce a converted JavaScript/TypeScript snippet that utili
 * Any unsupported or undocumented commands must be clearly indicated as either omitted or commented as TODOs.
 * The final implementation should reflect the functionality of the original code while being compliant with the Valkey GLIDE syntax.
 ````
+
+
