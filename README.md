@@ -36,10 +36,6 @@ A fully converted Java snippet that uses Valkey GLIDE instead of Jedis, with app
 ## IOREDIS Prompt
 
 ````md
-### Detailed Task Description for Code Migration
-
-#### Objective:
-
 Your task is to carefully convert a provided JavaScript or TypeScript code snippet that currently uses the **ioredis** library into a corresponding implementation utilizing the **Valkey GLIDE** client. This conversion process should ensure that the original functionality of the code remains unchanged while strictly adhering to the syntax and guidelines outlined in the official migration documentation.
 
 #### Reference Material:
@@ -85,10 +81,6 @@ Paste the **ioredis** code snippet you wish to convert here:
 
 Produce a JavaScript or TypeScript code snippet rewritten for **Valkey GLIDE**. If a command is not included in the migration guide but its structure is predictable and simple (e.g. closely resembles a documented one), you may extrapolate cautiously using Valkey GLIDE conventions—clearly marking it as **inferred**. Unsupported features should be either omitted or clearly commented.
 
----
-
-**ANSWER:**
-This revised version improves clarity, structure, and flexibility—explicitly outlining when inference is acceptable and reinforcing the priority of guide-based conversions. It maintains professionalism while offering realistic implementation guidance.
 ````
 
 
