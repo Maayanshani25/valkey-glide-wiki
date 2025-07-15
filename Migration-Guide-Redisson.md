@@ -382,7 +382,7 @@ client.set("key", "value", 5);
 
 The `SETNX` command sets a key only if it does not already exist.
 - In **Redisson**, this is handled using `trySet()` method which returns true if the key was set.
-- In **Glide**, this is handled using options within the `set()` command.
+- In **Glide**, this is handled using conditional set options within the `set()` command.
 
 **Redisson**
 ```java
@@ -392,7 +392,12 @@ boolean result = bucket.trySet("value"); // Returns true if key was set, false i
 
 **Glide**
 ```java
-String result = client.set("key", "value", "NX").get(); // Returns "OK" if key was set, null if key exists
+import glide.api.models.commands.SetOptions;
+import glide.api.models.commands.ConditionalChange;
+
+String result = client.set("key", "value", SetOptions.builder()
+    .conditionalSet(ConditionalChange.ONLY_IF_DOES_NOT_EXIST)
+    .build()).get(); // Returns "OK" if key was set, null if key exists
 ```
 </details>
 
@@ -1249,7 +1254,7 @@ Below is a comprehensive chart comparing common Redis commands between Redisson 
 | SET | `redisson.getBucket("key").set("val")` | `client.set("key", "val")` |
 | GET | `redisson.getBucket("key").get()` | `client.get("key").get()` |
 | SETEX | `bucket.set("val", Duration.ofSeconds(10))` | `client.set("key", "val", 10)` |
-| SETNX | `bucket.trySet("val")` | `client.set("key", "val", "NX").get()` |
+| SETNX | `bucket.trySet("val")` | `client.set("key", "val", SetOptions.builder().conditionalSet(ConditionalChange.ONLY_IF_DOES_NOT_EXIST).build()).get()` |
 | MSET | `redisson.getBuckets().set(map)` | `client.mset(map)` |
 | MGET | `redisson.getBuckets().get("k1", "k2")` | `client.mget(new String[]{"k1", "k2"}).get()` |
 | INCR | `redisson.getAtomicLong("key").incrementAndGet()` | `client.incr("counter").get()` |

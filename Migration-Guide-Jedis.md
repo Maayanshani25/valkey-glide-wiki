@@ -364,7 +364,7 @@ client.set("key", "value", 5);
 
 The `SETNX` command sets a key only if it does not already exist.
 - In **Jedis**, this is a dedicated function that returns 1 if the key was set, 0 if the key already exists.
-- In **Glide**, this is handled using options within the `set()` command.
+- In **Glide**, this is handled using conditional set options within the `set()` command.
 
 **Jedis**
 ```java
@@ -373,7 +373,12 @@ Long result = jedis.setnx("key", "value"); // Returns 1 if key was set, 0 if key
 
 **Glide**
 ```java
-String result = client.set("key", "value", "NX").get(); // Returns "OK" if key was set, null if key exists
+import glide.api.models.commands.SetOptions;
+import glide.api.models.commands.ConditionalChange;
+
+String result = client.set("key", "value", SetOptions.builder()
+    .conditionalSet(ConditionalChange.ONLY_IF_DOES_NOT_EXIST)
+    .build()).get(); // Returns "OK" if key was set, null if key exists
 ```
 </details>
 
@@ -1177,7 +1182,7 @@ Below is a comprehensive chart comparing common Redis commands between Jedis and
 | SET | `jedis.set("key", "val")` | `client.set("key", "val")` |
 | GET | `jedis.get("key")` | `client.get("key").get()` |
 | SETEX | `jedis.setex("key", 10, "val")` | `client.set("key", "val", 10)` |
-| SETNX | `jedis.setnx("key", "val")` | `client.set("key", "val", "NX").get()` |
+| SETNX | `jedis.setnx("key", "val")` | `client.set("key", "val", SetOptions.builder().conditionalSet(ConditionalChange.ONLY_IF_DOES_NOT_EXIST).build()).get()` |
 | MSET | `jedis.mset(map)` | `client.mset(map)` |
 | MGET | `jedis.mget("key1", "key2")` | `client.mget(new String[]{"key1", "key2"}).get()` |
 | INCR | `jedis.incr("counter")` | `client.incr("counter").get()` |

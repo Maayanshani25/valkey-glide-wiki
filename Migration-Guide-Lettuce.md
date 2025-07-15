@@ -370,16 +370,21 @@ client.set("key", "value", 5);
 
 The `SETNX` command sets a key only if it does not already exist.
 - In **Lettuce**, this is a dedicated function that returns true if the key was set, false if the key already exists.
-- In **Glide**, this is handled using options within the `set()` command.
+- In **Glide**, this is handled using conditional set options within the `set()` command.
 
 **Lettuce**
 ```java
-boolean result = syncCommands.setnx("key", "value"); // Returns true if key was set, false if key exists
+Boolean result = syncCommands.setnx("key", "value"); // Returns true if key was set, false if key exists
 ```
 
 **Glide**
 ```java
-String result = client.set("key", "value", "NX").get(); // Returns "OK" if key was set, null if key exists
+import glide.api.models.commands.SetOptions;
+import glide.api.models.commands.ConditionalChange;
+
+String result = client.set("key", "value", SetOptions.builder()
+    .conditionalSet(ConditionalChange.ONLY_IF_DOES_NOT_EXIST)
+    .build()).get(); // Returns "OK" if key was set, null if key exists
 ```
 </details>
 
@@ -1151,7 +1156,7 @@ Below is a comprehensive chart comparing common Redis commands between Lettuce a
 | SET | `syncCommands.set("key", "val")` | `client.set("key", "val")` |
 | GET | `syncCommands.get("key")` | `client.get("key").get()` |
 | SETEX | `syncCommands.setex("key", 10, "val")` | `client.set("key", "val", 10)` |
-| SETNX | `syncCommands.setnx("key", "val")` | `client.set("key", "val", "NX")` |
+| SETNX | `syncCommands.setnx("key", "val")` | `client.set("key", "val", SetOptions.builder().conditionalSet(ConditionalChange.ONLY_IF_DOES_NOT_EXIST).build()).get()` |
 | MSET | `syncCommands.mset(map)` | `client.mset(map)` |
 | MGET | `syncCommands.mget("key1", "key2")` | `client.mget(new String[]{"key1", "key2"})` |
 | INCR | `syncCommands.incr("counter")` | `client.incr("counter")` |
