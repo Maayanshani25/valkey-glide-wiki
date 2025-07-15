@@ -372,7 +372,7 @@ bucket.set("value", Duration.ofSeconds(5)); // Set with 5 second expiry
 
 **Glide**
 ```java
-client.set("key", "value", 5);
+client.set("key", "value", SetOptions.builder().expiry(Seconds(5L)).build()).get(); 
 ```
 </details>
 
@@ -1253,7 +1253,7 @@ Below is a comprehensive chart comparing common Redis commands between Redisson 
 | **Strings** |
 | SET | `redisson.getBucket("key").set("val")` | `client.set("key", "val")` |
 | GET | `redisson.getBucket("key").get()` | `client.get("key").get()` |
-| SETEX | `bucket.set("val", Duration.ofSeconds(10))` | `client.set("key", "val", 10)` |
+| SETEX | `bucket.set("val", Duration.ofSeconds(5))` | `client.set("key", "value", SetOptions.builder().expiry(Seconds(5L)).build()).get()` |
 | SETNX | `bucket.trySet("val")` | `client.set("key", "val", SetOptions.builder().conditionalSet(ConditionalChange.ONLY_IF_DOES_NOT_EXIST).build()).get()` |
 | MSET | `redisson.getBuckets().set(map)` | `client.mset(map)` |
 | MGET | `redisson.getBuckets().get("k1", "k2")` | `client.mget(new String[]{"k1", "k2"}).get()` |

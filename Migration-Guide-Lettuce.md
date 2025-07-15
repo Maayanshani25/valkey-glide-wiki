@@ -360,7 +360,7 @@ syncCommands.setex("key", 5, "value"); // Set with 5 second expiry
 
 **Glide**
 ```java
-client.set("key", "value", 5);
+client.set("key", "value", SetOptions.builder().expiry(Seconds(5L)).build()).get(); 
 ```
 </details>
 
@@ -1155,7 +1155,7 @@ Below is a comprehensive chart comparing common Redis commands between Lettuce a
 | **Strings** |
 | SET | `syncCommands.set("key", "val")` | `client.set("key", "val")` |
 | GET | `syncCommands.get("key")` | `client.get("key").get()` |
-| SETEX | `syncCommands.setex("key", 10, "val")` | `client.set("key", "val", 10)` |
+| SETEX | `syncCommands.setex("key", 5, "val")` | `client.set("key", "value", SetOptions.builder().expiry(Seconds(5L)).build()).get()` |
 | SETNX | `syncCommands.setnx("key", "val")` | `client.set("key", "val", SetOptions.builder().conditionalSet(ConditionalChange.ONLY_IF_DOES_NOT_EXIST).build()).get()` |
 | MSET | `syncCommands.mset(map)` | `client.mset(map)` |
 | MGET | `syncCommands.mget("key1", "key2")` | `client.mget(new String[]{"key1", "key2"})` |

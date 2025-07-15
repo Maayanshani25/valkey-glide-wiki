@@ -354,7 +354,7 @@ jedis.setex("key", 5, "value"); // Set with 5 second expiry
 
 **Glide**
 ```java
-client.set("key", "value", 5);
+client.set("key", "value", SetOptions.builder().expiry(Seconds(5L)).build()).get(); 
 ```
 </details>
 
@@ -1181,7 +1181,7 @@ Below is a comprehensive chart comparing common Redis commands between Jedis and
 | **Strings** |
 | SET | `jedis.set("key", "val")` | `client.set("key", "val")` |
 | GET | `jedis.get("key")` | `client.get("key").get()` |
-| SETEX | `jedis.setex("key", 10, "val")` | `client.set("key", "val", 10)` |
+| SETEX | `jedis.setex("key", 10, "val")` | `client.set("key", "value", SetOptions.builder().expiry(Seconds(5L)).build()).get()` |
 | SETNX | `jedis.setnx("key", "val")` | `client.set("key", "val", SetOptions.builder().conditionalSet(ConditionalChange.ONLY_IF_DOES_NOT_EXIST).build()).get()` |
 | MSET | `jedis.mset(map)` | `client.mset(map)` |
 | MGET | `jedis.mget("key1", "key2")` | `client.mget(new String[]{"key1", "key2"}).get()` |
