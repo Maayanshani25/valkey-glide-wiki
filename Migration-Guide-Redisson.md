@@ -301,10 +301,9 @@ The table below compares **Redisson configuration** with **Glide configuration p
 | `setTimeout(timeout)` | `requestTimeout(timeout)` |
 | `setPassword("password")` | `credentials(ServerCredentials.builder().password(password).build())` |
 | `setUsername("user")` | `credentials(ServerCredentials.builder().username(user).build())` |
-| `setDatabase(db)` | `database(db)` - Use `client.select(db)` after connection |
+| `setDatabase(db)` | - Use `client.select(db)` after connection |
 | `setUseSsl(true)` | `useTLS(true)` |
 | `setRetryAttempts(attempts)` | `connectionBackoff(ConnectionBackoffStrategy.builder().numberOfRetries(attempts).build())` |
-| `addNodeAddress("redis://host:port")` | Multiple `.address()` calls |
 | `setReadMode(ReadMode.REPLICA)` | `readFrom(ReadFrom.REPLICA)` / `readFrom(ReadFrom.PREFER_REPLICA)` / `readFrom(ReadFrom.AZ_AFFINITY)` / `readFrom(ReadFrom.AZ_AFFINITY_REPLICAS_AND_PRIMARY)` [Read about AZ affinity](https://valkey.io/blog/az-affinity-strategy/) |
 | `setLazyInitialization(true)` | Not supported yet |
 

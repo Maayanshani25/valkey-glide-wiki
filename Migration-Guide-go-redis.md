@@ -6,6 +6,7 @@ This guide provides a **comprehensive comparison** of how to migrate from **go-r
 
 ```bash
 go get github.com/valkey-io/valkey-glide/go/v2
+go mod tidy
 ```
 
 ## Connection Setup
@@ -45,7 +46,6 @@ rdbWithOptions := redis.NewClient(&redis.Options{
     Addr:     "localhost:6379",
     Username: "user",
     Password: "password",
-    DB:       0,
 })
 ```
 
@@ -71,9 +71,24 @@ clientWithOptions, err := glide.NewClient(&config.ClientConfiguration{
     Addresses: []config.NodeAddress{
         {Host: "localhost", Port: 6379},
     },
+    UseTLS: true,
     Credentials: &config.ServerCredentials{
         Username: "user",
         Password: "password",
+    },
+    ReadFrom: config.ReadFromAZAffinity,
+    RequestTimeout: 2000 * time.Millisecond,
+    ConnectionBackoff: &config.ConnectionBackoffStrategy{
+        NumberOfRetries: 5,
+        Factor:          2,
+        ExponentBase:    2,
+        JitterPercent:   10,
+    },
+    AdvancedConfiguration: &config.AdvancedClientConfiguration{
+        ConnectionTimeout: 5000 * time.Millisecond,
+        TLSAdvancedConfiguration: &config.TLSAdvancedConfiguration{
+            UseInsecureTLS: false,
+        },
     },
     DatabaseId: 0,
 })
@@ -122,9 +137,24 @@ clientWithOptions, err := glide.NewClusterClient(&config.ClusterClientConfigurat
         {Host: "127.0.0.1", Port: 6379},
         {Host: "127.0.0.1", Port: 6380},
     },
+    UseTLS: true,
     Credentials: &config.ServerCredentials{
         Username: "user",
         Password: "password",
+    },
+    ReadFrom: config.ReadFromAZAffinity,
+    RequestTimeout: 2000 * time.Millisecond,
+    ConnectionBackoff: &config.ConnectionBackoffStrategy{
+        NumberOfRetries: 5,
+        Factor:          2,
+        ExponentBase:    2,
+        JitterPercent:   10,
+    },
+    AdvancedConfiguration: &config.AdvancedClusterClientConfiguration{
+        ConnectionTimeout: 5000 * time.Millisecond,
+        TLSAdvancedConfiguration: &config.TLSAdvancedConfiguration{
+            UseInsecureTLS: false,
+        },
     },
 })
 ```
@@ -146,12 +176,12 @@ The table below compares **go-redis options** with **Glide configuration paramet
 | `DialTimeout: time.Duration` | `RequestTimeout: time.Duration` |
 | `ReadTimeout: time.Duration` | `RequestTimeout: time.Duration` |
 | `WriteTimeout: time.Duration` | `RequestTimeout: time.Duration` |
-| `PoolSize: int`          | Not directly configurable, handled internally |
-| `PoolTimeout: time.Duration` | Not directly configurable, handled internally |
-| `MaxRetries: int`        | Not directly configurable, handled internally |
-| `MinRetryBackoff: time.Duration` | Not directly configurable, handled internally |
-| `MaxRetryBackoff: time.Duration` | Not directly configurable, handled internally |
+| `MaxRetries: int`        | `ConnectionBackoff: &config.ConnectionBackoffStrategy{NumberOfRetries: int}` |
+| `MinRetryBackoff: time.Duration` | `ConnectionBackoff: &config.ConnectionBackoffStrategy{Factor: int, ExponentBase: int}` |
+| `MaxRetryBackoff: time.Duration` | `ConnectionBackoff: &config.ConnectionBackoffStrategy{Factor: int, ExponentBase: int}` |
 | `ClientName: string`     | `ClientName: string` |
+| `ReadFrom: ReadFrom`     | `ReadFrom: config.ReadFrom.Replica` / `config.ReadFrom.PreferReplica` / `config.ReadFrom.AZAffinity` / `config.ReadFrom.AZAffinityReplicasAndPrimary` [Read about AZ affinity](https://valkey.io/blog/az-affinity-strategy/) |
+| `LazyConnect: bool`      | `LazyConnect: bool` |
 
 **Advanced configuration**
 

@@ -39,7 +39,6 @@ r_with_options = redis.Redis(
     port=6379,
     username='user',
     password='password',
-    db=0,
     decode_responses=True  # Return strings instead of bytes
 )
 ```
@@ -49,17 +48,30 @@ r_with_options = redis.Redis(
 from glide import GlideClient, GlideClientConfiguration, NodeAddress, ServerCredentials
 
 # Simple connection
-addresses = [NodeAddress(host="localhost", port=6379)]
+addresses = [NodeAddress("localhost", 6379)]
 client_config = GlideClientConfiguration(addresses)
 client = await GlideClient.create(client_config)
 
 # With options
-addresses = [NodeAddress(host="localhost", port=6379)]
-credentials = ServerCredentials(password="password", username="user")
+addresses = [NodeAddress("localhost", 6379)]
 client_config = GlideClientConfiguration(
     addresses,
-    credentials=credentials,
-    database=0
+    use_tls=True,
+    credentials=ServerCredentials(username="user", password="password"),
+    read_from=ReadFrom.AZ_AFFINITY,
+    request_timeout=2000,
+    connection_backoff=ConnectionBackoffStrategy(
+        number_of_retries=5,
+        factor=2,
+        exponent_base=2,
+        jitter_percent=10
+    ),
+    advanced_configuration=AdvancedGlideClientConfiguration(
+        connection_timeout=5000,
+        tls_advanced_configuration=TlsAdvancedConfiguration(
+            use_insecure_tls=False
+        )
+    )
 )
 client_with_options = await GlideClient.create(client_config)
 ```
@@ -99,21 +111,36 @@ from glide import GlideClusterClient, GlideClusterClientConfiguration, NodeAddre
 
 # Simple connection
 addresses = [
-    NodeAddress(host="127.0.0.1", port=6379),
-    NodeAddress(host="127.0.0.1", port=6380)
+    NodeAddress("127.0.0.1", 6379),
+    NodeAddress("127.0.0.1", 6380)
 ]
 client_config = GlideClusterClientConfiguration(addresses)
 client = await GlideClusterClient.create(client_config)
 
 # With options
 addresses = [
-    NodeAddress(host="127.0.0.1", port=6379),
-    NodeAddress(host="127.0.0.1", port=6380)
+    NodeAddress("127.0.0.1", 6379),
+    NodeAddress("127.0.0.1", 6380)
 ]
 credentials = ServerCredentials(password="password")
 client_config = GlideClusterClientConfiguration(
     addresses,
-    credentials=credentials
+    use_tls=True,
+    credentials=credentials,
+    read_from=ReadFrom.AZ_AFFINITY,
+    request_timeout=2000,
+    connection_backoff=ConnectionBackoffStrategy(
+        number_of_retries=5,
+        factor=2,
+        exponent_base=2,
+        jitter_percent=10
+    ),
+    advanced_configuration=AdvancedGlideClusterClientConfiguration(
+        connection_timeout=5000,
+        tls_advanced_configuration=TlsAdvancedConfiguration(
+            use_insecure_tls=False
+        )
+    )
 )
 client_with_options = await GlideClusterClient.create(client_config)
 ```
@@ -129,26 +156,17 @@ The table below compares **redis-py constructors** with **Glide configuration pa
 |--------------------------|--------------------------------------|
 | `host: str`              | `addresses: [NodeAddress(host="host", port=port)]` |
 | `port: int`              | `addresses: [NodeAddress(host="host", port=port)]` |
-| `db: int`                | `database: int` |
+| `db: int`                |  - Use `client.select(db)` after connection |
 | `username: str`          | `credentials: ServerCredentials(username="username")` |
 | `password: str`          | `credentials: ServerCredentials(password="password")` |
 | `socket_timeout: float`  | `request_timeout: int` (in milliseconds) |
-| `socket_connect_timeout: float` | Not directly supported, handled internally |
-| `socket_keepalive: bool` | Not directly supported, handled internally |
-| `socket_keepalive_options` | Not directly supported, handled internally |
-| `connection_pool: ConnectionPool` | Not needed, handled internally |
-| `unix_socket_path: str`  | Not supported |
-| `encoding: str`          | Not needed, returns bytes by default |
-| `decode_responses: bool` | Not supported, use `.decode()` on returned bytes |
-| `retry_on_timeout: bool` | Not needed, handled internally |
+| `socket_connect_timeout: float` | `advanced_configuration: AdvancedGlideClientConfiguration(connection_timeout=timeout)` |
+| `decode_responses: bool` | Use `.decode()` on returned bytes |
+| `retry_on_timeout: bool` | `connection_backoff: ConnectionBackoffStrategy(number_of_retries=retries, factor=factor, exponent_base=base, jitter_percent=percent)` |
 | `ssl: bool`              | `use_tls: bool` |
-| `ssl_keyfile: str`       | Not directly supported |
-| `ssl_certfile: str`      | Not directly supported |
-| `ssl_cert_reqs: str`     | Not directly supported |
-| `ssl_ca_certs: str`      | Not directly supported |
-| `max_connections: int`   | Not needed, handled internally |
-| `health_check_interval: float` | Not needed, handled internally |
-| `client_name: str`       | Not supported |
+| `client_name: str`       | `client_name: str` |
+| `read_from_replicas: bool` | `read_from: ReadFrom.REPLICA` / `read_from: ReadFrom.PREFER_REPLICA` / `read_from: ReadFrom.AZ_AFFINITY` / `read_from: ReadFrom.AZ_AFFINITY_REPLICAS_AND_PRIMARY` [Read about AZ affinity](https://valkey.io/blog/az-affinity-strategy/) |
+| `lazy_connect: bool`     | `lazy_connect: bool` |
 
 **Advanced configuration**
 
