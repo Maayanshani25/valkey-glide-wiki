@@ -155,8 +155,12 @@ RedissonClient redissonWithOptions = Redisson.create(configWithOptions);
 ```java
 import glide.api.GlideClient;
 import glide.api.models.configuration.GlideClientConfiguration;
+import glide.api.models.configuration.AdvancedGlideClientConfiguration;
 import glide.api.models.configuration.NodeAddress;
 import glide.api.models.configuration.ServerCredentials;
+import glide.api.models.configuration.ReadFrom;
+import glide.api.models.configuration.BackoffStrategy;
+import glide.api.models.configuration.TlsAdvancedConfiguration;
 
 // Simple connection
 GlideClientConfiguration config = GlideClientConfiguration.builder()
@@ -168,17 +172,31 @@ GlideClientConfiguration config = GlideClientConfiguration.builder()
 
 GlideClient client = GlideClient.createClient(config).get();
 
-// With options
+// With basic options
 GlideClientConfiguration configWithOptions = GlideClientConfiguration.builder()
     .address(NodeAddress.builder()
         .host("localhost")
         .port(6379)
         .build())
+    .useTLS(true)
     .credentials(ServerCredentials.builder()
+        .username("user")
         .password("password")
         .build())
-    .database(0)
+    .readFrom(ReadFrom.AZ_AFFINITY) 
     .requestTimeout(2000)
+    .reconnectStrategy(BackoffStrategy.builder()
+        .numOfRetries(5)
+        .factor(2)
+        .exponentBase(2)
+        .jitterPercent(10)
+        .build())
+    .advancedConfiguration(AdvancedGlideClientConfiguration.builder()
+        .connectionTimeout(5000)
+        .tlsAdvancedConfiguration(TlsAdvancedConfiguration.builder()
+            .useInsecureTLS(false)
+            .build())
+        .build())
     .build();
 
 GlideClient clientWithOptions = GlideClient.createClient(configWithOptions).get();
@@ -215,8 +233,12 @@ RedissonClient clusterWithOptions = Redisson.create(configWithOptions);
 ```java
 import glide.api.GlideClusterClient;
 import glide.api.models.configuration.GlideClusterClientConfiguration;
+import glide.api.models.configuration.AdvancedGlideClusterClientConfiguration;
 import glide.api.models.configuration.NodeAddress;
 import glide.api.models.configuration.ServerCredentials;
+import glide.api.models.configuration.ReadFrom;
+import glide.api.models.configuration.BackoffStrategy;
+import glide.api.models.configuration.TlsAdvancedConfiguration;
 
 // Simple cluster connection
 GlideClusterClientConfiguration config = GlideClusterClientConfiguration.builder()
@@ -242,10 +264,25 @@ GlideClusterClientConfiguration configWithOptions = GlideClusterClientConfigurat
         .host("127.0.0.1")
         .port(7001)
         .build())
+    .useTLS(true)
     .credentials(ServerCredentials.builder()
+        .username("user")
         .password("password")
         .build())
+    .readFrom(ReadFrom.AZ_AFFINITY) 
     .requestTimeout(2000)
+    .reconnectStrategy(BackoffStrategy.builder()
+        .numOfRetries(5)
+        .factor(2)
+        .exponentBase(2)
+        .jitterPercent(10)
+        .build())
+    .advancedConfiguration(AdvancedGlideClientConfiguration.builder()
+        .connectionTimeout(5000)
+        .tlsAdvancedConfiguration(TlsAdvancedConfiguration.builder()
+            .useInsecureTLS(false)
+            .build())
+        .build())
     .build();
 
 GlideClusterClient clusterClientWithOptions = GlideClusterClient.createClient(configWithOptions).get();
@@ -264,11 +301,12 @@ The table below compares **Redisson configuration** with **Glide configuration p
 | `setTimeout(timeout)` | `requestTimeout(timeout)` |
 | `setPassword("password")` | `credentials(ServerCredentials.builder().password(password).build())` |
 | `setUsername("user")` | `credentials(ServerCredentials.builder().username(user).build())` |
-| `setDatabase(db)` | `database(db)` |
+| `setDatabase(db)` | `database(db)` - Use `client.select(db)` after connection |
 | `setUseSsl(true)` | `useTLS(true)` |
-| `setRetryAttempts(attempts)` | Not directly supported, handled internally |
-| `setClientName("name")` | Not directly supported |
+| `setRetryAttempts(attempts)` | `connectionBackoff(ConnectionBackoffStrategy.builder().numberOfRetries(attempts).build())` |
 | `addNodeAddress("redis://host:port")` | Multiple `.address()` calls |
+| `setReadMode(ReadMode.REPLICA)` | `readFrom(ReadFrom.REPLICA)` / `readFrom(ReadFrom.PREFER_REPLICA)` / `readFrom(ReadFrom.AZ_AFFINITY)` / `readFrom(ReadFrom.AZ_AFFINITY_REPLICAS_AND_PRIMARY)` [Read about AZ affinity](https://valkey.io/blog/az-affinity-strategy/) |
+| `setLazyInitialization(true)` | Not supported yet |
 
 **Advanced configuration**
 

@@ -149,8 +149,12 @@ RedisCommands<String, String> syncCommandsWithOptions = connectionWithOptions.sy
 ```java
 import glide.api.GlideClient;
 import glide.api.models.configuration.GlideClientConfiguration;
+import glide.api.models.configuration.AdvancedGlideClientConfiguration;
 import glide.api.models.configuration.NodeAddress;
 import glide.api.models.configuration.ServerCredentials;
+import glide.api.models.configuration.ReadFrom;
+import glide.api.models.configuration.BackoffStrategy;
+import glide.api.models.configuration.TlsAdvancedConfiguration;
 
 // Simple connection
 GlideClientConfiguration config = GlideClientConfiguration.builder()
@@ -168,10 +172,25 @@ GlideClientConfiguration configWithOptions = GlideClientConfiguration.builder()
         .host("localhost")
         .port(6379)
         .build())
+    .useTLS(true)
     .credentials(ServerCredentials.builder()
+        .username("user")
         .password("password")
         .build())
-    .database(2)
+    .readFrom(ReadFrom.AZ_AFFINITY) 
+    .requestTimeout(2000)
+    .reconnectStrategy(BackoffStrategy.builder()
+        .numOfRetries(5)
+        .factor(2)
+        .exponentBase(2)
+        .jitterPercent(10)
+        .build())
+    .advancedConfiguration(AdvancedGlideClientConfiguration.builder()
+        .connectionTimeout(5000)
+        .tlsAdvancedConfiguration(TlsAdvancedConfiguration.builder()
+            .useInsecureTLS(false)
+            .build())
+        .build())
     .build();
 
 GlideClient clientWithOptions = GlideClient.createClient(configWithOptions).get();
@@ -207,8 +226,12 @@ RedisClusterClient clusterClientWithOptions = RedisClusterClient.create(redisUri
 ```java
 import glide.api.GlideClusterClient;
 import glide.api.models.configuration.GlideClusterClientConfiguration;
+import glide.api.models.configuration.AdvancedGlideClusterClientConfiguration;
 import glide.api.models.configuration.NodeAddress;
 import glide.api.models.configuration.ServerCredentials;
+import glide.api.models.configuration.ReadFrom;
+import glide.api.models.configuration.BackoffStrategy;
+import glide.api.models.configuration.TlsAdvancedConfiguration;
 
 // Simple connection
 GlideClusterClientConfiguration config = GlideClusterClientConfiguration.builder()
@@ -240,8 +263,24 @@ GlideClusterClientConfiguration configWithOptions = GlideClusterClientConfigurat
         .host("localhost")
         .port(7000)
         .build())
+    .useTLS(true)
     .credentials(ServerCredentials.builder()
+        .username("user")
         .password("password")
+        .build())
+    .readFrom(ReadFrom.AZ_AFFINITY) 
+    .requestTimeout(2000)
+    .reconnectStrategy(BackoffStrategy.builder()
+        .numOfRetries(5)
+        .factor(2)
+        .exponentBase(2)
+        .jitterPercent(10)
+        .build())
+    .advancedConfiguration(AdvancedGlideClientConfiguration.builder()
+        .connectionTimeout(5000)
+        .tlsAdvancedConfiguration(TlsAdvancedConfiguration.builder()
+            .useInsecureTLS(false)
+            .build())
         .build())
     .build();
 
@@ -260,13 +299,13 @@ The table below compares **Lettuce constructors** with **Glide configuration par
 | `RedisURI.create("redis://host:port")` | `GlideClientConfiguration.builder().address(NodeAddress.builder().host("host").port(port).build()).build()` |
 | `RedisURI.Builder.redis(host, port)` | `NodeAddress.builder().host(host).port(port).build()` |
 | `withPassword("password")` | `credentials(ServerCredentials.builder().password("password").build())` |
-| `withDatabase(2)` | `database(2)` |
+| `withUsername("username")` | `credentials(ServerCredentials.builder().username("username").build())` |
+| `withDatabase(2)` | - Use `client.select(db)` after connection |
 | `withSsl(true)` | `useTLS(true)` |
 | `withTimeout(Duration.ofMillis(500))` | `requestTimeout(500)` |
-| `setClientName("client-name")` | Not directly supported |
-| `setClientResources(clientResources)` | Not directly supported, handled internally |
-| `ClusterTopologyRefreshOptions` | Not directly supported, handled internally |
-| `ClusterClientOptions` | Not directly supported, handled internally |
+| `ReadFrom.REPLICA` | `readFrom(ReadFrom.REPLICA)` / `readFrom(ReadFrom.PREFER_REPLICA)` / `readFrom(ReadFrom.AZ_AFFINITY)` / `readFrom(ReadFrom.AZ_AFFINITY_REPLICAS_AND_PRIMARY)` [Read about AZ affinity](https://valkey.io/blog/az-affinity-strategy/) |
+| `SocketOptions.builder().connectTimeout()` | `connectionBackoff(ConnectionBackoffStrategy.builder().numberOfRetries(retries).build())` |
+| `lazyConnect: boolean` | Not suppoerted yet |
 
 **Advanced configuration**
 

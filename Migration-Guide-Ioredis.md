@@ -39,7 +39,6 @@ const redisWithOptions = new Redis({
   host: "localhost",
   username: "user",
   password: "password",
-  db: 0
 });
 ```
 
@@ -60,9 +59,14 @@ const clientWithOptions = await GlideClient.createClient({
   addresses: [{ host: "localhost", port: 6379 }],
   credentials: {
     username: "user",
-    password: "password"
+    password: "password",
   },
-  database: 0
+  useTLS: true,
+  requestTimeout: 5000, 
+  readFrom: "AZAffinity",
+  advancedConfiguration: {
+    connectionTimeout: 500 // Example of advanced configuration
+  }
 });
 ```
 
@@ -109,6 +113,10 @@ const clientWithOptions = await GlideClusterClient.createClient({
   addresses: addresses,
   credentials: {
     password: "password"
+  },
+  useTLS: true,
+  advancedConfiguration: {
+    connectionTimeout: 500 // Example of advanced configuration
   }
 });
 ```
@@ -122,25 +130,18 @@ The table below compares **ioredis constructors** with **Glide configuration par
 
 | **ioredis Parameter** | **Equivalent Glide Configuration** |
 |--------------------------|--------------------------------------|
+| `host: string`           | `addresses: [{ host: string, port?: number }]` |
 | `port: number`           | `addresses: [{ host: string, port: number }]` |
-| `host: string`           | `addresses: [{ host: string, port: number }]` |
-| `path: string`           | Not supported |
-| `username: string`       | `credentials: { username: string }` |
+| `username: string`       | `credentials: { username: string, password: string }` |
 | `password: string`       | `credentials: { password: string }` |
-| `db: number`             | `database: number` |
-| `tls: {}`                | `useTLS: true` |
+| `db: number`             | `client.select(number)` |
+| `tls: {}`                | `useTLS?: true` |
+| Not implmented           | `protocol?: ProtocolVersion;` |
+| `commandTimeout: number` | `requestTimeout: number` |
 | `connectTimeout: number` | `advancedConfiguration: { connectionTimeout: number }` |
-| `maxRetriesPerRequest: number` | Not supported |
-| `retryStrategy: function` | Not directly supported, handled internally |
-| `reconnectOnError: function` | Not directly supported, handled internally |
-| `readOnly: boolean`      | `readFrom: "REPLICA"` |
-| `enableOfflineQueue: boolean` | Not needed, handled internally |
-| `enableReadyCheck: boolean` | Not needed, handled internally |
-| `autoResubscribe: boolean` | Not needed, handled internally |
-| `autoResendUnfulfilledCommands: boolean` | Not needed, handled internally |
-| `lazyConnect: boolean`   | Not needed, handled internally |
-| `keyPrefix: string`      | Not supported |
-| `showFriendlyErrorStack: boolean` | Not needed, handled internally |
+| `retryStrategy: function`| `connectionBackoff?: { numberOfRetries: number, factor: number, exponentBase: number, jitterPercent?: number }` |
+| `readOnly: boolean`      | `readFrom?: "REPLICA"/ "preferReplica"/ "AZAffinity"/ "AZAffinityReplicasAndPrimary"` [Read about AZ affinity](https://valkey.io/blog/az-affinity-strategy/) |
+| `lazyConnect: boolean`   | `lazyConnect?: boolean;` |
 
 **Advanced configuration**
 

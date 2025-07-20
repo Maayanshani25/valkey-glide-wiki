@@ -144,8 +144,12 @@ jedisWithOptions.select(0);
 ```java
 import glide.api.GlideClient;
 import glide.api.models.configuration.GlideClientConfiguration;
+import glide.api.models.configuration.AdvancedGlideClientConfiguration;
 import glide.api.models.configuration.NodeAddress;
 import glide.api.models.configuration.ServerCredentials;
+import glide.api.models.configuration.ReadFrom;
+import glide.api.models.configuration.BackoffStrategy;
+import glide.api.models.configuration.TlsAdvancedConfiguration;
 
 // Simple connection
 GlideClientConfiguration config = GlideClientConfiguration.builder()
@@ -163,10 +167,25 @@ GlideClientConfiguration configWithOptions = GlideClientConfiguration.builder()
         .host("localhost")
         .port(6379)
         .build())
+    .useTLS(true)
     .credentials(ServerCredentials.builder()
+        .username("user")
         .password("password")
         .build())
-    .database(0)
+    .readFrom(ReadFrom.AZ_AFFINITY) 
+    .requestTimeout(2000)
+    .reconnectStrategy(BackoffStrategy.builder()
+        .numOfRetries(5)
+        .factor(2)
+        .exponentBase(2)
+        .jitterPercent(10)
+        .build())
+    .advancedConfiguration(AdvancedGlideClientConfiguration.builder()
+        .connectionTimeout(5000)
+        .tlsAdvancedConfiguration(TlsAdvancedConfiguration.builder()
+            .useInsecureTLS(false)
+            .build())
+        .build())
     .build();
 
 GlideClient clientWithOptions = GlideClient.createClient(configWithOptions).get();
@@ -201,8 +220,12 @@ JedisCluster clusterWithOptions = new JedisCluster(jedisClusterNodes, 2000, 2000
 ```java
 import glide.api.GlideClusterClient;
 import glide.api.models.configuration.GlideClusterClientConfiguration;
+import glide.api.models.configuration.AdvancedGlideClusterClientConfiguration;
 import glide.api.models.configuration.NodeAddress;
 import glide.api.models.configuration.ServerCredentials;
+import glide.api.models.configuration.ReadFrom;
+import glide.api.models.configuration.BackoffStrategy;
+import glide.api.models.configuration.TlsAdvancedConfiguration;
 
 // Simple cluster connection
 GlideClusterClientConfiguration config = GlideClusterClientConfiguration.builder()
@@ -228,8 +251,24 @@ GlideClusterClientConfiguration configWithOptions = GlideClusterClientConfigurat
         .host("127.0.0.1")
         .port(7001)
         .build())
+    .useTLS(true)
     .credentials(ServerCredentials.builder()
+        .username("user")
         .password("password")
+        .build())
+    .readFrom(ReadFrom.AZ_AFFINITY) 
+    .requestTimeout(2000)
+    .reconnectStrategy(BackoffStrategy.builder()
+        .numOfRetries(5)
+        .factor(2)
+        .exponentBase(2)
+        .jitterPercent(10)
+        .build())
+    .advancedConfiguration(AdvancedGlideClientConfiguration.builder()
+        .connectionTimeout(5000)
+        .tlsAdvancedConfiguration(TlsAdvancedConfiguration.builder()
+            .useInsecureTLS(false)
+            .build())
         .build())
     .build();
 
@@ -250,14 +289,12 @@ The table below compares **Jedis constructors** with **Glide configuration param
 | `timeout: int` | `requestTimeout(timeout)` |
 | `password: String` | `credentials(ServerCredentials.builder().password(password).build())` |
 | `user: String` | `credentials(ServerCredentials.builder().username(user).build())` |
-| `db: int` | `database(db)` |
+| `db: int` | Use `client.select(db)` after connection |
 | `ssl: boolean` | `useTLS(true)` |
-| `JedisPoolConfig poolConfig` | Not needed, handled internally |
-| `maxAttempts: int` | `advancedConfiguration.maxRetries(maxAttempts)` |
-| `clientName: String` | Not directly supported |
-| `Set<HostAndPort> clusterNodes` | Multiple `.address()` calls |
-| `Duration topologyRefreshPeriod` | Not directly supported, handled internally |
-| `Duration maxTotalRetriesDuration` | Not directly supported, handled internally |
+| `maxAttempts: int` | `connectionBackoff(ConnectionBackoffStrategy.builder().numberOfRetries(maxAttempts).build())` |
+| `clientName: String` | `clientName(String)` |
+| `readFrom: ReadFrom` | `readFrom(ReadFrom.REPLICA)` / `readFrom(ReadFrom.PREFER_REPLICA)` / `readFrom(ReadFrom.AZ_AFFINITY)` / `readFrom(ReadFrom.AZ_AFFINITY_REPLICAS_AND_PRIMARY)` [Read about AZ affinity](https://valkey.io/blog/az-affinity-strategy/) |
+| `lazyConnect: boolean` | Not supported yet |
 
 **Advanced configuration**
 
@@ -296,7 +333,8 @@ Below is a [comprehensive list](#command-comparison-chart) of common Redis comma
 **NOTE**: **Glide** uses asynchronous execution, so most commands return a `CompletableFuture<T>`. Use `.get()` to retrieve the result.
 
 ### Alphabetical Command Reference
-||||||
+
+|  |  |  | | |
 |-------------------|----------------------------------|------------------------|----------------------------|--------------------------|
 | [APPEND](#append) | [GETRANGE](#getrange-setrange) | [LPUSH](#lpush-rpush) | [RENAME](#rename-renamenx) | [SREM](#srem-sismember) |
 | [AUTH](#auth) | [HDEL](#hdel-hexists) | [LRANGE](#lrange) | [RENAMENX](#rename-renamenx) | [TTL](#expire-ttl) |
